@@ -1,0 +1,86 @@
+Player:
+    AlwaysVisible:
+    TechTree:
+    ClassicProductionQueue@Building:
+        Type: Building
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
+        SpeedUp: True
+        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
+    ClassicProductionQueue@Defense:
+        Type: Defense
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
+        SpeedUp: True
+        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
+#	ClassicProductionQueue@Vehicle:
+#		Type: Vehicle
+#		BuildSpeed: 40
+#		LowPowerSlowdown: 3
+#		SpeedUp: True
+#        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
+#	ClassicProductionQueue@Infantry:
+#		Type: Infantry
+#		BuildSpeed: 40
+#		LowPowerSlowdown: 3
+#		SpeedUp: True
+#        BuildTimeSpeedReduction: 100, 90, 80, 70, 60, 55, 50, 45, 40, 35, 30
+#	ClassicProductionQueue@Air:
+#		Type: Air
+#		BuildSpeed: 40
+#		LowPowerSlowdown: 3
+#		SpeedUp: True
+#        BuildTimeSpeedReduction: 100, 90, 80, 70, 60, 55, 50, 45, 40, 35, 30
+    ClassicProductionQueue@Tech:
+        Type: Tech
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: BuildTech
+        ReadyAudio: TechComplete
+        SpeedUp: True
+        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
+    PlaceBuilding:
+        Palette: ra
+    SupportPowerManager:
+    ScriptTriggers:
+    MissionObjectives:
+    ConquestVictoryConditions:
+    PowerManager:
+    AllyRepair:
+    PlayerResources:
+        InsufficientFundsNotification: InsufficientFunds
+        SelectableCash: 5000, 10000, 15000, 20000
+        DefaultCash: 5000
+    ActorGroupProxy:
+    DeveloperMode:
+        Enabled: true
+    GpsWatcher:
+    Shroud:
+        ExploredMapEnabled: True
+    FrozenActorLayer:
+    BaseAttackNotifier:
+        AllyNotification: OurAllyIsUnderAttack
+    HarvesterAttackNotifier:
+    PlayerStatistics:
+	PlaceSimpleBeacon:
+    ResourceStorageWarning:
+    GlobalUpgradeManager:
+    ProvidesTechPrerequisite@T1:
+        Name: Tier 1
+        Prerequisites: t1
+    ProvidesTechPrerequisite@T2:
+        Name: Tier 2
+        Prerequisites: t2
+    ProvidesTechPrerequisite@T3:
+        Name: Tier 3
+        Prerequisites: t3
+    ProvidesTechPrerequisite@T4:
+        Name: Tier 4
+        Prerequisites: t4
+    ProvidesTechPrerequisite@T5:
+        Name: Tier 5
+        Prerequisites: t5

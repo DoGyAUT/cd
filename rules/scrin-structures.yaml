@@ -1,0 +1,153 @@
+SACNST:
+    Inherits: ^Building
+    Building:
+        Footprint: xxx xxx xxx
+        BuildSounds: facbld1.aud
+        Dimensions: 3,3
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 400
+        Prerequisites: ~disabled
+        Adjacent: 8
+    Health:
+        HP: 1500
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 10c0
+    Production:
+        Produces: Building,Defense
+#    ProductionQueue@Building:
+#        Type: Building
+#        Group: Building
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+#    ProductionQueue@Defense:
+#        Type: Defense
+#        Group: Defense
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: Scrin Construction Yard
+        Description: Builds base structures.
+    CustomSellValue:
+        Value: 2500
+    BaseBuilding:
+    Transforms:
+        IntoActor: fmcv
+        Offset: 1,1
+        Facing: 96
+        DeployCursor: undeploy
+    ProductionBar@Building:
+        ProductionType: Building
+    ProductionBar@Defense:
+        ProductionType: Defense
+    WithIdleOverlay@TOP:
+        Sequence: idle-top
+    WithIdleOverlay@SIDE:
+        Sequence: idle-side
+    WithIdleOverlay@FRONT:
+        Sequence: idle-front
+    WithBuildingPlacedOverlay:
+    Power:
+        Amount: 0
+    Selectable:
+        Bounds: 144, 80, 0, -12
+    ProvidesPrerequisite@scrin:
+        Prerequisite: structures.scrin
+    ActorLostNotification:
+        Notification: CriticalUnitLost
+
+SAPOWR:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 501
+        Prerequisites: ~structures.scrin
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Scrin Power Plant
+        Description: Provides power for other structures.
+    ProvidesPrerequisite:
+        Prerequisite: anypower
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    PowerTooltip:
+    InfiltrateForPowerOutage:
+        Duration: 750
+    AffectedByPowerOutage:
+    Selectable:
+        Bounds: 88, 80, 2, -12
+    Health:
+        HP: 800
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 4c0
+    Power:
+        Amount: 100
+    WithIdleOverlay@light:
+        Sequence: idle-light
+        Palette: player
+    Targetable:
+        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+    ScalePowerWithHealth:
+    DisabledOverlay:
+    
+SPROC:
+    Inherits: ^Building
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Scrin Tiberium Refinery
+        Description: Processes raw Tiberium\ninto useable resources.
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 502
+        Prerequisites: anypower, ~structures.scrin
+    Building:
+        Footprint: xxx= xx== xxx=
+        Dimensions: 4,3
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: 500
+    Selectable:
+        Bounds: 134, 122, 0, -18
+    Health:
+        HP: 1600
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 6c0
+    TiberianSunRefinery:
+        DockAngle: 160
+        DockOffset: 2,1
+        DiscardExcessResources: true
+    StoresResources:
+        PipColor: Green
+        PipCount: 25
+        Capacity: 5000
+    CustomSellValue:
+        Value: 600
+    FreeActor:
+        Actor: SHARV
+        SpawnOffset: 2,1
+        Facing: 160
+    WithIdleOverlay@REDLIGHTS:
+        Sequence: idle-redlights
+    WithIdleOverlay@BIB:
+        Sequence: bib
+    WithDockedOverlay@flame:
+        Sequence: flame
+        Palette: effect
+    Power:
+        Amount: -30
+    ProvidesPrerequisite@buildingname:   

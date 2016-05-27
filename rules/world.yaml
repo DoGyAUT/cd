@@ -1,0 +1,210 @@
+^BaseWorld:
+    Inherits: ^Palettes
+    AlwaysVisible:
+    ScreenMap:
+    ActorMap:
+    MusicPlaylist:
+        VictoryMusic: maps
+        DefeatMusic: maps
+    ShroudRenderer:
+        Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+        UseExtendedIndex: true
+        ShroudPalette: shroud
+        FogPalette: shroud
+    Faction@Random:
+        Name: Any
+        Side: Random
+        InternalName: Random
+        RandomFactionMembers: gdi, nod, cabal, forgotten
+    Faction@0:
+        Name: GDI
+        Side: Factions
+        Description: We save life!
+        InternalName: gdi
+    Faction@1:
+        Name: Nod
+        Side: Factions
+        Description: For the brotherhood!
+        InternalName: nod
+    Faction@2:
+        Name: Cabal
+        Side: Factions
+        Description: Humanity is failure!
+        InternalName: cabal
+    Faction@3:
+        Name: Forgotten
+        Side: Factions
+        Description: Slaughter those pigs!
+        InternalName: forgotten
+    Faction@4:
+        Name: Scrin
+        Side: WIP Factions
+        Description: Don't even think about to use this one yet!
+        InternalName: scrin
+    ResourceType@Tiberium:
+        ResourceType: 1
+        Palette: greentiberium
+        EditorSprite: waypoint # TODO: editor can't handle the real ones
+        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        MaxDensity: 12
+        ValuePerUnit: 50
+        Name: Tiberium
+        PipColor: Green
+        AllowedTerrainTypes: Clear, Rough, DirtRoad
+        AllowUnderActors: true
+        TerrainType: Tiberium
+    ResourceType@BlueTiberium:
+        ResourceType: 2
+        Palette: bluetiberium
+        EditorSprite: waypoint # TODO: editor can't handle the real ones
+        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        MaxDensity: 12
+        ValuePerUnit: 100
+        Name: BlueTiberium
+        PipColor: Blue
+        AllowedTerrainTypes: Clear, Rough, DirtRoad
+        AllowUnderActors: true
+        TerrainType: BlueTiberium
+    ResourceType@Veins:
+        ResourceType: 3
+        Palette: veins
+        EditorSprite: waypoint # TODO: editor can't handle the real ones
+        Variants: veins
+        MaxDensity: 6
+        ValuePerUnit: 100
+        Name: Veins
+        PipColor: Yellow
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Rail, Road
+        AllowUnderActors: true
+        TerrainType: Veins
+    ResourceType@RedTiberium:
+        ResourceType: 4
+        Palette: redtiberium
+        EditorSprite: waypoint # TODO: editor can't handle the real ones
+        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        MaxDensity: 12
+        ValuePerUnit: 10
+        Name: RedTiberium
+        PipColor: Red
+        AllowedTerrainTypes: Clear, Rough, DirtRoad
+        AllowUnderActors: true
+        TerrainType: RedTiberium
+    ResourceType@PurpleTiberium:
+        ResourceType: 5
+        Palette: purpletiberium
+        EditorSprite: waypoint # TODO: editor can't handle the real ones
+        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        MaxDensity: 12
+        ValuePerUnit: 200
+        Name: PurpleTiberium
+        PipColor: Yellow
+        AllowedTerrainTypes: Clear, Rough, DirtRoad
+        AllowUnderActors: true
+        TerrainType: PurpleTiberium
+    TerrainGeometryOverlay:
+
+World:
+    Inherits: ^BaseWorld
+    ChatCommands:
+    DevCommands:
+    PlayerCommands:
+    HelpCommand:
+    BuildingInfluence:
+    ProductionQueueFromSelection:
+        ProductionPaletteWidget: PRODUCTION_PALETTE
+    DomainIndex:
+    SmudgeLayer@SMALLSCORCH:
+        Type: SmallScorch
+        Sequence: smallscorches
+        SmokeType: smallfire
+        SmokePercentage: 0
+    SmudgeLayer@MEDIUMSCORCH:
+        Type: MediumScorch
+        Sequence: mediumscorches
+        SmokeType: mediumfire
+        SmokePercentage: 0
+    SmudgeLayer@LARGESCORCH:
+        Type: LargeScorch
+        Sequence: largescorches
+        SmokeType: largefire
+        SmokePercentage: 0
+    SmudgeLayer@SMALLCRATER:
+        Type: SmallCrater
+        SmokeType: smoke_m
+        Sequence: smallcraters
+        SmokePercentage: 0
+        SmokePalette: player
+    SmudgeLayer@MEDIUMCRATER:
+        Type: MediumCrater
+        SmokeType: smoke_m
+        Sequence: mediumcraters
+        SmokePercentage: 0
+        SmokePalette: player
+    SmudgeLayer@LARGECRATER:
+        Type: LargeCrater
+        SmokeType: smoke_m
+        Sequence: largecraters
+        SmokePercentage: 0
+    ResourceLayer:
+    ResourceClaimLayer:
+    PathfinderDebugOverlay:
+    WarheadDebugOverlay:
+    MapCreeps:
+    SpawnMapActors:
+    MapBuildRadius:
+    MapOptions:
+        TechLevel: Tier 5
+    CreateMPPlayers:
+    MPStartUnits@GMCV:
+        Class: none
+        ClassName: MCV Only
+        Factions: gdi
+        BaseActor: gmcv
+    MPStartUnits@NMCV:
+        Class: none
+        ClassName: MCV Only
+        Factions: nod
+        BaseActor: nmcv
+    MPStartUnits@KMCV:
+        Class: none
+        ClassName: MCV Only
+        Factions: cabal
+        BaseActor: kmcv        
+    MPStartUnits@FMCV:
+        Class: none
+        ClassName: MCV Only
+        Factions: forgotten
+        BaseActor: fmcv
+    MPStartUnits@SMCV:
+        Class: none
+        ClassName: MCV Only
+        Factions: scrin
+        BaseActor: smcv 
+    MPStartLocations:
+    SpawnMPUnits:
+        StartingUnitsClass: none
+    CrateSpawner:
+        Enabled: False
+        Minimum: 1
+        Maximum: 6
+        SpawnInterval: 3000
+        WaterChance: 0
+        ValidGround: Clear, Rough, Road, DirtRoad, Tiberium, BlueTiberium
+        InitialSpawnDelay: 1500
+    PathFinder:
+    ValidateOrder:
+    DebugPauseState:
+    ScreenShaker:
+    RadarPings:
+    StartGameNotification:
+    ObjectivesPanel:
+        PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+
+EditorWorld:
+    Inherits: ^BaseWorld
+    EditorActorLayer:
+    EditorResourceLayer:
+    EditorSelectionLayer:
+        Palette: placebuilding
+	LoadWidgetAtGameStart:

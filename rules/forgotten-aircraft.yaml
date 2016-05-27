@@ -1,0 +1,196 @@
+BUZZARD:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: Buzzard
+        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 400
+        Prerequisites: ~fahpad, ~!t1
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 6
+        Speed: 150
+        IdealSeparation: 2048
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 15c0
+        Type: CenterPosition
+    Armament@missiles:
+        Weapon: BuzzardMissiles
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 0,256,160, 0,-256,160
+    Armament@rockets:
+        Weapon: BuzzardStorm
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 0,128,160, 0,-128,160
+    Armament@primary:
+        Weapon: BuzzardCannon
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 800,0,160
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 10
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    WithSpriteRotorOverlay:
+        Offset: 0,0,800
+    RenderSprites:
+    WithMuzzleOverlay:
+    SpawnActorOnDeath:
+        Actor: BUZZARD.Husk
+        Probability: 80
+    
+FBOMBER:
+    Inherits: ^AttackBomber
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Crapjet
+        Description: Plane converted into a heavy bomber.\nLoaded with a massive amount of explosives,\nresulting in a devastating explosion when the plane crashes.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 401
+        Prerequisites: ~fahpad, fhovel, ~!t1, ~!t2
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        CruiseAltitude: 8192
+        TurnSpeed: 1
+        Speed: 120
+    Health:
+        HP: 500
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 15c0
+        Type: CenterPosition
+    Armament:
+        Weapon: CarpetBomb
+    AttackPlane:
+        FacingTolerance: 20
+        AttackTurnDelay: 120
+    AmmoPool:
+        Ammo: 20
+        PipCount: 20
+        ReloadCount: 5
+        ReloadDelay: 50
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -200,628,480
+        TrailLength: 45
+        TrailWidth: 20
+        Color: FF6400
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -200,-628,480
+        TrailLength: 45
+        TrailWidth: 20
+        Color: FF6400
+        UsePlayerColor: True
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke
+        Palette: apolra50alpha
+        Offset: -200,628,480
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke
+        Palette: apolra50alpha
+        Offset: -200,-628,480
+        Interval: 2
+        MinDamage: Undamaged
+    SpawnActorOnDeath:
+        Actor: FBOMBER.Husk
+        Probability: 80
+
+STRIKER:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2200
+    Tooltip:
+        Name: Striker
+        Description: Advanced fighter with missile launchers and a machinegun.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 402
+        Prerequisites: ~fahpad, fhovel, fatrade, ~!t1, ~!t2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 2
+        Speed: 420
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 21c0
+        Type: CenterPosition
+    Armament:
+        Weapon: StrikerMissiles
+        LocalOffset: -512,512,128, -512,-512,128
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@secondary:
+        Weapon: StrikerCannon
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 1000,0,128
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -768,64,256
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -768,-64,256
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    WithMuzzleOverlay:
+    SpawnActorOnDeath:
+        Actor: STRIKER.Husk
+        Probability: 80

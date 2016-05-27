@@ -1,0 +1,414 @@
+NAWALL:
+    Inherits: ^Wall
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 200
+        Prerequisites: ~structures.nod
+    SoundOnDamageTransition:
+        DamagedSounds:
+        DestroyedSounds:
+    Valued:
+        Cost: 200
+    CustomSellValue:
+        Value: 0
+    Tooltip:
+        Name: Concrete Wall
+        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+    Health:
+        HP: 300
+    Armor:
+        Type: Heavy
+    BlocksProjectiles:
+        Height: 640
+    Crushable:
+        CrushClasses: heavywall
+    LineBuild:
+        NodeTypes: wall, turret
+
+NAGATE_A:
+    Inherits: ^Gate_A
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 201
+        Prerequisites: ~structures.nod
+    Tooltip:
+        Name: Nod Gate
+
+NAGATE_B:
+    Inherits: ^Gate_B
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 202
+        Prerequisites: ~structures.nod
+    Tooltip:
+        Name: Nod Gate
+
+NAFLAMER:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Flamer Turret
+        Description: Anti-Infantry base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased fire burst amount (Industry)\n\n  Strong vs Infantry\n  Weak vs Aircraft, Armor, Artillery
+    Buildable:
+        Queue: Defense
+        Prerequisites: anypower, nproc, ~structures.nod
+        BuildPaletteOrder: 203
+    Building:
+    Selectable:
+        Bounds: 40, 36, -8, -8
+    DisabledOverlay:
+    Health:
+        HP: 800
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 9c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    RenderRangeCircle:
+    RenderDetectionCircle:
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 300
+    AttackTurreted:
+    Armament@right: 
+        Weapon: FireballLauncher
+        LocalOffset: 475,64,600
+    Armament@left: 
+        Weapon: FireballLauncher
+        LocalOffset: 475,-64,600
+    Armament@upgrade1: 
+        Weapon: FireballLauncher
+        LocalOffset: 475,64,600
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    Armament@upgrade2: 
+        Weapon: FireballLauncher
+        LocalOffset: 475,-64,600
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    Targetable:
+        TargetTypes: Ground, Building, C4, Flameproof
+    AutoTarget:
+    Power:
+        Amount: -15    
+    WithSpriteTurret:
+        Recoils: no
+    GlobalUpgradable@upgrade1:
+        Upgrades: technology
+        Prerequisites: technology    
+    GlobalUpgradable@upgrade2:
+        Upgrades: industry
+        Prerequisites: industry    
+    Cloak@upgrade:
+        CloakDelay: 60
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        IsPlayerPalette: true
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 3c0
+        
+NALASR:
+    Inherits: ^Defense
+    Valued:
+        Cost: 900
+    Tooltip:
+        Name: Laser Turret
+        Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Improved laser range (Technology)\n Improved laser damage (Technology)\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Defense
+        Prerequisites: anypower, nproc, naradr, ~structures.nod, ~!t1
+        BuildPaletteOrder: 204
+    Building:
+    Selectable:
+        Bounds: 40, 36, -8, -8
+    DisabledOverlay:
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    RenderRangeCircle:
+    RenderDetectionCircle:
+        DrawUpdateLine: true
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 300
+        Offset: 298,-171,60
+    AttackTurreted:
+    GlobalUpgradable@upgrade:
+        Upgrades: technology
+        Prerequisites: technology    
+    Armament@default: 
+        Weapon: LaserFire2
+        LocalOffset: 612,0,300
+        UpgradeTypes: technology
+        UpgradeMaxEnabledLevel: 0
+    Armament@upgrade: 
+        Weapon: LaserFire2u
+        LocalOffset: 612,0,300
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    RenderVoxels:
+        Recoils: no
+    WithVoxelBarrel:
+    WithVoxelTurret:
+    AutoTarget:
+    Power:
+        Amount: -30
+    Cloak@upgrade:
+        CloakDelay: 60
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        IsPlayerPalette: true
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 3c0
+
+NASAM:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: S.A.M. Site
+        Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
+    Buildable:
+        Queue: Defense
+        Prerequisites: anypower, nproc, naradr, ~structures.nod, ~!t1
+        BuildPaletteOrder: 205
+    Building:
+    Selectable:
+        Bounds: 40, 36, -3, -8
+    DisabledOverlay:
+    Health:
+        HP: 800
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 18c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    RenderRangeCircle:
+    AutoTarget:
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 50
+    AttackTurreted:
+    WithSpriteTurret:
+        Recoils: yes
+    Armament@normal:
+        Weapon: RedEye
+        LocalOffset: 300,0,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+        UpgradeTypes: industry
+        UpgradeMaxEnabledLevel: 0
+    Armament@upgrade: 
+        Weapon: RedEye2
+        LocalOffset: 300,0,512, 300,128,512, 300,-128,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    Power:
+        Amount: -25
+    GlobalUpgradable@upgrade1:
+        Upgrades: technology
+        Prerequisites: technology    
+    GlobalUpgradable@upgrade2:
+        Upgrades: industry
+        Prerequisites: industry   
+    Cloak@upgrade:
+        CloakDelay: 60
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        IsPlayerPalette: true
+    WithMuzzleOverlay:
+        
+NAOBEL:
+    Inherits: ^Defense
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: Obelisk of Light
+        Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 206
+        Prerequisites: anypower, nproc, naradr, natech, ~structures.nod, ~!t1, ~!t2
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 88, 74, 0, -14
+    RequiresPower:
+    DisabledOverlay:
+    Health:
+        HP: 2000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 15c0
+    Armament:
+        Weapon: LaserFire
+        LocalOffset: 1400,210,800
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    AttackCharge:
+        ChargeAudio: obelpowr.aud
+        InitialChargeDelay: 60
+    WithChargeOverlay:
+        Sequence: active
+        Palette: player
+        IsPlayerPalette: true
+    AutoTarget:
+    RenderRangeCircle:
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    Power:
+        Amount: -150
+    WithMuzzleOverlay:
+
+NAPULS:
+    Inherits: ^Defense
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: EMP Cannon
+        Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 207
+        Prerequisites: ~disabled #natech, ~structures.nod, ~!t1, ~!t2, ~!t3
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 78, 54, 0, -12
+    RequiresPower:
+    DisabledOverlay:
+    Health:
+        HP: 1000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 8c0
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 300
+    AttackTurreted:
+    Armament:
+        Weapon: EMPulseCannon
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+        Sequence: turret
+    Power:
+        Amount: -150        
+
+GATICK:
+    Inherits: ^Building
+    Valued:
+        Cost: 800
+    -AcceptsSupplies:
+    Tooltip:
+        Name: Deployed Tick Tank
+    Health:
+        HP: 350
+    Armor:
+        Type: Concrete
+    RevealsShroud:
+        Range: 5c0
+    Turreted:
+        TurnSpeed: 6
+        InitialFacing: 128
+        Offset: 170,0,213
+    Armament@PRIMARY:
+        Weapon: 90mm
+        LocalOffset: 384,0,128
+        UpgradeTypes: eliteweapon
+        UpgradeMaxEnabledLevel: 0
+        UpgradeMaxAcceptedLevel: 1
+        MuzzleSequence: muzzle
+    AttackTurreted:
+    BodyOrientation:
+        QuantizedFacings: 32
+    AutoTarget:
+    RenderRangeCircle:
+    DrawLineToTarget:
+    RenderVoxels:
+    WithVoxelBarrel:
+        LocalOffset: 170,0,0
+    WithVoxelTurret:
+    Transforms:
+        IntoActor: ttnk
+        Facing: 159
+        TransformSounds: place2.aud
+        NoTransformSounds:
+    WithMuzzleOverlay:
+    -WithDeathAnimation:
+    Targetable:
+        TargetTypes: Ground, Repair
+
+GAARTY:
+    Inherits: ^Building
+    Valued:
+        Cost: 975
+    -AcceptsSupplies:
+    Tooltip:
+        Name: Deployed Artillery
+    Health:
+        HP: 300
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 9c0
+    Selectable:
+        Voice: Vehicle
+    Targetable:
+        TargetTypes: Ground, Repair
+    Turreted:
+        TurnSpeed: 5
+        InitialFacing: 128
+        Offset: 0,0,171
+    Armament:
+        Weapon: 155mm
+        LocalOffset: 811,0,0
+        MuzzleSequence: muzzle
+    AttackTurreted:
+    BodyOrientation:
+        QuantizedFacings: 32
+    AutoTarget:
+    RenderRangeCircle:
+    DrawLineToTarget:
+    RenderVoxels:
+        LightAmbientColor: 0.4, 0.4, 0.4
+    WithVoxelBarrel:
+        LocalOffset: 0,0,-512
+    WithVoxelTurret:
+    Transforms:
+        IntoActor: art2
+        Facing: 96
+        TransformSounds: place2.aud
+        NoTransformSounds:
+    WithMuzzleOverlay:
+    -WithDeathAnimation:    

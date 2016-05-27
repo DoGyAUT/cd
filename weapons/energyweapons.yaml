@@ -1,0 +1,533 @@
+LtRail:
+    ReloadDelay: 100
+    Range: 6c0
+    Report: rail01.aud, rail02.aud, rail03.aud, rail04.aud
+    Projectile: Bullet
+        Speed: 1c512
+        Inaccuracy: 0c256
+        Blockable: true
+        Shadow: true
+        Angle: 45
+        Image: plasmabullet #pulsball
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 150
+        Versus:
+            Infantry: 100
+            Vehicle: 120
+            Aircraft: 100
+            Building: 80
+            Light: 50
+            Medium: 100
+            Heavy: 50
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmawave1
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew13.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+
+MechRailgun:
+    ReloadDelay: 60
+    Range: 8c0
+    Burst: 2 # for alternating muzzle offsets, dmg/s identical to original
+    BurstDelay: 60
+    Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud#railuse5.aud, bigggun1.aud
+    Projectile: Bullet
+        Speed: 2c0
+        Inaccuracy: 0c256
+        Blockable: false
+        Shadow: true
+        Angle: 45
+        Image: plasmabullet #pulsball
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Vehicle: 120
+            Aircraft: 100
+            Building: 100
+            Light: 50
+            Medium: 100
+            Heavy: 50
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmawave1
+        ExplosionPalette: effect50alpha
+        ImpactSounds: explo09.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+
+MechRailgun2:
+    Inherits: MechRailgun
+    ReloadDelay: 80
+
+NemesisThermal1: 
+    ReloadDelay: 70
+    Range: 8c0
+    Report: railuse5.aud
+    Projectile: LaserZap
+        Color: FFC90E
+        Width: 30
+        BeamDuration : 10
+        UsePlayerColor: false
+        ZOffset: 2047
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 150
+        Versus:
+            Kevlar: 100
+            Plate: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+            Wood: 100
+            Steel: 100
+            Concrete: 100
+        DamageTypes: Prone350Percent, TriggerProne, FireDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+    Warhead@3EffAir: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+        ValidImpactTypes: Air, AirHit
+        
+NemesisThermal2: 
+    Inherits: NemesisThermal1
+    ReloadDelay: 77
+        
+NemesisThermalAA: 
+    ReloadDelay: 100
+    Range: 8c0
+    Burst: 4
+    BurstDelay: 10
+    Report: bigggun1.aud
+    ValidTargets: Ground, Air
+    Projectile: LaserZap
+        Color: FF7F27
+        Width: 20
+        BeamDuration : 5
+        UsePlayerColor: false
+        ZOffset: 2047
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 50
+        ValidTargets: Ground, Air
+        Versus:
+            Kevlar: 100
+            Plate: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+            Wood: 100
+            Steel: 100
+            Concrete: 100
+        DamageTypes: Prone350Percent, TriggerProne, FireDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+    Warhead@3EffAir: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+        ValidImpactTypes: Air, AirHit    
+        
+CruiserIonCannon:
+    ReloadDelay: 200
+    Range: 8c0
+    Report: plsecan2.aud
+    Projectile: LaserZap
+        Color: C8FFFA
+        Width: 100
+        BeamDuration : 30
+        UsePlayerColor: false
+        ZOffset: 2047
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 800
+        Falloff: 100, 50, 25, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 100
+            Aircraft: 0
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: swave
+        ExplosionPalette: swave
+        ImpactSounds: ion1.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu_area: LeaveSmudge
+        SmudgeType: MediumScorch
+        Size: 2,1
+        Delay: 8
+    Warhead@5Eff: CreateEffect
+        Explosions: beamzap
+        ExplosionPalette: beamzap
+        ImpactSounds: plasmaexplo02.aud
+        InvalidImpactTypes: Water, Air, AirHit
+
+KodiakIonCannon1:
+    ReloadDelay: 300
+    Range: 10c0
+    Report: plsecan2.aud   
+    Projectile: Bullet
+        Speed: 2c0
+        Inaccuracy: 0c256
+        Blockable: false
+        Shadow: false
+        Angle: 45
+        Image: plasmabullet #pulsball
+        ContrailLength: 60
+        ContrailColor: C8FFFA
+        ContrailWidth: 50
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 300
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Kevlar: 100
+            Plate: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+            Wood: 100
+            Steel: 100
+            Concrete: 100
+        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: ionring
+        ExplosionPalette: effect50alpha
+        ImpactSounds: ion1.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu_area: LeaveSmudge
+        SmudgeType: MediumScorch
+        Size: 2,1
+        Delay: 8
+    Warhead@5Eff: CreateEffect
+        Explosions: plasmaexp01
+        ExplosionPalette: effect50alpha
+        ImpactSounds: plasmaexplo02.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+ 
+KodiakIonCannon2:
+    Inherits: KodiakIonCannon1
+    ReloadDelay: 280
+        
+TitanRailgun:
+    ReloadDelay: 80
+    Range: 9c0
+    Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
+    Projectile: Bullet
+        Speed: 2c0
+        Inaccuracy: 0c256
+        Blockable: false
+        Shadow: true
+        Angle: 45
+        Image: plasmabullet #pulsball
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 300
+        Versus:
+            Infantry: 100
+            Vehicle: 120
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 80
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmawave1
+        ExplosionPalette: effect50alpha
+        ImpactSounds: explo09.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+        
+SonicZap:
+    ReloadDelay: 180
+    Range: 6c0
+    Report: sonic4.aud
+    Projectile: AreaBeam
+        Speed: 0c256
+        Duration: 90
+        DamageInterval: 5 # Roughly 18 impacts.
+        Width: 512
+        Shape: Flat
+        BeyondTargetRange: 0c256
+        Blockable: true
+        Color: 00FFFFC8
+        ZOffset: 2047
+    Warhead@1Dam: SpreadDamage
+        Range: 0, 32
+        Falloff: 100, 100
+        Damage: 30
+        AffectsParent: false
+        ValidStances: Neutral, Enemy
+        Versus:
+            Kevlar: 100
+            Plate: 60
+            Light: 100
+            Medium: 80
+            Heavy: 60
+            Wood: 100
+            Steel: 80
+            Concrete: 50
+        DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+    Warhead@2Dam: SpreadDamage
+        Range: 0, 32
+        Falloff: 50, 50
+        Damage: 20
+        InvalidTargets: Disruptor # Does not affect friendly disruptors at all
+        AffectsParent: false
+        ValidStances: Ally
+        Versus:
+            Kevlar: 100
+            Plate: 60
+            Light: 100
+            Medium: 80
+            Heavy: 60
+            Wood: 100
+            Steel: 80
+            Concrete: 50
+        DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+
+CyCannon:
+    ReloadDelay: 200
+    Range: 7c0
+    Report: scrin5b.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 192
+        Blockable: true
+        HorizontalRateOfTurn: 2
+        Shadow: true
+        Image: torpedo
+        Inaccuracy: 1c0
+        ContrailLength: 10
+        ContrailColor: 00C800
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        ValidTargets: Ground
+        Versus:
+            None: 350
+            Kevlar: 350
+            Light: 200
+            Medium: 150
+            Heavy: 100
+            Wood: 250
+            Steel: 125
+            Concrete: 80
+        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_small
+        ExplosionPalette: effect50alpha
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@5Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+
+BansheeCannon:
+    ReloadDelay: 150
+    Range: 16c0
+    ValidTargets: Ground, Air, HighAir
+    Report: scrin5b.aud
+    Burst: 10
+    BurstDelay: 3
+    Projectile: Bullet
+        Image: dualproton
+        Speed: 1c256
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 60
+        Versus:
+            Infantry: 100
+            Vehicle: 100
+            Aircraft: 0
+            Building: 80
+            Light: 100
+            Medium: 90
+            Heavy: 60
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 60
+        Versus:
+            Infantry: 0
+            Vehicle: 0
+            Aircraft: 100
+            Building: 0
+            Light: 100
+            Medium: 90
+            Heavy: 60
+        ValidTargets: Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_tiny
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water    
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light
+
+BansheeProton:
+    ReloadDelay: 250
+    Range: 14c0
+    ValidTargets: Ground
+    Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+    Burst: 3
+    BurstDelay: 10
+    Projectile: Bullet
+        Image: TORPEDO
+        RangeLimit: 20c0
+        Speed: 1c512
+        Inaccuracy: 0c512
+        ContrailLength: 10
+        ContrailColor: 00C800
+        ContrailWidth: 25
+    Warhead@2Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Vehicle: 150
+            Aircraft: 100
+            Building: 150
+            Light: 100
+            Medium: 100
+            Heavy: 80
+        ValidTargets: Ground
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water    
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light
+ 
+MontaukProton:
+    ReloadDelay: 250
+    Range: 14c0
+    ValidTargets: Ground
+    Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+    Burst: 6
+    BurstDelay: 10
+    Projectile: Bullet
+        Image: TORPEDO
+        RangeLimit: 20c0
+        Speed: 0c512
+        Inaccuracy: 3c0
+        ContrailLength: 10
+        ContrailColor: 00C800
+        ContrailWidth: 50
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 300
+        ValidTargets: Ground
+        Versus:
+            Kevlar: 100
+            Plate: 100
+            Light: 100
+            Medium: 100
+            Heavy: 50
+            Wood: 100
+            Steel: 50
+            Concrete: 20
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water    
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light
+        
+ShockerBlaster:
+    ReloadDelay: 100
+    Range: 4c0
+    Report: plasmashot01.aud, plasmashot02.aud, plasmashot03.aud
+    Burst: 3
+    BurstDelay: 6
+    Projectile: Bullet
+        Inaccuracy: 0c256
+#        Image: energybullet #plasmabullet
+        Angle: 45
+        Speed: 0c256
+        ContrailLength: 6
+        ContrailColor: 68B8D8
+        ContrailWidth: 10
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 20
+        Versus:
+            Infantry: 200
+            Vehicle: 50
+            Aircraft: 0
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 50
+        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: epiff
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+        ImpactSounds: bursterhit01.aud
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water
+    Warhead@4Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light

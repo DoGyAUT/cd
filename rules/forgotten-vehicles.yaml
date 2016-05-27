@@ -1,0 +1,676 @@
+FMCV:
+    Inherits: ^VoxelVehicle
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 400
+        Prerequisites: ~faweap
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Forgotten Mobile Construction Vehicle
+        Description: Deploys into another Construction Yard.\n  Unarmed
+    Selectable:
+        Priority: 3
+        Bounds: 42,42
+    Voiced:
+        VoiceSet: Fmcv
+    Health:
+        HP: 1000
+    Armor:
+        Type: Heavy
+    Mobile:
+        Speed: 85
+    RevealsShroud:
+        Range: 6c0
+    MustBeDestroyed:
+        RequiredForShortGame: true
+    BaseBuilding:
+    Transforms:
+        IntoActor: facnst
+        Offset: -1,-1
+        Facing: 96
+        TransformSounds: place2.aud
+        NoTransformSounds:
+        Voice: Move
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,100,800
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,-100,800
+        Interval: 2
+        MinDamage: Undamaged
+    ActorLostNotification:
+        Notification: CriticalUnitLost
+    
+FHARV:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1400
+    Tooltip:
+        Name: Forgotten Harvester
+        Description: Collects Tiberium for processing.\n  Unarmed
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 401
+        Prerequisites: ~faweap, fproc
+    Selectable:
+        Priority: 7
+        Bounds: 36,36
+    Voiced:
+        VoiceSet: Fharv
+        Volume: 2
+    Harvester:
+        DeliveryBuildings: gproc, nproc, kproc, fproc, sproc
+        Capacity: 14
+        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+        BaleLoadDelay: 12
+        BaleUnloadDelay: 3
+        SearchFromProcRadius: 36
+        SearchFromOrderRadius: 18
+        HarvestVoice: Action
+        DeliverVoice: Move
+        PipCount: 5
+        FullyLoadedSpeed: 90
+    Mobile:
+        Speed: 90
+        TerrainSpeeds:
+            Clear: 90
+            Rough: 70
+            Road: 100
+            Beach: 70
+            Tiberium: 80
+            BlueTiberium: 80
+            RedTiberium: 80
+            PurpleTiberium: 80
+    -PoisonedByTiberium:
+    Health:
+        HP: 1000
+    SelfHealing:
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
+#    PoisonedByTiberium:
+#        Weapon: TiberiumHeal
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 6c0
+    -GainsExperience:
+    RenderSprites:
+    RenderVoxels:
+    -WithVoxelBody:
+    WithVoxelUnloadBody:
+    Explodes:
+        Weapon: LargeTiberiumExplosion
+    WithHarvestOverlay:
+        Offset: 384,0,0
+        Palette: effect    
+
+TAURUS:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Taurus
+        Description: Armored infantry transport.\nArmed with a 105mmHE cannon\n  Strong vs Hard Targets\n  Weak vs Soft Targets\n  Useless vs Aircraft
+    Selectable:
+        Bounds: 42,42
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 402
+        Prerequisites: ~faweap, fabar, ~!upgrade.warthog
+    Voiced:
+        VoiceSet: Taurus
+        Volume: 4
+    Mobile:
+        TurnSpeed: 1
+        Speed: 60
+    RevealsShroud:
+        Range: 10c0
+    Health:
+        HP: 700
+    Armor:
+        Type: Heavy
+    Cargo:
+        Types: Infantry
+        MaxWeight: 10
+        PipCount: 10
+        UnloadVoice: Unload
+        LoadingUpgrades: notmobile
+        EjectOnDeath: true
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    AttackFrontal:
+    Armament@primary:
+        Weapon: 105mmHE
+        LocalOffset: 1000, 128, 700
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@secondary:
+        Weapon: TaurusMG
+        LocalOffset:  600, -128, 600
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    WithMuzzleOverlay:
+    AutoTarget:
+    AttackMove:
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,200,800
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,-200,800
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@2:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,300,800
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@3:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -650,-300,800
+        Interval: 2
+        MinDamage: Undamaged
+
+WARTHOG:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Warthog
+		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 402
+        Prerequisites: ~faweap, fabar, ~!t1, ~upgrade.warthog
+    Voiced:
+        VoiceSet: Taurus
+        Volume: 4
+    Mobile:
+        Speed: 95
+        TurnSpeed: 6
+    RevealsShroud:
+        Range: 11c0
+    Health:
+        HP: 450
+    Armor:
+        Type: Medium
+     Cargo:
+        Types: Infantry
+        MaxWeight: 6
+        PipCount: 6
+        UnloadVoice: Unload
+        LoadingUpgrades: notmobile
+    Turreted:
+        TurnSpeed: 4
+        Offset: -64,0,0
+    Armament@primary:
+        Weapon: 122mmAP
+        LocalOffset: 1024,0,768
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@secondary:
+        Weapon: WarthogMissile
+        LocalOffset: 0,0,1024
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: no
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
+    
+FBUGGY:
+    Inherits: ^VoxelVehicle
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Assault Buggy
+        Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 403
+        Prerequisites: ~faweap, ~!upgrade.gremlin
+    Voiced:
+        VoiceSet: Abuggy
+        Volume: 2
+    Mobile:
+        TurnSpeed: 8
+        Speed: 120
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Weapon: AssaultMG
+        LocalOffset: 350,0,450
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Armament@secondary:
+        Weapon: AssaultLauncher
+        LocalOffset: 200,0,400
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Turreted:
+        TurnSpeed: 25
+        Offset: 0,0,0
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+    WithMuzzleOverlay:
+    
+GREMLIN:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Gremlin
+		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 404
+        Prerequisites: ~faweap, fhovel, ~!t1, ~upgrade.gremlin, ~!upgrade.warthog
+    Voiced:
+        VoiceSet: Gremlin
+        Volume: 4
+    Mobile:
+        Speed: 85
+        TurnSpeed: 6
+    Health:
+        HP: 500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 8c0
+    Turreted:
+        TurnSpeed: 4
+    Armament@PRIMARY:
+        Weapon: GremlinShotgun
+        LocalOffset: 525,128,600, 525,-128,600
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 100
+        RecoilRecovery: 20
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: no
+    WithVoxelBarrel@1:
+        Sequence: barrel1
+    WithVoxelBarrel@2:
+        Sequence: barrel2
+    WithMuzzleOverlay:
+
+AUROCH:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Auroch
+		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 405
+        Prerequisites: ~faweap, fhovel, fatrade, ~!t1, ~!t2, ~!upgrade.bison, ~upgrade.auroch
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Mobile:
+        Speed: 65
+        TurnSpeed: 2
+    Health:
+        HP: 800
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 10c0
+    Turreted:
+        TurnSpeed: 2
+    Armament@PRIMARY:
+        Weapon: AurochCannon
+        LocalOffset: 1200,0,700
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -800,175,450
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -800,-175,450
+        Interval: 2
+        MinDamage: Undamaged
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: no
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
+
+BISON:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1400
+    Tooltip:
+        Name: Bison
+		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 405
+        Prerequisites: ~faweap, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.auroch
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Mobile:
+        Speed: 75
+        TurnSpeed: 3
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 4
+    Armament@PRIMARY:
+        Weapon: 90mm
+        LocalOffset: 750,0,650
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@missiles:
+        Weapon: BisonMissile
+        LocalOffset: 128,-128,800, 128,-220,800
+        MuzzleSequence: missile
+        MuzzlePalette: apolra50alpha
+    Armament@launcher:
+        Weapon: BisonLauncher
+        LocalOffset: 350,128,750
+        MuzzlePalette: apolra50alpha
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+    Armament@mg:
+        Weapon: TaurusMG
+        LocalOffset: 256,-32,950
+        MuzzlePalette: apolra50alpha
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: no
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
+
+HOWITZER:
+    Inherits: ^VoxelVehicle
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Howitzer
+        Description: Mobile Artillery.\nNeeds to deploy in order to shoot.\n  Strong vs Slow Targets, Buildings\n  Weak vs Fast Targets\n  Useless vs Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 406
+        Prerequisites:  ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.howitzer, ~!upgrade.ragnarok
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Health:
+        HP: 600
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 71
+        TurnSpeed: 1
+    RevealsShroud:
+        Range: 10c0
+    Turreted:
+        TurnSpeed: 2
+        Offset: -400,0,0
+    Armament@PRIMARY:
+        Weapon: 240mm
+        LocalOffset: 400,0,1800
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 100
+        RecoilRecovery: 5
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: yes
+    WithMuzzleOverlay:
+    
+RAGNAROK:
+    Inherits: ^VoxelVehicle
+    Valued:
+        Cost: 3500
+    Tooltip:
+        Name: Ragnarok
+        Description: Super heavy mobile Artillery.\nNeeds to deploy in order to shoot.\n  Strong vs Slow Targets, Units\n  Weak vs Fast Targets, Buildings\n  Useless vs Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 407
+        Prerequisites:  ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.ragnarok, ~!upgrade.howitzer
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Health:
+        HP: 800
+    Armor:
+        Type: Heavy
+    Mobile:
+        Speed: 50
+        TurnSpeed: 1
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Weapon: RagnarCannonCluster
+        LocalOffset: 850,0,1500
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@secondary1:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary2:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary3:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary4:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary5:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary6:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary7:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary8:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    Armament@secondary9:
+        Weapon: RagnarCannonCluster
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 850,0,1500
+    AttackFrontal:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    
+AVALANCHE:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 8000
+    Tooltip:
+        Name: Rampage
+		Description: Super heavy tank.\nArmed with triple 160mm cannons.\n  Strong vs Ground Targets\n  Useless vs Aircraft
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 408
+        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~!t3
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Mobile:
+        Speed: 50
+        TurnSpeed: 1
+    Health:
+        HP: 6000
+    SelfHealing:
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 15c0
+    Turreted:
+        TurnSpeed: 2
+    Armament@primary1:
+        Name: primary
+        Weapon: 160mm1
+        LocalOffset: 1200,0,768
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@primary2:
+        Name: secondary
+        Weapon: 160mm2
+        LocalOffset: 1200,128,768
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@primary3:
+        Name: tertiary
+        Weapon: 160mm3
+        LocalOffset: 1200,-128,768
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    AttackTurreted:
+        Armaments: primary, secondary, tertiary
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: no
+    WithVoxelBarrel@1:
+        Sequence: barrel1
+        Armament: primary
+    WithVoxelBarrel@2:
+        Sequence: barrel2
+        Armament: secondary
+    WithVoxelBarrel@3:
+        Sequence: barrel3
+        Armament: tertiary
+    WithMuzzleOverlay:
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -700,60,500
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -700,-60,500
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@2:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -700,200,500
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@3:
+        Sprite: durasmoke2
+        Palette: apolra50alpha
+        Offset: -700,-200,500
+        Interval: 2
+        MinDamage: Undamaged
+    Explodes:
+        Weapon: UnitExplodeEpic
+        EmptyWeapon: UnitExplodeEpic
+    ActorLostNotification:
+        Notification: CriticalUnitLost

@@ -1,0 +1,386 @@
+JUMPJET.Husk:
+    Inherits: ^InfantryHusk
+    Tooltip:
+        Name: Dead
+    Aircraft:
+        TurnSpeed:1
+        Speed: 80
+        AirborneUpgrades: airborne
+    RenderSprites:
+        Image: jumpjet
+    WithInfantryBody:
+#        IdleSequences: idle1,idle2
+        StandSequence: fall #stand-air
+        MoveSequence: fall
+        AttackSequence: shoot-air
+        IdleSequences: stand-air
+
+ORCA_G.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca Scout Husk
+    Aircraft:
+        TurnSpeed:1
+        Speed: 200
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_g
+    RenderSprites:
+        Image: orca_g
+        
+ORCA_F1.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca F-1 Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 150
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_f1
+    RenderSprites:
+        Image: orca_f1
+        
+ORCA_F2.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca F-2 Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_f2
+    RenderSprites:
+        Image: orca_f2
+        
+ORCA_TRAN.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca Transport Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 100
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_tran
+    RenderSprites:
+        Image: orca_tran
+        
+ORCA_TROOP.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca Troopship Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 120
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_troop
+    RenderSprites:
+        Image: orca_troop        
+                
+TRNSPORT.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Orca Carryall Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 120
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: trnsport
+    RenderSprites:
+        Image: trnsport        
+        
+ORCA_OXTRAN.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: OX-Transport Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 120
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_oxtran
+    RenderSprites:
+        Image: orca_oxtran      
+        
+ORCA_B.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Orca Bomber Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 120
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: orca_b
+    RenderSprites:
+        Image: orca_b      
+        
+PHOENIX.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Phoenix Bomber Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 200
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: phoenix
+    RenderSprites:
+        Image: phoenix      
+        
+FHAWK.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Firehawk Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 240
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: fhawk
+    RenderSprites:
+        Image: fhawk      
+        
+HORNET.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Hornet Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 260
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: hornet
+    RenderSprites:
+        Image: hornet
+
+CONDOR.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Condor Husk
+    Aircraft:
+        TurnSpeed: 5
+        Speed: 220
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: condor
+    RenderSprites:
+        Image: condor
+
+DSHP.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Dropship Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: dshp
+    RenderSprites:
+        Image: dshp
+
+VENOM.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Venom Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: venom
+    RenderSprites:
+        Image: venom
+
+HAVOC.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Havoc Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: havoc
+    RenderSprites:
+        Image: havoc
+        
+
+HYDRA.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Hydra Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: hydra
+    RenderSprites:
+        Image: hydra
+
+PUMA.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Puma Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: puma
+    RenderSprites:
+        Image: puma
+
+SCRIN.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Banshee Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 320
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: scrin
+    RenderSprites:
+        Image: scrin
+
+SCRINB.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Banshee MK.II Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 290
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: scrinb
+    RenderSprites:
+        Image: scrinb
+
+RAVEN.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Raven Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 330
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: raven
+    RenderSprites:
+        Image: raven
+        
+WYVERN.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Wyvern Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 330
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: wyvern
+    RenderSprites:
+        Image: wyvern
+
+VERTIGO.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Vertigo Bomber Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 220
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: vertigo
+    RenderSprites:
+        Image: vertigo
+
+KDRONE.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Piranha Husk
+    Aircraft:
+        TurnSpeed: 5
+        Speed: 240
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: kdrone
+    RenderSprites:
+        Image: kdrone
+
+PTEROIS.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Pterois Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: pterois
+    RenderSprites:
+        Image: pterois
+
+KGUNSHIP.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Manta Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 140
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: kgunship
+    RenderSprites:
+        Image: kgunship
+
+BUZZARD.Husk:
+    Inherits: ^AircraftHusk
+    Tooltip:
+        Name: Buzzard Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 130
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: buzzard
+    RenderSprites:
+        Image: buzzard
+
+FBOMBER.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Crapjet Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 210
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: fbomber
+    RenderSprites:
+        Image: fbomber
+    FallsToEarth:
+        Explosion: UnitExplodeCrapJet
+        Spins: false
+        Moves: true
+        Velocity: 186
+
+STRIKER.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Striker Husk
+    Aircraft:
+        TurnSpeed: 5
+        Speed: 250
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: striker
+    RenderSprites:
+        Image: striker

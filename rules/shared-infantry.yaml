@@ -1,0 +1,27 @@
+E1:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: Light Infantry
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 125
+	Mobile:
+		Speed: 71
+	Armament@PRIMARY:
+		Weapon: Minigun
+		UpgradeTypes: eliteweapon
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	Armament@ELITE:
+		Weapon: M1Carbine
+		UpgradeTypes: eliteweapon
+		UpgradeMinEnabledLevel: 1
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:

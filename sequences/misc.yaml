@@ -1,0 +1,1071 @@
+overlay:
+    Defaults: place
+        Offset: 0, -12
+        BlendMode: Additive
+    build-valid-snow:
+    build-valid-temperate:
+    build-invalid:
+        Start: 1
+    target-select:
+
+editor-overlay:
+    Defaults: place
+        Offset: 0, -12
+    copy:
+    paste:
+        Start: 1
+
+poweroff:
+    offline:
+        Length: *
+        Tick: 160
+        ZOffset: 2047
+
+allyrepair:
+    repair: wrench
+        Length: *
+        Tick: 160
+        ZOffset: 2047
+
+# TODO: fix/replace them, just placeholders
+rallypoint:
+    flag: mouse
+        Start: 221
+        Length: 8
+        ZOffset: 2047
+    circles: null
+
+beacon:
+    arrow: mouse
+		Start: 397
+	idle:
+		Length: 5
+		Tick: 200
+        ZOffset: 2047
+    circles: ring
+        Length: 12
+        BlendMode: Additive
+    airstrikeox: orca_oxicon
+        Offset: 0,-42
+    airstrikeog: orca_gicon
+        Offset: 0,-42
+    clock: gclock2
+        Length: *
+        Offset: 0,-42
+
+crate:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+        Offset: 0, -10
+
+crate-effects:
+    Defaults:
+        Length: *
+        ZOffset: 2047
+    dollar: money
+    reveal-map: reveal
+    hide-map: shroudx
+    firepower: firepowr
+    armor: armor
+    stealth: cloak
+    heal: healall
+    nuke: mltimisl
+    levelup: veteran
+
+rank:
+    rank: pips
+        Start: 7
+        Length: 2
+        ZOffset: 511
+
+mpspawn:
+	idle:
+		Length: *
+
+waypoint:
+	idle:
+		Length: *
+
+camera:
+	idle:
+		Length: *
+
+clock:
+    idle: gclock2
+        Length: *
+
+darken:
+    idle: gclock2
+        Length: 1
+        
+pips:
+    medic: 
+        Start: 6
+    groups: pipsra #TODO: backfall to RA asset
+        Start: 8
+        Length: 10
+    tag-primary: pipsra #TODO: backfall to RA asset
+        Start: 2
+        Offset: 0, 2
+    pip-empty: pips2
+    pip-green: pips2
+        Start: 1
+    pip-yellow: pips2
+        Start: 2
+    pip-gray: pips2
+        Start: 3
+    pip-red: pips2
+        Start: 4
+    pip-blue: pips2
+        Start: 5
+    pip-ammo: ammopips
+    pip-ammoempty: ammopips
+        Start: 1
+    pip-disguise: pip-disguise
+        Length: *
+        Tick: 300
+    Offset: 0, -6
+
+shroud:
+    shroud:
+        Length: *
+    fog: fog
+        Length: *
+        
+resources:
+    Defaults:
+        UseTilesetExtension: true
+        Length: 12
+        ShadowStart: 12
+        Offset: 0, -12
+        ZOffset: 1023
+    tib01: tib01
+    tib02: tib02
+    tib03: tib03
+    tib04: tib04
+    tib05: tib05
+    tib06: tib06
+    tib07: tib07
+    tib08: tib08
+    tib09: tib09
+    tib10: tib10
+    tib11: tib11
+    tib12: tib12
+    tib13: tib13
+    tib14: tib14
+    tib15: tib15
+    tib16: tib16
+    tib17: tib17
+    tib18: tib18
+    tib19: tib19
+    tib20: tib20
+	veins: veins
+		Length: 1
+		Start: 52
+		ShadowStart: -1
+		Tick: 180
+    
+explosion:
+    Defaults:
+        Length: *
+        ZOffset: 511
+    building: twlt070
+        BlendMode: Additive
+    ionring: ring1
+        BlendMode: Additive
+        Tick: 60
+    ionexplo01: ionexplo01
+    pulse_explosion: pulsefx2
+        BlendMode: Additive
+        Tick: 40
+    bigfireexpl01: bigfireexpl01
+    small_watersplash: h2o_exp2
+    large_watersplash: h2o_exp1
+    water_piff: w_piff
+    water_piffs: w_piffs
+    piff: piff
+    epiff: epiff
+    piffs: piffpiff
+#    largepiffs: expgpiff
+    small_explosion: explosml
+    medium_explosion: explomed
+    large_explosion: explolrg
+    tiny_bang: s_bang16
+        BlendMode: Additive
+    small_bang: s_bang24
+        BlendMode: Additive
+    medium_bang: s_bang36
+        BlendMode: Additive
+    large_bang: s_bang48
+        BlendMode: Additive
+    tiny_brnl: s_brnl20
+        BlendMode: Additive
+    small_brnl: s_brnl30
+        BlendMode: Additive
+    medium_brnl: s_brnl40
+        BlendMode: Additive
+    large_brnl: s_brnl58
+        BlendMode: Additive
+    tiny_tumu: s_tumu22
+        BlendMode: Additive
+    small_tumu: s_tumu30
+        BlendMode: Additive
+    medium_tumu: s_tumu42
+        BlendMode: Additive
+    large_tumu: s_tumu60
+        BlendMode: Additive
+    tiny_clsn: s_clsn16
+        BlendMode: Additive
+    small_clsn: s_clsn22
+        BlendMode: Additive
+    medium_clsn: s_clsn30
+        BlendMode: Additive
+    large_clsn: s_clsn42
+    verylarge_clsn: s_clsn58
+    tiny_twlt: twlt026
+        BlendMode: Additive
+    small_twlt: twlt036
+        BlendMode: Additive
+    medium_twlt: twlt050
+        BlendMode: Additive
+    large_twlt: twlt070
+        BlendMode: Additive
+    verylarge_twlt: twlt100
+        BlendMode: Additive
+    tiny_grey_explosion: xgrysml1
+        BlendMode: Additive
+    small_grey_explosion: xgrysml2
+        BlendMode: Additive
+    medium_grey_explosion: xgrymed1
+        BlendMode: Additive
+    large_grey_explosion: xgrymed2
+        BlendMode: Additive
+	veins: veinatac
+		Length: 12
+		UseTilesetExtension: true
+		ZOffset: 1023
+    tiny_flash: clight4
+        BlendMode: Additive
+    small_flash: clight1
+        BlendMode: Additive
+    medium_flash: clight3
+        BlendMode: Additive
+    large_flash: clight2
+        BlendMode: Additive
+    swave: swave
+        BlendMode: Additive
+    swaveb: swaveb
+        BlendMode: Additive
+    beamzap: beamzap
+        BlendMode: Additive
+    shockwave: shockwave
+        Offset: 0, -12
+    plasmawave1: plasmawave1
+    plasmaexpl1: plasmaexpl1
+    plasmaexpl2: plasmaexpl2
+    plassabogsml: plassabogsml
+    lasershot1: lasershot1
+        BlendMode: Additive    
+    fireexpl: fireexpl
+        BlendMode: Additive
+    expmed: expmed
+    tibbomb: tibbomb
+    scexplo: scexplo
+    plasmaexp01: plasmaexp01
+    plasmaexp02: plasmaexp02
+    protonexpl_lrg: plasbomb
+    protonexpl_small: protexp2
+    protonexpl_tiny: protexp1
+    protonexpl_med: eoncnex
+    airexplo01: airexplo01
+        BlendMode: Additive
+    airexplo02: airexplo02
+        BlendMode: Additive
+    airexplo03: airexplo03
+        BlendMode: Additive
+    airexplo04: airexplo04
+        BlendMode: Additive
+    airexplo05: airexplo05
+        BlendMode: Additive
+    airexplo06: airexplo06
+        BlendMode: Additive
+    airexplo07: airexplo07
+        BlendMode: Additive
+    airexplo08: airexplo08
+        BlendMode: Additive
+    airexplo09: airexplo09
+        BlendMode: Additive        
+    crapexplo: crapexplo
+        BlendMode: Additive
+    napalm1: napalm1
+        BlendMode: Additive
+    napalm2: napalm2
+        BlendMode: Additive
+    grenexplo01: grenexplo01
+        BlendMode: Additive
+    grenexplo02: apocexp
+        BlendMode: Additive
+    coreexplo1: crivexp
+        BlendMode: Additive
+    coreexplo2: crivexp2
+        BlendMode: Additive
+    artexplo01: artexplo01
+        BlendMode: Additive
+    artexplo02: artexplo02
+        BlendMode: Additive
+    artexplo03: artexplo03
+        BlendMode: Additive
+    artexplo04: artexplo04
+        BlendMode: Additive
+    glow: glow
+        BlendMode: Additive
+    fire01a: fire01a
+        BlendMode: Additive
+    fire02a: fire02a
+        BlendMode: Additive
+    fire03a: fire03a
+        BlendMode: Additive
+    phosexp1: exp33fr
+        BlendMode: Additive
+    phosexp2: exp34fr
+        BlendMode: Additive
+    phosexp3: exp33fr
+        BlendMode: Additive
+    phosexp4: exp34fr
+        BlendMode: Additive
+    phosexp5: exp33fr
+        BlendMode: Additive
+    phosexp6: exp34fr
+        BlendMode: Additive
+        
+newrank:
+    rank: newpips
+        Start: 0
+        Length: 5
+        ZOffset: 511
+ 
+bufficon:
+    buff: upgradepips
+        idle:
+            Length: 1
+            ZOffset: 511
+            
+nodbufficon:
+    buff: nodbuff
+        idle:
+            Length: 1
+            ZOffset: 511
+
+parach:
+    open:
+        Length: 20
+    idle:
+        Start: 20
+        Length: 20
+    close:
+        Start: 40
+        Length: 30
+        
+plassabogsml:
+    idle:
+        Length: *
+        ZOffset: 1023
+    
+discus:
+    idle:
+        Length: *
+        ZOffset: 1023
+       
+canister:
+    idle:
+        Length: *
+        ZOffset: 1023
+
+pulsball:
+    idle:
+        Length: *
+        ZOffset: 1023
+
+web:
+    idle:
+        Length: *  
+        ZOffset: 1023      
+
+webguy:
+    idle:
+        Length: *   
+        ZOffset: 1023     
+        
+dragon:
+    idle:
+        Facings: 32
+        
+patriot:
+    idle:
+        Facings: 32
+        
+crystal4:
+    idle:
+        Length: 15
+        ShadowStart: 15
+        UseTilesetExtension: true
+
+120mm:
+    idle:
+        ZOffset: 1023
+
+torpedo:
+    idle:
+        Length: *
+        ZOffset: 1023
+
+eonball:
+    idle:
+        Length: *
+        ZOffset: 1023
+        
+flameall:
+    idle:
+        Length: 19
+        Facings: -8
+        Tick: 160
+
+largesmoke:
+    idle: lgrysmk1
+        Length: *
+        ZOffset: 1023
+
+smallsmoke:
+    idle: sgrysmk1
+        Length: *
+        ZOffset: 1023
+        
+flametrailer:
+    idle:
+        Length: *
+        BlendMode: Additive
+        ZOffset: 1023
+        
+large_smoke_trail:
+    idle: smokey
+        Length: *
+
+small_smoke_trail:
+    idle: smokey2
+        Length: *
+        ZOffset: 1023
+#        BlendMode: Additive #Alpha
+        
+plasmatrail:
+    idle: railpart
+        Length: *
+        ZOffset: 1023
+        
+smoketrail:
+    idle:
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive #Alpha
+
+smallsmoketrail:
+    idle: 
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive #Alpha
+        
+fire:
+	1:  fire01a
+        BlendMode: Additive
+		Length: *
+		Offset: 0,-3
+		ZOffset: 1023
+        
+largefire:
+    idle: fire1
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+mediumfire:
+    idle: fire2
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+smallfire:
+    idle: fire3
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+tinyfire:
+    idle: fire4
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+smokland:
+    idle:
+        Length: *
+        ZOffset: 1023
+        
+moveflsh:
+    idle: ring
+        Length: *
+        Tick: 30
+
+wake:
+    idle: wake2
+        Length: *
+        ZOffset: -512
+        Tick: 180
+dust:
+    idle: vehicledust
+        Length: *
+        ZOffset: -512
+        
+dust2:
+    idle: infantrydust
+        Length: *
+        ZOffset: -512
+        
+smallscorches:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -12
+    sc1: burnt01
+    sc01: burnt101
+    sc2: burnt02
+    sc02: burnt102
+    sc3: burnt03
+    sc03: burnt103
+    sc4: burnt04
+    sc04: burnt104
+    sc5: burnt05
+    sc05: burnt105
+    sc6: burnt06
+    sc06: burnt106
+
+mediumscorches:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -18
+    sc7: burnt07
+    sc07: burnt107
+    sc8: burnt08
+    sc08: burnt108
+    sc9: burnt09
+    sc09: burnt109
+    sc10: burnt10
+    sc010: burnt110
+
+largescorches:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -24
+    sc11: burnt11
+    sc011: burnt111
+    sc12: burnt12
+    sc012: burnt112
+
+smallcraters:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -12
+    cr1: crater01
+    cr01: crater101
+    cr2: crater02
+    cr02: crater102
+    cr3: crater03
+    cr03: crater103
+    cr4: crater04
+    cr04: crater104
+    cr5: crater05
+    cr05: crater105
+    cr6: crater06
+    cr06: crater106
+
+mediumcraters:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -12
+    cr7: crater07
+    cr07: crater107
+    cr8: crater08
+    cr08: crater108
+    cr9: crater09
+    cr09: crater109
+    cr10: crater10
+    cr010: crater110
+
+largecraters:
+    Defaults:
+        UseTilesetExtension: true
+        Offset: 0, -24
+    cr11: crater11
+    cr011: crater111
+    cr12: crater12
+    cr012: crater112
+
+icon:
+    clustermissile: mltiicon
+    ioncannon: ioncicon
+    hunterseeker: detnicon
+    airstrikeox: orca_oxicon
+    airstrikeog: orca_gicon
+
+clustermissile:
+    up: nukeup
+        Length: *
+    down: nukedown
+        Length: *
+ionbeam:
+    idle:
+        Length: *
+        Offset: 0, -78
+        ZOffset: 1
+
+trock01:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+trock02:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+trock03:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+trock04:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+trock05:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+srock01:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+srock02:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+srock03:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+srock04:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+srock05:
+    idle:
+        ShadowStart: 1
+        UseTilesetExtension: true
+
+gunfire:
+    idle:
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+laserburst:
+    idle:
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+
+apmuzzle:
+    idle:
+        Length: *
+        ZOffset: 1023
+
+durasmoke:
+    idle: htrkpuff
+        Length: *
+        ZOffset: 1023
+        
+durasmoke2:
+    idle: shtrkpuff
+        Length: *
+        ZOffset: 1023
+        
+lgrysmk1:
+    idle:
+        Length: *
+        ZOffset: 1023
+        
+apocexp:
+    idle:
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+        
+bullet:
+    idle:
+        Length: 1
+        Facings: 32
+
+energybullet:
+    idle:
+        Length: 1
+        Facings: 32
+        
+dualproton:
+    idle:
+        Length: 1
+        Facings: 32
+
+shell01:
+    idle:
+        Length: 1
+        Facings: 32
+ 
+shell02:
+    idle:
+        Length: 1
+        Facings: 32
+
+
+missile01:
+    idle:
+        Length: 1
+        Facings: 64
+        
+burstbullet:
+    idle:
+        Length: 1
+        Facings: 32
+
+plasmabullet:
+    idle:
+        Length: 1
+        Facings: 32
+        
+smoke_m:
+    idle:
+        Length: *
+        Offset: 2, -5
+        ZOffset: 512
+    loop:
+        Start: 49
+        Length: 42
+        Offset: 2, -5
+        ZOffset: 512
+    end:
+        Length: 26
+        Offset: 2, -5
+        ZOffset: 512
+
+dbrissm:
+    Defaults:
+        Length:*   
+        ZOffset: 1023
+    1: dbris1sm
+    2: dbris2sm
+    3: dbris3sm   
+    4: dbris4sm     
+    5: dbris5sm       
+    6: dbris6sm      
+    7: dbris7sm      
+    8: dbris8sm      
+    9: dbris9sm     
+    10: dbrs10sm
+        
+dbrislg:
+    Defaults:
+        Length:*   
+        ZOffset: 1023
+    1: dbris1lg
+    2: dbris2lg
+    3: dbris3lg 
+    4: dbris4lg 
+    5: dbris5lg   
+    6: dbris6lg
+    7: dbris7lg
+    8: dbris8lg
+    9: dbris9lg
+    10: dbrs10lg
+
+flyman:
+    1: flyman
+        Length:*   
+        ZOffset: 1023   
+    
+spark:
+    1: spark
+        Length:*   
+        ZOffset: 1023     
+ 
+blood:
+    1: blood
+        Length:*    
+        ZOffset: 1023
+        
+gdf:
+    idle:
+    icon: gdf
+
+st:
+    idle:
+    icon: st
+
+zc:
+    idle:
+    icon: zc
+
+ni:
+    idle:
+    icon: ni
+    
+nt:
+    idle:
+    icon: nt
+    
+np:
+    idle:
+    icon: np
+  
+cab_hc:
+    idle:
+    icon: cab_hc
+ 
+cab_lc:
+    idle:
+    icon: cab_lc
+    
+cab_mp:
+    idle:
+    icon: cab_mp
+ 
+cab_htp:
+    idle:
+    icon: cab_htp
+     
+cab_nm:
+    idle:
+    icon: cab_nm
+ 
+cab_srs:
+    idle:
+    icon: cab_srs
+    
+forg.brigand:
+    default: forgu
+    icon: brigicon
+    
+forg.goon:
+    default: forgu
+    icon: goonicon
+    
+forg.warrior:
+    default: forgu
+    icon: warrioricon
+      
+forg.fiend:
+    default: forgu
+    icon: fiendicon
+
+forg.warthog:
+    default: forgu
+    icon: warthogicon
+ 
+forg.gremlin:
+    default: forgu
+    icon: gremlinicon
+       
+forg.auroch:
+    default: forgu
+    icon: aurochicon
+        
+forg.bison:
+    default: forgu
+    icon: bisonicon
+       
+forg.howitzer:
+    default: forgu
+    icon: howitzericon
+        
+forg.ragnarok:
+    default: forgu
+    icon: ragnaricon
+    
+cab.pterois:
+    default: forgu
+    icon: pteroisicon
+    
+cab.manta:
+    default: forgu
+    icon: kgunshipicon
+    
+cab.cyc2:
+    default: forgu
+    icon: cybcicon
+    
+cab.glad:
+    default: forgu
+    icon: gladicon
+    
+cab.kronos:
+    default: forgu
+    icon: kronosicon
+    
+cab.gargantua:
+    default: forgu
+    icon: gargantuaicon
+
+crat01:
+    idle:
+
+crat02:
+    idle:
+
+crat03:
+    idle:
+
+crat04:
+    idle:
+
+crat0a:
+    idle:
+
+crat0b:
+    idle:
+
+crat0c:
+    idle:
+
+drum01:
+    idle:
+
+drum02:
+    idle:
+
+palet01:
+    idle:
+
+palet02:
+    idle:
+
+palet03:
+    idle:
+
+palet04:
+    idle:
+    
+tracks01:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks02:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks03:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks04:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks05:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks06:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks07:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks08:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks09:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks10:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks11:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks12:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks13:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks14:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks15:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tracks16:
+    idle:
+        UseTilesetExtension: true
+        ZOffset: -1c0
+
+tuntop01:
+    idle:
+        Offset: 0, -13
+        UseTilesetExtension: true
+        ShadowStart: 1
+
+tuntop02:
+    idle:
+        Offset: 0, -13
+        UseTilesetExtension: true
+        ShadowStart: 1
+
+tuntop03:
+    idle:
+        Offset: 0, -13
+        UseTilesetExtension: true
+        ShadowStart: 1
+
+tuntop04:
+    idle:
+        Offset: 0, -13
+        UseTilesetExtension: true
+        ShadowStart: 1

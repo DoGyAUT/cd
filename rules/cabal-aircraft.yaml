@@ -1,0 +1,199 @@
+KDRONE:
+    Inherits: ^AttackPlane
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Piranha
+        Description: Advanced fighter-bomber craft with twin plasma cannons.\n\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Buildings, Heavy Armor
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 300
+        Prerequisites: ~kahpad, ~!t1
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Cabalbeep
+        Volume: 2
+    Aircraft:
+        MaximumPitch: 90
+        TurnSpeed: 5
+        Speed: 325
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 200
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 17c0
+        Type: CenterPosition
+    Armament:
+        Weapon: DroneMachal
+        LocalOffset: 128,0,0
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -64,0,0
+        TrailLength: 25
+        TrailWidth: 30
+        Color: 0080FF
+        UsePlayerColor: True
+    SpawnActorOnDeath:
+        Actor: KDRONE.Husk
+        Probability: 80
+        
+PTEROIS:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Pterois
+        Description: Fast assault gunship with dual Plasma cannons\nand advanced sensors for stealth detection.\n\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 301
+        Prerequisites: ~kahpad, ~!t1, ~unlock.pterois
+    Voiced:
+        VoiceSet: Cabalbeep
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 3
+        Speed: 140
+        IdealSeparation: 1500
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 13c0
+        Type: CenterPosition
+    Armament:
+        Weapon: PteroisMachal
+        LocalOffset: 450,220,200, 450,-220,200
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    DetectCloaked:
+        Range: 5c0
+    RenderDetectionCircle:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:    
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    Contrail@1:
+        Offset: -128,180,160
+        TrailLength: 25
+        TrailWidth: 50
+        Color: FF6400
+        Width: 50
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -128,-180,160
+        TrailLength: 25
+        TrailWidth: 50
+        Color: FF6400
+        UsePlayerColor: True
+    SpawnActorOnDeath:
+        Actor: PTEROIS.Husk
+        Probability: 80
+
+KGUNSHIP:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Manta
+        Description: Heavy siege gunship\nwith twin plasma cannons and twin plasma bomb launchers gunship.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 302
+        Prerequisites: ~kahpad, cytech, ~!t1, ~!t2, ~unlock.manta
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Cabalbeep
+        Volume: 2
+    Aircraft:
+        MaximumPitch: 90
+        TurnSpeed: 3
+        Speed: 125
+        IdealSeparation: 2048
+    Health:
+        HP: 1000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 13c0
+        Type: CenterPosition
+    Armament@1:
+        Weapon: MantaMachal
+        LocalOffset: 700,256,96, 700,-256,96
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@2:
+        Weapon: PlasmaBombarde
+        LocalOffset: 200,0,-128
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -900,256,300 
+        TrailLength: 25
+        TrailWidth: 30
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -900,-256,300 
+        TrailLength: 25
+        TrailWidth: 30
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@3:
+        Offset: -600,450,400 
+        TrailLength: 25
+        TrailWidth: 30
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@4:
+        Offset: -600,-450,400 
+        TrailLength: 25
+        TrailWidth: 30
+        Color: 0080FF
+        UsePlayerColor: True
+    WithMuzzleOverlay:
+    SpawnActorOnDeath:
+        Actor: KGUNSHIP.Husk
+        Probability: 80

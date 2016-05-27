@@ -1,0 +1,48 @@
+Heal:
+    ReloadDelay: 80
+    Range: 2c849
+    Report: healer1.aud
+    ValidTargets: Infantry
+    Projectile: Bullet
+        Speed: 1c682
+    Warhead@1Dam: SpreadDamage
+        DebugOverlayColor: 00FF00
+        ValidTargets: Infantry
+        ValidStances: Ally
+        Spread: 213
+        Damage: -50
+        
+Repair:
+    ReloadDelay: 80
+    Range: 1c819
+    Report: repair11.aud
+    ValidTargets: Repair
+    Projectile: Bullet
+        Speed: 1c682
+    Warhead@1Dam: SpreadDamage
+        DebugOverlayColor: 00FF00
+        Spread: 213
+        Damage: -50
+        ValidTargets: Repair
+    Warhead@1Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light2
+        
+MechanicRepair:
+    ReloadDelay: 80
+    Range: 1c819
+    Report: fixit1.aud
+    ValidTargets: Repair
+    Projectile: Bullet
+        Speed: 1c682
+    Warhead@1Dam: SpreadDamage
+        DebugOverlayColor: 00FF00
+        Spread: 213
+        Damage: -25
+        ValidTargets: Repair        
+
+TiberiumHeal:
+    ReloadDelay: 30
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: -10

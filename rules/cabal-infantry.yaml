@@ -1,0 +1,586 @@
+HUSK:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^HuskUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 300
+        Prerequisites: ~cybbar, ~!upgrade.es
+    Valued:
+        Cost: 150
+    Tooltip:
+        Name: Husk
+        Description: General-purpose infantry.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs\n  Weak vs Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: Husk
+    Voiced:
+        VoiceSet: Husk
+        Volume: 2
+    Health:
+        HP: 100
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 8c0
+    Armament@PRIMARY:
+        Weapon: HuskGun
+        LocalOffset: 300,0,600
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    AttackFrontal:
+    WithMuzzleOverlay:
+    
+HUSK2:
+    Inherits@1: HUSK
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 300
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: HUSK
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+HHUSK:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^HuskUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 301
+        Prerequisites: ~cybbar, ~!upgrade.es
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Cannon Husk
+        Description: Anti-Armor infantry.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n Strong vs Buildings, Light armor, Medium armor\n  Weak vs Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: HHusk
+    Voiced:
+        VoiceSet: Husk
+        Volume: 2
+    Health:
+        HP: 150
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 9c0
+    Armament@PRIMARY:
+        Weapon: PlasmaGun
+        LocalOffset: 300,140,768
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    WithMuzzleOverlay:
+    
+HHUSK2:
+    Inherits@1: HHUSK
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 301
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: HHUSK
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+CYBSPY:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^CyborgUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 303
+        Prerequisites: ~cybbar, ~!upgrade.es
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Informer
+        Description: Stealthed infiltrator unit.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Unarmed
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: Informer
+    Voiced:
+        VoiceSet: Ascentor
+        Volume: 4
+    Health:
+        HP: 100
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 11c0
+    WithInfantryBody:
+        IdleSequences: idle1,idle2,idle3
+    AttackFrontal:
+#    Infiltrates:
+#        Types: SpyInfiltrate
+    -Cloak@CLOAKGENERATOR:
+    Cloak:
+        IsPlayerPalette: true
+#        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+  
+CYBSPY2:
+    Inherits@1: CYBSPY
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 303
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: CYBSPY
+    Explodes:
+        Weapon: UnitExplodeCyborg
+      
+JAGUAR:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^CyborgUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 304
+        Prerequisites: ~cybbar, ~!upgrade.es
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Devourer
+        Description: Anti-Infantry cybernetic battle jaguar.\nDetects stealth.\n\n  Strong vs Infantry, Dogs\n  Weak vs Everthing else 
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: 12,17,0,-9
+    Voiced:
+        VoiceSet: Jaguar
+    Health:
+        HP: 200
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 80
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Weapon: JaguarClaw
+    AttackLeap:
+        Speed: 85
+        Angle: 56
+        FacingTolerance: 20
+    IgnoresDisguise:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 5c0
+    AutoTarget:
+        ScanRadius: 5
+ 
+JAGUAR2:
+    Inherits@1: JAGUAR
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 304
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: JAGUAR
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+KENGINEER:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^CyborgUpgrades
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Ascentor
+        Description: Captures enemy structures.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Unarmed
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 305
+        Prerequisites: ~cybbar, ~!upgrade.es
+    Selectable:
+        Bounds: 12,17,0,-6
+    Voiced:
+        VoiceSet: Ascentor
+        Volume: 2
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 6c0
+    Health:
+        HP: 400
+    Armor:
+        Type: Medium
+    Passenger:
+        PipType: Yellow
+    EngineerRepair:
+    RepairsBridges:
+        RepairNotification: BridgeRepaired
+    Captures:
+        CaptureTypes: building
+    -AutoTarget:
+    -GainsExperience:
+  
+KENGINEER2:
+    Inherits@1: KENGINEER
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 305
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: KENGINEER
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+VANGUARD:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^HuskUpgrades
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Vanguard
+        Description: Frontline battle cyborg, armed with an Auto-Shotgun.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs\n  Weak vs Armor, Aircraft, Artillery
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 305
+        Prerequisites: ~cybbar, ~!t1, karadr, ~!upgrade.es
+    Selectable:
+        Bounds: 14,30,0,-7
+        Class: Vanguard
+    Voiced:
+        VoiceSet: CyborgL
+        Volume: 2
+    Armor:
+        Type: Heavy
+    Mobile:
+        Speed: 50
+    Health:
+        HP: 300
+    RevealsShroud:
+        Range: 7c0
+    Armament@primary:
+        Weapon: VulcanShotgun
+        LocalOffset: 300,64,800
+    Armament@extrabullet1:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800
+    Armament@extrabullet2:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800
+    Armament@extrabullet3:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800        
+    Armament@extrabullet4:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800
+    Armament@extrabullet5:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800
+    Armament@extrabullet6:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800
+    Armament@extrabullet7:
+        Weapon: VulcanShotgun2
+        LocalOffset: 300,64,800    
+    AttackFrontal:
+   
+VANGUARD2:
+    Inherits@1: VANGUARD
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 305
+        Prerequisites: ~cybbar, ~!t1, cytech, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: VANGUARD
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+OVERSEER:
+    Inherits@1: ^HeavyCyborg
+    Inherits@2: ^CyborgUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 306
+        Prerequisites: ~cybbar, cytech, ~!t1, ~!upgrade.es
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Overseer
+        Description: Frontline command cyborg, armed with a MG.\nIncreases range, accuracy and reload of units like Husks, Cannon Husks and Vanguards.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs, Light armor\n  Weak vs Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: Overseer
+    Voiced:
+        VoiceSet: CyborgA
+        Volume: 2
+    Health:
+        HP: 300
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 8c0
+    Armament@PRIMARY:
+        Weapon: OverGun
+        LocalOffset: 300,0,525
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2,idle3
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
+    UpgradeActorsNear:
+        Upgrades: overseerboost
+        Range: 6c0
+         
+OVERSEER2:
+    Inherits@1: OVERSEER
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 306
+        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
+    RenderSprites:
+        Image: OVERSEER
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+CYBFLY:
+    Inherits: ^SoldierJumpjet
+    Valued:
+        Cost: 700
+    Tooltip:
+        Name: Skirmisher
+        Description: Airborne infantry.\nImmune to Tiberium radiation.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Armor, Artillery, Dogs
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 307
+        Prerequisites: ~cybbar, cytech, ~!t1
+    Selectable:
+        Bounds: 12,17,0,-14
+    Voiced:
+        VoiceSet: CyborgA
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 10
+        Speed: 180
+        AirborneUpgrades: airborne
+        CruisingUpgrades: cruising
+        LandWhenIdle: no
+        CruiseAltitude: 3072
+        CanHover: True
+        IdealSeparation: 512
+        AltitudeVelocity: 230
+    Hovers:
+    Health:
+        HP: 300
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 10c0
+        Type: CenterPosition
+    Armament:
+        Weapon: SkirmishLaserFire
+        LocalOffset: 400,64,600, 400,-64,600
+    -PoisonedByTiberium:
+    AmmoPool:
+        Name:primary
+        Ammo: 20
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AttackHeli:
+        FacingTolerance: 20
+    WithInfantryBody:
+#        IdleSequences: idle1,idle2
+        StandSequence: stand-air
+        MoveSequence: fly
+        AttackSequence: shoot-air
+        IdleSequences: stand-air
+	BodyOrientation:
+    WithShadow:
+    Contrail@1:
+        Offset: -256,64,800
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -256,-64,800
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+        
+CYC2:
+    Inherits@1: ^HeavyCyborg
+    Armor:
+        Type: Heavy
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Cabal Commando
+        Description: Elite cybernetic infantry unit.\nImmune to Tiberium radiation.\nHeals in Tiberium\nImmune to dogs.\n\n Strong vs Buildings, Armor, Infantry, Dogs\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 308
+        Prerequisites: ~cybbar, karadr, cytech, ~!t1, ~!t2, ~!upgrade.es, ~unlock.cyc2
+    Selectable:
+        Bounds: 14,30,0,-7
+        Class: CYC2
+    Voiced:
+        VoiceSet: CyborgA
+        Volume: 2
+    Mobile:
+        Speed: 50
+    Health:
+        HP: 800
+    PoisonedByTiberium:
+        Weapon: TiberiumHeal
+    RevealsShroud:
+        Range: 10c0
+#    Armament@Laser1:
+#        Weapon: CommandoLaserFire
+#        LocalOffset: 180,100,640
+#        MuzzleSequence: muzzle
+#        MuzzlePalette: effect50alpha
+    Armament@Laser2:
+        Weapon: CyCannon
+        LocalOffset: 180,100,640
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    WithMuzzleOverlay:
+
+CYC22:
+    Inherits@1: CYC2
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 308
+        Prerequisites: ~cybbar, karadr, cytech, ~!t1, ~!t2, ~upgrade.es, ~!upgrade.nm, ~unlock.cyc2
+    RenderSprites:
+        Image: CYC2
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+GLAD:
+    Inherits@1: ^HeavyCyborg
+    Armor:
+        Type: Heavy
+    Valued:
+        Cost: 6000
+    Tooltip:
+        Name: Harbinger
+        Description: Cyborg hero field commander.\nImmune to Tiberium radiation.\nHeals in Tiberium\nImmune to dogs.\nBuildlimit of 1\n\n Strong vs Everything\n  Weak vs Anything
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 309
+        BuildLimit: 1
+        Prerequisites: ~cybbar, karadr, cytech, ~!t1, ~!t2, ~!t3, ~!upgrade.es, !glad2, ~unlock.glad
+    Selectable:
+        Bounds: 14,30,0,-7
+        Class: GLAD
+    Voiced:
+        VoiceSet: CyborgA
+        Volume: 2
+    Mobile:
+        Speed: 50
+    Health:
+        HP: 2000
+    PoisonedByTiberium:
+        Weapon: TiberiumHeal
+    RevealsShroud:
+        Range: 11c0
+    Armament@Plasma1:
+        Weapon: HarbCannon
+        LocalOffset: 170,200,683
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@Plasma2:
+        Weapon: HarbCannon
+        LocalOffset: 170,-200,683
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@AutoPlasma:
+        Weapon: HarbingerMachal
+        LocalOffset: 170,200,683, 170,-200,683
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+     Armament@laser:
+        Weapon: HarbingerLaserFire
+        LocalOffset: 0,-64,1024
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+    WithMuzzleOverlay:
+    ActorLostNotification:
+        Notification: CriticalUnitLost
+
+GLAD2:
+    Inherits@1: GLAD
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 309
+        BuildLimit: 1
+        Prerequisites: ~cybbar, karadr, cytech, ~!t1, ~!t2, ~!t3, ~upgrade.es, ~!upgrade.nm, !glad, ~unlock.glad
+    RenderSprites:
+        Image: GLAD
+    Explodes:
+        Weapon: UnitExplodeCyborg
+
+Kamikaze:
+    Inherits@1: ^Cyborg
+    Inherits@2: ^CyborgUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 310
+        Prerequisites: ~cybbar, cytech, ~napyra, ~!t1, ~!t2, ~!t3
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Headless Kamikaze
+        Description: Frontline suicide cyborg, hands are replaced with bombs bigger than his head.\nImmune to Tiberium radiation.\nCan explode on death\n\n  Strong vs Ground targets\n  Weak vs Everything
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Husk
+        Volume: 1
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 90
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Weapon: FanticBoom
+    AttackFrontal:
+    Explodes:
+        Weapon: FanticBoomExplosion
+    WithDeathAnimation@normal:
+        DeathSequencePalette: effect
+        DeathPaletteIsPlayerPalette: False
+        DeathTypes:
+            BulletDeath: 1
+            SmallExplosionDeath: 2
+            HeadshotDeath: 3 #not used by any warhead; TODO: check what should use this type and add it!
+            FireDeath: 5
+    WithDeathAnimation@explosion:
+        DeathSequencePalette: effect
+        DeathPaletteIsPlayerPalette: False
+        DeathTypes:
+            ExplosionDeath: 4
+    WithDeathAnimation@energy:
+        DeathSequencePalette: ra
+        DeathPaletteIsPlayerPalette: False
+        DeathTypes:
+            EnergyDeath: 6
+    RenderSprites:
+        Scale: 0.8      

@@ -1,0 +1,765 @@
+Bazooka:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 60
+    Range: 6c0
+    MinRange: 1c512
+    Report: rocket01.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 50
+        Versus:
+            Infantry: 50
+            Vehicle: 100
+            Aircraft: 200
+            Building: 100
+            Light: 120
+            Medium: 80
+            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+
+MissileBarrage:
+    Inherits: ^RocketHE
+    ReloadDelay: 200
+    Burst: 8
+    Range: 14c0
+    MinRange: 5c0
+    Report: hovrmis1.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 60
+        
+AirblastMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Burst: 8
+    BurstDelay: 15
+    Range: 8c0
+    Report: hovrmis1.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 213
+        Arm: 2
+        Blockable: false
+        Shadow: true
+        Inaccuracy: 128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 80
+        ValidTargets: Air, HighAir
+        
+MLRSBarrage:
+    Inherits: ^MissileAPHE
+    ValidTargets: Ground
+    ReloadDelay: 250
+    Burst: 6
+    BurstDelay: 0
+    Range: 10c0
+    MinRange: 4c0
+    Projectile: Missile
+        MaximumLaunchSpeed: 171
+        Inaccuracy: 2c128
+        RangeLimit: 20c0
+        Speed: 0c768
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        ValidTargets: Ground
+        Versus:
+            Infantry: 80
+            Vehicle: 150
+            Aircraft: 100
+            Building: 120
+            Light: 150
+            Medium: 100
+            Heavy: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: small_tumu, medium_tumu, large_tumu
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+
+WarthogMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 150
+    Range: 8c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 90      
+        ValidTargets: Ground, Air, HighAir
+
+BisonMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Burst: 2
+    BurstDelay: 25
+    Range: 8c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 80      
+        ValidTargets: Ground, Air, HighAir
+        
+VultureMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 150
+    Burst: 2
+    Range: 8c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 60      
+        ValidTargets: Ground, Air, HighAir
+        
+HoverMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Burst: 8
+    BurstDelay: 2
+    Range: 10c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        Speed : 0c512
+        RangeLimit: 20c0
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 60
+        ValidTargets: Ground
+        Versus:
+            Infantry: 80
+            Vehicle: 50
+            Aircraft: 120
+            Building: 120
+            Light: 100
+            Medium: 50
+            Heavy: 20
+                
+HoverMissileAA:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Burst: 8
+    BurstDelay: 2
+    Range: 10c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        Speed : 0c512
+        RangeLimit: 20c0
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 60
+        ValidTargets: Air, HighAir
+               
+ComponentMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 68
+    Burst: 2
+    Range: 14c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Arm: 2
+        Blockable: false
+        Shadow: true
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        RangeLimit: 20c0
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 150
+        ValidTargets: Ground, Air, HighAir
+       
+MammothTusk:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 300
+    Range: 8c0
+    Burst: 4
+    BurstDelay: 15
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 384
+        MinimumLaunchSpeed: 213
+        Speed : 384
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 50
+        ValidTargets: Ground, Air, HighAir
+
+MammothWalkerTusk:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 400
+    Range: 12c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground, Air, HighAir
+    Burst: 8
+    BurstDelay: 10
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c512
+        Inaccuracy: 0c128
+        HorizontalRateOfTurn: 10
+        Angle: 62
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 100
+        ValidTargets: Ground, Air, HighAir
+        
+BikeMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 80
+    Burst: 2
+    BurstDelay: 0
+    Range: 7c0
+    Report: misl1.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        Arm: 2
+        Shadow: true
+        Inaccuracy: 512
+        Blockable: true
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        MaximumLaunchSpeed: 213
+        Palette: effect
+        ContrailLength: 30
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 70
+        Versus:
+            Infantry: 50
+            Building: 70
+        ValidTargets: Ground, Air, HighAir
+
+Dragon:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Range: 8c0
+    Burst: 2
+    BurstDelay: 10
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 384
+        MinimumLaunchSpeed: 213
+        Speed : 384
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 100
+        Versus:
+            Infantry: 25
+            Vehicle: 200
+            Aircraft: 200
+            Building: 100
+            Light: 120
+            Medium: 100
+            Heavy: 40
+        ValidTargets: Ground, Air, HighAir
+        
+StealthDragon:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 175
+    Range: 8c0
+    Burst: 2
+    BurstDelay: 0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 384
+        MinimumLaunchSpeed: 213
+        Speed : 384
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 60
+        ValidTargets: Ground
+                
+StealthDragonAA:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Range: 10c0
+    Burst: 2
+    BurstDelay: 0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 384
+        MinimumLaunchSpeed: 213
+        Speed : 384
+        Inaccuracy: 0c512
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 80
+        ValidTargets: Air, HighAir
+
+Stormdragon:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 160
+    Range: 12c0
+    Burst: 8
+    BurstDelay: 5
+    Report: rocket01.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 171
+        Inaccuracy: 2c128
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 80
+        ValidTargets: Ground
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 120
+            Building: 120
+            Light: 120
+            Medium: 80
+            Heavy: 40
+        
+StormdragonAA:
+    Inherits: Stormdragon
+    ReloadDelay: 220
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 213
+        Inaccuracy: 0c512
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 80
+        ValidTargets: Air, HighAir
+
+OrcaHellfire:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 120
+    Range: 7c0
+    MinRange: 3c0
+    Report: orcamis1.aud
+    Burst: 2
+    BurstDelay: 6
+    ValidTargets: Ground, Air
+    Projectile: Missile
+        Inaccuracy: 0c256
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 80
+        Versus:
+            Infantry: 100
+            Vehicle: 120
+            Aircraft: 120
+            Building: 120
+            Light: 120
+            Medium: 100
+            Heavy: 50
+        ValidTargets: Ground, Air
+    Warhead@2Eff: CreateEffect
+        Explosions: small_bang, medium_bang, large_bang
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+        InvalidImpactTypes: Water, Air, AirHit
+
+OrcaHellfire2:
+    Inherits: OrcaHellfire
+    ReloadDelay: 160
+    Range: 8c0
+    MinRange: 3c0
+    Burst: 4
+    BurstDelay: 6
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 100
+
+HavocMissiles:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 160
+    Range: 8c0
+    MinRange: 1c0
+    Report: rocket01.aud
+    Burst: 6
+    BurstDelay: 6
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 450
+        MinimumLaunchSpeed: 300
+        MaximumSpeed: 450
+        Inaccuracy: 1c0
+        HorizontalRateOfTurn: 8
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 50
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: small_bang, medium_bang, large_bang
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+        InvalidImpactTypes: Water, Air, AirHit
+
+HawkMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 2
+    Range: 20c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c768
+        MinimumLaunchSpeed: 0c768
+        Speed : 0c768
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 3
+        LockOnProbability: 60
+        RangeLimit: 20c0
+        ContrailLength: 20
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Infantry: 0
+            Vehicle: 0
+            Aircraft: 100
+            Building: 0
+            Light: 100
+            Medium: 80
+            Heavy: 50
+        ValidTargets: Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu, small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        
+HornetMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 4
+    BurstDelay: 6
+    Range: 20c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c768
+        MinimumLaunchSpeed: 0c768
+        Speed : 0c768
+        Inaccuracy: 0c128
+        HorizontalRateOfTurn: 4
+        LockOnProbability: 70
+        Acceleration: 10
+        RangeLimit: 30c0
+        ContrailLength: 20
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Infantry: 0
+            Vehicle: 0
+            Aircraft: 100
+            Building: 0
+            Light: 100
+            Medium: 80
+            Heavy: 50
+        ValidTargets: Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu, small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        
+WyvernMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 2
+    Range: 22c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c768
+        MinimumLaunchSpeed: 0c768
+        Speed : 0c768
+        Inaccuracy: 0c128
+        HorizontalRateOfTurn: 10
+        LockOnProbability: 80
+        Acceleration: 15
+        RangeLimit: 30c0
+        ContrailLength: 20
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 60
+        ValidTargets: Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu, small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        
+WyvernNapalm:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 2
+    Range: 18c0
+    Report: rocket01.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c512
+        Inaccuracy: 2c128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        RangeLimit: 30c0
+        Palette: effect
+        ContrailLength: 20
+        ContrailWidth: 40
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 100
+        ValidTargets: Ground
+        Versus:
+            Fire: 200
+    Warhead@2Eff: CreateEffect
+        Explosions: napalm1, napalm2
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water
+    Warhead@2Smu: LeaveSmudge
+        SmudgeType: LargeScorch
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+        InvalidImpactTypes: Water, Air, AirHit
+
+BuzzardStorm:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Range: 9c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    Burst: 10
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 512
+        MinimumLaunchSpeed: 370
+        MaximumSpeed: 512
+        Inaccuracy: 2c256
+        HorizontalRateOfTurn: 7
+        RangeLimit: 20c0
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 50
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: small_bang
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+        InvalidImpactTypes: Water, Air, AirHit
+        
+StrikerMissiles:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 50
+    Range: 18c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    Burst: 2
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c768
+        MinimumLaunchSpeed: 0c768
+        Speed : 0c768
+        Inaccuracy: 0c64
+        HorizontalRateOfTurn: 7
+        LockOnProbability: 80
+        RangeLimit: 30c0
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 300
+        Versus:
+            Infantry: 50
+            Vehicle: 100
+            Aircraft: 100
+            Building: 80
+            Light: 100
+            Medium: 80
+            Heavy: 50
+        ValidTargets: Ground, Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: small_bang
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+        InvalidImpactTypes: Water, Air, AirHit
+        
+BuzzardMissiles:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 200
+    Range: 9c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    Burst: 2
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c512
+        Inaccuracy: 0c256
+        Image: missile01
+        HorizontalRateOfTurn: 7
+        LockOnProbability: 70
+        RangeLimit: 20c0
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 85
+        Damage: 80
+        ValidTargets: Air, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: small_bang
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+ 
+RedEye:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 55
+    Range: 15c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Arm: 2
+        Blockable: false
+        Shadow: true
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        RangeLimit: 30c0
+        ContrailLength: 30
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        ValidTargets: Air, HighAir
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+ 
+RedEye2:
+    Inherits: RedEye
+    Burst: 3
+    BurstDelay: 10

@@ -1,0 +1,279 @@
+^Bullet:
+    Projectile: Bullet
+        Image: bullet
+        Angle: 45
+        Palette: effect
+        Speed: 0c512
+        Inaccuracy: 0c256
+        Blockable: true
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 32
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 50
+            Medium: 20
+            Heavy: 10
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water
+    Warhead@5Eff: CreateEffect
+        Explosions: tiny_flash
+        ExplosionPalette: light2
+        
+^APBullet:
+    Projectile: Bullet
+        Image: bullet
+        Angle: 45
+        Palette: effect
+        Speed: 0c768
+        Inaccuracy: 0c128
+        Blockable: true
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 50
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 200
+            Medium: 100
+            Heavy: 50
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: piff
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piff
+        ExplosionPalette: ra
+        ValidImpactTypes: Water
+    Warhead@5Eff: CreateEffect
+        Explosions: tiny_flash
+        ExplosionPalette: light2
+
+^MissileAPHE
+    ValidTargets: Ground, Air
+    Projectile: Missile
+        MaximumLaunchSpeed: 213
+        Blockable: true
+        Shadow: true
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        RangeLimit: 20c0
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 50
+        ValidTargets: Ground, Air
+        Versus:
+            Infantry: 100
+            Vehicle: 80
+            Aircraft: 120
+            Building: 120
+            Light: 120
+            Medium: 100
+            Heavy: 40
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+    Warhead@5Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@6Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light
+        
+^RocketHE:
+    ValidTargets: Ground
+    Projectile: Bullet
+        Speed: 0c256
+        Angle: 125
+        Blockable: true
+        Shadow: true
+        Inaccuracy: 3c0
+        Image: missile01
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 60
+        ValidTargets: Ground
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 100
+            Building: 150
+            Light: 160
+            Medium: 80
+            Heavy: 30
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: small_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4: LeaveSmudge
+        SmudgeType: SmallCrater  
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@6Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light
+        
+^ShellAP:
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Image: shell02
+        Shadow: true
+        Angle: 62
+        Palette: effect
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+        Blockable: true
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 100
+        Versus:
+            Infantry: 80
+            Vehicle: 120
+            Aircraft: 100
+            Building: 25
+            Light: 160
+            Medium: 200
+            Heavy: 50
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: small_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+                
+^ShellHE:
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Image: shell01
+        Shadow: true
+        Angle: 62
+        Palette: effect
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+        Blockable: true
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        Versus:
+            Infantry: 120
+            Vehicle: 120
+            Aircraft: 100
+            Building: 150
+            Light: 160
+            Medium: 80
+            Heavy: 30
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: small_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+        
+^BasicLaser:
+    Projectile: LaserZap
+        Width: 50
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 50
+        Versus:
+            Infantry: 200
+            Vehicle: 200
+            Aircraft: 200
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+   
+^TiberiumLaser:
+    Projectile: LaserZap
+        Width: 50
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 50
+        Versus:
+            Infantry: 200
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+                        
+^PlasmaLaser:
+    Projectile: LaserZap
+        Width: 50
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 50
+        Versus:
+            Infantry: 200
+            Vehicle: 130
+            Aircraft: 130
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath

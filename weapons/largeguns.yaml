@@ -1,0 +1,527 @@
+GremlinShotgun:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 10
+    ValidTargets: Ground, Air, HighAir
+    Range: 5c0
+    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Projectile: Bullet
+        Image: 120mm
+        Speed: 0c512
+        Inaccuracy: 1c256
+        ContrailLength: 10
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 60
+        ValidTargets: Ground, Air, HighAir
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: water_piffs
+        ExplosionPalette: ra
+        ValidImpactTypes: Water    
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+        InvalidImpactTypes: Water, Air, AirHit
+
+FlakCannon:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 20
+    BurstDelay: 4
+    ValidTargets: Air, HighAir
+    Range: 10c0
+    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Projectile: Bullet
+        Image: shell02
+        Speed: 1c0
+        Inaccuracy: 1c512
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 40
+        ValidTargets: Air, HighAir
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: explo04.aud
+        InvalidImpactTypes: Water
+    Warhead@4EffAir: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+        
+HermesCannon:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 5
+    BurstDelay: 6
+    Range: 6c0
+    Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
+    Projectile: Bullet
+        Image: shell02
+        Speed: 0c512
+        Inaccuracy: 0c512
+        ContrailLength: 10
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 40
+        Versus:
+            Infantry: 200
+            Vehicle: 80
+            Aircraft: 100
+            Building: 200
+            Light: 120
+            Medium: 80
+            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud
+        InvalidImpactTypes: Water
+
+GorranCannon:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 10
+    BurstDelay: 6
+    Range: 5c0
+    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Projectile: Bullet
+        Image: shell02
+        Speed: 0c512
+        Inaccuracy: 0c512
+        ContrailLength: 10
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+
+75mm1:
+    Inherits: ^ShellAP
+    ReloadDelay: 40
+    Range: 5c768
+    Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 40
+
+75mm2:
+    Inherits: 75mm1
+    ReloadDelay: 45
+
+90mm:
+    Inherits: ^ShellAP
+    ReloadDelay: 150
+    Range: 6c768
+    Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 150
+        
+105mmHE:
+    Inherits: ^ShellHE
+    ReloadDelay: 200
+    Range: 6c768
+    Report: 105mm.aud, 122mm.aud, 128mm.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+    Warhead@2Eff: CreateEffect
+        Explosions: large_brnl
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+
+122mmAP:
+    Inherits: ^ShellAP
+    ReloadDelay: 200
+    Range: 6c768
+    Report: 90mm1.aud, 90mm2.aud, 90mm3.aud, 90mm4.aud
+    Projectile: Bullet
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 250
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: explo11.aud
+        InvalidImpactTypes: Water
+
+128mmAPHE:
+    Inherits: ^ShellAP
+    ReloadDelay: 130
+    Range: 7c768
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: Bullet
+        Speed: 1c0
+        Inaccuracy: 0c128
+        Image: shell02
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 200
+        Versus:
+            Infantry: 25
+            Vehicle: 200
+            Aircraft: 100
+            Building: 80
+            Light: 200
+            Medium: 150
+            Heavy: 100
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+
+120mm1:
+    Inherits: ^ShellAP
+    ReloadDelay: 200
+    Range: 6c768
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        ContrailWidth: 20
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 250
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+
+120mm2:
+    Inherits: 120mm1
+    ReloadDelay: 220
+ 
+AurochCannon:
+    Inherits: ^ShellAP
+    ReloadDelay: 160
+    Range: 7c0
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        ContrailWidth: 20
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+
+TritonCannon:
+    Inherits: ^ShellHE
+    ReloadDelay: 210
+    Range: 18c0
+    Report: 120mmf.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Image: shell02
+        Angle: 90
+        ContrailLength: 10
+        ContrailWidth: 25
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+
+160mm1:
+    Inherits: ^ShellHE
+    ReloadDelay: 80
+    Range: 7c768
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Angle: 62
+        ContrailLength: 10
+        ContrailWidth: 30
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 200
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+ 
+160mm2:
+    Inherits: 160mm1
+    ReloadDelay: 90
+
+160mm3:
+    Inherits: 160mm1
+    ReloadDelay: 100
+
+180mmHE:
+    Inherits: ^ShellHE
+    ReloadDelay: 290
+    Range: 20c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 2c0
+        Image: shell01
+        Angle: 125
+        ContrailLength: 30
+        ContrailWidth: 30
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater  
+        
+180mmHE2:
+    Inherits: 180mmHE
+    ReloadDelay: 300
+        
+180mmHE3:
+    Inherits: 180mmHE
+    ReloadDelay: 310
+      
+155mm:
+    Inherits: ^ShellHE
+    ReloadDelay: 200
+    Range: 25c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 2c0
+        Image: shell01
+        Angle: 125
+        Shadow: true
+        Blockable: false
+        Palette: effect
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 50
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 500
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+        
+155mmEMP:
+    Inherits: 155mm
+    Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 2c0
+        Image: shell01
+        Angle: 125
+        Shadow: true
+        Blockable: false
+        Palette: effect
+        TrailImage: plasmatrail
+        TrailPalette: effect50alpha
+        ContrailLength: 20
+        ContrailColor: 0080FF
+        ContrailWidth: 30
+    MinRange: 5c0
+    Warhead@emp1: GrantUpgrade
+        Range: 1c512
+        Duration: 100
+        Upgrades: empdisable, notmobile
+        ValidTargets: Vehicle, Cyborg, Building
+        InvalidTargets: Reaper, Harbinger, Cabal Commando, Light Post
+    Warhead@EMPEff: CreateEffect
+        Explosions: pulse_explosion
+        ImpactSounds: plsecan2.aud
+       
+240mm:
+    Inherits: ^ShellHE
+    ReloadDelay: 350
+    Range: 20c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 2c0
+        Image: shell01
+        Angle: 165
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 50
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 600
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater 
+        
+RagnarCannon:
+    Inherits: ^ShellHE
+    ReloadDelay: 400
+    Range: 24c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 1c0
+        Image: shell01
+        Angle: 90
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 50
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 200
+        Versus:
+            Infantry: 200
+            Vehicle: 150
+            Aircraft: 50
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+               
+RagnarCannonCluster:
+    Inherits: ^ShellHE
+    ReloadDelay: 400
+    Range: 24c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 5c0
+        Image: shell02
+        Angle: 90
+        ContrailLength: 30
+        ContrailColor: FFFFFF
+        ContrailWidth: 30
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 60
+        Versus:
+            Infantry: 200
+            Vehicle: 150
+            Aircraft: 50
+            Building: 25
+            Light: 100
+            Medium: 80
+            Heavy: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: fireexpl
+        ExplosionPalette: effect
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumCrater         
+
+Mortar_155mm:
+    Inherits: ^ShellHE
+    ReloadDelay: 150
+    Range: 18c0
+    Report: 120mmf.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Image: shell02
+        Angle: 165
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 25
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 298
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: fireexpl
+        ExplosionPalette: effect
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+        
+280mmHE:
+    Inherits: ^ShellHE
+    ReloadDelay: 400
+    Burst: 3
+    BurstDelay: 20
+    Range: 100c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Inaccuracy: 10c0
+        Image: shell01
+        Angle: 125
+        ContrailLength: 100
+        ContrailWidth: 50
+        Blockable: false
+    MinRange: 5c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 2c0
+        Damage: 350
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: effect50alpha
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater  

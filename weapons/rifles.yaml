@@ -1,0 +1,394 @@
+Minigun:
+    Inherits: ^Bullet
+    ReloadDelay: 40
+    Range: 5c0
+    Report: rifle1g.aud,rifle2g.aud
+    Burst: 2
+    BurstDelay: 4
+    Projectile: Bullet
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 20
+        Versus:
+            Infantry: 200
+            Vehicle: 10
+            Aircraft: 10
+            Building: 1
+            Light: 100
+            Medium: 20
+            Heavy: 10
+        
+MinigunGarrison:
+    Inherits: Minigun
+    Range: 8c0
+
+Minigun2:
+    Inherits: ^Bullet
+    ReloadDelay: 15
+    Range: 4c0
+    Report:  rifle1n.aud,rifle2n.aud
+    Burst: 2
+    BurstDelay: 4
+    Projectile: Bullet
+        Inaccuracy: 0c384
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 10
+        Versus:
+            Infantry: 200
+            Vehicle: 10
+            Aircraft: 10
+            Building: 1
+            Light: 100
+            Medium: 20
+            Heavy: 10
+        
+Minigun2Garrison:
+    Inherits: Minigun2
+    Range: 7c0
+
+M1Carbine:
+    Inherits: ^Bullet
+    ReloadDelay: 60
+    Range: 6c0
+    Burst: 3
+    BurstDelay: 4
+    Report: machinegun1.aud, machinegun2.aud
+    Projectile: Bullet
+        Image: bullet
+        Speed: 0c512
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Damage: 50
+        Versus:
+            Infantry: 100
+            Vehicle: 25
+            Aircraft: 50
+            Building: 15
+            Light: 100
+            Medium: 50
+            Heavy: 10
+        DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+        
+M1CarbineGarrison:
+    Inherits: M1Carbine
+    Range: 9c0
+
+M2Carbine:
+    Inherits: ^Bullet
+    ReloadDelay: 25
+    Range: 5c0
+    Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
+    Burst: 3
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 40
+        Versus:
+            Infantry: 100
+            Vehicle: 25
+            Aircraft: 50
+            Building: 15
+            Light: 100
+            Medium: 50
+            Heavy: 10
+       
+HuskGun:
+    Inherits: ^Bullet
+    ReloadDelay: 70
+    Range: 5c0
+    Burst: 6
+    BurstDelay: 2
+    Report: machinegun5.aud
+    Projectile: Bullet
+        Image: bullet
+        Angle: 45
+        Palette: effect
+        Speed: 0c512
+        Inaccuracy: 0c350
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 20
+        Versus:
+            Infantry: 200
+            Vehicle: 10
+            Aircraft: 10
+            Building: 1
+            Light: 100
+            Medium: 20
+            Heavy: 10
+
+SMG:
+    Inherits: ^Bullet
+    ReloadDelay: 80
+    Range: 4c0
+    Report: smg1.aud,smg2.aud
+    Burst: 10
+    BurstDelay: 3
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 8
+        Versus:
+            Infantry: 200
+            Vehicle: 10
+            Aircraft: 10
+            Building: 1
+            Light: 100
+            Medium: 20
+            Heavy: 10
+
+Machal:
+    Inherits: ^Bullet
+    ReloadDelay: 80
+    Range: 5c0
+    Report: machal01.aud, machal02.aud, machal03.aud, machal04.aud
+    Burst: 5
+    BurstDelay: 3
+    Projectile: Bullet
+        Image: energybullet
+        Speed: 0c712
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 10  
+        DamageTypes: Prone70Percent, TriggerProne, FireDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: epiff
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+
+Vulcan:
+    Inherits: ^Bullet
+    ReloadDelay: 35
+    Range: 5c0
+    Report: machinegun5.aud #stormgun1.aud,stormgun2.aud,stormgun3.aud
+    Burst: 2
+    Projectile: Bullet
+        Image: bullet
+        Speed: 0c682
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 40
+        
+OverGun:
+    Inherits: ^Bullet
+    ReloadDelay: 120
+    Burst: 50
+    BurstDelay: 2
+    Range: 5c0
+    Report: fg42_01.aud, fg42_02.aud, fg42_03.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 20
+        Versus:
+            Infantry: 200
+            Vehicle: 10
+            Aircraft: 0
+            Building: 10
+            Light: 100
+            Medium: 20
+            Heavy: 10
+
+JumpCannon:
+    Inherits: ^Bullet
+    ReloadDelay: 90
+    Burst: 10
+    Range: 7c0
+    Report: jumpjet1.aud
+    ValidTargets: Ground, Air
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 25
+        ValidTargets: Ground, Air
+
+WatchSniper:
+    Inherits: ^APBullet
+    ReloadDelay: 100
+    Range: 7c0
+    Report: sniper1.aud, sniper2.aud, sniper3.aud
+    Projectile: Bullet
+        Speed: 1c512
+        Inaccuracy: 0c64
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c64
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 100
+            Medium: 50
+            Heavy: 20
+
+ShadowSniper:
+    Inherits: ^Bullet
+    ReloadDelay: 100
+    Range: 8c0
+    Report: sniper1.aud, sniper2.aud, sniper3.aud
+    Projectile: Bullet
+        Speed: 1c512
+        Inaccuracy: 0c128
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c64
+        Damage: 200
+    Warhead@2prone: SpreadDamage
+        Spread: 250
+        Damage: 1
+    DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
+MutantSniper:
+    Inherits: ^APBullet
+    ValidTargets: Ground, Air
+    ReloadDelay: 150
+    Range: 6c0
+    Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
+    Projectile: Bullet
+        Speed: 1c512
+        Inaccuracy: 0c64
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        ValidTargets: Ground, Air
+        Spread: 0c64
+        Damage: 100
+        Versus:
+            Infantry: 200
+            Vehicle: 100
+            Aircraft: 200
+            Building: 10
+            Light: 100
+            Medium: 80
+            Heavy: 20
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+    Warhead@2prone: SpreadDamage
+        Spread: 0c256
+        Damage: 1
+    DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
+ShadowSniperEMP:
+    Inherits: ShadowSniper
+    ReloadDelay: 100
+    Range: 7c0
+    Report: sniper1.aud, sniper2.aud, sniper3.aud
+    Projectile: Bullet
+        Image: energybullet
+        Speed: 1c0
+        Inaccuracy: 0c128
+        ContrailLength: 6
+        ContrailColor: 6464FF
+        ContrailWidth: 20
+    Warhead@1Dam: SpreadDamage       
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: epiff
+        InvalidImpactTypes: Water
+    Warhead@emp1: GrantUpgrade
+        Range: 0c128
+        Duration: 100
+        Upgrades: empdisable, notmobile
+        ValidTargets: Vehicle, Cyborg, Building
+
+        
+VulcanShotgun:
+    Inherits: ^Bullet
+    ReloadDelay: 100
+    Burst: 10
+    BurstDelay: 6
+    Range: 3c0
+    Report: shotgun1.aud, shotgun2.aud,shotgun4.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 20
+        Versus:
+            Infantry: 200
+            Vehicle: 1
+            Aircraft: 0
+            Building: 1
+            Light: 100
+            Medium: 70
+            Heavy: 10
+
+VulcanShotgun2:
+    Inherits: VulcanShotgun
+    Report:
+
+BrigandShotgun:
+    Inherits: ^Bullet
+    ReloadDelay: 50
+    Range: 4c0
+    Report: shotgun3.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 30
+
+BrigandShotgun2:
+    Inherits: BrigandShotgun
+    Report:
+
+ArmCannon:
+    ReloadDelay: 100
+    Range: 5c768
+    Report: 20mm_burst1.wav, 20mm_burst2.wav, 20mm_burst3.wav, 20mm_burst4.wav, 20mm_burst5.wav
+    Burst: 5
+    BurstDelay: 10
+    Projectile: Bullet
+        Speed: 0c512
+        Image: 120mm
+        Shadow: true
+        Angle: 62
+        Palette: ra
+        Inaccuracy: 1c0
+#        ContrailLength: 10
+#        ContrailColor: 64,64,64
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 40
+        Versus:
+            Kevlar: 90
+            Plate: 90
+            Light: 100
+            Medium: 80
+            Heavy: 50
+            Wood: 80
+            Steel: 50
+            Concrete: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_clsn
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew14.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallCrater 

@@ -1,0 +1,169 @@
+upgrade.brigand:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Brigand
+        Description: Allows you to train Brigand units. \n  Disables Goon useage.
+    Buildable:
+        BuildPaletteOrder: 400
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.goon, ~!upgrade.grunt
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.brigand
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.brigand
+
+upgrade.goon:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Goon
+        Description: Allows you to train Goon units. \n  Disables Brigand useage.
+    Buildable:
+        BuildPaletteOrder: 401
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.brigand, ~!upgrade.grunt
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.goon
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.goon
+
+upgrade.grunt:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Scoundrel
+        Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Fiend useage.
+    Buildable:
+        BuildPaletteOrder: 402
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.fiend
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.warrior
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.grunt
+        
+upgrade.fiend:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Fiend
+        Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Scoundrel useage.
+    Buildable:
+        BuildPaletteOrder: 403
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.grunt
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.fiend
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fiend
+        
+upgrade.warthog:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog
+        Description: Allows you to produce Warthog units (replaces Taurus). \n  Disables Gremlin useage.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.gremlin
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.warthog
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog
+        
+upgrade.gremlin:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin
+        Description: Allows you to produce Gremlin units. (replaces Assault Buggy) \n  Disables Warthog useage.
+    Buildable:
+        BuildPaletteOrder: 405
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.warthog
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.gremlin
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin
+               
+upgrade.auroch:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch
+        Description: Allows you to produce Auroch units. \n  Disables Bison useage.
+    Buildable:
+        BuildPaletteOrder: 406
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.bison
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.auroch
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch
+               
+upgrade.bison:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison
+        Description: Allows you to produce Bison units. \n  Disables Auroch useage.
+    Buildable:
+        BuildPaletteOrder: 407
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~!upgrade.auroch
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.bison
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison
+                      
+upgrade.howitzer:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Howitzer
+        Description: Allows you to produce Howitzer units. \n  Disables Ragnarok useage.
+    Buildable:
+        BuildPaletteOrder: 407
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.ragnarok
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.howitzer
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.howitzer
+                      
+upgrade.ragnarok:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Ragnarok
+        Description: Allows you to produce Ragnarok units. \n  Disables Howitzer useage.
+    Buildable:
+        BuildPaletteOrder: 407
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.howitzer
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.ragnarok
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ragnarok
