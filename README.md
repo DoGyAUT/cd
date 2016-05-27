@@ -1,6 +1,6 @@
 ***Crystallized Doom***
 A third party mod for OpenRA using the TS mod as a base. CD has a greatly expanded combat system and adds a research/subfaction system depending on the choosen faction.
-The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - while the primary goal is to make the first 4 main factions playable then the alien ones.
+The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - while the primary goal is to make the first 4 main factions good playable before the alien ones.
 
 Important Links:
 
