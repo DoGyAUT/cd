@@ -10,14 +10,6 @@ Minigun:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
-        Versus:
-            Infantry: 200
-            Vehicle: 10
-            Aircraft: 10
-            Building: 1
-            Light: 100
-            Medium: 20
-            Heavy: 10
         
 MinigunGarrison:
     Inherits: Minigun
@@ -35,15 +27,7 @@ Minigun2:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 10
-        Versus:
-            Infantry: 200
-            Vehicle: 10
-            Aircraft: 10
-            Building: 1
-            Light: 100
-            Medium: 20
-            Heavy: 10
-        
+
 Minigun2Garrison:
     Inherits: Minigun2
     Range: 7c0
@@ -112,14 +96,6 @@ HuskGun:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
-        Versus:
-            Infantry: 200
-            Vehicle: 10
-            Aircraft: 10
-            Building: 1
-            Light: 100
-            Medium: 20
-            Heavy: 10
 
 SMG:
     Inherits: ^Bullet
@@ -134,14 +110,6 @@ SMG:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 8
-        Versus:
-            Infantry: 200
-            Vehicle: 10
-            Aircraft: 10
-            Building: 1
-            Light: 100
-            Medium: 20
-            Heavy: 10
 
 Machal:
     Inherits: ^Bullet
@@ -271,16 +239,16 @@ MutantSniper:
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground, Air
         Spread: 0c64
-        Damage: 100
+        Damage: 300
         Versus:
-            Infantry: 200
-            Vehicle: 100
-            Aircraft: 200
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
             Building: 10
             Light: 100
-            Medium: 80
-            Heavy: 20
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+            Medium: 100
+            Heavy: 50
+        DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2prone: SpreadDamage
         Spread: 0c256
         Damage: 1
