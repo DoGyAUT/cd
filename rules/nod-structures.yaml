@@ -59,7 +59,7 @@ NACNST:
         Notification: CriticalStructureLost
 
 NAPOWR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 201
@@ -99,7 +99,7 @@ NAPOWR:
     DisabledOverlay:        
 
 NPROC:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Valued:
         Cost: 2000
     Tooltip:
@@ -114,7 +114,7 @@ NPROC:
         Dimensions: 4,3
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
@@ -149,7 +149,7 @@ NPROC:
     ProvidesPrerequisite@buildingname:    
 
 NASILO:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 203
@@ -164,7 +164,7 @@ NASILO:
         Dimensions: 2, 2
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
@@ -319,7 +319,7 @@ NAWEAP:
     ProvidesPrerequisite@buildingname:
 
 NARADR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 206
@@ -480,7 +480,7 @@ NAHPAD:
     ProvidesPrerequisite@buildingname:
     
 NAAPWR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 209

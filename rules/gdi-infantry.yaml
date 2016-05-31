@@ -8,7 +8,8 @@ GASOL:
         Cost: 120
     Tooltip:
         Name: Marine
-        Description: General-purpose infantry.\nGranted better weapon on rank 5.\n\n  Strong vs Infantry\n  Weak vs Dogs, Armor, Aircraft, Artillery
+        Description: General-purpose infantry.\n\n HP: 200\n Armor: Light\n Speed: 70\n Damage: 2x20\n Range: 5\n Reload: 40\n\n Good vs infantry\n Granted better weapon on veterancy rank 5.
+#        Description: General-purpose infantry.\nGranted better weapon on rank 5.\n\n  Strong vs Infantry\n  Weak vs Dogs, Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -59,7 +60,7 @@ E2:
         Cost: 200
     Tooltip:
         Name: Disc Thrower
-        Description: Anti-Armor infantry.\n\n  Strong vs Buildings, Light armor, Medium armor\n  Weak vs Dogs, Infantry, Aircraft, Artillery
+        Description: Anti-Armor infantry.\n\n HP: 150\n Armor: Light\n Speed: 56\n Damage: 1x100\n Range: 4,5\n Reload: 60\n\n Good vs infantry blobs, buildings, light vehicles\n Has a minimum attack range of 1.
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -96,7 +97,7 @@ SCOUT:
         Cost: 300
     Tooltip:
         Name: Scout
-        Description: Stealthed infiltrator unit.\n\n  Unarmed
+        Description: Stealthed infiltrator unit.\n\n HP: 150\n Armor: Light\n Speed: 80\n Damage: -\n Range: -\n Reload: -\n\n Good vs nothing\n Can infiltrate buildings.
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -111,8 +112,8 @@ SCOUT:
     RevealsShroud:
         Range: 10c0
     AttackFrontal:
-#    Infiltrates:
-#        Types: SpyInfiltrate
+    Infiltrates:
+        Types: SpyInfiltrate
     -Cloak@CLOAKGENERATOR:
     Cloak:
         IsPlayerPalette: true
@@ -132,7 +133,7 @@ GDOG:
         Cost: 200
     Tooltip:
         Name: Watch Dog
-        Description: Anti-Infantry combat dog.\nDetects stealth.\n\n  Strong vs Infantry, Dogs\n  Weak vs Everthing else 
+        Description: Anti-Infantry combat dog.\n\n HP: 100\n Armor: Light\n Speed: 85 (Chargespeed 90)\n Damage: Instakills infantry\n Range: 3\n Reload: 60\n\n Good vs infantry\n Can detect stealth.
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -286,7 +287,7 @@ ZMARINE:
         Prerequisites: barracks.upgraded
 
 JUMPJET:
-    Inherits: ^SoldierJumpjet
+    Inherits: ^SoldierFearless
     Valued:
         Cost: 600
     Tooltip:
@@ -301,60 +302,49 @@ JUMPJET:
     Voiced:
         VoiceSet: Marine
         Volume: 2    
-    Aircraft:
-        TurnSpeed: 5
-        Speed: 120
-        AirborneUpgrades: airborne
-        CruisingUpgrades: cruising
-        LandWhenIdle: no
-        CruiseAltitude: 3072
-        CanHover: True
-        IdealSeparation: 512
-        AltitudeVelocity: 230
-    Hovers:
     Health:
         HP: 220
     Armor:
         Type: Light
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
     Armament:
         Weapon: JumpCannon
         LocalOffset: 256,0,550
     -PoisonedByTiberium:
-    AmmoPool:
-        Name:primary
-        Ammo: 20
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AttackHeli:
-        FacingTolerance: 20
-    WithInfantryBody:
-#        IdleSequences: idle1,idle2
-        StandSequence: fly #stand-air
-        MoveSequence: fly
-        AttackSequence: shoot-air
-	BodyOrientation:
-    WithShadow:
-    WithDeathAnimation@normal:
-        DeathSequencePalette: effect50alpha
-        DeathPaletteIsPlayerPalette: False
-    Contrail@1:
-        Offset: -128,64,300
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -128,-64,300
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+	Mobile:
+		Speed: 70
+		TerrainSpeeds:
+			Water: 80
+			Cliff: 80
+            Rough: 100
+	Passenger:
+		PipType: Green
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: JumpCannon
+	-Crushable:
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+		UpgradeMaxEnabledLevel: 0
+		UpgradeTypes: airborne
+	WithInfantryBody@Airborne:
+		MoveSequence: air-run
+		AttackSequence: air-shoot
+		IdleSequences: air-idle
+		StandSequences: air-stand
+        UpgradeMinEnabledLevel: 1
+		UpgradeTypes: airborne
+	UpgradeOnTerrain:
+		TerrainTypes: Water, Cliff, Rough
+		Upgrades: airborne
+	Hovers:
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 
 ZTROOPER:
     Inherits: ^SoldierFearlessHeavy

@@ -9,6 +9,10 @@ GACNST:
         BuildPaletteOrder: 100
         Prerequisites: ~disabled
         Adjacent: 8
+    WithRangeCircle:
+        Type: Base
+        UsePlayerColor: True
+        Range: 8c0
     Health:
         HP: 2000
     Armor:
@@ -59,7 +63,7 @@ GACNST:
         Notification: CriticalStructureLost
 
 GAPOWR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 101
@@ -124,7 +128,7 @@ GAPOWR:
     ProvidesPrerequisite@buildingname:
 
 GPROC:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Valued:
         Cost: 2000
     Tooltip:
@@ -139,7 +143,7 @@ GPROC:
         Dimensions: 4,3
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
@@ -174,7 +178,7 @@ GPROC:
     ProvidesPrerequisite@buildingname:    
 
 GASILO:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 103
@@ -189,7 +193,7 @@ GASILO:
         Dimensions: 2, 2
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
@@ -344,7 +348,7 @@ GAWEAP:
     ProvidesPrerequisite@buildingname:
 
 GARADR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 106

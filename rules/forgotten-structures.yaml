@@ -106,7 +106,7 @@ FAPOWR:
     DisabledOverlay:            
 
 FPROC:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 402
@@ -121,7 +121,7 @@ FPROC:
         Dimensions: 6,3
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 160, 96, -5, -25
     GivesBuildableArea:
@@ -168,7 +168,7 @@ FPROC:
     ProvidesPrerequisite@buildingname:    
     
 FASILO:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 403
@@ -183,7 +183,7 @@ FASILO:
         Dimensions: 2, 2
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
@@ -343,7 +343,7 @@ FAWEAP:
     ProvidesPrerequisite@buildingname:
 
 FARADR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 406
@@ -528,3 +528,6 @@ FATRADE:
     Power:
         Amount: -40
     ProvidesPrerequisite@buildingname:
+    CashTrickler:
+        Period: 50
+        Amount: 30

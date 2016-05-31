@@ -161,8 +161,8 @@ EXPLORER:
     RevealsShroud:
         Range: 10c0
     AttackFrontal:
-#    Infiltrates:
-#        Types: SpyInfiltrate
+    Infiltrates:
+        Types: SpyInfiltrate
     -Cloak@CLOAKGENERATOR:
     Cloak:
         IsPlayerPalette: true
@@ -380,5 +380,6 @@ GHOST:
         Weapon: LtRail
         LocalOffset: 85,0,384
     AttackFrontal:
-    C4Demolition:
-        C4Delay: 45        
+	Demolition:
+		DetonationDelay: 45
+		Voice: Attack     

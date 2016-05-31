@@ -65,7 +65,7 @@ KACNST:
         Notification: CriticalStructureLost
 
 KPR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 301
@@ -104,7 +104,7 @@ KPR:
     DisabledOverlay:    
 
 KPROC:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Valued:
         Cost: 2000
     Tooltip:
@@ -119,7 +119,7 @@ KPROC:
         Dimensions: 4,3
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
@@ -154,7 +154,7 @@ KPROC:
     ProvidesPrerequisite@buildingname:    
 
 KASILO:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 303
@@ -169,7 +169,7 @@ KASILO:
         Dimensions: 2, 2
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
@@ -325,7 +325,7 @@ KAWEAP:
     ProvidesPrerequisite@buildingname:
 
 KARADR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 306

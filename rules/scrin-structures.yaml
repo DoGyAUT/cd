@@ -6,7 +6,7 @@ SACNST:
         Dimensions: 3,3
     Buildable:
         Queue: Building
-        BuildPaletteOrder: 400
+        BuildPaletteOrder: 500
         Prerequisites: ~disabled
         Adjacent: 8
     Health:
@@ -65,7 +65,7 @@ SACNST:
         Notification: CriticalUnitLost
 
 SAPOWR:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Buildable:
         Queue: Building
         BuildPaletteOrder: 501
@@ -103,7 +103,7 @@ SAPOWR:
     DisabledOverlay:
     
 SPROC:
-    Inherits: ^Building
+    Inherits: ^BuildingInfiltrate
     Valued:
         Cost: 2000
     Tooltip:
@@ -118,7 +118,7 @@ SPROC:
         Dimensions: 4,3
     InfiltrateForCash:
         Percentage: 50
-        Minimum: 500
+        Minimum: -1
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:

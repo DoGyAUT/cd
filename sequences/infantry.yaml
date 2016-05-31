@@ -2552,78 +2552,93 @@ ghost:
     icon: gosticon
 
 jumpjet:
-    Defaults:
-        Tick: 80
-    stand:
-        Facings: 8
-        ShadowStart: 451
-    run:
-        Facings: 8
-        Start: 8
-        Length: 6
-        ShadowStart: 459
-    idle1:
-        Start: 56
-        Length: 15
-        ShadowStart: 507
-    idle2:
-        Start: 71
-        Length: 15
-        ShadowStart: 522
-    shoot:
-        Facings: 8
-        Start: 164
-        Length: 6
-        ShadowStart: 615
-    die1: s_bang34
-        Length: * 
-    die2: s_bang34
-        Length: *
-    die3: infdie
-        Length: *
-    die4: s_bang34
-        Length: *
-    die-crushed:
-        Start: 445
-        Length: 6
-        ShadowStart: 896
-        Tick: 800
-        ZOffset: -511
-    die5: flameguy # TODO: walking animation unused
-        Start: 42
-        Length: 104
-        ShadowStart: 190
-    die6: electro
-        Length: *
-    fly:
-        Facings: 8
-        Start: 292
-        Length: 6        
-        ShadowStart: 743    
-    stand-air:
-        Facings: 8
-        Start: 340
-        Length: 6
-        ShadowStart: 791    
-    shoot-air:
-        Facings: 8
-        Start: 388
-        Length: 6
-        ShadowStart: 839    
-    die-air:
-        Start: 436
-        Length: 15
-        Facings: 1
-        ShadowStart: 887
-    fall:
-        Start: 436
-        Length: 8
-        Facings: 1
-        ShadowStart: 887  
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 451
+	air-stand:
+		Start: 340
+		Length: 6
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 459
+	air-run:
+		Start: 292
+		Length: 6
+		Facings: 8
+	air-idle:
+		Start: 340
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 507
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 522
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 537
+	prone-stand:
+		Facings: 8
+		ShadowStart: 451
+	die1: # TODO: animation for falling from sky starts at 436
+		Start: 445
+		Length: 6
+		ShadowStart: 896
+	die2: # TODO: animation for falling from sky starts at 436
+		Start: 445
+		Length: 6
+		ShadowStart: 896
+	die3: # TODO: animation for falling from sky starts at 436
+		Start: 445
+		Length: 6
+		ShadowStart: 896
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 450
+		ShadowStart: 901
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 615
+	air-shoot:
+		Start: 388
+		Length: 6
+		Facings: 8
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 663
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 711
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
-    icon: jjeticon
+	icon: jjeticon
 
 cybfly:
     Defaults:

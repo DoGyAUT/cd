@@ -93,6 +93,7 @@
             800: rank, firepower, damage, reload
             1600: rank, firepower, damage, reload, selfheal
             3200: rank, firepower, damage, reload, selfheal , eliteweapon
+        SuppressLevelupAnimation: False
     FirepowerMultiplier@EXPERIENCE:
         UpgradeTypes: firepower
         Modifier: 110, 120, 130, 140, 150
@@ -202,6 +203,11 @@
         Weapons: Sparky
         Pieces: 0, 100
         Range: 1c0, 2c0, 3c0
+        
+^BuildingInfiltrate:      
+    Inherits: ^Building  
+    Targetable:
+        TargetTypes: Ground, Building, C4, SpyInfiltrate
 
 ^CivBuilding:
     Inherits: ^BasicBuilding
@@ -301,10 +307,6 @@
     -WithSpriteBody:
     WithGateSpriteBody:
     Power:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
     Tooltip:
         Description: Automated barrier that opens for allied units.
     Gate:
