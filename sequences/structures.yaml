@@ -761,6 +761,32 @@ cytech:
     icon: cytechicon
         Offset: 0, 0
         UseTilesetCode: false
+
+kabtech:
+    Defaults:
+        Offset: 0, -36
+        UseTilesetCode: false
+    idle:
+        ShadowStart: 3
+    damaged-idle:
+        Start: 1
+        ShadowStart: 4
+    dead:
+        Start: 2
+        ShadowStart: 5
+        Tick: 400
+    make: cabtech
+        Length: 1
+        ShadowStart: 3
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: kabtechicon
+        Offset: 0,0
+        UseTilesetCode: false   
         
 fapowr:
     Defaults:

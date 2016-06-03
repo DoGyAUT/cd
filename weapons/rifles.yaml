@@ -309,7 +309,6 @@ ShadowSniperEMP:
         Upgrades: empdisable, notmobile
         ValidTargets: Vehicle, Cyborg, Building
 
-        
 VulcanShotgun:
     Inherits: ^Bullet
     ReloadDelay: 100
@@ -324,12 +323,9 @@ VulcanShotgun:
         Spread: 0c256
         Damage: 20
         Versus:
-            Infantry: 200
-            Vehicle: 1
-            Aircraft: 0
-            Building: 1
+            Building: 10
             Light: 100
-            Medium: 70
+            Medium: 20
             Heavy: 10
 
 VulcanShotgun2:

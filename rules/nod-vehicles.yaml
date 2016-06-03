@@ -145,7 +145,10 @@ SAPC:
         EjectOnDeath: true
     RenderSprites:
     RenderVoxels:
-    WithVoxelBody:        
+    WithVoxelBody:
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: SubterraneanUnitDetected
         
 BGGY:
     Inherits: ^VoxelVehicle
@@ -431,7 +434,7 @@ TTNK:
 TERMITE:
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 1400
+        Cost: 1600
     Tooltip:
         Name: Termite
         Description: Heavier version of the Tick Tank,\narmed with a 122mm and a 75mm cannon with explosive rounds.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry\n  Useless vs Aircraft
@@ -457,7 +460,7 @@ TERMITE:
     AttackTurreted:
     Armament@primary:
         Name: primary
-        Weapon: 122mmAP #105mmHE
+        Weapon: 105mmHE #105mmHE
         LocalOffset: 555,-154,720
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -654,6 +657,9 @@ SUBTANK:
         TerrainTypes: Clear, Rough, DirtRoad
         UpgradeTypes: deployed
         UpgradeMinEnabledLevel: 1
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: SubterraneanUnitDetected
 
 HAILSTORM:
     Inherits: ^VoxelTank
@@ -709,7 +715,7 @@ HAILSTORM:
 STNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1600
+        Cost: 1400
     Tooltip:
         Name: Stealth Tank
         Description: Lightly armoured tank equipped with a personal stealth generator.\nArmed with multipupose missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
@@ -724,7 +730,7 @@ STNK:
         TurnSpeed: 5
         Speed: 85
     Health:
-        HP: 450
+        HP: 600
     Armor:
         Type: Medium
     RevealsShroud:
@@ -776,6 +782,9 @@ STNK:
     GlobalUpgradable@upgrade1:
         Upgrades: technology
         Prerequisites: technology
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
         
 AVATAR:
     Inherits: ^Tank

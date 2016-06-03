@@ -139,6 +139,9 @@ CHAMSPY:
         UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     ProducibleWithLevel:
         Prerequisites: barracks.upgraded
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
 
 NDOG:
     Inherits: ^SoldierFearless
@@ -278,7 +281,7 @@ NACAD:
         BuildPaletteOrder: 207
         Prerequisites: ~nahand, napyra, ~!t1, ~!propaganda
     Valued:
-        Cost: 600
+        Cost: 500
     Tooltip:
         Name: Elite Cadre
         Description: Advanced General-purpose infantry.\n\nPossible upgrades\n Stealth (Technology)\n\n  Strong vs Infantry, Light Armor\n  Weak vs Dogs, Armor, Aircraft, Artillery
@@ -332,7 +335,7 @@ NCONF:
         BuildPaletteOrder: 207
         Prerequisites: ~nahand, napyra, ~!t1, ~propaganda
     Valued:
-        Cost: 700
+        Cost: 600
     Tooltip:
         Name: Confessor
         Description: Advanced General-purpose infantry.\nExclusive to Propaganda ideology.\nBuffs friendly Nod infantry in range.\nDetects Stealth\n\nPossible upgrades\n Stealth (Technology)\n\n  Strong vs Infantry, Light Armor\n  Weak vs Dogs, Armor, Aircraft, Artillery
@@ -452,7 +455,7 @@ BHAND:
         BuildPaletteOrder: 207
         Prerequisites: ~nahand, napyra, ~!t1
     Valued:
-        Cost: 900
+        Cost: 800
     Tooltip:
         Name: Black Hand Flamer
         Description: Heavy infantry.\nImmune to Tiberium radiation.\nImmune to dog attacks (Devourer excluded)\nCan explode on death\n\n  Strong vs Infantry, Buildings, Light armor\n  Weak vs Armor, Aircraft, Artillery

@@ -151,7 +151,9 @@ KPROC:
         Palette: effect
     Power:
         Amount: -30
-    ProvidesPrerequisite@buildingname:    
+    ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 KASILO:
     Inherits: ^BuildingInfiltrate
@@ -323,6 +325,8 @@ KAWEAP:
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
     ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 KARADR:
     Inherits: ^BuildingInfiltrate
@@ -372,7 +376,7 @@ KARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 10c0
+        Range: 20c0
         CloakTypes: Underground
 
 CYTECH:
@@ -488,4 +492,35 @@ KAHPAD:
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
+    ProvidesPrerequisite@buildingname:
+
+KABTECH:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 310
+        Prerequisites: anypower, cybbar, kaweap, karadr, cytech, ~structures.cabal, ~!t1, ~!t2
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Cabal Tech Center
+        Description: Gives access to technology research.
+    Building:
+        Footprint: xxxx xxxx xxxx xxxx
+        Dimensions: 4,4
+    Selectable:
+        Bounds: 118, 118, -6, -38
+    Health:
+        HP: 2000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 5c0
+    Power:
+        Amount: -200
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
     ProvidesPrerequisite@buildingname:

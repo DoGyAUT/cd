@@ -146,7 +146,9 @@ NPROC:
         Palette: effect
     Power:
         Amount: -30
-    ProvidesPrerequisite@buildingname:    
+    ProvidesPrerequisite@buildingname:   
+    CustomBuildTimeValue:
+        Value: 1860 
 
 NASILO:
     Inherits: ^BuildingInfiltrate
@@ -317,6 +319,8 @@ NAWEAP:
     Power:
         Amount: -30
     ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -363,7 +367,7 @@ NARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 10c0
+        Range: 20c0
         CloakTypes: Underground
     
 NAPYRA:

@@ -246,15 +246,12 @@ TitanRailgun:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 300
+        Damage: 200
         Versus:
-            Infantry: 100
-            Vehicle: 120
-            Aircraft: 100
-            Building: 100
+            Building: 50
             Light: 100
-            Medium: 100
-            Heavy: 80
+            Medium: 200
+            Heavy: 100
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
@@ -281,19 +278,15 @@ SonicZap:
     Warhead@1Dam: SpreadDamage
         Range: 0, 32
         Falloff: 100, 100
-        Damage: 30
+        Damage: 50
         AffectsParent: false
         ValidStances: Neutral, Enemy
         Versus:
-            Kevlar: 100
-            Plate: 60
+            Building: 200
             Light: 100
-            Medium: 80
-            Heavy: 60
-            Wood: 100
-            Steel: 80
-            Concrete: 50
-        DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
     Warhead@2Dam: SpreadDamage
         Range: 0, 32
         Falloff: 50, 50
@@ -302,15 +295,11 @@ SonicZap:
         AffectsParent: false
         ValidStances: Ally
         Versus:
-            Kevlar: 100
-            Plate: 60
+            Building: 200
             Light: 100
-            Medium: 80
-            Heavy: 60
-            Wood: 100
-            Steel: 80
-            Concrete: 50
-        DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 CyCannon:
     ReloadDelay: 200
@@ -428,7 +417,7 @@ BansheeProton:
             Infantry: 100
             Vehicle: 150
             Aircraft: 100
-            Building: 150
+            Building: 50
             Light: 100
             Medium: 100
             Heavy: 80

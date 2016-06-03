@@ -6,9 +6,10 @@ GremlinShotgun:
     Range: 5c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
     Projectile: Bullet
-        Image: 120mm
-        Speed: 0c512
+        Image: shell02
+        Speed: 1c0
         Inaccuracy: 1c256
+        Palette: effect
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
@@ -75,15 +76,12 @@ HermesCannon:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 40
+        Damage: 70
         Versus:
-            Infantry: 200
-            Vehicle: 80
-            Aircraft: 100
-            Building: 200
-            Light: 120
-            Medium: 80
-            Heavy: 20
+            Building: 100
+            Light: 200
+            Medium: 100
+            Heavy: 50
     Warhead@2Eff: CreateEffect
         Explosions: tiny_clsn, tiny_bang
         ExplosionPalette: apolra2
@@ -258,7 +256,12 @@ TritonCannon:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 300
+        Damage: 200
+        Versus:
+            Building: 200
+            Light: 150
+            Medium: 50
+            Heavy: 50
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra2

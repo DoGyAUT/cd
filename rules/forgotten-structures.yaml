@@ -165,7 +165,9 @@ FPROC:
         Value: 1200
     Power:
         Amount: -30
-    ProvidesPrerequisite@buildingname:    
+    ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
     
 FASILO:
     Inherits: ^BuildingInfiltrate
@@ -341,6 +343,8 @@ FAWEAP:
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
     ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 FARADR:
     Inherits: ^BuildingInfiltrate
@@ -396,7 +400,7 @@ FARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 10c0
+        Range: 20c0
         CloakTypes: Underground
     
 FHOVEL:

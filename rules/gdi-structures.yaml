@@ -175,7 +175,9 @@ GPROC:
         Palette: effect
     Power:
         Amount: -30
-    ProvidesPrerequisite@buildingname:    
+    ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 GASILO:
     Inherits: ^BuildingInfiltrate
@@ -346,6 +348,8 @@ GAWEAP:
     Power:
         Amount: -30
     ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
 
 GARADR:
     Inherits: ^BuildingInfiltrate
@@ -377,8 +381,6 @@ GARADR:
     DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
-    DetectCloaked:
-        Range: 10
     RenderDetectionCircle:
     RevealsShroud:
         Range: 10c0
@@ -392,7 +394,7 @@ GARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 10c0
+        Range: 20c0
         CloakTypes: Underground
     AirstrikePower@orca:
         OrderName: OGAirstrikePowerInfoOrder

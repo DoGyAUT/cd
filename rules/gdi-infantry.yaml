@@ -122,6 +122,9 @@ SCOUT:
         UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     ProducibleWithLevel:
         Prerequisites: barracks.upgraded
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
 
 GDOG:
     Inherits: ^SoldierFearless
