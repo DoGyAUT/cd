@@ -100,23 +100,6 @@ upgrade.es:
         Image: cab_srs
     ProvidesPrerequisite:
         Prerequisite: upgrade.es
-
-unlock.pterois:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Pterois
-        Description: Allows Pterois production.
-    Buildable:
-        BuildPaletteOrder: 306
-        Prerequisites: cytech, ~structures.cabal, ~!t1, ~!t2
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 800
-    RenderSprites:
-        Image: cab.pterois
-    ProvidesPrerequisite:
-        Prerequisite: unlock.pterois
         
 unlock.manta:
     Inherits: ^Tech
@@ -125,7 +108,7 @@ unlock.manta:
         Description: Allows Manta production.
     Buildable:
         BuildPaletteOrder: 307
-        Prerequisites: cytech, cabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -142,7 +125,7 @@ unlock.kronos:
         Description: Allows Kronos production.
     Buildable:
         BuildPaletteOrder: 308
-        Prerequisites: cytech, cabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -159,7 +142,7 @@ unlock.cyc2:
         Description: Allows Cabal Commando production.
     Buildable:
         BuildPaletteOrder: 309
-        Prerequisites: cytech, cabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -176,7 +159,7 @@ unlock.glad:
         Description: Allows Harbinger production.
     Buildable:
         BuildPaletteOrder: 310
-        Prerequisites: cytech, cabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
+        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -193,7 +176,7 @@ unlock.gargantua:
         Description: Allows Gargantua production.
     Buildable:
         BuildPaletteOrder: 311
-        Prerequisites: cytech, cabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
+        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
         Queue: Tech
         BuildLimit: 1
     Valued:
