@@ -339,7 +339,7 @@ GOLEM:
     Voiced:
         VoiceSet: CyborgH
         Volume: 2
-        
+               
 TARANTULA:
     Inherits@1: ^Tank
     Inherits@2: ^CyborgFactoryUpgrades
@@ -506,6 +506,68 @@ SILVER3:
         Image: silver
     Valued:
         Cost: 2070
+            
+FURY:
+    Inherits@1: ^VoxelVehicle
+    Inherits@2: ^CyborgFactoryUpgrades
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Fury
+        Description: Hovering combat transporter. Infantry can shoot out of it.
+    Selectable:
+        Bounds: 42,42, 0, -5
+        Class: Fury
+    Voiced:
+        VoiceSet: Husk
+        Volume: 2
+    Mobile:
+        Speed: 90
+        TurnSpeed: 6
+        TerrainSpeeds:
+            Clear: 100
+            Road: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Water: 100
+            Tiberium: 100
+            BlueTiberium: 100
+            RedTiberium: 100
+            PurpleTiberium: 100
+	Cargo:
+		Types: Infantry
+		MaxWeight: 12
+		PipCount: 12
+		LoadingUpgrades: notmobile
+		EjectOnDeath: true
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 10c0
+    AttackGarrisoned:
+        PortOffsets: 256,0,256
+        PortYaws: 0
+        PortCones: 86
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Hovers:
+    -PoisonedByTiberium:
+    LeavesTrails@water:
+        Image: wake
+        Palette: effect
+        TerrainTypes: Water
+    LeavesTrails@ground:
+        Image: dust
+        TrailWhileStationary: True
+        StationaryInterval: 18
+        Palette: player50alpha
+        TerrainTypes: Clear, Rough, DirtRoad
+    WithMuzzleOverlay:
 
 KRONOS:
     Inherits@1: ^VoxelTank

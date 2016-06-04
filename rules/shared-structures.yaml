@@ -27,3 +27,28 @@ TECH:
     Tooltip:
         Name: Tech Center
         Description: Tech Center
+        
+TIBTECH:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 103
+        Prerequisites: gproc, ~structures.gdi
+    Tooltip:
+        Name: Tiberium Drill Station
+    Building:
+        Footprint: xxxx xxxx xxxx xxxx
+        Dimensions: 4, 4
+    Armor:
+        Type: Heavy
+    Health:
+        HP: 2000
+    -MustBeDestroyed:
+    -Sellable:
+    -GivesBuildableArea:
+    CashTrickler:
+        Period: 50
+        Amount: 30
+        CaptureAmount: 750
+    Capturable:
+        CaptureThreshold: 100
