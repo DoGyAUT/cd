@@ -443,13 +443,13 @@ GAARMORY:
     Production:
         Produces: Tech
         MoveIntoWorld: false
-#    ProductionQueue@Tech:
-#        Type: Tech
-#        Group: Tech
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: BuildTech
-#        ReadyAudio: TechComplete
+    ProductionQueue@Tech:
+        Type: Tech
+        Group: Tech
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: BuildTech
+        ReadyAudio: TechComplete
     Exit:
     ProductionBar@Tech:
         ProductionType: Tech
@@ -472,7 +472,7 @@ GAHPAD:
     Buildable:
         BuildPaletteOrder: 108
         Queue: Building
-        Prerequisites: anypower, garadr, gaarmory, ~structures.gdi, ~!t1
+        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
     Building:
         Footprint: xx xx
         Dimensions: 2,2

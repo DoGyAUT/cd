@@ -155,13 +155,10 @@ FanticBoom:
         Damage: 500
         AffectsParent: True
         Versus:
-            Infantry: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
+            Building: 200
             Light: 100
-            Medium: 70
-            Heavy: 40 
+            Medium: 80
+            Heavy: 50 
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
         
 FanticBoomExplosion:
@@ -280,13 +277,10 @@ FiendShardGreen:
     Warhead@1Dam: SpreadDamage
         Damage: 35
         Versus:
-            Infantry: 150
-            Vehicle: 100
-            Aircraft: 100
             Building: 80
-            Light: 120
-            Medium: 80
-            Heavy: 20
+            Light: 200
+            Medium: 100
+            Heavy: 50
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -315,13 +309,10 @@ FiendShardBlue:
     Warhead@1Dam: SpreadDamage
         Damage: 45
         Versus:
-            Infantry: 150
-            Vehicle: 120
-            Aircraft: 100
             Building: 100
-            Light: 120
-            Medium: 80
-            Heavy: 20
+            Light: 200
+            Medium: 100
+            Heavy: 50
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_bang, small_bang, medium_bang
@@ -351,13 +342,10 @@ FiendShardRed:
     Warhead@1Dam: SpreadDamage
         Damage: 55
         Versus:
-            Infantry: 200
-            Vehicle: 150
-            Aircraft: 100
             Building: 100
-            Light: 130
-            Medium: 90
-            Heavy: 40
+            Light: 200
+            Medium: 100
+            Heavy: 50
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -386,11 +374,8 @@ FiendShardPurple:
     Warhead@1Dam: SpreadDamage
         Damage: 55
         Versus:
-            Infantry: 180
-            Vehicle: 160
-            Aircraft: 100
-            Building: 110
-            Light: 120
+            Building: 100
+            Light: 200
             Medium: 100
             Heavy: 50
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath

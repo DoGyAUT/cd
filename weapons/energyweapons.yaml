@@ -14,12 +14,9 @@ LtRail:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 150
+        Damage: 200
         Versus:
-            Infantry: 100
-            Vehicle: 120
-            Aircraft: 100
-            Building: 80
+            Building: 50
             Light: 50
             Medium: 100
             Heavy: 50
@@ -361,9 +358,6 @@ BansheeCannon:
         Spread: 0c256
         Damage: 60
         Versus:
-            Infantry: 100
-            Vehicle: 100
-            Aircraft: 0
             Building: 80
             Light: 100
             Medium: 90
@@ -373,9 +367,6 @@ BansheeCannon:
         Spread: 0c512
         Damage: 60
         Versus:
-            Infantry: 0
-            Vehicle: 0
-            Aircraft: 100
             Building: 0
             Light: 100
             Medium: 90
@@ -411,15 +402,12 @@ BansheeProton:
         ContrailColor: 00C800
         ContrailWidth: 25
     Warhead@2Dam: SpreadDamage
-        Spread: 1c0
+        Spread: 0c512
         Damage: 200
         Versus:
-            Infantry: 100
-            Vehicle: 150
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 100
+            Building: 25
+            Light: 200
+            Medium: 200
             Heavy: 80
         ValidTargets: Ground
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath

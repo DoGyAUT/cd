@@ -397,13 +397,13 @@ NAPYRA:
     Production:
         Produces: Tech
         MoveIntoWorld: false
-#    ProductionQueue@Tech:
-#        Type: Tech
-#        Group: Tech
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: BuildTech
-#        ReadyAudio: TechComplete
+    ProductionQueue@Tech:
+        Type: Tech
+        Group: Tech
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: BuildTech
+        ReadyAudio: TechComplete
     CanPowerDown:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
@@ -428,7 +428,7 @@ NAHPAD:
     Buildable:
         BuildPaletteOrder: 208
         Queue: Building
-        Prerequisites: anypower, naradr, napyra, ~structures.nod, ~!t1
+        Prerequisites: anypower, naradr, ~structures.nod, ~!t1
     Building:
         Footprint: xx xx
         Dimensions: 2,2

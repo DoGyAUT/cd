@@ -74,7 +74,7 @@ LaserFire2:
             Aircraft: 0
             Building: 100
             Light: 100
-            Medium: 80
+            Medium: 200
             Heavy: 50
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -117,7 +117,7 @@ LaserFire:
             Aircraft: 0
             Building: 100
             Light: 100
-            Medium: 100
+            Medium: 200
             Heavy: 100
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -247,6 +247,11 @@ AvatarLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 512
         Damage: 250
+        Versus:
+            Building: 100
+            Light: 100
+            Medium: 200
+            Heavy: 100
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: scexplo

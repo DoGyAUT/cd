@@ -451,7 +451,7 @@ TERMITE:
     RevealsShroud:
         Range: 11c0
     Health:
-        HP: 1200
+        HP: 900
     Armor:
         Type: Heavy
     Turreted:
@@ -460,7 +460,7 @@ TERMITE:
     AttackTurreted:
     Armament@primary:
         Name: primary
-        Weapon: 105mmHE #105mmHE
+        Weapon: 105mmHE
         LocalOffset: 555,-154,720
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -474,16 +474,6 @@ TERMITE:
         MuzzlePalette: apolra50alpha
         Recoil: 100
         RecoilRecovery: 10
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@secondary2:
-        Weapon: LaserFire2u
-        LocalOffset: 300,178,700
-#        MuzzleSequence: laser
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     WithMuzzleOverlay:
     AutoTarget:
     RenderSprites:
@@ -497,9 +487,6 @@ TERMITE:
     WithVoxelBarrel@2:
         Sequence: barrel2
         Armament: secondary
-    GlobalUpgradable@upgrade:
-        Upgrades: technology
-        Prerequisites: technology
 
 NHWTZ:
     Inherits: ^VoxelVehicle

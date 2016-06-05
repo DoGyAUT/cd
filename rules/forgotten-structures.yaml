@@ -433,13 +433,13 @@ FHOVEL:
     Exit:
     ProductionBar@Tech:
         ProductionType: Tech
-#    ProductionQueue@Tech:
-#        Type: Tech
-#        Group: Tech
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: BuildTech
-#        ReadyAudio: TechComplete
+    ProductionQueue@Tech:
+        Type: Tech
+        Group: Tech
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+        QueuedAudio: BuildTech
+        ReadyAudio: TechComplete
     CanPowerDown:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
@@ -459,7 +459,7 @@ FAHPAD:
     Buildable:
         BuildPaletteOrder: 408
         Queue: Building
-        Prerequisites: anypower, faradr, fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: anypower, faradr, ~structures.forgotten, ~!t1
     Building:
         Footprint: xx xx
         Dimensions: 2,2
