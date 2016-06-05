@@ -437,6 +437,17 @@ sapc:
     icon: sapcicon
 
 subtank:
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+        ZOffset: 512
     emp-overlay: emp_fx01
         Length: *
         BlendMode: Additive
@@ -465,6 +476,17 @@ ttnk:
     icon: ticktankicon
        
 termite:
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+        ZOffset: 512
     muzzle: gunfire
         Length: *
     emp-overlay: emp_fx01

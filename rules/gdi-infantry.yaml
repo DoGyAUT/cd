@@ -78,14 +78,36 @@ E2:
         Weapon: Grenade
         LocalOffset: 0,0,555
         FireDelay: 5
+        UpgradeTypes: empgrenade
+        UpgradeMaxEnabledLevel: 0
     Armament@GARRISONED:
         Name: garrisoned
         Weapon: GrenadeGarrison
         LocalOffset: 0,0,555
         FireDelay: 5
+        UpgradeTypes: empgrenade
+        UpgradeMaxEnabledLevel: 0
+    Armament@primaryEMP:
+        Weapon: GrenadeEMP
+        LocalOffset: 0,0,555
+        FireDelay: 5
+        UpgradeTypes: empgrenade
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    Armament@GARRISONEDEMP:
+        Name: garrisoned
+        Weapon: GrenadeGarrisonEMP
+        LocalOffset: 0,0,555
+        FireDelay: 5
+        UpgradeTypes: empgrenade
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
     AttackFrontal:
     ProducibleWithLevel:
         Prerequisites: barracks.upgraded
+    GlobalUpgradable@upgrade:
+        Upgrades: empgrenade
+        Prerequisites: empgrenade
 
 SCOUT:
     Inherits: ^Soldier

@@ -14,9 +14,6 @@ Grenade:
         Spread: 0c256
         Damage: 50
         Versus:
-            Infantry: 100
-            Vehicle: 80
-            Aircraft: 100
             Building: 120
             Light: 120
             Medium: 80
@@ -25,7 +22,7 @@ Grenade:
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
         ExplosionPalette: apolra2
         ImpactSounds: expnew13.aud
-        InvalidImpactTypes: Water
+        InvalidImpactTypes: Water 
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
         ExplosionPalette: player
@@ -33,9 +30,30 @@ Grenade:
         ValidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: SmallCrater
+
+GrenadeEMP:
+    Inherits: Grenade
+    Projectile: Bullet
+        ContrailLength: 10
+        ContrailColor: 6464FF
+        ContrailWidth: 15
+    Warhead@emp1: GrantUpgrade
+        Range: 0c256
+        Duration: 50
+        Upgrades: empdisable, notmobile
+        ValidTargets: Vehicle, Cyborg, Building
+    Warhead@5Eff: CreateEffect
+        Explosions: small_emp
+        ExplosionPalette: effect
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
         
 GrenadeGarrison:
     Inherits: Grenade
+    ReloadDelay: 60
+    Range: 7c512
+            
+GrenadeGarrisonEMP:
+    Inherits: GrenadeEMP
     ReloadDelay: 60
     Range: 7c512
 

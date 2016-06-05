@@ -337,7 +337,7 @@ REPAIR:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 206
-        Prerequisites: ~naweap, napyra, ~!t1
+        Prerequisites: ~naweap, ~!t1
     Valued:
         Cost: 1000
     Tooltip:
@@ -437,7 +437,7 @@ TERMITE:
         Cost: 1600
     Tooltip:
         Name: Termite
-        Description: Heavier version of the Tick Tank,\narmed with a 122mm and a 75mm cannon with explosive rounds.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry\n  Useless vs Aircraft
+        Description: Heavier version of the Tick Tank,\narmed with a 135mm and a 75mm cannon with AP rounds.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry\n  Useless vs Aircraft
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 207
@@ -446,47 +446,98 @@ TERMITE:
         VoiceSet: Cheetah
         Volume: 2
     Mobile:
-        TurnSpeed: 1
+        TurnSpeed: 2
         Speed: 65
     RevealsShroud:
         Range: 11c0
     Health:
-        HP: 900
+        HP: 1200
     Armor:
-        Type: Heavy
+        Type: Medium
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1        
     Turreted:
-        TurnSpeed: 2
+        Turret: primary
+        TurnSpeed: 3
         Offset: 200,0,0
-    AttackTurreted:
-    Armament@primary:
-        Name: primary
-        Weapon: 105mmHE
-        LocalOffset: 555,-154,720
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+    Turreted@deployed:
+        Turret: secondary
+        TurnSpeed: 6
+        RealignDelay: -1
+    AttackTurreted:    
     Armament@secondary:
         Name: secondary
-        Weapon: 75mm1 #90mm
+        Turret: secondary
+        Weapon: 135mmAP
+        LocalOffset: 700,0,1300
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 150
+        RecoilRecovery: 10   
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+    Armament@primary:
+        Name: primary
+        Turret: primary
+        Weapon: 75mm1
         LocalOffset: 350,178,700
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
     WithMuzzleOverlay:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithVoxelBody@deployed:
+		Sequence: idle2
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	WithSpriteBody@deployed:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
     WithVoxelTurret:
+        Turret: primary
+        Sequence: turret
         Recoils: no
-    WithVoxelBarrel@1:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+    WithVoxelTurret@deployed:
+        Turret: secondary
+        Sequence: turretb
+        Recoils: no
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1        
+    WithVoxelBarrel@long:
         Sequence: barrel1
         Armament: primary
-    WithVoxelBarrel@2:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+    WithVoxelBarrel@short:
         Sequence: barrel2
+        Armament: primary
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1        
+    WithVoxelBarrel@deployed:
+        Sequence: barrelb
         Armament: secondary
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: drilldwn.aud
+		UndeploySound: drillup.aud
+	Armor@deployed:
+		Type: Heavy
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
 
 NHWTZ:
     Inherits: ^VoxelVehicle
@@ -625,6 +676,9 @@ SUBTANK:
         CloakDelay: 0
         IsPlayerPalette: true
         CloakTypes: Underground
+	WithSpriteBody@deployed:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
     AttackFrontal:
     AutoTarget:
     RenderSprites:
@@ -642,7 +696,7 @@ SUBTANK:
         Image: dust
         Palette: player50alpha
         TerrainTypes: Clear, Rough, DirtRoad
-        UpgradeTypes: deployed
+        UpgradeTypes: undeployed
         UpgradeMinEnabledLevel: 1
     AnnounceOnSeen:
         PingRadar: True

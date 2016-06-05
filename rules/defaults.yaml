@@ -88,10 +88,10 @@
 ^GainsExperience:
     GainsExperience:
         Upgrades:
+            100: rank, firepower, damage, reload
             200: rank, firepower, damage, reload
-            400: rank, firepower, damage, reload
-            800: rank, firepower, damage, reload
-            1600: rank, firepower, damage, reload, selfheal
+            300: rank, firepower, damage, reload
+            1000: rank, firepower, damage, reload, selfheal
             3200: rank, firepower, damage, reload, selfheal , eliteweapon
         SuppressLevelupAnimation: False
     FirepowerMultiplier@EXPERIENCE:
@@ -120,6 +120,7 @@
         ReferencePoint: Bottom, Right
         UpgradeTypes: rank
         ZOffset: 256
+        Stances: Ally, Neutral, Enemy
         UpgradeMinEnabledLevel: 1
         UpgradeMaxAcceptedLevel: 5
   
