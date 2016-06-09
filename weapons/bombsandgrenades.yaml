@@ -232,6 +232,45 @@ VertigoBombEMP:
     Warhead@EMPEff: CreateEffect
         Explosions: pulse_explosion
         ImpactSounds: plsecan2.aud
+                
+ZepBomb:
+    Inherits: ^ShellHE
+    ReloadDelay: 200
+    Burst: 10
+    BurstDelay: 20
+    Range: 1c0
+    Report: bombdrop.aud
+    Projectile: Bullet
+        Speed: 0c128
+        Inaccuracy: 0c128
+        Image: shell01
+        Shadow: true
+        Angle: 60
+        Palette: effect
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Building: 200
+            Light: 200
+            Medium: 100
+            Heavy: 80
+        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
         
 CarpetBomb:
     Inherits: Bomb

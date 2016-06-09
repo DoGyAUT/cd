@@ -138,13 +138,13 @@ GorranCannon:
         Damage: 150
         
 105mmHE:
-    Inherits: ^ShellHE
+    Inherits: ^ShellAP
     ReloadDelay: 200
-    Range: 6c768
+    Range: 7c768
     Report: 105mm.aud, 122mm.aud, 128mm.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 250
     Warhead@2Eff: CreateEffect
         Explosions: large_brnl
         ExplosionPalette: apolra2
@@ -402,29 +402,29 @@ TritonCannon:
        
 240mm:
     Inherits: ^ShellHE
-    ReloadDelay: 350
+    ReloadDelay: 150
+    Burst: 3
+    BurstDelay: 6
     Range: 20c0
     Report: artyfire2.aud
     Projectile: Bullet
-        Speed: 0c256
+        Speed: 300
         Inaccuracy: 2c0
-        Image: shell01
+        Image: shell02
         Angle: 165
         ContrailLength: 20
         ContrailColor: FFFFFF
-        ContrailWidth: 50
+        ContrailWidth: 30
         Blockable: false
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 600
-    Warhead@2Eff: CreateEffect
-        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: LargeCrater 
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Building: 150
+            Light: 150
+            Medium: 50
+            Heavy: 25
         
 RagnarCannon:
     Inherits: ^ShellHE

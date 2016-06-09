@@ -161,7 +161,7 @@ HAVOC:
 HYDRA:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1700
+        Cost: 1400
     Tooltip:
         Name: Hydra
         Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
@@ -198,7 +198,7 @@ HYDRA:
         MuzzlePalette: apolra50alpha
         UpgradeTypes: industry
         UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1        
+        UpgradeMaxEnabledLevel: 1
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -551,7 +551,7 @@ RAVEN:
     GlobalUpgradable@upgrade1:
         Upgrades: technology, cloakgenerator
         Prerequisites: technology
-        
+       
 VERTIGO:
     Inherits: ^AttackBomber
     Valued:
@@ -657,3 +657,65 @@ VERTIGO:
     SpawnActorOnDeath:
         Actor: VERTIGO.Husk
         Probability: 80
+        
+ZEP:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Kane's Wrath
+        Description: Huge Zeppelin, armed with bombs and propaganda speakers./nExclusive to the Propaganda ideology.
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 207
+        Prerequisites: ~nahpad, napyra, natech, ~technology
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 1
+        CruiseAltitude: 8192
+        Speed: 20
+        IdealSeparation: 4096
+        AltitudeVelocity: 40
+    Health:
+        HP: 3000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 14c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: ZepBomb
+        LocalOffset: -256,0,-1024
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    GlobalUpgradable@upgrade:
+        Upgrades: propaganda
+        Prerequisites: propaganda
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+        Scale: 2
+    -WithVoxelBody:
+    WithVoxelWalkerBody:
+        TickRate: 2
+    DetectCloaked:
+        Range: 10c0
+    RenderDetectionCircle:
+    SpawnActorOnDeath:
+        Actor: ZEP.Husk
+        Probability: 80
+    UpgradeActorsNear:
+        Upgrades: confessorboost
+        Range: 10c0

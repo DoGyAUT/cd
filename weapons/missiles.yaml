@@ -31,6 +31,11 @@ MissileBarrage:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 60
+        Versus:
+            Building: 150
+            Light: 160
+            Medium: 50
+            Heavy: 25
         
 AirblastMissile:
     Inherits: ^MissileAPHE
@@ -66,6 +71,7 @@ MLRSBarrage:
     MinRange: 4c0
     Projectile: Missile
         MaximumLaunchSpeed: 171
+        Blockable: false
         Inaccuracy: 2c128
         RangeLimit: 20c0
         Speed: 0c768

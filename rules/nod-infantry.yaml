@@ -193,7 +193,7 @@ NDOG:
 NENGINEER:
     Inherits: ^Soldier
     Valued:
-        Cost: 800
+        Cost: 600
     Tooltip:
         Name: Saboteur
         Description: Captures enemy structures.\n\nPossible upgrades\n Stealth (Technology)\n\n  Unarmed
@@ -305,14 +305,6 @@ NACAD:
         Weapon: M203
         LocalOffset: 256,0,550
     AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
     WithInfantryBody:
         IdleSequences: idle1,idle2
     GlobalUpgradable@upgrade:
@@ -359,14 +351,6 @@ NCONF:
         Weapon: M203
         LocalOffset: 256,0,550
     AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
     WithInfantryBody:
         IdleSequences: idle1,idle2
     GlobalUpgradable@upgrade:
@@ -419,14 +403,6 @@ SHADOW:
         UpgradeTypes: technology
         UpgradeMaxEnabledLevel: 0
     AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
     WithInfantryBody:
         IdleSequences: idle1,idle2
     GlobalUpgradable@upgrade:
@@ -514,13 +490,5 @@ SPRAY:
         LocalOffset: 256,0,550
     -PoisonedByTiberium:
     AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
     WithInfantryBody:
         IdleSequences: idle1,idle2

@@ -210,7 +210,6 @@ HAVOC.Husk:
     RenderSprites:
         Image: havoc
         
-
 HYDRA.Husk:
     Inherits: ^AircraftHusk
     Tooltip:
@@ -302,6 +301,19 @@ VERTIGO.Husk:
     RenderSprites:
         Image: vertigo
 
+ZEP.Husk:
+    Inherits: ^AircraftHuskPlane
+    Tooltip:
+        Name: Zeppelin Husk
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 10
+        AirborneUpgrades: airborne
+    RenderVoxels:
+        Image: zep
+    RenderSprites:
+        Image: zep
+        
 KDRONE.Husk:
     Inherits: ^AircraftHuskPlane
     Tooltip:
