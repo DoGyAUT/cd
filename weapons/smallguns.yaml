@@ -129,7 +129,7 @@ RaiderCannon:
             Aircraft: 50
             Building: 25
             Light: 100
-            Medium: 50
+            Medium: 30
             Heavy: 20
 
 AssaultMG:
@@ -166,7 +166,21 @@ TaurusMG:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
-      
+
+WarthogMG:
+    Inherits: ^Bullet
+    ReloadDelay: 100
+    Range: 6c0
+    Burst: 50
+    BurstDelay: 2
+    Report: TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
+    Projectile: Bullet
+        Speed: 0c682
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 25
+        
 TankMG:
     Inherits: ^Bullet
     ReloadDelay: 200

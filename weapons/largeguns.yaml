@@ -4,7 +4,7 @@ GremlinShotgun:
     Burst: 10
     ValidTargets: Ground, Air, HighAir
     Range: 5c0
-    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
     Projectile: Bullet
         Image: shell02
         Speed: 1c0
@@ -30,6 +30,78 @@ GremlinShotgun:
         SmudgeType: SmallCrater
         InvalidImpactTypes: Water, Air, AirHit
 
+BuggyFlak:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 10
+    BurstDelay: 4
+    ValidTargets: Ground, Air, HighAir
+    Range: 6c0
+    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Projectile: Bullet
+        Image: shell02
+        Speed: 1c512
+        Inaccuracy: 0c512
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 20
+        ValidTargets: Air, HighAir
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 10
+        ValidTargets: Ground
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew13.aud
+        InvalidImpactTypes: Water 
+    Warhead@4EffAir: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+        
+WarthogFlak:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Burst: 10
+    BurstDelay: 6
+    ValidTargets: Ground, Air, HighAir
+    Range: 7c0
+    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
+    Projectile: Bullet
+        Image: shell02
+        Speed: 1c512
+        Inaccuracy: 0c512
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 40
+        ValidTargets: Air, HighAir
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 20
+        ValidTargets: Ground
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew13.aud
+        InvalidImpactTypes: Water 
+    Warhead@4EffAir: CreateEffect
+        Explosions: tiny_clsn, tiny_bang
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+        
 FlakCannon:
     Inherits: ^ShellHE
     ReloadDelay: 100
@@ -125,8 +197,16 @@ GorranCannon:
         Damage: 40
 
 75mm2:
-    Inherits: 75mm1
-    ReloadDelay: 45
+    Inherits: ^ShellAP
+    ReloadDelay: 60
+    Range: 6c768
+    Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 60
 
 90mm:
     Inherits: ^ShellAP
@@ -240,16 +320,16 @@ GorranCannon:
  
 AurochCannon:
     Inherits: ^ShellAP
-    ReloadDelay: 160
-    Range: 7c0
+    ReloadDelay: 250
+    Range: 9c0
     Report: shot01.aud, shot02.aud, shot03.aud
     Projectile: Bullet
-        Speed: 0c512
-        Inaccuracy: 1c0
+        Speed: 1c0
+        Inaccuracy: 0c512
         ContrailWidth: 20
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 300
+        Damage: 400
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra2
@@ -399,7 +479,55 @@ TritonCannon:
     Warhead@EMPEff: CreateEffect
         Explosions: pulse_explosion
         ImpactSounds: plsecan2.aud
-       
+
+BuggyMortar:
+    Inherits: ^ShellHE
+    ReloadDelay: 100
+    Range: 10c0
+    Report: 120mmf.aud
+    Projectile: Bullet
+        Speed: 400
+        Inaccuracy: 1c0
+        Image: shell02
+        Angle: 165
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 20
+        Blockable: false
+    MinRange: 4c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        Versus:
+            Building: 150
+            Light: 150
+            Medium: 50
+            Heavy: 25
+            
+WarthogMortar:
+    Inherits: ^ShellHE
+    ReloadDelay: 140
+    Range: 12c0
+    Report: 120mmf.aud
+    Projectile: Bullet
+        Speed: 350
+        Inaccuracy: 1c0
+        Image: shell02
+        Angle: 140
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 20
+        Blockable: false
+    MinRange: 4c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Building: 150
+            Light: 150
+            Medium: 50
+            Heavy: 25
+        
 240mm:
     Inherits: ^ShellHE
     ReloadDelay: 150

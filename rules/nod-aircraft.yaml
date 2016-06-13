@@ -472,31 +472,6 @@ RAVEN:
     RevealsShroud:
         Range: 18c0
         Type: CenterPosition
-    Armament@primary:
-        Weapon: RavenCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 700,128,200, 700,-128,200
-    Armament@primary2wings:
-        Weapon: RavenCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        FireDelay: 5
-        LocalOffset: 256,800,-32, 256,-800,-32
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@primary2wingslaser:
-        Weapon: RavenLaserFire
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        FireDelay: 5
-        LocalOffset: 256,800,-32, 256,-800,-32
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     Armament@primaryAA:
         Weapon: RavenCannonAA
         MuzzleSequence: muzzle
@@ -663,12 +638,12 @@ ZEP:
     Valued:
         Cost: 3000
     Tooltip:
-        Name: Kane's Wrath
+        Name: Brotherhood Battleship
         Description: Huge Zeppelin, armed with bombs and propaganda speakers./nExclusive to the Propaganda ideology.
     Buildable:
         Queue: Air
         BuildPaletteOrder: 207
-        Prerequisites: ~nahpad, napyra, natech, ~technology
+        Prerequisites: ~nahpad, napyra, natech, ~propaganda
     Voiced:
         VoiceSet: Venom
         Volume: 2

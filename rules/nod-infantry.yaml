@@ -193,7 +193,7 @@ NDOG:
 NENGINEER:
     Inherits: ^Soldier
     Valued:
-        Cost: 600
+        Cost: 400
     Tooltip:
         Name: Saboteur
         Description: Captures enemy structures.\n\nPossible upgrades\n Stealth (Technology)\n\n  Unarmed
@@ -244,7 +244,7 @@ FANATIC:
         BuildPaletteOrder: 206
         Prerequisites: ~nahand, napyra, ~!t1, ~propaganda
     Valued:
-        Cost: 400
+        Cost: 600
     Tooltip:
         Name: Fanatic
         Description: Suicide infantry.\nExclusive to Propaganda ideology.\nCan explode on death\n\n  Strong vs Ground targets\n  Weak vs Everything
@@ -456,7 +456,7 @@ BHAND:
         IdleSequences: idle1,idle2
     -PoisonedByTiberium:
     Explodes:
-        Weapon: UnitExplode
+        Weapon: UnitExplodeSmall
         Chance: 50
         TargetTypes: Ground, VeryHeavyInfantry, Flameproof
        

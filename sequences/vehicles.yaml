@@ -119,21 +119,195 @@ hailstorm:
         BlendMode: Additive
     icon: hailstormicon
     
-warthog:
+warthog_90mm:
+    Defaults:
+        Length: *
     muzzle: gunfire
         Length: *
     emp-overlay: emp_fx01
         Length: *
         BlendMode: Additive
-    icon: warthogicon    
+    icon: warthog_90mmicon
     
-gremlin:
+warthog_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_mgicon
+    
+warthog_gat:
+    Defaults:
+        Length: *
     muzzle: gunfire
         Length: *
     emp-overlay: emp_fx01
         Length: *
         BlendMode: Additive
-    icon: gremlinicon    
+    icon: warthog_gaticon
+    
+warthog_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_misicon
+    
+warthog_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_artyicon   
+    
+warthog_flak:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_flakicon
+
+    
+warthog_shotgun:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_shotgunicon   
+    
+warthog_75mmg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: warthog_75mmgicon
+   
+gremlin_90mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_90mmicon
+    
+gremlin_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_mgicon
+    
+gremlin_gat:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_gaticon
+    
+gremlin_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_misicon
+    
+gremlin_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_mortaricon   
+    
+gremlin_flak:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_flakicon
+
+    
+gremlin_shotgun:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_shotgunicon   
+    
+gremlin_75mmg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: gremlin_75mmgicon   
     
 howitzer:
     muzzle: gunfire
@@ -151,19 +325,9 @@ ragnarok:
         BlendMode: Additive
     icon: ragnaricon   
 
-auroch:
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: aurochicon    
-    
-bison:
+auroch_mg:
     Defaults:
         Length: *
-    muzzle: gunfire
-    missile: apmuzzle
     muzzle0: mgun-n
     muzzle1: mgun-nw
     muzzle2: mgun-w
@@ -174,7 +338,260 @@ bison:
     muzzle7: mgun-ne
     emp-overlay: emp_fx01
         BlendMode: Additive
-    icon: bisonicon    
+    icon: auroch_mgicon   
+
+auroch_gat:
+    Defaults:
+        Length: *
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_gaticon   
+
+auroch_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_misicon   
+
+auroch_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_artyicon   
+
+auroch_flak:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_flakicon   
+
+auroch_shotgun:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_shotgunicon   
+
+auroch_75mmg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_75mmgicon   
+
+auroch_90mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_90mmicon   
+
+auroch_90mmgg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_90mmggicon   
+
+auroch_120mmt:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_120mmticon   
+
+auroch_122mmg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_122mmgicon   
+
+auroch_180mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: auroch_180mmicon   
+    
+bison_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_mgicon   
+
+bison_gat:
+    Defaults:
+        Length: *
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_gaticon   
+
+bison_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_misicon   
+
+bison_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_artyicon   
+
+bison_flak:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_flakicon   
+
+bison_shotgun:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_shotgunicon   
+
+bison_75mmg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_75mmgicon   
+
+bison_90mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_90mmicon   
+
+bison_90mmgg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_90mmggicon   
+
+bison_120mmt:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_120mmticon   
+
+bison_122mmg:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_122mmgicon   
+
+bison_180mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        BlendMode: Additive
+    icon: bison_180mmicon    
 
 avalanche:
     muzzle: gunfire
@@ -428,7 +845,143 @@ fbuggy:
     emp-overlay: emp_fx01
         Length: *
         BlendMode: Additive
-    icon: fbuggyicon    
+    icon: fbuggyicon
+    
+fbuggy_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggy_mgicon
+    
+fbuggy_gat:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggy_gaticon
+    
+fbuggy_flak:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggy_flakicon
+    
+fbuggy_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggy_artyicon
+    
+fbuggy_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggy_misicon
+    
+ftruck:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: fbuggyicon
+    
+ftruck_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: ftruck_mgicon
+    
+ftruck_flak:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: ftruck_flakicon
+    
+ftruck_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: ftruck_misicon
+    
+ftruck_gat:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: ftruck_gaticon
+    
+ftruck_arty:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    emp-overlay: emp_fx01
+        Length: *
+        BlendMode: Additive
+    icon: ftruck_mortaricon
     
 sapc:
     emp-overlay: emp_fx01

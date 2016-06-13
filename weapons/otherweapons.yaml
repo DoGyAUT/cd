@@ -151,8 +151,9 @@ FanticBoom:
     Projectile: Bullet
         Speed: 1c512
     Warhead@1Dam: SpreadDamage
-        Spread: 1c0
+        Spread: 0c512
         Damage: 500
+        Falloff: 100, 50, 25, 0
         AffectsParent: True
         Versus:
             Building: 200

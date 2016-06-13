@@ -103,6 +103,8 @@ MLRSBarrage:
 WarthogMissile:
     Inherits: ^MissileAPHE
     ReloadDelay: 150
+    Burst: 6
+    BurstDelay: 8
     Range: 8c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Ground, Air, HighAir
@@ -110,7 +112,7 @@ WarthogMissile:
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 90      
+        Damage: 40
         ValidTargets: Ground, Air, HighAir
 
 BisonMissile:
@@ -141,6 +143,20 @@ VultureMissile:
         Spread: 256
         Damage: 60      
         ValidTargets: Ground, Air, HighAir
+
+TritonMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 150
+    Burst: 2
+    Range: 8c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, HighAir
+    Projectile: Missile
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 60      
+        ValidTargets: Air, HighAir
         
 HoverMissile:
     Inherits: ^MissileAPHE
@@ -253,6 +269,34 @@ MammothWalkerTusk:
         Damage: 100
         ValidTargets: Ground, Air, HighAir
         
+BuggyMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 180
+    Burst: 6
+    BurstDelay: 3
+    Range: 7c0
+    Report: misl1.aud
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        Arm: 2
+        Shadow: true
+        Inaccuracy: 0c512
+        Blockable: true
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        MaximumLaunchSpeed: 350
+        MinimumLaunchSpeed: 350
+        Speed : 350
+        Palette: effect
+        ContrailLength: 30
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 20
+        Versus:
+            Building: 70
+        ValidTargets: Ground, Air, HighAir
+     
 BikeMissile:
     Inherits: ^MissileAPHE
     ReloadDelay: 80

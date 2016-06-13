@@ -65,75 +65,959 @@ upgrade.fiend:
         Image: forg.fiend
     ProvidesPrerequisite:
         Prerequisite: upgrade.fiend
-        
-upgrade.warthog:
+
+upgrade.fbuggy:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Warthog
-        Description: Allows you to produce Warthog units (replaces Taurus).
+        Name: Assault Buggy chassis
+        Description: Allows you to use the Assault Buggy chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.gremlin
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 500
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy
+        
+upgrade.fbuggy_mg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Buggy (MG + Launcher)
+        Description: Allows you to produce Assault Buggy units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy_mg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy_mg
+
+upgrade.fbuggy_gat:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Buggy (Flamer)
+        Description: Allows you to produce Assault Buggy units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy_gat
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy_gat
+
+upgrade.fbuggy_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Buggy (Missiles)
+        Description: Allows you to produce Assault Buggy units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy_mis
+
+upgrade.fbuggy_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Buggy (Flak)
+        Description: Allows you to produce Assault Buggy units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy_flak
+
+upgrade.fbuggy_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Buggy (Mortar)
+        Description: Allows you to produce Assault Buggy units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.fbuggy_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.fbuggy_arty
+
+upgrade.ftruck:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Assault Truck chassis
+        Description: Allows you to use the Assault Truck chassis.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck
+
+upgrade.ftruck_mg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Truck (MG)
+        Description: Allows you to produce Assault Truck units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck_mg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck_mg
+
+upgrade.ftruck_gat:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Truck (Flamer)
+        Description: Allows you to produce Assault Truck units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck_gat
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck_gat
+
+upgrade.ftruck_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Truck (Missiles)
+        Description: Allows you to produce Assault Truck units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck_mis
+
+upgrade.ftruck_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Truck (Flak)
+        Description: Allows you to produce Assault Truck units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_arty
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck_flak
+
+upgrade.ftruck_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Assault Truck (Mortar)
+        Description: Allows you to produce Assault Truck units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.ftruck_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.ftruck_arty
+
+upgrade.gremlin:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Gremlin chassis
+        Description: Allows you to use the Gremlin chassis.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin
+
+upgrade.gremlin_mg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (MG)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_mg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_mg
+
+upgrade.gremlin_gat:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (Flamer)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_gat
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_gat
+
+upgrade.gremlin_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (Missiles)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_mis
+
+upgrade.gremlin_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (Flak)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_flak
+
+upgrade.gremlin_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (Mortar)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_arty
+
+upgrade.gremlin_shotgun:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (HE-Shotgun)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_shotgun
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_shotgun        
+
+upgrade.gremlin_75mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (90mm + MG)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_75mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_75mmg   
+
+upgrade.gremlin_90mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Gremlin (122mm)
+        Description: Allows you to produce Gremlin units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.gremlin_90mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.gremlin_90mm
+
+upgrade.warthog:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Warthog chassis
+        Description: Allows you to use the Warthog chassis.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
     RenderSprites:
         Image: forg.warthog
     ProvidesPrerequisite:
         Prerequisite: upgrade.warthog
         
-upgrade.gremlin:
+upgrade.warthog_mg:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Gremlin
-        Description: Allows you to produce Gremlin units. (replaces Assault Buggy)
+        Name: Choose Warthog (MG)
+        Description: Allows you to produce Warthog units.
     Buildable:
-        BuildPaletteOrder: 405
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.warthog
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 500
+        Cost: 250
     RenderSprites:
-        Image: forg.gremlin
+        Image: forg.warthog_mg
     ProvidesPrerequisite:
-        Prerequisite: upgrade.gremlin
-               
-upgrade.auroch:
+        Prerequisite: upgrade.warthog_mg
+
+upgrade.warthog_gat:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Auroch
-        Description: Allows you to produce Auroch units. \n  Disables Bison useage.
+        Name: Choose Warthog (Flamer)
+        Description: Allows you to produce Warthog units.
     Buildable:
-        BuildPaletteOrder: 406
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.bison
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 500
+        Cost: 250
     RenderSprites:
-        Image: forg.auroch
+        Image: forg.warthog_gat
     ProvidesPrerequisite:
-        Prerequisite: upgrade.auroch
-               
+        Prerequisite: upgrade.warthog_gat
+
+upgrade.warthog_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (Missiles)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_mis
+
+upgrade.warthog_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (Flak)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_flak
+
+upgrade.warthog_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (Mortar)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_arty
+
+upgrade.warthog_shotgun:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (HE-Shotgun)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_shotgun
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_shotgun        
+
+upgrade.warthog_75mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (90mm + MG)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_90mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_75mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_75mmg   
+
+upgrade.warthog_90mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Warthog (122mm)
+        Description: Allows you to produce Warthog units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.warthog_90mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.warthog_90mm       
+
 upgrade.bison:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Bison
-        Description: Allows you to produce Bison units. \n  Disables Auroch useage.
+        Name: Bison chassis
+        Description: Allows you to use the Gremlin chassis.
     Buildable:
-        BuildPaletteOrder: 407
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~!upgrade.auroch
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 500
+        Cost: 250
     RenderSprites:
         Image: forg.bison
     ProvidesPrerequisite:
         Prerequisite: upgrade.bison
-                      
+
+upgrade.bison_mg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (MG)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_mg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_mg
+
+upgrade.bison_gat:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (Flamer)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_gat
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_gat
+
+upgrade.bison_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (Missiles)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_mis
+
+upgrade.bison_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (Flak)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_flak
+
+upgrade.bison_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (Mortar)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_arty
+
+upgrade.bison_shotgun:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (HE-Shotgun)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_shotgun
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_shotgun        
+
+upgrade.bison_75mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (90mm + MG)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_75mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_75mmg   
+
+upgrade.bison_90mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (122mm)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_90mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_90mm 
+
+upgrade.bison_90mmgg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (90mm + MG + Launcher)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_90mmgg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_90mmgg 
+
+upgrade.bison_120mmt:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (120mm Twin)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_120mmt
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_120mmt
+
+upgrade.bison_122mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (122mm + MG)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_122mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_122mmg
+
+upgrade.bison_180mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Bison (122mm + MG)
+        Description: Allows you to produce Bison units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.bison_180mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.bison_180mm
+ 
+upgrade.auroch:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Auroch chassis
+        Description: Allows you to use the Auroch chassis.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch
+
+upgrade.auroch_mg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (MG)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_mg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_mg
+
+upgrade.auroch_gat:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (Flamer)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_gat
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_gat
+
+upgrade.auroch_mis:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (Missiles)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_mis
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_mis
+
+upgrade.auroch_flak:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (Flak)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_flak
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_flak
+
+upgrade.auroch_arty:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (Mortar)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_arty
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_arty
+
+upgrade.auroch_shotgun:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (HE-Shotgun)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_shotgun
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_shotgun        
+
+upgrade.auroch_75mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (90mm + MG)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_75mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_75mmg   
+
+upgrade.auroch_90mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (122mm)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_90mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_90mm 
+
+upgrade.auroch_90mmgg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (90mm + MG + Launcher)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_90mmgg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_90mmgg 
+
+upgrade.auroch_120mmt:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (120mm Twin)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_120mmt
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_120mmt
+
+upgrade.auroch_122mmg:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (122mm + MG)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_122mmg
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_122mmg
+
+upgrade.auroch_180mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Auroch (122mm + MG)
+        Description: Allows you to produce Auroch units.
+    Buildable:
+        BuildPaletteOrder: 404
+        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg
+        Queue: Tech
+        BuildLimit: 1
+    Valued:
+        Cost: 250
+    RenderSprites:
+        Image: forg.auroch_180mm
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.auroch_180mm 
+
 upgrade.howitzer:
     Inherits: ^Tech
     Tooltip:
