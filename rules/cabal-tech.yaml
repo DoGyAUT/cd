@@ -6,7 +6,7 @@ upgrade.hc:
         Description: Research reinforced chassis for all basic cyborgs. \n 25% damage reduction
     Buildable:
         BuildPaletteOrder: 300
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.lc
+        Prerequisites: ~cytech, ~!upgrade.lc
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -23,7 +23,7 @@ upgrade.lc:
         Description: Research alloyed chassis for all basic cyborgs. \n +20% Speed increasement
     Buildable:
         BuildPaletteOrder: 301
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.hc
+        Prerequisites: ~cytech, ~!upgrade.hc
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -40,7 +40,7 @@ upgrade.mp:
         Description: Initiate mass production for all factory combat units. \n 15% cost reduction
     Buildable:
         BuildPaletteOrder: 302
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.htp
+        Prerequisites: ~cytech, ~!upgrade.htp
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -57,7 +57,7 @@ upgrade.htp:
         Description: Initiate high-tech production for all factory combat units. \n 15% cost increasement \n +10% atack range increasement \n +5% damage increasement
     Buildable:
         BuildPaletteOrder: 303
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.mp
+        Prerequisites: ~cytech, ~!upgrade.mp
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -74,7 +74,7 @@ upgrade.nm:
         Description: Research nanomachines. \n Adds self repair systems to all cyborgs - which slowly repairs up to 100% health.
     Buildable:
         BuildPaletteOrder: 304
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.es
+        Prerequisites: ~cytech, ~!upgrade.es
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -91,7 +91,7 @@ upgrade.es:
         Description: Research short circuit systems. \n Adds self destruction systems to all new produced cyborgs - which makes them explode and harm all enemies in range.
     Buildable:
         BuildPaletteOrder: 305
-        Prerequisites: ~structures.cabal, cytech, ~!upgrade.nm
+        Prerequisites: ~cytech, ~!upgrade.nm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -108,7 +108,7 @@ unlock.manta:
         Description: Allows Manta production.
     Buildable:
         BuildPaletteOrder: 307
-        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -125,7 +125,7 @@ unlock.kronos:
         Description: Allows Kronos production.
     Buildable:
         BuildPaletteOrder: 308
-        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -142,7 +142,7 @@ unlock.cyc2:
         Description: Allows Cabal Commando production.
     Buildable:
         BuildPaletteOrder: 309
-        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -159,7 +159,7 @@ unlock.glad:
         Description: Allows Harbinger production.
     Buildable:
         BuildPaletteOrder: 310
-        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
+        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2, ~!t3
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -176,7 +176,7 @@ unlock.gargantua:
         Description: Allows Gargantua production.
     Buildable:
         BuildPaletteOrder: 311
-        Prerequisites: cytech, kabtech, ~structures.cabal, ~!t1, ~!t2, ~!t3
+        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2, ~!t3
         Queue: Tech
         BuildLimit: 1
     Valued:

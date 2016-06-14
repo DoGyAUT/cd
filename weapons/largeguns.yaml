@@ -377,7 +377,7 @@ TritonCannon:
         ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 200
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra50alpha
@@ -482,7 +482,7 @@ TritonCannon:
 
 BuggyMortar:
     Inherits: ^ShellHE
-    ReloadDelay: 100
+    ReloadDelay: 80
     Range: 10c0
     Report: 120mmf.aud
     Projectile: Bullet
@@ -497,7 +497,7 @@ BuggyMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 100
+        Damage: 120
         Versus:
             Building: 150
             Light: 150
@@ -506,7 +506,7 @@ BuggyMortar:
             
 WarthogMortar:
     Inherits: ^ShellHE
-    ReloadDelay: 140
+    ReloadDelay: 120
     Range: 12c0
     Report: 120mmf.aud
     Projectile: Bullet
@@ -521,7 +521,31 @@ WarthogMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 300
+        Versus:
+            Building: 150
+            Light: 150
+            Medium: 50
+            Heavy: 25
+
+AurochMortar:
+    Inherits: ^ShellHE
+    ReloadDelay: 160
+    Range: 12c0
+    Report: artyfire2.aud
+    Projectile: Bullet
+        Speed: 350
+        Inaccuracy: 1c0
+        Image: shell02
+        Angle: 140
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 20
+        Blockable: false
+    MinRange: 4c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 400
         Versus:
             Building: 150
             Light: 150

@@ -110,6 +110,9 @@ WarthogMissile:
     ValidTargets: Ground, Air, HighAir
     Projectile: Missile
         Inaccuracy: 0c256
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        Speed : 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 40
@@ -272,7 +275,7 @@ MammothWalkerTusk:
 BuggyMissile:
     Inherits: ^MissileAPHE
     ReloadDelay: 180
-    Burst: 6
+    Burst: 4
     BurstDelay: 3
     Range: 7c0
     Report: misl1.aud
@@ -292,7 +295,7 @@ BuggyMissile:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 20
+        Damage: 60
         Versus:
             Building: 70
         ValidTargets: Ground, Air, HighAir
@@ -371,9 +374,9 @@ StealthDragon:
 StealthDragonAA:
     Inherits: ^MissileAPHE
     ReloadDelay: 100
-    Range: 10c0
-    Burst: 2
-    BurstDelay: 0
+    Range: 14c0
+    Burst: 6
+    BurstDelay: 5
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
     ValidTargets: Air, HighAir
     Projectile: Missile
@@ -384,7 +387,7 @@ StealthDragonAA:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 120
+        Damage: 100
         ValidTargets: Air, HighAir
 
 Stormdragon:

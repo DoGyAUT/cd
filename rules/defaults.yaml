@@ -91,8 +91,8 @@
             100: rank, firepower, damage, reload
             200: rank, firepower, damage, reload
             300: rank, firepower, damage, reload
-            1000: rank, firepower, damage, reload, selfheal
-            3200: rank, firepower, damage, reload, selfheal , eliteweapon
+            500: rank, firepower, damage, reload, selfheal
+            1000: rank, firepower, damage, reload, selfheal , eliteweapon
         SuppressLevelupAnimation: False
     FirepowerMultiplier@EXPERIENCE:
         UpgradeTypes: firepower
@@ -123,7 +123,46 @@
         Stances: Ally, Neutral, Enemy
         UpgradeMinEnabledLevel: 1
         UpgradeMaxAcceptedLevel: 5
-  
+    
+^GainsExperienceInf:
+    GainsExperience:
+        Upgrades:
+            100: rank, firepower, damage, reload
+            200: rank, firepower, damage, reload
+            300: rank, firepower, damage, reload
+            1000: rank, firepower, damage, reload, selfheal
+            2000: rank, firepower, damage, reload, selfheal , eliteweapon
+        SuppressLevelupAnimation: False
+    FirepowerMultiplier@EXPERIENCE:
+        UpgradeTypes: firepower
+        Modifier: 110, 120, 130, 140, 150
+    DamageMultiplier@EXPERIENCE:
+        UpgradeTypes: damage
+        Modifier: 90, 85, 80, 70, 50
+    SpeedMultiplier@EXPERIENCE:
+        UpgradeTypes: speed
+        Modifier: 100, 100, 100, 100, 100
+    ReloadDelayMultiplier@EXPERIENCE:
+        UpgradeTypes: reload
+        Modifier: 95, 90, 85, 75, 50
+    SelfHealing@ELITE:
+        Step: 2
+        Delay: 100
+        HealIfBelow: 100
+        DamageCooldown: 125
+        UpgradeTypes: selfheal
+        UpgradeMinEnabledLevel: 1
+    WithRankDecoration:
+        Image: newrank
+        Sequence: rank
+        Palette: ra
+        ReferencePoint: Bottom, Right
+        UpgradeTypes: rank
+        ZOffset: 256
+        Stances: Ally, Neutral, Enemy
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 5
+        
 ^BasicBuilding:
     Inherits@1: ^ExistsInWorld
     Inherits@2: ^SpriteActor
@@ -349,7 +388,7 @@
     RenderSprites:
 
 ^Infantry:
-    Inherits@1: ^GainsExperience
+    Inherits@1: ^GainsExperienceInf
     Inherits@2: ^ExistsInWorld
     Inherits@3: ^SpriteActor
     DrawLineToTarget:

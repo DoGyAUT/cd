@@ -6,7 +6,7 @@ upgrade.gdf:
         Description: Choose GDF as subfaction.\n\nSpecialized in heavy defense and artillery. \n\n Grants access to the following buildings:\n\n -Howitzer Component Tower\n -Fortress Garrison Bunker\n\n Grants access to the following vehicles:\n\n -Airblast\n -Mammoth Tank \n -Nemesis MK.I
     Buildable:
         BuildPaletteOrder: 100
-        Prerequisites: gaarmory, ~structures.gdi, ~!t1, ~!upgrade.st, ~!upgrade.zc
+        Prerequisites: ~gaarmory, ~!t1, ~!upgrade.st, ~!upgrade.zc
         Queue: Tech
         BuildLimit: 1
         IconPalette: gdf
@@ -24,7 +24,7 @@ upgrade.st:
         Description: Choose Steel Talons as subfaction.\n\nSpecialized in heavy vehicles and frontline units. \n\n Grants access to the following buildings:\n\n -Talon Component Tower\n\n Grants access to the following vehicles:\n\n -Ares (Archon replacement) \n -Vulture (Wolverine replacement) \n -Triton\n -Titan \n -Mammoth MK.II
     Buildable:
         BuildPaletteOrder: 101
-        Prerequisites: gaarmory, ~structures.gdi, ~!t1, ~!upgrade.gdf, ~!upgrade.zc
+        Prerequisites: ~gaarmory, ~!t1, ~!upgrade.gdf, ~!upgrade.zc
         Queue: Tech
         BuildLimit: 1
         IconPalette: st
@@ -42,7 +42,7 @@ upgrade.zc:
         Description: Choose ZOCOM as subfaction.\n\nSpecialized in heavy infantry, aircraft and mobile units. \n\n Grants access to the following infantry:\n\n -Zone Marine (Marine replacement) \n -Zone Trooper \n\n Grants access to the following aircraft:\n\n -Orca F-2 (Orca F-1 replacement) \n -Hornet (Firehawk replacement)\n\n Grants access to the following vehicles:\n\n -Hermes (Archon replacement)\n -Hover MLRS\n -Leviathan
     Buildable:
         BuildPaletteOrder: 102
-        Prerequisites: gaarmory, ~structures.gdi, ~!t1,~!upgrade.gdf, ~!upgrade.st
+        Prerequisites: ~gaarmory, ~!t1,~!upgrade.gdf, ~!upgrade.st
         Queue: Tech
         BuildLimit: 1
         IconPalette: zc
@@ -61,7 +61,7 @@ upgrade.gapowerup1:
         Description: Upgrades all power plants with one additional turbine, which grants each one 50 more power output.
     Buildable:
         BuildPaletteOrder: 103
-        Prerequisites: gapowr, ~structures.gdi, ~!t1
+        Prerequisites: ~gaarmory, gapowr, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -78,7 +78,7 @@ upgrade.gapowerup2:
         Description: Upgrades all power plants with one additional turbine, which grants each one 50 more power output.
     Buildable:
         BuildPaletteOrder: 104
-        Prerequisites: gapowr, upgrade.gapowerup1, ~structures.gdi, ~!t1
+        Prerequisites: ~gaarmory, gapowr, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -95,7 +95,7 @@ upgrade.emp:
         Description: Upgrades all Disc Throwers with EMP grenades.
     Buildable:
         BuildPaletteOrder: 105
-        Prerequisites: gaarmory, ~structures.gdi, ~!t1
+        Prerequisites: ~gaarmory, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:

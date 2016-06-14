@@ -5,7 +5,7 @@ upgrade.brigand:
         Description: Allows you to train Brigand units. \n  Disables Goon useage.
     Buildable:
         BuildPaletteOrder: 400
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.goon, ~!upgrade.grunt
+        Prerequisites: ~fhovel, ~!t1, ~!upgrade.goon, ~!upgrade.grunt
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -22,7 +22,7 @@ upgrade.goon:
         Description: Allows you to train Goon units. \n  Disables Brigand useage.
     Buildable:
         BuildPaletteOrder: 401
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.brigand, ~!upgrade.grunt
+        Prerequisites: ~fhovel, ~!t1, ~!upgrade.brigand, ~!upgrade.grunt
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -39,7 +39,7 @@ upgrade.grunt:
         Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Fiend useage.
     Buildable:
         BuildPaletteOrder: 402
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.fiend
+        Prerequisites: ~fhovel, ~!t1, ~!upgrade.fiend
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -56,7 +56,7 @@ upgrade.fiend:
         Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Scoundrel useage.
     Buildable:
         BuildPaletteOrder: 403
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!upgrade.grunt
+        Prerequisites: ~fhovel, ~!t1, ~!upgrade.grunt
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -73,7 +73,7 @@ upgrade.fbuggy:
         Description: Allows you to use the Assault Buggy chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -90,7 +90,7 @@ upgrade.fbuggy_mg:
         Description: Allows you to produce Assault Buggy units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -107,7 +107,7 @@ upgrade.fbuggy_gat:
         Description: Allows you to produce Assault Buggy units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -124,7 +124,7 @@ upgrade.fbuggy_mis:
         Description: Allows you to produce Assault Buggy units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_flak, ~!upgrade.fbuggy_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -141,7 +141,7 @@ upgrade.fbuggy_flak:
         Description: Allows you to produce Assault Buggy units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -158,7 +158,7 @@ upgrade.fbuggy_arty:
         Description: Allows you to produce Assault Buggy units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, !~upgrade.fbuggy_mg, ~!upgrade.fbuggy_gat, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_flak
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -175,7 +175,7 @@ upgrade.ftruck:
         Description: Allows you to use the Assault Truck chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -192,7 +192,7 @@ upgrade.ftruck_mg:
         Description: Allows you to produce Assault Truck units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -209,7 +209,7 @@ upgrade.ftruck_gat:
         Description: Allows you to produce Assault Truck units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -226,7 +226,7 @@ upgrade.ftruck_mis:
         Description: Allows you to produce Assault Truck units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -243,7 +243,7 @@ upgrade.ftruck_flak:
         Description: Allows you to produce Assault Truck units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_arty
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_arty
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -260,7 +260,7 @@ upgrade.ftruck_arty:
         Description: Allows you to produce Assault Truck units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, !~upgrade.ftruck_mg, ~!upgrade.ftruck_gat, ~!upgrade.ftruck_mis, ~!upgrade.ftruck_flak
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -277,11 +277,11 @@ upgrade.gremlin:
         Description: Allows you to use the Gremlin chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~faradr, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 250
+        Cost: 500
     RenderSprites:
         Image: forg.gremlin
     ProvidesPrerequisite:
@@ -294,7 +294,7 @@ upgrade.gremlin_mg:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -311,7 +311,7 @@ upgrade.gremlin_gat:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -328,7 +328,7 @@ upgrade.gremlin_mis:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -345,7 +345,7 @@ upgrade.gremlin_flak:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_arty, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -362,7 +362,7 @@ upgrade.gremlin_arty:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -379,7 +379,7 @@ upgrade.gremlin_shotgun:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_75mmg, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -396,7 +396,7 @@ upgrade.gremlin_75mmg:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -413,7 +413,7 @@ upgrade.gremlin_90mm:
         Description: Allows you to produce Gremlin units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, !~upgrade.gremlin_mg, ~!upgrade.gremlin_gat, ~!upgrade.gremlin_mis, ~!upgrade.gremlin_flak, ~!upgrade.gremlin_shotgun, ~!upgrade.gremlin_75mmg
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -430,11 +430,11 @@ upgrade.warthog:
         Description: Allows you to use the Warthog chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~faradr, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 250
+        Cost: 500
     RenderSprites:
         Image: forg.warthog
     ProvidesPrerequisite:
@@ -447,7 +447,7 @@ upgrade.warthog_mg:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -464,7 +464,7 @@ upgrade.warthog_gat:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -481,7 +481,7 @@ upgrade.warthog_mis:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_flak, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -498,7 +498,7 @@ upgrade.warthog_flak:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_arty, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -515,7 +515,7 @@ upgrade.warthog_arty:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -532,7 +532,7 @@ upgrade.warthog_shotgun:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_75mmg, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -549,7 +549,7 @@ upgrade.warthog_75mmg:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_90mm
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_90mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -566,7 +566,7 @@ upgrade.warthog_90mm:
         Description: Allows you to produce Warthog units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg
+        Prerequisites: ~fhovel, ~!t1, ~upgrade.warthog, !~upgrade.warthog_mg, ~!upgrade.warthog_gat, ~!upgrade.warthog_mis, ~!upgrade.warthog_flak, ~!upgrade.warthog_shotgun, ~!upgrade.warthog_75mmg
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -583,11 +583,11 @@ upgrade.bison:
         Description: Allows you to use the Gremlin chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~fatrade, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 250
+        Cost: 750
     RenderSprites:
         Image: forg.bison
     ProvidesPrerequisite:
@@ -600,7 +600,7 @@ upgrade.bison_mg:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -617,7 +617,7 @@ upgrade.bison_gat:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -634,7 +634,7 @@ upgrade.bison_mis:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_flak, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -651,7 +651,7 @@ upgrade.bison_flak:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_arty, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -668,7 +668,7 @@ upgrade.bison_arty:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -685,7 +685,7 @@ upgrade.bison_shotgun:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -702,7 +702,7 @@ upgrade.bison_75mmg:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_90mm, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -719,7 +719,7 @@ upgrade.bison_90mm:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -736,7 +736,7 @@ upgrade.bison_90mmgg:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -753,7 +753,7 @@ upgrade.bison_120mmt:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_122mmg, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -770,7 +770,7 @@ upgrade.bison_122mmg:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -787,7 +787,7 @@ upgrade.bison_180mm:
         Description: Allows you to produce Bison units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, !~upgrade.bison_mg, ~!upgrade.bison_gat, ~!upgrade.bison_mis, ~!upgrade.bison_flak, ~!upgrade.bison_shotgun, ~!upgrade.bison_75mmg, ~!upgrade.bison_90mmgg, ~!upgrade.bison_120mmt, ~!upgrade.bison_122mmg
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -804,11 +804,11 @@ upgrade.auroch:
         Description: Allows you to use the Auroch chassis.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1
+        Prerequisites: ~fhovel, ~fatrade, ~!t1
         Queue: Tech
         BuildLimit: 1
     Valued:
-        Cost: 250
+        Cost: 750
     RenderSprites:
         Image: forg.auroch
     ProvidesPrerequisite:
@@ -821,7 +821,7 @@ upgrade.auroch_mg:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -838,7 +838,7 @@ upgrade.auroch_gat:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -855,7 +855,7 @@ upgrade.auroch_mis:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_flak, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -872,7 +872,7 @@ upgrade.auroch_flak:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_arty, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -889,7 +889,7 @@ upgrade.auroch_arty:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -906,7 +906,7 @@ upgrade.auroch_shotgun:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -923,7 +923,7 @@ upgrade.auroch_75mmg:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_90mm, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -940,7 +940,7 @@ upgrade.auroch_90mm:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -957,7 +957,7 @@ upgrade.auroch_90mmgg:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -974,7 +974,7 @@ upgrade.auroch_120mmt:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_122mmg, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -991,7 +991,7 @@ upgrade.auroch_122mmg:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -1008,7 +1008,7 @@ upgrade.auroch_180mm:
         Description: Allows you to produce Auroch units.
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg
+        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, !~upgrade.auroch_mg, ~!upgrade.auroch_gat, ~!upgrade.auroch_mis, ~!upgrade.auroch_flak, ~!upgrade.auroch_shotgun, ~!upgrade.auroch_75mmg, ~!upgrade.auroch_90mmgg, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_122mmg
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -1023,11 +1023,6 @@ upgrade.howitzer:
     Tooltip:
         Name: Choose Howitzer
         Description: Allows you to produce Howitzer units. \n  Disables Ragnarok useage.
-    Buildable:
-        BuildPaletteOrder: 407
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.ragnarok
-        Queue: Tech
-        BuildLimit: 1
     Valued:
         Cost: 500
     RenderSprites:
@@ -1042,7 +1037,7 @@ upgrade.ragnarok:
         Description: Allows you to produce Ragnarok units. \n  Disables Howitzer useage.
     Buildable:
         BuildPaletteOrder: 407
-        Prerequisites: fhovel, ~structures.forgotten, ~!t1, ~!t2,  ~!upgrade.howitzer
+        Prerequisites: ~fhovel, ~!t1, ~!t2,  ~!upgrade.howitzer
         Queue: Tech
         BuildLimit: 1
     Valued:

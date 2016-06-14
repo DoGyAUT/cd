@@ -98,27 +98,24 @@ HarbingerMachal:
 DroneMachal:
     ReloadDelay: 100
     Range: 14c0
-    ValidTargets: Ground, Air, HighAir
+    ValidTargets: Air, HighAir
     Report: machal01.aud, machal02.aud, machal03.aud, machal04.aud
     Burst: 10
     BurstDelay: 2
     Projectile: Bullet
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
         Image: energybullet #plasmabullet
         Angle: 45
-        Speed: 1c512
+        Speed: 1c768
         ContrailLength: 6
         ContrailColor: 68B8D8
         ContrailWidth: 10
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 10
-        ValidTargets: Ground, Air, HighAir
+        Damage: 20
+        ValidTargets: Air, HighAir
         Versus:
-            Infantry: 600
-            Vehicle: 50
-            Aircraft: 500
-            Building: 50
+            Building: 0
             Light: 200
             Medium: 100
             Heavy: 50
@@ -140,7 +137,7 @@ PteroisMachal:
     ReloadDelay: 100
     Range: 10c0
     MinRange: 1c0
-    ValidTargets: Ground, Air, HighAir
+    ValidTargets: Ground, Air
     Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
     Burst: 16
     BurstDelay: 4
@@ -160,8 +157,8 @@ PteroisMachal:
         ContrailWidth: 20
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 20
-        ValidTargets: Ground, Air, HighAir
+        Damage: 30
+        ValidTargets: Ground, Air
         Versus:
             Building: 50
             Light: 200
