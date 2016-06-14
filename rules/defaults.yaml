@@ -140,7 +140,7 @@
         TerrainTypes: Clear, Road, DirtRoad, Rough
         Adjacent: 4
     Valued:
-        Cost: 100
+        Cost: 25
     Armor:
         Type: Building
     FrozenUnderFog:
@@ -423,6 +423,7 @@
     ActorLostNotification:
     Crushable:
         CrushSound: squish6.aud
+        WarnProbability: 10
     Parachutable:
     PoisonedByTiberium:
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
@@ -513,6 +514,7 @@
 ^SoldierHeavy:
     Inherits: ^Infantry
         CrushClasses: heavyinf
+        WarnProbability: 10
     RevealsShroud:
         Range: 4c0
     MustBeDestroyed:
@@ -529,6 +531,7 @@
     Inherits: ^Infantry
     Crushable:
         CrushClasses: heavyinf
+        WarnProbability: 10
     RevealsShroud:
         Range: 4c0
     MustBeDestroyed:
@@ -627,6 +630,7 @@
     Inherits@2: ^WebDisable
     Crushable:
         CrushClasses: heavyinf
+        WarnProbability: 10
     RevealsShroud:
         Range: 4c0
     MustBeDestroyed:
@@ -650,6 +654,7 @@
     MustBeDestroyed:
     Crushable:
         CrushClasses: cyborg
+        WarnProbability: 10
     -PoisonedByTiberium:
     PoisonedByTiberium@veins:
         Weapon: Veins
