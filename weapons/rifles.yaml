@@ -1,12 +1,12 @@
 Minigun:
     Inherits: ^Bullet
-    ReloadDelay: 40
+    ReloadDelay: 30
     Range: 5c0
     Report: rifle1g.aud,rifle2g.aud
-    Burst: 2
+    Burst: 3
     BurstDelay: 4
     Projectile: Bullet
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
@@ -25,7 +25,7 @@ MinigunGarrison:
 
 Minigun2:
     Inherits: ^Bullet
-    ReloadDelay: 15
+    ReloadDelay: 20
     Range: 4c0
     Report:  rifle1n.aud,rifle2n.aud
     Burst: 2
@@ -34,7 +34,7 @@ Minigun2:
         Inaccuracy: 0c384
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 20
+        Damage: 15
         Versus:
             Infantry: 200
             Vehicle: 10
@@ -133,7 +133,7 @@ SMG:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 10
+        Damage: 15
         Versus:
             Infantry: 200
             Vehicle: 10
