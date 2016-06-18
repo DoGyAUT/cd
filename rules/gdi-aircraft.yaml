@@ -386,7 +386,7 @@ ORCA_G:
     SpawnActorOnDeath:
         Actor: ORCA_G.Husk
         Probability: 80
-    
+
 OXBOMBER:
     Inherits: ^Plane
     RenderSprites:
@@ -444,7 +444,7 @@ ORCA_B:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 105
-        Prerequisites: ~gahpad, garadr, gaarmory, ~!t1
+        Prerequisites: ~gahpad, garadr, gaarmory, gatech, ~!t1, ~!t2
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -454,9 +454,9 @@ ORCA_B:
         TurnSpeed: 3
         Speed: 200
     Health:
-        HP: 800
+        HP: 1000
     Armor:
-        Type: Medium
+        Type: Heavy
     RevealsShroud:
         Range: 10c0
         Type: CenterPosition
@@ -702,7 +702,7 @@ CONDOR:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, garadr, gadrop, ~!t1, ~!t2, ~!t3
+        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~upgrade.zc
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:

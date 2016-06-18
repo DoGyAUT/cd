@@ -104,7 +104,7 @@ NPROC:
         Cost: 2000
     Tooltip:
         Name: Nod Tiberium Refinery
-        Description: Processes raw Tiberium\ninto useable resources.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
     Buildable:
         Queue: Building
         BuildPaletteOrder: 202
@@ -129,10 +129,10 @@ NPROC:
         DiscardExcessResources: true
     StoresResources:
         PipColor: Green
-        PipCount: 25
-        Capacity: 5000
+        PipCount: 10
+        Capacity: 1000
     CustomSellValue:
-        Value: 600
+        Value: 250
     FreeActor:
         Actor: NHARV
         SpawnOffset: 2,1
@@ -157,10 +157,10 @@ NASILO:
         BuildPaletteOrder: 203
         Prerequisites: nproc, ~structures.nod
     Valued:
-        Cost: 150
+        Cost: 200
     Tooltip:
         Name: Nod Silo
-        Description: Stores excess Tiberium.
+        Description: Stores excess Tiberium.\n\nStores 500$.
     Building:
         Footprint: xx xx
         Dimensions: 2, 2
@@ -173,7 +173,7 @@ NASILO:
     Health:
         HP: 500
     Armor:
-        Type: Light
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -187,7 +187,7 @@ NASILO:
         Sequence: idle-glas
     StoresResources:
         PipCount: 10
-        Capacity: 2000
+        Capacity: 500
     Power:
         Amount: -10
     

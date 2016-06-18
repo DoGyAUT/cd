@@ -257,10 +257,6 @@ VANGUARD:
     Tooltip:
         Name: Vanguard
         Description: Frontline battle cyborg, armed with an Auto-Shotgun.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs\n  Weak vs Armor, Aircraft, Artillery
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 305
-        Prerequisites: ~cybbar, ~!t1, karadr, ~!upgrade.es
     Selectable:
         Bounds: 14,30,0,-7
         Class: Vanguard
@@ -300,17 +296,6 @@ VANGUARD:
         Weapon: VulcanShotgun2
         LocalOffset: 300,64,800    
     AttackFrontal:
-   
-VANGUARD2:
-    Inherits@1: VANGUARD
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 305
-        Prerequisites: ~cybbar, ~!t1, cytech, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: VANGUARD
-    Explodes:
-        Weapon: UnitExplodeCyborg
 
 OVERSEER:
     Inherits@1: ^HeavyCyborg

@@ -129,7 +129,7 @@ GPROC:
         Cost: 2000
     Tooltip:
         Name: GDI Tiberium Refinery
-        Description: Processes raw Tiberium\ninto useable resources.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
     Buildable:
         Queue: Building
         BuildPaletteOrder: 102
@@ -154,10 +154,10 @@ GPROC:
         DiscardExcessResources: true
     StoresResources:
         PipColor: Green
-        PipCount: 25
-        Capacity: 5000
+        PipCount: 10
+        Capacity: 1000
     CustomSellValue:
-        Value: 600
+        Value: 200
     FreeActor:
         Actor: GHARV
         SpawnOffset: 2,1
@@ -182,10 +182,10 @@ GASILO:
         BuildPaletteOrder: 103
         Prerequisites: gproc, ~structures.gdi
     Valued:
-        Cost: 150
+        Cost: 200
     Tooltip:
         Name: GDI Silo
-        Description: Stores excess Tiberium.
+        Description: Stores excess Tiberium.\n\nStores 500$.
     Building:
         Footprint: xx xx
         Dimensions: 2, 2
@@ -198,7 +198,7 @@ GASILO:
     Health:
         HP: 500
     Armor:
-        Type: Light
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -209,8 +209,8 @@ GASILO:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
     StoresResources:
-        PipCount: 10
-        Capacity: 2000
+        PipCount: 5
+        Capacity: 500
     Power:
         Amount: -10    
     

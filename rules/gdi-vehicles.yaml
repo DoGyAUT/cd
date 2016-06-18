@@ -99,7 +99,9 @@ GHARV:
         Weapon: LargeTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
-        Palette: effect    
+        Palette: effect
+    CustomBuildTimeValue:
+        Value: 1740
         
 APC:
     Inherits: ^VoxelVehicle
@@ -161,7 +163,7 @@ APC:
 SMECH:
     Inherits: ^Tank
     Valued:
-        Cost: 500
+        Cost: 600
     Tooltip:
         Name: Wolverine MK.II
         Description: Anti-personnel walker.\n\n  Strong vs Soft Targets\n  Weak vs Hard Targets\n  Useless vs Aircraft
@@ -175,10 +177,10 @@ SMECH:
         VoiceSet: Wolverine
         Volume: 2
     Mobile:
-        TurnSpeed: 5
+        TurnSpeed: 4
         Speed: 60
     Health:
-        HP: 450
+        HP: 700
     Armor:
         Type: Medium
     RevealsShroud:
@@ -215,10 +217,10 @@ VULTURE:
         VoiceSet: Wolverine
         Volume: 2
     Mobile:
-        TurnSpeed: 5
+        TurnSpeed: 4
         Speed: 56
     Health:
-        HP: 700
+        HP: 800
     Armor:
         Type: Medium
     RevealsShroud:
@@ -226,7 +228,7 @@ VULTURE:
     BodyOrientation:
         QuantizedFacings: 32
     Turreted:
-        TurnSpeed: 5
+        TurnSpeed: 4
     AttackTurreted:
     WithSpriteTurret:
         Recoils: yes

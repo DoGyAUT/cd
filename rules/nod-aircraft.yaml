@@ -241,59 +241,6 @@ HYDRA:
     SpawnActorOnDeath:
         Actor: HYDRA.Husk
         Probability: 80
-
-PUMA:
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Puma Transport
-        Description: Helicopter for troop transpotation.\n  unarmed
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 203
-        Prerequisites: ~disabled #~nahpad, naradr, nahand
-    Voiced:
-        VoiceSet: Venom
-        Volume: 2
-    Selectable:
-        Bounds: 30,24
-    Aircraft:
-        LandWhenIdle: yes
-        TurnSpeed: 5
-        Speed: 130
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
-    Health:
-        HP: 600
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 5c0
-        Type: CenterPosition
-    Cargo:
-        Types: Infantry
-        MaxWeight: 10
-        PipCount: 10
-    AttackHeli:
-        FacingTolerance: 20
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    Contrail@1:
-        Offset: 0,64,0
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: 0,-64,0
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: False  
-    SpawnActorOnDeath:
-        Actor: PUMA.Husk
-        Probability: 80
         
 SCRIN:
     Inherits: ^AttackAdvancedPlane
@@ -302,10 +249,6 @@ SCRIN:
     Tooltip:
         Name: Banshee Fighter
         Description: Fast fighter based on alien technology.\nArmed with prototype plasma cannons.\n  Strong vs Infantry\n  Weak vs Armored Targets
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 204
-        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~!technology
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -447,14 +390,14 @@ SCRINB:
 RAVEN:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 1800
+        Cost: 2000
     Tooltip:
         Name: Raven
         Description: Fast attack fighter designed for air-superiority.\nArmed with 4 machineguns.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Buildable:
         Queue: Air
         BuildPaletteOrder: 204
-        Prerequisites: ~nahpad, naradr, napyra, ~!t1
+        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~!technology
     Selectable:
         Bounds: 60,48
     Voiced:

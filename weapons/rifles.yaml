@@ -31,7 +31,7 @@ Minigun2:
     Burst: 2
     BurstDelay: 4
     Projectile: Bullet
-        Inaccuracy: 0c384
+        Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 15
@@ -58,7 +58,7 @@ M1Carbine:
     Projectile: Bullet
         Image: bullet
         Speed: 0c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Damage: 50
         Versus:
@@ -83,7 +83,7 @@ M2Carbine:
     Burst: 3
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 0c512
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 40
@@ -108,7 +108,7 @@ HuskGun:
         Angle: 45
         Palette: effect
         Speed: 0c512
-        Inaccuracy: 0c350
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
@@ -130,7 +130,7 @@ SMG:
     BurstDelay: 3
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 0c512
+        Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 15
@@ -153,7 +153,7 @@ Machal:
     Projectile: Bullet
         Image: energybullet
         Speed: 0c712
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 10  
@@ -172,7 +172,7 @@ Vulcan:
     Projectile: Bullet
         Image: bullet
         Speed: 0c682
-        Inaccuracy: 0c512
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 40
@@ -186,7 +186,7 @@ OverGun:
     Report: fg42_01.aud, fg42_02.aud, fg42_03.aud
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
@@ -208,7 +208,7 @@ JumpCannon:
     ValidTargets: Ground, Air
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
@@ -241,7 +241,7 @@ ShadowSniper:
     Report: sniper1.aud, sniper2.aud, sniper3.aud
     Projectile: Bullet
         Speed: 1c512
-        Inaccuracy: 0c128
+        Inaccuracy: 0c64
         ContrailLength: 10
         ContrailColor: FFFFFF
         ContrailWidth: 15
@@ -291,7 +291,7 @@ ShadowSniperEMP:
     Projectile: Bullet
         Image: energybullet
         Speed: 1c0
-        Inaccuracy: 0c128
+        Inaccuracy: 0c64
         ContrailLength: 6
         ContrailColor: 6464FF
         ContrailWidth: 20
@@ -344,44 +344,3 @@ BrigandShotgun:
 BrigandShotgun2:
     Inherits: BrigandShotgun
     Report:
-
-ArmCannon:
-    ReloadDelay: 100
-    Range: 5c768
-    Report: 20mm_burst1.wav, 20mm_burst2.wav, 20mm_burst3.wav, 20mm_burst4.wav, 20mm_burst5.wav
-    Burst: 5
-    BurstDelay: 10
-    Projectile: Bullet
-        Speed: 0c512
-        Image: 120mm
-        Shadow: true
-        Angle: 62
-        Palette: ra
-        Inaccuracy: 1c0
-#        ContrailLength: 10
-#        ContrailColor: 64,64,64
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 40
-        Versus:
-            Kevlar: 90
-            Plate: 90
-            Light: 100
-            Medium: 80
-            Heavy: 50
-            Wood: 80
-            Steel: 50
-            Concrete: 20
-        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_clsn
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew14.aud
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallCrater 

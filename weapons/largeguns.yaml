@@ -2,7 +2,6 @@ GremlinShotgun:
     Inherits: ^ShellHE
     ReloadDelay: 100
     Burst: 10
-    ValidTargets: Ground, Air, HighAir
     Range: 5c0
     Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
     Projectile: Bullet
@@ -15,7 +14,6 @@ GremlinShotgun:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 60
-        ValidTargets: Ground, Air, HighAir
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_clsn, tiny_bang
@@ -35,8 +33,8 @@ BuggyFlak:
     ReloadDelay: 100
     Burst: 10
     BurstDelay: 4
-    ValidTargets: Ground, Air, HighAir
-    Range: 6c0
+    ValidTargets: Air, HighAir
+    Range: 7c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
     Projectile: Bullet
         Image: shell02
@@ -47,13 +45,8 @@ BuggyFlak:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 20
+        Damage: 40
         ValidTargets: Air, HighAir
-        DamageTypes: SmallExplosionDeath
-    Warhead@2Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 10
-        ValidTargets: Ground
         DamageTypes: SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
@@ -71,8 +64,8 @@ WarthogFlak:
     ReloadDelay: 100
     Burst: 10
     BurstDelay: 6
-    ValidTargets: Ground, Air, HighAir
-    Range: 7c0
+    ValidTargets: Air, HighAir
+    Range: 8c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
     Projectile: Bullet
         Image: shell02
@@ -83,7 +76,7 @@ WarthogFlak:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 40
+        Damage: 60
         ValidTargets: Air, HighAir
         DamageTypes: SmallExplosionDeath
     Warhead@2Dam: SpreadDamage

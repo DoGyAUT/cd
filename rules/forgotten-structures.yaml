@@ -115,7 +115,7 @@ FPROC:
         Cost: 2000
     Tooltip:
         Name: Forgotten Refinery
-        Description: Stores excess Tiberium.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1500$.
     Building:
         Footprint: xxxxx= xxxxx= xxxx==
         Dimensions: 6,3
@@ -135,8 +135,8 @@ FPROC:
         DiscardExcessResources: true
     StoresResources:
         PipColor: Green
-        PipCount: 25
-        Capacity: 10000
+        PipCount: 15
+        Capacity: 1500
     FreeActor:
         Actor: FHARV
         SpawnOffset: 5,0
@@ -162,7 +162,7 @@ FPROC:
         Sequence: idle-smoke3
         Palette: player50alpha
     CustomSellValue:
-        Value: 1200
+        Value: 250
     Power:
         Amount: -30
     ProvidesPrerequisite@buildingname:
@@ -176,10 +176,10 @@ FASILO:
         BuildPaletteOrder: 403
         Prerequisites: fproc, ~structures.forgotten
     Valued:
-        Cost: 150
+        Cost: 200
     Tooltip:
         Name: Forgotten Silo
-        Description: Stores excess Tiberium.
+        Description: Stores excess Tiberium.\n\nStores 500$.
     Building:
         Footprint: xx xx
         Dimensions: 2, 2
@@ -192,7 +192,7 @@ FASILO:
     Health:
         HP: 500
     Armor:
-        Type: Light
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -203,8 +203,8 @@ FASILO:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
     StoresResources:
-        PipCount: 10
-        Capacity: 2000
+        PipCount: 5
+        Capacity: 500
     Power:
         Amount: -10    
         

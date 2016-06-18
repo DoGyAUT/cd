@@ -113,6 +113,8 @@ NHARV:
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
+    CustomBuildTimeValue:
+        Value: 1560
 
 SAPC:
     Inherits: ^VoxelVehicle
@@ -280,69 +282,36 @@ CHEETAH:
     Valued:
         Cost: 800
     Tooltip:
-        Name: Cheetah
+        Name: Phantom
         Description: Anti armor battle tank.\n\n  Strong vs Hard Targets\n  Weak vs Soft Targets\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 205
-        Prerequisites: ~naweap
+        Prerequisites: ~naweap, ~naradr, ~!industry
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
     Mobile:
         Speed: 90
-        TurnSpeed: 5
+        TurnSpeed: 4
     Health:
-        HP: 750
+        HP: 800
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 11c0
     Turreted:
         TurnSpeed: 4
+        Offset: 160, 0, 0
     Armament@PRIMARY:
         Weapon: 122mmAP
-        LocalOffset: 700,100,600
+        LocalOffset: 900,100,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 200
         RecoilRecovery: 10
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@PRIMARY2:
-        Weapon: CheetahLaserFire
-        LocalOffset: 700,100,600
-#        MuzzleSequence: laser
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@color1:
-        Weapon: CheetahLaserFirea
-        LocalOffset: 700,100,600
-#        MuzzleSequence: laser
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@color2:
-        Weapon: CheetahLaserFireb
-        LocalOffset: 700,100,600
-#        MuzzleSequence: laser
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@coolor3:
-        Weapon: CheetahLaserFirec
-        LocalOffset: 700,100,600
-#        MuzzleSequence: laser
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     AttackTurreted:
     AutoTarget:
     RenderSprites:
@@ -353,8 +322,19 @@ CHEETAH:
     WithVoxelBarrel:
     WithMuzzleOverlay:
     GlobalUpgradable@upgrade:
-        Upgrades: technology
+        Upgrades: technology, cloakgenerator
         Prerequisites: technology
+    -Cloak@CLOAKGENERATOR
+    Cloak:
+        InitialDelay: 90
+        CloakDelay: 90
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
  
 REPAIR:
     Inherits: ^VoxelVehicle
@@ -465,7 +445,7 @@ TERMITE:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 207
-        Prerequisites: ~naweap, napyra, ~!t1
+        Prerequisites: ~naweap, napyra, ~!t1, ~industry
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
@@ -780,7 +760,7 @@ HAILSTORM:
 STNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1400
+        Cost: 1800
     Tooltip:
         Name: Stealth Tank
         Description: Lightly armoured tank equipped with a personal stealth generator.\nArmed with multipupose missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
@@ -793,9 +773,9 @@ STNK:
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 85
+        Speed: 100
     Health:
-        HP: 600
+        HP: 700
     Armor:
         Type: Medium
     RevealsShroud:
@@ -813,25 +793,41 @@ STNK:
         Offset: 0,0,0
     Armament@1:
         Weapon: StealthDragon
-        LocalOffset: 0,164,512, 0,-164,512
+        LocalOffset: 0,164,600, 0,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@2:
         Weapon: StealthDragon
-        LocalOffset: 0,164,512, 0,-164,512
+        LocalOffset: 0,164,600, 0,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         FireDelay: 10
     Armament@3:
         Weapon: StealthDragon
-        LocalOffset: 0,164,512, 0,-164,512
+        LocalOffset: 0,164,600, 0,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         FireDelay: 20
     Armament@antiair:
         Weapon: StealthDragonAA
-        LocalOffset: 0,164,512, 0,-164,512
+        LocalOffset: 0,164,600, 0,-164,600
         MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@laser:
+        Weapon: CheetahLaserFire
+        LocalOffset: 750,0,650
+        MuzzlePalette: apolra50alpha
+    Armament@color1:
+        Weapon: CheetahLaserFirea
+        LocalOffset: 750,0,650
+        MuzzlePalette: apolra50alpha
+    Armament@color2:
+        Weapon: CheetahLaserFireb
+        LocalOffset: 750,0,650
+        MuzzlePalette: apolra50alpha
+    Armament@coolor3:
+        Weapon: CheetahLaserFirec
+        LocalOffset: 750,0,650
         MuzzlePalette: apolra50alpha
     AttackTurreted:
     AutoTarget:
@@ -842,6 +838,7 @@ STNK:
     WithVoxelBody:
     WithVoxelTurret:
         Recoils: no
+    WithVoxelBarrel:
     -MustBeDestroyed:    
     WithMuzzleOverlay:
     GlobalUpgradable@upgrade1:
