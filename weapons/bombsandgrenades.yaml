@@ -12,10 +12,10 @@ Grenade:
         Image: DISCUS
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 50
+        Damage: 100
         Versus:
-            Building: 120
-            Light: 120
+            Building: 100
+            Light: 100
             Medium: 80
             Heavy: 20
     Warhead@2Eff: CreateEffect
@@ -145,13 +145,10 @@ Bomb:
         Spread: 0c512
         Damage: 100
         Versus:
-            Infantry: 150
-            Vehicle: 200
-            Aircraft: 100
             Building: 200
-            Light: 150
+            Light: 200
             Medium: 100
-            Heavy: 50
+            Heavy: 100
         DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
