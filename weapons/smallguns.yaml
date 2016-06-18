@@ -54,6 +54,20 @@ VulcanTower:
     Projectile: Bullet
         Image: bullet
         Speed: 0c682
+        Inaccuracy: 0c128
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 20
+        
+VulcanTower1:
+    Inherits: ^APBullet
+    ReloadDelay: 26
+    Burst: 3
+    Range: 8c0
+    Report: chaingn1.aud
+    Projectile: Bullet
+        Image: bullet
+        Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -173,7 +187,7 @@ WarthogMG:
     Range: 6c0
     Burst: 50
     BurstDelay: 2
-    Report: TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
+    Report: m3.aud
     Projectile: Bullet
         Speed: 0c682
         Inaccuracy: 1c0
@@ -212,7 +226,29 @@ LightTankMG:
     Report: cygun1.aud
     Projectile: Bullet
         Speed: 0c682
-        Inaccuracy: 1c0
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 25
+        Versus:
+            Infantry: 100
+            Vehicle: 60
+            Aircraft: 50
+            Building: 25
+            Light: 100
+            Medium: 50
+            Heavy: 20
+  
+APCMG:
+    Inherits: ^Bullet
+    ReloadDelay: 100
+    Range: 6c0
+    Burst: 20
+    BurstDelay: 4
+    Report: cygun1.aud
+    Projectile: Bullet
+        Speed: 0c682
+        Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
@@ -535,18 +571,15 @@ WatchMG:
     BurstDelay: 2
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 0c512
+        Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 30
         Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
             Building: 25
             Light: 100
-            Medium: 50
-            Heavy: 20
+            Medium: 25
+            Heavy: 10
             
 ReaperCannon:
     Inherits: ^APBullet

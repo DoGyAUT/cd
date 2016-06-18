@@ -167,7 +167,7 @@ Vulcan:
     Inherits: ^Bullet
     ReloadDelay: 35
     Range: 5c0
-    Report: machinegun5.aud #stormgun1.aud,stormgun2.aud,stormgun3.aud
+    Report: mgfire.aud #machinegun5.aud #stormgun1.aud,stormgun2.aud,stormgun3.aud
     Burst: 2
     Projectile: Bullet
         Image: bullet
@@ -203,16 +203,31 @@ JumpCannon:
     Inherits: ^Bullet
     ReloadDelay: 90
     Burst: 10
-    Range: 7c0
+    Range: 6c0
     Report: jumpjet1.aud
-    ValidTargets: Ground, Air
+    ValidTargets: Ground
     Projectile: Bullet
         Speed: 0c512
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
-        ValidTargets: Ground, Air
+        ValidTargets: Ground
+
+JumpCannonAA:
+    Inherits: ^APBullet
+    ReloadDelay: 90
+    Burst: 10
+    Range: 10c0
+    Report: jumpjet1.aud
+    ValidTargets: Air
+    Projectile: Bullet
+        Speed: 0c512
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 25
+        ValidTargets: Air
 
 WatchSniper:
     Inherits: ^APBullet
