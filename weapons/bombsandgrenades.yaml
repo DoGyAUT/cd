@@ -8,11 +8,11 @@ Grenade:
         Blockable: false
         Shadow: true
         Angle: 45
-        Inaccuracy: 1c0
+        Inaccuracy: 0c512
         Image: DISCUS
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 100
+        Damage: 70
         Versus:
             Building: 100
             Light: 100
@@ -38,7 +38,7 @@ GrenadeEMP:
         ContrailColor: 6464FF
         ContrailWidth: 15
     Warhead@emp1: GrantUpgrade
-        Range: 0c256
+        Range: 0c512
         Duration: 50
         Upgrades: empdisable, notmobile
         ValidTargets: Vehicle, Cyborg, Building
