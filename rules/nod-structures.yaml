@@ -225,7 +225,7 @@ NAHAND:
         Offset: 3,3
         Palette: mouse
         IsPlayerPalette: false
-    Production:
+    ProductionFromMapEdge:
         Produces: Infantry
     ProductionQueue@Infantry:
         Type: Infantry
@@ -246,8 +246,8 @@ NAHAND:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -311,8 +311,8 @@ NAWEAP:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -443,7 +443,7 @@ NAHPAD:
     RallyPoint:
         Palette: mouse
         IsPlayerPalette: false
-    Production:
+    ProductionFromMapEdge:
         Produces: Air
     ProductionQueue@Air:
         Type: Air
@@ -472,8 +472,8 @@ NAHPAD:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -730,11 +730,9 @@ NAMISL:
         LongDesc: Launches a conventional warhead\nat a target location.
         MissilePalette: player
         IsPlayerPalette: True
-        BeginChargeSound:
-        EndChargeSound: 00-i154.aud
-        SelectTargetSound:
-        InsufficientPowerSound:
-        IncomingSound: 00-i150.aud
+		EndChargeSpeechNotification: ClusterMissileReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
         LaunchSound: icbm1.aud
         MissileWeapon: ClusterMissile
         SpawnOffset: 0,427,0

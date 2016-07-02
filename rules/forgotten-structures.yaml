@@ -260,8 +260,8 @@ FABAR:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -337,8 +337,8 @@ FAWEAP:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -474,7 +474,7 @@ FAHPAD:
     RallyPoint:
         Palette: mouse
         IsPlayerPalette: false
-    Production:
+    ProductionFromMapEdge:
         Produces: Air
     ProductionQueue@Air:
         Type: Air
@@ -500,8 +500,8 @@ FAHPAD:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -534,4 +534,4 @@ FATRADE:
     ProvidesPrerequisite@buildingname:
     CashTrickler:
         Period: 50
-        Amount: 30
+        Amount: 10

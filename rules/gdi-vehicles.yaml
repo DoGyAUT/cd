@@ -145,8 +145,16 @@ APC:
         Offset: 128,0,0
     AttackTurreted:
     AutoTarget:
-	-WithVoxelBody:
-	WithVoxelWaterBody:
+	UpgradeOnTerrain:
+		Upgrades: inwater
+		TerrainTypes: Water
+	WithVoxelBody:
+		UpgradeTypes: inwater
+		UpgradeMaxEnabledLevel: 0
+	WithVoxelBody@water:
+		Sequence: water
+		UpgradeTypes: inwater
+		UpgradeMinEnabledLevel: 1
     WithVoxelBody:
     WithVoxelTurret:
         Recoils: no
@@ -307,7 +315,7 @@ GTMTNK:
 GTHTNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1200
+        Cost: 1400
     Tooltip:
         Name: Ares
         Description: Heavy main battle tank.\nArmed with a 122mm Cannon with AP rounds and a coaxial MG\n  Strong vs Ground Targets\n  Weak vs Heavy Vehicles\n  Useless vs Aircraft
@@ -524,7 +532,7 @@ AIRBLAST:
         VoiceSet: Archon
         Volume: 2
     Mobile:
-        Speed: 100
+        Speed: 80
         TurnSpeed: 3
     Health:
         HP: 500
@@ -615,7 +623,7 @@ TRITON:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 107
-        Prerequisites: ~gaweap, gadept, ~!t1, ~!t2, ~upgrade.gdf
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
     Voiced:
         VoiceSet: Mammoth
         Volume: 2
@@ -623,7 +631,7 @@ TRITON:
         Speed: 56
         TurnSpeed: 1
     Health:
-        HP: 1000
+        HP: 1400
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -679,7 +687,7 @@ MMCH:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 107
-        Prerequisites: ~gaweap, gadept, ~!t1, ~!t2, ~upgrade.st
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
     Voiced:
         VoiceSet: Titan
         Volume: 2
@@ -768,7 +776,7 @@ JUGGY:
         Volume: 2
     Mobile:
         TurnSpeed: 2
-        Speed: 45
+        Speed: 55
     Health:
         HP: 600
     Armor:
@@ -840,7 +848,7 @@ HMEC:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, gadrop, ~!t1, ~!t2, ~!t3, ~upgrade.st
+        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.st
     Voiced:
         VoiceSet: Marv
         Volume: 2
@@ -911,7 +919,7 @@ NEMESIS:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, gadrop, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
+        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
     Voiced:
         VoiceSet: Marv
         Volume: 2
@@ -982,7 +990,7 @@ IONTANK:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, gadrop, ~!t1, ~!t2, ~!t3, ~upgrade.zc
+        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
     Voiced:
         VoiceSet: Marv
         Volume: 2

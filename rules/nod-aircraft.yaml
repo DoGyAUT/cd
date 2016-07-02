@@ -8,14 +8,14 @@ VENOM:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 200
-        Prerequisites: ~disabled
+        Prerequisites: nahpad, ~!industry
     Voiced:
         VoiceSet: Venom
         Volume: 2
     Selectable:
-        Bounds: 30,24
+        Bounds: 60,48,0,-10
     Aircraft:
-        TurnSpeed: 5
+        TurnSpeed: 6
         Speed: 190
     Health:
         HP: 400
@@ -33,29 +33,11 @@ VENOM:
         MuzzlePalette: apolra50alpha
         UpgradeTypes: technology
         UpgradeMaxEnabledLevel: 0
-    Armament@upgrade:
-        name: primary2
-        Weapon: AirLaserFire
-        LocalOffset: 660,96,48, 660,-96,48
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     AttackHeli:
         FacingTolerance: 20
-    AmmoPool@1:
+    AmmoPool:
         Name: primary
         Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name: primary2
-        Ammo: 20
         PipCount: 0
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
@@ -69,93 +51,20 @@ VENOM:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    GlobalUpgradable@upgrade:
-        Upgrades: technology
-        Prerequisites: technology
     Contrail@1:
-        Offset: -154,615,615
+        Offset: 256,512,256
         TrailLength: 25
         TrailWidth: 25
         Color: 0080FF
         UsePlayerColor: True
     Contrail@2:
-        Offset: -154,-615,615
+        Offset: 256,-512,256
         TrailLength: 25
         TrailWidth: 25
         Color: 0080FF
         UsePlayerColor: True
     SpawnActorOnDeath:
         Actor: VENOM.Husk
-        Probability: 80
-
-HAVOC:
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Havoc
-        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 201
-        Prerequisites: ~disabled
-    Voiced:
-        VoiceSet: Venom
-        Volume: 2
-    Selectable:
-        Bounds: 30,24
-    Aircraft:
-        TurnSpeed: 5
-        Speed: 160
-    Health:
-        HP: 500
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 10c0
-        Type: CenterPosition
-    Armament@primary:
-        Weapon: HavocCannon
-        LocalOffset: 636,0,39
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@primary2:
-        Weapon: HavocMissiles
-        LocalOffset: 154,288,92, 154,-288,92, 154,228,92, 154,-228,92, 154,348,92, 154,-348,92
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackHeli:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name:primary2
-        Ammo: 6
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithMuzzleOverlay:
-    Contrail@1:
-        Offset: -750,0,512
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    SpawnActorOnDeath:
-        Actor: HAVOC.Husk
         Probability: 80
 
 HYDRA:
@@ -168,7 +77,7 @@ HYDRA:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 201
-        Prerequisites: ~nahpad
+        Prerequisites: ~nahpad, ~industry
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -176,7 +85,7 @@ HYDRA:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 5
-        Speed: 130
+        Speed: 140
         IdealSeparation: 2048
     Health:
         HP: 600
@@ -233,8 +142,16 @@ HYDRA:
         UpgradeMinEnabledLevel: 1
         UpgradeMaxEnabledLevel: 1
     WithMuzzleOverlay:
-    WithSpriteRotorOverlay:
+    WithIdleOverlay@ROTORAIR:
         Offset: 0,0,930
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND:
+        Offset: 0,0,930
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
     DetectCloaked:
         Range: 5c0
     RenderDetectionCircle:
@@ -242,6 +159,91 @@ HYDRA:
         Actor: HYDRA.Husk
         Probability: 80
         
+HAVOC:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1800
+    Tooltip:
+        Name: Havoc
+        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 202
+        Prerequisites: nahpad, naradr, napyra, ~!t1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 130
+        IdealSeparation: 2048
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 10c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: HavocCannon
+        LocalOffset: 636,0,39
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Armament@primary2:
+        Weapon: HavocMissiles
+        LocalOffset: 256,256,128, 256,-256,128
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:primary2
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    WithIdleOverlay@ROTORAIR1:
+        Offset: 200,700,900
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND1:
+        Offset: 200,700,900
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+    WithIdleOverlay@ROTORAIR2:
+        Offset: 200,-700,900
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND2:
+        Offset: 200,-700,900
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    SpawnActorOnDeath:
+        Actor: HAVOC.Husk
+        Probability: 80
+    
 SCRIN:
     Inherits: ^AttackAdvancedPlane
     Valued:
@@ -306,87 +308,7 @@ SCRIN:
     SpawnActorOnDeath:
         Actor: SCRIN.Husk
         Probability: 80
-        
-SCRINB:
-    Inherits: ^AttackAdvancedPlane
-    Valued:
-        Cost: 2400
-    Tooltip:
-        Name: Banshee MK.II
-        Description: Advanced version of the Banshee fighter with better armament\n  Strong vs Infantry, Light Armor\n  Weak vs 
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 205
-        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~technology
-    Selectable:
-        Bounds: 60,48
-    Voiced:
-        VoiceSet: Venom
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 4
-        Speed: 330
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
-    Health:
-        HP: 700
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 18c0
-        Type: CenterPosition
-    Armament@primary:
-        Weapon: BansheeCannon
-        LocalOffset: 550,0,32
-    Armament@secondary:
-        Weapon: BansheeProton
-        LocalOffset: 550,0,32
-    AttackPlane:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name:secondary
-        Ammo: 6
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    Contrail@1:
-        Offset: -512,180,160
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -512,-180,160
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True  
-     Contrail@3:
-        Offset: -512,180,32
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@4:
-        Offset: -512,-180,32
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True    
-    SpawnActorOnDeath:
-        Actor: SCRINB.Husk
-        Probability: 80
-       
+
 RAVEN:
     Inherits: ^AttackAdvancedPlane
     Valued:
@@ -396,7 +318,7 @@ RAVEN:
         Description: Fast attack fighter designed for air-superiority.\nArmed with 4 machineguns.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Buildable:
         Queue: Air
-        BuildPaletteOrder: 204
+        BuildPaletteOrder: 203
         Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~!technology
     Selectable:
         Bounds: 60,48
@@ -469,7 +391,87 @@ RAVEN:
     GlobalUpgradable@upgrade1:
         Upgrades: technology, cloakgenerator
         Prerequisites: technology
-       
+
+SCRINB:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2400
+    Tooltip:
+        Name: Banshee MK.II
+        Description: Advanced version of the Banshee fighter with better armament.\n  Strong vs Infantry, Light Armor\n  Weak vs 
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 204
+        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~technology
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 330
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 18c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: BansheeCannon
+        LocalOffset: 550,0,32
+    Armament@secondary:
+        Weapon: BansheeProton
+        LocalOffset: 550,0,32
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:secondary
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -512,180,160
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -512,-180,160
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True  
+     Contrail@3:
+        Offset: -512,180,32
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@4:
+        Offset: -512,-180,32
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True    
+    SpawnActorOnDeath:
+        Actor: SCRINB.Husk
+        Probability: 80
+        
 VERTIGO:
     Inherits: ^AttackBomber
     Valued:
@@ -479,7 +481,7 @@ VERTIGO:
         Description: Advanced versatile bomber craft.\nArmable with different loads, depending on favoured Ideologies.\n  Strong vs Slow Targets, \n  Weak vs Fast Targets\n  Useless vs Aircraft
     Buildable:
         Queue: Air
-        BuildPaletteOrder: 206
+        BuildPaletteOrder: 205
         Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2
     Voiced:
         VoiceSet: Vertigo
@@ -585,7 +587,7 @@ ZEP:
         Description: Huge Zeppelin, armed with bombs and propaganda speakers./nExclusive to the Propaganda ideology.
     Buildable:
         Queue: Air
-        BuildPaletteOrder: 207
+        BuildPaletteOrder: 206
         Prerequisites: ~nahpad, napyra, natech, ~propaganda
     Voiced:
         VoiceSet: Venom

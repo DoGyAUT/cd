@@ -51,8 +51,16 @@ BUZZARD:
         SelfReloads: True
         SelfReloadDelay: 5
     AutoTarget:
-    WithSpriteRotorOverlay:
+    WithIdleOverlay@ROTORAIR:
         Offset: 0,0,800
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND:
+        Offset: 0,0,800
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
     RenderSprites:
     WithMuzzleOverlay:
     SpawnActorOnDeath:

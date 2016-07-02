@@ -5,8 +5,6 @@ GAWALL:
         BuildPaletteOrder: 100
         Prerequisites: ~structures.gdi
     SoundOnDamageTransition:
-        DamagedSounds:
-        DestroyedSounds:
     Valued:
         Cost: 200
     CustomSellValue:
@@ -439,7 +437,7 @@ GAFORT:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 109
-        Prerequisites: anypower, gproc, garadr, gaarmory, gatech, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
+        Prerequisites: anypower, gproc, garadr, gaarmory, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
@@ -549,7 +547,7 @@ GAPLUG2:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 111
-        Prerequisites: gaplug, gatech, gaweap, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Prerequisites: gaplug, gaweap, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
     Plug:
         Type: plug.hunterseeker
     Power:
@@ -565,7 +563,7 @@ GAPLUG3:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 112
-        Prerequisites: gaplug, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Prerequisites: gaplug, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
     Plug:
         Type: plug.ioncannon
     Power:

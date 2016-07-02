@@ -143,7 +143,7 @@ ORCA_F2:
 ORCA_TRAN:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1200
+        Cost: 800
     Tooltip:
         Name: Orca Transport
     Selectable:
@@ -152,14 +152,14 @@ ORCA_TRAN:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 102
-        Prerequisites: ~gahpad, garadr, gapile, ~!t1
+        Prerequisites: ~gahpad, ~!t1
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Aircraft:
         LandWhenIdle: yes
         TurnSpeed: 5
-        Speed: 84
+        Speed: 120
         InitialFacing: 0
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
@@ -693,7 +693,7 @@ HORNET:
         Probability: 80
         
 CONDOR:
-    Inherits: ^AttackAdvancedPlane
+    Inherits: ^AttackBomber
     Valued:
         Cost: 2600
     Tooltip:
@@ -710,39 +710,31 @@ CONDOR:
         Volume: 2
     Aircraft:
         TurnSpeed: 3
-        Speed: 250
+        Speed: 350
         CruiseAltitude: 8192
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 500
+        HP: 400
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 14c0
         Type: CenterPosition
     Armament@primary:
-        Weapon: MechRailgun
+        Weapon: CondorBomb
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        LocalOffset: 1024,100,32
-    Armament@primary2:
-        Weapon: MechRailgun
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 1024,-100,32
+        LocalOffset: 1024,100,32, 1024,-100,32
     AttackPlane:
         FacingTolerance: 20
     AmmoPool@1:
         Name:primary
-        Ammo: 40
-        PipCount: 0
+        Ammo: 2
+        PipCount: 2
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
     AutoTarget:
     RenderSprites:
     RenderVoxels:

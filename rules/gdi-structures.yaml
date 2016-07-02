@@ -268,8 +268,8 @@ GAPILE:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -336,8 +336,8 @@ GAWEAP:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -483,7 +483,7 @@ GAHPAD:
     RallyPoint:
         Palette: mouse
         IsPlayerPalette: false
-    Production:
+    ProductionFromMapEdge:
         Produces: Air
     ProductionQueue@Air:
         Type: Air
@@ -516,8 +516,8 @@ GAHPAD:
         RequiresSelection: true
         Image: pips
         Sequence: tag-primary
-        Palette: ra
-        ReferencePoint: Top
+		Palette: pips
+		ReferencePoint: Center
         ZOffset: 256
         UpgradeTypes: primary
         UpgradeMinEnabledLevel: 1
@@ -532,7 +532,7 @@ GADEPT:
         Description: Gives access to advanced vehicles.\nRepairs vehicles.
     Buildable:
         BuildPaletteOrder: 109
-        Prerequisites: anypower, gaweap, gaarmory, ~structures.gdi, ~!t1, ~!t2
+        Prerequisites: anypower, gaweap, ~structures.gdi, ~!t1
         Queue: Building
     Building:
         Footprint: =x= xxx =x=
@@ -610,7 +610,7 @@ GADROP:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 111
-        Prerequisites: anypower, garadr, gaarmory, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3
     Valued:
         Cost: 2000
     Tooltip:
@@ -667,7 +667,7 @@ GAPLUG:
         Bounds: 115,104,0,-24
     Buildable:
         BuildPaletteOrder: 112
-        Prerequisites: anypower, garadr, gaarmory, gatech, gadrop, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
         Queue: Building
     Building:
         Footprint: xxx xxx
@@ -698,11 +698,8 @@ GAPLUG:
         ChargeTime: 180
         Description: Ion Cannon
         LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
-        BeginChargeSound:
-        EndChargeSound: g_00-i156.aud
-        LaunchSound:
-        SelectTargetSound: g_00-i042.aud
-        InsufficientPowerSound: g_00-i024.aud
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
         DisplayRadarPing: True
         CameraActor: camera
     ProduceActorPower:

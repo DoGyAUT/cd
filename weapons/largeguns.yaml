@@ -112,7 +112,7 @@ FlakCannon:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 1c512
-        Damage: 40
+        Damage: 20
         ValidTargets: Air, HighAir
         DamageTypes: SmallExplosionDeath
     Warhead@2Eff: CreateEffect
@@ -226,6 +226,22 @@ GorranCannon:
     Warhead@4Smu: LeaveSmudge
         SmudgeType: LargeCrater
 
+125mmAP:
+    Inherits: ^ShellAP
+    ReloadDelay: 220
+    Range: 6c768
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: Bullet
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: explo11.aud
+        InvalidImpactTypes: Water
+        
 122mmAP:
     Inherits: ^ShellAP
     ReloadDelay: 200

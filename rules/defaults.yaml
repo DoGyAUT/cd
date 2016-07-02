@@ -211,6 +211,9 @@
     Inherits@2: ^EmpDisable
     GivesBuildableArea:
     Capturable:
+	ExternalCapturable:
+		CapturableCompleteTime: 7
+	ExternalCapturableBar:
     RepairableBuilding:
         IndicatorPalette: mouse
         RepairInterval: 12
@@ -242,8 +245,8 @@
         Range: 2c0, 5c0
     ThrowsShrapnel@sparks:
         Weapons: Sparky
-        Pieces: 0, 100
-        Range: 1c0, 2c0, 3c0
+        Pieces: 9, 100
+        Range: 1c0, 6c0
         
 ^BuildingInfiltrate:      
     Inherits: ^Building  
@@ -440,7 +443,6 @@
             BulletDeath: 1
             SmallExplosionDeath: 2
             HeadshotDeath: 3
-            FireDeath: 5
     WithDeathAnimation@explosion:
         DeathSequencePalette: effect
         DeathPaletteIsPlayerPalette: False
@@ -467,12 +469,12 @@
     PoisonedByTiberium:
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
     SpawnActorOnDeath:
-        Actor: visc_lrg
-        Probability: 10
-        OwnerType: InternalName
-        InternalOwner: Creeps
-        DeathType: EnergyDeath # TODO: FIX ME! (Tiberium currently uses the wrong damage type!)
-        RequiresLobbyCreeps: true
+		Actor: visc_lrg
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TriggerVisceroid
+		RequiresLobbyCreeps: true
     Guard:
         Voice: Move
     Guardable:
@@ -504,12 +506,11 @@
         Offset: 0,0,427
     ThrowsShrapnel@sparks:
         Weapons: Bloody
-        Pieces: 0, 20
-        Range: 1c0, 2c0, 3c0
-#    LeavesTrails@ground:
-#        Image: dust2
-#        Palette: player75alpha
-#        TerrainTypes: Clear, DirtRoad
+        Pieces: 0, 10
+        Range: 0c512, 1c0
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
 
 ^Soldier:
     Inherits@1: ^Infantry
@@ -704,10 +705,14 @@
         IdleSequences: idle1,idle2
     Targetable:
         TargetTypes: Ground, Cyborg
+    ThrowsShrapnel@sparks:
+        Weapons: Sparky
+        Pieces: 1, 10
+        Range: 1c0, 3c0
     ThrowsShrapnel:
         Weapons: SmallDebris
-        Pieces: 2, 4
-        Range: 2c0, 5c0
+        Pieces: 1, 3
+        Range: 1c0, 4c0
         
 ^HeavyCyborg:
     Inherits@1: ^Cyborg
@@ -881,8 +886,12 @@
         Range: 2c0, 5c0
     ThrowsShrapnel@sparks:
         Weapons: Sparky
-        Pieces: 0, 100
-        Range: 1c0, 2c0, 3c0
+        Pieces: 9, 100
+        Range: 1c0, 6c0
+    ThrowsShrapnel@human:
+        Weapons: Flyman
+        Pieces: 0, 2
+        Range: 2c0, 5c0
     LeavesTrails@ground:
         Image: dust
         Palette: player50alpha
@@ -1017,8 +1026,8 @@
         Range: 2c0, 5c0
     ThrowsShrapnel@sparks:
         Weapons: Sparky
-        Pieces: 0, 20
-        Range: 1c0, 2c0, 3c0
+        Pieces: 9, 100
+        Range: 1c0, 6c0
     SmokeTrailWhenDamaged:
         Sprite: lgrysmk1
         Palette: apolra50alpha
@@ -1071,10 +1080,18 @@
 ^AttackBomber:
     Inherits: ^Aircraft
     Aircraft:
-        LandWhenIdle: no
+        LandWhenIdle: yes
         CruiseAltitude: 8192
         Repulsable: False
-    ReturnOnIdle:  
+    ReturnOnIdle:
+    Targetable@GROUND:
+        TargetTypes: Ground
+        UpgradeTypes: highair
+        UpgradeMaxEnabledLevel: 0
+    Targetable@AIRBORNE:
+        TargetTypes: HighAir
+        UpgradeTypes: highair
+        UpgradeMinEnabledLevel: 1
     Hovers@CRUISING:
         UpgradeTypes: cruising
         UpgradeMinEnabledLevel: 1
@@ -1178,8 +1195,8 @@
         Range: 2c0, 5c0
     ThrowsShrapnel@sparks:
         Weapons: Sparky
-        Pieces: 0, 100
-        Range: 1c0, 2c0, 3c0
+        Pieces: 9, 100
+        Range: 1c0, 6c0
     RevealsShroud:
         Range: 10c0
        
@@ -1398,8 +1415,8 @@
         Range: 2c0, 5c0
     ThrowsShrapnel@sparks:
         Weapons: Sparky
-        Pieces: 0, 100
-        Range: 1c0, 2c0, 3c0
+        Pieces: 9, 100
+        Range: 1c0, 6c0
     
 ^Box:
     Inherits: ^Decoration

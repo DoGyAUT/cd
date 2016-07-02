@@ -34,8 +34,8 @@ MissileBarrage:
         Versus:
             Building: 150
             Light: 160
-            Medium: 50
-            Heavy: 25
+            Medium: 40
+            Heavy: 20
         
 AirblastMissile:
     Inherits: ^MissileAPHE
@@ -235,20 +235,20 @@ ComponentMissile:
        
 MammothTusk:
     Inherits: ^MissileAPHE
-    ReloadDelay: 300
+    ReloadDelay: 150
     Range: 8c0
     Burst: 4
-    BurstDelay: 15
+    BurstDelay: 8
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Ground, Air, HighAir
     Projectile: Missile
-        MaximumLaunchSpeed: 384
-        MinimumLaunchSpeed: 213
-        Speed : 384
-        Inaccuracy: 0c512
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c128
+        Speed : 0c768
+        Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 50
+        Damage: 100
         ValidTargets: Ground, Air, HighAir
 
 MammothWalkerTusk:
@@ -323,8 +323,10 @@ BikeMissile:
         Spread: 256
         Damage: 70
         Versus:
-            Infantry: 50
             Building: 70
+            Light: 100
+            Medium: 100
+            Heavy: 20
         ValidTargets: Ground, Air, HighAir
 
 Dragon:
@@ -412,8 +414,8 @@ Stormdragon:
             Aircraft: 120
             Building: 120
             Light: 120
-            Medium: 80
-            Heavy: 40
+            Medium: 40
+            Heavy: 20
         
 StormdragonAA:
     Inherits: Stormdragon

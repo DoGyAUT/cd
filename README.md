@@ -10,10 +10,10 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 #Installation of a prebuild version:
 
 1. Download required OpenRA version
-https://drive.google.com/file/d/0B64PmajIy3xDQjEwUzJHSjVlaUE/view?usp=sharing
+https://drive.google.com/file/d/0B64PmajIy3xDeHBCLWlhVzJWMG8/view?usp=sharing
 2. Download latest mod version (GitHub Repo)
 3. Start OpenRA.exe
-4. Download Tiberian Sun mod (via ingame modchooser) and start it at least once.
+4. Download Tiberian Sun mod content (via ingame modchooser) and start it at least once.
 5. Choose Crystallized Doom to launch the mod
 6. Enjoy!
 

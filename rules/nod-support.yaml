@@ -5,8 +5,6 @@ NAWALL:
         BuildPaletteOrder: 200
         Prerequisites: ~structures.nod
     SoundOnDamageTransition:
-        DamagedSounds:
-        DestroyedSounds:
     Valued:
         Cost: 200
     CustomSellValue:
@@ -332,12 +330,12 @@ NAPULS:
     Valued:
         Cost: 2000
     Tooltip:
-        Name: EMP Cannon
-        Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Name: E.M. Pulse Cannon
+		Description: Disables mechanical units in an area.\nRequires power to operate.
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 207
-        Prerequisites: ~disabled #natech, ~structures.nod, ~!t1, ~!t2, ~!t3
+        Prerequisites: natech, ~structures.nod, ~!t1, ~!t2, ~!t3
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -357,97 +355,30 @@ NAPULS:
     AttackTurreted:
     Armament:
         Weapon: EMPulseCannon
-    AutoTarget:
+		LocalOffset: 150,0,1250
+		LocalYaw: 0,100
+    -AutoTarget:
     RenderRangeCircle:
     WithSpriteTurret:
         Sequence: turret
     Power:
-        Amount: -150        
+        Amount: -150
 
-GATICK:
-    Inherits: ^Building
-    Valued:
-        Cost: 800
-    -AcceptsSupplies:
-    Tooltip:
-        Name: Deployed Tick Tank
-    Health:
-        HP: 350
-    Armor:
-        Type: Concrete
-    RevealsShroud:
-        Range: 5c0
-    Turreted:
-        TurnSpeed: 6
-        InitialFacing: 128
-        Offset: 170,0,213
-    Armament@PRIMARY:
-        Weapon: 90mm
-        LocalOffset: 384,0,128
-        UpgradeTypes: eliteweapon
-        UpgradeMaxEnabledLevel: 0
-        UpgradeMaxAcceptedLevel: 1
-        MuzzleSequence: muzzle
-    AttackTurreted:
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    RenderRangeCircle:
-    DrawLineToTarget:
-    RenderVoxels:
-    WithVoxelBarrel:
-        LocalOffset: 170,0,0
-    WithVoxelTurret:
-    Transforms:
-        IntoActor: ttnk
-        Facing: 159
-        TransformSounds: place2.aud
-        NoTransformSounds:
-    WithMuzzleOverlay:
-    -WithDeathAnimation:
-    Targetable:
-        TargetTypes: Ground, Repair
-
-GAARTY:
-    Inherits: ^Building
-    Valued:
-        Cost: 975
-    -AcceptsSupplies:
-    Tooltip:
-        Name: Deployed Artillery
-    Health:
-        HP: 300
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 9c0
-    Selectable:
-        Voice: Vehicle
-    Targetable:
-        TargetTypes: Ground, Repair
-    Turreted:
-        TurnSpeed: 5
-        InitialFacing: 128
-        Offset: 0,0,171
-    Armament:
-        Weapon: 155mm
-        LocalOffset: 811,0,0
-        MuzzleSequence: muzzle
-    AttackTurreted:
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    RenderRangeCircle:
-    DrawLineToTarget:
-    RenderVoxels:
-        LightAmbientColor: 0.4, 0.4, 0.4
-    WithVoxelBarrel:
-        LocalOffset: 0,0,-512
-    WithVoxelTurret:
-    Transforms:
-        IntoActor: art2
-        Facing: 96
-        TransformSounds: place2.aud
-        NoTransformSounds:
-    WithMuzzleOverlay:
-    -WithDeathAnimation:    
+	ProvidesPrerequisite@gdi:
+		Prerequisite: emp.gdi
+		Factions: gdi
+		ResetOnOwnerChange: true
+	ProvidesPrerequisite@nod:
+		Prerequisite: emp.nod
+		Factions: nod
+		ResetOnOwnerChange: true
+	AttackOrderPower@nod:
+		Cursor: emp
+		Icon: emp
+		ChargeTime: 135
+		Description: E.M. Pulse
+		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSpeechNotification: EmPulseCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		#Prerequisites: emp.nod
+		OrderName: Nodemp

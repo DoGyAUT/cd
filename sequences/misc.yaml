@@ -614,6 +614,7 @@ icon:
     clustermissile: mltiicon
     ioncannon: ioncicon
     hunterseeker: detnicon
+	emp: pulsicon
     airstrikeox: orca_oxicon
     airstrikeog: orca_gicon
 
@@ -804,18 +805,38 @@ dbrislg:
 
 flyman:
     1: flyman
-        Length:*   
-        ZOffset: 1023   
-    
+        Length:*
+        Tick: 40
+        ZOffset: 1023
+    2: flyman
+        Length:*
+        Tick: 60
+        ZOffset: 1023
+    3: flyman
+        Length:*
+        Tick: 80
+        ZOffset: 1023
+    4: flyman
+        Length:*
+        Tick: 100
+        ZOffset: 1023
+    5: flyman
+        Length:*
+        Tick: 120
+        ZOffset: 1023
+
 spark:
     1: spark
         Length:*   
         ZOffset: 1023     
  
 blood:
-    1: blood
-        Length:*    
+    Defaults:
+        Length:*   
         ZOffset: 1023
+    1: blood
+    2: blood1
+    3: blood2
         
 gdf:
     idle:
@@ -1263,19 +1284,11 @@ tuntop01:
         ShadowStart: 1
 
 tuntop02:
-    idle:
-        Offset: 0, -13
-        UseTilesetExtension: true
-        ShadowStart: 1
+	Inherits: tuntop01
 
 tuntop03:
-    idle:
-        Offset: 0, -13
-        UseTilesetExtension: true
-        ShadowStart: 1
+	Inherits: tuntop01
 
 tuntop04:
-    idle:
-        Offset: 0, -13
-        UseTilesetExtension: true
+	Inherits: tuntop01
         ShadowStart: 1

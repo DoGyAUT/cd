@@ -66,6 +66,7 @@ KMCV:
         TerrainTypes: Clear, Rough, DirtRoad
     ActorLostNotification:
         Notification: CriticalUnitLost
+    -ThrowsShrapnel@human:
 
 KHARV:
     Inherits@1: ^VoxelVehicle
@@ -148,6 +149,7 @@ KHARV:
         TerrainTypes: Clear, Rough, DirtRoad
     CustomBuildTimeValue:
         Value: 1440
+    -ThrowsShrapnel@human:
 
 DREADFIRE:
     Inherits@1: ^Tank
@@ -191,6 +193,7 @@ DREADFIRE:
     Voiced:
         VoiceSet: CyborgH
         Volume: 2
+    -ThrowsShrapnel@human:
         
 DREADFIRE2:
     Inherits: DREADFIRE
@@ -231,7 +234,7 @@ REAPER:
         Prerequisites: ~kaweap, ~!upgrade.!mp, ~!upgrade.htp
     Mobile:
         TurnSpeed: 8
-        Speed: 120
+        Speed: 95
     Health:
         HP: 550
     Armor:
@@ -273,6 +276,7 @@ REAPER:
     RenderSprites:
         Image: reaper2
         Scale: 0.8
+    -ThrowsShrapnel@human:
     
 REAPER2:
     Inherits: REAPER
@@ -341,6 +345,7 @@ GOLEM:
     Voiced:
         VoiceSet: CyborgH
         Volume: 2
+    -ThrowsShrapnel@human:
                
 TARANTULA:
     Inherits@1: ^Tank
@@ -395,6 +400,7 @@ TARANTULA:
     AttackMove:
     WithMuzzleOverlay:
     RenderSprites:
+    -ThrowsShrapnel@human:
     
 TARANTULA2:
     Inherits: TARANTULA
@@ -482,6 +488,7 @@ SILVER:
     GlobalUpgradable@upgrade:
         Upgrades: upgrade.htp
         Prerequisites: upgrade.htp
+    -ThrowsShrapnel@human:
     
 SILVER2:
     Inherits: SILVER
@@ -570,12 +577,13 @@ FURY:
         Palette: player50alpha
         TerrainTypes: Clear, Rough, DirtRoad
     WithMuzzleOverlay:
+    -ThrowsShrapnel@human:
 
 KRONOS:
     Inherits@1: ^VoxelTank
     Inherits@2: ^CyborgFactoryUpgrades
     Valued:
-        Cost: 2200
+        Cost: 3000
     Tooltip:
         Name: Kronos
         Description: Super heavy battle tank, capable of crossing water.\nEquipped with a anti armor railgun.\n\n  Strong vs Hard Targets\n  Weak vs Soft Targets\n  Useless vs Aircraft
@@ -622,8 +630,16 @@ KRONOS:
         Recoils: no
     WithVoxelBarrel:
     WithMuzzleOverlay:
-	-WithVoxelBody:
-	WithVoxelWaterBody:
+	UpgradeOnTerrain:
+		Upgrades: inwater
+		TerrainTypes: Water
+	WithVoxelBody:
+		UpgradeTypes: inwater
+		UpgradeMaxEnabledLevel: 0
+	WithVoxelBody@water:
+		Sequence: water
+		UpgradeTypes: inwater
+		UpgradeMinEnabledLevel: 1
     LeavesTrails@water:
         Image: wake
         Palette: effect
@@ -631,6 +647,7 @@ KRONOS:
         TrailWhileStationary: True
         StationaryInterval: 18
         MovingInterval: 6
+    -ThrowsShrapnel@human:
 
 KRONOS2:
     Inherits: KRONOS
@@ -643,7 +660,7 @@ KRONOS2:
     RenderVoxels:
         Image: kronos
     Valued:
-        Cost: 1870
+        Cost: 2550
         
 KRONOS3:
     Inherits: KRONOS
@@ -656,7 +673,7 @@ KRONOS3:
     RenderVoxels:
         Image: kronos
     Valued:
-        Cost: 2530
+        Cost: 3450
         
 GARGANTUA:
     Inherits@1: ^Tank
@@ -711,6 +728,7 @@ GARGANTUA:
         Volume: 2
     ActorLostNotification:
         Notification: CriticalUnitLost
+    -ThrowsShrapnel@human:
     
 GARGANTUA2:
     Inherits: GARGANTUA
@@ -772,6 +790,7 @@ SICT:
         Recoils: no
     WithVoxelBarrel:
     WithMuzzleOverlay:
+    -ThrowsShrapnel@human:
         
 Raptor:
     Inherits: ^Tank
@@ -807,3 +826,4 @@ Raptor:
     Explodes:
         Weapon: UnitExplodeEpic
         EmptyWeapon: UnitExplodeEpic
+    -ThrowsShrapnel@human:

@@ -194,7 +194,15 @@ WarthogMG:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
-        
+        Versus:
+            Infantry: 100
+            Vehicle: 60
+            Aircraft: 50
+            Building: 25
+            Light: 100
+            Medium: 20
+            Heavy: 5
+  
 TankMG:
     Inherits: ^Bullet
     ReloadDelay: 200
@@ -277,9 +285,6 @@ VenomCannon:
         Spread: 256
         Damage: 15
         Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 100
             Building: 25
             Light: 100
             Medium: 50
@@ -297,15 +302,15 @@ HydraCannon:
     BurstDelay: 2
     Projectile: Bullet
         Speed: 0c512
-        Inaccuracy: 1c512
+        Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 15
         Versus:
             Building: 50
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Light: 100
+            Medium: 50
+            Heavy: 20
         ValidTargets: Ground, Air
        
 HavocCannon:
@@ -313,7 +318,7 @@ HavocCannon:
     ReloadDelay: 150
     Range: 8c0
     MinRange: 2c0
-    ValidTargets: Ground, Air
+    ValidTargets: Ground
     Report: Overgun01.aud, Overgun02.aud, Overgun03.aud, Overgun04.aud, Overgun05.aud
     Burst: 10
     BurstDelay: 6
@@ -321,9 +326,14 @@ HavocCannon:
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
-        Spread: 256
+        Spread: 128
         Damage: 50
-        ValidTargets: Ground, Air
+        Versus:
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 20
+        ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_brnl
         ExplosionPalette: apolra2
@@ -579,7 +589,7 @@ WatchMG:
             Building: 25
             Light: 100
             Medium: 25
-            Heavy: 10
+            Heavy: 5
             
 ReaperCannon:
     Inherits: ^APBullet

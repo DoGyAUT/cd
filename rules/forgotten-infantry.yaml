@@ -90,7 +90,9 @@ HUNTRESS:
         Weapon: MutantSniper
         LocalOffset: 256,0,550
     AttackFrontal:
-        
+    CustomBuildTimeValue:
+        Value: 310
+    
 FENGINEER:
     Inherits: ^Mutant
     Valued:
@@ -130,8 +132,8 @@ FENGINEER:
     EngineerRepair:
     RepairsBridges:
         RepairNotification: BridgeRepaired
-    Captures:
-        CaptureTypes: building
+	ExternalCaptures:
+		Type: building
     AutoTarget:
     -GainsExperience:
     AutoTarget:
@@ -218,7 +220,7 @@ FFIEND:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 405
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~upgrade.fiend
+        Prerequisites: ~fabar, fhovel, faradr, ~!t1, ~upgrade.fiend
     Valued:
         Cost: 500
     Tooltip:
@@ -229,7 +231,7 @@ FFIEND:
     Voiced:
         VoiceSet: Fiend
     Health:
-        HP: 350
+        HP: 200
     Armor:
         Type: Light
     RevealsShroud:
@@ -258,7 +260,7 @@ MHIJACK:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 406
-        Prerequisites: ~fabar, fhovel, ~!t1
+        Prerequisites: ~fabar, fhovel, fatrade, ~!t1
     Valued:
         Cost: 500
     Tooltip:

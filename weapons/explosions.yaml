@@ -248,32 +248,32 @@ Sparky:
     Range: 4c0
     Report:
     Projectile: Bullet
-        Speed: 0c32
-        Angle: 45, 135
+        Speed: 32, 64, 96, 32, 64, 96, 32, 64, 96, 32, 64, 96
+        Angle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
         Image: spark
         Sequences: 1
         Shadow: false
 
 Bloody:
     ReloadDelay: 10
-    Range: 2c0
+    Range: 1c0
     Report:
     Projectile: Bullet
-        Speed: 0c128
-        Angle: 45, 135
+        Speed: 64, 96, 128
+        Angle: 45, 90, 135
         Image: blood
         Palette: player
-        Sequences: 1
+        Sequences: 3
         Shadow: false
 
 Flyman:
     ReloadDelay: 10
     Range: 4c0
-    Report:
+    Report: dedman1.aud, dedman2.aud, dedman3.aud, dedman4.aud, dedman5.aud, dedman6.aud
     Projectile: Bullet
-        Speed: 0c32
-        Angle: 45, 135
+        Speed: 32, 125
+        Angle: 90, 135
         Image: flyman
         Palette: player
-        Sequences: 1
+        Sequences: 5
         Shadow: true

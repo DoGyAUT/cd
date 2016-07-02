@@ -11,7 +11,7 @@ Grenade:
         Inaccuracy: 0c512
         Image: DISCUS
     Warhead@1Dam: SpreadDamage
-        Spread: 0c256
+        Spread: 0c512
         Damage: 70
         Versus:
             Building: 100
@@ -165,6 +165,45 @@ Bomb:
     Warhead@5Eff: CreateEffect
         Explosions: large_flash
         ExplosionPalette: light2
+        
+CondorBomb:
+    Inherits: ^ShellHE
+    ReloadDelay: 60
+    Burst: 2
+    BurstDelay: 0
+    Range: 7c0
+    Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
+    Projectile: Bullet
+        Speed: 1c0
+        Inaccuracy: 0c256
+        Blockable: false
+        Shadow: true
+        Angle: 75
+        Image: plasmabullet #pulsball
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 400
+        Versus:
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 80
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: swave
+        ExplosionPalette: swave
+        ImpactSounds: ion1.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@5Eff: CreateEffect
+        Explosions: beamzap
+        ExplosionPalette: beamzap
+        ImpactSounds: plasmaexplo02.aud
+        InvalidImpactTypes: Water, Air, AirHit
         
 VertigoBomb:
     Inherits: ^ShellHE

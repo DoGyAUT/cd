@@ -297,7 +297,7 @@ CHEETAH:
         Speed: 90
         TurnSpeed: 4
     Health:
-        HP: 800
+        HP: 700
     Armor:
         Type: Medium
     RevealsShroud:
@@ -306,7 +306,7 @@ CHEETAH:
         TurnSpeed: 4
         Offset: 160, 0, 0
     Armament@PRIMARY:
-        Weapon: 122mmAP
+        Weapon: 125mmAP
         LocalOffset: 900,100,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -467,13 +467,14 @@ TERMITE:
     Turreted@deployed:
         Turret: secondary
         TurnSpeed: 6
+        Offset: -200,0,0
         RealignDelay: -1
     AttackTurreted:    
     Armament@secondary:
         Name: secondary
         Turret: secondary
         Weapon: 135mmAP
-        LocalOffset: 700,0,1300
+        LocalOffset: 1000,0,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 150
@@ -483,10 +484,12 @@ TERMITE:
     Armament@primary:
         Name: primary
         Turret: primary
-        Weapon: 75mm1
-        LocalOffset: 350,178,700
+        Weapon: 125mmAP
+        LocalOffset: 850,0,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
+        Recoil: 150
+        RecoilRecovery: 10   
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
     WithMuzzleOverlay:
@@ -516,15 +519,9 @@ TERMITE:
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1        
     WithVoxelBarrel@long:
-        Sequence: barrel1
         Armament: primary
 		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-    WithVoxelBarrel@short:
-        Sequence: barrel2
-        Armament: primary
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1        
+		UpgradeMinEnabledLevel: 1      
     WithVoxelBarrel@deployed:
         Sequence: barrelb
         Armament: secondary
@@ -546,7 +543,7 @@ TERMITE:
 NHWTZ:
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 2500
+        Cost: 3500
     Tooltip:
         Name: Specter
         Description: Mobile Artillery.\nNeeds to deploy in order to shoot.\n  Strong vs Ground units\n  Useless vs Aircraft
@@ -570,25 +567,25 @@ NHWTZ:
         TurnSpeed: 4
         Offset: -256,0,0
     Armament@PRIMARY:
-        Weapon: 155mm
-        LocalOffset: 1024,0,1024
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 5
-        UpgradeTypes: industry
-        UpgradeMaxEnabledLevel: 0
-    Armament@EMP:
         Weapon: 155mmEMP
         LocalOffset: 1024,0,1024
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 100
         RecoilRecovery: 5
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-        UpgradeMaxAcceptedLevel: 2
+#        UpgradeTypes: industry
+#        UpgradeMaxEnabledLevel: 0
+#    Armament@EMP:
+#        Weapon: 155mmEMP
+#        LocalOffset: 1024,0,1024
+#        MuzzleSequence: muzzle
+#        MuzzlePalette: apolra50alpha
+#        Recoil: 100
+#        RecoilRecovery: 5
+#        UpgradeTypes: industry
+#        UpgradeMinEnabledLevel: 1
+#        UpgradeMaxEnabledLevel: 1
+#        UpgradeMaxAcceptedLevel: 2
     AttackTurreted:
     AutoTarget:
     RenderSprites:
@@ -623,9 +620,9 @@ NHWTZ:
     GlobalUpgradable@upgrade1:
         Upgrades: technology, cloakgenerator
         Prerequisites: technology
-    GlobalUpgradable@upgrade2:
-        Upgrades: industry
-        Prerequisites: industry
+#    GlobalUpgradable@upgrade2:
+#        Upgrades: industry
+#        Prerequisites: industry
       
 SUBTANK:
     Inherits: ^VoxelTank
@@ -901,7 +898,7 @@ NFIST:
         Description: Heavy stealth tank for support purposes.\nEquipped with heavier weaponry then its little brother, an area stealth generator and enough place for a small taskforce.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
     Buildable:
         BuildPaletteOrder: 213
-        Prerequisites: ~naweap, napyra, natech, natmpl, ~!t1, ~!t2, ~!t3,~technology
+        Prerequisites: ~naweap, napyra, natech, ~!t1, ~!t2, ~!t3,~technology
         Queue: Vehicle
     Voiced:
         VoiceSet: Sting
@@ -977,7 +974,7 @@ MONTAUK:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 214
-        Prerequisites: ~naweap, napyra, natech, natmpl, ~!t1, ~!t2, ~!t3,  ~industry
+        Prerequisites: ~naweap, napyra, natech, ~!t1, ~!t2, ~!t3,  ~industry
     Voiced:
         VoiceSet: Sting
         Volume: 2
@@ -1029,7 +1026,7 @@ SCORPION:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 215
-        Prerequisites: ~naweap, napyra, natech, natmpl, ~!t1, ~!t2, ~!t3, ~propaganda
+        Prerequisites: ~naweap, napyra, natech, ~!t1, ~!t2, ~!t3, ~propaganda
     Voiced:
         VoiceSet: Sting
         Volume: 2
