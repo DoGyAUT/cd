@@ -760,7 +760,6 @@
         UpgradeTypes: HTProduction
         Modifier: 105
 
-
 ^InitiateUpgrades:
     WithDecoration:
         Image: nodbufficon
@@ -770,9 +769,6 @@
         ZOffset: 256
         UpgradeTypes: confessorboost
         UpgradeMinEnabledLevel: 1
-    RangeMultiplier:        
-        UpgradeTypes: confessorboost    
-        Modifier: 110
     InaccuracyMultiplier:        
         UpgradeTypes: confessorboost   
         Modifier: 80
@@ -1086,11 +1082,11 @@
     ReturnOnIdle:
     Targetable@GROUND:
         TargetTypes: Ground
-        UpgradeTypes: highair
+        UpgradeTypes: airborne
         UpgradeMaxEnabledLevel: 0
     Targetable@AIRBORNE:
         TargetTypes: HighAir
-        UpgradeTypes: highair
+        UpgradeTypes: airborne
         UpgradeMinEnabledLevel: 1
     Hovers@CRUISING:
         UpgradeTypes: cruising
@@ -1099,17 +1095,17 @@
 ^AttackAdvancedPlane:
     Inherits: ^Aircraft
     Aircraft:
-        AirborneUpgrades: highair
+        AirborneUpgrades: airborne
         LandWhenIdle: no
         CruiseAltitude: 8192
         Repulsable: False
     Targetable@GROUND:
         TargetTypes: Ground
-        UpgradeTypes: highair
+        UpgradeTypes: airborne
         UpgradeMaxEnabledLevel: 0
     Targetable@AIRBORNE:
         TargetTypes: HighAir
-        UpgradeTypes: highair
+        UpgradeTypes: airborne
         UpgradeMinEnabledLevel: 1
     Hovers@CRUISING:
         UpgradeTypes: cruising
