@@ -253,20 +253,20 @@ MammothTusk:
 
 MammothWalkerTusk:
     Inherits: ^MissileAPHE
-    ReloadDelay: 400
+    ReloadDelay: 200
     Range: 12c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Ground, Air, HighAir
-    Burst: 8
-    BurstDelay: 10
+    Burst: 16
+    BurstDelay: 4
     Projectile: Missile
-        MaximumLaunchSpeed: 0c512
-        MinimumLaunchSpeed: 0c512
-        Speed : 0c512
-        Inaccuracy: 0c128
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c128
+        Speed : 1c512
+        Inaccuracy: 0c256
         HorizontalRateOfTurn: 10
         Angle: 62
-        RangeLimit: 20c0
+        RangeLimit: 30c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 100
@@ -486,12 +486,12 @@ OrcaHellfire2:
 
 HavocMissiles:
     Inherits: ^MissileAPHE
-    ReloadDelay: 160
-    Range: 8c0
-    MinRange: 1c0
+    ReloadDelay: 200
+    Range: 9c0
+    MinRange: 2c0
     Report: rocket01.aud
-    Burst: 6
-    BurstDelay: 6
+    Burst: 12
+    BurstDelay: 8
     ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 450
@@ -501,14 +501,55 @@ HavocMissiles:
         HorizontalRateOfTurn: 8
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 50
+        Spread: 0c512
+        Damage: 200
         Versus:
-            Building: 120
+            Building: 200
             Light: 100
-            Medium: 200
-            Heavy: 50
+            Medium: 50
+            Heavy: 25
         ValidTargets: Ground
+        DamageTypes: Prone100Percent, TriggerProne, FireDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: napalm1, napalm2
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water
+    Warhead@2Smu: LeaveSmudge
+        SmudgeType: LargeScorch
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+        InvalidImpactTypes: Water, Air, AirHit
+        
+HydraMissiles:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 160
+    Range: 8c0
+    MinRange: 1c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    Burst: 6
+    BurstDelay: 6
+    ValidTargets: Ground, Air, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 450
+        MinimumLaunchSpeed: 300
+        MaximumSpeed: 450
+        Inaccuracy: 0c256
+        HorizontalRateOfTurn: 8
+        RangeLimit: 20c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 100
+        Versus:
+            Building: 80
+            Light: 100
+            Medium: 100
+            Heavy: 25
+        ValidTargets: Ground, Air, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: small_bang, medium_bang, large_bang
         ExplosionPalette: apolra50alpha

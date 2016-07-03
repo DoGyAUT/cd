@@ -101,7 +101,7 @@ HYDRA:
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
     Armament@primary2:
-        Weapon: HavocMissiles
+        Weapon: HydraMissiles
         LocalOffset: 90,240,128, 90,-240,128, 90,190,128, 90,-190,128, 90,290,128, 90,-290,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -188,13 +188,13 @@ HAVOC:
         Type: CenterPosition
     Armament@primary:
         Weapon: HavocCannon
-        LocalOffset: 636,0,39
+        LocalOffset: 650,0,128
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
     Armament@primary2:
         Weapon: HavocMissiles
-        LocalOffset: 256,256,128, 256,-256,128
+        LocalOffset: 256,128,128, 256,-128,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     AttackHeli:
@@ -639,3 +639,5 @@ ZEP:
     UpgradeActorsNear:
         Upgrades: confessorboost
         Range: 10c0
+    AmbientSound:
+        SoundFile: propaganda.aud
