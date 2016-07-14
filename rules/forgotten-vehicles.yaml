@@ -68,7 +68,7 @@ FHARV:
         VoiceSet: Fharv
         Volume: 2
     Harvester:
-        DeliveryBuildings: gproc, nproc, kproc, fproc, sproc
+        DeliveryBuildings: gproc, nproc, kproc, fproc
         Capacity: 12
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
@@ -127,7 +127,7 @@ TAURUS:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 402
-        Prerequisites: ~faweap, ~!upgrade.warthog
+        Prerequisites: ~faweap
     Voiced:
         VoiceSet: Taurus
         Volume: 4
@@ -606,7 +606,7 @@ GREMLIN_MG:
     Valued:
         Cost: 800
     Tooltip:
-        Name: Gremlin (MG)
+        Name: Gremlin (Autocannon)
 		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
     Buildable:
         Queue: Vehicle
@@ -636,48 +636,7 @@ GREMLIN_MG:
         Sequence: turret-mg
     WithVoxelBarrel:
         Sequence: barrel-mg
-
-GREMLIN_GAT:
-    Inherits: GREMLIN_SHOTGUN
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Gremlin (Flamer)
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 405
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.gremlin_gat
-    Mobile:
-        Speed: 95
-        TurnSpeed: 6
-    Health:
-        HP: 700
-    Armament@primary:
-        Weapon: FireballLauncher
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 0
-        LocalOffset: 525,0,880
-        Recoil: 0
-        RecoilRecovery: 0
-    Armament@secondary:
-        Weapon: FireballLauncher
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 0
-        LocalOffset: 525,0,880
-        Recoil: 0
-        RecoilRecovery: 0
-    RenderSprites:
-        Image: gremlin_gat
-    RenderVoxels:
-        Image: gremlin
-    WithVoxelBody:
-        Sequence: idle-gat
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-gat
-    -WithVoxelBarrel:
-    
+   
 GREMLIN_MIS:
     Inherits: GREMLIN_SHOTGUN
     Valued:
@@ -746,42 +705,7 @@ GREMLIN_ARTY:
         Sequence: turret-arty
     WithVoxelBarrel:
         Sequence: barrel-arty
-            
-GREMLIN_FLAK:
-    Inherits: GREMLIN_SHOTGUN
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Gremlin (Flak)
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 405
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.gremlin_flak
-    Mobile:
-        Speed: 95
-        TurnSpeed: 6
-    Health:
-        HP: 700
-    Armament@primary:
-        Weapon: WarthogFlak
-        LocalOffset: 500,128,750, 500,-128,750
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    RenderSprites:
-        Image: gremlin_flak
-    RenderVoxels:
-        Image: gremlin
-    WithVoxelBody:
-        Sequence: idle-flak
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-flak
-    WithVoxelBarrel:
-        Sequence: barrel-flak
-            
+
 GREMLIN_75MMG:
     Inherits: GREMLIN_SHOTGUN
     Valued:
@@ -824,41 +748,6 @@ GREMLIN_75MMG:
         Sequence: turret-75mmg
     WithVoxelBarrel:
         Sequence: barrel-75mmg
-
-GREMLIN_90MM:
-    Inherits: GREMLIN_SHOTGUN
-    Valued:
-        Cost: 950
-    Tooltip:
-        Name: Gremlin (122mm)
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 405
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.gremlin_90mm
-    Mobile:
-        Speed: 70
-        TurnSpeed: 5
-    Health:
-        HP: 900
-    Armament@primary:
-        Weapon: 122mmAP
-        LocalOffset: 900,0,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 20
-    RenderSprites:
-        Image: gremlin_90mm
-    RenderVoxels:
-        Image: gremlin
-    WithVoxelBody:
-        Sequence: idle-90mm
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-90mm
-    WithVoxelBarrel:
-        Sequence: barrel-90mm
 
 WARTHOG_90MM:
     Inherits: ^VoxelTank
@@ -921,7 +810,7 @@ WARTHOG_MG:
     Valued:
         Cost: 1000
     Tooltip:
-        Name: Warthog (MG)
+        Name: Warthog (Autocannon)
 		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
@@ -948,46 +837,6 @@ WARTHOG_MG:
         Sequence: turret-mg
     WithVoxelBarrel:
         Sequence: barrel-mg
-
-WARTHOG_GAT:
-    Inherits: WARTHOG_90MM
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Warthog (Flamer)
-		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 406
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.warthog_gat
-    Armament@primary:
-        Weapon: FireballLauncher
-        LocalOffset: 512,0,768
-        MuzzleSplitFacings: 0
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0
-    Armament@secondary:
-        Weapon: FireballLauncher
-        LocalOffset: 512,0,768
-        MuzzleSplitFacings: 0
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0
-    RenderSprites:
-        Image: warthog_gat
-    RenderVoxels:
-        Image: warthog
-    WithVoxelBody:
-        Sequence: idle-gat
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-gat
-    -WithVoxelBarrel:
 
 WARTHOG_MIS:
     Inherits: WARTHOG_90MM
@@ -1051,38 +900,6 @@ WARTHOG_ARTY:
         Sequence: turret-arty
     WithVoxelBarrel:
         Sequence: barrel-arty
-
-WARTHOG_FLAK:
-    Inherits: WARTHOG_90MM
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Warthog (Flak)
-		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 406
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.warthog_flak
-    Armament@primary:
-        Weapon: WarthogFlak
-        LocalOffset: 550,128,768, 550,-128,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 5
-    RenderSprites:
-        Image: warthog_flak
-    RenderVoxels:
-        Image: warthog
-    WithVoxelBody:
-        Sequence: idle-flak
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-flak
-    WithVoxelBarrel:
-        Sequence: barrel-flak
 
 WARTHOG_SHOTGUN:
     Inherits: WARTHOG_90MM
@@ -1156,103 +973,6 @@ WARTHOG_75MMG:
     WithVoxelBarrel:
         Sequence: barrel-75mmg
 
-BISON_MG:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Bison (MG)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, ~!t1, ~!t2, ~upgrade.bison_mg
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-    Armament@primary:
-        Weapon: WarthogMG
-        LocalOffset: 650,128,880, 650,-128,880
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_mg
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-mg
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-mg
-    WithVoxelBarrel:
-        Sequence: barrel-mg
-    WithMuzzleOverlay:
-
-BISON_GAT:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Bison (Flamer)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison_gat
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    Armament@secondary:
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    Armament@tertiary:
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_gat
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-gat
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-gat
-
 BISON_MIS:
     Inherits: ^VoxelTank
     Valued:
@@ -1303,7 +1023,7 @@ BISON_ARTY:
     Valued:
         Cost: 1400
     Tooltip:
-        Name: Bison (Mortar)
+        Name: Bison (Howitzer)
 		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
@@ -1345,210 +1065,6 @@ BISON_ARTY:
         Sequence: turret-arty
     WithVoxelBarrel:
         Sequence: barrel-arty
-    WithMuzzleOverlay:
-
-BISON_FLAK:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Bison (Flak)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison_flak
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-    Armament@primary:
-        Weapon: WarthogFlak
-        LocalOffset: 550,128,768, 550,-128,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 5
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_flak
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-flak
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-flak
-    WithVoxelBarrel:
-        Sequence: barrel-flak
-    WithMuzzleOverlay:
-
-BISON_SHOTGUN:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Bison (HE-Shotgun)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison_shotgun
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-    Armament@primary:
-        Weapon: GremlinShotgun
-        LocalOffset: 1000,300,750, 1000,-300,750
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 20
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_shotgun
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-shotgun
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-shotgun
-    WithVoxelBarrel:
-        Sequence: barrel-shotgun
-    WithMuzzleOverlay:
-
-BISON_75MMG:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Bison (90mm + MG)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison75mmg
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-    Armament@primary:
-        Weapon: 90mm
-        LocalOffset: 1024,0,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: TaurusMG
-        LocalOffset: 140,-160,900
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_75mmg
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-75mmg
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-75mmg
-    WithVoxelBarrel:
-        Sequence: barrel-75mmg
-    WithMuzzleOverlay:
-
-BISON_90MM:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Bison (122mm)
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.bison_90mm
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 3
-    Health:
-        HP: 900
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 4
-    Armament@primary:
-        Weapon: 122mmAP
-        LocalOffset: 1100,0,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: bison_90mm
-    RenderVoxels:
-        Image: bison
-    WithVoxelBody:
-        Sequence: idle-90mm
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-90mm
-    WithVoxelBarrel:
-        Sequence: barrel-90mm
     WithMuzzleOverlay:
 
 BISON_90MMGG:
@@ -1645,7 +1161,7 @@ BISON_120MMT:
         TurnSpeed: 4
         Offset: 128,0,0
     Armament@primary:
-        Weapon: 120mm1
+        Weapon: 120mm1 #WarthogMissile
         LocalOffset: 1024,256,700
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1839,193 +1355,13 @@ AUROCH_180MM:
     WithVoxelBarrel:
         Sequence: barrel-180mm
     WithMuzzleOverlay:
-    
-AUROCH_MG:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Auroch (MG)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_mg
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: WarthogMG
-        LocalOffset: 650,128,880, 650,-128,880
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_mg
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-mg
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-mg
-    WithVoxelBarrel:
-        Sequence: barrel-mg
-    WithMuzzleOverlay:
-
-AUROCH_GAT:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Auroch (Flamer)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_gat
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    Armament@secondary:
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    Armament@tertiary:
-        Weapon: FireballLauncher
-        LocalOffset: 650,0,850
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_gat
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-gat
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-gat
-    WithMuzzleOverlay:
-
-AUROCH_MIS:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Auroch (Missile)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_mis
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: WarthogMissile
-        LocalOffset: 256,180,768, 256,-180,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_mis
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-mis
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-mis
-    WithMuzzleOverlay:
 
 AUROCH_ARTY:
     Inherits: ^VoxelTank
     Valued:
         Cost: 1600
     Tooltip:
-        Name: Auroch (Mortar)
+        Name: Auroch (Howitzer)
 		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
@@ -2049,7 +1385,7 @@ AUROCH_ARTY:
         TurnSpeed: 2
         Offset: -64,0,0
     Armament@primary:
-        Weapon: AurochMortar
+        Weapon: AurochMortar #240mm
         LocalOffset: 760,0,1080
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -2080,259 +1416,6 @@ AUROCH_ARTY:
         Sequence: turret-arty
     WithVoxelBarrel:
         Sequence: barrel-arty
-    WithMuzzleOverlay:
-
-AUROCH_FLAK:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Auroch (Flak)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_flak
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-        Offset: -32,0,0
-    Armament@primary:
-        Weapon: WarthogFlak
-        LocalOffset: 550,128,768, 550,-128,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 5
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_flak
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-flak
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-flak
-    WithVoxelBarrel:
-        Sequence: barrel-flak
-    WithMuzzleOverlay:
-
-AUROCH_SHOTGUN:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1700
-    Tooltip:
-        Name: Auroch (HE-Shotgun)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_shotgun
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: GremlinShotgun
-        LocalOffset: 1000,300,750, 1000,-300,750
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 20
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_shotgun
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-shotgun
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-shotgun
-    WithVoxelBarrel:
-        Sequence: barrel-shotgun
-    WithMuzzleOverlay:
-
-AUROCH_75MMG:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1700
-    Tooltip:
-        Name: Auroch (90mm + MG)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade ~!t1, ~!t2, ~upgrade.auroch_75mmg
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: 90mm
-        LocalOffset: 1024,0,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: TaurusMG
-        LocalOffset: 140,-160,900
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0 
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_75mmg
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-75mmg
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-75mmg
-    WithVoxelBarrel:
-        Sequence: barrel-75mmg
-    WithMuzzleOverlay:
-
-AUROCH_90MM:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1700
-    Tooltip:
-        Name: Auroch (122mm)
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 408
-        Prerequisites: ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.auroch_90mm
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Mobile:
-        Speed: 65
-        TurnSpeed: 2
-    Health:
-        HP: 800
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: 122mmAP
-        LocalOffset: 1100,0,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,175,450
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke2
-        Palette: apolra50alpha
-        Offset: -800,-175,450
-        Interval: 2
-        MinDamage: Undamaged
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-        Image: auroch_90mm
-    RenderVoxels:
-        Image: auroch
-    WithVoxelBody:
-        Sequence: idle-90mm
-    WithVoxelTurret:
-        Recoils: no
-        Sequence: turret-90mm
-    WithVoxelBarrel:
-        Sequence: barrel-90mm
     WithMuzzleOverlay:
 
 AUROCH_90MMGG:
@@ -2441,7 +1524,7 @@ AUROCH_120MMT:
         TurnSpeed: 2
         Offset: 128,0,0
     Armament@primary:
-        Weapon: 120mm1
+        Weapon: 120mm1 #WarthogMissile
         LocalOffset: 1024,256,700
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -2549,51 +1632,7 @@ AUROCH_122MMG:
     WithVoxelBarrel:
         Sequence: barrel-122mmg
     WithMuzzleOverlay:
-
-HOWITZER:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Howitzer
-        Description: Mobile Artillery.\nNeeds to deploy in order to shoot.\n  Strong vs Slow Targets, Buildings\n  Weak vs Fast Targets\n  Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 406
-        Prerequisites:  ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.howitzer, ~!upgrade.ragnarok
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Health:
-        HP: 600
-    Armor:
-        Type: Medium
-    Mobile:
-        Speed: 90
-        TurnSpeed: 3
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 4
-        Offset: -320,0,0
-    Armament@primary:
-        Weapon: 240mm
-        LocalOffset: 320,0,1440
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 5
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: yes
-    WithMuzzleOverlay:
-    
+ 
 RAGNAROK:
     Inherits: ^VoxelVehicle
     Valued:
@@ -2606,7 +1645,7 @@ RAGNAROK:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 407
-        Prerequisites:  ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.ragnarok, ~!upgrade.howitzer
+        Prerequisites:  ~faweap, faradr, fhovel, fatrade, ~!t1, ~!t2
     Voiced:
         VoiceSet: Grunt
         Volume: 2

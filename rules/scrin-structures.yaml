@@ -4,13 +4,14 @@ SACNST:
         Footprint: xxx xxx xxx
         BuildSounds: facbld1.aud
         Dimensions: 3,3
+        TerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
     Buildable:
         Queue: Building
         BuildPaletteOrder: 500
         Prerequisites: ~disabled
         Adjacent: 8
     Health:
-        HP: 1500
+        HP: 2000
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -34,13 +35,13 @@ SACNST:
     Valued:
         Cost: 2500
     Tooltip:
-        Name: Scrin Construction Yard
+        Name: Scrin Hive
         Description: Builds base structures.
     CustomSellValue:
         Value: 2500
     BaseBuilding:
     Transforms:
-        IntoActor: fmcv
+        IntoActor: smcv
         Offset: 1,1
         Facing: 96
         DeployCursor: undeploy
@@ -48,21 +49,18 @@ SACNST:
         ProductionType: Building
     ProductionBar@Defense:
         ProductionType: Defense
-    WithIdleOverlay@TOP:
-        Sequence: idle-top
-    WithIdleOverlay@SIDE:
-        Sequence: idle-side
-    WithIdleOverlay@FRONT:
-        Sequence: idle-front
-    WithBuildingPlacedOverlay:
+#    WithBuildingPlacedOverlay:
     Power:
         Amount: 0
     Selectable:
-        Bounds: 144, 80, 0, -12
+        Bounds: 80, 144, 0, -12
     ProvidesPrerequisite@scrin:
         Prerequisite: structures.scrin
     ActorLostNotification:
-        Notification: CriticalUnitLost
+        Notification: CriticalStructureLost
+    CashTrickler:
+        Period: 100
+        Amount: 100
 
 SAPOWR:
     Inherits: ^BuildingInfiltrate
@@ -71,9 +69,9 @@ SAPOWR:
         BuildPaletteOrder: 501
         Prerequisites: ~structures.scrin
     Valued:
-        Cost: 200
+        Cost: 500
     Tooltip:
-        Name: Scrin Power Plant
+        Name: Dark Matter Generator
         Description: Provides power for other structures.
     ProvidesPrerequisite:
         Prerequisite: anypower
@@ -87,69 +85,48 @@ SAPOWR:
     Selectable:
         Bounds: 88, 80, 2, -12
     Health:
-        HP: 800
+        HP: 1000
     Armor:
-        Type: Light
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     Power:
-        Amount: 100
-    WithIdleOverlay@light:
-        Sequence: idle-light
-        Palette: player
+        Amount: 200
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
     DisabledOverlay:
     
-SPROC:
+SASEED:
     Inherits: ^BuildingInfiltrate
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Scrin Tiberium Refinery
-        Description: Processes raw Tiberium\ninto useable resources.
     Buildable:
         Queue: Building
         BuildPaletteOrder: 502
-        Prerequisites: anypower, ~structures.scrin
+        Prerequisites: ~structures.scrin
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Tiberium Stimulator
+        Description: Seeds Tiberium.
+    ProvidesPrerequisite:
+        Prerequisite: anypower
     Building:
-        Footprint: xxx= xx== xxx=
-        Dimensions: 4,3
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
+        Footprint: x
+        Dimensions: 1,1
     Selectable:
-        Bounds: 134, 122, 0, -18
+        Bounds: 48, 48, 0, -12
     Health:
-        HP: 1600
+        HP: 1000
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 6c0
-    TiberianSunRefinery:
-        DockAngle: 160
-        DockOffset: 2,1
-        DiscardExcessResources: true
-    StoresResources:
-        PipColor: Green
-        PipCount: 25
-        Capacity: 5000
-    CustomSellValue:
-        Value: 600
-    FreeActor:
-        Actor: SHARV
-        SpawnOffset: 2,1
-        Facing: 160
-    WithIdleOverlay@REDLIGHTS:
-        Sequence: idle-redlights
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    WithDockedOverlay@flame:
-        Sequence: flame
-        Palette: effect
+        Range: 4c0
     Power:
-        Amount: -30
-    ProvidesPrerequisite@buildingname:   
-    CustomBuildTimeValue:
-        Value: 1860
+        Amount: -25
+    DisabledOverlay:
+    SeedsResource:
+        ResourceType: Tiberium
+        Interval: 25
+    CashTrickler:
+        Period: 100
+        Amount: 25

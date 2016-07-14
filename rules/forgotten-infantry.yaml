@@ -260,11 +260,11 @@ MHIJACK:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 406
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1
+        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2
     Valued:
         Cost: 500
     Tooltip:
-        Name: Mutant Hijacker
+        Name: Hijacker
         Description: Hijacks enemy vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
     Selectable:
         Bounds: 12,17,0,-9
@@ -329,7 +329,7 @@ GOON:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 408
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~upgrade.goon
+        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.goon
     Valued:
         Cost: 700
     Tooltip:
@@ -361,14 +361,14 @@ GOON:
 GHOST:
     Inherits: ^Mutant
     Valued:
-        Cost: 1750
+        Cost: 1600
     Tooltip:
         Name: Ghost Stalker
         Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 410
-        Prerequisites: ~disabled #~fabar, fhovel, ~!t1, ~!t2
+        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2
     Selectable:
         Bounds: 12,17,0,-6
     Voiced:
@@ -376,7 +376,7 @@ GHOST:
     Mobile:
         Speed: 56
     Health:
-        HP: 200
+        HP: 400
     Armor:
         Type: Light
     PoisonedByTiberium:

@@ -40,45 +40,7 @@ KAGATE_B:
         Prerequisites: ~structures.cabal
     Tooltip:
         Name: Cabal Gate
-            
-KALASR:
-    Inherits: ^Defense
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: OLD Sabercut
-        Description: Basic base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery
-    Buildable:
-        Queue: Defenses
-        BuildPaletteOrder: 303
-        Prerequisites: ~disabled
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 88, 74, 0, -14
-    RequiresPower:
-    DisabledOverlay:
-    Health:
-        HP: 1000
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 10c0
-    Armament:
-        Weapon: LaserFire3
-        LocalOffset: 0,0,1600
-    AttackOmni:
-    AutoTarget:
-    RenderRangeCircle:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    Power:
-        Amount: -100
-             
+
 KABLASR:
     Inherits: ^Defense
     Valued:
@@ -180,7 +142,7 @@ KDARK:
     Valued:
         Cost: 1500
     Tooltip:
-        Name:  Obelisk of Darkness
+        Name: Obelisk of Darkness
         Description: Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Buildable:
         Queue: Defense
@@ -226,7 +188,7 @@ KOBEL:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 306
-        Prerequisites: anypower, kproc, karadr, cytech, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: anypower, kproc, karadr, kabtech, ~structures.cabal, ~!t1, ~!t2
     Building:
         Footprint: xx xx
         Dimensions: 2,2

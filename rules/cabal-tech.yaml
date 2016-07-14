@@ -5,7 +5,7 @@ upgrade.hc:
         Description: Research reinforced chassis for all basic cyborgs. \n 25% damage reduction
     Buildable:
         BuildPaletteOrder: 300
-        Prerequisites: ~cytech, ~!upgrade.lc
+        Prerequisites: ~kabtech, ~!upgrade.lc
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -22,7 +22,7 @@ upgrade.lc:
         Description: Research alloyed chassis for all basic cyborgs. \n +20% Speed increasement
     Buildable:
         BuildPaletteOrder: 301
-        Prerequisites: ~cytech, ~!upgrade.hc
+        Prerequisites: ~kabtech, ~!upgrade.hc
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -39,7 +39,7 @@ upgrade.mp:
         Description: Initiate mass production for all factory combat units. \n 15% cost reduction
     Buildable:
         BuildPaletteOrder: 302
-        Prerequisites: ~cytech, ~!upgrade.htp
+        Prerequisites: ~kabtech, ~!upgrade.htp
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -56,7 +56,7 @@ upgrade.htp:
         Description: Initiate high-tech production for all factory combat units. \n 15% cost increasement \n +10% atack range increasement \n +5% damage increasement
     Buildable:
         BuildPaletteOrder: 303
-        Prerequisites: ~cytech, ~!upgrade.mp
+        Prerequisites: ~kabtech, ~!upgrade.mp
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -73,7 +73,7 @@ upgrade.nm:
         Description: Research nanomachines. \n Adds self repair systems to all cyborgs - which slowly repairs up to 100% health.
     Buildable:
         BuildPaletteOrder: 304
-        Prerequisites: ~cytech, ~!upgrade.es
+        Prerequisites: ~kabtech, ~!upgrade.es
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -90,7 +90,7 @@ upgrade.es:
         Description: Research short circuit systems. \n Adds self destruction systems to all new produced cyborgs - which makes them explode and harm all enemies in range.
     Buildable:
         BuildPaletteOrder: 305
-        Prerequisites: ~cytech, ~!upgrade.nm
+        Prerequisites: ~kabtech, ~!upgrade.nm
         Queue: Tech
         BuildLimit: 1
     Valued:
@@ -99,88 +99,3 @@ upgrade.es:
         Image: cab_srs
     ProvidesPrerequisite:
         Prerequisite: upgrade.es
-        
-unlock.manta:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Manta
-        Description: Allows Manta production.
-    Buildable:
-        BuildPaletteOrder: 307
-        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 1200
-    RenderSprites:
-        Image: cab.manta
-    ProvidesPrerequisite:
-        Prerequisite: unlock.manta
-        
-unlock.kronos:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Kronos
-        Description: Allows Kronos production.
-    Buildable:
-        BuildPaletteOrder: 308
-        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 1600
-    RenderSprites:
-        Image: cab.kronos
-    ProvidesPrerequisite:
-        Prerequisite: unlock.kronos
-        
-unlock.cyc2:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Cabal Commando
-        Description: Allows Cabal Commando production.
-    Buildable:
-        BuildPaletteOrder: 309
-        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 1800
-    RenderSprites:
-        Image: cab.cyc2
-    ProvidesPrerequisite:
-        Prerequisite: unlock.cyc2
-
-unlock.glad:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Harbinger
-        Description: Allows Harbinger production.
-    Buildable:
-        BuildPaletteOrder: 310
-        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2, ~!t3
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 2400
-    RenderSprites:
-        Image: cab.glad
-    ProvidesPrerequisite:
-        Prerequisite: unlock.glad
-        
-unlock.gargantua:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Unlock Gargantua
-        Description: Allows Gargantua production.
-    Buildable:
-        BuildPaletteOrder: 311
-        Prerequisites: ~cytech, kabtech, ~!t1, ~!t2, ~!t3
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 2800
-    RenderSprites:
-        Image: cab.gargantua
-    ProvidesPrerequisite:
-        Prerequisite: unlock.gargantua

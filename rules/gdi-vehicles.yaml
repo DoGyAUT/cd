@@ -57,7 +57,7 @@ GHARV:
         VoiceSet: Gharv
         Volume: 2
     Harvester:
-        DeliveryBuildings: gproc, nproc, kproc, fproc, sproc
+        DeliveryBuildings: gproc, nproc, kproc, fproc
         Capacity: 20
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
@@ -109,11 +109,11 @@ APC:
         Cost: 800
     Tooltip:
         Name: Amphibious APC
-        Description: Armored infantry transport.\nCan move on water.\n  Unarmed
+        Description: Armored infantry transport.\nCan move on water.
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 103
-        Prerequisites: ~gaweap, gapile, ~upgrade.gdf
+        Prerequisites: ~gaweap, gapile
     Voiced:
         VoiceSet: Predator
         Volume: 2
@@ -173,7 +173,7 @@ SMECH:
     Valued:
         Cost: 600
     Tooltip:
-        Name: Wolverine MK.II
+        Name: Wolverine
         Description: Anti-personnel walker.\n\n  Strong vs Soft Targets\n  Weak vs Hard Targets\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -10
@@ -317,7 +317,7 @@ GTHTNK:
     Valued:
         Cost: 1400
     Tooltip:
-        Name: Ares
+        Name: Ares Tank
         Description: Heavy main battle tank.\nArmed with a 122mm Cannon with AP rounds and a coaxial MG\n  Strong vs Ground Targets\n  Weak vs Heavy Vehicles\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
@@ -363,84 +363,7 @@ GTHTNK:
         Recoils: no
     WithVoxelBarrel:
     WithMuzzleOverlay:
-
-HOVERTNK:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Hermes
-        Description: Hover battle tank.\n\n  Strong vs Soft Targets\n  Weak vs Hard Targets\n  Useless vs Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 105
-        Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.zc
-    Voiced:
-        VoiceSet: Archon
-        Volume: 2
-    Mobile:
-        Speed: 80
-        TurnSpeed: 6
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    Health:
-        HP: 500
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 8c0
-    Armament@primary:
-        Weapon: HermesCannon
-        LocalOffset:700,0,575
-        Recoil: 100
-        RecoilRecovery: 20
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: LightTankMG
-        LocalOffset: 150,-100,750
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0
-    Turreted:
-        TurnSpeed: 6
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: no
-    WithVoxelBarrel:
-    Hovers:
-    -PoisonedByTiberium:
-    WithMuzzleOverlay:
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
-    
+   
 HVR:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^HoverVehicle
@@ -454,7 +377,7 @@ HVR:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.zc
+        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.zc
     Voiced:
         VoiceSet: Archon
         Volume: 2
@@ -527,7 +450,7 @@ AIRBLAST:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.gdf
+        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.gdf
     Voiced:
         VoiceSet: Archon
         Volume: 2
@@ -572,7 +495,7 @@ TRITON:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.st
+        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.st
     Voiced:
         VoiceSet: Titan
         Volume: 2
@@ -770,7 +693,7 @@ JUGGY:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gaarmory, garadr, gadept, gatech, ~!t1,  ~!t2
+        Prerequisites: ~gaweap, gaarmory, garadr, gatech, ~!t1, ~!t2
     Voiced:
         VoiceSet: Marv
         Volume: 2
@@ -848,7 +771,7 @@ HMEC:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.st
+        Prerequisites: ~gaweap, gaarmory, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.st
     Voiced:
         VoiceSet: Marv
         Volume: 2
@@ -909,78 +832,7 @@ HMEC:
         EmptyWeapon: UnitExplodeEpic
     ActorLostNotification:
         Notification: CriticalUnitLost
-
-NEMESIS:
-    Inherits: ^Tank
-    Valued:
-        Cost: 8000
-    Tooltip:
-        Name: Nemesis MK.I
-        Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
-    Voiced:
-        VoiceSet: Marv
-        Volume: 2
-    Mobile:
-        TurnSpeed: 5
-        Speed: 46
-    Health:
-        HP: 4000
-    SelfHealing:
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 15c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithInfantryBody:
-    Turreted:
-        TurnSpeed: 5
-    AttackTurreted:
-    WithSpriteTurret:
-        Recoils: yes
-    Armament@primary:
-        Weapon: NemesisThermal1
-        LocalOffset: 550, 350, 800
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        MuzzleSplitFacings: 8
-        Recoil: 50
-        RecoilRecovery: 10
-    Armament@primary2:
-        Weapon: NemesisThermal2
-        LocalOffset: 550, -350, 800
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        MuzzleSplitFacings: 8
-        Recoil: 50
-        RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: NemesisThermalAA
-        LocalOffset: 550, 0, 800
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        MuzzleSplitFacings: 8
-        Recoil: 30
-        RecoilRecovery: 10
-    AutoTarget:
-    AttackMove:
-    Selectable:
-        Bounds: 30, 42, 0, -8
-    WithMuzzleOverlay:
-    RenderSprites:
-    Explodes:
-        Weapon: UnitExplodeEpic
-        EmptyWeapon: UnitExplodeEpic
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-        
+       
 IONTANK:
     Inherits: ^VoxelTank
     Valued:
@@ -991,7 +843,7 @@ IONTANK:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gadept, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
+        Prerequisites: ~gaweap, gaarmory, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
     Voiced:
         VoiceSet: Marv
         Volume: 2

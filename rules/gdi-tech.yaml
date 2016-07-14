@@ -86,21 +86,3 @@ upgrade.gapowerup2:
     RenderSprites:
         Image: gapowrup
     ProvidesPrerequisite@upgradename:
-
-upgrade.emp:
-    Inherits: ^Tech
-    AlwaysVisible:
-    Tooltip:
-        Name: Unlock Disc Throwers
-        Description: Unlocks Disc Throwers with EMP grenades.
-    Buildable:
-        BuildPaletteOrder: 105
-        Prerequisites: ~gaarmory, ~!t1
-        Queue: Tech
-        BuildLimit: 1
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: E2
-    ProvidesPrerequisite:
-        Prerequisite: empgrenade

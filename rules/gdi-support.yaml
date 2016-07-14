@@ -313,7 +313,7 @@ GACAN:
     Valued:
         Cost: 1400
     Tooltip:
-        Name: Component Tower (Guardian-RPG)
+        Name: Guardian Tower
         Description: Anti-Armor base defense.\nArmed with a cannon and HE grenades.\n\n  Strong vs Armor \n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
@@ -377,7 +377,7 @@ GAMORTAR:
     Valued:
         Cost: 1600
     Tooltip:
-        Name: Component Tower (Howitzer)
+        Name: Howitzer Tower
         Description: Artillery base defense.\nExclusive to GDF.\n\n  Strong vs Infantry, Light armor, Artillery \n  Weak vs Aircraft, Armor
     Buildable:
         Queue: Defense
@@ -430,14 +430,14 @@ GAFORT:
     Inherits: ^Defense
     WithSpriteBody:
     Valued:
-        Cost: 4000
+        Cost: 1500
     Tooltip:
         Name: Fortress Garrison Bunker
         Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 109
-        Prerequisites: anypower, gproc, garadr, gaarmory, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
+        Prerequisites: anypower, gproc, garadr, gaarmory, gatech, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
@@ -462,7 +462,6 @@ GAFORT:
         MaxWeight: 12
         PipCount: 12
         Types: Infantry
-        InitialUnits: gasol, gasol, gasol, gasol, gasol, gasol, E2, E2, E2, E2, E2, E2
     AutoTarget:
     AttackGarrisoned:
         Armaments: garrisoned
@@ -542,12 +541,12 @@ GAPLUG2:
     Valued:
         Cost: 1000
     Tooltip:
-        Name: Seeker Control
+        Name: Supply Node
         Description: Enables use of the hunter-seeker droid.
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 111
-        Prerequisites: gaplug, gaweap, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Prerequisites: gaplug, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
     Plug:
         Type: plug.hunterseeker
     Power:

@@ -444,7 +444,7 @@ ORCA_B:
     Buildable:
         Queue: Air
         BuildPaletteOrder: 105
-        Prerequisites: ~gahpad, garadr, gaarmory, gatech, ~!t1, ~!t2
+        Prerequisites: ~gahpad, garadr, gaarmory, gatech, ~!t1, ~!t2, ~!upgrade.zc
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -777,11 +777,11 @@ DSHP:
     Valued:
         Cost: 1000
     Tooltip:
-        Name: Orca Dropship
+        Name: Dropship
     Buildable:
         Queue: Air
         BuildPaletteOrder: 107
-        Prerequisites: ~disabled #~gahpad
+        Prerequisites: ~gahpad, garadr, gadrop, ~!t1, ~!t2, ~upgrade.st
     Aircraft:
         LandWhenIdle: yes
         TurnSpeed: 5
@@ -811,19 +811,19 @@ DSHP:
 KODIAK:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1000
+        Cost: 8000
     Tooltip:
         Name: Kodiak Class
         Description: Fast assault gunship with\ndual missile launchers.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
     Buildable:
         Queue: Air
         BuildPaletteOrder: 107
-        Prerequisites: ~disabled #~gahpad
+        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Selectable:
-        Bounds: 30,24
+        Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 1
         Speed: 45

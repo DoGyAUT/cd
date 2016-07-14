@@ -379,56 +379,6 @@ KARADR:
         Range: 20c0
         CloakTypes: Underground
 
-CYTECH:
-    Inherits: ^Building
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 307
-        Prerequisites:  anypower, cybbar, kaweap, karadr, ~structures.cabal, ~!t1
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Cyborg Tech Center
-        Description: Gives access to technology research.
-    Building:
-        Footprint: xxx xxx
-        Dimensions: 3,2
-    Selectable:
-        Bounds: 96, 118, -6, -38
-    Health:
-        HP: 1600
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 5c0
-    Power:
-        Amount: -20
-    Production:
-        Produces: Tech
-        MoveIntoWorld: false
-    Exit:
-    ProductionBar@Tech:
-        ProductionType: Tech
-    ProductionQueue@Tech:
-        Type: Tech
-        Group: Tech
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
-        QueuedAudio: BuildTech
-        ReadyAudio: TechComplete
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    WithProductionOverlay@LIGHTS:
-        Sequence: production-lights
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    ProvidesPrerequisite:
-        Prerequisite: barracks.upgraded
-    ProvidesPrerequisite@buildingname:
-
 KAHPAD:
     Inherits: ^Building
     Valued:
@@ -437,7 +387,7 @@ KAHPAD:
         Name: Cabal Helipad
         Description: Produces, rearms and\nrepairs aircraft.
     Buildable:
-        BuildPaletteOrder: 308
+        BuildPaletteOrder: 307
         Queue: Building
         Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
     Building:
@@ -498,13 +448,13 @@ KABTECH:
     Inherits: ^Building
     Buildable:
         Queue: Building
-        BuildPaletteOrder: 310
-        Prerequisites: anypower, cybbar, kaweap, karadr, cytech, ~structures.cabal, ~!t1, ~!t2
+        BuildPaletteOrder: 308
+        Prerequisites: anypower, cybbar, kaweap, karadr, ~structures.cabal, ~!t1, ~!t2
     Valued:
         Cost: 2000
     Tooltip:
-        Name: Cabal Tech Center
-        Description: Gives access to technology research.
+        Name: Cyborg Enhancement Center
+        Description: Gives access to improved technology.
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4

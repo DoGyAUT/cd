@@ -55,7 +55,7 @@ E2:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 102
-        Prerequisites: ~gapile, empgrenade, ~!upgrade.zc
+        Prerequisites: ~gapile, gaarmory, ~!upgrade.zc
     Valued:
         Cost: 200
     Tooltip:
@@ -74,40 +74,18 @@ E2:
         Speed: 56
     RevealsShroud:
         Range: 8c0    
-    Armament@primary:
-        Weapon: Grenade
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        UpgradeTypes: empgrenade
-        UpgradeMaxEnabledLevel: 0
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: GrenadeGarrison
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        UpgradeTypes: empgrenade
-        UpgradeMaxEnabledLevel: 0
     Armament@primaryEMP:
         Weapon: GrenadeEMP
         LocalOffset: 0,0,555
         FireDelay: 5
-        UpgradeTypes: empgrenade
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     Armament@GARRISONEDEMP:
         Name: garrisoned
         Weapon: GrenadeGarrisonEMP
         LocalOffset: 0,0,555
         FireDelay: 5
-        UpgradeTypes: empgrenade
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     AttackFrontal:
     ProducibleWithLevel:
         Prerequisites: barracks.upgraded
-    GlobalUpgradable@upgrade:
-        Upgrades: empgrenade
-        Prerequisites: empgrenade
 
 SCOUT:
     Inherits: ^Soldier
@@ -276,7 +254,7 @@ ZMARINE:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 101
-        Prerequisites: ~gapile, gaarmory, ~!t1, ~upgrade.zc
+        Prerequisites: ~gapile, ~!t1, ~upgrade.zc
     Valued:
         Cost: 300
     Tooltip:
@@ -320,10 +298,6 @@ JUMPJET:
     Tooltip:
         Name: Jumpjet Infantry
         Description: Airborne infantry.\nImmune to Tiberium radiation.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Armor, Artillery, Dogs
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 107
-        Prerequisites: ~gapile, garadr, ~!t1
     Selectable:
         Bounds: 12,17,0,-6
     Voiced:
@@ -421,7 +395,7 @@ ZRAIDER:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 109
-        Prerequisites: ~gapile, gaarmory, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
+        Prerequisites: ~gapile, gaarmory, gatech, ~!t1, ~!t2, ~upgrade.zc
     Valued:
         Cost: 1200
     Tooltip:

@@ -604,13 +604,32 @@ GATECH:
     Power:
         Amount: -150
     ProvidesPrerequisite@buildingname:
+    AirstrikePower@ox:
+        OrderName: OXAirstrikePowerInfoOrder
+        Prerequisites: ~gadrop, garadr
+        Icon: airstrikeox
+        ChargeTime: 300
+        SquadSize: 3
+        QuantizedFacings: 32
+        Description: OX Bombing run
+        LongDesc: Deploy an a bombing run of 3 OX-Bombers.\nVery effective vs buildings and light armored targets.
+        EndChargeSound: g_00-n160.aud
+        SelectTargetSound: g_00-i042.aud
+        InsufficientPowerSound: g_00-i024.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: oxbomber
+        DisplayBeacon: True
+        BeaconPoster: airstrikeox
+        BeaconPosterPalette: beaconposter
+        DisplayRadarPing: True
+        CameraActor: camera
    
 GADROP:
     Inherits: ^Building
     Buildable:
         Queue: Building
         BuildPaletteOrder: 111
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~upgrade.st
     Valued:
         Cost: 2000
     Tooltip:
@@ -636,25 +655,6 @@ GADROP:
 #    WithIdleOverlay@STRIP:
 #        Sequence: idle-strip
     ProvidesPrerequisite@buildingname:
-    AirstrikePower@ox:
-        OrderName: OXAirstrikePowerInfoOrder
-        Prerequisites: ~gadrop, garadr
-        Icon: airstrikeox
-        ChargeTime: 300
-        SquadSize: 3
-        QuantizedFacings: 32
-        Description: OX Bombing run
-        LongDesc: Deploy an a bombing run of 3 OX-Bombers.\nVery effective vs buildings and light armored targets.
-        EndChargeSound: g_00-n160.aud
-        SelectTargetSound: g_00-i042.aud
-        InsufficientPowerSound: g_00-i024.aud
-        IncomingSound: g_00-cd004.aud
-        UnitType: oxbomber
-        DisplayBeacon: True
-        BeaconPoster: airstrikeox
-        BeaconPosterPalette: beaconposter
-        DisplayRadarPing: True
-        CameraActor: camera
     
 GAPLUG:
     Inherits: ^Building

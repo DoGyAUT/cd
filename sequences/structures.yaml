@@ -157,45 +157,19 @@ facnst:
 sacnst:
     Defaults:
         Offset: 0, -36
-        UseTilesetCode: true
-    idle: facnst
+        UseTilesetCode: false
+    idle:
         ShadowStart: 3
-    damaged-idle: facnst
+    damaged-idle:
         Start: 1
         ShadowStart: 4
-    dead: facnst
+    dead:
         Start: 2
         ShadowStart: 5
         Tick: 400
-    make: facnstmk
-        Length: 24
-        ShadowStart: 24
-    crane-overlay: facnst_d
-        Length: 20
-        ZOffset: 1023
-    damaged-crane-overlay: facnst_d
-        Length: 20
-        ZOffset: 1023
-    critical-crane-overlay: facnst_d
-        Start: 20
-        Length: 20
-        ZOffset: 1023
-    idle-top: gtcnst_c
-        Length: 15
-        Tick: 200
-    damaged-idle-top: facnst_c
-        Start: 15
-        Length: 15
-        Tick: 200
-    idle-side: gtcnst_a
-        Length: 10
-    damaged-idle-side: facnst_a
-        Start: 10
-        Length: 10
-    idle-front: gtcnst_b
-        Length: 10
-    damaged-idle-front: facnst_b
-        Length: 10
+    make:
+        Length: 3
+        ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
         Offset: 0, 0
@@ -842,9 +816,9 @@ sapowr:
     idle-light: sapowr_a
         Length: 8
         Tick: 100      
-    make: sapowrmk
-        Length: 15
-        ShadowStart: 15
+    make: 
+        Length: 3
+        ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
         Offset: 0, 0
@@ -3246,49 +3220,36 @@ fproc:
     icon: fprocicon
         Offset: 0, 0
         UseTilesetCode: false
-
-
-sproc: # TODO: unused narefn_a
+                        
+saseed:
     Defaults:
-        Offset: -12, -42
+        Offset: 0, -12
         UseTilesetCode: false
-    idle: sarefn
+    idle:
         ShadowStart: 3
-    damaged-idle: sarefn
+    damaged-idle:
         Start: 1
         ShadowStart: 4
-    dead: sarefn
+    dead:
         Start: 2
         ShadowStart: 5
         Tick: 400
-    make: sarefnmk
-        Length: 20
-        ShadowStart: 20
-    flame: ntrefn_b
-        Length: *
-        Tick: 100
-        ZOffset: 128
-    idle-redlights: sarefn_a
-        Length: 6
-        Tick: 120
-    damaged-idle-redlights: sarefn_a
-        Length: 6
-        Tick: 120
-    bib: ntrefnbb
-        ZOffset: -1024
-    damaged-bib: ntrefnbb
-        Start: 1
-        ZOffset: -1024
+    idle-light: sapowr_a
+        Length: 8
+        Tick: 100      
+    make: 
+        Length: 3
+        ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
         Offset: 0, 0
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
-    icon: kprocicon
+    icon: fprocicon
         Offset: 0, 0
-        UseTilesetCode: false  
-        
+        UseTilesetCode: false
+       
 gasilo:
     Defaults: gtsilo
         Offset: 0, -24
