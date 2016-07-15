@@ -36,8 +36,7 @@ KACNST:
     Tooltip:
         Name: Cabal Construction Yard
         Description: Builds base structures.
-    CustomSellValue:
-        Value: 2500
+    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: kmcv
@@ -451,7 +450,7 @@ KABTECH:
         BuildPaletteOrder: 308
         Prerequisites: anypower, cybbar, kaweap, karadr, ~structures.cabal, ~!t1, ~!t2
     Valued:
-        Cost: 2000
+        Cost: 3500
     Tooltip:
         Name: Cyborg Enhancement Center
         Description: Gives access to improved technology.
@@ -472,6 +471,9 @@ KABTECH:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
+    Production:
+        Produces: Tech
+        MoveIntoWorld: false
     ProductionQueue@Tech:
         Type: Tech
         Group: Tech
