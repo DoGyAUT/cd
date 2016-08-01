@@ -1,0 +1,223 @@
+KAWALL:
+    Inherits: ^Wall
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 300
+        Prerequisites: ~structures.cabal
+    SoundOnDamageTransition:
+    Valued:
+        Cost: 200
+    CustomSellValue:
+        Value: 0
+    Tooltip:
+        Name: Concrete Wall
+        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+    Health:
+        HP: 300
+    Armor:
+        Type: Heavy
+    BlocksProjectiles:
+        Height: 640
+    Crushable:
+        CrushClasses: heavywall
+    LineBuild:
+        NodeTypes: wall, turret
+ 
+KAGATE_A:
+    Inherits: ^Gate_A
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 301
+        Prerequisites: ~structures.cabal
+    Tooltip:
+        Name: Cabal Gate
+
+KAGATE_B:
+    Inherits: ^Gate_B
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 302
+        Prerequisites: ~structures.cabal
+    Tooltip:
+        Name: Cabal Gate
+
+KABLASR:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Sabercut
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 303
+        Prerequisites: anypower, kproc, ~structures.cabal
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 60, 60, 0, -12
+    RequiresPower:
+    DisabledOverlay:
+    BodyOrientation:
+        QuantizedFacings: 32
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 5
+        InitialFacing: 222
+    AttackTurreted:
+    Armament:
+        Weapon: LaserFire3
+        LocalOffset: 725,0,1700
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 50
+        RecoilRecovery: 10
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+        Sequence: turret
+    Power:
+        Amount: -100
+    WithMuzzleOverlay:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 3c0
+      
+KABCAN:
+    Inherits: ^Defense
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Plasma Blaster
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 304
+        Prerequisites: anypower, kproc, karadr, ~structures.cabal, ~!t1
+    Building:
+        Footprint: x
+        Dimensions: 1,1
+    Selectable:
+        Bounds: 60, 60, 0, -12
+    RequiresPower:
+    DisabledOverlay:
+    BodyOrientation:
+        QuantizedFacings: 32
+    Health:
+        HP: 1200
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 5
+        InitialFacing: 0
+    AttackTurreted:
+    Armament:
+        Weapon: CabalPulseCannon
+        LocalOffset: 888,0,168
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 50
+        RecoilRecovery: 10
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+        Sequence: turret
+    Power:
+        Amount: -100
+    WithMuzzleOverlay:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 3c0
+
+KDARK:
+    Inherits: ^Defense
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: Obelisk of Darkness
+        Description: Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 305
+        Prerequisites: anypower, kproc, karadr, ~structures.cabal, ~!t1
+    Building:
+        Footprint: x
+        Dimensions: 1,1
+    Selectable:
+        Bounds: 48, 100, 0, -40
+    RequiresPower:
+    DisabledOverlay:
+    Health:
+        HP: 1500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 18c0
+    Armament:
+        Weapon: CabalObeliskLaserAA
+        LocalOffset: 1600,0,2000
+    AttackCharge:
+        ChargeAudio: charge01.aud
+        InitialChargeDelay: 40
+    WithChargeOverlay:
+        Sequence: active
+        Palette: player
+        IsPlayerPalette: true
+    AutoTarget:
+    RenderRangeCircle:
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    Power:
+        Amount: -100
+        
+KOBEL:
+    Inherits: ^Defense
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Core Obelisk
+        Description: Advanced base defense.\nDetects cloaked units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 306
+        Prerequisites: anypower, kproc, karadr, kabtech, ~structures.cabal, ~!t1, ~!t2
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 88, 74, 0, -14
+    RequiresPower:
+    DisabledOverlay:
+    Health:
+        HP: 2200
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 13c0
+    Armament:
+        Weapon: CabalObeliskLaser
+        LocalOffset: 1600,0,800
+    AttackCharge:
+        ChargeAudio: charge01.aud
+        InitialChargeDelay: 40
+    WithChargeOverlay:
+        Sequence: active
+        Palette: player
+        IsPlayerPalette: true
+    AutoTarget:
+    RenderRangeCircle:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 5
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    Power:
+        Amount: -200

@@ -1,0 +1,748 @@
+GACNST:
+    Inherits: ^Building
+    Building:
+        Footprint: xxx xxx xxx
+        BuildSounds: facbld1.aud
+        Dimensions: 3,3
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 100
+        Prerequisites: ~disabled
+        Adjacent: 8
+    Health:
+        HP: 2000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 10c0
+    Production:
+        Produces: Building,Defense
+#    ProductionQueue@Building:
+#        Type: Building
+#        Group: Building
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+#    ProductionQueue@Defense:
+#        Type: Defense
+#        Group: Defense
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: GDI Construction Yard
+        Description: Builds base structures.
+    -Sellable:
+    BaseBuilding:
+    Transforms:
+        IntoActor: gmcv
+        Offset: 1,1
+        Facing: 96
+        DeployCursor: undeploy
+    ProductionBar@Building:
+        ProductionType: Building
+    ProductionBar@Defense:
+        ProductionType: Defense
+#    WithBuildingPlacedOverlay:
+    Power:
+        Amount: 0
+    Selectable:
+        Bounds: 144, 80, 0, -12
+    ProvidesPrerequisite@gdi:
+        Prerequisite: structures.gdi
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+
+GAPOWR:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 101
+        Prerequisites: ~structures.gdi
+    Valued:
+        Cost: 300
+    Tooltip:
+        Name: GDI Power Plant
+        Description: Provides power for other structures.
+    ProvidesPrerequisite:
+        Prerequisite: anypower
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    PowerTooltip:
+    InfiltrateForPowerOutage:
+    AffectedByPowerOutage:
+        Duration: 750
+    Health:
+        HP: 1200
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    WithIdleOverlay@SMOKE:
+        Sequence: idle-smoke
+        Palette: player50alpha
+    WithIdleOverlay@PLUG:
+        Sequence: idle-plug
+    Selectable:
+        Bounds: 90, 84, 0, -12
+    Power:
+        Amount: 100
+    Targetable:
+        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+    ScalePowerWithHealth:
+    DisabledOverlay:
+    GlobalUpgradable@upgrade1:
+        Upgrades: upgrade.gapowerup1
+        Prerequisites: upgrade.gapowerup1
+    GlobalUpgradable@upgrade2:
+        Upgrades: upgrade.gapowerup2
+        Prerequisites: upgrade.gapowerup2
+    Power@pluga:
+        UpgradeTypes: upgrade.gapowerup1
+        UpgradeMinEnabledLevel: 1
+        Amount: 50
+    WithIdleOverlay@pluga:
+        UpgradeTypes: upgrade.gapowerup1
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-powrupa
+    WithIdleOverlay@plugb:
+        UpgradeTypes: upgrade.gapowerup2
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-powrupb
+    Power@plugb:
+        UpgradeTypes: upgrade.gapowerup2
+        UpgradeMinEnabledLevel: 1
+        Amount: 50
+    ProvidesPrerequisite@buildingname:
+
+GPROC:
+    Inherits: ^BuildingInfiltrate
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI Tiberium Refinery
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 102
+        Prerequisites: anypower, ~structures.gdi
+    Building:
+        Footprint: xxx= xx== xxx=
+        Dimensions: 4,3
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: -1
+    Selectable:
+        Bounds: 134, 122, 0, -18
+    Health:
+        HP: 1600
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 6c0
+    TiberianSunRefinery:
+        DockAngle: 160
+        DockOffset: 2,1
+        DiscardExcessResources: true
+    StoresResources:
+        PipColor: Green
+        PipCount: 10
+        Capacity: 1000
+    CustomSellValue:
+        Value: 200
+    FreeActor:
+        Actor: GHARV
+        SpawnOffset: 2,1
+        Facing: 160
+    WithIdleOverlay@REDLIGHTS:
+        Sequence: idle-redlights
+    WithIdleOverlay@BIB:
+        Sequence: bib
+    WithDockedOverlay@flame:
+        Sequence: flame
+        Palette: effect
+    Power:
+        Amount: -30
+    ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
+
+GASILO:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 103
+        Prerequisites: gproc, ~structures.gdi
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: GDI Silo
+        Description: Stores excess Tiberium.\n\nStores 500$.
+    Building:
+        Footprint: xx xx
+        Dimensions: 2, 2
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: -1
+    Selectable:
+        Bounds: 80, 48, -5, 0
+    -GivesBuildableArea:
+    Health:
+        HP: 500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    RenderSprites:
+    WithSpriteBody:
+    WithSiloAnimation:
+    WithIdleOverlay@UNDERLAY:
+        Sequence: idle-underlay
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    StoresResources:
+        PipCount: 5
+        Capacity: 500
+    Power:
+        Amount: -10    
+    
+GAPILE:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 104
+        Prerequisites: anypower, ~structures.gdi
+    Valued:
+        Cost: 300
+    Tooltip:
+        Name: GDI Barracks
+        Description: Produces infantry.
+    ProvidesPrerequisite:
+        Prerequisite: barracks
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 88, 56, 0, -8
+    Health:
+        HP: 1000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 5c0
+    RallyPoint:
+        Offset: 2,3
+        Palette: mouse
+        IsPlayerPalette: false
+    Exit@1:
+        SpawnOffset: -256,1024,0
+        ExitCell: 2,2
+    Production:
+        Produces: Infantry
+    ProductionQueue@Infantry:
+        Type: Infantry
+        Group: Infantry
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    ProductionBar:
+    WithProductionOverlay@LIGHTS:
+        Sequence: production-lights
+    WithIdleOverlay@LIGHT:
+        Sequence: idle-light
+    WithIdleOverlay@FLAG:
+        Sequence: idle-flag
+    WithDecoration@primary:
+        RequiresSelection: true
+        Image: pips
+        Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+        ZOffset: 256
+        UpgradeTypes: primary
+        UpgradeMinEnabledLevel: 1
+    Power:
+        Amount: -20
+    ProvidesPrerequisite@buildingname:
+
+GAWEAP:
+    Inherits: ^Building
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI War Factory
+        Description: Produces vehicles.
+    ProvidesPrerequisite:
+        Prerequisite: factory
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 105
+        Prerequisites: anypower, gproc, ~structures.gdi
+    Building:
+        Footprint: xxx= xxx= xxx=
+        Dimensions: 4,3
+    Selectable:
+        Bounds: 154, 100, -2, -12
+    Health:
+        HP: 1500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    RallyPoint:
+        Offset: 4,1
+        Palette: mouse
+        IsPlayerPalette: false
+    Exit@1:
+        SpawnOffset: -384,-384,0
+        ExitCell: 3,1
+        ExitDelay: 5
+    Production:
+        Produces: Vehicle
+    ProductionQueue@Vehicle:
+        Type: Vehicle
+        Group: Vehicle
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    ProductionBar:
+    WithIdleOverlay@ROOF:
+        Sequence: idle-roof
+    WithProductionDoorOverlay@DOOR:
+    WithProductionOverlay@WHITELIGHTS:
+        Sequence: production-lights-white
+    WithProductionOverlay@REDLIGHTS:
+        Sequence: production-lights-red
+    WithIdleOverlay@TURBINES:
+        Sequence: idle-turbines
+    WithIdleOverlay@BIB:
+        Sequence: bib
+    WithDecoration@primary:
+        RequiresSelection: true
+        Image: pips
+        Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+        ZOffset: 256
+        UpgradeTypes: primary
+        UpgradeMinEnabledLevel: 1
+    Power:
+        Amount: -30
+    ProvidesPrerequisite@buildingname:
+    CustomBuildTimeValue:
+        Value: 1860
+
+GARADR:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 106
+        Prerequisites: anypower, gproc, ~structures.gdi
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: GDI Radar
+        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+    ProvidesPrerequisite:
+        Prerequisite: radar
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 96, 118, 0, -38
+    Health:
+        HP: 1200
+    Armor:
+        Type: Medium
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    ProvidesRadar:
+    InfiltrateForExploration:
+    RenderDetectionCircle:
+    RevealsShroud:
+        Range: 10c0
+    WithIdleOverlay@DISH:
+        Sequence: idle-dish
+        PauseOnLowPower: yes
+    Targetable:
+        TargetTypes: Ground, C4, SpyInfiltrate
+    Power:
+        Amount: -50
+    ProvidesPrerequisite@buildingname:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 20c0
+        CloakTypes: Underground
+    AirstrikePower@orca:
+        OrderName: OGAirstrikePowerInfoOrder
+        Prerequisites: ~garadr
+        Icon: airstrikeog
+        ChargeTime: 180
+        SquadSize: 5
+        QuantizedFacings: 32
+        Description: Gunship strike
+        LongDesc: Deploy an Orca Gunship strike.\nBurns buildings and infantry along a line.
+        EndChargeSound: g_00-n160.aud
+        SelectTargetSound: g_00-i042.aud
+        InsufficientPowerSound: g_00-i024.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: orca_g
+        DisplayBeacon: True
+        BeaconPoster: airstrikeog
+        BeaconPosterPalette: beaconposter
+        DisplayRadarPing: True
+        CameraActor: camera
+    
+GAARMORY:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 107
+        Prerequisites: anypower, gapile, gaweap, garadr, ~structures.gdi, ~!t1
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: GDI Armory
+        Description: Gives access to research projects and subfactions.\nPromotes new infantry to veterancy rank 1.
+    Building:
+        Footprint: xx xx xx
+        Dimensions: 2,3
+    Selectable:
+        Bounds: 88, 56, 0, -8
+    Health:
+        HP: 1600
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 5c0
+    Power:
+        Amount: -20
+    Production:
+        Produces: Tech
+        MoveIntoWorld: false
+    Exit:
+    ProductionBar@Tech:
+        ProductionType: Tech
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    ProvidesPrerequisite:
+        Prerequisite: barracks.upgraded
+    ProvidesPrerequisite@buildingname:
+
+GAHPAD:
+    Inherits: ^Building
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: GDI Helipad
+        Description: Produces, rearms and\nrepairs aircraft.
+    Buildable:
+        BuildPaletteOrder: 108
+        Queue: Building
+        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Health:
+        HP: 800
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 5c0
+    Exit@1:
+        SpawnOffset: 0,-256,0
+    RallyPoint:
+        Palette: mouse
+        IsPlayerPalette: false
+    ProductionFromMapEdge:
+        Produces: Air
+    ProductionQueue@Air:
+        Type: Air
+        Group: Air
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    Reservable:
+    RepairsUnits:
+        HpPerStep: 10
+        Interval: 10
+        FinishRepairingNotification: UnitRepaired
+    ProductionBar:
+    WithIdleOverlay@PLATFORM:
+        Sequence: idle-platform
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    WithDeathAnimation@BIB:
+        DeathSequence: dead-platform
+        UseDeathTypeSuffix: false
+    Power:
+        Amount: -10
+    Selectable:
+        Bounds: 88, 66, 0, -5
+    WithDecoration@primary:
+        RequiresSelection: true
+        Image: pips
+        Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+        ZOffset: 256
+        UpgradeTypes: primary
+        UpgradeMinEnabledLevel: 1
+    ProvidesPrerequisite@buildingname:
+
+GADEPT:
+    Inherits: ^Building
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Service Depot
+        Description: Gives access to advanced vehicles.\nRepairs vehicles.
+    Buildable:
+        BuildPaletteOrder: 109
+        Prerequisites: anypower, gaweap, ~structures.gdi, ~!t1
+        Queue: Building
+    Building:
+        Footprint: =x= xxx =x=
+        Dimensions: 3,3
+    Selectable:
+        Bounds: 98, 68, -6, -6
+    Health:
+        HP: 1500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 5c0
+    Reservable:
+    RepairsUnits:
+        HpPerStep: 10
+        Interval: 10
+        FinishRepairingNotification: UnitRepaired
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    RallyPoint:
+        Palette: mouse
+        IsPlayerPalette: false
+    WithIdleOverlay@LIGHT:
+        Sequence: idle-light
+    WithIdleOverlay@GROUND:
+        Sequence: ground
+    WithRepairOverlay@CIRCUITS:
+        Sequence: circuits
+    WithRepairOverlay@CRANE:
+        Sequence: crane
+    WithRepairOverlay@PLATFORM:
+        Sequence: platform
+    WithDeathAnimation@BIB:
+        DeathSequence: dead-ground
+        UseDeathTypeSuffix: false
+    Power:
+        Amount: -30
+    ProvidesPrerequisite@buildingname:
+
+GATECH:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 110
+        Prerequisites: anypower, garadr, gaarmory, ~structures.gdi, ~!t1, ~!t2
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI Tech Center
+        Description: Provides access to advanced GDI technologies.
+    ProvidesPrerequisite:
+        Prerequisite: tech
+    Building:
+        Footprint: xxx xxx
+        Dimensions: 3,2
+    Selectable:
+        Bounds: 110, 60, 3, -4
+    Health:
+        HP: 1800
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    Power:
+        Amount: -150
+    ProvidesPrerequisite@buildingname:
+    AirstrikePower@ox:
+        OrderName: OXAirstrikePowerInfoOrder
+        Prerequisites: ~gadrop, garadr
+        Icon: airstrikeox
+        ChargeTime: 300
+        SquadSize: 3
+        QuantizedFacings: 32
+        Description: OX Bombing run
+        LongDesc: Deploy an a bombing run of 3 OX-Bombers.\nVery effective vs buildings and light armored targets.
+        EndChargeSound: g_00-n160.aud
+        SelectTargetSound: g_00-i042.aud
+        InsufficientPowerSound: g_00-i024.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: oxbomber
+        DisplayBeacon: True
+        BeaconPoster: airstrikeox
+        BeaconPosterPalette: beaconposter
+        DisplayRadarPing: True
+        CameraActor: camera
+   
+GADROP:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 111
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~upgrade.st
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI Dropship-Bay
+        Description: Provides access to GDI strongest arsenal.
+    Building:
+        Footprint: xxx xxx xxx
+        Dimensions: 3,3
+    Selectable:
+        Bounds: 144, 80, 0, -12
+    Health:
+        HP: 2000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 5c0
+    Power:
+        Amount: -200
+    WithIdleOverlay@DISH:
+        Sequence: idle-dish
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+#    WithIdleOverlay@STRIP:
+#        Sequence: idle-strip
+    ProvidesPrerequisite@buildingname:
+    
+GAPLUG:
+    Inherits: ^Building
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI Upgrade Center
+        Description: Can be upgraded for additional technology and superweapons.
+    Selectable:
+        Bounds: 115,104,0,-24
+    Buildable:
+        BuildPaletteOrder: 112
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Queue: Building
+    Building:
+        Footprint: xxx xxx
+        Dimensions: 2,3
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    WithIdleOverlay@DISH:
+        Sequence: idle-dish
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    WithIdleOverlay@STRIP:
+        Sequence: idle-strip
+    Health:
+        HP: 2200
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 6c0
+    IonCannonPower:
+        UpgradeTypes: plug.ioncannon
+        UpgradeMinEnabledLevel: 1
+        Icon: ioncannon
+        Effect: ionbeam
+        ChargeTime: 180
+        Description: Ion Cannon
+        LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+        DisplayRadarPing: True
+        CameraActor: camera
+    ProduceActorPower:
+        UpgradeTypes: plug.hunterseeker
+        UpgradeMinEnabledLevel: 1
+        Description: Hunter Seeker
+        LongDesc: Releases a drone that will acquire and destroy an enemy target.
+        Icon: hunterseeker
+        Actors: hunter
+        Type: HunterSeeker
+        ChargeTime: 720
+    Production:
+        Produces: HunterSeeker
+    Exit@1:
+    SupportPowerChargeBar:
+    Power:
+        Amount: -150
+    Power@ioncannon:
+        UpgradeTypes: plug.ioncannon
+        UpgradeMinEnabledLevel: 1
+        Amount: -100
+    Power@hunterseeker:
+        UpgradeTypes: plug.hunterseeker
+        UpgradeMinEnabledLevel: 1
+        Amount: -50
+    Pluggable@pluga:
+        Offset: 0,2
+        Upgrades:
+            plug.ioncannon: plug.ioncannon, plug.ioncannona
+            plug.hunterseeker: plug.hunterseeker, plug.hunterseekera
+    WithIdleOverlay@ioncannona:
+        UpgradeTypes: plug.ioncannona
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-ioncannona
+    WithIdleOverlay@hunterseekera:
+        UpgradeTypes: plug.hunterseekera
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-hunterseekera
+    Pluggable@plugb:
+        Offset: 1,2
+        Upgrades:
+            plug.ioncannon: plug.ioncannon, plug.ioncannonb
+            plug.hunterseeker: plug.hunterseeker, plug.hunterseekerb
+    WithIdleOverlay@ioncannonb:
+        UpgradeTypes: plug.ioncannonb
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-ioncannonb
+    WithIdleOverlay@hunterseekerb:
+        UpgradeTypes: plug.hunterseekerb
+        UpgradeMinEnabledLevel: 1
+        Sequence: idle-hunterseekerb
+    ProvidesPrerequisite@buildingname:
+    SelectionDecorations:
+        VisualBounds: 115,104,0,-24

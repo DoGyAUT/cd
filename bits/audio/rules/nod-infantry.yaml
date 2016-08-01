@@ -1,0 +1,507 @@
+NASOL:
+    Inherits@1: ^Soldier
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 200
+        Prerequisites: ~nahand, ~!propaganda
+    Valued:
+        Cost: 80
+    Tooltip:
+        Name: Rookie
+        Description: General-purpose infantry.\nGranted better weapon on rank 5.\n\nPossible upgrades\n 50% cheaper (Propaganda)\n\n  Strong vs Infantry\n  Weak vs Dogs, Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: Rookie
+    Voiced:
+        VoiceSet: Rookie
+        Volume: 2
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 80
+    RevealsShroud:
+        Range: 8c0
+    Armament@PRIMARY:
+        Weapon: Minigun2
+        LocalOffset: 256,0,550
+        UpgradeTypes: eliteweapon
+        UpgradeMaxEnabledLevel: 0
+        UpgradeMaxAcceptedLevel: 1
+    Armament@ELITE:
+        Weapon: M1Carbine
+        LocalOffset: 256,0,550
+        UpgradeTypes: eliteweapon
+        UpgradeMinEnabledLevel: 1
+    AttackFrontal:
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+        
+NASOL2:
+    Inherits: NASOL
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 200
+        Prerequisites: ~nahand, ~propaganda
+    RenderSprites:
+        Image: NASOL
+    Valued:
+        Cost: 40
+       
+E3:
+    Inherits@1: ^Soldier
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 201
+        Prerequisites: ~nahand, ~!propaganda
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Rocketeer
+        Description: Anti-Armor infantry.\n\nPossible upgrades\n 50% cheaper (propaganda)\n Multi-Purpose laser weapon (Technology)\n\n  Strong vs Aircraft, Light armor, Medium armor\n  Weak vs Dogs, Infantry, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+        Class: Rocketeer
+    Voiced:
+        VoiceSet: Rocketeer
+        Volume: 2
+    Health:
+        HP: 125
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 9c0
+    Armament@PRIMARY:
+        Weapon: Bazooka
+        LocalOffset: 280,84,700
+        UpgradeTypes: technology
+        UpgradeMaxEnabledLevel: 0
+    AttackFrontal:
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+    GlobalUpgradable@upgrade:
+        Upgrades: technology
+        Prerequisites: technology
+    Armament@upgrade:
+        Weapon: InfLaserFire
+        LocalOffset: 280,84,700
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+    Armament@color1:
+        Weapon: InfLaserFirea
+        LocalOffset: 280,84,700
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+    Armament@color2:
+        Weapon: InfLaserFireb
+        LocalOffset: 280,84,700
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+    Armament@color3:
+        Weapon: InfLaserFirec
+        LocalOffset: 280,84,700
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        
+E32:
+    Inherits: E3
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 201
+        Prerequisites: ~nahand, ~propaganda
+    RenderSprites:
+        Image: E3
+    Valued:
+        Cost: 125
+
+CHAMSPY:
+    Inherits: ^Soldier
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 203
+        Prerequisites: ~nahand
+    Valued:
+        Cost: 300
+    Tooltip:
+        Name: Chameleon Spy
+        Description: Stealthed infiltrator unit.\n\n  Unarmed
+    Selectable:
+        Priority: 5
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Spy
+        Volume: 2
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 80
+    RevealsShroud:
+        Range: 10c0
+    AttackFrontal:
+#    Infiltrates:
+#        Types: SpyInfiltrate
+    -Cloak@CLOAKGENERATOR:
+    Cloak:
+        IsPlayerPalette: true
+#        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
+
+NDOG:
+    Inherits: ^SoldierFearless
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 204
+        Prerequisites: ~nahand
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Attack Dog
+        Description: Anti-Infantry combat dog.\nDetects stealth.\n\n  Strong vs Infantry, Dogs\n  Weak vs Everthing else 
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Dog
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 90
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Weapon: DogJaw
+    AttackLeap:
+        Speed: 100
+        Angle: 56
+        FacingTolerance: 20
+    WithInfantryBody:
+        IdleSequences: idle1,idle2,idle3
+    IgnoresDisguise:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 5c0
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+    AutoTarget:
+        ScanRadius: 5
+    SpawnActorOnDeath:
+        Actor: doggie
+        Probability: 10
+        OwnerType: InternalName
+        InternalOwner: Creeps
+        DeathType: EnergyDeath # TODO: FIX ME! (Tiberium currently uses the wrong damage type!)
+        RequiresLobbyCreeps: true
+        
+NENGINEER:
+    Inherits: ^Soldier
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Saboteur
+        Description: Captures enemy structures.\n\nPossible upgrades\n Stealth (Technology)\n\n  Unarmed
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 205
+        Prerequisites: ~nahand
+    Selectable:
+        Priority: 5
+        Bounds: 12,17,0,-6
+    Voiced:
+        VoiceSet: Saboteur
+        Volume: 2
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 6c0
+    Health:
+        HP: 60
+    Armor:
+        Type: Light
+    Passenger:
+        PipType: Yellow
+    EngineerRepair:
+    RepairsBridges:
+        RepairNotification: BridgeRepaired
+	ExternalCaptures:
+		Type: building
+    -AutoTarget:
+    -GainsExperience:     
+    GlobalUpgradable@upgrade:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+    -Cloak@CLOAKGENERATOR
+    Cloak:
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+        
+FANATIC:
+    Inherits@1: ^SoldierFearless
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 206
+        Prerequisites: ~nahand, naradr, ~!t1, ~propaganda
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Fanatic
+        Description: Suicide infantry.\nExclusive to Propaganda ideology.\nCan explode on death\n\n  Strong vs Ground targets\n  Weak vs Everything
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Fanatic
+        Volume: 2
+    Health:
+        HP: 150
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 90
+    RevealsShroud:
+        Range: 6c0
+    Armament@primary:
+        Weapon: FanticBoom
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2
+    Explodes:
+        Weapon: FanticBoomExplosion
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+    AutoTarget:
+        ScanRadius: 5
+        
+NACAD:
+    Inherits@1: ^Soldier
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 207
+        Prerequisites: ~nahand, naradr, ~!t1, ~!propaganda
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Elite Cadre
+        Description: Advanced General-purpose infantry.\n\nPossible upgrades\n Stealth (Technology)\n\n  Strong vs Infantry, Light Armor\n  Weak vs Dogs, Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Bhand
+        Volume: 2
+    Health:
+        HP: 360
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 70
+    RevealsShroud:
+        Range: 8c0
+    Armament@PRIMARY:
+        Weapon: M2Carbine
+        LocalOffset: 256,0,550
+    Armament@secondary:
+        Weapon: M203
+        LocalOffset: 256,0,550
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2
+    GlobalUpgradable@upgrade:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+    -Cloak@CLOAKGENERATOR
+    Cloak:
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+       
+NCONF:
+    Inherits: ^Soldier
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 207
+        Prerequisites: ~nahand, naradr, ~!t1, ~propaganda
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Confessor
+        Description: Advanced General-purpose infantry.\nExclusive to Propaganda ideology.\nBuffs friendly Nod infantry in range.\nDetects Stealth\n\nPossible upgrades\n Stealth (Technology)\n\n  Strong vs Infantry, Light Armor\n  Weak vs Dogs, Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Confessor
+        Volume: 2
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 70
+    RevealsShroud:
+        Range: 8c0
+    Armament@PRIMARY:
+        Weapon: M2Carbine
+        LocalOffset: 256,0,550
+    Armament@secondary:
+        Weapon: M203
+        LocalOffset: 256,0,550
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2
+    GlobalUpgradable@upgrade:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+    -Cloak@CLOAKGENERATOR
+    Cloak:
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
+    UpgradeActorsNear:
+        Upgrades: confessorboost
+        Range: 6c0
+        
+SHADOW:
+    Inherits@1: ^Soldier
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 208
+        Prerequisites: ~nahand, napyra, ~!t1, ~technology
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Shadow Trooper
+        Description: Advanced Anti-infantry.\n\nPossible upgrades\n Stealth (Technology)\n EMP Bullets (Technology)\n\n  Strong vs Infantry, Light Armor\n  Weak vs Dogs, Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Shadow
+        Volume: 2
+    Health:
+        HP: 160
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 80
+    RevealsShroud:
+        Range: 11c0
+    Armament@PRIMARY:
+        Weapon: ShadowSniper
+        LocalOffset: 256,0,550
+        UpgradeTypes: technology
+        UpgradeMaxEnabledLevel: 0
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2
+    GlobalUpgradable@upgrade:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+    -Cloak@CLOAKGENERATOR
+    Cloak:
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+    Armament@upgrade:
+        Weapon: ShadowSniperEMP
+        LocalOffset: 256,0,550
+        UpgradeTypes: technology
+        UpgradeMinEnabledLevel: 1
+        
+BHAND:
+    Inherits@1: ^SoldierFearlessVeryHeavy
+    Inherits@2: ^InitiateUpgrades
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 207
+        Prerequisites: ~nahand, napyra, ~!t1, ~industry
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Black Hand Flamer
+        Description: Heavy infantry.\nImmune to Tiberium radiation.\nImmune to dog attacks (Devourer excluded)\nCan explode on death\n\n  Strong vs Infantry, Buildings, Light armor\n  Weak vs Armor, Aircraft, Artillery
+    Selectable:
+        Bounds: 14,30,0,-7
+    Voiced:
+        VoiceSet: Bhand
+        Volume: 2
+    Health:
+        HP: 300
+    Armor:
+        Type: Heavy
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 9c0
+    Armament@PRIMARY:
+        Weapon: BlackHandFlamer
+        LocalOffset: 400,0,450
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2
+    -PoisonedByTiberium:
+    Explodes:
+        Weapon: UnitExplodeSmall
+        Chance: 50
+        TargetTypes: Ground, VeryHeavyInfantry, Flameproof
+       
+SPRAY:
+    Inherits@1: ^Soldier
+    Inherits@2: ^InitiateUpgrades
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Tiberium Trooper
+        Description: Advanced infantry.\nExclusive to Technology + Industry ideology.\nImmune to Tiberium radiation.\n\n  Strong vs Infantry, Cyborgs, Armor, Buildings\n  Weak vs Infantry, Aircraft, Artillery
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Bhand
+        Volume: 2
+    Health:
+        HP: 260
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 9c0
+    Armament@PRIMARY:
+        Weapon: TibLaser
+        LocalOffset: 256,0,550
+    -PoisonedByTiberium:
+    AttackFrontal:
+    WithInfantryBody:
+        IdleSequences: idle1,idle2

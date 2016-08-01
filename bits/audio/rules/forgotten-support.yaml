@@ -1,0 +1,173 @@
+FAWALL:
+    Inherits: ^Wall
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 400
+        Prerequisites: ~structures.forgotten
+    SoundOnDamageTransition:
+    Valued:
+        Cost: 200
+    CustomSellValue:
+        Value: 0
+    Tooltip:
+        Name: Concrete Wall
+        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+    Health:
+        HP: 300
+    Armor:
+        Type: Heavy
+    BlocksProjectiles:
+        Height: 640
+    Crushable:
+        CrushClasses: heavywall
+    LineBuild:
+        NodeTypes: wall, turret
+        
+FAGATE_A:
+    Inherits: ^Gate_A
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 401
+        Prerequisites: ~structures.forgotten
+    Tooltip:
+        Name: Forgotten Gate
+
+FAGATE_B:
+    Inherits: ^Gate_B
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 402
+        Prerequisites: ~structures.forgotten
+    Tooltip:
+        Name: Forgotten Gate
+
+FATOWER:
+    Inherits: ^Defense
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 403
+        Prerequisites: anypower, fproc, ~structures.forgotten
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Watch Tower
+        Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery, Armor
+    Building:
+        Footprint: x
+        Dimensions: 1, 1
+    Selectable:
+        Bounds: 48, 62, 0, -25
+    Power:
+        Amount: 0
+    Armor:
+        Type: Medium
+    Health:
+        HP: 500
+    RevealsShroud:
+        Range: 10c0
+    Armament:
+        Weapon: WatchMG
+        LocalOffset: 0,0,1000
+    AttackOmni:
+    AutoTarget:
+    RenderRangeCircle:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+    WithIdleOverlay@flag:
+        Sequence: idle-flag
+    ProvidesPrerequisite@buildingname:
+ 
+FAFLAK:
+    Inherits: ^Defense
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 404
+        Prerequisites: anypower, fproc, faradr, ~structures.forgotten, ~!t1
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Flak Cannon
+        Description: Anti-Air base defense.\nRequires no power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
+    Building:
+        Footprint: x
+        Dimensions: 1, 1
+    Selectable:
+        Bounds: 48, 40, 0, 8
+    Power:
+        Amount: 0
+    Armor:
+        Type: Medium
+    Health:
+        HP: 500
+    RevealsShroud:
+        Range: 13c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    Turreted:
+        TurnSpeed: 12
+        InitialFacing: 0
+        Offset: 0,0,0
+    Armament:
+        Weapon: FlakCannon
+        LocalOffset: 350,96,600, 350,-96,600, 300,96,700, 300,-96,700
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    AttackTurreted:
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+    WithMuzzleOverlay:
+    ProvidesPrerequisite@buildingname:
+
+FAMISSILE:
+    Inherits: ^Defense
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 405
+        Prerequisites: anypower, fproc, faradr, ~structures.forgotten, ~!t1
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: MLRS Pad
+        Description: Anti-Armor base defense.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft
+    Building:
+        Footprint: xx xx
+        Dimensions: 2, 2
+    Selectable:
+        Bounds: 60, 48, -5, 0
+    Power:
+        Amount: -50
+    Armor:
+        Type: Medium
+    Health:
+        HP: 1000
+    RevealsShroud:
+        Range: 13c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    Turreted:
+        TurnSpeed: 8
+        InitialFacing: 90
+        Offset: 0,0,0
+    Armament:
+        Weapon: MLRSBarrage
+        LocalOffset: 350,200,700, 350,0,700, 350,-200,700, 200,200,1000, 200,0,1000, 200,-200,1000
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+    DisabledOverlay:
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+    AttackTurreted:
+    AutoTarget:
+    RenderRangeCircle:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 3c0
+    WithSpriteTurret:
+        Recoils: yes
+    WithMuzzleOverlay:
+    ProvidesPrerequisite@buildingname:

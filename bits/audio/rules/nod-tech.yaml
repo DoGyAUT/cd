@@ -1,0 +1,50 @@
+upgrade.industry:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Industry
+        Description: Choose Industrial Ideology. \nSpecialized in improved economy, subterranean units, vehicles and aircraft . \n \n Grants access to the following tech: \n -Harvester (Subterranean-Upgrade) \n -Subterranean APC \n -EMP Rounds for Specter  \n -Advanced Power Plant \n -Gorran AIV Tank (replaces Raider)
+    Buildable:
+        BuildPaletteOrder: 200
+        Prerequisites: ~!t1, ~structures.nod
+        Queue: Tech
+        IconPalette: ni
+    Valued:
+        Cost: 100
+    RenderSprites:
+        Image: ni
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: industry
+
+upgrade.tech:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Technology
+        Description: Choose Technology Ideology. \nSpecialized in advanced tech like stealth, laser and plasma. \n \n Grants access to the following tech: \n -Harvester (Stealth-Upgrade) \n -Saboteur (Camoflage-Upgrade) \n -Shadow Troopers (Perma-Camoflage-upgrade) \n -Elite Cadre (Camoflage) \n -Cheetah (Laser cannon upgrade) \n -Rocketeer (Laser gun upgrade) \n -Specter (Perma-Stealth-upgrade) \n -Laser Turret (Stealth-Upgrade & improved range)
+    Buildable:
+        BuildPaletteOrder: 201
+        Prerequisites: ~!t1, ~structures.nod
+        Queue: Tech
+        IconPalette: nt
+    Valued:
+        Cost: 100
+    RenderSprites:
+        Image: nt
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: technology
+    
+upgrade.propaganda:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Propaganda
+        Description: Choose Propaganda Ideology. \nSpecialized in infantry and support powers. \n \n Grants access to the following tech: \n -Rookie (50% cheaper)  \n -Rocketeer (50% cheaper) \n -Confessor (replaces Elite Cadre) 
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~!t1, ~structures.nod
+        Queue: Tech
+        IconPalette: np
+    Valued:
+        Cost: 100
+    RenderSprites:
+        Image: np
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: propaganda

@@ -1,0 +1,643 @@
+VENOM:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 900
+    Tooltip:
+        Name: Venom
+        Description: Anti-personnel support gunship\narmed with dual chain guns.\n equipped with advanced sensors for stealth detection\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 200
+        Prerequisites: ~nahpad, ~!industry
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 6
+        Speed: 190
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 10c0
+        Type: CenterPosition
+    Armament@primary:
+        Name: primary
+        Weapon: VenomCannon
+        LocalOffset: 660,96,48, 660,-96,48
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        UpgradeTypes: technology
+        UpgradeMaxEnabledLevel: 0
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool:
+        Name: primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    DetectCloaked:
+        Range: 5c0
+    RenderDetectionCircle:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    Contrail@1:
+        Offset: 256,512,256
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: 256,-512,256
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    SpawnActorOnDeath:
+        Actor: VENOM.Husk
+        Probability: 80
+
+HYDRA:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1400
+    Tooltip:
+        Name: Hydra
+        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 201
+        Prerequisites: ~nahpad, ~industry
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 5
+        Speed: 140
+        IdealSeparation: 2048
+    Health:
+        HP: 600
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: HydraCannon
+        LocalOffset: 800,0,256
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Armament@primary2:
+        Weapon: HydraMissiles
+        LocalOffset: 90,240,128, 90,-240,128, 90,190,128, 90,-190,128, 90,290,128, 90,-290,128
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:primary2
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    GlobalUpgradable@upgrade:
+        Upgrades: industry
+        Prerequisites: industry
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    -WithVoxelBody:
+    WithVoxelBody@default:
+        UpgradeTypes: industry
+        UpgradeMaxEnabledLevel: 0
+    WithVoxelBody@default2:
+        Sequence: idle2
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    WithMuzzleOverlay:
+    WithIdleOverlay@ROTORAIR:
+        Offset: 0,0,930
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND:
+        Offset: 0,0,930
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+    DetectCloaked:
+        Range: 5c0
+    RenderDetectionCircle:
+    SpawnActorOnDeath:
+        Actor: HYDRA.Husk
+        Probability: 80
+        
+HAVOC:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1800
+    Tooltip:
+        Name: Havoc
+        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 202
+        Prerequisites: ~nahpad, naradr, napyra, ~!t1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 130
+        IdealSeparation: 2048
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 10c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: HavocCannon
+        LocalOffset: 650,0,128
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Armament@primary2:
+        Weapon: HavocMissiles
+        LocalOffset: 256,128,128, 256,-128,128
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:primary2
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    WithIdleOverlay@ROTORAIR1:
+        Offset: 200,700,900
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND1:
+        Offset: 200,700,900
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+    WithIdleOverlay@ROTORAIR2:
+        Offset: 200,-700,900
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+    WithIdleOverlay@ROTORGROUND2:
+        Offset: 200,-700,900
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    SpawnActorOnDeath:
+        Actor: HAVOC.Husk
+        Probability: 80
+    
+SCRIN:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Banshee Fighter
+        Description: Fast fighter based on alien technology.\nArmed with prototype plasma cannons.\n  Strong vs Infantry\n  Weak vs Armored Targets
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 5
+        Speed: 360
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 500
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 18c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: BansheeCannon
+        LocalOffset: 550,0,32
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -512,128,192
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -512,-128,192
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True  
+    Contrail@3:
+        Offset: -512,128,96
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@4:
+        Offset: -512,-128,96
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True  
+    SpawnActorOnDeath:
+        Actor: SCRIN.Husk
+        Probability: 80
+
+RAVEN:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Raven
+        Description: Fast attack fighter designed for air-superiority.\nArmed with 4 machineguns.\n  Strong vs Aircraft\n  Useless vs Ground Targets
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 203
+        Prerequisites: ~nahpad, naradr, napyra, ~!t1, ~!t2, ~!technology
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 6
+        Speed: 380
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 400
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 18c0
+        Type: CenterPosition
+    Armament@primaryAA:
+        Weapon: RavenCannonAA
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 700,128,200, 700,-128,200
+    Armament@primary2AAwings:
+        Weapon: RavenCannonAA
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        FireDelay: 5
+        LocalOffset: 256,800,-32, 256,-800,-32
+        UpgradeTypes: technology
+        UpgradeMaxEnabledLevel: 0
+    -Cloak@CLOAKGENERATOR:
+    Cloak@upgrade:
+        InitialDelay: 90
+        CloakDelay: 180
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 99
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+    AttackPlane:
+        FacingTolerance: 20
+        AttackTurnDelay: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 80
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithMuzzleOverlay:
+    Contrail@1:
+        Offset: -555,0,256
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    SpawnActorOnDeath:
+        Actor: RAVEN.Husk
+        Probability: 80
+    GlobalUpgradable@upgrade1:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+
+SCRINB:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2400
+    Tooltip:
+        Name: Banshee MK.II
+        Description: Advanced version of the Banshee fighter with better armament.\n  Strong vs Infantry, Light Armor\n  Weak vs 
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 204
+        Prerequisites: ~nahpad, naradr, napyra, ~!t1, ~!t2, ~technology
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 330
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 700
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 18c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: BansheeCannon
+        LocalOffset: 550,0,32
+    Armament@secondary:
+        Weapon: BansheeProton
+        LocalOffset: 550,0,32
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:secondary
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
+        Offset: -512,180,160
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -512,-180,160
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True  
+     Contrail@3:
+        Offset: -512,180,32
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@4:
+        Offset: -512,-180,32
+        TrailLength: 25
+        Color: 0080FF
+        UsePlayerColor: True    
+    SpawnActorOnDeath:
+        Actor: SCRINB.Husk
+        Probability: 80
+        
+VERTIGO:
+    Inherits: ^AttackBomber
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: Vertigo Bomber
+        Description: Advanced versatile bomber craft.\nArmable with different loads, depending on favoured Ideologies.\n  Strong vs Slow Targets, \n  Weak vs Fast Targets\n  Useless vs Aircraft
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 205
+        Prerequisites: ~nahpad, naradr, napyra, ~!t1, ~!t2, ~!propaganda
+    Voiced:
+        VoiceSet: Vertigo
+        Volume: 2
+    Selectable:
+        Bounds: 60,48
+    Aircraft:
+        TurnSpeed: 3
+        Speed: 300
+    Health:
+        HP: 700
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 15c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: VertigoBomb
+        UpgradeTypes: industry
+        UpgradeMaxEnabledLevel: 0
+    Armament@primary2:
+        Weapon: VertigoBombEMP
+        UpgradeTypes: industry
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 1
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 1
+        PipCount: 1
+        ReloadCount: 5
+        ReloadDelay: 50
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    -Cloak@CLOAKGENERATOR:
+    Cloak@upgrade:
+        InitialDelay: 90
+        CloakDelay: 200
+        UpgradeTypes: cloakgenerator
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxEnabledLevel: 99
+        UpgradeMaxAcceptedLevel: 99
+        IsPlayerPalette: true
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+    GlobalUpgradable@upgrade1:
+        Upgrades: technology, cloakgenerator
+        Prerequisites: technology
+    GlobalUpgradable@upgrade2:
+        Upgrades: industry
+        Prerequisites: industry
+    Contrail@1:
+        Offset: -512,500,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@2:
+        Offset: -512,-500,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True  
+    Contrail@3:
+        Offset: -256,650,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@4:
+        Offset: -256,-650,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True 
+    Contrail@5:
+        Offset: -128,800,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True
+    Contrail@6:
+        Offset: -128,-800,0
+        TrailLength: 25
+        TrailWidth: 25
+        Color: 0080FF
+        UsePlayerColor: True 
+    SpawnActorOnDeath:
+        Actor: VERTIGO.Husk
+        Probability: 80
+        
+ZEP:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Brotherhood Battleship
+        Description: Huge Zeppelin, armed with bombs and propaganda speakers./nExclusive to the Propaganda ideology.
+    Buildable:
+        Queue: Air
+        BuildPaletteOrder: 206
+        Prerequisites: ~nahpad, naradr, napyra, ~!t1, ~!t2, ~!t3, ~propaganda
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Selectable:
+        Bounds: 60,48,0,-10
+    Aircraft:
+        TurnSpeed: 1
+        CruiseAltitude: 8192
+        Speed: 20
+        IdealSeparation: 4096
+        AltitudeVelocity: 40
+    Health:
+        HP: 3000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 14c0
+        Type: CenterPosition
+    Armament@primary:
+        Weapon: ZepBomb
+        LocalOffset: -256,0,-1024
+    AttackHeli:
+        FacingTolerance: 20
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    GlobalUpgradable@upgrade:
+        Upgrades: propaganda
+        Prerequisites: propaganda
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+        Scale: 2
+    -WithVoxelBody:
+    WithVoxelWalkerBody:
+        TickRate: 2
+    DetectCloaked:
+        Range: 10c0
+    RenderDetectionCircle:
+    SpawnActorOnDeath:
+        Actor: ZEP.Husk
+        Probability: 80
+    UpgradeActorsNear:
+        Upgrades: confessorboost
+        Range: 10c0
+    AmbientSound:
+        SoundFile: propaganda.aud

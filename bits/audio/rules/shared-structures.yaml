@@ -1,0 +1,56 @@
+ANYPOWER:
+    AlwaysVisible:
+    Tooltip:
+        Name: Power Plant
+        Description: Power Plant
+
+BARRACKS:
+    AlwaysVisible:
+    Tooltip:
+        Name: Infantry Production
+        Description: Infantry Production
+
+FACTORY:
+    AlwaysVisible:
+    Tooltip:
+        Name: Vehicle Production
+        Description: Vehicle Production
+
+RADAR:
+    AlwaysVisible:
+    Tooltip:
+        Name: Radar
+        Description: Radar
+
+TECH:
+    AlwaysVisible:
+    Tooltip:
+        Name: Tech Center
+        Description: Tech Center
+        
+TIBTECH:
+    Inherits: ^Building
+    Tooltip:
+        Name: Tiberium Drill Station
+    Building:
+        Footprint: xxxx xxxx xxxx xxxx
+        Dimensions: 4, 4
+    Armor:
+        Type: Heavy
+    Health:
+        HP: 2000
+    -MustBeDestroyed:
+    -Sellable:
+    -GivesBuildableArea:
+    Selectable:
+        Bounds: 78, 54, 0, -8
+    RevealsShroud:
+        Range: 8c0
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+    AutoTargetIgnore:
+    CashTrickler:
+        Period: 50
+        Amount: 15
+        CaptureAmount: 0
+   

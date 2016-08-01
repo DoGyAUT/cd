@@ -1,0 +1,132 @@
+SACNST:
+    Inherits: ^Building
+    Building:
+        Footprint: xxx xxx xxx
+        BuildSounds: facbld1.aud
+        Dimensions: 3,3
+        TerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 500
+        Prerequisites: ~disabled
+        Adjacent: 8
+    Health:
+        HP: 2000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 10c0
+    Production:
+        Produces: Building,Defense
+#    ProductionQueue@Building:
+#        Type: Building
+#        Group: Building
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+#    ProductionQueue@Defense:
+#        Type: Defense
+#        Group: Defense
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: Scrin Hive
+        Description: Builds base structures.
+    CustomSellValue:
+        Value: 2500
+    BaseBuilding:
+    Transforms:
+        IntoActor: smcv
+        Offset: 1,1
+        Facing: 96
+        DeployCursor: undeploy
+    ProductionBar@Building:
+        ProductionType: Building
+    ProductionBar@Defense:
+        ProductionType: Defense
+#    WithBuildingPlacedOverlay:
+    Power:
+        Amount: 0
+    Selectable:
+        Bounds: 80, 144, 0, -12
+    ProvidesPrerequisite@scrin:
+        Prerequisite: structures.scrin
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+    CashTrickler:
+        Period: 100
+        Amount: 100
+
+SAPOWR:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 501
+        Prerequisites: ~structures.scrin
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Dark Matter Generator
+        Description: Provides power for other structures.
+    ProvidesPrerequisite:
+        Prerequisite: anypower
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    PowerTooltip:
+    InfiltrateForPowerOutage:
+        Duration: 750
+    AffectedByPowerOutage:
+    Selectable:
+        Bounds: 88, 80, 2, -12
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    Power:
+        Amount: 200
+    Targetable:
+        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+    ScalePowerWithHealth:
+    DisabledOverlay:
+    
+SASEED:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 502
+        Prerequisites: ~structures.scrin
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Tiberium Stimulator
+        Description: Seeds Tiberium.
+    ProvidesPrerequisite:
+        Prerequisite: anypower
+    Building:
+        Footprint: x
+        Dimensions: 1,1
+    Selectable:
+        Bounds: 48, 48, 0, -12
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    Power:
+        Amount: -25
+    DisabledOverlay:
+    SeedsResource:
+        ResourceType: Tiberium
+        Interval: 25
+    CashTrickler:
+        Period: 100
+        Amount: 25

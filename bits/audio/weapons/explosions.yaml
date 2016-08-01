@@ -1,0 +1,279 @@
+UnitExplode:
+    Warhead@1Dam: SpreadDamage
+        Spread: 426
+        Damage: 50
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew13.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+        
+UnitExplodeEpic:
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 300
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew13.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+    Warhead@5Eff: CreateEffect
+        Explosions: ionring
+        ExplosionPalette: effect50alpha
+        ImpactSounds: ion1.aud
+        InvalidImpactTypes: Water
+
+UnitExplodeSmall:
+    Warhead@1Dam: SpreadDamage
+        Spread: 426
+        Damage: 40
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_brnl, small_twlt, tiny_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew09.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@4Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+        
+UnitExplodeHeli:
+    Warhead@1Dam: SpreadDamage
+        Spread: 426
+        Damage: 50
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew09.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+                
+UnitExplodePlane:
+    Warhead@1Dam: SpreadDamage
+        Spread: 426
+        Damage: 50
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew09.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+                
+UnitExplodeCrapJet:
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 250
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: crapexplo
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew09.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+
+UnitExplodeCyborg:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+        ValidStances: Neutral, Enemy
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmaexpl1 #plasmawave1
+        ExplosionPalette: effect50alpha
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@4Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+
+TiberiumExplosion:
+    Warhead@1Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 1,1
+        
+LargeTiberiumExplosion:
+    Warhead@1Dam: SpreadDamage
+        Spread: 2c0
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
+    Warhead@2Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 1,1
+    Warhead@3Eff: CreateEffect
+        Explosions: tibbomb
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew13.aud
+    Warhead@4Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+
+LargeVeinExplosion:
+    Warhead@1Dam: SpreadDamage
+        Spread: 2c0
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Vehicle: 50
+            Aircraft: 50
+            Building: 25
+            Light: 80
+            Medium: 60
+            Heavy: 20
+        DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
+    Warhead@2Res: CreateResource
+        AddsResourceType: Veins
+        Size: 1,1
+    Warhead@3Eff: CreateEffect
+        Explosions: tibbomb
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew09.aud
+
+SmallDebris:
+    ReloadDelay: 60
+    Range: 4c0
+    Report:
+    Projectile: Bullet
+        Speed: 50, 125
+        Angle: 45, 135
+        Image: dbrissm
+        Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        Shadow: true
+
+LargeDebris:
+    ReloadDelay: 60
+    Range: 4c0
+    Report:
+    Projectile: Bullet
+        Speed: 50, 125
+        Angle: 45, 135
+        Image: dbrislg
+        Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        Shadow: true
+
+Sparky:
+    ReloadDelay: 10
+    Range: 4c0
+    Report:
+    Projectile: Bullet
+        Speed: 32, 64, 96, 32, 64, 96, 32, 64, 96, 32, 64, 96
+        Angle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
+        Image: spark
+        Sequences: 1
+        Shadow: false
+
+Bloody:
+    ReloadDelay: 10
+    Range: 1c0
+    Report:
+    Projectile: Bullet
+        Speed: 64, 96, 128
+        Angle: 45, 90, 135
+        Image: blood
+        Palette: player
+        Sequences: 3
+        Shadow: false
+
+Flyman:
+    ReloadDelay: 10
+    Range: 4c0
+    Report: dedman1.aud, dedman2.aud, dedman3.aud, dedman4.aud, dedman5.aud, dedman6.aud
+    Projectile: Bullet
+        Speed: 32, 125
+        Angle: 90, 135
+        Image: flyman
+        Palette: player
+        Sequences: 5
+        Shadow: true
