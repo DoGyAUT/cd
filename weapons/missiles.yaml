@@ -463,8 +463,6 @@ BikeMissile:
         HorizontalRateOfTurn: 8
         MaximumLaunchSpeed: 213
         Palette: effect
-        ContrailLength: 30
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 70
@@ -591,6 +589,7 @@ StormdragonAA:
 StormdragonGas:
     Inherits: Stormdragon
     Projectile: Missile
+        ContrailLength: 30
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
@@ -757,6 +756,7 @@ HydraMissiles:
 HydraGasMissiles:
     Inherits: HydraMissiles
     Projectile: Missile
+        ContrailLength: 30
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
