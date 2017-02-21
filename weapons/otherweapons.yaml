@@ -1,12 +1,13 @@
 FireballLauncher:
-    ReloadDelay: 50
+    Inherits: ^Fire
+    ReloadDelay: 100
     Range: 5c256
     Report: flamtnk1.aud
     Projectile: Bullet
         Speed: 0c128
-        Angle: 90
+        LaunchAngle: 90
         Image: flametrailer
-        Trail: flametrailer
+        TrailImage: flametrailer
         TrailPalette: effect50alpha
         Inaccuracy: 1c0
     InvalidTargets: Flameproof
@@ -14,21 +15,9 @@ FireballLauncher:
         Spread: 1c0
         Damage: 50
         Falloff: 100, 80
-        InvalidTargets: Flameproof
-        Versus:
-            Infantry: 200
-            Vehicle: 25
-            Aircraft: 100
-            Building: 300
-            Light: 120
-            Medium: 80
-            Heavy: 50
-        DamageTypes: Prone100Percent, TriggerProne, FireDeath
-    Warhead@2Smu: LeaveSmudge
     Warhead@2Eff: CreateEffect
         Explosions: fire01a, fire02a, fire03a
         ExplosionPalette: apolra50alpha
-        SmudgeType: LargeScorch
     Warhead@3Smu: LeaveSmudge
         SmudgeType: MediumScorch
     Warhead@4Smu: LeaveSmudge
@@ -37,112 +26,205 @@ FireballLauncher:
         Explosions: medium_flash
         ExplosionPalette: light2
         
-BlackHandFlamer:
+BlueFireballLauncher:
+    Inherits: ^Fire
+    ReloadDelay: 50
+    Range: 5c256
+    Report: firstrm1.aud
+    Projectile: Bullet
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: blueflametrailer
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    InvalidTargets: Flameproof
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 70
+        Versus:
+            Vehicle: 75
+        Falloff: 100, 90, 80
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+
+BlueFireballLauncherM:
+	Inherits:BlueFireballLauncher
+	Range: 14c0
+	Inaccuracy: 0c256
+	Burst: 3
+	BurstDelay: 5
+	Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 110
+        Versus:
+            Vehicle: 75
+			Building: 150
+        Falloff: 100, 90, 80
+
+        
+DreadfireLauncher:
     Inherits: FireballLauncher
     ReloadDelay: 60
-    Range: 5c256
+    Range: 4c256
     InvalidTargets: Flameproof
     Projectile: Bullet
         Speed: 0c128
-        Angle: 90
+        LaunchAngle: 90
         Image: flametrailer
-        Trail: flametrailer
+        TrailImage: flametrailer
         TrailPalette: effect50alpha
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
         Damage: 50
+
+BlackHandFlamer:
+    Inherits: FireballLauncher
+    ReloadDelay: 60
+    Range: 4c256
+    InvalidTargets: Flameproof
+    Projectile: Bullet
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: flametrailer
+        TrailImage: flametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 65
         Falloff: 100, 80
         InvalidTargets: Flameproof
-        
+
+BlackHandFlamerBlue:
+    Inherits: BlackHandFlamer
+    ReloadDelay: 60
+    Range: 4c256
+    Report: firstrm1.aud
+    InvalidTargets: Flameproof
+    Projectile: Bullet
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: blueflametrailer
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 80
+        Versus:
+            Vehicle: 75
+        Falloff: 100, 90, 80
+        InvalidTargets: Flameproof
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+
 DogJaw:
-    ValidTargets: Infantry, Mutant
-    ReloadDelay: 500
-    Range: 3c0
+    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
+    ReloadDelay: 20
+    Range: 1c512
     Report: dog_a1.aud, dog_m1.aud, dog_s1.aud
+    Projectile: Bullet
+        Speed: 3c768
+        Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
         Damage: 100
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-        ValidStances: Neutral, Enemy
         Versus:
             Infantry: 100
-            Kevlar: 100
-            
+            Cyborg: 75
+
 MutantDogJaw:
-    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry
-    ReloadDelay: 500
-    Range: 4c0
+    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
+    ReloadDelay: 20
+    Range: 1c0
     Report: mdog_a1.aud, mdog_m1.aud, mdog_s1.aud
+    Projectile: Bullet
+        Speed: 3c768
+        Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
         Damage: 100
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-        ValidStances: Neutral, Enemy
         Versus:
             Infantry: 100
-            Kevlar: 100
+            Cyborg: 75
            
 JaguarClaw:
-    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry
-    ReloadDelay: 500
-    Range: 3c0
+    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
+    ReloadDelay: 20
+    Range: 1c0
     Report: jaguar_a1.aud, jaguar_s1.aud, jaguar_s2.aud
+    Projectile: Bullet
+        Speed: 3c768
+        Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
         Damage: 100
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-        ValidStances: Neutral, Enemy
         Versus:
             Infantry: 100
-            Kevlar: 100
+            Cyborg: 75
       
 
 GoonHammer:
-    ValidTargets: Mutant, Soldier, Goon
     ReloadDelay: 40
     Range: 1c512
+	ValidTargets: Infantry, Mutant, Goon
     Report: splatter01.aud, splatter02.aud
     Projectile: Bullet
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 100
+        Damage: 150		
         Versus:
             Infantry: 100
+            Cyborg: 0
             Vehicle: 0
             Aircraft: 0
             Building: 0
             Light: 100
             Medium: 80
-            Heavy: 50   
+            Heavy: 70   
         DamageTypes: Prone350Percent, TriggerProne, BulletDeath
     Warhead@21Dam: SpreadDamage
         DebugOverlayColor: 00FF00
         AffectsParent: True
         ValidTargets: Goon
         ValidStances: Ally
-        Spread: 0c512
+        Spread: 0c256
         Damage: -100
 
-GoonHammer2:
-    InvalidTargets: Mutant, Soldier, Goon
+GoonHammer2:    
     ReloadDelay: 40
     Range: 1c512
+	InvalidTargets: Infantry, Mutant
     Report: metal01.aud, metal02.aud, metal03.aud, metal04.aud, metal05.aud, metal06.aud, metal07.aud, metal08.aud
     Projectile: Bullet
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 100
+        Damage: 100		
         Versus:
             Infantry: 100
+            Cyborg: 100
             Vehicle: 50
             Aircraft: 50
             Building: 80
-            Light: 90
-            Medium: 70
-            Heavy: 40
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: BulletDeath
 
 FanticBoom:
@@ -152,17 +234,39 @@ FanticBoom:
         Speed: 1c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 500
+        Damage: 200
         Falloff: 100, 75, 50, 25, 0
         AffectsParent: True
         Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
             Building: 100
             Light: 100
             Medium: 80
-            Heavy: 50 
+            Heavy: 70 
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+    Warhead@kill: GrantExternalCondition
+        AffectsParent: True
+        Range: 2c512
+        Condition: Boom
         
 FanticBoomExplosion:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 100
+        Falloff: 100, 75, 50, 25, 0
+        AffectsParent: True
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70 
     Warhead@2Eff: CreateEffect
         Explosions: large_twlt
         ExplosionPalette: apolra50alpha
@@ -186,12 +290,13 @@ SuicideBomb:
         AffectsParent: True
         Versus:
             Infantry: 200
+            Cyborg: 200
             Vehicle: 200
             Aircraft: 200
             Building: 100
-            Light: 200
-            Medium: 100
-            Heavy: 50 
+            Light: 100
+            Medium: 80
+            Heavy: 70 
         ValidTargets: Ground, Water, Air, HighAir
         DamageTypes: Prone350Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
@@ -206,7 +311,7 @@ SuicideBomb:
 
 WebLauncher:
     ValidTargets: Infantry, Mutant
-    ReloadDelay: 200
+    ReloadDelay: 120
     Range: 10c0
     Burst: 3
     BurstDelay: 5
@@ -215,7 +320,7 @@ WebLauncher:
         Speed: 0c256
         High: yes
         Shadow: false
-        Angle: 90
+        LaunchAngle: 90
         Image: web
         Inaccuracy: 1c512
         ContrailLength: 10
@@ -226,11 +331,59 @@ WebLauncher:
         ValidTargets: Infantry, Mutant
         DamageTypes: TriggerProne
         ImpactSounds: fireweb1.aud
-    Warhead@emp: GrantUpgrade
+    Warhead@emp: GrantExternalCondition
         Range: 0c512
-        Duration: 250
-        Upgrades: webdisable
+        Duration: 90
+        Condition: webdisable
         ValidTargets: Infantry, Mutant
+        
+CorruptorBlast:
+    ReloadDelay: 100
+    Range: 7c0
+    Burst: 5
+    BurstDelay: 10
+    Report: tripod_f1.aud, tripod_f2.aud, tripod_f3.aud
+    Projectile: Bullet
+        Speed: 0c256
+        Image: CRYSTAL4
+        Inaccuracy: 1c0
+        Shadow: true
+        LaunchAngle: 60
+        Palette: greentiberium
+        ContrailLength: 40
+        ContrailColor: 7EFF01
+        ContrailWidth: 80
+        TrailImage: tiberiumtrail
+        TrailPalette: effect50alpha
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 120
+        Versus:
+            Infantry: 100
+            Cyborg: 80
+            Vehicle: 50
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
+        DamageTypes: Prone200Percent, TriggerProne, BulletDeath, TriggerCorruptorVisceroid
+        ValidStances: Neutral, Enemy
+    Warhead@2Dam: SpreadDamage
+        Spread: 0c512
+        Damage: -50
+        AffectsParent: false
+        ValidTargets: Scrin
+        ValidStances: Ally
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
         
 FiendShard:
     ReloadDelay: 30
@@ -242,18 +395,19 @@ FiendShard:
         Image: CRYSTAL4
         Inaccuracy: 512
         Shadow: true
-        Angle: 60
+        LaunchAngle: 60
         Palette: greentiberium
     Warhead@1Dam: SpreadDamage
         Damage: 35
         Versus:
-            Infantry: 150
-            Vehicle: 100
+            Infantry: 120
+            Cyborg: 80
+            Vehicle: 80
             Aircraft: 100
-            Building: 80
-            Light: 120
+            Building: 60
+            Light: 100
             Medium: 80
-            Heavy: 20
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -270,7 +424,7 @@ FiendShardGreen:
         Image: CRYSTAL4
         Inaccuracy: 0c512
         Shadow: true
-        Angle: 60
+        LaunchAngle: 60
         Palette: greentiberium
         ContrailLength: 10
         ContrailColor: 7EFF01
@@ -278,10 +432,14 @@ FiendShardGreen:
     Warhead@1Dam: SpreadDamage
         Damage: 35
         Versus:
-            Building: 80
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Infantry: 120
+            Cyborg: 80
+            Vehicle: 80
+            Aircraft: 100
+            Building: 60
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -300,9 +458,9 @@ FiendShardBlue:
     Projectile: Bullet
         Speed: 0c512
         Image: CRYSTAL4
-        Inaccuracy: 1c0
+        Inaccuracy: 0c512
         Shadow: true
-        Angle: 60
+        LaunchAngle: 60
         Palette: bluetiberium
         ContrailLength: 10
         ContrailColor: 5980FF
@@ -310,10 +468,14 @@ FiendShardBlue:
     Warhead@1Dam: SpreadDamage
         Damage: 45
         Versus:
-            Building: 100
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Infantry: 120
+            Cyborg: 80
+            Vehicle: 80
+            Aircraft: 100
+            Building: 60
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_bang, small_bang, medium_bang
@@ -335,7 +497,7 @@ FiendShardRed:
         Image: CRYSTAL4
         Inaccuracy: 0c512
         Shadow: true
-        Angle: 60
+        LaunchAngle: 60
         Palette: redtiberium
         ContrailLength: 10
         ContrailColor: FF0101
@@ -343,10 +505,14 @@ FiendShardRed:
     Warhead@1Dam: SpreadDamage
         Damage: 55
         Versus:
-            Building: 100
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Infantry: 120
+            Cyborg: 80
+            Vehicle: 80
+            Aircraft: 100
+            Building: 60
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -367,7 +533,7 @@ FiendShardPurple:
         Image: CRYSTAL4
         Inaccuracy: 0c512
         Shadow: true
-        Angle: 60
+        LaunchAngle: 60
         Palette: purpletiberium
         ContrailLength: 10
         ContrailColor: C864FF
@@ -375,10 +541,14 @@ FiendShardPurple:
     Warhead@1Dam: SpreadDamage
         Damage: 55
         Versus:
-            Building: 100
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Infantry: 120
+            Cyborg: 80
+            Vehicle: 80
+            Aircraft: 100
+            Building: 60
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_bang, small_bang, medium_bang
@@ -391,36 +561,91 @@ FiendShardPurple:
         ValidImpactTypes: Water
 
 SlimeAttack:
-    ReloadDelay: 80
-    Range: 5c0
-    Report: VICER1.AUD
+    ReloadDelay: 60
+    Range: 2c0
+    Report: vicer1.aud
     Projectile: Bullet
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Damage: 100
         Versus:
             Infantry: 100
+            Cyborg: 100
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 130
-            Medium: 90
-            Heavy: 40
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-        
+            Light: 100
+            Medium: 80
+            Heavy: 70
+        DamageTypes: Prone100Percent, TriggerProne, TriggerSmallVisceroid, BulletDeath
+
+SmallSlimeAttack:
+    ReloadDelay: 60
+    Range: 2c0
+    Report: vicer1.aud
+    Projectile: Bullet
+        Speed: 426
+    Warhead@1Dam: SpreadDamage
+        Damage: 50
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
+        DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+
+CorruptSlimeAttack:
+    ReloadDelay: 60
+    Range: 2c0
+    Report: vicer1.aud
+    Projectile: Bullet
+        Speed: 426
+    Warhead@1Dam: SpreadDamage
+        Damage: 100
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
+        DamageTypes: Prone100Percent, TriggerProne, TriggerInfectedVisceroid, BulletDeath
+
 Tiberium:
     ReloadDelay: 30
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 10
-        DamageTypes: TriggerVisceroid
+        DamageTypes: TriggerVisceroid, BulletDeath
         
 Veins:
-	ReloadDelay: 16
-	Warhead@Damage: SpreadDamage
-		Spread: 42
-		Damage: 50
-		DamageTypes: EnergyDeath # TODO: FIX ME!
-	Warhead@Effect: CreateEffect
-		Explosions: veins
-		ExplosionPalette: player
+    ReloadDelay: 16
+    Warhead@Damage: SpreadDamage
+        Spread: 42
+        Damage: 50
+        DamageTypes: EnergyDeath # TODO: FIX ME!
+    Warhead@Effect: CreateEffect
+        Explosions: veins
+        ExplosionPalette: player
+
+NodWarCry:
+    ReloadDelay: 120
+    Range: 1c0
+    Projectile: Bullet
+        Speed: 1c512
+    Warhead@target: SpreadDamage
+        Spread: 1c0
+        Damage: -50
+        ValidStances: Ally
+        DamageTypes: BulletDeath
+    Warhead@fenzy: GrantExternalCondition
+        Range: 5c0
+        Duration: 200
+        Condition: fenzy
+        ValidStances: Ally

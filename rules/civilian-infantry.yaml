@@ -27,9 +27,9 @@ WEEDGUY:
         DamageTriggers: TriggerProne
 
 UMAGON:
-    Inherits: ^Soldier
+    Inherits: ^Mutant
     Valued:
-        Cost: 400
+        Cost: 600
     Tooltip:
         Name: Umagon
     Selectable:
@@ -40,8 +40,6 @@ UMAGON:
         Speed: 71
     Health:
         HP: 150
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     Passenger:
     RevealsShroud:
         Range: 7c0
@@ -60,9 +58,9 @@ UMAGON:
         IdleSequences: idle1,idle2
 
 MUTANT:
-    Inherits: ^Soldier
+    Inherits: ^Mutant
     Valued:
-        Cost: 100
+        Cost: 600
     Tooltip:
         Name: Mutant
     Selectable:
@@ -71,8 +69,6 @@ MUTANT:
         VoiceSet: Mutant
     Health:
         HP: 50
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     Mobile:
         Speed: 56
     RevealsShroud:
@@ -92,9 +88,9 @@ MUTANT:
         IdleSequences: idle1,idle2
 
 MWMN:
-    Inherits: ^Soldier
+    Inherits: ^Mutant
     Valued:
-        Cost: 100
+        Cost: 600
     Tooltip:
         Name: Mutant Soldier
     Selectable:
@@ -103,8 +99,6 @@ MWMN:
         VoiceSet: CivilianFemale
     Health:
         HP: 50
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     Mobile:
         Speed: 56
     RevealsShroud:
@@ -124,9 +118,9 @@ MWMN:
         IdleSequences: idle1,idle2
 
 MUTANT3:
-    Inherits: ^Soldier
+    Inherits: ^Mutant
     Valued:
-        Cost: 100
+        Cost: 600
     Tooltip:
         Name: Mutant Sergeant
     Selectable:
@@ -135,8 +129,6 @@ MUTANT3:
         VoiceSet: Mutant
     Health:
         HP: 50
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     Mobile:
         Speed: 56
     RevealsShroud:
@@ -156,9 +148,9 @@ MUTANT3:
         IdleSequences: idle1,idle2
 
 TRATOS:
-    Inherits: ^Soldier
+    Inherits: ^Mutant
     Valued:
-        Cost: 100
+        Cost: 600
     Tooltip:
         Name: Tratos
     Selectable:
@@ -167,8 +159,6 @@ TRATOS:
         VoiceSet: Tratos
     Health:
         HP: 200
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     Mobile:
         Speed: 71
     RevealsShroud:
@@ -242,16 +232,15 @@ SLAV:
         IdleSequences: idle1,idle2
 
 DOGGIE:
-    Inherits: ^Soldier
+    Inherits: ^MutantFearless
     Tooltip:
         Name: Tiberian Fiend
+        Description: Dogs transmorgifies into this, when dieing on Tiberium fields.
     Health:
         Radius: 213
-        HP: 250
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
+        HP: 400
     Valued:
-        Cost: 500
+        Cost: 800
     Armor:
         Type: Light
     RevealsShroud:
@@ -267,44 +256,68 @@ DOGGIE:
         Weapon: FiendShardGreen
     AttackFrontal:
     AttackWander:
-        WanderMoveRadius: 1
-        MinMoveDelayInDelay: 25
-        MaxMoveDelayInDelay: 45
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 100
+        MaxMoveDelayInDelay: 180
 
 VISC_SML:
-	Inherits: ^Visceroid
-	Tooltip:
-		Name: Baby Visceroid
-		Description: infantry transmorgifies into this
-	Health:
-		HP: 200
-	AttackWander:
-		WanderMoveRadius: 2
-		MinMoveDelayInDelay: 30
-		MaxMoveDelayInDelay: 60
-	RenderSprites:
-		Image: vissml
+    Inherits: ^Visceroid
+    Tooltip:
+        Name: Baby Visceroid
+        Description: Infantry transmorgifies into this, when killed by Adult Visceroids.
+    Health:
+        HP: 150
+    Valued:
+        Cost: 250
+    Armament:
+        Weapon: SmallSlimeAttack
+    AutoTarget:
+    AttackFrontal:
+        Voice: Attack
+    AttackWander:
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 25
+        MaxMoveDelayInDelay: 45
+    Mobile:
+        Crushes: crate
+        SharesCell: yes
+    RenderSprites:
+        Image: vissml
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 20
+        HealIfBelow: 100
+        DamageCooldown: 80
 
 VISC_LRG:
-	Inherits: ^Visceroid
-	Tooltip:
-		Name: Adult Visceroid
-		Description: 2 small visceroids combine into this
-	Health:
-		HP: 500
-	Armament:
-		Weapon: SlimeAttack
-	AutoTarget:
-	AttackFrontal:
-		Voice: Attack
-	AttackWander:
-		WanderMoveRadius: 2
-		MinMoveDelayInDelay: 25
-		MaxMoveDelayInDelay: 45
-	Mobile:
-		Crushes: crate, infantry
-	RenderSprites:
-		Image: vislrg
+    Inherits: ^Visceroid
+    Tooltip:
+        Name: Adult Visceroid
+        Description: Infantry transmorgifies into this, when dieing on Tiberium fields.
+    Health:
+        HP: 300
+    Valued:
+        Cost: 500
+    Armament:
+        Weapon: SlimeAttack
+    AutoTarget:
+    AttackFrontal:
+        Voice: Attack
+    AttackWander:
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 25
+        MaxMoveDelayInDelay: 45
+    Mobile:
+        Crushes: crate, infantry
+    RenderSprites:
+        Image: vislrg
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 60
 
 CIV1:
     Inherits: ^CivilianInfantry

@@ -1,6 +1,7 @@
 e1:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -43,7 +44,7 @@ e1:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -70,6 +71,7 @@ e1:
 scout:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -112,7 +114,7 @@ scout:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -139,6 +141,7 @@ scout:
 chamspy:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -181,7 +184,7 @@ chamspy:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -208,6 +211,7 @@ chamspy:
 gdog:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 172
@@ -259,6 +263,7 @@ gdog:
 ndog:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 172
@@ -310,6 +315,7 @@ ndog:
 jaguar:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 383
@@ -349,10 +355,7 @@ jaguar:
         ShadowStart: 487
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -361,6 +364,7 @@ jaguar:
 fdog:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 351
@@ -408,6 +412,7 @@ fdog:
 gasol:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -450,7 +455,7 @@ gasol:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -477,6 +482,7 @@ gasol:
 zmarine:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 454
@@ -519,7 +525,7 @@ zmarine:
         Start: 431
         Length: 5
         ShadowStart: 903
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 197
@@ -554,6 +560,7 @@ zmarine:
 ztrooper:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 260
@@ -588,7 +595,7 @@ ztrooper:
         Start: 255
         Length: 5
         ShadowStart: 515
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 64
@@ -607,6 +614,7 @@ ztrooper:
 zraider:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 266
@@ -641,7 +649,7 @@ zraider:
         Start: 260
         Length: 7
         ShadowStart: 525
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 64
@@ -652,6 +660,8 @@ zraider:
         Length: *
     muzzle: plassabogsml
         Length: *
+    muzzle2: gunfire
+        Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -660,6 +670,7 @@ zraider:
 nacad:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -702,7 +713,7 @@ nacad:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -729,67 +740,66 @@ nacad:
 nconf:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
-        ShadowStart: 292
+        ShadowStart: 338
     run:
         Start: 8
-        Length: 6
+        Length: 8
         Facings: 8
-        ShadowStart: 300
+        ShadowStart: 346
     idle1:
-        Start: 56
-        Length: 15
-        ShadowStart: 348
+        Start: 137
+        Length: 34
+        ShadowStart: 475
     idle2:
-        Start: 71
-        Length: 15
-        ShadowStart: 363
+        Start: 171
+        Length: 24
+        ShadowStart: 509
     prone-run:
-        Start: 86
-        Length: 6
+        Start: 195
+        Length: 8
         Facings: 8
-        ShadowStart: 378
+        ShadowStart: 533
     prone-stand:
-        Start: 86
+        Start: 195
         Facings: 8
         Stride: 6
-        ShadowStart: 378
+        ShadowStart: 533
     die1:
-        Start: 134
-        Length: 15
-        ShadowStart: 426
+        Start: 316
+        Length: 11
+        ShadowStart: 654
     die2:
-        Start: 149
-        Length: 15
-        ShadowStart: 441
-    die3: # TODO: copy-paste of die2
-        Start: 149
-        Length: 15
-        ShadowStart: 441
+        Start: 327
+        Length: 11
+        ShadowStart: 665
+    die3: infdie
+        Length: *
     die4: s_bang34
         Length: *
     die-crushed:
-        Start: 159
+        Start: 333
         Length: 5
-        ShadowStart: 451
-        Tick: 800
+        ShadowStart: 671
+        Tick: 80
         ZOffset: -511
     shoot:
-        Start: 164
-        Length: 6
+        Start: 72
+        Length: 8
         Facings: 8
-        ShadowStart: 456
+        ShadowStart: 410
     prone-shoot:
-        Start: 212
+        Start: 260
         Length: 6
         Facings: 8
-        ShadowStart: 504
+        ShadowStart: 598
     standup-0:
-        Start: 260
-        Length: 2
+        Start: 308
+        Length: 1
         Facings: 8
-        ShadowStart: 552
+        ShadowStart: 646
     die6: electro
         Length: *
     web-overlay: webguy
@@ -797,80 +807,66 @@ nconf:
         ShadowStart: 6
     icon: nconficon
 
-spray:
+demolisher:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
-        ShadowStart: 292
+        ShadowStart: 202
     run:
         Start: 8
         Length: 6
         Facings: 8
-        ShadowStart: 300
+        ShadowStart: 210
     idle1:
-        Start: 56
-        Length: 15
-        ShadowStart: 348
+        Start: 128
+        Length: 8
+        ShadowStart: 330
     idle2:
-        Start: 71
+        Start: 136
         Length: 15
-        ShadowStart: 363
-    prone-run:
-        Start: 86
-        Length: 6
-        Facings: 8
-        ShadowStart: 378
-    prone-stand:
-        Start: 86
-        Facings: 8
-        Stride: 6
-        ShadowStart: 378
+        ShadowStart: 338
     die1:
-        Start: 134
-        Length: 15
-        ShadowStart: 426
+        Start: 152
+        Length: 8
+        ShadowStart: 354
     die2:
-        Start: 149
-        Length: 15
-        ShadowStart: 441
+        Start: 160
+        Length: 6
+        ShadowStart: 362
     die3: # TODO: copy-paste of die2
-        Start: 149
-        Length: 15
-        ShadowStart: 441
-    die4: s_bang34
-        Length: *
-    die-crushed:
-        Start: 159
+        Start: 160
+        Length: 6
+        ShadowStart: 362
+    die4:
+        Start: 197
         Length: 5
-        ShadowStart: 451
-        Tick: 800
+        ShadowStart: 399
+    die-crushed:
+        Start: 173
+        Length: 5
+        ShadowStart: 375
+        Tick: 80
         ZOffset: -511
     shoot:
-        Start: 164
-        Length: 6
+        Start: 56
+        Length: 1
         Facings: 8
-        ShadowStart: 456
-    prone-shoot:
-        Start: 212
-        Length: 6
-        Facings: 8
-        ShadowStart: 504
-    standup-0:
-        Start: 260
-        Length: 2
-        Facings: 8
-        ShadowStart: 552
+        ShadowStart: 258
     die6: electro
+        Length: *
+    muzzle: gunfire
         Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
     icon: sprayicon
-    
-shadow:
+
+tibtrooper:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -913,7 +909,149 @@ shadow:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 164
+        Length: 6
+        Facings: 8
+        ShadowStart: 456
+    prone-shoot:
+        Start: 212
+        Length: 6
+        Facings: 8
+        ShadowStart: 504
+    standup-0:
+        Start: 260
+        Length: 2
+        Facings: 8
+        ShadowStart: 552
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: sprayicon
+
+tibtrooper2:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+        ShadowStart: 292
+    run:
+        Start: 8
+        Length: 6
+        Facings: 8
+        ShadowStart: 300
+    idle1:
+        Start: 56
+        Length: 15
+        ShadowStart: 348
+    idle2:
+        Start: 71
+        Length: 15
+        ShadowStart: 363
+    prone-run:
+        Start: 86
+        Length: 6
+        Facings: 8
+        ShadowStart: 378
+    prone-stand:
+        Start: 86
+        Facings: 8
+        Stride: 6
+        ShadowStart: 378
+    die1:
+        Start: 134
+        Length: 15
+        ShadowStart: 426
+    die2:
+        Start: 149
+        Length: 15
+        ShadowStart: 441
+    die3: # TODO: copy-paste of die2
+        Start: 149
+        Length: 15
+        ShadowStart: 441
+    die4: s_bang34
+        Length: *
+    die-crushed:
+        Start: 159
+        Length: 5
+        ShadowStart: 451
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 164
+        Length: 6
+        Facings: 8
+        ShadowStart: 456
+    prone-shoot:
+        Start: 212
+        Length: 6
+        Facings: 8
+        ShadowStart: 504
+    standup-0:
+        Start: 260
+        Length: 2
+        Facings: 8
+        ShadowStart: 552
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: sprayicon
+    
+shadow:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+        ShadowStart: 292
+    run:
+        Start: 8
+        Length: 6
+        Facings: 8
+        ShadowStart: 300
+    idle1:
+        Start: 56
+        Length: 15
+        ShadowStart: 348
+    idle2:
+        Start: 71
+        Length: 15
+        ShadowStart: 363
+    prone-run:
+        Start: 86
+        Length: 6
+        Facings: 8
+        ShadowStart: 378
+    prone-stand:
+        Start: 86
+        Facings: 8
+        Stride: 6
+        ShadowStart: 378
+    die1:
+        Start: 134
+        Length: 15
+        ShadowStart: 426
+    die2:
+        Start: 149
+        Length: 15
+        ShadowStart: 441
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed:
+        Start: 159
+        Length: 5
+        ShadowStart: 451
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -940,6 +1078,7 @@ shadow:
 bhand:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 546
@@ -975,7 +1114,7 @@ bhand:
         Start: 509
         Length: 11
         ShadowStart: 1056
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 176
@@ -993,6 +1132,7 @@ bhand:
 e2:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1035,7 +1175,7 @@ e2:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1062,6 +1202,7 @@ e2:
 nasol:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1104,7 +1245,7 @@ nasol:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1128,9 +1269,79 @@ nasol:
         ShadowStart: 6
     icon: nasolicon    
 
+nasol2:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand: nasol2
+        Facings: 8
+        ShadowStart: 292
+    run: nasol2
+        Start: 8
+        Length: 6
+        Facings: 8
+        ShadowStart: 300
+    idle1: nasol2
+        Start: 56
+        Length: 15
+        ShadowStart: 348
+    idle2: nasol2
+        Start: 71
+        Length: 15
+        ShadowStart: 363
+    prone-run: nasol2
+        Start: 86
+        Length: 6
+        Facings: 8
+        ShadowStart: 378
+    prone-stand: nasol2
+        Start: 86
+        Facings: 8
+        Stride: 6
+        ShadowStart: 378
+    die1: nasol2
+        Start: 134
+        Length: 15
+        ShadowStart: 426
+    die2: nasol2
+        Start: 149
+        Length: 15
+        ShadowStart: 441
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed: nasol2
+        Start: 159
+        Length: 5
+        ShadowStart: 451
+        Tick: 80
+        ZOffset: -511
+    shoot: nasol2
+        Start: 164
+        Length: 6
+        Facings: 8
+        ShadowStart: 456
+    prone-shoot: nasol2
+        Start: 212
+        Length: 6
+        Facings: 8
+        ShadowStart: 504
+    standup-0: nasol2
+        Start: 260
+        Length: 2
+        Facings: 8
+        ShadowStart: 552
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+
 e3:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1170,11 +1381,12 @@ e3:
     die4: s_bang34
         Length: *
         Tick: 80
+        Offset: 0, 0, 16
     die-crushed:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1201,6 +1413,7 @@ e3:
 husk:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 188
@@ -1244,10 +1457,7 @@ husk:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -1256,6 +1466,7 @@ husk:
 hhusk:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 173
@@ -1293,10 +1504,7 @@ hhusk:
         Length: *
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -1305,6 +1513,7 @@ hhusk:
 cybspy:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 306
@@ -1344,10 +1553,7 @@ cybspy:
         ShadowStart: 515
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -1356,6 +1562,7 @@ cybspy:
 overseer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 252
@@ -1395,10 +1602,7 @@ overseer:
         ShadowStart: 416
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -1407,6 +1611,7 @@ overseer:
 glad:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 485
@@ -1452,10 +1657,7 @@ glad:
         Length: *
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -1464,6 +1666,7 @@ glad:
 grunt:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1506,7 +1709,7 @@ grunt:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1533,6 +1736,7 @@ grunt:
 elitegrunt:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1575,7 +1779,7 @@ elitegrunt:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1600,74 +1804,10 @@ elitegrunt:
         ShadowStart: 6
     icon: warrioricon
     
-huntress2:
-    Defaults:
-        Tick: 40
-    stand:
-        Facings: 8
-        ShadowStart: 460
-    run:
-        Start: 8
-        Length: 22
-        Facings: 8
-        ShadowStart: 468
-    idle1:
-        Start: 184
-        Length: 26
-        ShadowStart: 644
-    idle2:
-        Start: 210
-        Length: 31
-        ShadowStart: 670
-    die1:
-        Start: 401
-        Length: 35
-        ShadowStart: 861
-    die2:
-        Start: 436
-        Length: 24
-        ShadowStart: 896
-    die3: infdie
-        Length: *
-    die4: s_bang34
-        Length: *
-    die-crushed:
-        Start: 441
-        Length: 10
-        ShadowStart: 892
-        Tick: 800
-        ZOffset: -511
-    shoot:
-        Start: 241
-        Length: 20
-        Facings: 8
-        ShadowStart: 701
-    die6: electro
-        Length: *
-    muzzle0: mgun-n
-        Tick: 80
-    muzzle1: mgun-nw
-        Tick: 80
-    muzzle2: mgun-w
-        Tick: 80
-    muzzle3: mgun-sw
-        Tick: 80
-    muzzle4: mgun-s
-        Tick: 80
-    muzzle5: mgun-se
-        Tick: 80
-    muzzle6: mgun-e
-        Tick: 80
-    muzzle7: mgun-ne
-        Tick: 80
-    web-overlay: webguy
-        Length: 6
-        ShadowStart: 6
-    icon: huntericon    
-    
 huntress:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1710,7 +1850,7 @@ huntress:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1737,6 +1877,7 @@ huntress:
 explorer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 156
@@ -1769,7 +1910,7 @@ explorer:
         Start: 148
         Length: 8
         ShadowStart: 304
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die6: electro
         Length: *
@@ -1781,6 +1922,7 @@ explorer:
 brigand:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 257
@@ -1820,7 +1962,7 @@ brigand:
         Start: 237
         Length: 5
         ShadowStart: 495
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die6: electro
         Length: *
@@ -1832,6 +1974,7 @@ brigand:
 fanatic:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -1864,7 +2007,7 @@ fanatic:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -1881,6 +2024,7 @@ fanatic:
 weedguy:
     Defaults: weed
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 202
@@ -1951,6 +2095,7 @@ weedguy:
 medic:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 307
@@ -1995,7 +2140,7 @@ medic:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     standup-0:
         Start: 260
@@ -2016,6 +2161,7 @@ medic:
 engineer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2060,7 +2206,7 @@ engineer:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     standup-0:
         Start: 260
@@ -2077,6 +2223,7 @@ engineer:
 nengineer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2121,7 +2268,7 @@ nengineer:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     standup-0:
         Start: 260
@@ -2138,6 +2285,7 @@ nengineer:
 kengineer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2182,7 +2330,7 @@ kengineer:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     standup-0:
         Start: 260
@@ -2191,10 +2339,7 @@ kengineer:
         ShadowStart: 552
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -2203,6 +2348,7 @@ kengineer:
 fengineer:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2247,7 +2393,7 @@ fengineer:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     standup-0:
         Start: 260
@@ -2264,6 +2410,7 @@ fengineer:
 umagon:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2308,7 +2455,7 @@ umagon:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2334,7 +2481,8 @@ umagon:
 
 ghost:
     Defaults:
-        Tick: 80
+        Tick: 90
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2369,17 +2517,15 @@ ghost:
         Start: 149
         Length: 15
         ShadowStart: 441
-    die3: # TODO: copy-paste of die2
-        Start: 149
-        Length: 15
-        ShadowStart: 441
+    die3: infdie
+        Length: *
     die4: s_bang34
         Length: *
     die-crushed:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2404,122 +2550,124 @@ ghost:
     icon: gosticon
 
 jumpjet:
-	Defaults:
-		Tick: 80
-	stand:
-		Facings: 8
-		ShadowStart: 451
-	air-stand:
-		Start: 340
-		Length: 6
-		Facings: 8
-	run:
-		Start: 8
-		Length: 6
-		Facings: 8
-		ShadowStart: 459
-	air-run:
-		Start: 292
-		Length: 6
-		Facings: 8
-	air-idle:
-		Start: 340
-		Length: 6
-		Facings: 8
-		Tick: 100
-	idle1:
-		Start: 56
-		Length: 15
-		ShadowStart: 507
-	idle2:
-		Start: 71
-		Length: 15
-		ShadowStart: 522
-	prone-run:
-		Start: 86
-		Length: 6
-		Facings: 8
-		ShadowStart: 537
-	prone-stand:
-		Facings: 8
-		ShadowStart: 451
-	die1: # TODO: animation for falling from sky starts at 436
-		Start: 445
-		Length: 6
-		ShadowStart: 896
-	die2: # TODO: animation for falling from sky starts at 436
-		Start: 445
-		Length: 6
-		ShadowStart: 896
-	die3: # TODO: animation for falling from sky starts at 436
-		Start: 445
-		Length: 6
-		ShadowStart: 896
-	die4: s_bang34
-		Length: *
-	die-crushed:
-		Start: 450
-		ShadowStart: 901
-		Tick: 800
-		ZOffset: -511
-	shoot:
-		Start: 164
-		Length: 6
-		Facings: 8
-		ShadowStart: 615
-	air-shoot:
-		Start: 388
-		Length: 6
-		Facings: 8
-	prone-shoot:
-		Start: 212
-		Length: 6
-		Facings: 8
-		ShadowStart: 663
-	standup-0:
-		Start: 260
-		Length: 2
-		Facings: 8
-		ShadowStart: 711
-	die6: electro
-		Length: *
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+        ShadowStart: 451
+    air-stand:
+        Start: 340
+        Length: 6
+        Facings: 8
+    run:
+        Start: 8
+        Length: 6
+        Facings: 8
+        ShadowStart: 459
+    air-run:
+        Start: 292
+        Length: 6
+        Facings: 8
+    air-idle:
+        Start: 340
+        Length: 6
+        Facings: 8
+        Tick: 100
+    idle1:
+        Start: 56
+        Length: 15
+        ShadowStart: 507
+    idle2:
+        Start: 71
+        Length: 15
+        ShadowStart: 522
+    prone-run:
+        Start: 86
+        Length: 6
+        Facings: 8
+        ShadowStart: 537
+    prone-stand:
+        Facings: 8
+        ShadowStart: 451
+    die1: # TODO: animation for falling from sky starts at 436
+        Start: 445
+        Length: 6
+        ShadowStart: 896
+    die2: # TODO: animation for falling from sky starts at 436
+        Start: 445
+        Length: 6
+        ShadowStart: 896
+    die3: # TODO: animation for falling from sky starts at 436
+        Start: 445
+        Length: 6
+        ShadowStart: 896
+    die4: s_bang34
+        Length: *
+    die-crushed:
+        Start: 450
+        ShadowStart: 901
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 164
+        Length: 6
+        Facings: 8
+        ShadowStart: 615
+    air-shoot:
+        Start: 388
+        Length: 6
+        Facings: 8
+    prone-shoot:
+        Start: 212
+        Length: 6
+        Facings: 8
+        ShadowStart: 663
+    standup-0:
+        Start: 260
+        Length: 2
+        Facings: 8
+        ShadowStart: 711
+    die6: electro
+        Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
-	icon: jjeticon
+    icon: jjeticon
 
 cybfly:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
-        ShadowStart: 958
+#        ShadowStart: 958
     run:
         Facings: 8
         Start: 822
         Length: 17
-        ShadowStart: 1780
+#        ShadowStart: 1780
     idle1:
         Start: 762
         Length: 30
-        ShadowStart: 1720
+#        ShadowStart: 1720
     idle2:
         Start: 792
         Length: 30
-        ShadowStart: 1750
+#        ShadowStart: 1750
     shoot:
         Facings: 8
         Start: 38
         Length: 21
-        ShadowStart: 996
+#        ShadowStart: 996
     die1:
         Start: 8
         Length: 15
-        ShadowStart: 966
+#        ShadowStart: 966
     die2:
         Start: 23
         Length: 15
-        ShadowStart: 981
+#        ShadowStart: 981
     die3: infdie
         Length: *
     die4: s_bang34
@@ -2528,7 +2676,7 @@ cybfly:
         Start: 445
         Length: 6
         ShadowStart: 896
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die6: electro
         Length: *
@@ -2571,7 +2719,9 @@ cybfly:
         Start: 206
         Length: 8
         Facings: 1
-#        ShadowStart: 1164  
+#        ShadowStart: 1164
+    muzzle: plassabogsml
+        Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -2580,6 +2730,7 @@ cybfly:
 mhijack:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2624,7 +2775,7 @@ mhijack:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2654,6 +2805,7 @@ cyc2:
         ShadowStart: 308
     run:
         Tick: 80
+        Offset: 0, 0, 16
         Start: 8
         Length: 9
         Facings: 8
@@ -2698,10 +2850,7 @@ cyc2:
         Length: *
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -2710,6 +2859,7 @@ cyc2:
 vanguard:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 370
@@ -2771,10 +2921,7 @@ vanguard:
         Length: *
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -2783,6 +2930,7 @@ vanguard:
 mutant:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2818,6 +2966,7 @@ mutant:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -2828,7 +2977,7 @@ mutant:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2855,6 +3004,7 @@ mutant:
 mwmn:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2890,6 +3040,7 @@ mwmn:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -2900,7 +3051,7 @@ mwmn:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2927,6 +3078,7 @@ mwmn:
 mutant3:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -2962,6 +3114,7 @@ mutant3:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -2972,7 +3125,7 @@ mutant3:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -2999,6 +3152,7 @@ mutant3:
 tratos:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3034,6 +3188,7 @@ tratos:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3044,7 +3199,7 @@ tratos:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -3071,6 +3226,7 @@ tratos:
 oxanna:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3106,6 +3262,7 @@ oxanna:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3116,7 +3273,7 @@ oxanna:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -3142,6 +3299,7 @@ oxanna:
 slav:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3177,6 +3335,7 @@ slav:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3187,7 +3346,7 @@ slav:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -3213,6 +3372,7 @@ slav:
 doggie:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 119
@@ -3255,7 +3415,7 @@ doggie:
         Start: 105
         Length: 4
         ShadowStart: 224
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die5:
         Start: 109
@@ -3272,6 +3432,7 @@ doggie:
 ffiend:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 119
@@ -3314,7 +3475,7 @@ ffiend:
         Start: 105
         Length: 4
         ShadowStart: 224
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die5:
         Start: 109
@@ -3332,21 +3493,31 @@ vissml:
         Length: 90
         ShadowStart: 90
         Tick: 80
+        Offset: 0, 0, 16
+    attack: vissmatk
+        Length: 5
+        Facings: 8
+        ShadowStart: 40
+        Tick: 80
+        Offset: 0, 0, 16
 
 vislrg:
     idle:
         Length: 90
         ShadowStart: 90
         Tick: 80
-    muzzle: vislgatk # TODO: unused
+        Offset: 0, 0, 16
+    attack: vislgatk
         Length: 5
         Facings: 8
         ShadowStart: 40
         Tick: 80
+        Offset: 0, 0, 16
 
 civ1:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3382,6 +3553,7 @@ civ1:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3392,7 +3564,7 @@ civ1:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -3408,6 +3580,7 @@ civ1:
 civ2:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3443,6 +3616,7 @@ civ2:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3453,7 +3627,7 @@ civ2:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     die6: electro
         Length: *
@@ -3464,6 +3638,7 @@ civ2:
 civ3:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 292
@@ -3499,6 +3674,7 @@ civ3:
         Length: 15
         ShadowStart: 441
         Tick: 80
+        Offset: 0, 0, 16
     die3: # TODO: copy-paste of die2
         Start: 149
         Length: 15
@@ -3509,7 +3685,7 @@ civ3:
         Start: 159
         Length: 5
         ShadowStart: 451
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 164
@@ -3525,6 +3701,7 @@ civ3:
 kamikaze:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 432
@@ -3551,10 +3728,7 @@ kamikaze:
         Length: *
     die6: electro
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
@@ -3563,6 +3737,7 @@ kamikaze:
 goon:
     Defaults:
         Tick: 80
+        Offset: 0, 0, 16
     stand:
         Facings: 8
         ShadowStart: 334
@@ -3595,7 +3770,7 @@ goon:
         Start: 181
         Length: 6
         ShadowStart: 514
-        Tick: 800
+        Tick: 80
         ZOffset: -511
     shoot:
         Start: 206
@@ -3610,40 +3785,39 @@ goon:
     icon: goonicon
 
 flameguy:
-	Defaults:
-		Facings: 8
-		Tick: 80
-		ShadowStart: 148
-	idle:
-	stand:
-	run:
-		Length: 6
-	die:
-		Start: 44
-		Facings: 1
-		Length: 104
-		ShadowStart: 192
+    Defaults:
+        Facings: 8
+        Tick: 80
+        Offset: 0, 0, 16
+        ShadowStart: 148
+    idle:
+    stand:
+    run:
+        Length: 6
+    die:
+        Start: 44
+        Facings: 1
+        Length: 104
+        ShadowStart: 192
 
 shocker:
     Defaults:
-        Tick: 80
+        Tick: 60
     stand:
         Start: 128
         Length: 1
         Facings: -8
-        ShadowStart: 264
     run:
         Length: 9
         Facings: -8
-        Tick: 60
-        ShadowStart: 136
-    die1: s_bang34
+        Tick: 50
+    die1: htrkpuff
         Length: *
-    die2: s_bang34
+    die2: htrkpuff
         Length: *
     die3: infdie
         Length: *
-    die4: s_bang34
+    die4: htrkpuff
         Length: *
     die-crushed: s_bang34
         Length: *
@@ -3651,12 +3825,106 @@ shocker:
         Start: 72
         Length: 7
         Facings: -8
-        ShadowStart: 208
-    die5: s_bang34
+    die5: htrkpuff
         Length: *
-    die6: s_bang34
+    die6: htrkpuff
+        Length: *
+    muzzle: plassabogsml
+        Length: *
+        Offset: 0, 0
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: shockericon
+
+slasher:
+    Defaults:
+        Tick: 90
+    stand:
+        Length: 1
+        Facings: 8
+    run:
+        Start: 8
+        Length: 20
+        Facings: 8
+        Tick: 35
+    idle1:
+        Start: 256
+        Length: 20
+    idle2:
+        Start: 276
+        Length: 21
+    die1:
+        Start: 312
+        Length: 16
+    die2: 
+        Start: 297
+        Length: 15
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed: 
+        Start: 306
+        Length: 6
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 168
+        Length: 11
+        Facings: 8
+    die5: 
+        Start: 297
+        Length: 15
+    die6: electro
         Length: *
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
-    icon: goonicon    
+    icon: slashericon 
+
+locust:
+    Defaults:
+        Tick: 90
+    stand:
+        Length: 1
+        Facings: 8
+    run:
+        Start: 8
+        Length: 20
+        Facings: 8
+        Tick: 35
+    idle1:
+        Start: 168
+        Length: 19
+    idle2:
+        Start: 187
+        Length: 19
+    die1:
+        Start: 273
+        Length: 10
+    die2: 
+        Start: 262
+        Length: 11
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed: 
+        Start: 280
+        Length: 3
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 206
+        Length: 7
+        Facings: 8
+    die5: 
+        Start: 262
+        Length: 11
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: locusticon

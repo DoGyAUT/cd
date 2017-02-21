@@ -1,6 +1,7 @@
 overlay:
     Defaults: place
-        Offset: 0, -12
+        Offset: 0, -12, 1
+        ZRamp: 1
         BlendMode: Additive
     build-valid-snow:
     build-valid-temperate:
@@ -10,7 +11,8 @@ overlay:
 
 editor-overlay:
     Defaults: place
-        Offset: 0, -12
+        Offset: 0, -12, 1
+        ZRamp: 1
     copy:
     paste:
         Start: 1
@@ -37,17 +39,17 @@ rallypoint:
 
 beacon:
     arrow: mouse
-		Start: 397
-	idle:
-		Length: 5
-		Tick: 200
+        Start: 397
+    idle:
+        Length: 5
+        Tick: 200
         ZOffset: 2047
     circles: ring
         Length: 12
         BlendMode: Additive
-    airstrikeox: orca_oxicon
+    orcabomber: orca_bicon
         Offset: 0,-42
-    airstrikeog: orca_gicon
+    orcascout: orca_gicon
         Offset: 0,-42
     clock: gclock2
         Length: *
@@ -57,7 +59,7 @@ crate:
     idle:
         ShadowStart: 1
         UseTilesetExtension: true
-        Offset: 0, -10
+        Offset: 0, -10, 10
 
 crate-effects:
     Defaults:
@@ -80,16 +82,19 @@ rank:
         ZOffset: 511
 
 mpspawn:
-	idle:
-		Length: *
+    idle:
+        Length: *
+        ZRamp: 1
 
 waypoint:
-	idle:
-		Length: *
+    idle:
+        Length: *
+        ZRamp: 1
 
 camera:
-	idle:
-		Length: *
+    idle:
+        Length: *
+        ZRamp: 1
 
 clock:
     idle: gclock2
@@ -105,9 +110,6 @@ pips:
     groups: pipsra #TODO: backfall to RA asset
         Start: 8
         Length: 10
-    tag-primary: pipsra #TODO: backfall to RA asset
-        Start: 2
-        Offset: 0, 2
     pip-empty: pips2
     pip-green: pips2
         Start: 1
@@ -138,8 +140,8 @@ resources:
         UseTilesetExtension: true
         Length: 12
         ShadowStart: 12
-        Offset: 0, -12
-        ZOffset: 1023
+        Offset: 0, -12, 1.5
+        ZRamp: 1
     tib01: tib01
     tib02: tib02
     tib03: tib03
@@ -152,45 +154,83 @@ resources:
     tib10: tib10
     tib11: tib11
     tib12: tib12
-    tib13: tib13
-    tib14: tib14
-    tib15: tib15
-    tib16: tib16
-    tib17: tib17
-    tib18: tib18
-    tib19: tib19
-    tib20: tib20
-	veins: veins
-		Length: 1
-		Start: 52
-		ShadowStart: -1
-		Tick: 180
+    tib13: tib13 # TODO: NW ramp variant, currently unused
+    tib14: tib14 # TODO: NW ramp variant, currently unused
+    tib15: tib15 # TODO: NE ramp variant, currently unused
+    tib16: tib16 # TODO: NE ramp variant, currently unused
+    tib17: tib17 # TODO: SE ramp variant, currently unused
+    tib18: tib18 # TODO: SE ramp variant, currently unused
+    tib19: tib19 # TODO: SW ramp variant, currently unused
+    tib20: tib20 # TODO: SW ramp variant, currently unused
+    veins: veins
+        Length: 1
+        Start: 52
+        ShadowStart: -1
+        Tick: 180
     
 explosion:
     Defaults:
         Length: *
         ZOffset: 511
+        Offset: 0, 0, 24
     building: twlt070
         BlendMode: Additive
     ionring: ring1
         BlendMode: Additive
-        Tick: 60
+        ZRamp: 1
+        Tick: 100
+    ionbeam: ionbeam
+        Offset: 0,-60
+        BlendMode: Additive
+        Length: *
+        Tick: 100
+    ionbeam2: ionbeam
+        Offset: 0,-180
+        BlendMode: Additive
+        Length: *
+        Tick: 100
+    ionbeam3: ionbeam
+        Offset: 0,-300
+        BlendMode: Additive
+        Length: *
+        Tick: 100
+    ionbeam4: ionbeam
+        Offset: 0,-420
+        BlendMode: Additive
+        Length: *
+        Tick: 100
+    ionbeam5: ionbeam
+        Offset: 0,-540
+        BlendMode: Additive
+        Length: *
+        Tick: 100
+    ionbeam6: ionbeam
+        Offset: 0,-660
+        BlendMode: Additive
+        Length: *
+        Tick: 100
     ionexplo01: ionexplo01
     pulse_explosion: pulsefx2
+        ZRamp: 1
         BlendMode: Additive
         Tick: 40
     bigfireexpl01: bigfireexpl01
     small_watersplash: h2o_exp2
     large_watersplash: h2o_exp1
+        Offset: 0, 0, 39
     water_piff: w_piff
     water_piffs: w_piffs
     piff: piff
     epiff: epiff
+    tpiff: tpiff
+    gatpiff: gatexp1
     piffs: piffpiff
 #    largepiffs: expgpiff
     small_explosion: explosml
     medium_explosion: explomed
+        Offset: 0, 0, 27
     large_explosion: explolrg
+        Offset: 0, 0, 31
     tiny_bang: s_bang16
         BlendMode: Additive
     small_bang: s_bang24
@@ -206,6 +246,7 @@ explosion:
     medium_brnl: s_brnl40
         BlendMode: Additive
     large_brnl: s_brnl58
+        Offset: 0, 0, 30
         BlendMode: Additive
     tiny_tumu: s_tumu22
         BlendMode: Additive
@@ -215,6 +256,7 @@ explosion:
         BlendMode: Additive
     large_tumu: s_tumu60
         BlendMode: Additive
+        Offset: 0, 0, 31
     tiny_clsn: s_clsn16
         BlendMode: Additive
     small_clsn: s_clsn22
@@ -223,15 +265,19 @@ explosion:
         BlendMode: Additive
     large_clsn: s_clsn42
     verylarge_clsn: s_clsn58
+        Offset: 0, 0, 30
     tiny_twlt: twlt026
         BlendMode: Additive
     small_twlt: twlt036
         BlendMode: Additive
     medium_twlt: twlt050
+        Offset: 0, 0, 26
         BlendMode: Additive
     large_twlt: twlt070
+        Offset: 0, 0, 36
         BlendMode: Additive
     verylarge_twlt: twlt100
+        Offset: 0, 0, 51
         BlendMode: Additive
     tiny_grey_explosion: xgrysml1
         BlendMode: Additive
@@ -241,10 +287,10 @@ explosion:
         BlendMode: Additive
     large_grey_explosion: xgrymed2
         BlendMode: Additive
-	veins: veinatac
-		Length: 12
-		UseTilesetExtension: true
-		ZOffset: 1023
+    veins: veinatac
+        Length: 12
+        UseTilesetExtension: true
+        ZOffset: 1023
     tiny_flash: clight4
         BlendMode: Additive
     small_flash: clight1
@@ -274,8 +320,10 @@ explosion:
     scexplo: scexplo
     plasmaexp01: plasmaexp01
     plasmaexp02: plasmaexp02
+    protonexpl_lrg2: plasbomb_small
     protonexpl_lrg: plasbomb
     protonexpl_small: protexp2
+    protonexpl_inf: protexp3
     protonexpl_tiny: protexp1
     protonexpl_med: eoncnex
     airexplo01: airexplo01
@@ -342,9 +390,19 @@ explosion:
         BlendMode: Additive
         
 newrank:
-    rank: newpips
+    veteran1: newpips
         Start: 0
-        Length: 5
+    veteran2: newpips
+        Start: 1
+    veteran3: newpips
+        Start: 2
+    elite: newpips
+        Start: 3
+    heroic: newpips
+        Start: 4
+    production: newpips
+        Start: 0
+        Length: 1
         ZOffset: 511
  
 bufficon:
@@ -355,6 +413,17 @@ bufficon:
             
 nodbufficon:
     buff: nodbuff
+        idle:
+            Length: 1
+            ZOffset: 511
+    fist: nodbuff
+        idle:
+            Start: 1
+            Length: 1
+            ZOffset: 511
+			
+berserkbufficon:
+    buff: berserkbuff
         idle:
             Length: 1
             ZOffset: 511
@@ -449,6 +518,12 @@ flametrailer:
         BlendMode: Additive
         ZOffset: 1023
         
+blueflametrailer:
+    idle:
+        Length: *
+        BlendMode: Additive
+        ZOffset: 1023
+        
 large_smoke_trail:
     idle: smokey
         Length: *
@@ -458,9 +533,14 @@ small_smoke_trail:
         Length: *
         ZOffset: 1023
 #        BlendMode: Additive #Alpha
-        
+
 plasmatrail:
     idle: railpart
+        Length: *
+        ZOffset: 1023
+        
+tiberiumtrail:
+    idle: tibpart
         Length: *
         ZOffset: 1023
         
@@ -477,11 +557,11 @@ smallsmoketrail:
         BlendMode: Additive #Alpha
         
 fire:
-	1:  fire01a
+    1:  fire01a
         BlendMode: Additive
-		Length: *
-		Offset: 0,-3
-		ZOffset: 1023
+        Length: *
+        Offset: 0,-3
+        ZOffset: 1023
         
 largefire:
     idle: fire1
@@ -516,12 +596,17 @@ moveflsh:
     idle: ring
         Length: *
         Tick: 30
+        ZOffset: 2047
+        Offset: 0, 0, 48
+        ZRamp: 1
 
 wake:
     idle: wake2
         Length: *
         ZOffset: -512
         Tick: 180
+        ZRamp: 1
+        Offset: 0, 0, 1
 dust:
     idle: vehicledust
         Length: *
@@ -531,11 +616,12 @@ dust2:
     idle: infantrydust
         Length: *
         ZOffset: -512
-        
+    
 smallscorches:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -12
+        Offset: 0, -12, 1
+        ZRamp: 1
     sc1: burnt01
     sc01: burnt101
     sc2: burnt02
@@ -552,7 +638,8 @@ smallscorches:
 mediumscorches:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -18
+        Offset: 0, -18, 1
+        ZRamp: 1
     sc7: burnt07
     sc07: burnt107
     sc8: burnt08
@@ -565,7 +652,8 @@ mediumscorches:
 largescorches:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -24
+        Offset: 0, -24, 1
+        ZRamp: 1
     sc11: burnt11
     sc011: burnt111
     sc12: burnt12
@@ -574,7 +662,8 @@ largescorches:
 smallcraters:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -12
+        Offset: 0, -12, 1
+        ZRamp: 1
     cr1: crater01
     cr01: crater101
     cr2: crater02
@@ -591,7 +680,8 @@ smallcraters:
 mediumcraters:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -12
+        Offset: 0, -12, 1
+        ZRamp: 1
     cr7: crater07
     cr07: crater107
     cr8: crater08
@@ -604,7 +694,8 @@ mediumcraters:
 largecraters:
     Defaults:
         UseTilesetExtension: true
-        Offset: 0, -24
+        Offset: 0, -24, 1
+        ZRamp: 1
     cr11: crater11
     cr011: crater111
     cr12: crater12
@@ -614,70 +705,64 @@ icon:
     clustermissile: mltiicon
     ioncannon: ioncicon
     hunterseeker: detnicon
-	emp: pulsicon
-    airstrikeox: orca_oxicon
-    airstrikeog: orca_gicon
+    emp: pulsicon
+    orcabomber: orca_bicon
+    orcascout: orca_gicon
+    fenzy: nodfenzyicon
 
 clustermissile:
     up: nukeup
         Length: *
     down: nukedown
         Length: *
+
 ionbeam:
     idle:
         Length: *
         Offset: 0, -78
         ZOffset: 1
 
-trock01:
+ionring: 
+    idle: ring1
+        Length: *
+        ZOffset: -512
+        Tick: 120
+
+^rock:
     idle:
         ShadowStart: 1
         UseTilesetExtension: true
+        Offset: 0, -12
+
+trock01:
+    Inherits: ^rock
 
 trock02:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 trock03:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 trock04:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 trock05:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 srock01:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 srock02:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 srock03:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 srock04:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 srock05:
-    idle:
-        ShadowStart: 1
-        UseTilesetExtension: true
+    Inherits: ^rock
 
 gunfire:
     idle:
@@ -723,6 +808,26 @@ bullet:
         Facings: 32
 
 energybullet:
+    idle:
+        Length: 1
+        Facings: 32
+
+energyblast1:
+    idle:
+        Length: 1
+        Facings: 32
+
+energyblast2:
+    idle:
+        Length: 1
+        Facings: 32
+
+tiberiumbullet:
+    idle:
+        Length: 1
+        Facings: 32
+
+bluetiberiumbullet:
     idle:
         Length: 1
         Facings: 32
@@ -834,6 +939,7 @@ blood:
     Defaults:
         Length:*   
         ZOffset: 1023
+    idle: blood1
     1: blood
     2: blood1
     3: blood2
@@ -861,7 +967,43 @@ nt:
 np:
     idle:
     icon: np
-  
+
+upgrade.tibgas:
+    idle: ni
+    icon: upgrade.napalmicon
+
+upgrade.tibinfusion:
+    idle: ni
+    icon: upgrade.infusionicon
+
+upgrade.tiblaser:
+    idle: ni
+    icon: upgrade.tiblasericon
+
+upgrade.laser:
+    idle: nt
+    icon: upgrade.lasericon
+
+upgrade.stealth:
+    idle: nt
+    icon: upgrade.stealthicon
+
+upgrade.emp:
+    idle: nt
+    icon: upgrade.empicon
+
+upgrade.mass:
+    idle: nt
+    icon: upgrade.massicon
+
+upgrade.nanofiber:
+    idle: nt
+    icon: upgrade.nanofibericon
+
+upgrade.bluehell:
+    idle: nt
+    icon: upgrade.bluehellicon
+    
 cab_hc:
     idle:
     icon: cab_hc
@@ -890,9 +1032,9 @@ forg.brigand:
     default: forgu
     icon: brigicon
     
-forg.goon:
+forg.ghost:
     default: forgu
-    icon: goonicon
+    icon: gosticon
     
 forg.warrior:
     default: forgu
@@ -901,235 +1043,143 @@ forg.warrior:
 forg.fiend:
     default: forgu
     icon: fiendicon
+      
+forg.mhijack:
+    default: forgu
+    icon: mhijackicon
+      
+forg.goon:
+    default: forgu
+    icon: goonicon
     
 forg.fbuggy:
     default: forgu
     icon: fbuggyicon
     
-forg.ftruck:
-    default: forgu
-    icon: ftruckicon
-    
-forg.gremlin:
-    default: forgu
-    icon: gremlinicon
-    
-forg.warthog:
-    default: forgu
-    icon: warthogicon
-    
-forg.bison:
-    default: forgu
-    icon: bisonicon
-    
-forg.auroch:
-    default: forgu
-    icon: aurochicon
-
 forg.fbuggy_mg:
     default: forgu
     icon: fbuggy_mgicon
-    
-forg.fbuggy_gat:
-    default: forgu
-    icon: fbuggy_gaticon
     
 forg.fbuggy_mis:
     default: forgu
     icon: fbuggy_misicon
     
-forg.fbuggy_flak:
+forg.fbuggy_mortar:
     default: forgu
-    icon: fbuggy_flakicon
+    icon: fbuggy_mortaricon
     
-forg.fbuggy_arty:
+forg.ftruck:
     default: forgu
-    icon: fbuggy_artyicon
+    icon: ftruckicon
     
-forg.ftruck_mg:
+forg.ftruck_flamer:
     default: forgu
-    icon: ftruck_mgicon
-    
-forg.ftruck_gat:
-    default: forgu
-    icon: ftruck_gaticon
-    
-forg.ftruck_mis:
-    default: forgu
-    icon: ftruck_misicon
-    
+    icon: ftruck_flamericon
+
 forg.ftruck_flak:
     default: forgu
     icon: ftruck_flakicon
     
-forg.ftruck_arty:
+forg.ftruck_mortar:
     default: forgu
     icon: ftruck_mortaricon
-
-forg.gremlin_mg:
-    default: forgu
-    icon: gremlin_mgicon
     
-forg.gremlin_gat:
+forg.gremlin:
     default: forgu
-    icon: gremlin_gaticon
+    icon: gremlinicon
     
-forg.gremlin_mis:
+forg.gremlin_hcan:
     default: forgu
-    icon: gremlin_misicon
+    icon: gremlin_hcanicon
     
-forg.gremlin_flak:
-    default: forgu
-    icon: gremlin_flakicon
-    
-forg.gremlin_arty:
+forg.gremlin_mortar:
     default: forgu
     icon: gremlin_mortaricon
     
-forg.gremlin_shotgun:
-    default: forgu
-    icon: gremlin_shotgunicon    
-    
-forg.gremlin_75mmg:
-    default: forgu
-    icon: gremlin_75mmgicon   
-    
 forg.gremlin_90mm:
     default: forgu
-    icon: gremlin_90mmicon    
-    
-forg.warthog_mg:
+    icon: gremlin_90mmicon
+
+forg.taurus:
     default: forgu
-    icon: warthog_mgicon
-    
-forg.warthog_gat:
+    icon: taurusicon
+
+forg.taurus_mg:
     default: forgu
-    icon: warthog_gaticon
-    
-forg.warthog_mis:
+    icon: taurus_mgicon
+
+forg.taurus_hcan:
     default: forgu
-    icon: warthog_misicon
-    
-forg.warthog_flak:
+    icon: taurus_hcanicon
+
+forg.taurus_mis
     default: forgu
-    icon: warthog_flakicon
-    
-forg.warthog_arty:
+    icon: taurus_misicon
+
+forg.lizard:
     default: forgu
-    icon: warthog_artyicon
-    
-forg.warthog_shotgun:
+    icon: lizardicon
+
+forg.lizard_mg:
     default: forgu
-    icon: warthog_shotgunicon    
-    
-forg.warthog_75mmg:
+    icon: lizard_mgicon
+
+forg.lizard_90mm:
     default: forgu
-    icon: warthog_75mmgicon   
-    
-forg.warthog_90mm:
+    icon: lizard_90mmicon
+
+forg.lizard_122mm:
     default: forgu
-    icon: warthog_90mmicon
-        
-forg.bison_mg:
+    icon: lizard_122mmicon
+
+forg.digger:
     default: forgu
-    icon: bison_mgicon
-    
-forg.bison_gat:
+    icon: diggericon
+
+forg.digger_mis:
     default: forgu
-    icon: bison_gaticon
-    
-forg.bison_mis:
+    icon: digger_misicon
+
+forg.digger_mortar:
     default: forgu
-    icon: bison_misicon
-    
-forg.bison_flak:
+    icon: digger_mortaricon
+
+forg.digger_122mm:
     default: forgu
-    icon: bison_flakicon
+    icon: digger_122mmicon
     
-forg.bison_arty:
+forg.bison:
     default: forgu
-    icon: bison_artyicon
-    
-forg.bison_shotgun:
+    icon: bisonicon
+
+forg.bison_130mm:
     default: forgu
-    icon: bison_shotgunicon    
-    
-forg.bison_75mmg:
+    icon: bison_130mmicon
+
+forg.bison_145mm:
     default: forgu
-    icon: bison_75mmgicon   
-    
-forg.bison_90mm:
-    default: forgu
-    icon: bison_90mmicon  
-    
-forg.bison_90mmgg:
-    default: forgu
-    icon: bison_90mmggicon      
-    
-forg.bison_120mmt:
-    default: forgu
-    icon: bison_120mmticon      
-    
-forg.bison_122mmg:
-    default: forgu
-    icon: bison_122mmgicon  
-    
+    icon: bison_145mmicon
+
 forg.bison_180mm:
     default: forgu
-    icon: bison_180mmicon  
+    icon: bison_180mmicon
+    
+forg.auroch:
+    default: forgu
+    icon: aurochicon
+    
+forg.auroch_130mm:
+    default: forgu
+    icon: auroch_130mmicon
 
-forg.auroch_mg:
-    default: forgu
-    icon: auroch_mgicon
-    
-forg.auroch_gat:
-    default: forgu
-    icon: auroch_gaticon
-    
-forg.auroch_mis:
-    default: forgu
-    icon: auroch_misicon
-    
-forg.auroch_flak:
-    default: forgu
-    icon: auroch_flakicon
-    
-forg.auroch_arty:
-    default: forgu
-    icon: auroch_artyicon
-    
-forg.auroch_shotgun:
-    default: forgu
-    icon: auroch_shotgunicon    
-    
-forg.auroch_75mmg:
-    default: forgu
-    icon: auroch_75mmgicon   
-    
-forg.auroch_90mm:
-    default: forgu
-    icon: auroch_90mmicon  
-    
-forg.auroch_90mmgg:
-    default: forgu
-    icon: auroch_90mmggicon      
-    
 forg.auroch_120mmt:
     default: forgu
-    icon: auroch_120mmticon      
-    
-forg.auroch_122mmg:
-    default: forgu
-    icon: auroch_122mmgicon  
-    
+    icon: auroch_120mmticon
+
 forg.auroch_180mm:
     default: forgu
-    icon: auroch_180mmicon  
-
-forg.howitzer:
-    default: forgu
-    icon: howitzericon
-        
+    icon: auroch_180mmicon
+    
 forg.ragnarok:
     default: forgu
     icon: ragnaricon
@@ -1153,6 +1203,10 @@ cab.glad:
 cab.kronos:
     default: forgu
     icon: kronosicon
+    
+cab.fury:
+    default: forgu
+    icon: furyicon
     
 cab.gargantua:
     default: forgu
@@ -1197,98 +1251,75 @@ palet03:
 palet04:
     idle:
     
-tracks01:
+^tracks:
     idle:
         UseTilesetExtension: true
         ZOffset: -1c0
+        ZRamp: 1
+
+tracks01:
+    Inherits: ^tracks
 
 tracks02:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks03:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks04:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks05:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks06:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks07:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks08:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks09:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks10:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks11:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks12:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks13:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks14:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks15:
-    idle:
-        UseTilesetExtension: true
-        ZOffset: -1c0
+    Inherits: ^tracks
 
 tracks16:
+    Inherits: ^tracks
+
+^tuntop:
     idle:
+        Offset: 0, -13, 42
+        ZRamp: 1
         UseTilesetExtension: true
-        ZOffset: -1c0
+        ShadowStart: 1
 
 tuntop01:
-    idle:
-        Offset: 0, -13
-        UseTilesetExtension: true
-        ShadowStart: 1
+    Inherits: ^tuntop
 
 tuntop02:
-	Inherits: tuntop01
+    Inherits: ^tuntop
 
 tuntop03:
-	Inherits: tuntop01
+    Inherits: ^tuntop
 
 tuntop04:
-	Inherits: tuntop01
-        ShadowStart: 1
+    Inherits: ^tuntop

@@ -4,41 +4,39 @@ SACNST:
         Footprint: xxx xxx xxx
         BuildSounds: facbld1.aud
         Dimensions: 3,3
-        TerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
     Buildable:
         Queue: Building
         BuildPaletteOrder: 500
         Prerequisites: ~disabled
         Adjacent: 8
+        Description: Builds base structures.
     Health:
-        HP: 2000
+        HP: 4000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 10c0
     Production:
         Produces: Building,Defense
-#    ProductionQueue@Building:
-#        Type: Building
-#        Group: Building
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
-#    ProductionQueue@Defense:
-#        Type: Defense
-#        Group: Defense
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
+    ProductionQueue@Building:
+        Type: Building
+        Group: Building
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
+    ProductionQueue@Defense:
+        Type: Defense
+        Group: Defense
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
     Valued:
         Cost: 2500
     Tooltip:
-        Name: Scrin Hive
-        Description: Builds base structures.
-    CustomSellValue:
-        Value: 2500
+        Name: Master Hive
+    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: smcv
@@ -50,34 +48,34 @@ SACNST:
     ProductionBar@Defense:
         ProductionType: Defense
 #    WithBuildingPlacedOverlay:
+    ProvidesRadar:
     Power:
         Amount: 0
     Selectable:
-        Bounds: 80, 144, 0, -12
+        Bounds: 96, 118, 0, -38
     ProvidesPrerequisite@scrin:
         Prerequisite: structures.scrin
+    BaseProvider:
+        Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
-    CashTrickler:
-        Period: 100
-        Amount: 100
 
 SAPOWR:
-    Inherits: ^BuildingInfiltrate
+    Inherits: ^Building
     Buildable:
         Queue: Building
         BuildPaletteOrder: 501
         Prerequisites: ~structures.scrin
+        Description: Provides power for other structures.
     Valued:
-        Cost: 500
+        Cost: 900
     Tooltip:
         Name: Dark Matter Generator
-        Description: Provides power for other structures.
     ProvidesPrerequisite:
         Prerequisite: anypower
     Building:
-        Footprint: xx xx
-        Dimensions: 2,2
+        Footprint: xxx xxx xxx
+        Dimensions: 3,3
     PowerTooltip:
     InfiltrateForPowerOutage:
         Duration: 750
@@ -85,48 +83,203 @@ SAPOWR:
     Selectable:
         Bounds: 88, 80, 2, -12
     Health:
-        HP: 1000
+        HP: 1500
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 4c0
     Power:
-        Amount: 200
+        Amount: 350
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
     DisabledOverlay:
-    
-SASEED:
+
+SPROC:
     Inherits: ^BuildingInfiltrate
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: Ichor Refinery
     Buildable:
         Queue: Building
         BuildPaletteOrder: 502
-        Prerequisites: ~structures.scrin
+        Prerequisites: anypower, ~structures.scrin
+        Description: Processes raw Ichor into useable resources. \n\nStores an infinte amount of Ichor.
+    Building:
+        Footprint: xxx= xx== xxx=
+        Dimensions: 4,3
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: -1
+        Maximum: 1000
+    Selectable:
+        Bounds: 134, 122, 0, -18
+    Health:
+        HP: 1500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 6c0
+    TiberianSunRefinery:
+        DockAngle: 160
+        DockOffset: 3,1
+        DiscardExcessResources: True
+    StoresResources:
+        PipColor: Green
+        PipCount: 0
+        Capacity: 500000
+    CustomSellValue:
+        Value: 500
+    FreeActor:
+        Actor: SHARV
+        SpawnOffset: 2,1
+        Facing: 160
+#    WithDockedOverlay@flame:
+#        Sequence: flame
+#        Palette: effect
+    Power:
+        Amount: -50
+    Explodes:
+        Weapon: TiberiumExplosionRef
+        EmptyWeapon: TiberiumExplosionRef
+    ProvidesPrerequisite@buildingname:
+
+SAPORTAL:
+    Inherits: ^Building
     Valued:
-        Cost: 1000
+        Cost: 2000
     Tooltip:
-        Name: Tiberium Stimulator
-        Description: Seeds Tiberium.
+        Name: Warp Portal
     ProvidesPrerequisite:
-        Prerequisite: anypower
+        Prerequisite: sproc, ~structures.scrin
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 503
+        Prerequisites: anypower, sproc, ~structures.scrin
+        Description: Produces Scrin units.
+    Building:
+        Footprint: xxx xxx xxx ===
+        Dimensions: 3,4
+    Selectable:
+        Bounds: 154, 100, -2, -12
+    Health:
+        HP: 2000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    RallyPoint:
+        Offset: 1,4
+        Palette: mouse
+        IsPlayerPalette: False
+    Exit@1:
+        SpawnOffset: -384,-384,0
+        ExitCell: 0,3
+        ExitDelay: 5
+        Facing: 96
+    ExitsDebugOverlay:
+    Production:
+        Produces: Infantry.Scrin, Vehicle.Scrin, Air.Scrin
+    ProductionQueue@Infantry:
+        Type: Infantry.Scrin
+        Group: Infantry
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    ProductionQueue@Vehicle:
+        Type: Vehicle.Scrin
+        Group: Vehicle
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    ProductionQueue@Air:
+        Type: Air.Scrin
+        Group: Air
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    ProductionBar@Infantry:
+        ProductionType: Infantry.Scrin
+        Group: Infantry
+    ProductionBar@Vehicle:
+        ProductionType: Vehicle.Scrin
+        Group: Vehicle
+    ProductionBar@Air:
+        ProductionType: Air.Scrin
+        Group: Air
+    WithIdleOverlay@warp:
+        Sequence: idle-warp
+#    WithProductionDoorOverlay@door:
+    WithProductionOverlay@portal:
+        Sequence: production-portal
+    Power:
+        Amount: -150
+    ProvidesPrerequisite@buildingname:
+
+SANODE:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 504
+        Prerequisites: sproc, saportal, ~structures.scrin
+        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Telemetry Uplink Node
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 96, 118, 0, -38
+    Health:
+        HP: 1600
+    Armor:
+        Type: Light
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    ProvidesRadar:
+    InfiltrateForExploration:
+    RevealsShroud:
+        Range: 20c0
+    Power:
+        Amount: -50
+    ProvidesPrerequisite@buildingname:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 20c0
+        CloakTypes: Underground
+
+SASEED:
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 505
+        Prerequisites: saportal, sanode, ~structures.scrin
+        Description: Tib Stick stops Tripod stuff
+    Valued:
+        Cost: 4000
+    Tooltip:
+        Name: TibStick
     Building:
         Footprint: x
         Dimensions: 1,1
     Selectable:
         Bounds: 48, 48, 0, -12
     Health:
-        HP: 1000
+        HP: 2000
     Armor:
         Type: Medium
-    RevealsShroud:
-        Range: 4c0
-    Power:
-        Amount: -25
+    RequiresPower:
     DisabledOverlay:
-    SeedsResource:
-        ResourceType: Tiberium
-        Interval: 25
-    CashTrickler:
-        Period: 100
-        Amount: 25
+    RevealsShroud:
+        Range: 5c0
+    Power:
+        Amount: -100
+    ProvidesPrerequisite@buildingname:

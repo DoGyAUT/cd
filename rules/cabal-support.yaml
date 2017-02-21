@@ -4,14 +4,14 @@ KAWALL:
         Queue: Defense
         BuildPaletteOrder: 300
         Prerequisites: ~structures.cabal
+        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
     SoundOnDamageTransition:
     Valued:
-        Cost: 200
+        Cost: 100
     CustomSellValue:
         Value: 0
     Tooltip:
         Name: Concrete Wall
-        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
     Health:
         HP: 300
     Armor:
@@ -29,6 +29,7 @@ KAGATE_A:
         Queue: Defense
         BuildPaletteOrder: 301
         Prerequisites: ~structures.cabal
+        Description: Automated barrier that opens for allied units.
     Tooltip:
         Name: Cabal Gate
 
@@ -38,20 +39,65 @@ KAGATE_B:
         Queue: Defense
         BuildPaletteOrder: 302
         Prerequisites: ~structures.cabal
+        Description: Automated barrier that opens for allied units.
     Tooltip:
         Name: Cabal Gate
 
+KASILO:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 303
+        Prerequisites: kproc, ~structures.cabal
+        Description: Stores excess Tiberium.\n\nStores 1000$.
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Cabal Silo
+    Building:
+        Footprint: xx xx
+        Dimensions: 2, 2
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: -1
+        Maximum: 1000
+    Selectable:
+        Bounds: 80, 48, -5, 0
+    -GivesBuildableArea:
+    Health:
+        HP: 500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    RenderSprites:
+    WithSpriteBody:
+    WithSiloAnimation:
+    WithIdleOverlay@UNDERLAY:
+        Sequence: idle-underlay
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    StoresResources:
+        PipColor: Green
+        PipCount: 5
+        Capacity: 1000
+    Power:
+        Amount: -10 
+    Explodes:
+        Weapon: TiberiumExplosionSilo
+        EmptyWeapon: TiberiumExplosionSilo
+        
 KABLASR:
     Inherits: ^Defense
     Valued:
         Cost: 800
     Tooltip:
         Name: Sabercut
-        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 303
         Prerequisites: anypower, kproc, ~structures.cabal
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -76,8 +122,6 @@ KABLASR:
         LocalOffset: 725,0,1700
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
-        Recoil: 50
-        RecoilRecovery: 10
     AutoTarget:
     RenderRangeCircle:
     WithSpriteTurret:
@@ -87,19 +131,20 @@ KABLASR:
     WithMuzzleOverlay:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 3c0
+        Range: 6c0
+        CloakTypes: Cloak, Underground
       
 KABCAN:
     Inherits: ^Defense
     Valued:
-        Cost: 1000
+        Cost: 1100
     Tooltip:
         Name: Plasma Blaster
-        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 304
-        Prerequisites: anypower, kproc, karadr, ~structures.cabal, ~!t1
+        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: x
         Dimensions: 1,1
@@ -135,7 +180,8 @@ KABCAN:
     WithMuzzleOverlay:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 3c0
+        Range: 6c0
+        CloakTypes: Cloak, Underground
 
 KDARK:
     Inherits: ^Defense
@@ -143,11 +189,11 @@ KDARK:
         Cost: 1500
     Tooltip:
         Name: Obelisk of Darkness
-        Description: Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 305
-        Prerequisites: anypower, kproc, karadr, ~structures.cabal, ~!t1
+        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+        Description: Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Building:
         Footprint: x
         Dimensions: 1,1
@@ -156,11 +202,11 @@ KDARK:
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 1500
+        HP: 2000
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 18c0
+        Range: 16c0
     Armament:
         Weapon: CabalObeliskLaserAA
         LocalOffset: 1600,0,2000
@@ -170,25 +216,30 @@ KDARK:
     WithChargeOverlay:
         Sequence: active
         Palette: player
-        IsPlayerPalette: true
+        IsPlayerPalette: True
     AutoTarget:
     RenderRangeCircle:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
     Power:
-        Amount: -100
+        Amount: -150
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+    ProvidesPrerequisite@buildingname:
         
 KOBEL:
     Inherits: ^Defense
     Valued:
-        Cost: 3000
+        Cost: 2500
     Tooltip:
         Name: Core Obelisk
-        Description: Advanced base defense.\nDetects cloaked units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 306
-        Prerequisites: anypower, kproc, karadr, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: anypower, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Description: Advanced base defense.\nDetects cloaked units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -197,7 +248,7 @@ KOBEL:
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 2200
+        HP: 4000
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -211,7 +262,7 @@ KOBEL:
     WithChargeOverlay:
         Sequence: active
         Palette: player
-        IsPlayerPalette: true
+        IsPlayerPalette: True
     AutoTarget:
     RenderRangeCircle:
     RenderDetectionCircle:

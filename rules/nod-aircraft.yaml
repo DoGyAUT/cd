@@ -1,14 +1,14 @@
 VENOM:
     Inherits: ^Helicopter
     Valued:
-        Cost: 900
+        Cost: 700
     Tooltip:
         Name: Venom
-        Description: Anti-personnel support gunship\narmed with dual chain guns.\n equipped with advanced sensors for stealth detection\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles
     Buildable:
-        Queue: Air
+        Queue: Air.Nod
         BuildPaletteOrder: 200
-        Prerequisites: ~nahpad, ~!industry
+        Prerequisites: ~nahpad, ~technology
+        Description: Nod's basic Vtol unit.\n\n Role: Vtol\n HP: 350\n Armor: Light\n Speed: 140\n Viewrange: 10c0\n\n Good vs Infantry, Cyborgs\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -16,23 +16,29 @@ VENOM:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 6
-        Speed: 190
+        Speed: 140
+        IdealSeparation: 768
     Health:
-        HP: 400
+        HP: 350
     Armor:
         Type: Light
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Name: primary
         Weapon: VenomCannon
-        LocalOffset: 660,96,48, 660,-96,48
+        LocalOffset: 660,0,48
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
+        RequiresCondition: !upgrade.laser
+    Armament@laserA:
+        Name: primary
+        Weapon: AirLaserFire
+        LocalOffset: 660,0,48
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.laser
     AttackHeli:
         FacingTolerance: 20
     AmmoPool:
@@ -44,28 +50,31 @@ VENOM:
         SelfReloads: True
         SelfReloadDelay: 5
     DetectCloaked:
-        Range: 5c0
+        Range: 7c0
     RenderDetectionCircle:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    Contrail@1:
-        Offset: 256,512,256
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: 256,-512,256
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.laser
+        Prerequisites: upgrade.laser
+#    Contrail@1:
+#        Offset: 256,512,256
+#        TrailLength: 25
+#        TrailWidth: 25
+#        Color: 0080FF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: 256,-512,256
+#        TrailLength: 25
+#        TrailWidth: 25
+#        Color: 0080FF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: VENOM.Husk
-        Probability: 80
+        Probability: 100
 
 HYDRA:
     Inherits: ^Helicopter
@@ -73,11 +82,11 @@ HYDRA:
         Cost: 1400
     Tooltip:
         Name: Hydra
-        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
     Buildable:
-        Queue: Air
+        Queue: Air.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~nahpad, ~industry
+        Description: Requires Industry Nod Doctrine.\n\n Advanced Vtol unit from Industry Nod.\n\n Role: Vtol\n HP: 500\n Armor: Medium\n Speed: 90\n Viewrange: 11c0\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Receives a Tiberium Laser Weapon with Tiberium Laser Upgrade (Industry)
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -85,29 +94,41 @@ HYDRA:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 5
-        Speed: 140
+        Speed: 90
         IdealSeparation: 2048
     Health:
-        HP: 600
+        HP: 500
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 11c0
-        Type: CenterPosition
-    Armament@primary:
+        Type: GroundPosition
+    Armament@primaryA:
         Weapon: HydraCannon
         LocalOffset: 800,0,256
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.tiblaser
+    Armament@laserA:
+        Weapon: HydraLaserFire
+        LocalOffset: 800,0,256
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.tiblaser
     Armament@primary2:
         Weapon: HydraMissiles
         LocalOffset: 90,240,128, 90,-240,128, 90,190,128, 90,-190,128, 90,290,128, 90,-290,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
+        RequiresCondition: !upgrade.tibgas
+    Armament@primary2upgrade:
+        Weapon: HydraGasMissiles
+        LocalOffset: 90,240,128, 90,-240,128, 90,190,128, 90,-190,128, 90,290,128, 90,-290,128
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.tibgas
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -126,50 +147,45 @@ HYDRA:
         PipTypeEmpty: AmmoEmpty
         SelfReloads: True
         SelfReloadDelay: 5
-    GlobalUpgradable@upgrade:
-        Upgrades: industry
-        Prerequisites: industry
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.tiblaser
+        Prerequisites: upgrade.tiblaser
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.tibgas
+        Prerequisites: upgrade.tibgas
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
-    WithVoxelBody@default:
-        UpgradeTypes: industry
-        UpgradeMaxEnabledLevel: 0
-    WithVoxelBody@default2:
+    WithVoxelBody:
         Sequence: idle2
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     WithMuzzleOverlay:
     WithIdleOverlay@ROTORAIR:
         Offset: 0,0,930
-		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+        Sequence: rotor
+        RequiresCondition: airborne
     WithIdleOverlay@ROTORGROUND:
         Offset: 0,0,930
-		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+        Sequence: slow-rotor
+        RequiresCondition: airborne
     DetectCloaked:
-        Range: 5c0
+        Range: 7c0
     RenderDetectionCircle:
     SpawnActorOnDeath:
         Actor: HYDRA.Husk
-        Probability: 80
+        Probability: 100
         
 HAVOC:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1800
+        Cost: 1300
     Tooltip:
         Name: Havoc
-        Description: Gunship armed with two air to surface missile pods and a high explosive rounds firing cannon.\n  Strong vs Light armor, VTOLs\n  Weak vs Infantry, Fighters
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 202
-        Prerequisites: ~nahpad, naradr, napyra, ~!t1
+#    Buildable:
+#        Queue: Air.Nod
+#        BuildPaletteOrder: 202
+#        Prerequisites: ~nahpad, ~!t1, ~propaganda
+#        Description: Nod´s siege Vtol unit.\n\n Role: Vtol\n HP: 450\n Armor: Light\n Speed: 80\n Viewrange: 10c0\n\n Good vs Infantry Cyborgs, Vehicles, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Damage boost with Blue Hell Inferno (Propaganda)
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -177,26 +193,27 @@ HAVOC:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 4
-        Speed: 130
+        Speed: 80
         IdealSeparation: 2048
     Health:
-        HP: 700
+        HP: 450
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
-        Weapon: HavocCannon
-        LocalOffset: 650,0,128
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@primary2:
         Weapon: HavocMissiles
-        LocalOffset: 256,128,128, 256,-128,128
+        LocalOffset: 450,512,300, 450,-512,300
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.bluehell
+    Armament@upgrade:
+        Weapon: HavocMissilesNapalm
+        LocalOffset: 450,512,300, 450,-512,300
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.bluehell
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -217,126 +234,106 @@ HAVOC:
         SelfReloadDelay: 5
     WithIdleOverlay@ROTORAIR1:
         Offset: 200,700,900
-		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+        Sequence: rotor
+        RequiresCondition: airborne
     WithIdleOverlay@ROTORGROUND1:
         Offset: 200,700,900
-		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+        Sequence: slow-rotor
+        RequiresCondition: !airborne
     WithIdleOverlay@ROTORAIR2:
         Offset: 200,-700,900
-		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+        Sequence: rotor
+        RequiresCondition: airborne
     WithIdleOverlay@ROTORGROUND2:
         Offset: 200,-700,900
-		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+        Sequence: slow-rotor
+        RequiresCondition: !airborne
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.bluehell
+        Prerequisites: upgrade.bluehell
     SpawnActorOnDeath:
         Actor: HAVOC.Husk
-        Probability: 80
-    
-SCRIN:
-    Inherits: ^AttackAdvancedPlane
+        Probability: 100
+        
+NODCARRY:
+    Inherits: ^Helicopter
     Valued:
-        Cost: 2000
+        Cost: 800
     Tooltip:
-        Name: Banshee Fighter
-        Description: Fast fighter based on alien technology.\nArmed with prototype plasma cannons.\n  Strong vs Infantry\n  Weak vs Armored Targets
+        Name: Carryall
     Selectable:
-        Bounds: 60,48
+        Bounds: 60,48,0,-10
+        Priority: 7
+    Buildable:
+        Queue: Air.Nod
+        BuildPaletteOrder: 203
+        Prerequisites: ~nahpad, ~!t1, ~propaganda
+        Description: Requires Technology Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
     Voiced:
         VoiceSet: Venom
         Volume: 2
     Aircraft:
-        TurnSpeed: 5
-        Speed: 360
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 90
+        InitialFacing: 0
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 500
+        HP: 700
     Armor:
         Type: Light
     RevealsShroud:
-        Range: 18c0
-        Type: CenterPosition
-    Armament@primary:
-        Weapon: BansheeCannon
-        LocalOffset: 550,0,32
-    AttackPlane:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
+        Range: 9c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry, Vehicle
+        MaxWeight: 10
+        PipCount: 10
+    Selectable:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Contrail@1:
-        Offset: -512,128,192
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -512,-128,192
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True  
-    Contrail@3:
-        Offset: -512,128,96
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@4:
-        Offset: -512,-128,96
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True  
+    ParaDrop:
+        DropRange: 4c0
     SpawnActorOnDeath:
-        Actor: SCRIN.Husk
-        Probability: 80
+        Actor: NODCARRY.Husk
+        Probability: 100
 
 RAVEN:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2000
+        Cost: 1400
     Tooltip:
         Name: Raven
-        Description: Fast attack fighter designed for air-superiority.\nArmed with 4 machineguns.\n  Strong vs Aircraft\n  Useless vs Ground Targets
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 203
-        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~!technology
+#    Buildable:
+#        Queue: Air.Nod
+#        BuildPaletteOrder: 203
+#        Prerequisites: ~nahpad, ~!t1
+#        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a Minigun
     Selectable:
         Bounds: 60,48
     Voiced:
         VoiceSet: Venom
         Volume: 2
     Aircraft:
-        TurnSpeed: 6
-        Speed: 380
+        TurnSpeed: 4
+        Speed: 210
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 400
+        HP: 1000
     Armor:
         Type: Light
     RevealsShroud:
-        Range: 18c0
-        Type: CenterPosition
+        Range: 14c0
+        Type: GroundPosition
     Armament@primaryAA:
         Weapon: RavenCannonAA
         MuzzleSequence: muzzle
@@ -350,23 +347,9 @@ RAVEN:
         MuzzlePalette: apolra50alpha
         FireDelay: 5
         LocalOffset: 256,800,-32, 256,-800,-32
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    -Cloak@CLOAKGENERATOR:
-    Cloak@upgrade:
-        InitialDelay: 90
-        CloakDelay: 180
-        UpgradeTypes: cloakgenerator
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 99
-        UpgradeMaxAcceptedLevel: 99
-        IsPlayerPalette: true
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    AttackPlane:
-        FacingTolerance: 20
-        AttackTurnDelay: 20
+	Turreted: 
+        TurnSpeed: 360
+	AttackTurreted:
     AmmoPool@1:
         Name:primary
         Ammo: 80
@@ -382,27 +365,37 @@ RAVEN:
     WithMuzzleOverlay:
     Contrail@1:
         Offset: -555,0,256
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 50
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: 0,900,128
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: 0,-900,128
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: RAVEN.Husk
-        Probability: 80
-    GlobalUpgradable@upgrade1:
-        Upgrades: technology, cloakgenerator
-        Prerequisites: technology
+        Probability: 100
 
 SCRINB:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2400
+        Cost: 2250
     Tooltip:
         Name: Banshee MK.II
-        Description: Advanced version of the Banshee fighter with better armament.\n  Strong vs Infantry, Light Armor\n  Weak vs 
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 204
-        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2, ~technology
+#    Buildable:
+#        Queue: Air.Nod
+#        BuildPaletteOrder: 204
+#        Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~technology
+#        Description: Requires Technology Nod Doctrine.\n\n Advanced Anti Air Jet from Technology Nod.\n\n Role: Jet\n HP: 1300\n Armor: Medium\n Speed: 200\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses photon weapons that do AoE damage.
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -410,24 +403,25 @@ SCRINB:
         Volume: 2
     Aircraft:
         TurnSpeed: 4
-        Speed: 330
+        Speed: 200
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 700
+        HP: 1300
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 18c0
-        Type: CenterPosition
+        Range: 14c0
+        Type: GroundPosition
     Armament@primary:
         Weapon: BansheeCannon
         LocalOffset: 550,0,32
-    Armament@secondary:
-        Weapon: BansheeProton
+    Armament@primaryAA:
+        Weapon: BansheeCannonAA
         LocalOffset: 550,0,32
-    AttackPlane:
-        FacingTolerance: 20
+	Turreted: 
+        TurnSpeed: 360
+	AttackTurreted:
     AmmoPool@1:
         Name:primary
         Ammo: 40
@@ -450,179 +444,176 @@ SCRINB:
     WithVoxelBody:
     Contrail@1:
         Offset: -512,180,160
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -512,-180,160
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True  
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
      Contrail@3:
         Offset: -512,180,32
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@4:
         Offset: -512,-180,32
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True    
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: SCRINB.Husk
-        Probability: 80
+        Probability: 100
         
 VERTIGO:
-    Inherits: ^AttackBomber
+    Inherits: ^AttackPlane
     Valued:
-        Cost: 2500
+        Cost: 2000
     Tooltip:
         Name: Vertigo Bomber
-        Description: Advanced versatile bomber craft.\nArmable with different loads, depending on favoured Ideologies.\n  Strong vs Slow Targets, \n  Weak vs Fast Targets\n  Useless vs Aircraft
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 205
-        Prerequisites: ~nahpad, naradr, napyra, natech, ~!t1, ~!t2
+#    Buildable:
+#        Queue: Air.Nod
+#        BuildPaletteOrder: 205
+#        Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~!propaganda
+#        Description: Nod´s Bomber unit.\n\n Role: Bomber\n HP: 700\n Armor: Light\n Speed: 180\n Viewrange: 15c0\n\n Good vs Ground\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Carries 1 bomb\n - Reloads very fast\n\n Upgrades:\n - Tiberium Gas increases damage and creates contamination (Industry)\n - Can be stealthed with Stealth Emitter (Technology)\n - Uses EMP bombs with EMP Tech (Technology)
     Voiced:
         VoiceSet: Vertigo
         Volume: 2
     Selectable:
         Bounds: 60,48
     Aircraft:
-        TurnSpeed: 3
-        Speed: 300
+        TurnSpeed: 4
+        Speed: 180
     Health:
-        HP: 700
+        HP: 1200
     Armor:
         Type: Light
     RevealsShroud:
         Range: 15c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Weapon: VertigoBomb
-        UpgradeTypes: industry
-        UpgradeMaxEnabledLevel: 0
+        RequiresCondition: !upgrade.emp || !upgrade.tibgas
     Armament@primary2:
         Weapon: VertigoBombEMP
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
+        RequiresCondition: upgrade.emp && !upgrade.tibgas
+    Armament@primary3:
+        Weapon: VertigoBombGas
+        RequiresCondition: upgrade.tibgas && !upgrade.emp
     AttackPlane:
         FacingTolerance: 20
     AmmoPool:
         Ammo: 1
         PipCount: 1
-        ReloadCount: 5
-        ReloadDelay: 50
+        ReloadCount: 1
+        ReloadDelay: 250
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    -Cloak@CLOAKGENERATOR:
-    Cloak@upgrade:
+    Cloak:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
         InitialDelay: 90
-        CloakDelay: 200
-        UpgradeTypes: cloakgenerator
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 99
-        UpgradeMaxAcceptedLevel: 99
-        IsPlayerPalette: true
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    GlobalUpgradable@upgrade1:
-        Upgrades: technology, cloakgenerator
-        Prerequisites: technology
-    GlobalUpgradable@upgrade2:
-        Upgrades: industry
-        Prerequisites: industry
+        CloakDelay: 300
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.stealth
+        Prerequisites: upgrade.stealth
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.emp
+        Prerequisites: upgrade.emp
+    GrantConditionOnPrerequisite@upgrade3:
+        Condition: upgrade.tibgas
+        Prerequisites: upgrade.tibgas
     Contrail@1:
         Offset: -512,500,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -512,-500,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True  
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@3:
         Offset: -256,650,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@4:
         Offset: -256,-650,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True 
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@5:
         Offset: -128,800,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@6:
         Offset: -128,-800,0
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True 
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@7:
+        Offset: -800,0,128
+        TrailLength: 60
+        TrailWidth: 50
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: VERTIGO.Husk
-        Probability: 80
+        Probability: 100
         
 ZEP:
     Inherits: ^Helicopter
     Valued:
-        Cost: 3000
+        Cost: 2000
     Tooltip:
         Name: Brotherhood Battleship
-        Description: Huge Zeppelin, armed with bombs and propaganda speakers./nExclusive to the Propaganda ideology.
     Buildable:
-        Queue: Air
+        Queue: Air.Nod
         BuildPaletteOrder: 206
-        Prerequisites: ~nahpad, napyra, natech, ~propaganda
+        Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~propaganda
+        Description: Requires Propaganda Nod Doctrine.\n\n Zeppelin that enhances nearby Nod Soldiers and is armed with lasers.\n\n Role: Bomber\n HP: 3500\n Armor: Heavy\n Speed: 20\n Viewrange: 14c0\n\n Good vs Ground\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Enhances damage and attackspeed of nearby Nod soldiers
     Voiced:
         VoiceSet: Venom
         Volume: 2
     Selectable:
         Bounds: 60,48,0,-10
     Aircraft:
-        TurnSpeed: 1
+        TurnSpeed: 2
         CruiseAltitude: 8192
-        Speed: 20
+		Speed: 25
         IdealSeparation: 4096
         AltitudeVelocity: 40
     Health:
-        HP: 3000
+        HP: 3500
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 14c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Weapon: ZepBomb
         LocalOffset: -256,0,-1024
-    AttackHeli:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    GlobalUpgradable@upgrade:
-        Upgrades: propaganda
-        Prerequisites: propaganda
+    # AttackHeli:
+        # FacingTolerance: 20
+	Turreted: #That's the only way to correct bombing, works just fine
+        TurnSpeed: 360
+	AttackTurreted:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
@@ -635,9 +626,8 @@ ZEP:
     RenderDetectionCircle:
     SpawnActorOnDeath:
         Actor: ZEP.Husk
-        Probability: 80
-    UpgradeActorsNear:
-        Upgrades: confessorboost
+        Probability: 100
+    ProximityExternalCondition:
+        Condition: zepdebuff
         Range: 10c0
-    AmbientSound:
-        SoundFile: propaganda.aud
+        ValidStances: Enemy, Neutral

@@ -1,0 +1,77 @@
+SCRIN:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Storm Rider
+    Buildable:
+        Queue: Air.Scrin
+        BuildPaletteOrder: 500
+        Prerequisites: ~saportal, sanode
+        Description: Scrin's Multipurpose-Fighter.\n\n Role: Multipurpose-Jet\n HP: 1300\n Armor: Medium\n Speed: 200\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n\n Special:\n - Can fire into any direction
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Tripod
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 200
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 950
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 14c0
+        Type: GroundPosition
+    Armament@primary:
+        Weapon: StormRaiderCannon
+        LocalOffset: 550,0,32
+    Armament@primaryAA:
+        Weapon: StormRaiderCannonAA
+        LocalOffset: 550,0,32
+    AttackTurreted:
+    AmmoPool@1:
+        Name: primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name: secondary
+        Ammo: 6
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    Turreted:
+        TurnSpeed: 6
+        Offset: 128,0,0
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+     Contrail@1:
+        Offset: -440,240,0
+        TrailLength: 15
+        TrailWidth: 50
+        Color: 00FFFF45
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: -440,-240,0
+        TrailLength: 15
+        TrailWidth: 50
+        Color: 00FFFF45
+        UsePlayerColor: False
+    DetectCloaked:
+        Range: 7c0
+    RenderDetectionCircle:
+    SpawnActorOnDeath:
+        Actor: SCRIN.Husk
+        Probability: 100

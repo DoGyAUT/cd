@@ -1,27 +1,27 @@
 GRUNT:
     Inherits: ^Mutant
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fabar, ~!upgrade.grunt
+        Prerequisites: ~fabar, ~!upgrade.grunt, ~!upgrade.brigand
+        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
         Cost: 100
     Tooltip:
         Name: Grunt
-        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: Grunt
         Volume: 2
     Health:
-        HP: 240
+        HP: 300
     Armor:
         Type: Light
     Mobile:
         Speed: 50
     RevealsShroud:
-        Range: 7c0
+        Range: 5c0
     Armament@primary:
         Weapon: SMG
         LocalOffset: 200,50,550
@@ -29,284 +29,70 @@ GRUNT:
         Weapon: SMG
         LocalOffset: 200,-50,550
     AttackFrontal:
+    SoundOnDamageTransition:
+        DamagedSounds: grunt_f1.aud, grunt_f2.aud, grunt_f3.aud, grunt_f4.aud, grunt_f5.aud, grunt_f6.aud, grunt_d2.aud, grunt_d3.aud
     
 ELITEGRUNT:
     Inherits: ^Mutant
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Forg
         BuildPaletteOrder: 400
         Prerequisites: ~fabar, ~upgrade.grunt
+        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
         Cost: 300
     Tooltip:
         Name: Scoundrel
-        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: Grunt
         Volume: 2
     Health:
-        HP: 340
+        HP: 200
     Armor:
         Type: Light
     Mobile:
         Speed: 50
     RevealsShroud:
-        Range: 8c0
+        Range: 6c0
     Armament@primary:
         Weapon: Machal
         LocalOffset: 300,50,550
     Armament@secondary:
         Weapon: Machal
         LocalOffset: 300,-50,550
+    Armament@grenade:
+        Weapon: Molotov
+        LocalOffset: 300,0,550
     AttackFrontal:
+    SoundOnDamageTransition:
+        DamagedSounds: grunt_f1.aud, grunt_f2.aud, grunt_f3.aud, grunt_f4.aud, grunt_f5.aud, grunt_f6.aud, grunt_d2.aud, grunt_d3.aud
     
-HUNTRESS:
-    Inherits: ^MutantFearless
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 401
-        Prerequisites: ~fabar
-    Valued:
-        Cost: 250
-    Tooltip:
-        Name: Huntress
-        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Hunter
-        Volume: 1
-    Health:
-        HP: 120
-    Armor:
-        Type: Light
-    Mobile:
-        Speed: 60
-    RevealsShroud:
-        Range: 9c0
-    Armament@primary:
-        Weapon: MutantSniper
-        LocalOffset: 256,0,550
-    AttackFrontal:
-    CustomBuildTimeValue:
-        Value: 310
-    
-FENGINEER:
-    Inherits: ^Mutant
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Mechanic
-        Description: Captures enemy structures and repairs vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 405
-        Prerequisites: ~fabar
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Mechanic
-        Volume: 3
-    Mobile:
-        Speed: 80
-    RevealsShroud:
-        Range: 6c0
-    Health:
-        HP: 100
-    Armor:
-        Type: Light
-    Armament:
-        Weapon: MechanicRepair
-        Cursor: repair
-        OutsideRangeCursor: repair
-        TargetStances: Ally
-        ForceTargetStances: None
-    WithInfantryBody:
-        AttackSequence: idle1
-    AttackFrontal:
-    Passenger:
-        PipType: Yellow
-    EngineerRepair:
-    RepairsBridges:
-        RepairNotification: BridgeRepaired
-	ExternalCaptures:
-		Type: building
-    AutoTarget:
-    -GainsExperience:
-    AutoTarget:
-        ScanRadius: 5
-
-EXPLORER:
-    Inherits: ^MutantFearless
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 403
-        Prerequisites: ~fabar
-    Valued:
-        Cost: 350
-    Tooltip:
-        Name: Explorer
-        Description: Camoflage infiltrator unit.\n\n  -Unarmed\n  -Camoflage\n  -Heals in Tiberium
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Explorer
-        Volume: 2
-    Health:
-        HP: 100
-    Armor:
-        Type: Light
-    Mobile:
-        Speed: 80
-    RevealsShroud:
-        Range: 10c0
-    AttackFrontal:
-#    Infiltrates:
-#        Types: SpyInfiltrate
-    -Cloak@CLOAKGENERATOR:
-    Cloak:
-        IsPlayerPalette: true
-#        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
-        
-FDOG:
-    Inherits: ^MutantFearless
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 405
-        Prerequisites: ~fabar, ~!upgrade.fiend
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Hellhound
-        Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: MutantDog
-    Health:
-        HP: 170
-    Armor:
-        Type: Light
-    Mobile:
-        Speed: 80
-    RevealsShroud:
-        Range: 10c0
-    Armament@primary:
-        Weapon: MutantDogJaw
-    AttackLeap:
-        Speed: 85
-        Angle: 56
-        FacingTolerance: 20
-    Targetable:
-        TargetTypes: Ground, Infantry
-    IgnoresDisguise:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5c0
-    AutoTarget:
-        ScanRadius: 5
-        
-FFIEND:
-    Inherits: ^MutantFearlessHeavy
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 405
-        Prerequisites: ~fabar, fhovel, faradr, ~!t1, ~upgrade.fiend
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Fiend
-        Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Fiend
-    Health:
-        HP: 200
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 10c0
-    Mobile:
-        Speed: 113
-    Armament@primary:
-        Weapon: FiendShardGreen
-        UpgradeTypes: eliteweapon
-        UpgradeMaxEnabledLevel: 0
-        UpgradeMaxAcceptedLevel: 1
-    Armament@elite:
-        Weapon: FiendShardBlue
-        UpgradeTypes: eliteweapon
-        UpgradeMinEnabledLevel: 1
-    AttackFrontal:
-    Targetable:
-        TargetTypes: Ground, Infantry
-    IgnoresDisguise:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5c0
-        
-MHIJACK:
-    Inherits: ^Mutant
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 406
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Hijacker
-        Description: Hijacks enemy vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Thief
-        Volume: 3
-    Health:
-        HP: 300
-    Armor:
-        Type: Light
-    Mobile:
-        Speed: 99
-    RevealsShroud:
-        Range: 8c0
-    Captures:
-        CaptureTypes: Vehicle
-    -AutoTarget:
-
 BRIGAND:
     Inherits: ^MutantFearless
     Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 407
-        Prerequisites: ~fabar, fhovel, ~!t1, ~upgrade.brigand
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 400
+        Prerequisites: ~fabar, ~!t1, ~upgrade.brigand
+        Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
-        Cost: 400
+        Cost: 300
     Tooltip:
         Name: Brigand
-        Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: Brigand
         Volume: 3
     Health:
-        HP: 250
+        HP: 400
     Armor:
-        Type: Light
+        Type: Medium
     Mobile:
         Speed: 50
     RevealsShroud:
-        Range: 8c0
+        Range: 5c0
     Armament@primary:
         Weapon: BrigandShotgun
         LocalOffset: 185,50,800
@@ -322,26 +108,268 @@ BRIGAND:
     Armament@secondary4:
         Weapon: BrigandShotgun2
         LocalOffset: 185,50,800
-    AttackFrontal:        
+    AttackFrontal: 
+    SoundOnDamageTransition:
+        DamagedSounds: brigand_f1.aud, brigand_f2.aud, brigand_f3.aud, brigand_f4.aud, brigand_f5.aud
+    
+HUNTRESS:
+    Inherits: ^MutantFearless
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 401
+        Prerequisites: ~fabar
+        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Huntress
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Hunter #Huntress 
+        Volume: 1
+    Health:
+        HP: 120
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 8c0
+    Armament@primary:
+        Weapon: MutantSniper
+        LocalOffset: 256,0,550
+    AttackFrontal:
+    SoundOnDamageTransition:
+        DamagedSounds: hunter3_f1.aud, hunter3_f2.aud
+    
+FENGINEER:
+    Inherits: ^Mutant
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Mechanic
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 405
+        Prerequisites: ~fabar
+        Description: Captures enemy structures and repairs vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
+    Selectable:
+        Priority: 5
+        Bounds: 12,17,0,-6
+    Voiced:
+        VoiceSet: Mechanic
+        Volume: 3
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 6c0
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Armament:
+        Weapon: MechanicRepair
+        Cursor: repair
+        OutsideRangeCursor: repair
+        TargetStances: Ally
+        ForceTargetStances: None
+    WithInfantryBody:
+        DefaultAttackSequence: idle1
+    AttackFrontal:
+    Passenger:
+        PipType: Yellow
+    EngineerRepair:
+    RepairsBridges:
+        RepairNotification: BridgeRepaired
+    ExternalCaptures:
+        Type: building
+        PlayerExperience: 50
+    AutoTarget:
+    -ProducibleWithLevel:
+    AutoTarget:
+        ScanRadius: 5
+    SoundOnDamageTransition:
+        DamagedSounds: mechanic_f1.aud, mechanic_f2.aud, mechanic_f3.aud
+
+EXPLORER:
+    Inherits: ^MutantFearless
+#    Buildable:
+#        Queue: Infantry.Forg
+#        BuildPaletteOrder: 406
+#        Prerequisites: ~fabar
+#        Description: Camoflage infiltrator unit.\n\n  -Unarmed\n  -Camoflage\n  -Heals in Tiberium
+    Valued:
+        Cost: 350
+    Tooltip:
+        Name: Explorer
+    Selectable:
+        Priority: 5
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Explorer
+        Volume: 2
+    Health:
+        HP: 100
+    Armor:
+        Type: Light
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 12c0
+    AttackFrontal:
+    -ProducibleWithLevel:
+#    Infiltrates:
+#        Types: SpyInfiltrate
+    Cloak:
+        Condition: crate-cloak || cloakgenerator
+        CloakSound:
+        UncloakSound: cloak5.aud
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
+    SoundOnDamageTransition:
+        DamagedSounds: hunter_f1.aud,hunter_f2.aud,hunter_f3.aud,hunter_f4.aud
+        
+FDOG:
+    Inherits: ^MutantFearless
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 405
+        Prerequisites: ~fabar, ~!upgrade.fiend
+        Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Hellhound
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: MutantDog
+    Health:
+        HP: 350
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 60
+    RevealsShroud:
+        Range: 10c0
+    Armament@primary:
+        Name: Bite
+        Weapon: MutantDogJaw
+    AttackFrontal:
+        Armaments: Bite
+    Targetable:
+        TargetTypes: Ground, Infantry
+    IgnoresDisguise:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 5c0
+    AutoTarget:
+        ScanRadius: 5
+    SpawnActorOnDeath@1:
+        Actor: doggie
+        Probability: 25
+        OwnerType: InternalName
+        InternalOwner: Creeps
+        DeathType: TriggerVisceroid
+        RequiresLobbyCreeps: True
+    SoundOnDamageTransition:
+        DamagedSounds: mdog_a1.aud, mdog_s1.aud, mdog_m1.aud
+        
+FFIEND:
+    Inherits: ^MutantFearlessHeavy
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 405
+        Prerequisites: ~fabar, faradr, ~!t1, ~upgrade.fiend
+        Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Fiend
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Fiend
+    Health:
+        HP: 200
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 10c0
+    Mobile:
+        Speed: 50
+    Armament@primary:
+        Weapon: FiendShardGreen
+        RequiresCondition: !rank-elite
+    Armament@elite:
+        Weapon: FiendShardBlue
+        RequiresCondition: rank-elite
+    AttackFrontal:
+    Targetable:
+        TargetTypes: Ground, Infantry
+    IgnoresDisguise:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 5c0
+    SoundOnDamageTransition:
+        DamagedSounds: fiend1.aud
+        
+MHIJACK:
+    Inherits: ^Mutant
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 406
+        Prerequisites: ~fabar, faradr, ~!t1, ~upgrade.mhijack
+        Description: Hijacks enemy vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
+    Valued:
+        Cost: 600
+    Tooltip:
+        Name: Hijacker
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Thief
+        Volume: 3
+    Health:
+        HP: 300
+    Armor:
+        Type: Medium
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 6c0
+    Captures:
+        CaptureTypes: Vehicle
+        PlayerExperience: 50
+    -AutoTarget:
+    Cloak:
+        Condition: crate-cloak || cloakgenerator
+        CloakSound:
+        UncloakSound: cloak5.aud
+    SoundOnDamageTransition:
+        DamagedSounds: thief_f1.aud, thief_f2.aud, thief_f3.aud, thief_f4.aud
 
 GOON:
     Inherits: ^MutantFearlessHeavy
+	Inherits@2: ^GoonUpgrades	
     Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 408
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2, ~upgrade.goon
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 409
+        Prerequisites: ~fabar, fatrade, ~!t1, ~!t2, ~upgrade.goon
+        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
-        Cost: 700
+        Cost: 1000
     Tooltip:
         Name: Goon
-        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: Goon
         Volume: 4
     Health:
-        HP: 420
+        HP: 1000
     Armor:
         Type: Heavy
     Mobile:
@@ -357,36 +385,53 @@ GOON:
     AttackFrontal:
     AutoTarget:
         ScanRadius: 6
+    SoundOnDamageTransition:
+        DamagedSounds: goon_f1.aud, goon_f2.aud, goon_f3.aud, goon_f4.aud, goon_f5.aud
+	GrantConditionOnDamageState:
+		Condition: berserk
+		EnabledSounds: berserk.wav
+		ValidDamageStates: Medium, Heavy, Critical
     
 GHOST:
     Inherits: ^Mutant
     Valued:
-        Cost: 1600
+        Cost: 1000
     Tooltip:
-        Name: Ghost Stalker
-        Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
+        Name: Bounty Hunter
     Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 410
-        Prerequisites: ~fabar, fhovel, fatrade, ~!t1, ~!t2
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 408
+        Prerequisites: ~fabar, fatrade, ~!t1, ~!t2, ~upgrade.ghost
+        Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
     Selectable:
         Bounds: 12,17,0,-6
     Voiced:
         VoiceSet: Ghost
     Mobile:
-        Speed: 56
+        Speed: 50
     Health:
-        HP: 400
+        HP: 300
     Armor:
-        Type: Light
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
+        Type: Medium
     RevealsShroud:
-        Range: 6c0
-    Armament:
-        Weapon: LtRail
-        LocalOffset: 85,0,384
+        Range: 9c0
+    Armament@gun:
+        Weapon: MarauderGun
+        LocalOffset: 256,0,550
+    Armament@launcher:
+        Weapon: MarauderBazooka
+        LocalOffset: 256,0,550
     AttackFrontal:
-	Demolition:
-		DetonationDelay: 45
-		Voice: Attack     
+    Demolition:
+        DetonationDelay: 45
+        Voice: Action
+    Passenger:
+        PipType: Red
+        Voice: Move
+    AnnounceOnSeen:
+        PingRadar: True
+        Notification: StealthUnitDetected
+    Cloak:
+        Condition: crate-cloak || cloakgenerator
+        CloakSound:
+        UncloakSound: cloak5.aud

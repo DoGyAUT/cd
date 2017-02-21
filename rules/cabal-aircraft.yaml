@@ -1,69 +1,14 @@
-KDRONE:
-    Inherits: ^AttackPlane
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Piranha
-        Description: Advanced fighter-bomber craft with twin plasma cannons.\n\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Buildings, Heavy Armor
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 300
-        Prerequisites: ~kahpad, ~!t1
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Aircraft:
-        MaximumPitch: 90
-        TurnSpeed: 5
-        Speed: 325
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
-    Health:
-        HP: 200
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 17c0
-        Type: CenterPosition
-    Armament:
-        Weapon: DroneMachal
-        LocalOffset: 128,0,0
-    AttackPlane:
-        FacingTolerance: 20
-    AmmoPool:
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    Contrail@1:
-        Offset: -64,0,0
-        TrailLength: 25
-        TrailWidth: 30
-        Color: 0080FF
-        UsePlayerColor: True
-    SpawnActorOnDeath:
-        Actor: KDRONE.Husk
-        Probability: 80
-        
 PTEROIS:
     Inherits: ^Helicopter
     Valued:
         Cost: 1200
     Tooltip:
         Name: Pterois
-        Description: Fast assault gunship with dual Plasma cannons\nand advanced sensors for stealth detection.\n\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 301
-        Prerequisites: ~kahpad, karadr, ~!t1
+#    Buildable:
+#        Queue: Air.Cabal
+#        BuildPaletteOrder: 300
+#        Prerequisites: ~kahpad, ~!t1
+#        Description: Fast assault gunship with dual Plasma cannons\nand advanced sensors for stealth detection.\n\nRole : Assault Gunship\nHP: 400\nArmor: Light\nSpeed: 80\nViewrange: 13\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers
     Voiced:
         VoiceSet: Cabalbeep
         Volume: 2
@@ -71,7 +16,7 @@ PTEROIS:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 3
-        Speed: 140
+        Speed: 110
         IdealSeparation: 1500
     Health:
         HP: 400
@@ -79,7 +24,7 @@ PTEROIS:
         Type: Light
     RevealsShroud:
         Range: 13c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament:
         Weapon: PteroisMachal
         LocalOffset: 450,220,200, 450,-220,200
@@ -96,41 +41,41 @@ PTEROIS:
         SelfReloads: True
         SelfReloadDelay: 5
     DetectCloaked:
-        Range: 5c0
+        Range: 7c0
     RenderDetectionCircle:
     AutoTarget:
     RenderSprites:
     RenderVoxels:    
     WithVoxelBody:
     WithMuzzleOverlay:
-    Contrail@1:
-        Offset: -128,180,160
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -128,-180,160
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+#    Contrail@1:
+#        Offset: -128,180,160
+#        TrailLength: 25
+#        TrailWidth: 50
+#        Color: FFFFFF
+#        Width: 50
+#        UsePlayerColor: True
+#    Contrail@2:
+#        Offset: -128,-180,160
+#        TrailLength: 25
+#        TrailWidth: 50
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: PTEROIS.Husk
-        Probability: 80
+        Probability: 100
 
-KGUNSHIP:
-    Inherits: ^Helicopter
+KDRONE:
+    Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2000
+        Cost: 1200
     Tooltip:
-        Name: Manta
-        Description: Heavy siege gunship\nwith twin plasma cannons and twin plasma bomb launchers gunship.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 302
-        Prerequisites: ~kahpad, kabtech, ~!t1, ~!t2
+        Name: Piranha
+#    Buildable:
+#        Queue: Air.Cabal
+#        BuildPaletteOrder: 301
+#        Prerequisites: ~kahpad, kabtech, ~!t1, ~!t2
+#        Description: Advanced fighter craft with twin plasma cannons.\n\nRole : Advanced fighter\nHP: 650\nArmor: Light\nSpeed: 240\nViewrange: 14\nGood vs: Vtols, Jets, Bombers\nUseless vs: Ground Units
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
@@ -138,25 +83,25 @@ KGUNSHIP:
         Volume: 2
     Aircraft:
         MaximumPitch: 90
-        TurnSpeed: 3
-        Speed: 125
-        IdealSeparation: 2048
+        TurnSpeed: 4
+        Speed: 240
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
     Health:
-        HP: 1000
+        HP: 650
     Armor:
-        Type: Heavy
+        Type: Light
     RevealsShroud:
-        Range: 13c0
-        Type: CenterPosition
-    Armament@1:
-        Weapon: MantaMachal
-        LocalOffset: 700,256,96, 700,-256,96
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@2:
-        Weapon: PlasmaBombarde
-        LocalOffset: 200,0,-128
-    AttackHeli:
+        Range: 14c0
+        Type: GroundPosition
+    Armament:
+        Weapon: DroneMachal
+        LocalOffset: 128,0,0
+    # AttackPlane:
+        # FacingTolerance: 20
+	Turreted:
+        TurnSpeed: 360
+	AttackTurreted:
         FacingTolerance: 20
     AmmoPool:
         Ammo: 40
@@ -170,30 +115,115 @@ KGUNSHIP:
     RenderVoxels:
     WithVoxelBody:
     Contrail@1:
-        Offset: -900,256,300 
-        TrailLength: 25
+        Offset: -370,64,180
+        TrailLength: 30
         TrailWidth: 30
-        Color: 0080FF
-        UsePlayerColor: True
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
-        Offset: -900,-256,300 
-        TrailLength: 25
+        Offset: -370,-64,180
+        TrailLength: 30
         TrailWidth: 30
-        Color: 0080FF
-        UsePlayerColor: True
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@3:
-        Offset: -600,450,400 
-        TrailLength: 25
-        TrailWidth: 30
-        Color: 0080FF
-        UsePlayerColor: True
+        Offset: -370,512,180
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@4:
-        Offset: -600,-450,400 
-        TrailLength: 25
-        TrailWidth: 30
+        Offset: -370,-512,180
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    SpawnActorOnDeath:
+        Actor: KDRONE.Husk
+        Probability: 100
+
+MANTA:
+    Inherits: ^AttackAdvancedPlane
+    Valued:
+        Cost: 2200
+    Tooltip:
+        Name: Manta
+#    Buildable:
+#        Queue: Air.Cabal
+#        BuildPaletteOrder: 302
+#        Prerequisites: ~kahpad, kabtech, ~!t1, ~!t2
+#        Description: Heavy siege gunship\nwith twin plasma cannons and twin plasma bomb launchers gunship.\n\nRole : Advanced Bomber\nHP: 1000\nArmor: Heavy\nSpeed: 80\nViewrange: 13\nGood vs: Buildings, Vehicles\nUseless vs: Vtols, Jets, Bombers
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Cabalbeep
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 80
+        IdealSeparation: 2048
+        CruiseAltitude: 8192
+    Health:
+        HP: 2000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 13c0
+        Type: GroundPosition
+    Armament@1:
+        Weapon: MantaMachal
+        LocalOffset: 800,96,900, 800,0,900, 800,-96,900
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+#    Armament@2:
+#        Weapon: PlasmaBombarde
+#        LocalOffset: 200,0,-128
+    Targetable@AIRBORNE:
+        TargetTypes: HighAir
+        RequiresCondition: airborne
+    AttackTurreted:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    Turreted:
+        TurnSpeed: 2
+        Offset: 400,0,128
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+    WithVoxelBarrel:
+    Contrail@1:
+        Offset: -2000,256,300 
+        TrailLength: 100
+        TrailWidth: 50
         Color: 0080FF
-        UsePlayerColor: True
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: -2000,-256,300 
+        TrailLength: 100
+        TrailWidth: 50
+        Color: 0080FF
+        UsePlayerColor: False
+    SmokeTrailWhenDamaged@0:
+        Sprite: plasmatrail
+        Palette: effect50alpha
+        Offset: -1900,256,300
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: plasmatrail
+        Palette: effect50alpha
+        Offset: -1900,-256,300 
+        Interval: 2
+        MinDamage: Undamaged
     WithMuzzleOverlay:
     SpawnActorOnDeath:
-        Actor: KGUNSHIP.Husk
-        Probability: 80
+        Actor: MANTA.Husk
+        Probability: 100

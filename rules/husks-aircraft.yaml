@@ -5,14 +5,13 @@ JUMPJET.Husk:
     Aircraft:
         TurnSpeed:1
         Speed: 80
-        AirborneUpgrades: airborne
     RenderSprites:
         Image: jumpjet
     WithInfantryBody:
 #        IdleSequences: idle1,idle2
         StandSequence: fall #stand-air
         MoveSequence: fall
-        AttackSequence: shoot-air
+        DefaultAttackSequence: shoot-air
         IdleSequences: stand-air
 
 ORCA_G.Husk:
@@ -21,8 +20,7 @@ ORCA_G.Husk:
         Name: Orca Scout Husk
     Aircraft:
         TurnSpeed:1
-        Speed: 200
-        AirborneUpgrades: airborne
+        Speed: 170
     RenderVoxels:
         Image: orca_g
     RenderSprites:
@@ -35,7 +33,6 @@ ORCA_F1.Husk:
     Aircraft:
         TurnSpeed: 1
         Speed: 150
-        AirborneUpgrades: airborne
     RenderVoxels:
         Image: orca_f1
     RenderSprites:
@@ -47,8 +44,7 @@ ORCA_F2.Husk:
         Name: Orca F-2 Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 140
     RenderVoxels:
         Image: orca_f2
     RenderSprites:
@@ -60,8 +56,7 @@ ORCA_TRAN.Husk:
         Name: Orca Transport Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 100
-        AirborneUpgrades: airborne
+        Speed: 110
     RenderVoxels:
         Image: orca_tran
     RenderSprites:
@@ -73,8 +68,7 @@ ORCA_TROOP.Husk:
         Name: Orca Troopship Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 120
-        AirborneUpgrades: airborne
+        Speed: 170
     RenderVoxels:
         Image: orca_troop
     RenderSprites:
@@ -87,7 +81,6 @@ TRNSPORT.Husk:
     Aircraft:
         TurnSpeed: 1
         Speed: 120
-        AirborneUpgrades: airborne
     RenderVoxels:
         Image: trnsport
     RenderSprites:
@@ -99,12 +92,23 @@ ORCA_OXTRAN.Husk:
         Name: OX-Transport Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 120
-        AirborneUpgrades: airborne
+        Speed: 100
     RenderVoxels:
         Image: orca_oxtran
     RenderSprites:
-        Image: orca_oxtran      
+        Image: orca_oxtran
+    Contrail@3:
+        Offset: -512,1024,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -512,-1024,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
         
 ORCA_B.Husk:
     Inherits: ^AircraftHuskPlane
@@ -113,7 +117,6 @@ ORCA_B.Husk:
     Aircraft:
         TurnSpeed: 1
         Speed: 120
-        AirborneUpgrades: airborne
     RenderVoxels:
         Image: orca_b
     RenderSprites:
@@ -125,8 +128,7 @@ PHOENIX.Husk:
         Name: Phoenix Bomber Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 200
-        AirborneUpgrades: airborne
+        Speed: 90
     RenderVoxels:
         Image: phoenix
     RenderSprites:
@@ -138,12 +140,23 @@ FHAWK.Husk:
         Name: Firehawk Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 240
-        AirborneUpgrades: airborne
+        Speed: 120
     RenderVoxels:
         Image: fhawk
     RenderSprites:
-        Image: fhawk      
+        Image: fhawk  
+    Contrail@3:
+        Offset: -64,670,300
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -64,-670,300
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
         
 HORNET.Husk:
     Inherits: ^AircraftHuskPlane
@@ -151,12 +164,23 @@ HORNET.Husk:
         Name: Hornet Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 260
-        AirborneUpgrades: airborne
+        Speed: 140
     RenderVoxels:
         Image: hornet
     RenderSprites:
         Image: hornet
+    Contrail@3:
+        Offset: -400,800,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -400,-800,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
 
 CONDOR.Husk:
     Inherits: ^AircraftHuskPlane
@@ -164,12 +188,23 @@ CONDOR.Husk:
         Name: Condor Husk
     Aircraft:
         TurnSpeed: 5
-        Speed: 220
-        AirborneUpgrades: airborne
+        Speed: 150
     RenderVoxels:
         Image: condor
     RenderSprites:
         Image: condor
+    Contrail@5:
+        Offset: -500,770,256
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@6:
+        Offset: -500,-770,256
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
 
 DSHP.Husk:
     Inherits: ^AircraftHuskPlane
@@ -177,8 +212,7 @@ DSHP.Husk:
         Name: Dropship Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 110
     RenderVoxels:
         Image: dshp
     RenderSprites:
@@ -190,8 +224,7 @@ VENOM.Husk:
         Name: Venom Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 160
     RenderVoxels:
         Image: venom
     RenderSprites:
@@ -203,8 +236,7 @@ HAVOC.Husk:
         Name: Havoc Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 100
     RenderVoxels:
         Image: havoc
     RenderSprites:
@@ -216,34 +248,31 @@ HYDRA.Husk:
         Name: Hydra Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 110
     RenderVoxels:
         Image: hydra
     RenderSprites:
         Image: hydra
-
-PUMA.Husk:
+        
+NODCARRY.Husk:
     Inherits: ^AircraftHusk
     Tooltip:
-        Name: Puma Husk
+        Name: Orca Transport Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 110
     RenderVoxels:
-        Image: puma
+        Image: nodcarry
     RenderSprites:
-        Image: puma
+        Image: nodcarry
 
 SCRIN.Husk:
     Inherits: ^AircraftHuskPlane
     Tooltip:
-        Name: Banshee Husk
+        Name: Storm Raider Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 320
-        AirborneUpgrades: airborne
+        Speed: 200
     RenderVoxels:
         Image: scrin
     RenderSprites:
@@ -255,8 +284,7 @@ SCRINB.Husk:
         Name: Banshee MK.II Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 290
-        AirborneUpgrades: airborne
+        Speed: 170
     RenderVoxels:
         Image: scrinb
     RenderSprites:
@@ -268,25 +296,23 @@ RAVEN.Husk:
         Name: Raven Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 330
-        AirborneUpgrades: airborne
+        Speed: 180
     RenderVoxels:
         Image: raven
     RenderSprites:
         Image: raven
-        
-WYVERN.Husk:
-    Inherits: ^AircraftHuskPlane
-    Tooltip:
-        Name: Wyvern Husk
-    Aircraft:
-        TurnSpeed: 1
-        Speed: 330
-        AirborneUpgrades: airborne
-    RenderVoxels:
-        Image: wyvern
-    RenderSprites:
-        Image: wyvern
+    Contrail@2:
+        Offset: 0,900,128
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: 0,-900,128
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
 
 VERTIGO.Husk:
     Inherits: ^AircraftHuskPlane
@@ -294,12 +320,47 @@ VERTIGO.Husk:
         Name: Vertigo Bomber Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 220
-        AirborneUpgrades: airborne
+        Speed: 150
     RenderVoxels:
         Image: vertigo
     RenderSprites:
         Image: vertigo
+    Contrail@1:
+        Offset: -512,500,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: -512,-500,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: -256,650,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -256,-650,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@5:
+        Offset: -128,800,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@6:
+        Offset: -128,-800,0
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
 
 ZEP.Husk:
     Inherits: ^AircraftHuskPlane
@@ -308,7 +369,6 @@ ZEP.Husk:
     Aircraft:
         TurnSpeed: 1
         Speed: 10
-        AirborneUpgrades: airborne
     RenderVoxels:
         Image: zep
         Scale: 2
@@ -321,8 +381,7 @@ KDRONE.Husk:
         Name: Piranha Husk
     Aircraft:
         TurnSpeed: 5
-        Speed: 240
-        AirborneUpgrades: airborne
+        Speed: 210
     RenderVoxels:
         Image: kdrone
     RenderSprites:
@@ -335,24 +394,22 @@ PTEROIS.Husk:
     Aircraft:
         TurnSpeed: 1
         Speed: 130
-        AirborneUpgrades: airborne
     RenderVoxels:
         Image: pterois
     RenderSprites:
         Image: pterois
 
-KGUNSHIP.Husk:
+MANTA.Husk:
     Inherits: ^AircraftHusk
     Tooltip:
         Name: Manta Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 140
-        AirborneUpgrades: airborne
+        Speed: 90
     RenderVoxels:
-        Image: kgunship
+        Image: manta
     RenderSprites:
-        Image: kgunship
+        Image: manta
 
 BUZZARD.Husk:
     Inherits: ^AircraftHusk
@@ -360,8 +417,7 @@ BUZZARD.Husk:
         Name: Buzzard Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 130
-        AirborneUpgrades: airborne
+        Speed: 120
     RenderVoxels:
         Image: buzzard
     RenderSprites:
@@ -373,17 +429,28 @@ FBOMBER.Husk:
         Name: Crapjet Husk
     Aircraft:
         TurnSpeed: 1
-        Speed: 210
-        AirborneUpgrades: airborne
+        Speed: 90
     RenderVoxels:
         Image: fbomber
     RenderSprites:
         Image: fbomber
     FallsToEarth:
         Explosion: UnitExplodeCrapJet
-        Spins: false
-        Moves: true
+        Spins: False
+        Moves: True
         Velocity: 186
+    Contrail@11:
+        Offset: -200,1200,480
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -200,-1200,480
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
 
 STRIKER.Husk:
     Inherits: ^AircraftHuskPlane
@@ -391,9 +458,20 @@ STRIKER.Husk:
         Name: Striker Husk
     Aircraft:
         TurnSpeed: 5
-        Speed: 250
-        AirborneUpgrades: airborne
+        Speed: 220
     RenderVoxels:
         Image: striker
     RenderSprites:
         Image: striker
+    Contrail@11:
+        Offset: -1024,700,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -1024,-700,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False

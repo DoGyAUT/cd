@@ -5,16 +5,18 @@ Metadata:
 	Author: Astor
 
 RequiresMods:
-	modchooser: git-756f88c
-	ra: git-756f88c
-	ts: git-756f88c
-	cnc: git-756f88c
+	modchooser: git-fc6de91ba
+	ra: git-fc6de91ba
+	ts: git-fc6de91ba
+	cnc: git-fc6de91ba
 
 Packages:
 	~^Content/ts
+	~^Content/ts/firestorm
 	.
 	$cd: cd
 	./mods/common: common
+	./mods/as: as
 	$ra: ra
 	$cnc: cnc
 	$d2k: d2k
@@ -80,17 +82,23 @@ Packages:
 	cd|bits/anims/explos
 	cd|bits/anims/trails
 	cd|bits/anims/weapons
-	cd|bits/audio
-	cd|bits/audio/voice
-	cd|bits/audio/eva
+	cd|audio/data
+	cd|audio/data/eva
+	cd|audio/data/voice
+	cd|audio/data/theme
+	cd|audio/data/explosions
+	cd|audio/data/weapons
+	cd|audio/data/weapons/cannons
+	cd|audio/data/weapons/guns
+	cd|audio/data/weapons/missiles
+	cd|audio/data/weapons/energy
 	cd|bits/cameo
 	cd|bits/terrain
 	cd|uibits
-	cd|theme
     
 MapFolders:
 	cd|maps: System
-	~^maps/cd/git-39cb519: User
+	~^maps/cd/git-fc6de91ba: User
 
 Rules:
 	cd|rules/ai.yaml
@@ -138,6 +146,7 @@ Rules:
 	cd|rules/shared-support.yaml
 	cd|rules/shared-vehicles.yaml
 	cd|rules/trees.yaml
+	cd|rules/bridges.yaml
 
 Weapons:
 	cd|weapons/defaultweaponclass.yaml
@@ -162,6 +171,7 @@ Sequences:
 	cd|sequences/structures.yaml
 	cd|sequences/vehicles.yaml
 	cd|sequences/trees.yaml
+	cd|sequences/bridges.yaml
 
 VoxelSequences:
 	cd|sequences/voxels.yaml
@@ -172,6 +182,7 @@ TileSets:
 
 MapGrid:
 	TileSize: 48,24
+	EnableDepthBuffer: False
 	Type: RectangularIsometric
 	MaximumTerrainHeight: 16
 	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
@@ -188,6 +199,7 @@ Assemblies:
 	ra|OpenRA.Mods.RA.dll
 	cnc|OpenRA.Mods.Cnc.dll
 	ts|OpenRA.Mods.TS.dll
+	as|OpenRA.Mods.AS.dll
 
 ChromeLayout:
 	cd|chrome/ingame.yaml
@@ -205,6 +217,7 @@ ChromeLayout:
 	ra|chrome/ingame-perf.yaml
 	cd|chrome/ingame-debug.yaml
 	cd|chrome/mainmenu.yaml
+	cd|chrome/mainmenu-prerelease-notification.yaml
 	ra|chrome/settings.yaml
 	ra|chrome/credits.yaml
 	ra|chrome/lobby.yaml
@@ -248,7 +261,7 @@ Translations:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: cd|uibits/loadscreen.png
-	Text: Bugging Graion..., Installing new firewalls..., Contacting Black Hand..., Reinforcing CABAL..., Detecting Forgotten..., Listening to the crazy ideas from Crimson..., Gathering Tiberium...
+	Text: Bugging Graion..., Installing new firewalls..., Contacting Black Hand..., Reinforcing CABAL..., Detecting Forgotten..., Listening to the crazy ideas from Keeper..., Gathering Tiberium..., Getting rekt by ZxGanon...
 
 ServerTraits:
 	LobbyCommands
@@ -322,138 +335,32 @@ ColorValidator:
 
 ModContent:
 	InstallPromptMessage: Tiberian Sun requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2012 Tiberian Sun freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
-	QuickDownload: basefiles
-	HeaderMessage: The original game content may be copied from an original game disc,\nor downloaded from an online mirror of the 2012 freeware release.
+	QuickDownload: quickinstall
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2012 freeware release of TS.
 	Packages:
-		base: Base Game Files
+		tibsun: Base Game Files
 			TestFiles: ^Content/ts/cache.mix, ^Content/ts/conquer.mix, ^Content/ts/isosnow.mix, ^Content/ts/isotemp.mix, ^Content/ts/local.mix, ^Content/ts/sidec01.mix, ^Content/ts/sidec02.mix, ^Content/ts/sno.mix, ^Content/ts/snow.mix, ^Content/ts/sounds.mix, ^Content/ts/speech01.mix, ^Content/ts/tem.mix, ^Content/ts/temperat.mix
-			Discs: tibsun, tibsun-linux
+			Sources: tibsun, tibsun-linux, tfd, origin
 			Required: true
 			Download: basefiles
-		music: Base Game Music
+		tibsun-music: Base Game Music
 			TestFiles: ^Content/ts/scores.mix
-			Discs: tibsun, tibsun-linux
-			Download: music
+			Sources: tibsun, tibsun-linux, tfd, origin
+			Download: tibsun-music
+		fstorm: Expansion Freeware Content
+			TestFiles: ^Content/ts/firestorm/e01sc01.mix, ^Content/ts/firestorm/e01sc02.mix, ^Content/ts/firestorm/e01vox01.mix, ^Content/ts/firestorm/e01vox02.mix
+			Sources: tfd, origin, fstorm
+			Required: true
+			Download: fstorm
+		fstorm-music: Expansion Freeware Music
+			Sources: tfd, origin, fstorm
+			TestFiles: ^Content/ts/firestorm/linkup.aud, ^Content/ts/firestorm/hacker.aud
+			Download: fstorm-music
 	Downloads:
-		basefiles: Base Freeware Content
-			MirrorList: http://www.openra.net/packages/ts-mirrors.txt
-			Extract:
-				^Content/ts/cache.mix: cache.mix
-				^Content/ts/conquer.mix: conquer.mix
-				^Content/ts/isosnow.mix: isosnow.mix
-				^Content/ts/isotemp.mix: isotemp.mix
-				^Content/ts/local.mix: local.mix
-				^Content/ts/sidec01.mix: sidec01.mix
-				^Content/ts/sidec02.mix: sidec02.mix
-				^Content/ts/sno.mix: sno.mix
-				^Content/ts/snow.mix: snow.mix
-				^Content/ts/sounds.mix: sounds.mix
-				^Content/ts/speech01.mix: speech01.mix
-				^Content/ts/speech02.mix: speech02.mix
-				^Content/ts/tem.mix: tem.mix
-				^Content/ts/temperat.mix: temperat.mix
-		music: Freeware Music
-			MirrorList: http://www.openra.net/packages/ts-music-mirrors.txt
-			Extract:
-				^Content/ts/scores.mix: scores.mix
-	Discs:
-		tibsun: Tiberan Sun (GDI or Nod Disc, English)
-			IDFiles:
-				README.TXT: 45745c4a0c888317ec900208a426472779c42bf7
-				AUTOPLAY.WAV: 2dfce5d00f98b641849c29942b651f4e98d30e30
-			Install:
-				copy: .
-					^Content/ts/scores.mix: SCORES.MIX
-				extract-raw: INSTALL/TIBSUN.MIX
-					^Content/ts/cache.mix:
-						Offset: 300
-						Length: 169176
-					^Content/ts/conquer.mix:
-						Offset: 169484
-						Length: 5700088
-					^Content/ts/isosnow.mix:
-						Offset: 5869580
-						Length: 7624750
-					^Content/ts/isotemp.mix:
-						Offset: 13494332
-						Length: 8617646
-					^Content/ts/local.mix:
-						Offset: 22111980
-						Length: 18044736
-					^Content/ts/sidec01.mix:
-						Offset: 40156716
-						Length: 998476
-					^Content/ts/sidec02.mix:
-						Offset: 41155196
-						Length: 1039996
-					^Content/ts/snow.mix:
-						Offset: 56104508
-						Length: 2087806
-					^Content/ts/sno.mix:
-						Offset: 58192316
-						Length: 7826
-					^Content/ts/sounds.mix:
-						Offset: 58200156
-						Length: 3224136
-					^Content/ts/speech01.mix:
-						Offset: 61424300
-						Length: 6028236
-					^Content/ts/speech02.mix:
-						Offset: 67452540
-						Length: 5596628
-					^Content/ts/tem.mix:
-						Offset: 73049180
-						Length: 7746
-					^Content/ts/temperat.mix:
-						Offset: 73056940
-						Length: 2037606
-		tibsun-linux: Tiberan Sun (GDI or Nod Disc, English)
-			IDFiles:
-				readme.txt: 45745c4a0c888317ec900208a426472779c42bf7
-				autoplay.wav: 2dfce5d00f98b641849c29942b651f4e98d30e30
-			Install:
-				copy: .
-					^Content/ts/scores.mix: scores.mix
-				extract-raw: install/tibsun.mix
-					^Content/ts/cache.mix:
-						Offset: 300
-						Length: 169176
-					^Content/ts/conquer.mix:
-						Offset: 169484
-						Length: 5700088
-					^Content/ts/isosnow.mix:
-						Offset: 5869580
-						Length: 7624750
-					^Content/ts/isotemp.mix:
-						Offset: 13494332
-						Length: 8617646
-					^Content/ts/local.mix:
-						Offset: 22111980
-						Length: 18044736
-					^Content/ts/sidec01.mix:
-						Offset: 40156716
-						Length: 998476
-					^Content/ts/sidec02.mix:
-						Offset: 41155196
-						Length: 1039996
-					^Content/ts/snow.mix:
-						Offset: 56104508
-						Length: 2087806
-					^Content/ts/sno.mix:
-						Offset: 58192316
-						Length: 7826
-					^Content/ts/sounds.mix:
-						Offset: 58200156
-						Length: 3224136
-					^Content/ts/speech01.mix:
-						Offset: 61424300
-						Length: 6028236
-					^Content/ts/speech02.mix:
-						Offset: 67452540
-						Length: 5596628
-					^Content/ts/tem.mix:
-						Offset: 73049180
-						Length: 7746
-					^Content/ts/temperat.mix:
-						Offset: 73056940
-						Length: 2037606
+		cd|installer/downloads.yaml
+	Sources:
+		cd|installer/downloads.yaml
+		cd|installer/firestorm.yaml
+		cd|installer/firstdecade.yaml
+		cd|installer/origin.yaml
+		cd|installer/tibsun.yaml

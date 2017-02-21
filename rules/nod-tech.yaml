@@ -1,114 +1,212 @@
-
-upgrade.industry.lvl1:
+upgrade.industry:
     Inherits: ^Tech
     Tooltip:
-        Name: Industry 1
-        Description: Choose Industrial Ideology. \nSpecialized in improved economy, subterranean units, vehicles and aircraft . \n \n Grants access to the following tech: \n -Harvester (Subterranean-Upgrade) \n -Subterranean APC \n -EMP Rounds for Specter  \n -Advanced Power Plant \n -Gorran AIV Tank (replaces Raider)
+        Name: Industry
     Buildable:
-        BuildPaletteOrder: 200
-        Prerequisites: ~napyra, ~!t1, ~!industry, ~!upglv1
-        Queue: Tech
+        BuildPaletteOrder: 199
+        Prerequisites: ~structures.nod, ~!ideology
+        Queue: Building
         IconPalette: ni
+        BuildLimit: 1
+        Description: Choose Industrial doctrine. \nSpecialized in improved economy, subterranean units and vehicles.
     Valued:
-        Cost: 1000
+        Cost: 0
     RenderSprites:
         Image: ni
     ProvidesPrerequisite@upgrade:
         Prerequisite: industry
-    ProvidesPrerequisite@upgradelv1:
-        Prerequisite: upglv1
+    ProvidesPrerequisite@ideology:
+        Prerequisite: ideology
 
-upgrade.industry.lvl2:
+upgrade.industry.napalm:
     Inherits: ^Tech
     Tooltip:
-        Name: Industry 2
-        Description: Choose Industrial Ideology. \nSpecialized in improved economy, subterranean units, vehicles and aircraft . \n \n Grants access to the following tech: \n -Harvester (Subterranean-Upgrade) \n -Subterranean APC \n -EMP Rounds for Specter  \n -Advanced Power Plant \n -Gorran AIV Tank (replaces Raider)
+        Name: Tiberium Gas Warhead
     Buildable:
-        BuildPaletteOrder: 200
-        Prerequisites: ~napyra, ~!t1, ~!industry, ~upglv1, ~!upglv2
-        Queue: Tech
-        IconPalette: ni
+        BuildPaletteOrder: 202
+        Prerequisites: ~industry, napyra, ~!upgrade.tibgas
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Grants Tiberium gas infused warheads for following units: \n\n - Hydra\n\n - Specter\n\n - Hailstorm\n\n - Rocketeer
+    Valued:
+        Cost: 2000
+    RenderSprites:
+        Image: upgrade.tibgas
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.tibgas
+
+upgrade.industry.tibinfusion:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Tiberium Infusion
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~industry, napyra, ~!upgrade.tibinfusion
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Grants Tiberium immunity and 20% more movementspeed for all Nod soldiers.
+    Valued:
+        Cost: 1500
+    RenderSprites:
+        Image: upgrade.tibinfusion
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.tibinfusion
+
+upgrade.industry.tiblaser:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Tiberium Laser Crystal
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~industry, napyra, ~!upgrade.tiblaser
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description:  Improves following units and buildings: \n\n - Hydra\n\n - Laser Turret\n\n - Obelisk of Light
     Valued:
         Cost: 1000
     RenderSprites:
-        Image: ni
+        Image: upgrade.tiblaser
     ProvidesPrerequisite@upgrade:
-        Prerequisite: industry
-    ProvidesPrerequisite@upgradelv2:
-        Prerequisite: upglv2        
+        Prerequisite: upgrade.tiblaser
 
-upgrade.tech.lv1:
+upgrade.tech:
     Inherits: ^Tech
     Tooltip:
-        Name: Technology 1
-        Description: Choose Technology Ideology. \nSpecialized in advanced tech like stealth, laser and plasma. \n \n Grants access to the following tech: \n -Harvester (Stealth-Upgrade) \n -Saboteur (Camoflage-Upgrade) \n -Shadow Troopers (Perma-Camoflage-upgrade) \n -Elite Cadre (Camoflage) \n -Cheetah (Laser cannon upgrade) \n -Rocketeer (Laser gun upgrade) \n -Specter (Perma-Stealth-upgrade) \n -Laser Turret (Stealth-Upgrade & improved range)
+        Name: Technology
     Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~napyra, ~!t1, ~!technology, ~!upglv1
-        Queue: Tech
+        BuildPaletteOrder: 199
+        Prerequisites: ~structures.nod, ~!ideology
+        Queue: Building
         IconPalette: nt
+        BuildLimit: 1
+        Description: Choose Technology doctrine. \nSpecialized in advanced tech like stealth, laser and EMP.
     Valued:
-        Cost: 1000
+        Cost: 0
     RenderSprites:
         Image: nt
     ProvidesPrerequisite@upgrade:
         Prerequisite: technology
-    ProvidesPrerequisite@tech.lv1:
-        Prerequisite: upglv1
-
-upgrade.tech.lvl2:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Technology 2
-        Description: Choose Technology Ideology. \nSpecialized in advanced tech like stealth, laser and plasma. \n \n Grants access to the following tech: \n -Harvester (Stealth-Upgrade) \n -Saboteur (Camoflage-Upgrade) \n -Shadow Troopers (Perma-Camoflage-upgrade) \n -Elite Cadre (Camoflage) \n -Cheetah (Laser cannon upgrade) \n -Rocketeer (Laser gun upgrade) \n -Specter (Perma-Stealth-upgrade) \n -Laser Turret (Stealth-Upgrade & improved range)
-    Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~napyra, ~!t1, ~!technology, ~upglv1, ~!upglv2
-        Queue: Tech
-        IconPalette: nt
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: nt
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: technology
-    ProvidesPrerequisite@tech.lv2:
-        Prerequisite: upglv2
+    ProvidesPrerequisite@ideology:
+        Prerequisite: ideology
         
-upgrade.propaganda.lvl1:
+upgrade.tech.laser:
     Inherits: ^Tech
     Tooltip:
-        Name: Propaganda 1
-        Description: Choose Propaganda Ideology. \nSpecialized in infantry and support powers. \n \n Grants access to the following tech: \n -Rookie (50% cheaper)  \n -Rocketeer (50% cheaper) \n -Confessor (replaces Elite Cadre) 
+        Name: Improved Laser Emitter 
     Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~napyra, ~!t1, ~!propaganda, ~!upglv1
-        Queue: Tech
-        IconPalette: np
+        BuildPaletteOrder: 201
+        Prerequisites: ~technology, napyra, ~!upgrade.laser
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Improves following units and buildings: \n\n - Shadow Trooper\n\n - Stealth Tank\n\n - Venom\n\n - Laser Turret\n\n - Obelisk of Light
+    Valued:
+        Cost: 2000
+    RenderSprites:
+        Image: upgrade.laser
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.laser
+       
+upgrade.tech.stealth:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Stealth Emitters
+    Buildable:
+        BuildPaletteOrder: 201
+        Prerequisites: ~technology, napyra, ~!upgrade.stealth
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Grants invisibilty to following units and structures: \n\n - Elite Cadre\n\n - Rocketeer\n\n - Shadow Trooper\n\n - Harvestor\n\n - Specter Artillery\n\n - Vertigo\n\n - Flamer Turret\n\n - Laser Turret\n\n - SAM Site
+    Valued:
+        Cost: 1500
+    RenderSprites:
+        Image: upgrade.stealth
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.stealth
+        
+upgrade.tech.emp:
+    Inherits: ^Tech
+    Tooltip:
+        Name: EMP Tech
+    Buildable:
+        BuildPaletteOrder: 201
+        Prerequisites: ~technology, napyra, ~!upgrade.emp
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Grants following units EMP weapons: \n\n - Specter Artillery\n\n - Vertigo Bomber
     Valued:
         Cost: 1000
     RenderSprites:
-        Image: np
+        Image: upgrade.emp
     ProvidesPrerequisite@upgrade:
-        Prerequisite: propaganda
-    ProvidesPrerequisite@upgradelv1:
-        Prerequisite: upglv1        
+        Prerequisite: upgrade.emp
 
-upgrade.propaganda.lvl2:
+upgrade.propaganda:
     Inherits: ^Tech
     Tooltip:
-        Name: Propaganda 2
-        Description:  Choose Propaganda Ideology. \nSpecialized in infantry and support powers. \n \n Grants access to the following tech: \n -Rookie (50% cheaper)  \n -Rocketeer (50% cheaper) \n -Confessor (replaces Elite Cadre) 
+        Name: Propaganda
     Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~napyra, ~!t1, ~!propaganda, ~upglv1, ~!upglv2
-        Queue: Tech
+        BuildPaletteOrder: 199
+        Prerequisites: ~structures.nod, ~!ideology
+        Queue: Building
         IconPalette: np
+        BuildLimit: 1
+        Description: Choose Propaganda doctrine. \nSpecialized in infantry and support powers.
     Valued:
-        Cost: 1000
+        Cost: 0
     RenderSprites:
         Image: np
     ProvidesPrerequisite@upgrade:
         Prerequisite: propaganda
-    ProvidesPrerequisite@upgradelv2:
-        Prerequisite: upglv2
+    ProvidesPrerequisite@ideology:
+        Prerequisite: ideology
+
+upgrade.propaganda.mass:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Mass Recruitment
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~propaganda, napyra
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Cuts the cost of following units in half: \n\n - Rookier\n\n - Rocketeer
+    Valued:
+        Cost: 1500
+    RenderSprites:
+        Image: upgrade.mass
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.mass
+
+upgrade.propaganda.nanofiber:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Nanofiber Armor
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~propaganda, napyra
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Improves the durability of all Nod soldiers by 30%.
+    Valued:
+        Cost: 1500
+    RenderSprites:
+        Image: upgrade.nanofiber
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.nanofiber
+
+upgrade.propaganda.bluehell:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Bluehell Inferno
+    Buildable:
+        BuildPaletteOrder: 202
+        Prerequisites: ~propaganda, napyra, ~!upgrade.bluehell
+        Queue: Tech.Nod
+        BuildLimit: 1
+        Description: Improves the following units and buildings: \n\n - Black Hand Flamer\n\n - Specter Artillery\n\n - Havoc\n\n - Flamer Turret
+    Valued:
+        Cost: 1500
+    RenderSprites:
+        Image: upgrade.bluehell
+    ProvidesPrerequisite@upgrade:
+        Prerequisite: upgrade.bluehell

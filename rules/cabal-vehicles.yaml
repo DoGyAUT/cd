@@ -1,15 +1,14 @@
 KMCV:
     Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~kaweap
+        Description: The heart of any base.\nProvides a build radius for structures.\n\nRole : MCV\nHP: 1000\nArmor: Heavy\nSpeed: 85\nViewrange: 6
     Valued:
-        Cost: 2000
+        Cost: 3000
     Tooltip:
         Name: Cabal Mobile Construction Vehicle
-        Description: Hovercraft that deploys into another Construction Yard.\n\n   Unarmed
     Selectable:
         Priority: 3
         Bounds: 42,42
@@ -21,23 +20,12 @@ KMCV:
     Armor:
         Type: Heavy
     Mobile:
-        Speed: 80
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
+        Speed: 40
     RevealsShroud:
         Range: 6c0
+    -ProducibleWithLevel:
     MustBeDestroyed:
-        RequiredForShortGame: true
+        RequiredForShortGame: True
     BaseBuilding:
     Transforms:
         IntoActor: kacnst
@@ -49,21 +37,6 @@ KMCV:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Hovers:
-    -PoisonedByTiberium:
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        MovingInterval: 6
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
     ActorLostNotification:
         Notification: CriticalUnitLost
     -ThrowsShrapnel@human:
@@ -72,14 +45,14 @@ KHARV:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^HoverVehicle
     Valued:
-        Cost: 1400
+        Cost: 1000
     Tooltip:
         Name: Cabal Harvester
-        Description: Hovercraft that collects Tiberium for processing.\n\n  Unarmed
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 301
         Prerequisites: ~kaweap, kproc
+        Description: Collects Tiberium for processing.\nFast hovering harvester with small storage.\n\n  Role: Harvester\n  HP: 700\n  Armor: Medium\n  Speed: 80\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (10 Capacity)\n - Immune to Veins\n - Hovers
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -91,7 +64,7 @@ KHARV:
         Capacity: 10
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
-        BaleUnloadDelay: 3
+        BaleUnloadDelay: 6
         SearchFromProcRadius: 36
         SearchFromOrderRadius: 18
         HarvestVoice: Action
@@ -102,75 +75,61 @@ KHARV:
         TerrainSpeeds:
             Clear: 100
             Road: 100
+            Bridge: 100
             Rail: 100
             DirtRoad: 100
             Rough: 100
+            Green: 100
             Water: 80
             Tiberium: 100
             BlueTiberium: 100
             RedTiberium: 100
             PurpleTiberium: 100
             Veins: 100
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Veins:
     Health:
-        HP: 800
-    SelfHealing:
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
+        HP: 700
+#    SelfHealing:
+#        Step: 0
+#        PercentageStep: 1
+#        Delay: 10
+#        HealIfBelow: 100
+#        DamageCooldown: 200
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 6c0
-    -GainsExperience:
+    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
     WithVoxelUnloadBody:
-    Hovers:
-        OffsetModifier: -50
     Explodes:
         Weapon: LargeTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
-        Palette: effect    
-    LeavesTrails@water:
-        Image: wake
         Palette: effect
-        TerrainTypes: Water
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        MovingInterval: 6
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
-    CustomBuildTimeValue:
-        Value: 1440
     -ThrowsShrapnel@human:
 
 DREADFIRE:
-    Inherits@1: ^Tank
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@1: ^Walker
     Valued:
-        Cost: 800
+        Cost: 1000
     Tooltip:
         Name: Dreadfire
-        Description: Heavy walker equipped with double flamethrowers.\n\n  Very Strong vs Infantry, Light armor, Buildings\n  Weak vs Vehicles\n  Useless vs Aircraft
     Selectable:
         Bounds: 42, 60, 0, -25
         Class: Dreadfire
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 303
-        Prerequisites: ~kaweap, ~!upgrade.!mp, ~!upgrade.htp
+        Prerequisites: ~kaweap
+        Description: Heavy walker equipped with double flamethrowers.\n\nRole : Anti-infantry Walker\nHP: 1200\nArmor: Medium\nSpeed: 60\nViewrange: 6\nGood vs: Infantry, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Huge AoE damage
     Mobile:
         TurnSpeed: 5
-        Speed: 50
+        Speed: 55
     RevealsShroud:
-        Range: 9c0
+        Range: 5c0
     Health:
         HP: 1200
     Armor:
@@ -182,69 +141,54 @@ DREADFIRE:
     BodyOrientation:
         QuantizedFacings: 8
     Armament@primary:
-        Weapon: FireballLauncher
+        Weapon: DreadfireLauncher
         LocalOffset: 700,300,1400
     Armament@secondary:
-        Weapon: FireballLauncher
+        Weapon: DreadfireLauncher
         LocalOffset: 700,-300,1400
     RenderSprites:
     WithInfantryBody:
-        AttackSequence: shoot
+        DefaultAttackSequence: shoot
     Voiced:
         VoiceSet: CyborgH
         Volume: 2
     -ThrowsShrapnel@human:
-        
-DREADFIRE2:
-    Inherits: DREADFIRE
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 303
-        Prerequisites: ~kaweap, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: dreadfire
-    Valued:
-        Cost: 680
-        
-DREADFIRE3:
-    Inherits: DREADFIRE
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 303
-        Prerequisites: ~kaweap, ~!upgrade.mp, ~upgrade.htp
-    RenderSprites:
-        Image: dreadfire
-    Valued:
-        Cost: 920
+    Explodes:
+        Weapon: UnitExplodeSmall
+        Chance: 50
 
 REAPER:
-    Inherits@1: ^Tank
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@1: ^Walker
+    Inherits@2: ^LightVehicle
     Valued:
-        Cost: 1000
+        Cost: 1200
     Tooltip:
         Name: Reaper
-        Description: Fast infantry hunting cybernetic spider-human hybrid.\nEquipped with a netthrower and Multipurpose missiles.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
     Selectable:
         Bounds: 42,42, 0, -10
         Class: Reaper
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 304
-        Prerequisites: ~kaweap, ~!upgrade.!mp, ~!upgrade.htp
+        Prerequisites: ~kaweap
+        Description: Fast infantry hunting cybernetic spider-human hybrid.\nEquipped with a netthrower and multipurpose missiles.\n\nRole : Assault Walker\nHP: 1000\nArmor: Light\nSpeed: 85\nViewrange: 11\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Net attack
     Mobile:
         TurnSpeed: 8
-        Speed: 95
+        Speed: 75
+        Crushes: crate
     Health:
-        HP: 550
+        HP: 1000
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
-        Range: 11c0
+        Range: 9c0
     AttackFrontal:
     AutoTarget:
     BodyOrientation:
         QuantizedFacings: 8
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
     Armament@primary:
         Weapon: ReaperCannon
         LocalOffset: 256,-128,500, 256,128,500
@@ -277,60 +221,38 @@ REAPER:
         Image: reaper2
         Scale: 0.8
     -ThrowsShrapnel@human:
-    
-REAPER2:
-    Inherits: REAPER
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 304
-        Prerequisites: ~kaweap, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: reaper2
-        Scale: 0.8
-    Valued:
-        Cost: 850
-        
-REAPER3:
-    Inherits: REAPER
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 304
-        Prerequisites: ~kaweap, ~!upgrade.mp, ~upgrade.htp
-    RenderSprites:
-        Image: reaper2
-        Scale: 0.8
-    Valued:
-        Cost: 1150
 
 GOLEM:
-    Inherits: ^Tank
+    Inherits: ^Walker
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Golem
-        Description: Heavy walker equipped with repairing tools.\n\n  unarmed
     Selectable:
         Bounds: 42, 60, 0, -25
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 305
-        Prerequisites: ~kaweap, ~!t1
+        Prerequisites: ~kaweap, karadr, ~!t1
+        Description: Heavy walker equipped with repairing tools.\n\nRole : Repair Walker\nHP: 400\nArmor: Heavy\nSpeed: 50\nViewrange: 6\n\nSpecial: \n - Repairs nearby units
     Mobile:
         TurnSpeed: 3
-        Speed: 50
+        Speed: 55
     RevealsShroud:
         Range: 6c0
     Health:
         HP: 400
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
-        HealIfBelow: 50
+        HealIfBelow: 100
         DamageCooldown: 200
     Armor:
         Type: Heavy
     AttackFrontal:
-    AutoTarget:
-        ScanRadius: 5
+#    AutoTarget:
+#        ScanRadius: 5
     BodyOrientation:
         QuantizedFacings: 8
     Armament:
@@ -341,33 +263,38 @@ GOLEM:
         ForceTargetStances: None
     RenderSprites:
     WithInfantryBody:
-        AttackSequence: shoot
+        DefaultAttackSequence: shoot
     Voiced:
         VoiceSet: CyborgH
         Volume: 2
     -ThrowsShrapnel@human:
-               
+    ProximityExternalCondition:
+        Condition: repair_heal
+        Range: 5c0
+    WithRangeCircle:
+        Color: FFFFFFFF
+        Range: 5c0
+
 TARANTULA:
-    Inherits@1: ^Tank
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@1: ^Walker
     Valued:
-        Cost: 1400
+        Cost: 1000
     Tooltip:
         Name: Tarantula
-        Description: Anti-Air mechanized walker armed with lasers.\n  Strong vs Aircraft\n  Weak vs Armor
     Selectable:
         Bounds: 42,42
         Class: Tarantula
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 306
-        Prerequisites: ~kaweap, karadr, ~!t1, ~!upgrade.!mp, ~!upgrade.htp
+        Prerequisites: ~kaweap, karadr, ~!t1
+        Description: Anti-Air mechanized walker armed with lasers.\n\nRole : Anti Air Walker\nHP: 800\nArmor: Medium\nSpeed: 70\nViewrange: 13\nGood vs: Vtols, Jets\nUseless vs: Bomber
     Voiced:
         VoiceSet: Husk
         Volume: 2
     Mobile:
-        TurnSpeed: 3
-        Speed: 56
+        TurnSpeed: 6
+        Speed: 55
     Health:
         HP: 800
     Armor:
@@ -378,88 +305,69 @@ TARANTULA:
         QuantizedFacings: 32
     WithInfantryBody:
     Turreted:
-        TurnSpeed: 6
+        TurnSpeed: 5
     AttackTurreted:
     WithSpriteTurret:
-        Recoils: yes
-    Armament@primary:
-        Weapon: TarantulaLaser
-        LocalOffset: 300,90,650, 300,-90,650
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+        Recoils: True
+#    Armament@primary:
+#        Weapon: TarantulaLaser
+#        LocalOffset: 300,90,650, 300,-90,650
+#        MuzzleSequence: muzzle
+#        MuzzlePalette: effect50alpha
+#        Recoil: 50
+#        RecoilRecovery: 10
     Armament@AA:
         Weapon: TarantulaLaserAA
         LocalOffset: 300,90,650, 300,-90,650
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
-        Recoil: 100
+        Recoil: 50
         RecoilRecovery: 10
     AutoTarget:
     AttackMove:
     WithMuzzleOverlay:
     RenderSprites:
     -ThrowsShrapnel@human:
-    
-TARANTULA2:
-    Inherits: TARANTULA
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 306
-        Prerequisites: ~kaweap, karadr, ~!t1, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: tarantula
-    Valued:
-        Cost: 1190
-        
-TARANTULA3:
-    Inherits: TARANTULA
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 306
-        Prerequisites: ~kaweap, karadr, ~!t1, ~!upgrade.mp, ~upgrade.htp
-    RenderSprites:
-        Image: tarantula
-    Valued:
-        Cost: 1610
-    
+
 SILVER:
     Inherits@1: ^VoxelVehicle
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@2: ^HoverVehicle
     Valued:
-        Cost: 1800
+        Cost: 1500
     Tooltip:
         Name: Helion
-        Description: Hovering artillery armed with\nlong range twin plasma bomb launchers.\n  Strong vs Slow Targets, Buildings\n  Weak vs Fast Targetes\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
         Class: Helion
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr, ~!t1, ~!upgrade.!mp, ~!upgrade.htp
+        Prerequisites: ~kaweap, karadr
+        Description: Hovering artillery armed with\nlong range twin plasma bomb launchers.\n\nRole : Hovering Artillery\nHP: 500\nArmor: Light\nSpeed: 80\nViewrange: 10\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Hovers
     Voiced:
         VoiceSet: Husk
         Volume: 2
     Mobile:
-        Speed: 90
-        TurnSpeed: 6
+        Speed: 80
+        TurnSpeed: 3
         TerrainSpeeds:
             Clear: 100
             Road: 100
+            Bridge: 100
             Rail: 100
             DirtRoad: 100
             Rough: 100
+            Green: 100
             Water: 100
             Tiberium: 100
             BlueTiberium: 100
             RedTiberium: 100
             PurpleTiberium: 100
+    -DamagedByTerrain@Veins:
     Health:
-        HP: 550
+        HP: 500
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 10c0
     Armament@primary:
@@ -472,138 +380,34 @@ SILVER:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Hovers:
-    -PoisonedByTiberium:
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
-    WithMuzzleOverlay:
-    GlobalUpgradable@upgrade:
-        Upgrades: upgrade.htp
-        Prerequisites: upgrade.htp
-    -ThrowsShrapnel@human:
-    
-SILVER2:
-    Inherits: SILVER
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr, ~!t1, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: silver
-    RenderVoxels:
-        Image: silver
-    Valued:
-        Cost: 1530
-        
-SILVER3:
-    Inherits: SILVER
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr, ~!t1, ~!upgrade.mp, ~upgrade.htp
-    RenderSprites:
-        Image: silver
-    RenderVoxels:
-        Image: silver
-    Valued:
-        Cost: 2070
-            
-FURY:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^CyborgFactoryUpgrades
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Fury
-        Description: Hovering combat transporter. Infantry can shoot out of it.
-    Selectable:
-        Bounds: 42,42, 0, -5
-        Class: Fury
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Mobile:
-        Speed: 90
-        TurnSpeed: 6
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Water: 100
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-	Cargo:
-		Types: Infantry
-		MaxWeight: 12
-		PipCount: 12
-		LoadingUpgrades: notmobile
-		EjectOnDeath: true
-    Health:
-        HP: 700
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 10c0
-    AttackGarrisoned:
-        PortOffsets: 256,0,256
-        PortYaws: 0
-        PortCones: 86
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    Hovers:
-    -PoisonedByTiberium:
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
     WithMuzzleOverlay:
     -ThrowsShrapnel@human:
 
 KRONOS:
     Inherits@1: ^VoxelTank
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 3000
+        Cost: 2000
     Tooltip:
         Name: Kronos
-        Description: Super heavy battle tank, capable of crossing water.\nEquipped with a anti armor railgun.\n\n  Strong vs Hard Targets\n  Weak vs Soft Targets\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
         Class: Kronos
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.Cabal
         BuildPaletteOrder: 308
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~!upgrade.!mp, ~!upgrade.htp
+        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+        Description: Super heavy battle tank, capable of crossing water.\nEquipped with a anti armor railgun.\n\nRole : Hovering Heavy Tank\nHP: 1600\nArmor: Heavy\nSpeed: 50\nViewrange: 10\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Amphibious
     Voiced:
         VoiceSet: Husk
         Volume: 2
     Mobile:
-        Speed: 50
-        TurnSpeed: 1
+        Speed: 40
+        TurnSpeed: 3
         TerrainSpeeds:
             Water: 80
     Health:
-        HP: 1400
+        HP: 1600
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -619,6 +423,8 @@ KRONOS:
         Recoil: 200
         RecoilRecovery: 10
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
         HealIfBelow: 50
         DamageCooldown: 200
@@ -627,19 +433,17 @@ KRONOS:
     RenderSprites:
     RenderVoxels:
     WithVoxelTurret:
-        Recoils: no
+        Recoils: False
     WithVoxelBarrel:
     WithMuzzleOverlay:
-	UpgradeOnTerrain:
-		Upgrades: inwater
-		TerrainTypes: Water
-	WithVoxelBody:
-		UpgradeTypes: inwater
-		UpgradeMaxEnabledLevel: 0
-	WithVoxelBody@water:
-		Sequence: water
-		UpgradeTypes: inwater
-		UpgradeMinEnabledLevel: 1
+    GrantConditionOnTerrain:
+        Condition: inwater
+        TerrainTypes: Water
+    WithVoxelBody:
+        RequiresCondition: !inwater
+    WithVoxelBody@water:
+        Sequence: water
+        RequiresCondition: inwater
     LeavesTrails@water:
         Image: wake
         Palette: effect
@@ -649,53 +453,130 @@ KRONOS:
         MovingInterval: 6
     -ThrowsShrapnel@human:
 
-KRONOS2:
-    Inherits: KRONOS
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: kronos
-    RenderVoxels:
-        Image: kronos
+FURY:
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^SuperHeavyVehicle
     Valued:
-        Cost: 2550
-        
-KRONOS3:
-    Inherits: KRONOS
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~!upgrade.mp, ~upgrade.htp
+        Cost: 5000
+    Tooltip:
+        Name: Fury
+    Selectable:
+        Bounds: 42,42, 0, -5
+        Class: Fury
+#    Buildable:
+#        Queue: Vehicle.Cabal
+#        BuildPaletteOrder: 308
+#        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2, ~!t3
+#		BuildLimit: 1
+#        Description: Super heavy factory cruiser, capable of crossing water and building cyborgs.\nEquipped with a anti armor railgun.\n\nRole : Epic Vehicle\nHP: 8000\nArmor: Light\nSpeed: 50\nViewrange: 10\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Amphibous\n - Builds Cyborgs\n - Moves faster on water\n - Selfheal
+    Voiced:
+        VoiceSet: Husk
+        Volume: 2
+    Mobile:
+        Speed: 50
+        TurnSpeed: 2
+        TerrainSpeeds:
+            Water: 80
+    Health:
+        HP: 8000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 10c0
+    Turreted@main:
+        Turret: primary
+        TurnSpeed: 1
+        Offset: -180,0,0
+    Armament@primary:
+        Name: primary
+        Weapon: KronosCannon
+        LocalOffset: 1000,64,1500
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 300
+        RecoilRecovery: 10
+    Armament@secondary:
+        Name: secondary
+        Weapon: KronosCannon
+        LocalOffset: 1000,-64,1500
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 300
+        RecoilRecovery: 10
+        FireDelay: 30
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
+    AttackTurreted:
+    AutoTarget:
     RenderSprites:
-        Image: kronos
     RenderVoxels:
-        Image: kronos
-    Valued:
-        Cost: 3450
-        
+    WithVoxelTurret:
+        Recoils: False
+    WithVoxelBarrel@1:
+        Armament: primary
+        LocalOffset: -180,64,0
+    WithVoxelBarrel@2:
+        Armament: secondary
+        LocalOffset: -180,-64,0
+    WithMuzzleOverlay:
+    WithVoxelBody:
+    -ThrowsShrapnel@human:
+    Production:
+        Produces: Infantry.Cabal
+    ProductionQueue@Infantry:
+        Type: Infantry.Cabal
+        Group: Infantry
+        BuildSpeed: 40
+        LowPowerSlowdown: 3
+    ProductionBar:
+    Exit:
+        ExitCell: -1,0
+    ProvidesPrerequisite:
+        Prerequisite: cybbar
+    GrantConditionOnTerrain:
+        Condition: inwater
+        TerrainTypes: Water
+    WithVoxelBody:
+        RequiresCondition: !inwater
+    WithVoxelBody@water:
+        Sequence: water
+        RequiresCondition: inwater
+    LeavesTrails@water:
+        Image: wake
+        Palette: effect
+        TerrainTypes: Water
+        TrailWhileStationary: True
+        StationaryInterval: 18
+        MovingInterval: 6
+    
 GARGANTUA:
-    Inherits@1: ^Tank
-    Inherits@2: ^CyborgFactoryUpgrades
+    Inherits@1: ^Walker
+    Inherits@2: ^SuperHeavyVehicle
     Valued:
-        Cost: 8000
+        Cost: 5000
     Tooltip:
         Name: Gargantua
-        Description: Epic sized walker equipped with four heavy twin lasers\n  Strong vs Ground\n  Weak vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -10
         Class: Gargantua
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 309
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~!t3, ~!upgrade.!mp, ~!upgrade.htp
+#    Buildable:
+#        Queue: Vehicle.Cabal
+#        BuildPaletteOrder: 309
+#        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2, ~!t3
+#		BuildLimit: 1
+#        Description: Epic sized walker equipped with four heavy twin lasers\n\nRole : Epic Walker\nHP: 10000\nArmor: Light\nSpeed: 50\nViewrange: 15\nGood vs: Ground Units\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Selfheal
     Mobile:
         TurnSpeed: 5
         Speed: 50
     Health:
-        HP: 5000
+        HP: 10000
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
         HealIfBelow: 50
         DamageCooldown: 200
@@ -714,7 +595,7 @@ GARGANTUA:
         MuzzlePalette: effect50alpha
     RenderSprites:
     WithInfantryBody:
-        AttackSequence: shoot
+        DefaultAttackSequence: shoot
     WithDeathAnimation:
         DeathTypes:
             BulletDeath: 1
@@ -729,101 +610,7 @@ GARGANTUA:
     ActorLostNotification:
         Notification: CriticalUnitLost
     -ThrowsShrapnel@human:
-    
-GARGANTUA2:
-    Inherits: GARGANTUA
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 309
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~!t3, ~upgrade.mp, ~!upgrade.htp
-    RenderSprites:
-        Image: gargantua
-    Valued:
-        Cost: 6800
-        
-GARGANTUA3:
-    Inherits: GARGANTUA
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 309
-        Prerequisites: ~kaweap, karadr, kabtech, ~!t1, ~!t2, ~!t3, ~!upgrade.mp, ~upgrade.htp
-    RenderSprites:
-        Image: gargantua
-    Valued:
-        Cost: 9200
-        
-SICT:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 2200
-    Tooltip:
-        Name: Basilisk
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Mobile:
-        Speed: 70
-        TurnSpeed: 4
-    Health:
-        HP: 400
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 6c0
-    Turreted:
-        TurnSpeed: 3
-    Armament@PRIMARY:
-        Weapon: PlasmaBombardeCannon
-        LocalOffset: 1800,0,800
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: no
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    -ThrowsShrapnel@human:
-        
-Raptor:
-    Inherits: ^Tank
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Raptor
-        Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-    Selectable:
-        Bounds: 42,42, 0, -10
-    Mobile:
-        TurnSpeed: 5
-        Speed: 50
-    Health:
-        HP: 350
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 6c0
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: VultureGat
-        LocalOffset: 150,280,850, 150,-280,850
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    RenderSprites:
-    WithInfantryBody:
-    WithMuzzleOverlay:
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Explodes:
-        Weapon: UnitExplodeEpic
-        EmptyWeapon: UnitExplodeEpic
-    -ThrowsShrapnel@human:
+    Passenger:
+        CargoType: Epic
+        Voice: Move
+        Weight: 20

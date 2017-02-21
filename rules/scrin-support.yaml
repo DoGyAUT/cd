@@ -1,0 +1,97 @@
+SACANNON:
+    Inherits: ^Defense
+    Valued:
+        Cost: 1100
+    Tooltip:
+        Name: Anti Matter Cannon
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 500
+        Prerequisites: anypower, sanode, ~structures.scrin, ~!t1
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+    Building:
+        Footprint: x
+        Dimensions: 1,1
+    Selectable:
+        Bounds: 40, 70, 0, -22
+    RequiresPower:
+    DisabledOverlay:
+    BodyOrientation:
+        QuantizedFacings: 32
+    Health:
+        HP: 1200
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 6
+        InitialFacing: 85
+    AttackTurreted:
+    Armament:
+        Weapon: HeavyShockerDisc
+        LocalOffset: 460,0,1900
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 50
+        RecoilRecovery: 10
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+        Sequence: turret
+    Power:
+        Amount: -100
+    WithMuzzleOverlay:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+
+SASAM:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Shard Launcher
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 501
+        Prerequisites: anypower, sanode, ~structures.scrin, ~!t1
+        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+    Building:
+        Footprint: x
+        Dimensions: 1,1
+    Selectable:
+        Bounds: 40, 70, 0, -22
+    RequiresPower:
+    DisabledOverlay:
+    BodyOrientation:
+        QuantizedFacings: 32
+    Health:
+        HP: 1200
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 85
+    AttackTurreted:
+    Armament:
+        Weapon: ShardLauncher
+        LocalOffset: 380,180,2600, 380,-180,2600
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        Recoil: 50
+        RecoilRecovery: 10
+    AutoTarget:
+    RenderRangeCircle:
+    WithSpriteTurret:
+        Sequence: turret
+    Power:
+        Amount: -100
+    WithMuzzleOverlay:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground

@@ -1,15 +1,14 @@
 GASOL:
     Inherits: ^Soldier
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 100
         Prerequisites: ~gapile, ~!upgrade.zc
+        Description: GDI's basic combat infantry.\nThey are armed with an assault rifle with good accuracy and have good balanced stats.\n\n  Role: Basic Infantry\n  HP: 200\n  Armor: Light\n  Speed: 70\n  Viewrange: 8\n\n Good vs Light infantry \n\n Special:\n\n - Elite weapon on veterancy rank 5
     Valued:
         Cost: 120
     Tooltip:
         Name: Marine
-        Description: General-purpose infantry.\n\n HP: 200\n Armor: Light\n Speed: 70\n Damage: 2x20\n Range: 5\n Reload: 40\n\n Good vs infantry\n Granted better weapon on veterancy rank 5.
-#        Description: General-purpose infantry.\nGranted better weapon on rank 5.\n\n  Strong vs Infantry\n  Weak vs Dogs, Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -20,47 +19,47 @@ GASOL:
     Armor:
         Type: Light
     Mobile:
-        Speed: 70
+        Speed: 50
     RevealsShroud:
-        Range: 8c0    
+        Range: 6c0    
     Armament@PRIMARY:
         Weapon: Minigun
         LocalOffset: 256,0,550
-        UpgradeTypes: eliteweapon
-        UpgradeMaxEnabledLevel: 0
-        UpgradeMaxAcceptedLevel: 1
+        RequiresCondition: !rank-elite
     Armament@GARRISONED:
         Name: garrisoned
         Weapon: MinigunGarrison
         LocalOffset: 256,0,550
-        UpgradeMaxEnabledLevel: 0
-        UpgradeMaxAcceptedLevel: 1
+        RequiresCondition: !rank-elite
     Armament@GARRISONEDELITE:
         Name: garrisoned
         Weapon: M1CarbineGarrison
         LocalOffset: 256,0,550
-        UpgradeTypes: eliteweapon
-        UpgradeMinEnabledLevel: 1
+        RequiresCondition: rank-elite
     Armament@ELITE:
         Weapon: M1Carbine
         LocalOffset: 256,0,550
-        UpgradeTypes: eliteweapon
-        UpgradeMinEnabledLevel: 1
+        RequiresCondition: rank-elite
     AttackFrontal:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
+    Passenger:
+        CargoType: Infantry
+        Voice: Move
+    SoundOnDamageTransition:
+        DamagedSounds: gdi1_f1.aud, gdi1_f2.aud, gdi1_f3.aud, gdi1_f4.aud, gdi1_f5.aud, gdi1_f6.aud, gdi1_f7.aud, gdi1_f8.aud, gdi1_f9.aud, gdi1_f10.aud, gdi1_f11.aud, gdi1_f12.aud, gdi1_f13.aud, gdi1_f14
+#    AnnounceOnBuildAS:
+#        Voice: Build
 
 E2:
     Inherits: ^Soldier
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 102
-        Prerequisites: ~gapile, gaarmory, ~!upgrade.zc
+        Prerequisites: ~gapile, ~!upgrade.zc
+        Description: GDI's basic anti-vehicle infantry.\nArmed with throwable explosive discuses.\n\n  Role: Anti Armor\n  HP: 150\n  Armor: Light\n  Speed: 56\n  Viewrange: 8\n\n Good vs Buildings, Infantry Mobs, Cyborgs, Medium Armor\n\n Special:\n\n - EMP Grenades on veterancy rank 5
     Valued:
         Cost: 200
     Tooltip:
         Name: Disc Thrower
-        Description: Anti-Armor infantry.\n\n HP: 150\n Armor: Light\n Speed: 56\n Damage: 1x100\n Range: 4,5\n Reload: 60\n\n Good vs infantry blobs, buildings, light vehicles\n Has a minimum attack range of 1.
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -71,33 +70,49 @@ E2:
     Armor:
         Type: Light
     Mobile:
-        Speed: 56
+        Speed: 50
     RevealsShroud:
-        Range: 8c0    
-    Armament@primaryEMP:
+        Range: 7c0    
+    Armament@primary:
+        Weapon: Grenade
+        LocalOffset: 0,0,555
+        FireDelay: 5
+        RequiresCondition: !rank-elite
+    Armament@garrisoned:
+        Name: garrisoned
+        Weapon: Grenade
+        LocalOffset: 0,0,555
+        FireDelay: 5
+        RequiresCondition: !rank-elite
+    Armament@ELITE:
         Weapon: GrenadeEMP
         LocalOffset: 0,0,555
         FireDelay: 5
-    Armament@GARRISONEDEMP:
+        RequiresCondition: rank-elite
+    Armament@ELITEGARRISONED:
         Name: garrisoned
         Weapon: GrenadeGarrisonEMP
         LocalOffset: 0,0,555
         FireDelay: 5
+        RequiresCondition: rank-elite
     AttackFrontal:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
+    Passenger:
+        CargoType: Infantry
+        Voice: Move
+    SoundOnDamageTransition:
+        DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
 
 SCOUT:
     Inherits: ^Soldier
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 103
-        Prerequisites: ~gapile
+#    Buildable:
+#        Queue: Infantry.GDI
+#        BuildPaletteOrder: 107
+#        Prerequisites: ~gapile
+#        Description: Stealthed infiltrator unit.\n\n  Role: Scouting\n  HP: 150\n  Armor: Light\n  Speed: 80\n  Viewrange: 10\n\n Good vs Nothing\n\n Special:\n\n - Stealth
     Valued:
         Cost: 300
     Tooltip:
         Name: Scout
-        Description: Stealthed infiltrator unit.\n\n HP: 150\n Armor: Light\n Speed: 80\n Damage: -\n Range: -\n Reload: -\n\n Good vs nothing\n Can infiltrate buildings.
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-9
@@ -109,70 +124,68 @@ SCOUT:
     Armor:
         Type: Light
     Mobile:
-        Speed: 80
+        Speed: 60
     RevealsShroud:
-        Range: 10c0
+        Range: 12c0
     AttackFrontal:
+    -ProducibleWithLevel:
 #    Infiltrates:
 #        Types: SpyInfiltrate
-    -Cloak@CLOAKGENERATOR:
     Cloak:
-        IsPlayerPalette: true
-#        CloakSound: cloak5.aud
+        Condition: crate-cloak || cloakgenerator
+        CloakSound:
         UncloakSound: cloak5.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
+    SoundOnDamageTransition:
+        DamagedSounds: spotter_f1.aud, spotter_f2.aud, spotter_f3.aud
 
 GDOG:
     Inherits: ^SoldierFearless
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 104
-        Prerequisites: ~gapile
+#    Buildable:
+#        Queue: Infantry.GDI
+#        BuildPaletteOrder: 104
+#        Prerequisites: ~gapile
+#        Description: Anti-Infantry combat dog.\n\n  Role: Stealth Detection / Anti-Infantry\n  HP: 150\n  Armor: Light\n  Speed: 85 (Charge 90)\n  Viewrange: 10\n\n Good vs Infantry \n\n Special:\n\n - Stealth detection (5 Range)\n - Can not attack cyborgs or suit powered infantry
     Valued:
         Cost: 200
     Tooltip:
         Name: Watch Dog
-        Description: Anti-Infantry combat dog.\n\n HP: 100\n Armor: Light\n Speed: 85 (Chargespeed 90)\n Damage: Instakills infantry\n Range: 3\n Reload: 60\n\n Good vs infantry\n Can detect stealth.
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: Dog
     Health:
-        HP: 100
+        HP: 250
     Armor:
         Type: Light
     Mobile:
-        Speed: 85
+        Speed: 60
     RevealsShroud:
         Range: 10c0
     Armament@primary:
+        Name: Bite
         Weapon: DogJaw
-    AttackLeap:
-        Speed: 90
-        Angle: 56
-        FacingTolerance: 20
+    AttackFrontal:
+        Armaments: Bite
     WithInfantryBody:
         IdleSequences: idle1,idle2,idle3
     IgnoresDisguise:
     DetectCloaked:
         Range: 5c0
     RenderDetectionCircle:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
     AutoTarget:
         ScanRadius: 6
-    SpawnActorOnDeath:
+    SpawnActorOnDeath@1:
         Actor: doggie
-        Probability: 10
+        Probability: 50
         OwnerType: InternalName
         InternalOwner: Creeps
-        DeathType: EnergyDeath # TODO: FIX ME! (Tiberium currently uses the wrong damage type!)
-        RequiresLobbyCreeps: true
+        DeathType: TriggerVisceroid
+        RequiresLobbyCreeps: True
+    SoundOnDamageTransition:
+        DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
         
 ENGINEER:
     Inherits: ^Soldier
@@ -180,18 +193,18 @@ ENGINEER:
         Cost: 500
     Tooltip:
         Name: Engineer
-        Description: Captures enemy structures.\n\n  Unarmed
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 105
         Prerequisites: ~gapile
+        Description: GDI's basic engineering unit.\nArmed with toolkit for repairs and structural takeovers.\n\n  Role: Engineer\n  HP: 250\n  Armor: Light\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing \n\n Special:\n\n - Capture buildings
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
     Voiced:
         VoiceSet: Engineer
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
         Range: 6c0    
     Health:
@@ -203,29 +216,30 @@ ENGINEER:
     EngineerRepair:
     RepairsBridges:
         RepairNotification: BridgeRepaired
-	ExternalCaptures:
-		Type: building
+    ExternalCaptures:
+        Type: building
+        PlayerExperience: 50
     -AutoTarget:
-    -GainsExperience:
+    -ProducibleWithLevel:
         
 MEDIC:
     Inherits: ^Soldier
     Valued:
-        Cost: 600
+        Cost: 400
     Tooltip:
         Name: Medic
-        Description: Heals nearby infantry.\n\n  Unarmed
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 106
         Prerequisites: ~gapile
+        Description: GDI's medical support infantry.\nCan heal infantry directly and in a radius.\n\n  Role: Medic\n  HP: 225\n  Armor: Light\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Direct heal\n - Area of effect heal (3 Range)
     Selectable:
         Bounds: 12,17,0,-6
     Voiced:
         VoiceSet: Medic
         Volume: 2
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     Health:
@@ -241,38 +255,51 @@ MEDIC:
     AttackFrontal:
     WithInfantryBody:
         IdleSequences: idle1,idle2
-        AttackSequence: heal
+        DefaultAttackSequence: heal
     SelfHealing:
-        Delay: 60
+        Delay: 10
     AutoTarget:
         ScanRadius: 5
     Passenger:
         PipType: Red
+    Passenger:
+        CargoType: Infantry
+        Voice: Move
+    ProximityExternalCondition:
+        Condition: medic_heal
+        Range: 3c0
+    WithRangeCircle:
+        Color: FFFFFFFF
+        Range: 3c0
+    -DamagedByTerrain@Tiberium:
+    -ProducibleWithLevel:
+    SoundOnDamageTransition:
+        DamagedSounds: medic_f1.aud, medic_f2.aud, medic_f3.aud, medic_f4.aud
 
 ZMARINE:
     Inherits: ^SoldierFearless
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gapile, ~!t1, ~upgrade.zc
+        Description: Advanced General-purpose infantry.\nZOCOM's variant of the Marine.\n\n  Role: Basic Infantry\n  HP: 500\n  Armor: Light\n  Speed: 60\n  Viewrange: 9\n\n Good vs Infantry\n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal dogs
     Valued:
         Cost: 300
     Tooltip:
         Name: Zone Marine
-        Description: Advanced General-purpose infantry.\nImmune to Tiberium radiation.\nImmune to dog attacks (Devourer excluded)\n\n  Strong vs Infantry\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
         VoiceSet: ZoneMarine
-        Volume: 3
+        Volume: 2
     Health:
-        HP: 500
+        HP: 650
     Armor:
-        Type: Light
+        Type: Medium
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
-        Range: 9c0
+        Range: 7c0
     Armament@PRIMARY:
         Weapon: M1Carbine
         LocalOffset: 300,0,480
@@ -284,148 +311,88 @@ ZMARINE:
         Weapon: M1CarbineGarrison
         LocalOffset: 300,0,480
     AttackFrontal:
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Tiberium:
     WithInfantryBody:
         IdleSequences: idle1,idle2
     WithMuzzleOverlay:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
-
-JUMPJET:
-    Inherits: ^SoldierFearless
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Jumpjet Infantry
-        Description: Airborne infantry.\nImmune to Tiberium radiation.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Armor, Artillery, Dogs
-    Selectable:
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Marine
-        Volume: 2    
-    Health:
-        HP: 220
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 10c0
-    Armament:
-        Weapon: JumpCannon
-        LocalOffset: 256,0,550
-    Armament@AA:
-        Weapon: JumpCannonAA
-        LocalOffset: 256,0,550
-    -PoisonedByTiberium:
-	Mobile:
-		Speed: 70
-		TerrainSpeeds:
-			Water: 80
-			Cliff: 80
-            Rough: 100
-	Passenger:
-		PipType: Green
-	RevealsShroud:
-		Range: 6c0
-	Armament:
-		Weapon: JumpCannon
-	-Crushable:
-	AttackFrontal:
-	WithInfantryBody:
-		AttackSequence: shoot
-		UpgradeMaxEnabledLevel: 0
-		UpgradeTypes: airborne
-	WithInfantryBody@Airborne:
-		MoveSequence: air-run
-		AttackSequence: air-shoot
-		IdleSequences: air-idle
-		StandSequences: air-stand
-        UpgradeMinEnabledLevel: 1
-		UpgradeTypes: airborne
-	UpgradeOnTerrain:
-		TerrainTypes: Water, Cliff, Rough
-		Upgrades: airborne
-	Hovers:
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+    SoundOnDamageTransition:
+        DamagedSounds: zmarine_f1.aud, zmarine_f2.aud, zmarine_f3.aud, zmarine_f4.aud, zmarine_f5.aud
 
 ZTROOPER:
     Inherits: ^SoldierFearlessHeavy
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 108
-        Prerequisites: ~gapile, gaarmory, ~!t1, ~upgrade.zc
+        Prerequisites: ~gapile, garadr, ~!t1, ~upgrade.zc
+        Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\n  Role: Anti Armor\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Armored Targets\n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
     Valued:
-        Cost: 800
+        Cost: 1000
     Tooltip:
         Name: Zone Trooper
-        Description: Advanced infantry in combat suit. Armed with Railguns.\nImmune to Tiberium radiation.\nImmune to dog attacks (Devourer excluded)\nCan't be crushed by vehicles\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Selectable:
         Bounds: 24,34,0,-9
     Voiced:
         VoiceSet: Trooper
         Volume: 2        
     Health:
-        HP: 300
+        HP: 600
     Armor:
         Type: Heavy
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-        Weight: 2
     Mobile:
-        Speed: 60
+        Speed: 50
         SharesCell: False
     RevealsShroud:
-        Range: 10c0
+        Range: 7c0
     Armament@primary:
         Weapon: LtRail
         LocalOffset: 512,64,800
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
     AttackFrontal:
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Tiberium:
     WithMuzzleOverlay:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
+    SoundOnDamageTransition:
+        DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
 
 ZRAIDER:
     Inherits: ^SoldierFearlessHeavy
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.GDI
         BuildPaletteOrder: 109
-        Prerequisites: ~gapile, gaarmory, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area\nIt also uses shoulder mounted missile launchers vs incoming VTOLs.\n\n  Role: Anti Infantry/Building/VTOL\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Soft Targets, Buildings, VTOL's \n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
     Valued:
         Cost: 1200
     Tooltip:
         Name: Zone Raider
-        Description: Advanced infantry in combat suit. Armed with Sonic Disc launcher.\nImmune to Tiberium radiation.\nImmune to dog attacks (Devourer excluded)\nCan't be crushed by vehicles\n\n  Strong vs Infantry, Buildings\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 24,34,0,-9
     Voiced:
         VoiceSet: Raider
         Volume: 2        
     Health:
-        HP: 300
+        HP: 600
     Armor:
         Type: Heavy
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-        Weight: 2
     Mobile:
-        Speed: 60
+        Speed: 50
         SharesCell: False
     RevealsShroud:
-        Range: 10c0
+        Range: 9c0
     Armament@primary:
         Weapon: SonicGrenade
         LocalOffset: 512,64,800
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
+    Armament@Missiles:
+        Weapon: ZRaiderBazooka
+        LocalOffset: 0,90,900, 0,-90,900
+        MuzzlePalette: effect50alpha
     AttackFrontal:
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Tiberium:
     WithMuzzleOverlay:
-    ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
+    SoundOnDamageTransition:
+        DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud

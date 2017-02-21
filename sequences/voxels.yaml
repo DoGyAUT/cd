@@ -38,8 +38,11 @@ fharv:
     
 apc:
     idle:
+    medic: apc_medic
     turret: apctur
+    turret_gren: apctur_gren
     barrel: apcbarl
+    barrel_mg: apc_mg
     water: apcw
 
 airblast:
@@ -49,137 +52,19 @@ airblast:
 hailstorm:
     idle:    
     turret: hailstormtur
+    idle2: hailstorm2
+    turret2: hailstorm2tur
     
 art2:
     idle:
-    
-warthog:
-    idle-mg: warthog_mg
-    idle-gat: warthog_gat
-    idle-mis: warthog_missile
-    idle-arty: warthog_mortar
-    idle-flak: warthog_flak
-    idle-shotgun: warthog_shotgun
-    idle-75mmg: warthog_75mmg
-    idle-90mm: warthog_90mm
-    turret-mg: warthog_mgtur
-    turret-gat: warthog_gattur
-    turret-mis: warthog_missiletur
-    turret-arty: warthog_mortartur
-    turret-flak: warthog_flaktur
-    turret-shotgun: warthog_shotguntur
-    turret-75mmg: warthog_75mmgtur
-    turret-90mm: warthog_90mmtur
-    barrel-flak: warthog_flakbarl
-    barrel-mg: warthog_mgbarl
-    barrel-arty: warthog_mortarbarl
-    barrel-shotgun: warthog_shotgunbarl
-    barrel-75mmg: warthog_75mmgbarl
-    barrel-90mm: warthog_90mmbarl
-    
-gremlin:
-    idle-mg: gremlin_mg
-    idle-gat: gremlin_gat
-    idle-mis: gremlin_missile
-    idle-arty: gremlin_mortar
-    idle-flak: gremlin_flak
-    idle-shotgun: gremlin_shotgun
-    idle-75mmg: gremlin_75mmg
-    idle-90mm: gremlin_90mm
-    turret-mg: gremlin_mgtur
-    turret-gat: gremlin_gattur
-    turret-mis: gremlin_missiletur
-    turret-arty: gremlin_mortartur
-    turret-flak: gremlin_flaktur
-    turret-shotgun: gremlin_shotguntur
-    turret-75mmg: gremlin_75mmgtur
-    turret-90mm: gremlin_90mmtur
-    barrel-flak: gremlin_flakbarl
-    barrel-mg: gremlin_mgbarl
-    barrel-arty: gremlin_mortarbarl
-    barrel-shotgun: gremlin_shotgunbarl
-    barrel-75mmg: gremlin_75mmgbarl
-    barrel-90mm: gremlin_90mmbarl
- 
+
 howitzer:
     idle:
     turret: howitzertur
  
 ragnarok:
     idle:
-
-bison:
-    idle-mg: bison_mg
-    idle-gat: bison_gat
-    idle-mis: bison_missile
-    idle-arty: bison_mortar
-    idle-flak: bison_flak
-    idle-shotgun: bison_shotgun
-    idle-75mmg: bison_75mmg
-    idle-90mm: bison_90mm
-    idle-90mmgg: bison_90mmgg
-    idle-120mmt: bison_120mmt
-    idle-122mmg: bison_122mmg
-    idle-180mm: bison_180mm
-    turret-mg: bison_mgtur
-    turret-gat: bison_gattur
-    turret-mis: bison_missiletur
-    turret-arty: bison_mortartur
-    turret-flak: bison_flaktur
-    turret-shotgun: bison_shotguntur
-    turret-75mmg: bison_75mmgtur
-    turret-90mm: bison_90mmtur
-    turret-90mmgg: bison_90mmggtur
-    turret-120mmt: bison_120mmttur
-    turret-122mmg: bison_122mmgtur
-    turret-180mm: bison_180mmtur
-    barrel-flak: bison_flakbarl
-    barrel-mg: bison_mgbarl
-    barrel-arty: bison_mortarbarl
-    barrel-shotgun: bison_shotgunbarl
-    barrel-75mmg: bison_75mmgbarl
-    barrel-90mm: bison_90mmbarl
-    barrel-90mmgg: bison_90mmggbarl
-    barrel-120mmt: bison_120mmtbarl
-    barrel-122mmg: bison_122mmgbarl
-    barrel-180mm: bison_180mmbarl
-
-auroch:
-    idle-mg: auroch_mg
-    idle-gat: auroch_gat
-    idle-mis: auroch_missile
-    idle-arty: auroch_mortar
-    idle-flak: auroch_flak
-    idle-shotgun: auroch_shotgun
-    idle-75mmg: auroch_75mmg
-    idle-90mm: auroch_90mm
-    idle-90mmgg: auroch_90mmgg
-    idle-120mmt: auroch_120mmt
-    idle-122mmg: auroch_122mmg
-    idle-180mm: auroch_180mm
-    turret-mg: auroch_mgtur
-    turret-gat: auroch_gattur
-    turret-mis: auroch_missiletur
-    turret-arty: auroch_mortartur
-    turret-flak: auroch_flaktur
-    turret-shotgun: auroch_shotguntur
-    turret-75mmg: auroch_75mmgtur
-    turret-90mm: auroch_90mmtur
-    turret-90mmgg: auroch_90mmggtur
-    turret-120mmt: auroch_120mmttur
-    turret-122mmg: auroch_122mmgtur
-    turret-180mm: auroch_180mmtur
-    barrel-flak: auroch_flakbarl
-    barrel-mg: auroch_mgbarl
-    barrel-arty: auroch_mortarbarl
-    barrel-shotgun: auroch_shotgunbarl
-    barrel-75mmg: auroch_75mmgbarl
-    barrel-90mm: auroch_90mmbarl
-    barrel-90mmgg: auroch_90mmggbarl
-    barrel-120mmt: auroch_120mmtbarl
-    barrel-122mmg: auroch_122mmgbarl
-    barrel-180mm: auroch_180mmbarl
-    
+   
 avalanche:
     idle:
     turret: avalanchetur
@@ -210,6 +95,16 @@ gorran:
 silver:
     idle:
     
+mantis:
+    idle:
+    turret: mantistur
+    barrel: mantisbarl
+
+chimera:
+    idle:
+    turret: chimeratur
+    barrel: chimerabarl
+    
 sict:
     idle:
     turret: sicttur
@@ -220,8 +115,11 @@ defdtank:
     turret: defdtanktur    
 #    barrel: defdtankbarl
     
-taurus:
-    idle:    
+taurus2:
+    idle:
+    
+atruck:
+    idle:
     
 subtank:
     idle:
@@ -232,29 +130,88 @@ bggy:
 
 fbuggy:
     idle-mg: fbuggy_mg
-    idle-gat: fbuggy_gat
     idle-mis: fbuggy_missile
-    idle-arty: fbuggy_mortar
-    idle-flak: fbuggy_flak
+    idle-mortar: fbuggy_mortar
     turret-mg: fbuggy_mgtur
-    turret-gat: fbuggy_gattur
     turret-mis: fbuggy_missiletur
-    turret-arty: fbuggy_mortartur
-    turret-flak: fbuggy_flaktur
-    barrel-flak: fbuggy_flakbarl
+    turret-mortar: fbuggy_mortartur
     
 ftruck:
-    idle-mg: ftruck_mg
-    idle-gat: ftruck_gat
-    idle-mis: ftruck_missile
-    idle-arty: ftruck_mortar
+    idle-flamer: ftruck_flamer
+    idle-mortar: ftruck_mortar
     idle-flak: ftruck_flak
-    turret-mg: ftruck_mgtur
-    turret-gat: ftruck_gattur
-    turret-mis: ftruck_missiletur
-    turret-arty: ftruck_mortartur
+    turret-flamer: ftruck_flamertur
+    turret-mortar: ftruck_mortartur
     turret-flak: ftruck_flaktur
     barrel-flak: ftruck_flakbarl
+    
+gremlin:
+    idle-mortar: gremlin_mortar
+    idle-hcan: gremlin_hcan
+    idle-90mm: gremlin_90mm
+    turret-mortar: gremlin_mortartur
+    turret-hcan: gremlin_hcantur
+    turret-90mm: gremlin_90mmtur
+    barrel-mortar: gremlin_mortarbarl
+    barrel-hcan: gremlin_hcanbarl
+    barrel-90mm: gremlin_90mmbarl
+    
+taurus:
+    idle-mg: taurus_mg
+    idle-hcan: taurus_hcan
+    idle-mis: taurus_mis
+    turret-mg: taurus_mgtur
+    turret-hcan: taurus_hcantur
+    turret-mis: taurus_mistur
+    barrel-mg: taurus_mgbarl
+    barrel-hcan: taurus_hcanbarl
+    water: taurusw
+
+lizard:
+    idle-mg: lizard_mg
+    idle-90mm: lizard_90mm
+    idle-122mm: lizard_122mm
+    turret-mg: lizard_mgtur
+    turret-90mm: lizard_90mmtur
+    turret-122mm: lizard_122mmtur
+    barrel-mg: lizard_mgbarl
+    barrel-90mm: lizard_90mmbarl
+    barrel-122mm: lizard_122mmbarl
+
+digger:
+    digged: digger_dig
+    idle-mis: digger_mis
+    idle-mortar: digger_mortar
+    idle-122mm: digger_122mm
+    turret-mis: digger_mistur
+    turret-mortar: digger_mortartur
+    turret-122mm: digger_122mmtur
+    barrel-mortar: digger_mortarbarl
+    barrel-122mm: digger_122mmbarl
+
+bison:
+    idle-130mm: bison_130mm
+    idle-145mm: bison_145mm
+    idle-180mm: bison_180mm
+    turret-130mm: bison_130mmtur
+    turret-145mm: bison_145mmtur
+    turret-180mm: bison_180mmtur
+    barrel-130mm: bison_130mmbarl
+    barrel-145mm: bison_145mmbarl
+    barrel-180mm: bison_180mmbarl
+
+auroch:
+    idle-130mm: auroch_130mm
+    idle-120mmt: auroch_120mmt
+    idle-180mm: auroch_180mm
+    turret-130mm: auroch_130mmtur
+    turret-120mmt: auroch_120mmttur
+    turret-180mm: auroch_180mmtur
+    barrel-130mm: auroch_130mmbarl
+    barrel-120mmt: auroch_120mmtbarl
+    barrel-120mmt1: auroch_120mmtbarl1
+    barrel-120mmt2: auroch_120mmtbarl2
+    barrel-180mm: auroch_180mmbarl
 
 nalasr:
     turret: laserpost
@@ -294,15 +251,19 @@ hvr:
     idle:
     turret: hvrtur
 
-hovertnk:
+cyclops:
     idle:
-    turret: hovertnktur
-    barrel: hovertnkbarl
+    turret: cyclopstur
+    barrel: cyclopsbarl
+
+behemoth:
+    idle:
+    turret: behemothtur
+    barrel: behemothbarl
     
 stnk:
     idle:
     turret: stnktur
-    barrel: stnkbarl
     
 nfist:
     idle:
@@ -351,6 +312,7 @@ dship:
 
 scrin:
     idle:
+    turret: scrintur
 
 scrinb:
     idle:
@@ -375,6 +337,9 @@ venom:
     idle:
 
 vertigo:
+    idle:
+
+nodcarry:
     idle:
 
 wyvern:
@@ -406,6 +371,11 @@ kdrone:
    
 kgunship:
     idle:
+   
+manta:
+    idle:
+    turret: mantatur
+    barrel: mantabarl
     
 striker:
     idle:
@@ -424,6 +394,9 @@ kronos:
  
 fury:
     idle:
+    turret: furytur
+    barrel: furybarl
+    water: furyw
     
 4tnk:
     idle:
@@ -431,23 +404,17 @@ fury:
     barrel: 4tnkbarl
     barrel1: 4tnkbarl1
     barrel2: 4tnkbarl2
-
-juggy:
-    idle:
-    turret: juggytur
-    barrel1:juggybarl1
-    barrel2:juggybarl1
-    barrel3:juggybarl1
     
-ares:
+poseidon:
     idle:
-    turret: arestur
-    barrel: aresbarl
+    turret: poseidontur
+    barrel: poseidonbarl
     
 nhwtz:
     idle:
     turret: nhwtztur
     barrel: nhwtzbarl
+    idle2: nhwtz2
     
 trucka:
     idle:
@@ -468,6 +435,9 @@ repair:
 weed:
     idle:
     unload:
+
+reckoner:
+    idle:
 
 bus:
     idle:

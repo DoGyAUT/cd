@@ -1,31 +1,32 @@
+^VehicleOverlays:
+    emp-overlay: emp_fx01
+        Offset: 0, 0, 24
+        Length: *
+        BlendMode: Additive
+    veins: veinatac
+        Length: 12
+        UseTilesetExtension: true
+        ZOffset: 1023
+        Offset: 0, -12
+
 gmcv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: gmcvicon
-    
+
 nmcv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: nmcvicon
 
 kmcv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: kmcvicon
 
 fmcv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fmcvicon
 
 smcv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: kmcvicon
     
 apc:
@@ -39,9 +40,9 @@ apc:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
+    muzzle: gunfire
         Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: apcicon
 
 gtmtnk:
@@ -49,9 +50,7 @@ gtmtnk:
         Length: *
     muzzle: gunfire #muzzle: apmuzzle
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle: gunfire
     muzzle0: mgun-n
     muzzle1: mgun-nw
@@ -62,15 +61,13 @@ gtmtnk:
     muzzle6: mgun-e
     muzzle7: mgun-ne
     icon: archonicon    
-    
+
 gthtnk:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle: gunfire
     muzzle0: mgun-n
     muzzle1: mgun-nw
@@ -87,9 +84,7 @@ cheetah:
         Length: *
     laser: lasershot1
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: cheetahicon
 
 gorran:
@@ -97,9 +92,7 @@ gorran:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle: gunfire
     muzzle0: mgun-n
     muzzle1: mgun-nw
@@ -112,525 +105,57 @@ gorran:
     icon: gorranicon
 
 hailstorm:
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512
     muzzle: apmuzzle
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: hailstormicon
-    
-warthog_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_90mmicon
-    
-warthog_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_mgicon
-    
-warthog_gat:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_gaticon
-    
-warthog_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_misicon
-    
-warthog_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_artyicon   
-    
-warthog_flak:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_flakicon
-
-    
-warthog_shotgun:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_shotgunicon   
-    
-warthog_75mmg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: warthog_75mmgicon
-   
-gremlin_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_90mmicon
-    
-gremlin_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_mgicon
-    
-gremlin_gat:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_gaticon
-    
-gremlin_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_misicon
-    
-gremlin_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_mortaricon   
-    
-gremlin_flak:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_flakicon
-
-    
-gremlin_shotgun:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_shotgunicon   
-    
-gremlin_75mmg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: gremlin_75mmgicon   
-    
-howitzer:
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: howitzericon   
-    
+ 
 ragnarok:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: ragnaricon   
-
-auroch_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_mgicon   
-
-auroch_gat:
-    Defaults:
-        Length: *
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_gaticon   
-
-auroch_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_misicon   
-
-auroch_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_artyicon   
-
-auroch_flak:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_flakicon   
-
-auroch_shotgun:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_shotgunicon   
-
-auroch_75mmg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_75mmgicon   
-
-auroch_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_90mmicon   
-
-auroch_90mmgg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_90mmggicon   
-
-auroch_120mmt:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_120mmticon   
-
-auroch_122mmg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_122mmgicon   
-
-auroch_180mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: auroch_180mmicon   
-    
-bison_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_mgicon   
-
-bison_gat:
-    Defaults:
-        Length: *
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_gaticon   
-
-bison_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_misicon   
-
-bison_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_artyicon   
-
-bison_flak:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_flakicon   
-
-bison_shotgun:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_shotgunicon   
-
-bison_75mmg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_75mmgicon   
-
-bison_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_90mmicon   
-
-bison_90mmgg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_90mmggicon   
-
-bison_120mmt:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_120mmticon   
-
-bison_122mmg:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_122mmgicon   
-
-bison_180mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: bison_180mmicon    
+ 
 
 avalanche:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: avalancheicon    
 
 silver:
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: helionicon    
     
 kronos:
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: kronosicon
     
 fury:
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: kronosicon
+    Inherits: ^VehicleOverlays
+    icon: furyicon
     
 sict:
     muzzle: plasmaexpl1
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: sicticon    
     
 taurus:
@@ -645,74 +170,61 @@ taurus:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: taurusicon
     
 gharv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: gharvicon
     harvest: harvestr
         Length: *
+        ZRamp: 1
 
 nharv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: nharvicon
     harvest: harvestr
         Length: *
+        ZRamp: 1
 
 kharv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: kharvicon
     harvest: harvestr
         Length: *
+        ZRamp: 1
 
 fharv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fharvicon
     harvest: harvestr
         Length: *
+        ZRamp: 1
 
 sharv:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: kharvicon
+    Inherits: ^VehicleOverlays
+    icon: sharvicon
     harvest: harvestr
         Length: *
 
 hvr:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: hovricon
         
 airblast:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: airblasticon
         
-hovertnk:
+cyclops:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle: gunfire
     muzzle0: mgun-n
     muzzle1: mgun-nw
@@ -722,74 +234,73 @@ hovertnk:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    icon: hovertnkicon
-    
+    icon: cyclopsicon
+        
+behemoth:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: behemothicon
+        
 4tnk:
     muzzle: gunfire
         Length: *
     muzzle2: apmuzzle
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: 4tnkicon
     
-ares:
+poseidon:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
+    muzzle2: apmuzzle
         Length: *
-        BlendMode: Additive
-    icon: arespicon
+    Inherits: ^VehicleOverlays
+    icon: poseidonicon
     
 defdtank:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: scaricon    
     
 lpst:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: lpsticon
 
 repair:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: rboticon
 
 art2:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: artyicon
 
 nhwtz:
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: artyicon
     
 weed:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     harvest: harvestr
     icon: weedicon
-
-juggy:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: juggicon
+    
+reckoner:
+    Inherits: ^VehicleOverlays
+    icon: reckonericon
     
 hmec:
     Defaults:
@@ -804,16 +315,13 @@ hmec:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: hmecicon
 
 bike:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: cyclicon
 
 bggy:
@@ -827,24 +335,13 @@ bggy:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: bggyicon
 
 fbuggy:
     Defaults:
         Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fbuggyicon
     
 fbuggy_mg:
@@ -858,215 +355,353 @@ fbuggy_mg:
     muzzle5: mgun-se
     muzzle6: mgun-e
     muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fbuggy_mgicon
     
-fbuggy_gat:
+fbuggy_mortar:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: fbuggy_gaticon
-    
-fbuggy_flak:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: fbuggy_flakicon
-    
-fbuggy_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: fbuggy_artyicon
+    Inherits: ^VehicleOverlays
+    icon: fbuggy_mortaricon
     
 fbuggy_mis:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fbuggy_misicon
     
 ftruck:
     Defaults:
         Length: *
-    muzzle: gunfire
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: fbuggyicon
-    
-ftruck_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: ftruck_mgicon
     
 ftruck_flak:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: ftruck_flakicon
     
-ftruck_mis:
+ftruck_flamer:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: ftruck_misicon
+    Inherits: ^VehicleOverlays
+    icon: ftruck_flamericon
     
-ftruck_gat:
+ftruck_mortar:
     Defaults:
         Length: *
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: ftruck_gaticon
-    
-ftruck_arty:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: ftruck_mortaricon
     
-sapc:
-    emp-overlay: emp_fx01
+gremlin_90mm:
+    Defaults:
         Length: *
-        BlendMode: Additive
+    muzzle: gunfire
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: gremlin_90mmicon
+    
+gremlin_mortar:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: gremlin_mortaricon
+
+gremlin_hcan:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: gremlin_hcanicon  
+    
+taurus_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: taurus_mgicon
+    
+taurus_mis:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: taurus_misicon
+
+taurus_hcan:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: taurus_hcanicon
+ 
+lizard_mg:
+    Defaults:
+        Length: *
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: lizard_mgicon
+ 
+lizard_90mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: lizard_90mmicon  
+ 
+lizard_122mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    Inherits: ^VehicleOverlays
+    icon: lizard_122mmicon
+ 
+digger_mis:
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    muzzle: gunfire
+        Length: *
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512
+    Inherits: ^VehicleOverlays
+    icon: digger_misicon  
+ 
+digger_mortar:
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    muzzle: gunfire
+        Length: *
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512    
+    Inherits: ^VehicleOverlays
+    icon: digger_mortaricon  
+ 
+digger_122mm:
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    muzzle: gunfire
+        Length: *
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512    
+    Inherits: ^VehicleOverlays
+    icon: digger_122mmicon 
+
+bison_130mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: bison_130mmicon   
+ 
+bison_145mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: bison_145mmicon 
+ 
+bison_180mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    Inherits: ^VehicleOverlays
+    icon: bison_180mmicon
+ 
+auroch_130mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    muzzle0: mgun-n
+    muzzle1: mgun-nw
+    muzzle2: mgun-w
+    muzzle3: mgun-sw
+    muzzle4: mgun-s
+    muzzle5: mgun-se
+    muzzle6: mgun-e
+    muzzle7: mgun-ne
+    Inherits: ^VehicleOverlays
+    icon: auroch_130mmicon   
+ 
+auroch_120mmt:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    Inherits: ^VehicleOverlays
+    icon: auroch_120mmticon 
+ 
+auroch_180mm:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+    Inherits: ^VehicleOverlays
+    icon: auroch_180mmicon
+
+sapc:
+    Inherits: ^VehicleOverlays
     icon: sapcicon
 
 subtank:
-	idle: faflak
-		ShadowStart: 3
-		Offset: 0, -12
-	damaged-idle: faflak
-		Start: 1
-		ShadowStart: 4
-		Offset: 0, -12
-	make: dig
-		Length: 24
-		Offset: 0, 0
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    make: dig
+        Length: 24
+        Offset: 0, 0
         ZOffset: 512
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     make: dig
         Length: 37
     icon: subticon
 
+atruck:
+    Inherits: ^VehicleOverlays
+    icon: atruckicon
+
 sonic:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: soniicon
 
 iontank:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: iontankicon
     
 ttnk:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: ticktankicon
        
 termite:
-	idle: faflak
-		ShadowStart: 3
-		Offset: 0, -12
-	damaged-idle: faflak
-		Start: 1
-		ShadowStart: 4
-		Offset: 0, -12
-	make: dig
-		Length: 24
-		Offset: 0, 0
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    make: dig
+        Length: 24
+        Offset: 0, 0
         ZOffset: 512
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: tickicon
 
 stnk:
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: stnkicon
 
 nfist:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle: gunfire
         Length: *
     icon: nfisticon
     
 montauk:
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
+    idle: faflak
+        ShadowStart: 3
+        Offset: 0, -12
+    damaged-idle: faflak
+        Start: 1
+        ShadowStart: 4
+        Offset: 0, -12
+    make: dig
+        Length: 24
+        Offset: 0, 0
+        ZOffset: 512
+    make: dig
+        Length: 37
     icon: montaukicon
 
 avatar: 
@@ -1089,11 +724,79 @@ avatar:
         Length: *
         Offset: 0, 0
         BlendMode: Additive
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: avataricon
-    
+
+mantis:
+    muzzle: tibpart
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: mantisicon
+
+chimera:
+    muzzle: tibpart
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: chimeraicon
+
+corruptor:
+    stand:
+        Facings: 8 
+    run:
+        Start: 8
+        Facings: 8
+        Length: 20
+        Tick: 60
+    shoot:
+        Start: 168
+        Facings: 8
+        Length: 10
+        Tick: 120
+    die1:
+        Start: 248
+        Length: 10
+        Tick: 120
+    Inherits: ^VehicleOverlays
+    icon: corruptoricon
+
+anhltrpd: 
+    stand:
+        Start: 240
+        Length: 1
+        Facings: -8
+    run:
+        Length: 15
+        Facings: -8
+        Tick: 90   
+    shoot:
+        Start: 120
+        Length: 15
+        Facings: -8
+        Tick: 120
+    muzzle: plassabogsml
+        Length: *
+        Offset: 0, 0
+        BlendMode: Additive
+    Inherits: ^VehicleOverlays
+    icon: anhltrpdicon
+
+hexapod:
+    Defaults:
+        Tick: 100
+    stand:
+        Start: 128
+        Length: 1
+        Facings: -8
+    run:
+        Length: 9
+        Facings: -8
+    shoot:
+        Start: 72
+        Length: 7
+        Facings: -8
+    Inherits: ^VehicleOverlays
+    icon: hexapodicon
+
 gargantua:
     stand:
         Facings: 8
@@ -1116,25 +819,20 @@ gargantua:
         Tick: 80
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: gargantuaicon
     
 vulture:
     stand:
         Facings: -8
         Stride: 12
-        ShadowStart: 128
     run:
         Length: 12
         Facings: -8
-        ShadowStart: 128
         Tick: 80
     turret:
         Start: 96
         Facings: -32
-        ShadowStart: 224
     muzzle: apmuzzle
         Length: *
     muzzle0: mgun-n
@@ -1153,49 +851,70 @@ vulture:
         Length: *
     muzzle7: mgun-ne
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: vulticon    
     
 mmch:
     stand:
         Facings: -8
         Stride: 22
-        ShadowStart: 208
+        Offset: 0, 0, 12
     run:
         Length: 22
         Facings: -8
-        ShadowStart: 208
+        Offset: 0, 0, 12
     turret:
         Start: 176
         Facings: -32
-        ShadowStart: 384
+        Offset: 0, 0, 12
     muzzle: apmuzzle
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: titanicon
     
+mmch2:
+    stand:
+        Facings: -8
+        Stride: 23
+        Offset: 0, 0, 12
+    run:
+        Length: 23
+        Facings: -8
+        Offset: 0, 0, 12
+        Tick: 70 
+    turret:
+        Start: 184
+        Facings: -32
+        Offset: 0, 0, 12
+    muzzle: apmuzzle
+        Length: *
+    Inherits: ^VehicleOverlays
+    icon: titan2icon
+
 jugg:
-    stand: mmch
+    idle:
         Facings: -8
-        Stride: 22
-        ShadowStart: 208
-    run: mmch
-        Length: 22
+        Stride: 14
+    move:
+        Length: 14
         Facings: -8
-        ShadowStart: 208
+        Tick: 70
     turret: djugg_a
         Start: 0
         Facings: 32
         ShadowStart: 0
+        ZOffset: 16
+    make: juggmk
+        Length: 44
+        Tick: 70
+#        Offset: 0, -16
+    deployed: djugg
+#        Offset: 0, -16
+        Lenght: 3
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+        ZOffset: 20
+    Inherits: ^VehicleOverlays
     icon: juggicon
 
 tarantula:
@@ -1214,9 +933,7 @@ tarantula:
         ShadowStart: 296
     muzzle: plassabogsml
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: tarantulaicon
     
 scorpion:
@@ -1244,32 +961,9 @@ scorpion:
         Length: 40
         Facings: -8
         ShadowStart: 736
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: scorpionicon
 
-cerberus:
-    stand:
-        Facings: -8
-        Stride: 21
-        ShadowStart: 200
-    run:
-        Length: 21
-        Facings: -8
-        ShadowStart: 200
-        Tick: 60
-    turret:
-        Start: 168
-        Facings: -32
-        ShadowStart: 368
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: hmecicon        
-    
 gghunt:
     idle:
         Facings: 1
@@ -1280,82 +974,19 @@ smech:
     stand:
         Start: 168
         Facings: -8 
-        ShadowStart: 344
         Tick: 50
     run:
         Facings: -8
         Length: 14
-        ShadowStart: 176
         Tick: 70
     shoot:
         Start: 112
         Length: 7
         Facings: -8
-        ShadowStart: 288
         Tick: 100
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: smechicon
 
-triton:
-    stand:
-        Facings: -8
-        Stride: 12
-        ShadowStart: 128
-    run:
-        Length: 12
-        Facings: -8
-        ShadowStart: 128
-        Tick: 80
-    turret:
-        Start: 96
-        Facings: -32
-        ShadowStart: 224
-    muzzle: gunfire
-        Length: *
-    muzzle2: apmuzzle
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: tritonicon
-    
-nemesis:
-    stand:
-        Facings: -8
-        Stride: 42
-        ShadowStart: 368
-    run:
-        Length: 42
-        Facings: -8
-        ShadowStart: 368
-    turret:
-        Start: 336
-        Facings: -32
-        ShadowStart: 704
-    muzzle: apmuzzle
-        Length: *
-    muzzle0: mgun-n
-        Length: *
-    muzzle1: mgun-nw
-        Length: *
-    muzzle2: mgun-w
-        Length: *
-    muzzle3: mgun-sw
-        Length: *
-    muzzle4: mgun-s
-        Length: *
-    muzzle5: mgun-se
-        Length: *
-    muzzle6: mgun-e
-        Length: *
-    muzzle7: mgun-ne
-        Length: *
-    emp-overlay: emp_fx01
-        BlendMode: Additive
-    icon: nemesisicon
-    
 dreadfire:
     stand:
         Facings: -8 
@@ -1365,16 +996,14 @@ dreadfire:
         Facings: -8
         Length: 12
         ShadowStart: 232
-        Tick: 90
+        Tick: 110
     shoot:
         Start: 104
         Length: 15
         Facings: -8
         ShadowStart: 328
         Tick: 100
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: dreadfireicon
     
 reaper2:
@@ -1394,9 +1023,7 @@ reaper2:
         Tick: 20
     muzzle: gunfire
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     muzzle0: mgun-n
         Length: *
     muzzle1: mgun-nw
@@ -1413,27 +1040,6 @@ reaper2:
         Length: *
     muzzle7: mgun-ne
         Length: *
-    icon: reapicon
-    
-reaper:
-    stand:
-        Facings: 8 
-        ShadowStart: 117
-    run:
-        Start: 8
-        Facings: 8
-        Length: 12
-        ShadowStart: 125
-        Tick: 20
-    die1:
-        Start: 104
-        Length: 13
-        ShadowStart: 221
-    muzzle: gunfire
-        Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
     icon: reapicon
 
 golem:
@@ -1453,9 +1059,7 @@ golem:
         Length: 19
         ShadowStart: 472
         Tick: 60
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: golemicon
     
 guardian:
@@ -1475,82 +1079,35 @@ guardian:
         ShadowStart: 200
     muzzle: plasmaexpl1
         Length: *
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
     icon: titanicon
-    
-raptor:
-    stand:
-        Facings: 8 
-        ShadowStart: 168
-    run:
-        Start: 8
-        Facings: 8
-        Length: 20
-        ShadowStart: 176
-        Tick: 80
-    emp-overlay: emp_fx01
-        Length: *
-        BlendMode: Additive
-    icon: cobricon
 
 trucka:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 truckb:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 icbm:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 bus:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 pick:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 car:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 wini:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 locomotive:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 traincar:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays
 
 cargocar:
-    emp-overlay: emp_fx01
-        Length: *
-        ZOffset: 512
-        BlendMode: Additive
+    Inherits: ^VehicleOverlays

@@ -15,7 +15,7 @@ gacnst:
         Length: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -37,11 +37,10 @@ nacnst:
         ShadowStart: 5
         Tick: 400
     make: nacnstmk
-        Length: 20
-        ShadowStart: 20
+        Length: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -94,7 +93,7 @@ kacnst:
         ShadowStart: 90
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -146,7 +145,7 @@ facnst:
         Length: 10
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -167,16 +166,15 @@ sacnst:
         Start: 2
         ShadowStart: 5
         Tick: 400
-    make:
-        Length: 3
-        ShadowStart: 3
+    make: sacnstmk
+        Length: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
-    icon: facnsticon
+    icon: sacnsticon
         Offset: 0,0
         UseTilesetCode: false
 
@@ -205,7 +203,7 @@ gaspot:
         ShadowStart: 14
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -238,7 +236,7 @@ naspot:
         ShadowStart: 14
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -271,7 +269,7 @@ faspot:
         ShadowStart: 14
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -303,7 +301,7 @@ fatower:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -338,7 +336,7 @@ faflak:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -373,7 +371,7 @@ famissile:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -435,7 +433,7 @@ gapowr:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -445,6 +443,12 @@ gapowr:
 
 gapowrup:
     icon: turbicon
+
+gapowrup1:
+    icon: turb1icon
+
+gapowrup2:
+    icon: turb2icon
 
 gapile:
     Defaults:
@@ -485,7 +489,7 @@ gapile:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -520,7 +524,7 @@ fabar:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -596,7 +600,7 @@ gaweap:
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -632,7 +636,7 @@ kpr:
         ShadowStart: 19
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -684,7 +688,7 @@ cybbar:
         ShadowStart: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -728,7 +732,7 @@ cytech:
         ShadowStart: 16
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -754,7 +758,7 @@ kabtech:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -792,75 +796,55 @@ fapowr:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: fapowricon
         Offset: 0, 0
         UseTilesetCode: false
-                
+
 sapowr:
     Defaults:
         Offset: 0, -24
         UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
-        Start: 1
-        ShadowStart: 4
     dead:
-        Start: 2
-        ShadowStart: 5
         Tick: 400
-    idle-light: sapowr_a
-        Length: 8
-        Tick: 100      
-    make: 
-        Length: 3
-        ShadowStart: 3
+    make: sapowrmk
+        Length: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
-    icon: fapowricon
+    icon: sapowricon
         Offset: 0, 0
         UseTilesetCode: false
         
 napowr:
     Defaults:
         Offset: 0, -24
-        UseTilesetCode: true
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
         Start: 1
-        ShadowStart: 4
     dead:
         Start: 2
-        ShadowStart: 5
         Tick: 400
-    idle-lights: ntpowr_a
-        Length: 9
-        Tick: 200
     idle-smoke: smoke_large #napowr_b
         Start: 33
         Length: 37 #58
         Tick: 100
-        Offset: 13, -57        
+        Offset: 13, -69        
         UseTilesetCode: false
-    damaged-idle-lights: ntpowr_a
-        Start: 9
-        Length: 9
-        Tick: 200
-    make: ntpowrmk
-        Length: 19
-        ShadowStart: 19
+    make: napowrmk
+        Length: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -871,13 +855,11 @@ napowr:
 naapwr:
     Defaults:
         Offset: 12, -30
-        UseTilesetCode: true
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
         Start: 1
     dead:
-        ShadowStart: 4
         Start: 2
         Tick: 400
     idle-lights: ntapwr_a
@@ -891,26 +873,25 @@ naapwr:
         Start: 33
         Length: 37 #58
         Tick: 100
-        Offset: 4, -52        
+        Offset: -4, -62
         UseTilesetCode: false    
     idle-smoke2: smoke_small
         Start: 30
         Length: 60
         Tick: 100
-        Offset: 16, -40        
+        Offset: 10, -50        
         UseTilesetCode: false
     idle-smoke3: smoke_small
         Start: 33
         Length: 57
         Tick: 100
-        Offset: 34, -32
+        Offset: 28, -36
         UseTilesetCode: false    
-    make: ntapwrmk
-        Length: 19
-        ShadowStart: 19
+    make: naapwrmk
+        Length: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -920,67 +901,57 @@ naapwr:
 
 nahand:
     Defaults:
-        Offset: -12, -30
-        UseTilesetCode: true
+        Offset: -18, -34
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
-        Start: 1
-        ShadowStart: 4
     dead:
-        Start: 2
-        ShadowStart: 5
         Tick: 400
-    production-light: nthand_a
-        Length: 5
-        Tick: 100
-        ZOffset: 1023
-    damaged-production-light: nthand_a
-        Start: 5
-        Length: 5
-        Tick: 100
-        ZOffset: 1023
-    idle-lights: nthand_b
-        Length: 8
-        Tick: 200
-    damaged-idle-lights: nthand_b
-        Start: 8
-        Length: 8
-        Tick: 200
-    make: nthandmk
-        Length: 15
-        ShadowStart: 15
+    make: nahandmk
+        Length: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: nahandicon
         Offset: 0, 0
         UseTilesetCode: false
-
+        
+nabunker:
+    Defaults:
+        Offset: 0, -12
+        UseTilesetCode: false
+    idle:
+    damaged-idle:
+    dead:
+        Tick: 400
+    make: nabunkermk
+        Length: 25
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: nabunkericon
+        Offset: 0, 0
+        UseTilesetCode: false
+        
 naweap:
     Defaults:
         Offset: -12, -42
-        UseTilesetCode: true
-    idle: ntweap_1
-        ShadowStart: 2
+        UseTilesetCode: false
+    idle: naweap_1
         ZOffset: -1024
     damaged-idle: ntweap_1
-        Start: 1
-        ShadowStart: 3
         ZOffset: -1024
-    idle-roof: ntweap_2
-        ShadowStart: 2
+    idle-roof: naweap_2
         ZOffset: 512
-    damaged-idle-roof: ntweap_2
-        Start: 1
-        ShadowStart: 3
+    damaged-idle-roof: naweap_2
         ZOffset: 512
-    dead: ntweap
-        Start: 2
-        ShadowStart: 5
+    dead: naweap_2
         Tick: 400
     production-lights: ntweap_a
         Length: 16
@@ -991,29 +962,23 @@ naweap:
         Length: 16
         Tick: 100
         ZOffset: 2048
-    build-door: ntweap_b
-        Length: 10
-        ShadowStart: 10
+    build-door: naweap_b
+        Length: 11
         ZOffset: 512
-    damaged-build-door: ntweap_b
-        Start: 10
-        Length: 10
-        ShadowStart: 20
+    damaged-build-door: naweap_b
+        Length: 11
         ZOffset: 512
-    make: ntweapmk
-        Length: 22
-        ShadowStart: 22
-    bib: ntweapbb
+    make: naweapmk
+        Length: 26
+    bib: naweapbb
         ZOffset: -1024
-    damaged-bib: ntweapbb
-        Start: 1
+    damaged-bib: naweapbb
         ZOffset: -1024
-    dead-bib: ntweapbb
-        Start: 2
+    dead-bib: naweapbb
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1086,7 +1051,7 @@ kaweap:
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1187,11 +1152,57 @@ faweap:
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: faweapicon
+        Offset: 0, 0
+        UseTilesetCode: false
+
+saportal:
+    Defaults:
+        Offset: -4, -38
+        UseTilesetCode: false
+    idle:
+        ZOffset: -1024
+    damaged-idle:
+        ZOffset: -1024
+    dead:
+        Tick: 400
+    production-portal: saportal_b
+        Length: 19
+        Tick: 80
+        ZOffset: 1024
+    damaged-portal: saportal_b
+        Length: 19
+        Tick: 80
+        ZOffset: 1024
+    idle-warp: saportal_a
+        Length: 19
+        Tick: 80
+        ZOffset: 512
+    damaged-idle-warp: saportal_a
+        Length: 19
+        Tick: 80
+        ZOffset: 512
+    build-door: saportal_c
+        Length: 15
+        Tick: 80
+        ZOffset: 500
+    damaged-build-door: saportal_c
+        Length: 15
+        Tick: 80
+        ZOffset: 500
+    make: saportalmk
+        Length: 25
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: saportalicon
         Offset: 0, 0
         UseTilesetCode: false
 
@@ -1227,7 +1238,6 @@ faradr:
         Tick: 120
     damaged-idle-dish3: ctaray_c
         Offset: 0, 12
-        Start: 16
         Length: 16
         Tick: 120
     idle-light: ctaray_d
@@ -1236,7 +1246,6 @@ faradr:
         Tick: 120
     damaged-idle-light: ctaray_d
         Offset: 0, 12
-        Start: 12
         Length: 12
         Tick: 120
     make: faradr
@@ -1244,7 +1253,7 @@ faradr:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1255,29 +1264,22 @@ faradr:
 naradr:
     Defaults:
         Offset: 0, -24
-        UseTilesetCode: true
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
-        Start: 1
-        ShadowStart: 4
     dead:
-        Start: 2
-        ShadowStart: 5
         Tick: 400
-    idle-dish: ntradr_a
-        Length: 24
+    idle-dish: naradr_a
+        Length: 64
+        Tick: 90
+    damaged-idle-dish: naradr_a
+        Length: 64
         Tick: 120
-    damaged-idle-dish: ntradr_a
-        Start: 24
-        Length: 24
-        Tick: 120
-    make: ntradrmk
-        Length: 20
-        ShadowStart: 20
+    make: naradrmk
+        Length: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1317,14 +1319,34 @@ karadr:
         ShadowStart: 25
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: karadricon
         Offset: 0, 0
         UseTilesetCode: false        
-        
+
+sanode:
+    Defaults:
+        Offset: 0, -24
+        UseTilesetCode: false
+    idle:
+    damaged-idle:
+    dead:
+        Tick: 400
+    make: sanodemk
+        Length: 25
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: sanodeicon
+        Offset: 0, 0
+        UseTilesetCode: false
+
 natech:
     Defaults:
         Offset: 0, -24
@@ -1349,7 +1371,7 @@ natech:
         ShadowStart: 18
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1382,7 +1404,7 @@ natmpl:
         ShadowStart: 17
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1429,7 +1451,7 @@ nawast:
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1464,7 +1486,7 @@ garadr:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1497,7 +1519,7 @@ gatech:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1616,7 +1638,7 @@ gagate_a:
         Length: 9
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1644,7 +1666,7 @@ gagate_b:
         Length: 9
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1673,7 +1695,7 @@ nagate_a:
         Length: 6
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1702,7 +1724,7 @@ nagate_b:
         Length: 6
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1731,7 +1753,7 @@ kagate_a:
         Length: 6
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1760,7 +1782,7 @@ kagate_b:
         Length: 6
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1788,7 +1810,7 @@ fagate_a:
         Length: 9
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1816,7 +1838,7 @@ fagate_b:
         Length: 9
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1839,7 +1861,7 @@ gatick:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1861,7 +1883,7 @@ gaicbm:
         ShadowStart: 30
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1880,7 +1902,7 @@ gadpsa:
         ShadowStart: 36
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1903,7 +1925,7 @@ gaarty:
         ShadowStart: 16
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1911,26 +1933,25 @@ gaarty:
 naobel:
     Defaults:
         Offset: 0, -24
-        UseTilesetCode: true
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
+#        ShadowStart: 3
     damaged-idle:
         Start: 1
-        ShadowStart: 4
+#        ShadowStart: 4
     dead:
         Start: 2
-        ShadowStart: 5
+#        ShadowStart: 5
         Tick: 400
-    active: ntobel_b
-        Length: 12
-        Tick: 200
+    active: naobel_a
+        Length: 6
+        Tick: 500
         ZOffset: 2
-    idle-lights: ntobel_a
-        Length: 12
-        Tick: 80
-    make: ntobelmk
-        Length: 19
-        ShadowStart: 19
+    idle-lights: naobel_b
+        Length: 7
+        Tick: 300
+    make: naobelmk
+        Length: 25
     muzzle: laserburst
         Length: *
         Offset: 0, 0
@@ -1938,7 +1959,7 @@ naobel:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -1984,7 +2005,7 @@ kobel:
         ShadowStart: 18
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2030,7 +2051,7 @@ kdark:
         ShadowStart: 18
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2042,23 +2063,22 @@ naflamer:
     Defaults:
         Offset: 0, -12
         UseTilesetCode: false
-    idle:
+    idle: nasam
         ShadowStart: 3
     damaged-idle:
         Start: 1
         ShadowStart: 4
-    dead:
+    dead: nasam
         Start: 2
         ShadowStart: 5
         Tick: 400
+    make: nasammk
+        Length: 16
     turret: naflamer_a
         Facings: 32
-    make: naflamer
-        Length: 3
-        ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2069,23 +2089,27 @@ naflamer:
 nalasr:
     Defaults:
         Offset: 0, -12
-        ZOffset: -128
-        UseTilesetCode: true
-    idle:
+        UseTilesetCode: false
+    idle: nasam
         ShadowStart: 3
-    damaged-idle:
+    damaged-idle: nasam
         Start: 1
         ShadowStart: 4
-    dead:
+    dead: nasam
         Start: 2
         ShadowStart: 5
         Tick: 400
-    make: ntlasrmk
-        Length: 21
-        ShadowStart: 21
-    emp-overlay: emp_fx01
+    turret: nalasr_a
+        Facings: 32
+    make: nasammk
+        Length: 16
+    muzzle: gunfire
         Length: *
         Offset: 0, 0
+        UseTilesetCode: false
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2096,7 +2120,7 @@ nalasr:
 nasam:
     Defaults:
         Offset: 0, -12
-        UseTilesetCode: true
+        UseTilesetCode: false
     idle:
         ShadowStart: 3
     damaged-idle:
@@ -2108,25 +2132,59 @@ nasam:
         Tick: 400
     turret: nasam_a
         Facings: 32
-        Offset: 0, 0
+        ShadowStart: 32
+        Offset: -1, -14
         UseTilesetCode: false
-    make: ntsammk
-        Length: 8
-        ShadowStart: 8
+    make: nasammk
+        Length: 16
     muzzle: gunfire
         Length: *
         Offset: 0, 0
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: samicon
         Offset: 0, 0
         UseTilesetCode: false
-     
+
+nagat:
+    Defaults:
+        Offset: 0, -12
+        UseTilesetCode: false
+    idle: nasam
+        ShadowStart: 3
+    damaged-idle: nasam
+        Start: 1
+        ShadowStart: 4
+    dead: nasam
+        Start: 2
+        ShadowStart: 5
+        Tick: 400
+    turret: nagat_a
+        Facings: 32
+        ShadowStart: 32
+        Offset: -1, -12
+        UseTilesetCode: false
+    make: nasammk
+        Length: 16
+    muzzle: gunfire
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: nagaticon
+        Offset: 0, 0
+        UseTilesetCode: false
+
 kalasr:
     Defaults:
         Offset: 0, -24
@@ -2163,7 +2221,7 @@ kalasr:
         ShadowStart: 19
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2191,7 +2249,7 @@ napuls:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2201,30 +2259,23 @@ napuls:
 
 nastlh:
     Defaults:
-        Offset: -12, -30
-        UseTilesetCode: true
+        Offset: -26, -34
+        UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
-        Start: 1
-        ShadowStart: 4
     dead:
-        Start: 2
-        ShadowStart: 5
         Tick: 400
-    pulse: ntstlh_a
-        Length: 4
-        Tick: 480
-    damaged-pulse: ntstlh_a
-        Start: 4
-        Length: 4
-        Tick: 480
-    make: ntstlhmk
-        Length: 18
-        ShadowStart: 20
+    pulse: nastlh_a
+        Length: 20
+        Tick: 80
+    damaged-pulse: nastlh_a
+        Length: 20
+        Tick: 80
+    make: nastlhmk
+        Length: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2260,7 +2311,7 @@ kabcan:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2296,14 +2347,68 @@ kablasr:
         UseTilesetCode: false  
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: kablasricon
         Offset: 0, 0
         UseTilesetCode: false    
-        
+
+sacannon:
+    Defaults:
+        Offset: 0, -12
+        UseTilesetCode: false
+    idle:
+    damaged-idle:
+    dead:
+        Tick: 400
+    turret: sacannontur
+        Facings: 32
+    damaged-turret: sacannontur
+        Facings: 32
+    make: sacannonmk
+        Length: 25
+    muzzle: plassabogsml
+        Length: *
+        Offset: 0, 0
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: sacannonicon
+        Offset: 0, 0
+        UseTilesetCode: false
+
+sasam:
+    Defaults: sacannon
+        Offset: 0, -12
+        UseTilesetCode: false
+    idle:
+    damaged-idle:
+    dead:
+        Tick: 400
+    turret: sasamtur
+        Facings: 32
+    damaged-turret: sasamtur
+        Facings: 32
+    make: sacannonmk
+        Length: 25
+    muzzle: tibpart
+        Length: *
+        Offset: 0, 0
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: sasamicon
+        Offset: 0, 0
+        UseTilesetCode: false
+
 gactwr:
     Defaults:
         Offset: 0, -12
@@ -2359,7 +2464,7 @@ gactwr:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2385,7 +2490,7 @@ gafort:
         ShadowStart: 26
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2417,7 +2522,7 @@ gaboom:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2486,7 +2591,7 @@ gamg:
         ZOffset: -10
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2555,7 +2660,7 @@ gamg2:
         ZOffset: -10
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2624,7 +2729,7 @@ gasentur:
         ZOffset: -10
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2664,7 +2769,7 @@ gamis:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2695,7 +2800,7 @@ gamortar:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2726,7 +2831,7 @@ gacan:
         Offset: 0, 0
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2761,7 +2866,7 @@ garpg:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2824,7 +2929,7 @@ gasam:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2886,7 +2991,7 @@ gahpad:
         ZOffset: -1c511
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2936,7 +3041,7 @@ nahpad:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -2986,7 +3091,7 @@ kahpad:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3016,7 +3121,7 @@ fahpad:
         ZOffset: -1c511
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3057,7 +3162,7 @@ gproc: # TODO: unused narefn_a
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3068,22 +3173,22 @@ gproc: # TODO: unused narefn_a
 nproc: # TODO: unused narefn_a
     Defaults:
         Offset: -12, -42
-        UseTilesetCode: true
-    idle: ntrefn
-        ShadowStart: 3
-    damaged-idle: ntrefn
-        Start: 1
-        ShadowStart: 4
-    dead: ntrefn
-        Start: 2
-        ShadowStart: 5
+        UseTilesetCode: false
+    idle: naref
+    damaged-idle: naref
+    dead: naref
         Tick: 400
-    make: ntrefnmk
-        Length: 20
-        ShadowStart: 20
+    make: narefmk
+        Length: 25
     flame: ntrefn_b
         Length: *
         Tick: 100
+        ZOffset: 128
+        Offset: -5, -60
+    flame2: ntrefn_b
+        Length: *
+        Tick: 100
+        Offset: -35, -45
         ZOffset: 128
     idle-redlights: ntrefn_c
         Length: 16
@@ -3091,14 +3196,13 @@ nproc: # TODO: unused narefn_a
     damaged-idle-redlights: ntrefn_c
         Length: 16
         Tick: 120
-    bib: ntrefnbb
+    bib: naref_bib
         ZOffset: -1024
-    damaged-bib: ntrefnbb
-        Start: 1
+    damaged-bib: naref_bib
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3139,7 +3243,7 @@ kproc: # TODO: unused narefn_a
         ZOffset: -1024
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3213,14 +3317,39 @@ fproc:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
     icon: fprocicon
         Offset: 0, 0
         UseTilesetCode: false
-                        
+
+sproc: # TODO: unused narefn_a
+    Defaults:
+        Offset: -12, -42
+        UseTilesetCode: false
+    idle: sarefn
+    damaged-idle: sarefn
+    dead: sarefn
+        Tick: 400
+    make: sarefnmk
+        Length: 25
+    flame: ntrefn_b
+        Length: *
+        Tick: 100
+        ZOffset: 128
+        Offset: -5, -60
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive
+    icon: sarefnicon
+        Offset: 0, 0
+        UseTilesetCode: false 
+
 saseed:
     Defaults:
         Offset: 0, -12
@@ -3242,11 +3371,11 @@ saseed:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
-    icon: fprocicon
+    icon: saseedicon
         Offset: 0, 0
         UseTilesetCode: false
        
@@ -3286,7 +3415,7 @@ gasilo:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3338,7 +3467,7 @@ nasilo:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3382,7 +3511,7 @@ kasilo:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3426,7 +3555,7 @@ fasilo:
         ShadowStart: 20
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3488,7 +3617,7 @@ gadept:
         ShadowStart: 10
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3525,7 +3654,7 @@ namisl:
         Tick: 80
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3590,7 +3719,7 @@ gaplug:
         ShadowStart: 17
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3637,7 +3766,7 @@ gadrop:
         ShadowStart: 17
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3669,7 +3798,7 @@ gaarmory:
         ShadowStart: 31
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3706,7 +3835,7 @@ ftwr_arty:
         ShadowStart: 25        
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3716,19 +3845,14 @@ ftwr_arty:
         
 napyra:
     Defaults:
-        Offset: 0, -36
+        Offset: 0, -48
         UseTilesetCode: false
     idle:
-        ShadowStart: 3
     damaged-idle:
-        Start: 1
-        ShadowStart: 4
     dead:
-        Start: 2
-        ShadowStart: 5
         Tick: 400
     make: napyramk
-        Length: 18
+        Length: 26
     idle-lights: ntpyra_a
         Length: 16
         ShadowStart: 32
@@ -3742,7 +3866,7 @@ napyra:
         UseTilesetCode: false
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3768,7 +3892,7 @@ fhovel:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3794,7 +3918,7 @@ fatrade:
         ShadowStart: 3
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive
@@ -3802,9 +3926,9 @@ fatrade:
         Offset: 0,0
         UseTilesetCode: false
 
-tibtech:
+cgoild:
     Defaults:
-        Offset: 0, -36
+        Offset: 0, -24
         UseTilesetCode: false
     idle:
         ShadowStart: 3
@@ -3818,9 +3942,18 @@ tibtech:
     make: tibtech
         Length: 1
         ShadowStart: 3
+    idle-drill: cgoild_a
+        Length: 32
+    damaged-idle-drill: cgoild_a
+        Start: 32
+        Length: 32
+    idle-flag: cgoild_f
+        Length: *
+    damaged-idle-flag: cgoild_f
+        Length: *
     emp-overlay: emp_fx01
         Length: *
-        Offset: 0, 0
+        Offset: 0, 0, 25
         UseTilesetCode: false
         ZOffset: 512
         BlendMode: Additive

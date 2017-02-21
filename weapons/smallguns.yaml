@@ -12,7 +12,7 @@ MammothMG:
         Spread: 256
         Damage: 25
     Warhead@2Eff: CreateEffect
-        Explosions: piffs
+        Explosions: gatpiff
         InvalidImpactTypes: Water
     Warhead@3EffWater: CreateEffect
         Explosions: water_piffs
@@ -58,6 +58,12 @@ VulcanTower:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
+        Versus:
+            Infantry: 200
+            Cyborg: 160
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 VulcanTower1:
     Inherits: ^APBullet
@@ -72,6 +78,12 @@ VulcanTower1:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
+        Versus:
+            Infantry: 200
+            Cyborg: 160
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 VulcanTower2:
     Inherits: VulcanTower
@@ -81,27 +93,39 @@ VulcanTower3:
     Inherits: VulcanTower
     ReloadDelay: 33
 
+FireflyCannon:
+    Inherits: ^Bullet    
+    ReloadDelay: 100
+    Range: 5c0
+    Report: tsgun4.aud
+    Burst: 6
+    BurstDelay: 3
+    Projectile: Bullet
+        Speed: 0c682
+        Inaccuracy: 0c256
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
+
 AssaultCannon:
     Inherits: ^Bullet    
     ReloadDelay: 150
     Range: 5c0
     Report: Gat01.aud, Gat02.aud, Gat03.aud #tsgun4.aud
-    Burst: 16
-    BurstDelay: 4
+    Burst: 20
+    BurstDelay: 3
     Projectile: Bullet
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 20
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 VultureGat:
     Inherits: ^Bullet  
@@ -116,14 +140,9 @@ VultureGat:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 30
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 RaiderCannon:
     Inherits: ^Bullet
@@ -138,19 +157,18 @@ RaiderCannon:
         Spread: 0c64
         Damage: 30
         Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 30
-            Heavy: 20
+            Infantry: 150
+            Cyborg: 120
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 AssaultMG:
     Inherits: ^Bullet
     ReloadDelay: 60
     Range: 4c0
-    Burst: 10
+    Burst: 20
+    BurstDelay: 2
     Report: chaingn1.aud
     Projectile: Bullet
         Speed: 0c682
@@ -159,18 +177,36 @@ AssaultMG:
         Spread: 0c64
         Damage: 40
         Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+            Infantry: 150
+            Cyborg: 120
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
+GattlingCannon:
+    Inherits: ^APBullet
+    ReloadDelay: 125
+    Range: 6c0
+    Burst: 200
+    ValidTargets: Ground, Air
+    BurstDelay: 2
+    Report: gattling01.aud, gattling02.aud, gattling03.aud
+    Projectile: Bullet
+        Speed: 0c682
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 20
+            Aircraft: 1
+        ValidTargets: Ground, Air
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
+
 TaurusMG:
     Inherits: ^Bullet
     ReloadDelay: 200
-    Range: 6c0
+    Range: 6c768
     Burst: 50
     BurstDelay: 4
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
@@ -179,7 +215,10 @@ TaurusMG:
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 25
+        Damage: 7
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 WarthogMG:
     Inherits: ^Bullet
@@ -190,18 +229,13 @@ WarthogMG:
     Report: m3.aud
     Projectile: Bullet
         Speed: 0c682
-        Inaccuracy: 1c0
+        Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 25
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 20
-            Heavy: 5
+        Damage: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
   
 TankMG:
     Inherits: ^Bullet
@@ -215,15 +249,10 @@ TankMG:
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 25
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+        Damage: 7
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
   
 LightTankMG:
     Inherits: ^Bullet
@@ -238,14 +267,9 @@ LightTankMG:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
   
 APCMG:
     Inherits: ^Bullet
@@ -260,21 +284,16 @@ APCMG:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 25
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 VenomCannon:
     Inherits: ^APBullet
     ReloadDelay: 150
-    Range: 8c0
-    MinRange: 2c0
-    ValidTargets: Ground, Air
+    Range: 6c0
+	MinRange: 1c0
+    ValidTargets: Ground
     Report: cygun1.aud
     Burst: 20
     BurstDelay: 3
@@ -283,20 +302,18 @@ VenomCannon:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 15
-        Versus:
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
-        ValidTargets: Ground, Air
+        Damage: 20
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 HydraCannon:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
     ReloadDelay: 200
-    Range: 8c0
-    MinRange: 2c0
-    ValidTargets: Ground, Air
+    Range: 6c0
+	MinRange: 1c0
+    ValidTargets: Ground
     Report: tsgun4.aud
     Burst: 50
     BurstDelay: 2
@@ -306,20 +323,17 @@ HydraCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 15
-        Versus:
-            Building: 50
-            Light: 100
-            Medium: 50
-            Heavy: 20
-        ValidTargets: Ground, Air
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
        
 HavocCannon:
     Inherits: ^APBullet
     ReloadDelay: 150
-    Range: 8c0
-    MinRange: 2c0
+    Range: 7c0
     ValidTargets: Ground
-    Report: Overgun01.aud, Overgun02.aud, Overgun03.aud, Overgun04.aud, Overgun05.aud
+    Report: quadcannon1.aud
     Burst: 10
     BurstDelay: 6
     Projectile: Bullet
@@ -328,11 +342,6 @@ HavocCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 50
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 20
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_brnl
@@ -348,7 +357,7 @@ RavenCannon:
     ReloadDelay: 150
     Range: 14c0
     MinRange: 3c0
-    Report: machinegun4.aud
+    Report: mg6.aud
     Burst: 20
     BurstDelay: 4
     Projectile: Bullet
@@ -360,48 +369,42 @@ RavenCannon:
         Spread: 256
         Damage: 10
         Versus:
-            Infantry: 120
-            Vehicle: 20
-            Aircraft: 100
-            Building: 10
-            Light: 150
+            Building: 100
+            Light: 100
             Medium: 80
-            Heavy: 20
+            Heavy: 70
 
 RavenCannonAA:
     Inherits: ^APBullet
     ReloadDelay: 150
     Range: 14c0
-    MinRange: 1c0
-    ValidTargets: Air, HighAir
-    Report: machinegun4.aud
+    MinRange: 2c0
+    ValidTargets: Air, MidAir, HighAir
+    Report: mg6.aud
     Burst: 20
     BurstDelay: 4
     Projectile: Bullet
         Speed: 2c512
-        Inaccuracy: 0c64
+        Inaccuracy: 0c512
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
-        Spread: 0c512
+        Spread: 0c256
         Damage: 40
         Versus:
-            Infantry: 0
-            Vehicle: 0
-            Aircraft: 100
-            Building: 0
+            Building: 100
             Light: 100
             Medium: 80
-            Heavy: 40
-#        ValidStances: Neutral, Enemy
-        ValidTargets: Air, HighAir
+            Heavy: 70
+        ValidTargets: Air, MidAir, HighAir
+        ValidStances: Neutral, Enemy
  
 OrcaCannon:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
     ReloadDelay: 150
-    Range: 7c0
-    MinRange: 2c0
-    ValidTargets: Ground, Air
+    Range: 6c0
+	MinRange: 1c0 
+    ValidTargets: Ground
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 10
     BurstDelay: 4
@@ -411,18 +414,13 @@ OrcaCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 30
-        Versus:
-            Infantry: 100
-            Vehicle: 60
-            Aircraft: 100
-            Building: 25
-            Light: 100
-            Medium: 50
-            Heavy: 20
-        ValidTargets: Ground, Air
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 OrcaCannonRaid:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
     ReloadDelay: 150
     Range: 12c0
     MinRange: 2c0
@@ -431,84 +429,83 @@ OrcaCannonRaid:
     BurstDelay: 2
     Projectile: Bullet
         Speed: 1c512
-        Angle: 62
+        LaunchAngle: 62
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 30
         Versus:
-            Infantry: 150
-            Vehicle: 50
-            Aircraft: 120
-            Building: 80
-            Light: 120
-            Medium: 100
-            Heavy: 50
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 HawkCannon:
     Inherits: ^APBullet
     ReloadDelay: 60
     Range: 16c0
-    MinRange: 1c0
-    ValidTargets: Air, HighAir
+    MinRange: 2c0
+    ValidTargets: Ground, Air, MidAir, HighAir
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 5
     BurstDelay: 4
     Projectile: Bullet
         Image: bullet
         Speed: 2c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c512
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 40
         Versus:
-            Infantry: 0
-            Vehicle: 0
-            Aircraft: 100
-            Building: 0
+            Building: 100
             Light: 100
             Medium: 80
-            Heavy: 40
-#        ValidStances: Neutral, Enemy
-        ValidTargets: Air, HighAir
+            Heavy: 70
+        ValidTargets: Ground, Air, MidAir, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
         
 HornetCannon:
     Inherits: ^APBullet
     ReloadDelay: 150
     Range: 16c0
-    MinRange: 1c0
-    ValidTargets: Air, HighAir
+    MinRange: 2c0
+    ValidTargets: Air, MidAir, HighAir
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 20
     BurstDelay: 4
     Projectile: Bullet
         Image: bullet
         Speed: 2c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c512
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 50
         Versus:
-            Infantry: 0
-            Vehicle: 0
-            Aircraft: 100
             Building: 0
             Light: 100
             Medium: 80
-            Heavy: 40
-#        ValidStances: Neutral, Enemy
-        ValidTargets: Air, HighAir
+            Heavy: 70
+        ValidStances: Neutral, Enemy
+        ValidTargets: Air, MidAir, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
 
 BuzzardCannon:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
     ReloadDelay: 100
-    Range: 9c0
-    MinRange: 1c0
-    ValidTargets: Ground, Air
+	MinRange: 1c0
+    Range: 7c0
+    ValidTargets: Ground
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
     Burst: 50
     BurstDelay: 3
@@ -518,15 +515,18 @@ BuzzardCannon:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 10
-        ValidTargets: Ground, Air
+        Damage: 30
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
        
 StrikerCannon:
     Inherits: ^APBullet
     ReloadDelay: 150
     Range: 18c0
-    MinRange: 1c0
-    ValidTargets: Air, HighAir
+    MinRange: 2c0
+    ValidTargets: Air, MidAir, HighAir
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
     Burst: 30
     BurstDelay: 2
@@ -543,23 +543,14 @@ StrikerCannon:
             Vehicle: 20
             Aircraft: 100
             Building: 10
-            Light: 150
+            Light: 100
             Medium: 80
-            Heavy: 20
-#        ValidStances: Neutral, Enemy
-        ValidTargets: Air, HighAir
-  
-Pistola:
-    Inherits: ^Bullet
-    ReloadDelay: 20
-    Range: 3c0
-    Report: gun18.aud
-    Projectile: Bullet
-        Image: bullet
-        Speed: 1c682
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 2
+            Heavy: 70
+        ValidStances: Neutral, Enemy
+        ValidTargets: Air, MidAir, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water, Air
 
 Sniper:
     Inherits: ^Bullet
@@ -585,15 +576,13 @@ WatchMG:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 30
-        Versus:
-            Building: 25
-            Light: 100
-            Medium: 25
-            Heavy: 5
+    Warhead@2Eff: CreateEffect
+        Explosions: gatpiff
+        InvalidImpactTypes: Water
             
 ReaperCannon:
     Inherits: ^APBullet
-    ReloadDelay: 125
+    ReloadDelay: 85
     Range: 8c0
     Burst: 8
     BurstDelay: 4
@@ -603,15 +592,16 @@ ReaperCannon:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 40
+        Damage: 20
         Versus:
-            Infantry: 10
+            Infantry: 30
+            Cyborg: 80
             Vehicle: 100
             Aircraft: 0
             Building: 50
-            Light: 50
+            Light: 100
             Medium: 80
-            Heavy: 40
+            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: tiny_brnl
         ExplosionPalette: apolra2

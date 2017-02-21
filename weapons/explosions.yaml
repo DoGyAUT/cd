@@ -5,12 +5,13 @@ UnitExplode:
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
@@ -29,12 +30,13 @@ UnitExplodeEpic:
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -57,12 +59,13 @@ UnitExplodeSmall:
         Damage: 40
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: medium_brnl, small_twlt, tiny_twlt
@@ -77,16 +80,17 @@ UnitExplodeSmall:
 UnitExplodeHeli:
     Warhead@1Dam: SpreadDamage
         Spread: 426
-        Damage: 50
+        Damage: 100
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
@@ -101,16 +105,17 @@ UnitExplodeHeli:
 UnitExplodePlane:
     Warhead@1Dam: SpreadDamage
         Spread: 426
-        Damage: 50
+        Damage: 200
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
@@ -125,16 +130,17 @@ UnitExplodePlane:
 UnitExplodeCrapJet:
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 250
+        Damage: 300
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: crapexplo
@@ -152,12 +158,13 @@ UnitExplodeCyborg:
         Damage: 100
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
         ValidStances: Neutral, Enemy
     Warhead@2Eff: CreateEffect
@@ -175,6 +182,26 @@ TiberiumExplosion:
     Warhead@1Res: CreateResource
         AddsResourceType: Tiberium
         Size: 1,1
+
+TiberiumExplosionRef:
+    Warhead@1Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 2,1
+
+TiberiumExplosionForgRef:
+    Warhead@1Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 3,1
+
+TiberiumExplosionDrill:
+    Warhead@1Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 2,2
+
+TiberiumExplosionSilo:
+    Warhead@1Res: CreateResource
+        AddsResourceType: Tiberium
+        Size: 1,1
         
 LargeTiberiumExplosion:
     Warhead@1Dam: SpreadDamage
@@ -182,12 +209,13 @@ LargeTiberiumExplosion:
         Damage: 200
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
     Warhead@2Res: CreateResource
         AddsResourceType: Tiberium
@@ -206,12 +234,13 @@ LargeVeinExplosion:
         Damage: 200
         Versus:
             Infantry: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 80
-            Medium: 60
-            Heavy: 20
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
     Warhead@2Res: CreateResource
         AddsResourceType: Veins
@@ -227,8 +256,10 @@ SmallDebris:
     Report:
     Projectile: Bullet
         Speed: 50, 125
-        Angle: 45, 135
+        LaunchAngle: 45, 135
         Image: dbrissm
+        TrailImage: small_smoke_trail
+        TrailPalette: apolra50alpha
         Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         Shadow: true
 
@@ -238,8 +269,10 @@ LargeDebris:
     Report:
     Projectile: Bullet
         Speed: 50, 125
-        Angle: 45, 135
+        LaunchAngle: 45, 135
         Image: dbrislg
+        TrailImage: durasmoke
+        TrailPalette: apolra50alpha
         Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         Shadow: true
 
@@ -249,7 +282,7 @@ Sparky:
     Report:
     Projectile: Bullet
         Speed: 32, 64, 96, 32, 64, 96, 32, 64, 96, 32, 64, 96
-        Angle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
+        LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
         Image: spark
         Sequences: 1
         Shadow: false
@@ -260,7 +293,7 @@ Bloody:
     Report:
     Projectile: Bullet
         Speed: 64, 96, 128
-        Angle: 45, 90, 135
+        LaunchAngle: 45, 90, 135
         Image: blood
         Palette: player
         Sequences: 3
@@ -272,8 +305,25 @@ Flyman:
     Report: dedman1.aud, dedman2.aud, dedman3.aud, dedman4.aud, dedman5.aud, dedman6.aud
     Projectile: Bullet
         Speed: 32, 125
-        Angle: 90, 135
+        LaunchAngle: 90, 135
         Image: flyman
         Palette: player
         Sequences: 5
+        TrailImage: blood
+        TrailPalette: player
         Shadow: true
+
+BuildingExplosions:
+    Warhead@1Eff: CreateEffect
+        Explosions: building, coreexplo1, coreexplo2, large_bang, verylarge_twlt, medium_tumu, large_tumu, medium_grey_explosion, small_grey_explosion
+        ExplosionPalette: apolra2
+    Warhead@2Smu: LeaveSmudge
+        SmudgeType: MediumCrater
+        
+Demolish:
+    Warhead@1Dam: SpreadDamage
+        DamageTypes: DefaultDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: large_twlt
+        ExplosionPalette: effectalpha75
+        ImpactSounds: expnew09.aud

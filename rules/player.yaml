@@ -1,48 +1,48 @@
 Player:
     AlwaysVisible:
     TechTree:
-    ClassicProductionQueue@Building:
-        Type: Building
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-        SpeedUp: True
-        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
-    ClassicProductionQueue@Defense:
-        Type: Defense
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-        SpeedUp: True
-        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
-#	ClassicProductionQueue@Vehicle:
-#		Type: Vehicle
-#		BuildSpeed: 40
-#		LowPowerSlowdown: 3
-#		SpeedUp: True
+#    ClassicProductionQueue@Building:
+#        Type: Building
+#        BuildDurationModifier: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+#        SpeedUp: True
+#        BuildTimeSpeedReduction: 100, 95, 90, 85, 80, 75
+#    ClassicProductionQueue@Defense:
+#        Type: Defense
+#        BuildDurationModifier: 40
+#        LowPowerSlowdown: 3
+#        QueuedAudio: Building
+#        ReadyAudio: ConstructionComplete
+#        SpeedUp: True
+#        BuildTimeSpeedReduction: 100, 95, 90, 85, 80, 75
+#    ClassicProductionQueue@Vehicle:
+#        Type: Vehicle
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        SpeedUp: True
 #        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
-#	ClassicProductionQueue@Infantry:
-#		Type: Infantry
-#		BuildSpeed: 40
-#		LowPowerSlowdown: 3
-#		SpeedUp: True
+#    ClassicProductionQueue@Infantry:
+#        Type: Infantry
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        SpeedUp: True
 #        BuildTimeSpeedReduction: 100, 90, 80, 70, 60, 55, 50, 45, 40, 35, 30
-#	ClassicProductionQueue@Air:
-#		Type: Air
-#		BuildSpeed: 40
-#		LowPowerSlowdown: 3
-#		SpeedUp: True
+#    ClassicProductionQueue@Air:
+#        Type: Air
+#        BuildSpeed: 40
+#        LowPowerSlowdown: 3
+#        SpeedUp: True
 #        BuildTimeSpeedReduction: 100, 90, 80, 70, 60, 55, 50, 45, 40, 35, 30
 #    ClassicProductionQueue@Tech:
 #        Type: Tech
+#        Group: Tech
 #        BuildSpeed: 40
 #        LowPowerSlowdown: 3
 #        QueuedAudio: BuildTech
 #        ReadyAudio: TechComplete
-#        SpeedUp: True
-#        BuildTimeSpeedReduction: 100, 80, 60, 50, 40, 30
+#        SpeedUp: False
     PlaceBuilding:
         Palette: ra
     SupportPowerManager:
@@ -57,36 +57,42 @@ Player:
         DefaultCash: 5000
     ActorGroupProxy:
     DeveloperMode:
-        Enabled: true
+        Enabled: True
     GpsWatcher:
     Shroud:
         ExploredMapEnabled: True
     FrozenActorLayer:
     BaseAttackNotifier:
+        NotifyInterval: 15
         AllyNotification: OurAllyIsUnderAttack
     HarvesterAttackNotifier:
     PlayerStatistics:
-	PlaceSimpleBeacon:
+    PlaceSimpleBeacon:
     ResourceStorageWarning:
+    PlayerExperience:
     EnemyWatcher:
-    GlobalUpgradeManager:
+    GrantConditionOnPrerequisiteManager:
+    VeteranProductionIconOverlay:
+        Image: newrank
+        Sequence: production
+        Palette: ra
     ProvidesTechPrerequisite@T1:
         Name: Low Tech
         Prerequisites: t1
-		Id: t1
+        Id: t1
     ProvidesTechPrerequisite@T2:
         Name: Medium Tech
         Prerequisites: t2
-		Id: t2
+        Id: t2
     ProvidesTechPrerequisite@T3:
         Name: High Tech
         Prerequisites: t3
-		Id: t3
+        Id: t3
     ProvidesTechPrerequisite@T4:
         Name: Epic Tech
         Prerequisites: t4
-		Id: t4
+        Id: t4
     ProvidesTechPrerequisite@T5:
         Name: Superweapon Tech
         Prerequisites: t5
-		Id: t5
+        Id: t5

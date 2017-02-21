@@ -1,14 +1,14 @@
 BUZZARD:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1500
+        Cost: 1200
     Tooltip:
         Name: Buzzard
-        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
     Buildable:
-        Queue: Air
+        Queue: Air.Forg
         BuildPaletteOrder: 400
         Prerequisites: ~fahpad, ~!t1
+        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
@@ -16,15 +16,15 @@ BUZZARD:
         Volume: 2
     Aircraft:
         TurnSpeed: 6
-        Speed: 150
+        Speed: 100
         IdealSeparation: 2048
     Health:
-        HP: 400
+        HP: 350
     Armor:
         Type: Light
     RevealsShroud:
         Range: 15c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@missiles:
         Weapon: BuzzardMissiles
         MuzzleSequence: muzzle
@@ -53,31 +53,32 @@ BUZZARD:
     AutoTarget:
     WithIdleOverlay@ROTORAIR:
         Offset: 0,0,800
-		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+        Sequence: rotor
+        RequiresCondition: airborne
     WithIdleOverlay@ROTORGROUND:
         Offset: 0,0,800
-		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+        Sequence: slow-rotor
+        RequiresCondition: airborne
     RenderSprites:
     WithMuzzleOverlay:
+    DetectCloaked:
+        Range: 7c0
+    RenderDetectionCircle:
     SpawnActorOnDeath:
         Actor: BUZZARD.Husk
-        Probability: 80
+        Probability: 100
     
 FBOMBER:
-    Inherits: ^AttackBomber
+    Inherits: ^AttackPlane
     Valued:
-        Cost: 2000
+        Cost: 2500
     Tooltip:
         Name: Crapjet
-        Description: Plane converted into a heavy bomber.\nLoaded with a massive amount of explosives,\nresulting in a devastating explosion when the plane crashes.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Buildable:
-        Queue: Air
+        Queue: Air.Forg
         BuildPaletteOrder: 401
-        Prerequisites: ~fahpad, fhovel, fatrade, ~!t1, ~!t2
+        Prerequisites: ~fahpad, fatrade, ~!t1, ~!t2
+        Description: Plane converted into a heavy bomber.\nLoaded with a massive amount of explosives,\nresulting in a devastating explosion when the plane crashes.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Voiced:
         VoiceSet: Grunt
         Volume: 2
@@ -85,43 +86,43 @@ FBOMBER:
         Bounds: 60,48,0,-10
     Aircraft:
         CruiseAltitude: 8192
-        TurnSpeed: 1
-        Speed: 120
+        TurnSpeed: 4
+        Speed: 130
     Health:
-        HP: 500
+        HP: 1200
     Armor:
         Type: Light
     RevealsShroud:
         Range: 15c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament:
         Weapon: CarpetBomb
-    AttackPlane:
-        FacingTolerance: 20
-        AttackTurnDelay: 120
     AmmoPool:
-        Ammo: 20
-        PipCount: 20
+        Ammo: 10
+        PipCount: 10
         ReloadCount: 5
         ReloadDelay: 50
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
+	Turreted: 
+        TurnSpeed: 360
+	AttackTurreted:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     Contrail@1:
         Offset: -200,628,480
-        TrailLength: 45
-        TrailWidth: 20
-        Color: FF6400
-        UsePlayerColor: True
+        TrailLength: 100
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -200,-628,480
-        TrailLength: 45
-        TrailWidth: 20
-        Color: FF6400
-        UsePlayerColor: True
+        TrailLength: 100
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     SmokeTrailWhenDamaged@0:
         Sprite: durasmoke
         Palette: apolra50alpha
@@ -134,21 +135,33 @@ FBOMBER:
         Offset: -200,-628,480
         Interval: 2
         MinDamage: Undamaged
+    Contrail@11:
+        Offset: -200,1200,480
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -200,-1200,480
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: FBOMBER.Husk
-        Probability: 80
+        Probability: 100
 
 STRIKER:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2200
+        Cost: 1700
     Tooltip:
         Name: Striker
-        Description: Advanced fighter with missile launchers and a machinegun.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 402
-        Prerequisites: ~fahpad, fhovel, fatrade, ~!t1, ~!t2
+#    Buildable:
+#        Queue: Air.Forg
+#        BuildPaletteOrder: 402
+#        Prerequisites: ~fahpad, fatrade, ~!t1, ~!t2
+#        Description: Advanced fighter with missile launchers and a machinegun.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
@@ -156,28 +169,42 @@ STRIKER:
         Volume: 2
     Aircraft:
         TurnSpeed: 4
-        Speed: 420
+        Speed: 230
     Health:
-        HP: 700
+        HP: 910
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
-        Range: 21c0
-        Type: CenterPosition
+        Range: 14c0
+        Type: GroundPosition
     Armament:
+        AmmoPoolName: Missiles
         Weapon: StrikerMissiles
         LocalOffset: -512,512,128, -512,-512,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@secondary:
+        AmmoPoolName: Bullets
         Weapon: StrikerCannon
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 1000,0,128
-    AttackPlane:
+	Turreted:
+        TurnSpeed: 360
+	AttackTurreted:
         FacingTolerance: 20
-    AmmoPool:
+    AmmoPool@1:
+        Name: Missiles
+        Ammo: 2
+        PipCount: 2
+        ReloadCount: 1
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 200
+    AmmoPool@2:
+        Name: Bullets
         Ammo: 40
         PipCount: 0
         PipType: Ammo
@@ -190,15 +217,29 @@ STRIKER:
     WithVoxelBody:
     Contrail@1:
         Offset: -768,64,256
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -768,-64,256
-        TrailLength: 25
-        Color: 0080FF
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@11:
+        Offset: -1024,700,400
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -1024,-700,400
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     WithMuzzleOverlay:
     SpawnActorOnDeath:
         Actor: STRIKER.Husk
-        Probability: 80
+        Probability: 100

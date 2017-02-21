@@ -1,14 +1,14 @@
 GMCV:
     Inherits: ^VoxelVehicle
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 100
         Prerequisites: ~gaweap
+        Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
     Valued:
-        Cost: 2000
+        Cost: 3000
     Tooltip:
         Name: GDI Mobile Construction Vehicle
-        Description: Deploys into another Construction Yard.\n  Unarmed
     Selectable:
         Priority: 3
         Bounds: 42,42
@@ -20,11 +20,11 @@ GMCV:
     Armor:
         Type: Heavy
     Mobile:
-        Speed: 85
+        Speed: 40
     RevealsShroud:
         Range: 6c0
     MustBeDestroyed:
-        RequiredForShortGame: true
+        RequiredForShortGame: True
     BaseBuilding:
     Transforms:
         IntoActor: gacnst
@@ -42,14 +42,14 @@ GMCV:
 GHARV:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1600
+        Cost: 1000
     Tooltip:
         Name: GDI Harvester
-        Description: Collects Tiberium for processing.\n  Unarmed
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gaweap, gproc
+        Description: Collects Tiberium for processing.\nSlow harvester with big storage.\n\n  Role: Harvester\n  HP: 1200\n  Armor: Medium\n  Speed: 50\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (20 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -58,10 +58,10 @@ GHARV:
         Volume: 2
     Harvester:
         DeliveryBuildings: gproc, nproc, kproc, fproc
-        Capacity: 20
+        Capacity: 16
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
-        BaleUnloadDelay: 3
+        BaleUnloadDelay: 6
         SearchFromProcRadius: 36
         SearchFromOrderRadius: 18
         HarvestVoice: Action
@@ -69,28 +69,21 @@ GHARV:
         PipCount: 8
     Mobile:
         Speed: 50
-        TerrainSpeeds:
-            Clear: 90
-            Rough: 70
-            Road: 100
-            Beach: 70
-            Tiberium: 80
-            BlueTiberium: 80
-            RedTiberium: 80
-            PurpleTiberium: 80
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Veins:
 #    Carryable:
     Health:
         HP: 1200
-    SelfHealing:
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
+#    SelfHealing:
+#        Step: 0
+#        PercentageStep: 1
+#        Delay: 10
+#        HealIfBelow: 100
+#        DamageCooldown: 200
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 6c0
-    -GainsExperience:
+    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
@@ -100,65 +93,99 @@ GHARV:
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
-    CustomBuildTimeValue:
-        Value: 1740
         
 APC:
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 800
+        Cost: 600
     Tooltip:
         Name: Amphibious APC
-        Description: Armored infantry transport.\nCan move on water.
+    Selectable:
+        Bounds: 42,42, 0, -5
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 103
-        Prerequisites: ~gaweap, gapile
+        Prerequisites: ~gaweap
+        Description: Armored infantry transport.\n\n  Role: Support/Transport\n  HP: 400\n  Armor: Heavy\n  Speed: 113\n  Viewrange: 6\n\n Good vs Light Armor, Infantry\n\n Special:\n\n - Cargo (8 Infantry)\n - Amphibious\n - Granted a MG when garrisoned with Marines\n - Granted a Disc launcher when garrisoned with Disc Throwers\n - Crushes infantry
     Voiced:
         VoiceSet: Predator
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 113
+        Speed: 80
         TerrainSpeeds:
             Water: 80
     Health:
-        HP: 400
+        HP: 1000
     Armor:
         Type: Heavy
     RevealsShroud:
-        Range: 6c0
-	Cargo:
-		Types: Infantry
-		MaxWeight: 8
-		PipCount: 8
-		LoadingUpgrades: notmobile
-		EjectOnDeath: true
-    Armament:
+        Range: 9c0
+    Cargo:
+        Types: Infantry
+        MaxWeight: 5
+        PipCount: 5
+        PassengerConditions:
+            gasol: apc_mg
+            e2: apc_gren
+            medic: apc_medic
+        EjectOnDeath: True
+    Armament@Cannon:
+        Name: primary
+        Weapon: 60mm
+        LocalOffset: 550,0,850
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@MG:
         Weapon: APCMG
-        LocalOffset: 280,50,800, 280,-50,800
+        Name: secondary
+        LocalOffset: 256,96,800, 256,128,800
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
+        RequiresCondition: apc_mg
+    Armament@Grenade:
+        Name: tertiary
+        Weapon: Grenade
+        LocalOffset: 64,-128,800
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: apc_gren
     Turreted:
-        TurnSpeed: 6
-        Offset: 128,0,0
+        TurnSpeed: 4
+        Offset: -128,0,0
     AttackTurreted:
+        Armaments: primary, secondary, tertiary
     AutoTarget:
-	UpgradeOnTerrain:
-		Upgrades: inwater
-		TerrainTypes: Water
-	WithVoxelBody:
-		UpgradeTypes: inwater
-		UpgradeMaxEnabledLevel: 0
-	WithVoxelBody@water:
-		Sequence: water
-		UpgradeTypes: inwater
-		UpgradeMinEnabledLevel: 1
+    GrantConditionOnTerrain:
+        Condition: inwater
+        TerrainTypes: Water
     WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: no
-    WithVoxelBarrel:
+        RequiresCondition: !inwater && !apc_medic
+    WithVoxelBody@water:
+        Sequence: water
+        RequiresCondition: inwater
+    WithVoxelBody@Medic:
+        Sequence: medic
+        RequiresCondition: apc_medic && !inwater
+    WithVoxelTurret@Normal:
+        Sequence: turret
+        Recoils: False
+        RequiresCondition: !apc_gren
+    WithVoxelTurret@Grenade:
+        Sequence: turret_gren
+        Recoils: False
+        RequiresCondition: apc_gren
+    WithVoxelBarrel@Cannon:
+        Sequence: barrel
+        Armament: primary
+    WithVoxelBarrel@MG:
+        Sequence: barrel_mg
+        Armament: secondary
+        RequiresCondition: apc_mg
     WithMuzzleOverlay:
     LeavesTrails@water:
         Image: wake
@@ -168,25 +195,71 @@ APC:
         StationaryInterval: 18
         MovingInterval: 6
 
-SMECH:
-    Inherits: ^Tank
+FIREFLY:
+    Inherits@1: ^Walker
+    Inherits@2: ^LightVehicle
     Valued:
-        Cost: 600
+        Cost: 450
     Tooltip:
-        Name: Wolverine
-        Description: Anti-personnel walker.\n\n  Strong vs Soft Targets\n  Weak vs Hard Targets\n  Useless vs Aircraft
+        Name: Firefly
     Selectable:
         Bounds: 42,42, 0, -10
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 104
-        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc
+#    Buildable:
+#        Queue: Vehicle.GDI
+#        BuildPaletteOrder: 104
+#        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc, ~!upgrade.gdf
+#        Description: Anti-personnel walker.\n\n  Role: Anti Infantry\n  HP: 700\n  Armor: Medium\n  Speed: 60\n  Viewrange: 8\n\n Good vs Infantry, Light Armor, VTOL's\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Wolverine
         Volume: 2
     Mobile:
-        TurnSpeed: 4
-        Speed: 60
+        TurnSpeed: 6
+        Speed: 80
+        Crushes: crate
+    Health:
+        HP: 500
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 8c0
+    BodyOrientation:
+        QuantizedFacings: 8
+    AttackFrontal:
+    AutoTarget:
+    Armament@primary:
+        Weapon: FireflyCannon
+        LocalOffset: 128,200,650, 128,-200,650
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+    Armament@secondary:
+        Weapon: FireflyMissiles
+        LocalOffset: -32,32,780, -32,-32,780
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    RenderSprites:
+    WithInfantryBody:
+    WithMuzzleOverlay:
+        
+SMECH:
+    Inherits: ^Walker
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Wolverine
+    Selectable:
+        Bounds: 42,42, 0, -10
+#    Buildable:
+#        Queue: Vehicle.GDI
+#        BuildPaletteOrder: 104
+#        Prerequisites: ~gaweap, ~!upgrade.st
+#        Description: Anti-personnel walker.\n\n  Role: Anti Infantry\n  HP: 700\n  Armor: Medium\n  Speed: 60\n  Viewrange: 8\n\n Good vs Infantry\n\n Special:\n\n - Crushes infantry
+    Voiced:
+        VoiceSet: Wolverine
+        Volume: 2
+    Mobile:
+        TurnSpeed: 5
+        Speed: 55
     Health:
         HP: 700
     Armor:
@@ -203,43 +276,49 @@ SMECH:
     Armament@secondary:
         Weapon: AssaultCannon
         LocalOffset: 480,-160,720
+    Armament@missile:
+        Weapon: FireflyMissiles
+        LocalOffset: 480,160,720, 480,-160,720
     RenderSprites:
         Scale: 0.8
     WithInfantryBody:
-        AttackSequence: shoot
+        DefaultAttackSequence: shoot
 
 VULTURE:
-    Inherits: ^Tank
+    Inherits: ^Walker
     Valued:
         Cost: 800
     Tooltip:
         Name: Vulture
-        Description: Small walker, armed with multipurpose missiles and a machinegun.\n\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Hard Targets\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -10
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 104
         Prerequisites: ~gaweap, ~!t1, ~upgrade.st
+        Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\n  Role: Anti Infantry/VTOLs\n  HP: 800\n  Armor: Medium\n  Speed: 60\n  Viewrange: 11\n\n Good vs Infantry, VTOLs\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Wolverine
         Volume: 2
     Mobile:
         TurnSpeed: 4
-        Speed: 56
+        Speed: 55
     Health:
-        HP: 800
+        HP: 900
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 11c0
+        Range: 9c0
     BodyOrientation:
         QuantizedFacings: 32
     Turreted:
-        TurnSpeed: 4
+        TurnSpeed: 3
     AttackTurreted:
     WithSpriteTurret:
-        Recoils: yes
+        Recoils: True
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
     AutoTarget:
     Armament@primary:
         Weapon: VultureGat #22mmAPHE
@@ -259,37 +338,38 @@ VULTURE:
     RenderSprites:
     WithInfantryBody:
     WithMuzzleOverlay:        
-        
+
 GTMTNK:
     Inherits: ^VoxelTank
     Valued:
         Cost: 1000
     Tooltip:
         Name: Archon Tank
-        Description:  Main battle tank.\nArmed with a 90mm cannon and a coaxial MG.\n  Strong vs Ground Targets\n  Weak vs Heavy Vehicles\n  Useless vs Aircraft
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 105
-        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc
+        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc, garadr
+        Description: Well balanced main battle tank.\nArmed with a 90mm cannon and a coaxial MG.\n\n  Role: MBT\n  HP: 1000\n  Armor: Medium\n  Speed: 70\n  Viewrange: 10\n\n Good vs Ground Targets\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Archon
         Volume: 2
     Mobile:
-        Speed: 70
-        TurnSpeed: 3
+        Speed: 60
+        TurnSpeed: 4
     Health:
         HP: 1000
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 10c0
+        Range: 8c0
     Turreted:
         TurnSpeed: 3
+        Offset: 96,0,0
     Armament@PRIMARY:
         Weapon: 90mm
-        LocalOffset: 1080,0,500
+        LocalOffset: 1150,0,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 200
@@ -308,40 +388,40 @@ GTMTNK:
     RenderVoxels:
     WithVoxelBody:
     WithVoxelTurret:
-        Recoils: no
+        Recoils: False
     WithVoxelBarrel:
     WithMuzzleOverlay:
 
 GTHTNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1400
+        Cost: 1300
     Tooltip:
-        Name: Ares Tank
-        Description: Heavy main battle tank.\nArmed with a 122mm Cannon with AP rounds and a coaxial MG\n  Strong vs Ground Targets\n  Weak vs Heavy Vehicles\n  Useless vs Aircraft
+        Name: Grizzly Tank
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 105
-        Prerequisites: ~gaweap, ~!t1, ~upgrade.st
+        Prerequisites: ~gaweap, ~!t1, ~upgrade.st, garadr
+        Description: Steel Talon's main battle tank.\nArmed with a 122mm cannon and a coaxial MG.\n\n  Role: MBT\n  HP: 1400\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Ground Targets\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Predator
         Volume: 2
     Mobile:
-        Speed: 60
-        TurnSpeed: 2
+        Speed: 50
+        TurnSpeed: 3
     Health:
-        HP: 800
+        HP: 1400
     Armor:
         Type: Heavy
     RevealsShroud:
-        Range: 10c0
+        Range: 8c0
     Turreted:
         TurnSpeed: 2
     Armament@PRIMARY:
         Weapon: 122mmAP
-        LocalOffset: 1000,0,600
+        LocalOffset: 1250,0,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 280
@@ -360,7 +440,7 @@ GTHTNK:
     RenderVoxels:
     WithVoxelBody:
     WithVoxelTurret:
-        Recoils: no
+        Recoils: False
     WithVoxelBarrel:
     WithMuzzleOverlay:
    
@@ -371,49 +451,52 @@ HVR:
         Cost: 1100
     Tooltip:
         Name: Hover MLRS
-        Description: Hovering vehicle, armed with\nlong range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.zc
+        Prerequisites: ~gaweap, ~!t1, ~upgrade.zc, garadr
+        Description: Hovering vehicle, armed with long range missiles.\n\n  Role: Support/Artillery/Anti VTOL\n  HP: 400\n  Armor: Medium\n  Speed: 80\n  Viewrange: 13\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Hovers\n - Full burst lock on VTOLs\n - Crushes infantry 
     Voiced:
         VoiceSet: Archon
         Volume: 2
     Mobile:
-        Speed: 80
+        Speed: 70
         TurnSpeed: 6
         TerrainSpeeds:
             Clear: 100
             Road: 100
+            Bridge: 100
             Rail: 100
             DirtRoad: 100
             Rough: 100
+            Green: 100
             Water: 80
             Tiberium: 100
             BlueTiberium: 100
             RedTiberium: 100
             PurpleTiberium: 100
             Veins: 100
+    -DamagedByTerrain@Veins:
     Health:
         HP: 400
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 13c0
+        Range: 11c0
     Armament@primary:
         Weapon: HoverMissile
-        LocalOffset: 100,171,384, 100,-171,384
+        LocalOffset: 100,128,384, 100,-128,384
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@primaryAA:
         Weapon: HoverMissileAA
-        LocalOffset: 100,171,384, 100,-171,384
+        LocalOffset: 100,128,384, 100,-128,384
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Turreted:
-        TurnSpeed: 6
+        TurnSpeed: 5
         Offset: -256,0,85
     AttackTurreted:
     AutoTarget:
@@ -421,21 +504,6 @@ HVR:
     RenderVoxels:
     WithVoxelBody:
     WithVoxelTurret:
-    Hovers:
-    -PoisonedByTiberium:
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        MovingInterval: 6
-    LeavesTrails@ground:
-        Image: dust
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, DirtRoad
     WithMuzzleOverlay:
 
 AIRBLAST:
@@ -444,19 +512,19 @@ AIRBLAST:
         Cost: 900
     Tooltip:
         Name: Airblast
-        Description: Light armored MLRS\n\n  Strong vs Buildings, Aircraft\n  Weak vs Anything
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.gdf
+        Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.gdf
+        Description: Light armored MLRS.\n\n  Role: Support/Artillery/Anti VTOL\n  HP: 500\n  Armor: Medium\n  Speed: 80\n  Viewrange: 12\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Full burst lock on VTOLs\n - Crushes infantry
     Voiced:
         VoiceSet: Archon
         Volume: 2
     Mobile:
-        Speed: 80
-        TurnSpeed: 3
+        Speed: 60
+        TurnSpeed: 4
     Health:
         HP: 500
     Armor:
@@ -481,29 +549,24 @@ AIRBLAST:
     RenderSprites:
     RenderVoxels:
     WithVoxelTurret:
-        Recoils: no
+        Recoils: False
     WithVoxelBody:
     WithMuzzleOverlay:
 
 TRITON:
-    Inherits: ^Tank
+    Inherits: ^Walker
     Valued:
         Cost: 1400
     Tooltip:
         Name: Triton
-        Description: Light artillery walker with SAM launcher.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 106
-        Prerequisites: ~gaweap, gaarmory, garadr, ~!t1, ~upgrade.st
     Voiced:
         VoiceSet: Titan
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 56
+        Speed: 55
     Health:
-        HP: 500
+        HP: 600
     Armor:
         Type: Medium
     RevealsShroud:
@@ -512,10 +575,10 @@ TRITON:
         QuantizedFacings: 32
     WithInfantryBody:
     Turreted:
-        TurnSpeed: 5
+        TurnSpeed: 4
     AttackTurreted:
     WithSpriteTurret:
-        Recoils: yes
+        Recoils: True
     Armament@primary:
         Weapon: TritonCannon
         LocalOffset: 600, 0, 1500
@@ -535,36 +598,41 @@ TRITON:
     Selectable:
         Bounds: 30, 42, 0, -8
     WithMuzzleOverlay:
-    RenderSprites:    
-      
+    RenderSprites:
+
 4TNK:
-    Inherits: ^VoxelTank
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^HeavyVehicle
     Valued:
         Cost: 2000
     Tooltip:
         Name: Mammoth Tank
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
+        Description: GDF's assault tank.\n\n  Role: Assault/Frontline\n  HP: 1400\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 12\n\n Good vs Everything\n\n Special:\n\n - Initial burst attack\n - Self Healing\n - Crushes infantry
+    Selectable:
+        Bounds: 42,42, 0, -5
     Voiced:
         VoiceSet: Mammoth
         Volume: 2
     Mobile:
-        Speed: 56
-        TurnSpeed: 1
+        Speed: 40
+        TurnSpeed: 3
     Health:
-        HP: 1400
+        HP: 1800
     Armor:
         Type: Heavy
     RevealsShroud:
-        Range: 12c0
+        Range: 9c0
     Turreted:
         TurnSpeed: 2
+        Offset: 64,0,0
     Armament@primary:
         Name: primary
         Weapon: 120mm1
-        LocalOffset: 900,128,555
+        LocalOffset: 1100,128,750
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 100
@@ -572,19 +640,21 @@ TRITON:
     Armament@secondary:
         Name: secondary
         Weapon: 120mm2
-        LocalOffset: 900,-128,555
+        LocalOffset: 1100,-128,750
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 100
         RecoilRecovery: 10
     Armament@rockets:
         Weapon: MammothTusk
-        LocalOffset: 128,300,555, 128,-300,555
+        LocalOffset: 128,300,555, 128,-300,650
         MuzzleSequence: muzzle2
         MuzzlePalette: apolra50alpha
     AttackTurreted:
     AutoTarget:
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
         HealIfBelow: 50
         DamageCooldown: 200
@@ -601,39 +671,40 @@ TRITON:
     WithMuzzleOverlay:
     
 MMCH:
-    Inherits: ^Tank
+    Inherits@1: ^Walker
+    Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1500
+        Cost: 1400
     Tooltip:
         Name: Titan
-        Description: General purpose mechanized walker armed with a railgun.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+        Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Titan
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 56
+        Speed: 55
     Health:
         HP: 1200
     Armor:
         Type: Medium
     RevealsShroud:
-        Range: 11c0
+        Range: 9c0
     BodyOrientation:
         QuantizedFacings: 32
     WithInfantryBody:
     Turreted:
-        TurnSpeed: 5
+        TurnSpeed: 4
     AttackTurreted:
     WithSpriteTurret:
-        Recoils: yes
+        Recoils: True
     Armament:
         Weapon: TitanRailgun
-        LocalOffset: 840, 324, 990  #700, 270, 825
+        LocalOffset: 840, 324, 1050  #700, 270, 825
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 100
@@ -644,62 +715,228 @@ MMCH:
         Bounds: 30, 42, 0, -8
     WithMuzzleOverlay:
     RenderSprites:
-        
-SONIC:
-    Inherits: ^VoxelTank
+
+POSEIDON:
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1800
+        Cost: 2000
     Tooltip:
-        Name: Disruptor
-        Description: Armored high-tech vehicle with\nlong range and sonic armament.\n  Strong vs Infantry, Vehicles, Buildings\n  Useless vs Aircraft
+        Name: Poseidon Tank
     Buildable:
-        Queue: Vehicle
+        Queue: Vehicle.GDI.Ace
+        BuildPaletteOrder: 107
+        Prerequisites: ~gadrop
+        BuildLimit: 1
+        Description: GDF's assault tank.\n\n  Role: Assault/Frontline\n  HP: 1400\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 12\n\n Good vs Everything\n\n Special:\n\n - Initial burst attack\n - Self Healing\n - Crushes infantry
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Voiced:
+        VoiceSet: Mammoth
+        Volume: 2
+    Mobile:
+        Speed: 40
+        TurnSpeed: 3
+    Health:
+        HP: 3000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 11c0
+    Turreted:
+        TurnSpeed: 2
+        Offset: 128,0,0
+    Armament@primary:
+        Weapon: PoseidonCannon
+        LocalOffset: 1250,0,580
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 10
+    Armament@rockets:
+        Weapon: PoseidonTusk
+        LocalOffset: 128,320,580, 128,-320,580
+        MuzzleSequence: muzzle2
+        MuzzlePalette: apolra50alpha
+    AttackTurreted:
+    AutoTarget:
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
+
+MMCH2:
+    Inherits@1: ^Walker
+    Inherits@2: ^HeavyVehicle
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Titan MK.II
+    Buildable:
+        Queue: Vehicle.GDI.Ace
+        BuildPaletteOrder: 107
+        Prerequisites: ~gadrop
+        BuildLimit: 1
+        Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 2000\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
+    Voiced:
+        VoiceSet: Titan
+        Volume: 2
+    Mobile:
+        TurnSpeed: 5
+        Speed: 55
+    Health:
+        HP: 3000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 9c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    WithInfantryBody:
+    Turreted:
+        TurnSpeed: 4
+    AttackTurreted:
+    WithSpriteTurret:
+        Recoils: True
+    Armament@1:
+        Weapon: TitanRailgun2
+        LocalOffset: 750,400,1200, 750,-400,1200
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 50
+        RecoilRecovery: 10
+#    Armament@2:
+#        Weapon: SmokeGrenade
+#        LocalOffset: 450,400,1300, 450,-400,1300
+#        MuzzlePalette: apolra50alpha
+    AutoTarget:
+    AttackMove:
+    Selectable:
+        Bounds: 40, 52, 0, -12
+    WithMuzzleOverlay:
+    RenderSprites:
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
+    DetectCloaked:
+        Range: 7c0
+    RenderDetectionCircle:
+    
+SONIC:
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^HeavyVehicle
+    Valued:
+        Cost: 1700
+    Tooltip:
+        Name: Colossus
+    Buildable:
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Description: Armored high-tech vehicle with range and sonic armament.\n\n  Role: Assault/Line\n  HP: 1100\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 9\n\n Good vs Ground Targets\n\n Special:\n\n - Deals damage over time to any unit in line of fire (Colossus excluded) \n - Crushes infantry
+    Selectable:
+        Bounds: 42,42, 0, -5
     Targetable:
         TargetTypes: Ground, Vehicle, Repair, Disruptor
     Voiced:
         VoiceSet: Mammoth
         Volume: 2
     Mobile:
-        TurnSpeed: 2
-        Speed: 56
+        TurnSpeed: 3
+        Speed: 40
     Health:
-        HP: 900
+        HP: 1400
     Armor:
         Type: Heavy
     RevealsShroud:
-        Range: 9c0
-    Armament:
+        Range: 7c0
+    Armament@Color1:
         Weapon: SonicZap
-        LocalOffset: 0,0,810
+        LocalOffset: 256,0,810
     AttackTurreted:
     Turreted:
-        TurnSpeed: 3
-        Offset: -260,0,0
+        TurnSpeed: 2
+        Offset: 64,0,0
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithVoxelTurret:
-
-JUGGY:
+    
+BEHEMOTH:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 2500
+        Cost: 1750
+    Tooltip:
+        Name: Atlas
+    Buildable:
+        Queue: Vehicle.GDI
+        BuildPaletteOrder: 108
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
+        Description: GDF's heavy artillery, armed with an mobile ion cannon.\n\n  Role: Heavy Artillery\n  HP: 700\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Minimum attack distance (Range 5)\n - Crushes infantry
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Voiced:
+        VoiceSet: Predator
+        Volume: 2
+    Mobile:
+        Speed: 50
+        TurnSpeed: 3
+    Health:
+        HP: 700
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 10c0
+    Turreted:
+        TurnSpeed: 2
+        Offset: -180,0,0
+    Armament@PRIMARY:
+        Weapon: BehemothIonCannon
+        LocalOffset: 1600,0,1000
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 200
+        RecoilRecovery: 5
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
+
+JUGG:
+    Inherits@1: ^Walker
+    Inherits@2: ^HeavyVehicle
+    Valued:
+        Cost: 2000
     Tooltip:
         Name: Juggernaut
-        Description: Heavy mechanized artillery walker.\n  Strong vs Slow Targets, Buildings\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gaarmory, garadr, gatech, ~!t1, ~!t2
+        Queue: Vehicle.GDI
+        BuildPaletteOrder: 108
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+        Description: Steel Talon's heavy mechanized artillery walker.\n\n  Role: Heavy Artillery\n  HP: 600\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 12\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Minimum attack distance (Range 5)\n - Initial burst attack\n - Crushes infantry
     Voiced:
         VoiceSet: Marv
         Volume: 2
     Mobile:
-        TurnSpeed: 2
+        TurnSpeed: 5
         Speed: 55
+        RequiresCondition: !deployed
     Health:
         HP: 600
     Armor:
@@ -707,80 +944,147 @@ JUGGY:
     RevealsShroud:
         Range: 12c0
     Turreted:
-        TurnSpeed: 2
-        Offset: -128,64,128
+        TurnSpeed: 4
+        RealignDelay: -1
+        Offset: 0,0,512
+        InitialFacing: 96
     AttackTurreted:
         Armaments: primary, secondary, tertiary
+        RequiresCondition: deployed
     Armament@primary1:
         Name: primary
         Weapon: 180mmHE
-        LocalOffset: 1120, -40, 1520 #1400, -50, 1900
+        LocalOffset: 1024,40,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+        Recoil: 25
+        RecoilRecovery: 5
     Armament@primary2:
         Name: secondary
         Weapon: 180mmHE2
-        LocalOffset: 1120, 96, 1520
+        LocalOffset: 1024,150,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+        Recoil: 25
+        RecoilRecovery: 5
     Armament@primary3:
         Name: tertiary
         Weapon: 180mmHE3
-        LocalOffset: 1120, -176, 1520
+        LocalOffset: 1024,-70,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
+        Recoil: 25
+        RecoilRecovery: 5
     AutoTarget:
     AttackMove:
     Selectable:
         Bounds: 30, 42, 0, -8
-    WithVoxelTurret:
-        Recoils: no
-    WithVoxelBarrel@1:
-        Sequence: barrel1
-        Armament: primary
-        LocalOffset: 0, 1, 0
-    WithVoxelBarrel@2:
-        Sequence: barrel2
-        Armament: secondary
-        LocalOffset: 0, 180, 0
-    WithVoxelBarrel@3:
-        Sequence: barrel3
-        Armament: tertiary
-        LocalOffset: 0, -180, 0
+    WithSpriteTurret:
+        Recoils: True
+        RequiresCondition: deployed
+    GrantConditionOnDeploy:
+        DeployedCondition: deployed
+        DeployAnimation: make
+        Facing: 96
+        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
+        DeploySound: juggerdeploy1.wav
+        UndeploySound: juggerundeploy1.wav
+        CanDeployOnRamps: True
+    WithIdleOverlay@deployed:
+        Sequence: deployed
+        RequiresCondition: deployed
+        IsPlayerPalette: True
+    WithFacingSpriteBody:
+        RequiresCondition: !deployed
+    WithMoveAnimation:
+        RequiresCondition: !deployed
+    RenderRangeCircle:
     WithMuzzleOverlay:
     RenderSprites:
+        
+CYCLOPS:
+    Inherits@1: ^VoxelVehicle
+    Inherits@2: ^HoverVehicle
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: Cyclops
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle.GDI
+        BuildPaletteOrder: 108
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Description: ZOCOM's fast hover artillery, armed with a rapid sonic blaster cannon.\n\n  Role: Heavy Artillery\n  HP: 500\n  Armor: Medium\n  Speed: 80\n  Viewrange: 13\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Hovers\n - Crushes infantry
+    Voiced:
+        VoiceSet: Predator
+        Volume: 2
+    Mobile:
+        Speed: 65
+        TurnSpeed: 4
+        TerrainSpeeds:
+            Clear: 100
+            Road: 100
+            Bridge: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Water: 80
+            Tiberium: 100
+            BlueTiberium: 100
+            RedTiberium: 100
+            PurpleTiberium: 100
+            Veins: 100
+    -DamagedByTerrain@Veins:
+    Health:
+        HP: 500
+    Armor:
+        Type: Light
+    RevealsShroud:
+        Range: 12c0
+    Armament:
+        Weapon: CyclopsCannon
+        LocalOffset: 1500,0,500
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 100
+        RecoilRecovery: 10
+    Turreted:
+        TurnSpeed: 3
+        Offset: -256,0,0
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
     RenderVoxels:
-        Scale: 0.8
-    -WithVoxelBody:
-    WithVoxelWalkerBody:
-        TickRate: 2
+    WithVoxelBody:
+    WithVoxelTurret:
+    WithVoxelBarrel:
+    WithMuzzleOverlay:
     
 HMEC:
-    Inherits: ^VoxelTank
+    Inherits@1: ^VoxelWalker
+    Inherits@2: ^SuperHeavyVehicle
     Valued:
-        Cost: 8000
+        Cost: 2500
     Tooltip:
         Name: Mammoth Mk.II
-        Description: Slow heavy walker,armed with a gatling gun, dual railguns and rocket launchers.\n  Strong vs Everything
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gaarmory, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.st
+#    Buildable:
+#        Queue: Vehicle.GDI
+#        BuildPaletteOrder: 109
+#        Prerequisites: ~gadrop
+#		BuildLimit: 1
+#        Description: Slow heavy walker,armed with a twin gatling gun, quad railguns and two twin rocket launchers.\n\n  Role: Epic/Assault\n  HP: 5000\n  Armor: Heavy\n  Speed: 38\n  Viewrange: 15\n\n Good vs Everything\n\n Special:\n\n - Initial burst attack\n - Self Healing\n - Crushes infantry
     Voiced:
         VoiceSet: Marv
         Volume: 2
     Mobile:
-        TurnSpeed:2
+        TurnSpeed: 2
         Speed: 38
     Health:
         HP: 5000
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
         HealIfBelow: 50
         DamageCooldown: 200
@@ -832,27 +1136,35 @@ HMEC:
         EmptyWeapon: UnitExplodeEpic
     ActorLostNotification:
         Notification: CriticalUnitLost
+    Passenger:
+        CargoType: Epic
+        Voice: Move
+        Weight: 20
        
 IONTANK:
-    Inherits: ^VoxelTank
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^SuperHeavyVehicle
     Valued:
-        Cost: 10000
+        Cost: 2500
     Tooltip:
         Name: Leviathan
-        Description: Super heavy mobile ion cannon.\nNot as strong as the orbital version,\nbut devastating enough to annihilate an entire army with a single shot.\n  Strong vs Ground Targets\n  Weak vs Aircraft
-    Buildable:
-        Queue: Vehicle
-        BuildPaletteOrder: 109
-        Prerequisites: ~gaweap, gaarmory, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
+#    Buildable:
+#        Queue: Vehicle.GDI
+#        BuildPaletteOrder: 109
+#        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.gdf
+#		BuildLimit: 1
+#        Description: Super heavy mobile ion cannon.\n\n  Role: Epic/Artillery\n  HP: 8000\n  Armor: Heavy\n  Speed: 38\n  Viewrange: 15\n\n Good vs Ground Targets\n\n Special:\n\n - Deals huge area of effect damage - Self Healing\n - Crushes infantry
     Voiced:
         VoiceSet: Marv
         Volume: 2
     Mobile:
-        TurnSpeed: 1
-        Speed: 40
+        TurnSpeed: 2
+        Speed: 38
     Health:
-        HP: 8000
+        HP: 4000
     SelfHealing:
+        Step: 0
+        PercentageStep: 1
         Delay: 10
         HealIfBelow: 50
         DamageCooldown: 200
@@ -861,7 +1173,7 @@ IONTANK:
     Armor:
         Type: Heavy
     RevealsShroud:
-        Range: 15c0
+        Range: 10c0
     Armament:
         Weapon: CruiserIonCannon
         LocalOffset: 650,0,1050
@@ -880,85 +1192,7 @@ IONTANK:
         EmptyWeapon: UnitExplodeEpic
     ActorLostNotification:
         Notification: CriticalUnitLost
-
-ARES:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Ares-Predator Prototype Tank
-    Voiced:
-        VoiceSet: Predator
-        Volume: 2
-    Mobile:
-        Speed: 56
-        TurnSpeed: 2
-    Health:
-        HP: 700
-    Armor@Base:
-        Type: Vehicle
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 11c0
-    Turreted:
-        TurnSpeed: 3
-    Armament@PRIMARY:
-        Weapon: 128mmAPHE
-        LocalOffset: 640,0,384
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackTurreted:
-    AutoTarget:
-    SelfHealing:
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    
-JUGG:
-    Inherits: ^Tank
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Old Juggernaut (Backup)
-        Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-    Voiced:
-        VoiceSet: Marv
-        Volume: 2
-    Mobile:
-        TurnSpeed: 5
-        Speed: 55
-    Health:
-        HP: 500
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 6c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithInfantryBody:
-    Turreted:
-        TurnSpeed: 5
-        Offset: 0,0,300
-    AttackTurreted:
-    Armament@primary:
-        Weapon: 180mmHE
-        LocalOffset: 1024, 40, 1400, 1024, 150, 1400, 1024, -70, 1400 #600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
-    AutoTarget:
-    AttackMove:
-    Selectable:
-        Bounds: 30, 42, 0, -8
-    WithSpriteTurret:
-        Recoils: yes
-    WithMuzzleOverlay:
-    RenderSprites:   
+    Passenger:
+        CargoType: Epic
+        Voice: Move
+        Weight: 20

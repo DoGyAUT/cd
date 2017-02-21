@@ -4,18 +4,18 @@
     ScreenMap:
     ActorMap:
     MusicPlaylist:
-        VictoryMusic: maps
-        DefeatMusic: maps
+        VictoryMusic: bleaktwilight
+        DefeatMusic: guiltypleasure
     ShroudRenderer:
         Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
-        UseExtendedIndex: true
+        UseExtendedIndex: True
         ShroudPalette: shroud
         FogPalette: shroud
     Faction@Random:
         Name: Any
         Side: Random
         InternalName: Random
-        RandomFactionMembers: gdi, nod, cabal, forgotten
+        RandomFactionMembers: gdi, nod, cabal, forgotten#, scrin
     Faction@0:
         Name: GDI
         Side: Factions
@@ -36,78 +36,101 @@
         Side: Factions
         Description: Slaughter those pigs!
         InternalName: forgotten
-    Faction@4:
-        Name: Scrin
-        Side: WIP Factions
-        Description: Don't even think about to use this one yet!
-        InternalName: scrin
-    Faction@5:
-        Name: Seraph
-        Side: WIP Factions
-        Description: Don't even think about to use this one yet!
-        InternalName: seraph
+#    Faction@4:
+#        Name: Scrin
+#        Side: Factions
+#        Description: Figura Mortis!
+#        InternalName: scrin
+#    Faction@5:
+#        Name: Seraph
+#        Side: Not Playable
+#        Description: Don't even think about to use this one yet!
+#        InternalName: seraph
     ResourceType@Tiberium:
+        Type: Tiberium
+        Name: Riparius
+        PipColor: Green
         ResourceType: 1
         Palette: greentiberium
         EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
         MaxDensity: 12
         ValuePerUnit: 50
-        Name: Tiberium
-        PipColor: Green
-        AllowedTerrainTypes: Clear, Rough, DirtRoad
-        AllowUnderActors: true
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+        AllowUnderActors: True
+        AllowUnderBuildings: True
         TerrainType: Tiberium
     ResourceType@BlueTiberium:
+        Type: BlueTiberium
+        Name: Vinifera
+        PipColor: Blue
         ResourceType: 2
         Palette: bluetiberium
         EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
         MaxDensity: 12
         ValuePerUnit: 100
-        Name: BlueTiberium
-        PipColor: Blue
-        AllowedTerrainTypes: Clear, Rough, DirtRoad
-        AllowUnderActors: true
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+        AllowUnderActors: True
+        AllowUnderBuildings: True
         TerrainType: BlueTiberium
     ResourceType@Veins:
+        Type: Veins
+        Name: Veins
+        PipColor: Yellow
         ResourceType: 3
         Palette: veins
         EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Variants: veins
+        Sequences: veins
         MaxDensity: 6
         ValuePerUnit: 100
-        Name: Veins
-        PipColor: Yellow
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Rail, Road
-        AllowUnderActors: true
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Rail, Road, Green
+        AllowUnderActors: True
+        AllowUnderBuildings: True
         TerrainType: Veins
     ResourceType@RedTiberium:
+        Type: RedTiberium
+        Name: Aboreus
+        PipColor: Red
         ResourceType: 4
         Palette: redtiberium
         EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
         MaxDensity: 12
         ValuePerUnit: 10
-        Name: RedTiberium
-        PipColor: Red
-        AllowedTerrainTypes: Clear, Rough, DirtRoad
-        AllowUnderActors: true
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+        AllowUnderActors: True
+        AllowUnderBuildings: True
         TerrainType: RedTiberium
     ResourceType@PurpleTiberium:
+        Type: PurpleTiberium
+        Name: Cruentus
+        PipColor: Yellow
         ResourceType: 5
         Palette: purpletiberium
         EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10#, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
         MaxDensity: 12
         ValuePerUnit: 200
-        Name: PurpleTiberium
-        PipColor: Yellow
-        AllowedTerrainTypes: Clear, Rough, DirtRoad
-        AllowUnderActors: true
-        AllowUnderBuildings: true
+        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+        AllowUnderActors: True
+        AllowUnderBuildings: True
         TerrainType: PurpleTiberium
     TerrainGeometryOverlay:
+    ExitsDebugOverlayManager:
+    CliffBackImpassabilityLayer:
+    GlobalLightingPaletteEffect:
+        Red: 1.55
+        Blue: 0.95
+        Green: 1.25
+        Ambient: 0.565
+    WeatherOverlay:
+        ParticleDensityFactor: 1 #0.0002625
+        ChangingWindLevel: True
+        WindLevels: -1, 0, 1
+        WindTick: 150, 550
+        ParticleColors: 006400, 646464, 00FF00
+        ParticleSize: 0, 1
 
 World:
     Inherits: ^BaseWorld
@@ -152,9 +175,9 @@ World:
         Sequence: largecraters
         SmokePercentage: 0
     ResourceLayer:
+    BridgeLayer:
     CustomTerrainDebugOverlay:
     ResourceClaimLayer:
-    PathfinderDebugOverlay:
     WarheadDebugOverlay:
     MapCreeps:
     SpawnMapActors:
@@ -206,7 +229,8 @@ World:
     StartGameNotification:
     ObjectivesPanel:
         PanelName: SKIRMISH_STATS
-	LoadWidgetAtGameStart:
+    LoadWidgetAtGameStart:
+        ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 
 EditorWorld:
     Inherits: ^BaseWorld
@@ -214,4 +238,4 @@ EditorWorld:
     EditorResourceLayer:
     EditorSelectionLayer:
         Palette: placebuilding
-	LoadWidgetAtGameStart:
+    LoadWidgetAtGameStart:

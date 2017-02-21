@@ -9,33 +9,33 @@ KACNST:
         BuildPaletteOrder: 300
         Prerequisites: ~disabled
         Adjacent: 8
+        Description: Builds base structures.
     Health:
-        HP: 2000
+        HP: 4000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 10c0
     Production:
         Produces: Building,Defense
-#    ProductionQueue@Building:
-#        Type: Building
-#        Group: Building
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
-#    ProductionQueue@Defense:
-#        Type: Defense
-#        Group: Defense
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
+    ProductionQueue@Building:
+        Type: Building
+        Group: Building
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
+    ProductionQueue@Defense:
+        Type: Defense
+        Group: Defense
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
     Valued:
         Cost: 2500
     Tooltip:
         Name: Cabal Construction Yard
-        Description: Builds base structures.
     -Sellable:
     BaseBuilding:
     Transforms:
@@ -43,6 +43,7 @@ KACNST:
         Offset: 1,1
         Facing: 96
         DeployCursor: undeploy
+    ProvidesRadar:
     ProductionBar@Building:
         ProductionType: Building
     ProductionBar@Defense:
@@ -60,6 +61,8 @@ KACNST:
         Bounds: 144, 80, 0, -12
     ProvidesPrerequisite@cabal:
         Prerequisite: structures.cabal
+    BaseProvider:
+        Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
 
@@ -69,11 +72,11 @@ KPR:
         Queue: Building
         BuildPaletteOrder: 301
         Prerequisites: ~structures.cabal
+        Description: Provides power for other structures.
     Valued:
-        Cost: 800
+        Cost: 1000
     Tooltip:
         Name: Cabal Power Core
-        Description: Provides power for other structures.
     ProvidesPrerequisite:
         Prerequisite: anypower
     Building:
@@ -86,9 +89,9 @@ KPR:
     Selectable:
         Bounds: 88, 80, 2, -12
     Health:
-        HP: 1400
+        HP: 1600
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 4c0
     WithIdleOverlay@LIGHTS:
@@ -100,43 +103,44 @@ KPR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:    
+    DisabledOverlay:
 
 KPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Cabal Tiberium Refinery
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
     Buildable:
         Queue: Building
         BuildPaletteOrder: 302
         Prerequisites: anypower, ~structures.cabal
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
     InfiltrateForCash:
         Percentage: 50
         Minimum: -1
+        Maximum: 1000
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
-        HP: 1600
+        HP: 1500
     Armor:
-        Type: Heavy
+        Type: Medium
     RevealsShroud:
         Range: 6c0
     TiberianSunRefinery:
         DockAngle: 160
         DockOffset: 2,1
-        DiscardExcessResources: true
+        DiscardExcessResources: True
     StoresResources:
         PipColor: Green
         PipCount: 10
         Capacity: 1000
     CustomSellValue:
-        Value: 300
+        Value: 500
     FreeActor:
         Actor: KHARV
         SpawnOffset: 2,1
@@ -149,61 +153,23 @@ KPROC:
         Sequence: flame
         Palette: effect
     Power:
-        Amount: -30
+        Amount: -50
+    Explodes:
+        Weapon: TiberiumExplosionRef
+        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
-    CustomBuildTimeValue:
-        Value: 1860
-
-KASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 303
-        Prerequisites: kproc, ~structures.cabal
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Cabal Silo
-        Description: Stores excess Tiberium.\n\nStores 500$.
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 500
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-    WithSiloAnimation:
-    WithIdleOverlay@UNDERLAY:
-        Sequence: idle-underlay
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    StoresResources:
-        PipCount: 5
-        Capacity: 500
-    Power:
-        Amount: -10    
-    
+ 
 CYBBAR:
     Inherits: ^Building
     Buildable:
         Queue: Building
         BuildPaletteOrder: 304
         Prerequisites: anypower, ~structures.cabal
+        Description: Produces infantry.
     Valued:
-        Cost: 400
+        Cost: 500
     Tooltip:
         Name: Cyborg Production Plant
-        Description: Produces infantry.
     ProvidesPrerequisite:
         Prerequisite: barracks
     Building:
@@ -212,7 +178,7 @@ CYBBAR:
     Selectable:
         Bounds: 116, 78, 3, -8
     Health:
-        HP: 1200
+        HP: 1000
     Armor:
         Type: Medium
     RevealsShroud:
@@ -220,16 +186,17 @@ CYBBAR:
     Exit@1:
         SpawnOffset: -1300,300,0
         ExitCell: 2,3
+    ExitsDebugOverlay:
     RallyPoint:
         Offset: 3,3
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     Production:
-        Produces: Infantry
+        Produces: Infantry.Cabal
     ProductionQueue@Infantry:
-        Type: Infantry
+        Type: Infantry.Cabal
         Group: Infantry
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -243,15 +210,6 @@ CYBBAR:
         Sequence: production-lights
     WithIdleOverlay@LIGHTS2:
         Sequence: idle-lights2
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
     Power:
         Amount: -60
     ProvidesPrerequisite@buildingname:    
@@ -262,13 +220,13 @@ KAWEAP:
         Cost: 2000
     Tooltip:
         Name: Cabal War Factory
-        Description: Produces vehicles.
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
         Queue: Building
         BuildPaletteOrder: 305
         Prerequisites: anypower, kproc, ~structures.cabal
+        Description: Produces vehicles.
     Building:
         Footprint: xxx= xxx= xxx=
         Dimensions: 4,3
@@ -277,23 +235,24 @@ KAWEAP:
     Health:
         HP: 1500
     Armor:
-        Type: Heavy
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     RallyPoint:
         Offset: 4,1
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     Exit@1:
         SpawnOffset: -384,-384,0
         ExitCell: 3,1
         ExitDelay: 5
+    ExitsDebugOverlay:
     Production:
-        Produces: Vehicle
+        Produces: Vehicle.Cabal
     ProductionQueue@Vehicle:
-        Type: Vehicle
+        Type: Vehicle.Cabal
         Group: Vehicle
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -313,19 +272,8 @@ KAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -30
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
+        Amount: -100
     ProvidesPrerequisite@buildingname:
-    CustomBuildTimeValue:
-        Value: 1860
 
 KARADR:
     Inherits: ^BuildingInfiltrate
@@ -333,11 +281,11 @@ KARADR:
         Queue: Building
         BuildPaletteOrder: 306
         Prerequisites: anypower, kproc, ~structures.cabal
+        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
     Valued:
-        Cost: 1000
+        Cost: 1500
     Tooltip:
         Name: Cabal Radar
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
     ProvidesPrerequisite:
         Prerequisite: radar
     Building:
@@ -348,7 +296,7 @@ KARADR:
     Health:
         HP: 1200
     Armor:
-        Type: Medium
+        Type: Light
     RequiresPower:
     CanPowerDown:
         IndicatorPalette: mouse
@@ -359,15 +307,14 @@ KARADR:
     InfiltrateForExploration:
     DetectCloaked:
         Range: 10
-    RenderDetectionCircle:
     RevealsShroud:
-        Range: 10c0
+        Range: 20c0
     WithIdleOverlay@DISH:
         Sequence: idle-dish
-        PauseOnLowPower: yes
+        PauseOnLowPower: True
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
-        PauseOnLowPower: yes
+        PauseOnLowPower: True
     Targetable:
         TargetTypes: Ground, C4, SpyInfiltrate
     Power:
@@ -381,14 +328,14 @@ KARADR:
 KAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1500
+        Cost: 1000
     Tooltip:
         Name: Cabal Helipad
-        Description: Produces, rearms and\nrepairs aircraft.
-    Buildable:
-        BuildPaletteOrder: 307
-        Queue: Building
-        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+#    Buildable:
+#        BuildPaletteOrder: 307
+#        Queue: Building
+#        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+#        Description: Produces, rearms and\nrepairs aircraft.
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -400,15 +347,16 @@ KAHPAD:
         Range: 5c0
     Exit@1:
         SpawnOffset: 0,-256,0
+    ExitsDebugOverlay:
     RallyPoint:
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     ProductionFromMapEdge:
-        Produces: Air
+        Produces: Air.Cabal
     ProductionQueue@Air:
-        Type: Air
+        Type: Air.Cabal
         Group: Air
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -420,6 +368,7 @@ KAHPAD:
         HpPerStep: 10
         Interval: 10
         FinishRepairingNotification: UnitRepaired
+        PlayerExperience: 15
     ProductionBar:
     WithIdleOverlay@PLATFORM:
         Sequence: idle-platform
@@ -427,20 +376,11 @@ KAHPAD:
         Sequence: idle-lights
     WithDeathAnimation@BIB:
         DeathSequence: dead-platform
-        UseDeathTypeSuffix: false
+        UseDeathTypeSuffix: False
     Power:
-        Amount: -10
+        Amount: -75
     Selectable:
         Bounds: 78, 54, 0, -8
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
     ProvidesPrerequisite@buildingname:
 
 KABTECH:
@@ -449,11 +389,11 @@ KABTECH:
         Queue: Building
         BuildPaletteOrder: 308
         Prerequisites: anypower, cybbar, kaweap, karadr, ~structures.cabal, ~!t1, ~!t2
+        Description: Gives access to improved technology.
     Valued:
-        Cost: 3500
+        Cost: 4500
     Tooltip:
         Name: Cyborg Enhancement Center
-        Description: Gives access to improved technology.
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
@@ -471,15 +411,18 @@ KABTECH:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    Production:
-        Produces: Tech
-        MoveIntoWorld: false
+    Production@Tech:
+        Produces: Tech.Cabal
+        MoveIntoWorld: False
     ProductionQueue@Tech:
-        Type: Tech
+        Type: Tech.Cabal
         Group: Tech
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    Exit:
+    ExitsDebugOverlay:
+    ProductionBar:
     DisabledOverlay:
     ProvidesPrerequisite@buildingname:

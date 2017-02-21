@@ -3,15 +3,15 @@ NAWALL:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 200
-        Prerequisites: ~structures.nod
+        Prerequisites: ~structures.nod, ~ideology
+        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
     SoundOnDamageTransition:
     Valued:
-        Cost: 200
+        Cost: 100
     CustomSellValue:
         Value: 0
     Tooltip:
         Name: Concrete Wall
-        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
     Health:
         HP: 300
     Armor:
@@ -28,7 +28,8 @@ NAGATE_A:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 201
-        Prerequisites: ~structures.nod
+        Prerequisites: ~structures.nod, ~ideology
+        Description: Automated barrier that opens for allied units.
     Tooltip:
         Name: Nod Gate
 
@@ -37,9 +38,56 @@ NAGATE_B:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 202
-        Prerequisites: ~structures.nod
+        Prerequisites: ~structures.nod, ~ideology
+        Description: Automated barrier that opens for allied units.
     Tooltip:
         Name: Nod Gate
+
+NASILO:
+    Inherits: ^BuildingInfiltrate
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 203
+        Prerequisites: nproc, ~structures.nod, ~ideology
+        Description: Stores excess Tiberium.\n\nStores 1000$.
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Nod Silo
+    Building:
+        Footprint: xx xx
+        Dimensions: 2, 2
+    InfiltrateForCash:
+        Percentage: 50
+        Minimum: -1
+        Maximum: 1000
+    Selectable:
+        Bounds: 80, 48, -5, 0
+    -GivesBuildableArea:
+    Health:
+        HP: 500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 4c0
+    RenderSprites:
+    WithSpriteBody:
+#    WithSiloAnimation:
+    WithIdleOverlay@lights:
+        Sequence: idle-lights
+    WithIdleOverlay@claw:
+        Sequence: idle-claw
+    WithIdleOverlay@glas:
+        Sequence: idle-glas
+    StoresResources:
+        PipColor: Green
+        PipCount: 10
+        Capacity: 1000
+    Power:
+        Amount: -10
+    Explodes:
+        Weapon: TiberiumExplosionSilo
+        EmptyWeapon: TiberiumExplosionSilo
 
 NAFLAMER:
     Inherits: ^Defense
@@ -47,17 +95,18 @@ NAFLAMER:
         Cost: 800
     Tooltip:
         Name: Flamer Turret
-        Description: Anti-Infantry base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased fire burst amount (Industry)\n\n  Strong vs Infantry\n  Weak vs Aircraft, Armor, Artillery
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, nproc, ~structures.nod
+        Prerequisites: anypower, nproc, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 203
+        Description: Anti-Infantry base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased fire burst amount (Industry)\n\n  Strong vs Infantry\n  Weak vs Aircraft, Armor, Artillery
     Building:
     Selectable:
-        Bounds: 40, 36, -8, -8
+        Bounds: 40, 36, -3, -8
     DisabledOverlay:
+    RequiresPower:
     Health:
-        HP: 800
+        HP: 1000
     Armor:
         Type: Medium
     RevealsShroud:
@@ -65,68 +114,174 @@ NAFLAMER:
     BodyOrientation:
         QuantizedFacings: 32
     RenderRangeCircle:
-    RenderDetectionCircle:
     Turreted:
         TurnSpeed: 10
-        InitialFacing: 300
+        InitialFacing: 85
     AttackTurreted:
     Armament@right: 
         Weapon: FireballLauncher
-        LocalOffset: 475,64,600
+        LocalOffset: 700,180,650
+        RequiresCondition: !upgrade.bluehell
     Armament@left: 
         Weapon: FireballLauncher
-        LocalOffset: 475,-64,600
+        LocalOffset: 700,-180,650
+        RequiresCondition: !upgrade.bluehell
     Armament@upgrade1: 
-        Weapon: FireballLauncher
-        LocalOffset: 475,64,600
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
+        Weapon: BlueFireballLauncher
+        LocalOffset: 700,180,650
+        RequiresCondition: upgrade.bluehell
     Armament@upgrade2: 
-        Weapon: FireballLauncher
-        LocalOffset: 475,-64,600
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
+        Weapon: BlueFireballLauncher
+        LocalOffset: 700,-180,650
+        RequiresCondition: upgrade.bluehell
     Targetable:
-        TargetTypes: Ground, Building, C4, Flameproof
+        TargetTypes: Ground, Building, C4
     AutoTarget:
     Power:
-        Amount: -15    
+        Amount: -50    
     WithSpriteTurret:
-        Recoils: no
-    GlobalUpgradable@upgrade1:
-        Upgrades: technology
-        Prerequisites: technology    
-    GlobalUpgradable@upgrade2:
-        Upgrades: industry
-        Prerequisites: industry    
-    Cloak@upgrade:
-        CloakDelay: 60
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        IsPlayerPalette: true
+        Recoils: False
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.stealth
+        Prerequisites: upgrade.stealth    
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.bluehell
+        Prerequisites: upgrade.bluehell    
+    Cloak:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 3c0
-        
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+
+NAGAT:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: Gattling Cannon
+    Buildable:
+        Queue: Defense
+        Prerequisites: anypower, nproc, ~structures.nod, ~industry
+        BuildPaletteOrder: 203
+        Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
+    Building:
+    Selectable:
+        Bounds: 40, 36, -3, -8
+    DisabledOverlay:
+    RequiresPower:
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 8c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    RenderRangeCircle:
+    AutoTarget:
+    Turreted:
+        TurnSpeed: 10
+        InitialFacing: 85
+    AttackTurreted:
+    WithSpriteTurret:
+        Recoils: True
+    Armament: 
+        Weapon: GattlingCannon
+        LocalOffset: 700,180,650, 700,-180,650
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 50
+        RecoilRecovery: 5
+    Power:
+        Amount: -50
+    WithMuzzleOverlay:
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+    ProvidesPrerequisite@buildingname:
+    
 NALASR:
     Inherits: ^Defense
     Valued:
-        Cost: 900
+        Cost: 1000
     Tooltip:
         Name: Laser Turret
-        Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Improved laser range (Technology)\n Improved laser damage (Technology)\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, nproc, naradr, ~structures.nod, ~!t1
+        Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology, ~!industry
         BuildPaletteOrder: 204
+        Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Improved laser range (Technology)\n Improved laser damage (Technology)\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
         Bounds: 40, 36, -8, -8
     DisabledOverlay:
+    RequiresPower:
+    Health:
+        HP: 1500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 11c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    RenderRangeCircle:
+    RenderDetectionCircle:
+        DrawUpdateLine: True
+    Turreted:
+        TurnSpeed: 6
+        InitialFacing: 85
+    AttackTurreted:
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.stealth
+        Prerequisites: upgrade.stealth
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.laser
+        Prerequisites: upgrade.laser
+    GrantConditionOnPrerequisite@upgrade3:
+        Condition: upgrade.tiblaser
+        Prerequisites: upgrade.tiblaser 
+    Armament@default: 
+        Weapon: LaserFire2
+        LocalOffset: 900,0,625
+        RequiresCondition: !upgrade.laser || !upgrade.tiblaser
+    Armament@laser:
+        Weapon: LaserFire2u
+        LocalOffset: 900,0,625
+        RequiresCondition: upgrade.laser && !upgrade.tiblaser
+    Armament@tiblaser: 
+        Weapon: TibLaser
+        LocalOffset: 900,0,625
+        RequiresCondition: upgrade.tiblaser && !upgrade.laser
+    WithSpriteTurret:
+        Recoils: False
+    AutoTarget:
+    Power:
+        Amount: -100
+    Cloak:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+        
+NASAM:
+    Inherits: ^Defense
+    Valued:
+        Cost: 800
+    Tooltip:
+        Name: SAM Site
+    Buildable:
+        Queue: Defense
+        Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology, ~!industry
+        BuildPaletteOrder: 205
+        Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
+    Building:
+    Selectable:
+        Bounds: 40, 36, -3, -8
+    DisabledOverlay:
+    RequiresPower:
     Health:
         HP: 1000
     Armor:
@@ -136,206 +291,153 @@ NALASR:
     BodyOrientation:
         QuantizedFacings: 32
     RenderRangeCircle:
-    RenderDetectionCircle:
-        DrawUpdateLine: true
+    AutoTarget:
     Turreted:
         TurnSpeed: 10
-        InitialFacing: 300
-        Offset: 298,-171,60
+        InitialFacing: 85
     AttackTurreted:
-    GlobalUpgradable@upgrade:
-        Upgrades: technology
-        Prerequisites: technology    
-    Armament@default: 
-        Weapon: LaserFire2
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@defaulta: 
-        Weapon: LaserFire2a
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@defaultb: 
-        Weapon: LaserFire2b
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
-    Armament@defaultc: 
-        Weapon: LaserFire2c
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMaxEnabledLevel: 0
+    WithSpriteTurret:
+        Recoils: True
+    Armament@normal:
+        Weapon: RedEye
+        LocalOffset: 400,0,900
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+        RequiresCondition: !industry
     Armament@upgrade: 
-        Weapon: LaserFire2u
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@upgradea: 
-        Weapon: LaserFire2ua
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@upgradeb: 
-        Weapon: LaserFire2ub
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@upgradec: 
-        Weapon: LaserFire2uc
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    Armament@upgraded: 
-        Weapon: LaserFire2ud
-        LocalOffset: 612,0,300
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
-    RenderVoxels:
-        Recoils: no
-    WithVoxelBarrel:
-    WithVoxelTurret:
-    AutoTarget:
+        Weapon: RedEye2
+        LocalOffset: 400,0,900, 400,128,900, 400,-128,900
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+        RequiresCondition: industry
     Power:
-        Amount: -30
-    Cloak@upgrade:
-        CloakDelay: 60
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        IsPlayerPalette: true
+        Amount: -75
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.stealth
+        Prerequisites: upgrade.stealth    
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: industry
+        Prerequisites: industry   
+    Cloak:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+    WithMuzzleOverlay:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 3c0
+        Range: 6c0
+        CloakTypes: Cloak, Underground
+    ProvidesPrerequisite@buildingname:
 
-NASAM:
+NABUNKER:
     Inherits: ^Defense
     Valued:
         Cost: 800
     Tooltip:
-        Name: S.A.M. Site
-        Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
-    Buildable:
-        Queue: Defense
-        Prerequisites: anypower, nproc, naradr, ~structures.nod, ~!t1
-        BuildPaletteOrder: 205
+        Name: Nod Bunker
     Building:
     Selectable:
         Bounds: 40, 36, -3, -8
     DisabledOverlay:
     Health:
-        HP: 800
+        HP: 1000
     Armor:
-        Type: Medium
+        Type: Heavy
     RevealsShroud:
-        Range: 18c0
-    BodyOrientation:
-        QuantizedFacings: 32
+        Range: 10c0
     RenderRangeCircle:
+    Cargo:
+        Types: Infantry
+        MaxWeight: 6
+        EjectOnDeath: True
+    AttackGarrisoned:
+        PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+        PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
+        PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
+    Targetable:
+        TargetTypes: Ground, Building, C4, Flameproof
     AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        InitialFacing: 50
-    AttackTurreted:
-    WithSpriteTurret:
-        Recoils: yes
-    Armament@normal:
-        Weapon: RedEye
-        LocalOffset: 300,0,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-        UpgradeTypes: industry
-        UpgradeMaxEnabledLevel: 0
-    Armament@upgrade: 
-        Weapon: RedEye2
-        LocalOffset: 300,0,512, 300,128,512, 300,-128,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-        UpgradeTypes: industry
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxEnabledLevel: 1
     Power:
-        Amount: -25
-    GlobalUpgradable@upgrade1:
-        Upgrades: technology
-        Prerequisites: technology    
-    GlobalUpgradable@upgrade2:
-        Upgrades: industry
-        Prerequisites: industry   
-    Cloak@upgrade:
-        CloakDelay: 60
-        UpgradeTypes: technology
-        UpgradeMinEnabledLevel: 1
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        IsPlayerPalette: true
-    WithMuzzleOverlay:
+        Amount: 0
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
 
 NAOBEL:
     Inherits: ^Defense
     Valued:
-        Cost: 2500
+        Cost: 2000
     Tooltip:
         Name: Obelisk of Light
-        Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 206
-        Prerequisites: anypower, nproc, naradr, natech, ~structures.nod, ~!t1, ~!t2
+        Prerequisites: anypower, napyra, ~structures.nod, ~!t1, ~!t2, ~ideology
+        Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx
         Dimensions: 2,2
     Selectable:
-        Bounds: 88, 74, 0, -14
+        Bounds: 88, 130, 0, -36
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 2000
+        HP: 3000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 15c0
-    Armament:
+    Armament@normalA:
         Weapon: LaserFire
-        LocalOffset: 1400,210,800
-        MuzzleSequence: muzzle
+        LocalOffset: 3150,-450,800
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.tiblaser || !upgrade.laser
+    Armament@tibA:
+        Weapon: LaserFireTib
+        LocalOffset: 3150,-450,800
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.tiblaser && !upgrade.laser
+    Armament@upgradeA:
+        Weapon: LaserFireUpgrade
+        LocalOffset: 3150,-450,800
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.laser && !upgrade.tiblaser
     AttackCharge:
-        ChargeAudio: obelpowr.aud
-        InitialChargeDelay: 60
+        ChargeAudio: obelcharge01.aud
+        InitialChargeDelay: 70
     WithChargeOverlay:
         Sequence: active
         Palette: player
-        IsPlayerPalette: true
+        IsPlayerPalette: True
     AutoTarget:
     RenderRangeCircle:
     WithIdleOverlay@LIGHTS:
+        PauseOnLowPower: True
         Sequence: idle-lights
     Power:
         Amount: -150
     WithMuzzleOverlay:
+    GrantConditionOnPrerequisite@tiblaser:
+        Condition: upgrade.tiblaser
+        Prerequisites: upgrade.tiblaser
+    GrantConditionOnPrerequisite@laser:
+        Condition: upgrade.laser
+        Prerequisites: upgrade.laser
 
 NAPULS:
     Inherits: ^Defense
     Valued:
         Cost: 2000
     Tooltip:
-		Name: E.M. Pulse Cannon
-		Description: Disables mechanical units in an area.\nRequires power to operate.
+        Name: E.M. Pulse Cannon
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 207
-        Prerequisites: natech, ~structures.nod, ~!t1, ~!t2, ~!t3
+        Prerequisites: napyra, ~technology, ~!industry, ~!propaganda
+        Description: Disables mechanical units in an area.\nRequires power to operate.
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -344,7 +446,7 @@ NAPULS:
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 1000
+        HP: 2000
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -355,30 +457,31 @@ NAPULS:
     AttackTurreted:
     Armament:
         Weapon: EMPulseCannon
-		LocalOffset: 150,0,1250
-		LocalYaw: 0,100
+        LocalOffset: 150,0,1250
+        LocalYaw: 0,100
     -AutoTarget:
     RenderRangeCircle:
     WithSpriteTurret:
         Sequence: turret
     Power:
         Amount: -150
-
-	ProvidesPrerequisite@gdi:
-		Prerequisite: emp.gdi
-		Factions: gdi
-		ResetOnOwnerChange: true
-	ProvidesPrerequisite@nod:
-		Prerequisite: emp.nod
-		Factions: nod
-		ResetOnOwnerChange: true
-	AttackOrderPower@nod:
-		Cursor: emp
-		Icon: emp
-		ChargeTime: 135
-		Description: E.M. Pulse
-		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
-		EndChargeSpeechNotification: EmPulseCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		#Prerequisites: emp.nod
-		OrderName: Nodemp
+    ProvidesPrerequisite@gdi:
+        Prerequisite: emp.gdi
+        Factions: gdi
+        ResetOnOwnerChange: True
+    ProvidesPrerequisite@nod:
+        Prerequisite: emp.nod
+        Factions: nod
+        ResetOnOwnerChange: True
+	RejectsOrders:
+		Except: Stop
+    AttackOrderPower@nod:
+        Cursor: emp
+        Icon: emp
+        ChargeTime: 60
+        Description: E.M. Pulse
+        LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+        EndChargeSpeechNotification: EmPulseCannonReady
+        SelectTargetSpeechNotification: SelectTarget
+        #Prerequisites: emp.nod
+        OrderName: Nodemp

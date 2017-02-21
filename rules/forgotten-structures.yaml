@@ -9,33 +9,33 @@ FACNST:
         BuildPaletteOrder: 400
         Prerequisites: ~disabled
         Adjacent: 8
+        Description: Builds base structures.
     Health:
-        HP: 2000
+        HP: 4000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 10c0
     Production:
         Produces: Building,Defense
-#    ProductionQueue@Building:
-#        Type: Building
-#        Group: Building
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
-#    ProductionQueue@Defense:
-#        Type: Defense
-#        Group: Defense
-#        BuildSpeed: 40
-#        LowPowerSlowdown: 3
-#        QueuedAudio: Building
-#        ReadyAudio: ConstructionComplete
+    ProductionQueue@Building:
+        Type: Building
+        Group: Building
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
+    ProductionQueue@Defense:
+        Type: Defense
+        Group: Defense
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+        QueuedAudio: Building
+        ReadyAudio: ConstructionComplete
     Valued:
         Cost: 2500
     Tooltip:
         Name: Forgotten Construction Yard
-        Description: Builds base structures.
     -Sellable:
     BaseBuilding:
     Transforms:
@@ -43,6 +43,7 @@ FACNST:
         Offset: 1,1
         Facing: 96
         DeployCursor: undeploy
+    ProvidesRadar:
     ProductionBar@Building:
         ProductionType: Building
     ProductionBar@Defense:
@@ -60,6 +61,8 @@ FACNST:
         Bounds: 144, 80, 0, -12
     ProvidesPrerequisite@forgotten:
         Prerequisite: structures.forgotten
+    BaseProvider:
+        Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
 
@@ -69,11 +72,11 @@ FAPOWR:
         Queue: Building
         BuildPaletteOrder: 401
         Prerequisites: ~structures.forgotten
+        Description: Provides power for other structures.
     Valued:
         Cost: 300
     Tooltip:
         Name: Forgotten Power Plant
-        Description: Provides power for other structures.
     ProvidesPrerequisite:
         Prerequisite: anypower
     Building:
@@ -88,7 +91,7 @@ FAPOWR:
     Health:
         HP: 1000
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 4c0
     Power:
@@ -110,28 +113,29 @@ FPROC:
         Queue: Building
         BuildPaletteOrder: 402
         Prerequisites: anypower, ~structures.forgotten
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1500$.
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Forgotten Refinery
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1500$.
     Building:
         Footprint: xxxxx= xxxxx= xxxx==
         Dimensions: 6,3
     InfiltrateForCash:
         Percentage: 50
         Minimum: -1
+        Maximum: 1000
     Selectable:
         Bounds: 160, 96, -5, -25
     GivesBuildableArea:
     Health:
-        HP: 1800
+        HP: 1700
     Armor:
-        Type: Heavy
+        Type: Medium
     TiberianSunRefinery:
         DockAngle: 160
         DockOffset: 5,0
-        DiscardExcessResources: true
+        DiscardExcessResources: True
     StoresResources:
         PipColor: Green
         PipCount: 15
@@ -161,63 +165,25 @@ FPROC:
         Sequence: idle-smoke3
         Palette: player50alpha
     CustomSellValue:
-        Value: 250
+        Value: 500
     Power:
-        Amount: -30
+        Amount: -50
+    Explodes:
+        Weapon: TiberiumExplosionForgRef
+        EmptyWeapon: TiberiumExplosionForgRef
     ProvidesPrerequisite@buildingname:
-    CustomBuildTimeValue:
-        Value: 1860
-    
-FASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 403
-        Prerequisites: fproc, ~structures.forgotten
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Forgotten Silo
-        Description: Stores excess Tiberium.\n\nStores 500$.
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 500
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-    WithSiloAnimation:
-    WithIdleOverlay@UNDERLAY:
-        Sequence: idle-underlay
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    StoresResources:
-        PipCount: 5
-        Capacity: 500
-    Power:
-        Amount: -10    
-        
+
 FABAR:
     Inherits: ^Building
     Buildable:
         Queue: Building
         BuildPaletteOrder: 404
         Prerequisites: anypower, ~structures.forgotten
+        Description: Produces infantry.
     Valued:
-        Cost: 300
+        Cost: 500
     Tooltip:
         Name: Forgotten Barracks
-        Description: Produces infantry.
     ProvidesPrerequisite:
         Prerequisite: barracks
     Building:
@@ -226,7 +192,7 @@ FABAR:
     Selectable:
         Bounds: 88, 56, 0, -8
     Health:
-        HP: 1000
+        HP: 800
     Armor:
         Type: Medium
     RevealsShroud:
@@ -234,18 +200,19 @@ FABAR:
     RallyPoint:
         Offset: 2,3
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     Exit@1:
         SpawnOffset: -256,1024,0
         ExitCell: 2,2
+    ExitsDebugOverlay:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
     Production:
-        Produces: Infantry
+        Produces: Infantry.Forg
     ProductionQueue@Infantry:
-        Type: Infantry
+        Type: Infantry.Forg
         Group: Infantry
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -254,16 +221,7 @@ FABAR:
     DisabledOverlay:
     ProductionBar:
     Power:
-        Amount: -20
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
+        Amount: -35
     ProvidesPrerequisite@buildingname:
         
 FAWEAP:
@@ -272,13 +230,13 @@ FAWEAP:
         Cost: 2000
     Tooltip:
         Name: Forgotten War Factory
-        Description: Produces vehicles.
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
         Queue: Building
         BuildPaletteOrder: 405
         Prerequisites: anypower, fproc, ~structures.forgotten
+        Description: Produces vehicles.
     Building:
         Footprint: xxx xxx xx= xx=
         Dimensions: 3,4
@@ -287,23 +245,24 @@ FAWEAP:
     Health:
         HP: 1500
     Armor:
-        Type: Heavy
+        Type: Medium
     RevealsShroud:
         Range: 4c0
     RallyPoint:
         Offset: 4,1
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     Exit@1:
         SpawnOffset: -384,-384,0
         ExitCell: 3,1
         ExitDelay: 5
+    ExitsDebugOverlay:
     Production:
-        Produces: Vehicle
+        Produces: Vehicle.Forg
     ProductionQueue@Vehicle:
-        Type: Vehicle
+        Type: Vehicle.Forg
         Group: Vehicle
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -331,19 +290,8 @@ FAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -30
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
+        Amount: -75
     ProvidesPrerequisite@buildingname:
-    CustomBuildTimeValue:
-        Value: 1860
 
 FARADR:
     Inherits: ^BuildingInfiltrate
@@ -351,11 +299,11 @@ FARADR:
         Queue: Building
         BuildPaletteOrder: 406
         Prerequisites: anypower, fproc, ~structures.forgotten
+        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
     Valued:
-        Cost: 1000
+        Cost: 1500
     Tooltip:
         Name: Forgotten Radar
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
     ProvidesPrerequisite:
         Prerequisite: radar
     Building:
@@ -366,7 +314,7 @@ FARADR:
     Health:
         HP: 1200
     Armor:
-        Type: Medium
+        Type: Light
     RequiresPower:
     CanPowerDown:
         IndicatorPalette: mouse
@@ -377,21 +325,20 @@ FARADR:
     InfiltrateForExploration:
     DetectCloaked:
         Range: 10
-    RenderDetectionCircle:
     RevealsShroud:
-        Range: 10c0
-#    WithIdleOverlay@DISH1:
-#        Sequence: idle-dish1
-#        PauseOnLowPower: yes
+        Range: 20c0
+    WithIdleOverlay@DISH1:
+        Sequence: idle-dish1
+        PauseOnLowPower: True
     WithIdleOverlay@DISH2:
         Sequence: idle-dish2
-        PauseOnLowPower: yes
+        PauseOnLowPower: True
     WithIdleOverlay@DISH3:
         Sequence: idle-dish3
-        PauseOnLowPower: yes
+        PauseOnLowPower: True
     WithIdleOverlay@LIGHT:
         Sequence: idle-light
-        PauseOnLowPower: yes
+        PauseOnLowPower: True
     Targetable:
         TargetTypes: Ground, C4, SpyInfiltrate
     Power:
@@ -408,37 +355,37 @@ FHOVEL:
         Queue: Building
         BuildPaletteOrder: 407
         Prerequisites:  anypower, fabar, ~structures.forgotten, ~!t1
+        Description: Gives access to the army expander.\nPromotes new infantry to veterancy rank 1.
     Valued:
-        Cost: 1000
+        Cost: 500
     Tooltip:
         Name: Clan Hovel
-        Description: Gives access to the army expander.\nPromotes new infantry to veterancy rank 1.
     Building:
         Footprint: xxx xxx xxx xxx
         Dimensions: 3,4
     Selectable:
         Bounds: 88, 56, 0, -8
     Health:
-        HP: 1600
+        HP: 1000
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 5c0
     Power:
-        Amount: -20
-    Production:
-        Produces: Tech
-        MoveIntoWorld: false
-    Exit:
-    ProductionBar@Tech:
-        ProductionType: Tech
+        Amount: -50
+    Production@Tech:
+        Produces: Tech.Forg
+        MoveIntoWorld: False
     ProductionQueue@Tech:
-        Type: Tech
+        Type: Tech.Forg
         Group: Tech
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    Exit:
+    ExitsDebugOverlay:
+    ProductionBar:
     CanPowerDown:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
@@ -446,19 +393,19 @@ FHOVEL:
     DisabledOverlay:
     ProvidesPrerequisite:
         Prerequisite: barracks.upgraded
-    ProvidesPrerequisite@buildingname:    
+    ProvidesPrerequisite@buildingname: 
 
 FAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1500
+        Cost: 1000
     Tooltip:
         Name: Forgotten Helipad
-        Description: Produces, rearms and\nrepairs aircraft.
     Buildable:
         BuildPaletteOrder: 408
         Queue: Building
         Prerequisites: anypower, faradr, ~structures.forgotten, ~!t1
+        Description: Produces, rearms and\nrepairs aircraft.
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -472,13 +419,13 @@ FAHPAD:
         SpawnOffset: 0,-256,0
     RallyPoint:
         Palette: mouse
-        IsPlayerPalette: false
+        IsPlayerPalette: False
     ProductionFromMapEdge:
-        Produces: Air
+        Produces: Air.Forg
     ProductionQueue@Air:
-        Type: Air
+        Type: Air.Forg
         Group: Air
-        BuildSpeed: 40
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -490,20 +437,12 @@ FAHPAD:
         HpPerStep: 10
         Interval: 10
         FinishRepairingNotification: UnitRepaired
+        PlayerExperience: 15
     ProductionBar:
     Power:
-        Amount: -10
+        Amount: -50
     Selectable:
         Bounds: 88, 66, 0, -5
-    WithDecoration@primary:
-        RequiresSelection: true
-        Image: pips
-        Sequence: tag-primary
-		Palette: pips
-		ReferencePoint: Center
-        ZOffset: 256
-        UpgradeTypes: primary
-        UpgradeMinEnabledLevel: 1
     ProvidesPrerequisite@buildingname:
         
 FATRADE:
@@ -512,11 +451,11 @@ FATRADE:
         Queue: Building
         BuildPaletteOrder: 409
         Prerequisites:  anypower, fabar, faradr, fhovel, ~structures.forgotten, ~!t1, ~!t2
+        Description: Gives access to the Forgotten advanced tech.
     Valued:
-        Cost: 2000
+        Cost: 4000
     Tooltip:
         Name: Trade Post
-        Description: Gives access to the Forgotten advanced tech.
     Building:
         Footprint: xxxxx xxxxx xxxxx xxxxx xxxxx
         Dimensions: 5,5
@@ -529,8 +468,8 @@ FATRADE:
     RevealsShroud:
         Range: 5c0
     Power:
-        Amount: -40
+        Amount: -100
     ProvidesPrerequisite@buildingname:
-    CashTrickler:
-        Period: 50
-        Amount: 10
+#    CashTrickler:
+#        Period: 50
+ #       Amount: 10

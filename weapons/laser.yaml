@@ -1,28 +1,33 @@
-# Laser Rocketeer
+# Laser Shadow
 InfLaserFire:
     Inherits: ^BasicLaser
-    ReloadDelay: 60
-    Range: 5c512
-    MinRange: 1c512
-    Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-    ValidTargets: Ground, Air, HighAir
+    ReloadDelay: 160
+    Range: 10c0
+    MinRange: 4c0
+    Report: laserpulse.aud
+    ValidTargets: Ground, Air
     Projectile: LaserZap
-        Color: 640000 
+        Color: C80000
         Width: 30
-        BeamDuration: 5
+        BeamDuration: 20
         ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, HighAir
         Spread: 42
-        Damage: 60
+        Damage: 300
         Versus:
-            Infantry: 50
+            Infantry: 200
+            Cyborg: 100
             Vehicle: 100
-            Aircraft: 200
-            Building: 100
+            Aircraft: 50
+            Building: 25
             Light: 100
-            Medium: 100
-            Heavy: 50
+            Medium: 80
+            Heavy: 70
+        ValidTargets: Ground, Air
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -34,252 +39,120 @@ InfLaserFire:
         ExplosionPalette: player50alpha
         ValidImpactTypes: Air, AirHit
         
-InfLaserFirea:
-    ReloadDelay: 60
-    Range: 5c512
-    MinRange: 1c512
-    Projectile: LaserZap
-        Color: C80000 
-        Width: 35
-        BeamDuration: 40
-        ZOffset: 2057
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-      
-InfLaserFireb:
-    ReloadDelay: 60
-    Range: 5c512
-    MinRange: 1c512
-    Projectile: LaserZap
-        Color: FF0000 
-        Width: 25
-        BeamDuration: 40
-        ZOffset: 2067
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-     
-InfLaserFirec:
-    ReloadDelay: 60
-    Range: 5c512
-    MinRange: 1c512
-    Projectile: LaserZap  
-        Color: FF8000 
-        Width: 15
-        BeamDuration: 40
-        ZOffset: 2077
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        
-# Laser turret
+# Laser turret tib upgraded
 TibLaser:
-    Inherits: ^TiberiumLaser
-    ReloadDelay: 40
-    Range: 5c512
-    Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
+    Inherits: ^BasicLaser
+    ReloadDelay: 45
+    Burst: 3
+    BurstDelay: 10
+    Range: 6c512
+    Report: bigggun1.aud
     ValidTargets: Ground
     Projectile: LaserZap
-        Color: 00FF00
-        Width: 30
-        BeamDuration: 5
-        ZOffset: 2047
+        Color: FFFFFF
+        Width: 20
+        BeamDuration: 15
+        ZOffset: 2057
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 100
+        Damage: 200
     Warhead@2Eff: CreateEffect
-        Explosions: piff
+        Explosions: protonexpl_tiny
+        ExplosionPalette: effect50alpha
         ImpactSounds: bursterhit01.aud #plasmaexplo02.aud
         InvalidImpactTypes: Water, Air, AirHit
     Warhead@3Smu: LeaveSmudge
         SmudgeType: SmallScorch
-        
-# Laser Turret
+
+# Laser Turret basic
 LaserFire2:
     Inherits: ^BasicLaser
-    ReloadDelay: 80
-    Range: 6c512
+    ReloadDelay: 55
+    Range: 7c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
     Projectile: LaserZap
-        Color: 640000 
+        Color: C80000
         Width: 40
         BeamDuration: 40
         ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 200
         Versus:
             Infantry: 100
-            Vehicle: 200
-            Aircraft: 0
-            Building: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
             Light: 100
-            Medium: 200
-            Heavy: 50
+            Medium: 80
+            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
         InvalidImpactTypes: Water
     Warhead@3Smu: LeaveSmudge
         SmudgeType: SmallScorch
-        
-LaserFire2a:
-    ReloadDelay: 80
-    Range: 6c512
-    Projectile: LaserZap
-        Color: C80000 
-        Width: 35
-        BeamDuration: 40
-        ZOffset: 2057
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-      
-LaserFire2b:
-    ReloadDelay: 80
-    Range: 6c512
-    Projectile: LaserZap
-        Color: FF0000 
-        Width: 25
-        BeamDuration: 40
-        ZOffset: 2067
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-     
-LaserFire2c:
-    ReloadDelay: 80
-    Range: 6c512
-    Projectile: LaserZap  
-        Color: FF8000 
-        Width: 15
-        BeamDuration: 40
-        ZOffset: 2077
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
 
-# Laser gun upgraded
+# Laser gun techno upgraded
 LaserFire2u:
     Inherits: LaserFire2
-    ReloadDelay: 80
-    Range: 7c512
+    Range: 8c512
+    ReloadDelay: 35
+    Projectile: LaserZap
+        Color: C80000
+        Width: 55
+        BeamDuration: 40
+        ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFF200
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 250
-        
-LaserFire2ua:
-    ReloadDelay: 80
-    Range: 7c512
-    Projectile: LaserZap
-        Color: C80000 
-        Width: 35
-        BeamDuration: 40
-        ZOffset: 2057
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-      
-LaserFire2ub:
-    ReloadDelay: 80
-    Range: 7c512
-    Projectile: LaserZap
-        Color: FF0000 
-        Width: 25
-        BeamDuration: 40
-        ZOffset: 2067
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-     
-LaserFire2uc:
-    ReloadDelay: 80
-    Range: 7c512
-    Projectile: LaserZap  
-        Color: FF8000 
-        Width: 15
-        BeamDuration: 40
-        ZOffset: 2077
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-      
-LaserFire2ud:
-    ReloadDelay: 80
-    Range: 7c512
-    Projectile: LaserZap
-        Color: FFF200 
-        Width: 10
-        BeamDuration: 40
-        ZOffset: 2087
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-                
+        Damage: 300
+
 CheetahLaserFire:
     Inherits: LaserFire2
     ReloadDelay: 120
-    Range: 6c512
+    Range: 8c0
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 150
         
-CheetahLaserFirea:
-    ReloadDelay: 120
-    Range: 6c512
-    Projectile: LaserZap
-        Color: C80000 
-        Width: 35
-        BeamDuration: 40
-        ZOffset: 2057
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-      
-CheetahLaserFireb:
-    ReloadDelay: 120
-    Range: 6c512
-    Projectile: LaserZap
-        Color: FF0000 
-        Width: 25
-        BeamDuration: 40
-        ZOffset: 2067
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-     
-CheetahLaserFirec:
-    ReloadDelay: 120
-    Range: 6c512
-    Projectile: LaserZap  
-        Color: FF8000 
-        Width: 15
-        BeamDuration: 40
-        ZOffset: 2077
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        
  # Obelisk laser
 LaserFire:
     Inherits: ^BasicLaser
-    ReloadDelay: 120
+    ReloadDelay: 90
     Range: 10c512
-    Report: obelray1.aud
     Projectile: LaserZap
+        Color: C80000
         Width: 50
+        ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 400
+        Damage: 800
         Versus:
             Infantry: 100
-            Vehicle: 200
-            Aircraft: 0
-            Building: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
             Light: 100
-            Medium: 200
-            Heavy: 100
+            Medium: 80
+            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -287,132 +160,183 @@ LaserFire:
     Warhead@3Eff: CreateEffect
         Explosions: large_flash
         ExplosionPalette: light
-       
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+		
+LaserFireM:
+	Inherits: LaserFire
+	Report: obelray1.aud
+	Burst: 2
+	BurstDelay: 10
+LaserFireME:
+	Inherits: LaserFireM
+	Projectile: LaserZap
+		Color: 000074
+		Width: 50
+		ZOffset: 2047
+		SecondaryBeam: true
+		SecondaryBeamWidth: 20
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 0000FF
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+LaserFireME1:
+	Inherits: LaserFireME
+	Burst: 1
+
+ # Obelisk laser
+LaserFireTib:
+    Inherits: ^BasicLaser
+    ReloadDelay: 90
+    Range: 10c512
+    Report: obelray1.aud
+    Projectile: LaserZap
+        Color: 00FF00
+        Width: 50
+        ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 1200
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
+            Light: 100
+            Medium: 80
+            Heavy: 70
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_tiny
+        ExplosionPalette: effect50alpha
+        ImpactSounds: bursterhit01.aud
+        InvalidImpactTypes: Water
+    Warhead@3Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light
+
+ # Obelisk laser
+LaserFireUpgrade:
+    Inherits: ^BasicLaser
+    ReloadDelay: 90
+    Range: 10c512
+    Report: obelray1.aud
+    Projectile: LaserZap
+        Color: C80000
+        Width: 50
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFF200
+    Warhead@1Dam: SpreadDamage
+        Spread: 512
+        Damage: 800
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
+            Light: 100
+            Medium: 80
+            Heavy: 70
+    Warhead@2Eff: CreateEffect
+        Explosions: scexplo
+        ExplosionPalette: effect50alpha
+        InvalidImpactTypes: Water
+    Warhead@3Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light
+        
 # Venom Laser
 AirLaserFire:
     Inherits: ^BasicLaser
     ReloadDelay: 40
-    Range: 8c0
-    MinRange: 1c0
+    Range: 6c0
+	MinRange: 1c0
     Burst: 2
     BurstDelay: 10
-    Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-    ValidTargets: Ground, Air
-    Projectile: LaserZap
-        Width: 30
-        BeamDuration: 5
-        ZOffset: 2047
-    Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air
-        Spread: 42
-        Damage: 60
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: plasmaexpl2
-        ExplosionPalette: player50alpha
-        InvalidImpactTypes: Water
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-    Warhead@4EffAir: CreateEffect
-        Explosions: lasershot1
-        ExplosionPalette: player50alpha
-        ValidImpactTypes: Air, AirHit
-        
-RavenLaserFire:
-    Inherits: ^BasicLaser
-    ReloadDelay: 60
-    Range: 12c512
-    Burst: 4
-    BurstDelay: 15
-    Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-    ValidTargets: Ground, Air, HighAir
-    Projectile: LaserZap
-        Width: 30
-        BeamDuration: 8
-        ZOffset: 2047
-    Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, HighAir
-        Spread: 42
-        Damage: 80
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: plasmaexpl2
-        ExplosionPalette: player50alpha
-        InvalidImpactTypes: Water
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-    Warhead@4EffAir: CreateEffect
-        Explosions: lasershot1
-        ExplosionPalette: player50alpha
-        ValidImpactTypes: Air, AirHit
-        
-# Wyvern Laser
-WyvernLaserFire:
-    Inherits: ^BasicLaser
-    ReloadDelay: 100
-    Range: 8c512
-    Burst: 10
-    BurstDelay: 4
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground
     Projectile: LaserZap
         Width: 30
-        BeamDuration: 3
+        BeamDuration: 5
         ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground
         Spread: 42
-        Damage: 20
+        Damage: 30
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
-        InvalidImpactTypes: Water
+        ImpactSounds: bursterhit01.aud #plasmaexplo02.aud
+        InvalidImpactTypes: Water, Air, AirHit
     Warhead@3Smu: LeaveSmudge
         SmudgeType: SmallScorch
     Warhead@4EffAir: CreateEffect
         Explosions: lasershot1
         ExplosionPalette: player50alpha
         ValidImpactTypes: Air, AirHit
-        
-# FON laser
-FistFire:
+
+# Hydra Laser
+HydraLaserFire:
     Inherits: ^BasicLaser
-    ReloadDelay: 120
-    Range: 10c512
-    Burst: 2
-    Delay: 10
-    Report: obelray1.aud
+    ReloadDelay: 90
+    Range: 6c0
+	MinRange: 1c0
+    Burst: 4
+    BurstDelay: 10
+    Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
+    ValidTargets: Ground
     Projectile: LaserZap
-        Width: 50
+        Width: 30
+        BeamDuration: 5
+        ZOffset: 2047
+        Color: FFFFFF
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
+        ValidTargets: Ground
         Spread: 42
-        Damage: 250
+        Damage: 50
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-        ExplosionPalette: player50alpha
+        Explosions: tpiff
         InvalidImpactTypes: Water
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: SmallScorch
 
 AvatarLaser:
     Inherits: ^BasicLaser
-    ReloadDelay: 90
-    Range: 8c512
+    ReloadDelay: 130
+    Range: 8c0
     Report: obelray1.aud
     Projectile: LaserZap
-        Color: 0064FF
+        Color: C80000
         Width: 50
-        BeamDuration: 5
+        BeamDuration: 20
         ZOffset: 2047
-        UsePlayerColor: true
+        UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
-        Spread: 512
-        Damage: 250
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 200
-            Heavy: 100
+        Spread: 0c128
+        Damage: 500
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: scexplo
@@ -424,49 +348,78 @@ AvatarLaser:
     Warhead@5Eff: CreateEffect
         Explosions: large_flash
         ExplosionPalette: light
-        
-# Scarab laser
-StingFire:
+
+AvatarLaserE:
+	Inherits: AvatarLaser
+	Projectile: LaserZap
+		Color: 000074
+		SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 0000FF
+	Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+	
+TripodLaser:
     Inherits: ^BasicLaser
-    ReloadDelay: 90
-    Range: 8c512
-    Report: obelray1.aud
+    ReloadDelay: 40
+    Burst: 3
+    BurstDelay: 30
+    Range: 7c0
+    Report: tripodlaser1.aud, tripodlaser2.aud, tripodlaser3.aud, tripodlaser4.aud, tripodlaser5.aud, tripodlaser6.aud, tripodlaser7.aud, tripodlaser8.aud
     Projectile: LaserZap
-        Color: 0064FF
+        Color: 9370ff
         Width: 50
-        BeamDuration: 5
+        BeamDuration: 50
         ZOffset: 2047
-        UsePlayerColor: true
+        UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
-        Spread: 512
-        Damage: 350
+        Spread: 0c128
+        Damage: 150
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
-        Explosions: scexplo
+        Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
-        ImpactSounds: expnew06.aud
         InvalidImpactTypes: Water
+        ImpactSounds: bursterhit01.aud
     Warhead@4Smu: LeaveSmudge
-        SmudgeType: LargeScorch
+        SmudgeType: MediumScorch
     Warhead@5Eff: CreateEffect
-        Explosions: large_flash
+        Explosions: medium_flash
         ExplosionPalette: light
-        
+
 # Obelisk laser
 CabalObeliskLaser:
-    Inherits: ^PlasmaLaser
-    ReloadDelay: 120
-    Range: 10c512
+    Inherits: ^BasicLaser
+    ReloadDelay: 80
+    Range: 12c512
     Report: cablaser01.aud
     Projectile: LaserZap
         Color: 0064FF
         Width: 50
-        BeamDuration : 20
+        BeamDuration: 20
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 500
+        Damage: 900
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
@@ -478,24 +431,28 @@ CabalObeliskLaser:
     Warhead@4Eff: CreateEffect
         Explosions: large_flash
         ExplosionPalette: light
-        
+
 # Darkness laser
 CabalObeliskLaserAA:
-    Inherits: ^PlasmaLaser
+    Inherits: ^BasicLaser
     ReloadDelay: 120
-    Range: 16c0
+    Range: 13c0
     Report: cablaser01.aud
-    ValidTargets: Air, HighAir
+    ValidTargets: Air, MidAir, HighAir
     Projectile: LaserZap
         Color: 0064FF
         Width: 50
-        BeamDuration : 20
+        BeamDuration: 20
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Air, HighAir
+        ValidTargets: Air, MidAir, HighAir
         Spread: 0c512
-        Damage: 500
+        Damage: 800
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02
@@ -511,21 +468,23 @@ CabalObeliskLaserAA:
         ExplosionPalette: light
 
 TarantulaLaser:
-    Inherits: ^PlasmaLaser
-    ReloadDelay: 120
+    Inherits: ^BasicLaser
+    ReloadDelay: 60
     Range: 7c0
     Burst: 2
     BurstDelay: 0
     Report: cablaser01.aud, bigggun1.aud
-    ValidTargets: Ground
     Projectile: LaserZap
         Color: 0064FF
         Width: 30
-        BeamDuration : 20
+        BeamDuration: 20
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground
         Spread: 42
         Damage: 30
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
@@ -539,25 +498,29 @@ TarantulaLaser:
     Warhead@4Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light
-        
+
 TarantulaLaserAA:
-    Inherits: ^PlasmaLaser
-    ReloadDelay: 120
-    Range: 10c0
+    Inherits: ^BasicLaser
+    ReloadDelay: 90
+    Range: 12c0
     Burst: 2
     BurstDelay: 0
     Report: cablaser01.aud
-    ValidTargets: Air, HighAir
+    ValidTargets: Air, MidAir
     Projectile: LaserZap
         Color: 0064FF
         Width: 30
-        BeamDuration : 20
+        BeamDuration: 20
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Air, HighAir
+        ValidTargets: Air, MidAir
         Spread: 42
-        Damage: 50
+        Damage: 100
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02
@@ -574,36 +537,41 @@ TarantulaLaserAA:
 
 # Laser turret Sesno
 LaserFire3:
-    Inherits: ^PlasmaLaser
-    ReloadDelay: 100
+    Inherits: ^BasicLaser
+    ReloadDelay: 70
     Range: 7c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
-    Burst: 10
+    Burst: 5
     BurstDelay: 20
     Projectile: LaserZap
         Color: 0064FF
         Width: 40
         BeamDuration: 10
         ZOffset: 2047
-        UsePlayerColor: true
+        UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 50
         Versus:
-            Infantry: 300
+            Infantry: 150
+            Cyborg: 100
             Vehicle: 50
-            Aircraft: 50
-            Building: 25
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Aircraft: 100
+            Building: 70
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@3Eff: CreateEffect
         Explosions: piff
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: SmallScorch
-        
+
 # Skirmisher Laser
 SkirmishLaserFire:
     Inherits: ^BasicLaser
@@ -619,10 +587,14 @@ SkirmishLaserFire:
         Width: 30
         BeamDuration: 5
         ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground, Air
         Spread: 42
-        Damage: 20
+        Damage: 35
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
@@ -634,21 +606,25 @@ SkirmishLaserFire:
         
 # Harbinger Laser
 HarbingerLaserFire:
-    Inherits: ^PlasmaLaser
+    Inherits: ^BasicLaser
     ReloadDelay: 120
     Range: 7c512
     Burst: 3
     BurstDelay: 5
     Report: bigggun1.aud
-    ValidTargets: Ground, Air, HighAir
+    ValidTargets: Ground, Air, MidAir
     Projectile: LaserZap
         Color: 0064FF
         Width: 20
         BeamDuration: 10
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, HighAir
+        ValidTargets: Ground, Air, MidAir
         Spread: 42
         Damage: 100
         DamageTypes: Prone200Percent, TriggerProne, EnergyDeath
@@ -662,19 +638,25 @@ HarbingerLaserFire:
         InvalidImpactTypes: Air, AirHit, Water
 
 GargantuaLaser:
-    Inherits: ^PlasmaLaser
+    Inherits: ^BasicLaser
     ReloadDelay: 70
     Range: 7c0
     Burst: 8
     BurstDelay: 5
     Report: cablaser01.aud
+    ValidTargets: Ground, Air, MidAir
     Projectile: LaserZap
         Color: 0064FF
         Width: 50
-        BeamDuration : 20
+        BeamDuration: 20
         ZOffset: 2047
         UsePlayerColor: false
+        SecondaryBeam: true
+        SecondaryBeamWidth: 15
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
+        ValidTargets: Ground, Air, MidAir
         Spread: 42
         Damage: 80
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath

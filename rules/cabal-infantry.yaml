@@ -2,14 +2,14 @@ HUSK:
     Inherits@1: ^Cyborg
     Inherits@2: ^HuskUpgrades
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 300
-        Prerequisites: ~cybbar, ~!upgrade.es
+        Prerequisites: ~cybbar
+        Description: Role : General-purpose infantry\nHP: 250\nArmor: Medium\nSpeed: 50\nViewrange: 8\nGood vs: Infantry\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
     Valued:
-        Cost: 150
+        Cost: 200
     Tooltip:
         Name: Husk
-        Description: General-purpose infantry.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
         Class: Husk
@@ -17,13 +17,13 @@ HUSK:
         VoiceSet: Husk
         Volume: 2
     Health:
-        HP: 100
+        HP: 250
     Armor:
         Type: Medium
     Mobile:
-        Speed: 50
+        Speed: 40
     RevealsShroud:
-        Range: 8c0
+        Range: 6c0
     Armament@PRIMARY:
         Weapon: HuskGun
         LocalOffset: 300,0,600
@@ -39,30 +39,21 @@ HUSK:
         MuzzlePalette: apolra50alpha
     AttackFrontal:
     WithMuzzleOverlay:
-    
-HUSK2:
-    Inherits@1: HUSK
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 300
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: HUSK
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    SoundOnDamageTransition:
+        DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
 
 HHUSK:
     Inherits@1: ^Cyborg
     Inherits@2: ^HuskUpgrades
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 301
-        Prerequisites: ~cybbar, ~!upgrade.es
+        Prerequisites: ~cybbar
+        Description: Role : Basic Anti-Armor infantry\nHP: 200\nArmor: Medium\nSpeed: 50\nViewrange: 9\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
     Valued:
         Cost: 250
     Tooltip:
         Name: Cannon Husk
-        Description: Anti-Armor infantry.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n Strong vs Buildings, Light armor, Medium armor\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
         Class: HHusk
@@ -70,13 +61,13 @@ HHUSK:
         VoiceSet: Husk
         Volume: 2
     Health:
-        HP: 150
+        HP: 200
     Armor:
         Type: Medium
     Mobile:
-        Speed: 50
+        Speed: 40
     RevealsShroud:
-        Range: 9c0
+        Range: 7c0
     Armament@PRIMARY:
         Weapon: PlasmaGun
         LocalOffset: 300,140,768
@@ -90,30 +81,21 @@ HHUSK:
         MuzzlePalette: effect50alpha
     AttackFrontal:
     WithMuzzleOverlay:
-    
-HHUSK2:
-    Inherits@1: HHUSK
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 301
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: HHUSK
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    SoundOnDamageTransition:
+        DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
 
 CYBSPY:
     Inherits@1: ^Cyborg
-    Inherits@2: ^CyborgUpgrades
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 303
-        Prerequisites: ~cybbar, ~!upgrade.es
+    Inherits@2: ^HuskUpgrades
+#    Buildable:
+#        Queue: Infantry.Cabal
+#        BuildPaletteOrder: 306
+#        Prerequisites: ~cybbar, karadr
+#        Description: Role : Scout\nHP: 200\nArmor: Medium\nSpeed: 60\nViewrange: 12\nUseless vs: Anything\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Invisibility
     Valued:
         Cost: 400
     Tooltip:
         Name: Informer
-        Description: Stealthed infiltrator unit.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Unarmed
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-9
@@ -122,100 +104,81 @@ CYBSPY:
         VoiceSet: Ascentor
         Volume: 4
     Health:
-        HP: 100
+        HP: 200
     Armor:
         Type: Medium
     Mobile:
-        Speed: 60
+        Speed: 40
     RevealsShroud:
-        Range: 11c0
+        Range: 12c0
     WithInfantryBody:
         IdleSequences: idle1,idle2,idle3
     AttackFrontal:
+    -ProducibleWithLevel:
 #    Infiltrates:
 #        Types: SpyInfiltrate
-    -Cloak@CLOAKGENERATOR:
     Cloak:
-        IsPlayerPalette: true
-#        CloakSound: cloak5.aud
+        Condition: crate-cloak || cloakgenerator
+        CloakSound:
         UncloakSound: cloak5.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
-  
-CYBSPY2:
-    Inherits@1: CYBSPY
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 303
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: CYBSPY
-    Explodes:
-        Weapon: UnitExplodeCyborg
-      
+    SoundOnDamageTransition:
+        DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
+    
 JAGUAR:
     Inherits@1: ^Cyborg
-    Inherits@2: ^CyborgUpgrades
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 304
-        Prerequisites: ~cybbar, ~!upgrade.es
+    Inherits@2: ^HuskUpgrades
+#    Buildable:
+#        Queue: Infantry.Cabal
+#        BuildPaletteOrder: 304
+#        Prerequisites: ~cybbar
+#        Description: Role : Dog\nHP: 350\nArmor: Medium\nSpeed: 70\nViewrange: 10\nGood vs: Infantry\nUseless vs: Vehicles, Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Stealth Detection
     Valued:
-        Cost: 500
+        Cost: 300
     Tooltip:
         Name: Devourer
-        Description: Anti-Infantry cybernetic battle jaguar.\nDetects stealth.\n\n  Strong vs Infantry, Dogs\n  Weak vs Everthing else 
     Selectable:
         Bounds: 12,17,0,-9
         Class: 12,17,0,-9
     Voiced:
         VoiceSet: Jaguar
     Health:
-        HP: 200
+        HP: 350
     Armor:
         Type: Medium
     Mobile:
-        Speed: 80
+        Speed: 50
     RevealsShroud:
         Range: 10c0
     Armament@primary:
+        Name: Bite
         Weapon: JaguarClaw
-    AttackLeap:
-        Speed: 85
-        Angle: 56
-        FacingTolerance: 20
+    AttackFrontal:
+        Armaments: Bite
+    AttackFrontal:
     IgnoresDisguise:
     RenderDetectionCircle:
     DetectCloaked:
         Range: 5c0
     AutoTarget:
         ScanRadius: 5
- 
-JAGUAR2:
-    Inherits@1: JAGUAR
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 304
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: JAGUAR
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    SoundOnDamageTransition:
+        DamagedSounds: jaguar_s1.aud, jaguar_s2.aud
 
 KENGINEER:
     Inherits@1: ^Cyborg
-    Inherits@2: ^CyborgUpgrades
+    Inherits@2: ^HuskUpgrades
     Valued:
-        Cost: 600
+        Cost: 500
     Tooltip:
         Name: Ascentor
-        Description: Captures enemy structures.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Unarmed
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 305
-        Prerequisites: ~cybbar, ~!upgrade.es
+        Prerequisites: ~cybbar
+        Description: Role : Engineer\nHP: 300\nArmor: Medium\nSpeed: 50\nViewrange: 6\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Building Catapture
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
@@ -223,11 +186,11 @@ KENGINEER:
         VoiceSet: Ascentor
         Volume: 2
     Mobile:
-        Speed: 50
+        Speed: 40
     RevealsShroud:
         Range: 6c0
     Health:
-        HP: 150
+        HP: 300
     Armor:
         Type: Medium
     Passenger:
@@ -235,21 +198,13 @@ KENGINEER:
     EngineerRepair:
     RepairsBridges:
         RepairNotification: BridgeRepaired
-	ExternalCaptures:
-		Type: building
+    ExternalCaptures:
+        Type: building
+        PlayerExperience: 50
     -AutoTarget:
-    -GainsExperience:
-  
-KENGINEER2:
-    Inherits@1: KENGINEER
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 305
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: KENGINEER
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    -ProducibleWithLevel:
+    SoundOnDamageTransition:
+        DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
 
 VANGUARD:
     Inherits@1: ^Cyborg
@@ -258,7 +213,6 @@ VANGUARD:
         Cost: 600
     Tooltip:
         Name: Vanguard
-        Description: Frontline battle cyborg, armed with an Auto-Shotgun.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 14,30,0,-7
         Class: Vanguard
@@ -268,7 +222,7 @@ VANGUARD:
     Armor:
         Type: Heavy
     Mobile:
-        Speed: 50
+        Speed: 40
     Health:
         HP: 300
     RevealsShroud:
@@ -298,19 +252,21 @@ VANGUARD:
         Weapon: VulcanShotgun2
         LocalOffset: 300,64,800    
     AttackFrontal:
+    SoundOnDamageTransition:
+        DamagedSounds: cabal_f1.aud, cabal_f2.aud, cabal_f3.aud, cabal_f4.aud
 
 OVERSEER:
     Inherits@1: ^HeavyCyborg
-    Inherits@2: ^CyborgUpgrades
+    Inherits@2: ^HuskUpgrades
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 306
-        Prerequisites: ~cybbar, karadr, ~!t1, ~!upgrade.es
+        Prerequisites: ~cybbar, karadr, ~!t1
+        Description: Role : Advanced Cyborg\nHP: 600\nArmor: Medium\nSpeed: 50\nViewrange: 8\nGood vs: Infantry\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Buffs other infantry units
     Valued:
         Cost: 500
     Tooltip:
         Name: Overseer
-        Description: Frontline command cyborg, armed with a MG.\nIncreases range, accuracy and reload of units like Husks, Cannon Husks and Vanguards.\nImmune to Tiberium radiation.\nImmune to dogs.\n\n  Strong vs Infantry, Dogs, Light armor\n  Weak vs Armor, Aircraft, Artillery
     Selectable:
         Bounds: 12,17,0,-9
         Class: Overseer
@@ -318,13 +274,13 @@ OVERSEER:
         VoiceSet: CyborgA
         Volume: 2
     Health:
-        HP: 300
+        HP: 600
     Armor:
         Type: Medium
     Mobile:
-        Speed: 50
+        Speed: 40
     RevealsShroud:
-        Range: 8c0
+        Range: 6c0
     Armament@PRIMARY:
         Weapon: OverGun
         LocalOffset: 300,0,525
@@ -334,32 +290,24 @@ OVERSEER:
     DetectCloaked:
         Range: 6c0
     RenderDetectionCircle:
-    UpgradeActorsNear:
-        Upgrades: overseerboost
+    ProximityExternalCondition:
+        Condition: overseerboost
         Range: 6c0
-         
-OVERSEER2:
-    Inherits@1: OVERSEER
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 306
-        Prerequisites: ~cybbar, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: OVERSEER
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    SoundOnDamageTransition:
+        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
 
 CYBFLY:
-    Inherits: ^SoldierJumpjet
+    Inherits@1: ^SoldierJumpjet
+    Inherits@2: ^HuskUpgrades
     Valued:
         Cost: 700
     Tooltip:
         Name: Skirmisher
-        Description: Airborne infantry.\nImmune to Tiberium radiation.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Armor, Artillery, Dogs
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 307
         Prerequisites: ~cybbar, karadr, ~!t1
+        Description: Role : Airborne infantry\nHP: 300\nArmor: Light\nSpeed: 180\nViewrange: 10\nGood vs: Infantry, Vehicles, Vtols\nUseless vs: Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
     Selectable:
         Bounds: 12,17,0,-14
     Voiced:
@@ -368,25 +316,30 @@ CYBFLY:
     Aircraft:
         TurnSpeed: 10
         Speed: 180
-        AirborneUpgrades: airborne
-        CruisingUpgrades: cruising
+        AirborneCondition: airborne
+        CruisingCondition: cruising
         LandWhenIdle: no
         CruiseAltitude: 3072
         CanHover: True
         IdealSeparation: 512
         AltitudeVelocity: 230
-    Hovers:
+    Hovers@CRUISING:
+        RequiresCondition: cruising
     Health:
         HP: 300
+    Armor@base:
+        Type: Aircraft
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
-    Armament:
+        Type: GroundPosition
+    Armament@primary:
         Weapon: SkirmishLaserFire
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
         LocalOffset: 400,64,600, 400,-64,600
-    -PoisonedByTiberium:
+    -DamagedByTerrain@Tiberium:
     AmmoPool:
         Name:primary
         Ammo: 20
@@ -401,9 +354,9 @@ CYBFLY:
 #        IdleSequences: idle1,idle2
         StandSequence: stand-air
         MoveSequence: fly
-        AttackSequence: shoot-air
+        DefaultAttackSequence: shoot-air
         IdleSequences: stand-air
-	BodyOrientation:
+    BodyOrientation:
     WithShadow:
     Contrail@1:
         Offset: -256,64,800
@@ -417,34 +370,42 @@ CYBFLY:
         TrailWidth: 25
         Color: 0080FF
         UsePlayerColor: True
+    SoundOnDamageTransition:
+        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
         
 CYC2:
     Inherits@1: ^HeavyCyborg
+    Inherits@2: ^HuskUpgrades
     Armor:
         Type: Heavy
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Cabal Commando
-        Description: Elite cybernetic infantry unit.\nImmune to Tiberium radiation.\nHeals in Tiberium\nImmune to dogs.\n\n Strong vs Buildings, Armor, Infantry, Dogs\n  Weak vs Aircraft, Artillery
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 308
-        Prerequisites: ~cybbar, karadr, kabtech, ~!t1, ~!t2, ~!upgrade.es
+        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2
+        Description: Role : Heavy Infantry\nHP: 900\nArmor: Heavy\nSpeed: 50\nViewrange: 10\nGood vs: Infantry, Vehicles, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - SelfHealing
     Selectable:
-        Bounds: 14,30,0,-7
+        Bounds: 24,34,0,-9
         Class: CYC2
     Voiced:
         VoiceSet: CyborgA
         Volume: 2
     Mobile:
-        Speed: 50
+        Speed: 40
+        SharesCell: False
     Health:
         HP: 800
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     RevealsShroud:
-        Range: 10c0
+        Range: 8c0
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 50
+        DamageCooldown: 200
 #    Armament@Laser1:
 #        Weapon: CommandoLaserFire
 #        LocalOffset: 180,100,640
@@ -457,17 +418,8 @@ CYC2:
         MuzzlePalette: effect50alpha
     AttackFrontal:
     WithMuzzleOverlay:
-
-CYC22:
-    Inherits@1: CYC2
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 308
-        Prerequisites: ~cybbar, karadr, kabtech, ~!t1, ~!t2, ~upgrade.es, ~!upgrade.nm
-    RenderSprites:
-        Image: CYC2
-    Explodes:
-        Weapon: UnitExplodeCyborg
+    SoundOnDamageTransition:
+        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
 
 GLAD:
     Inherits@1: ^HeavyCyborg
@@ -477,24 +429,24 @@ GLAD:
         Cost: 6000
     Tooltip:
         Name: Harbinger
-        Description: Cyborg hero field commander.\nImmune to Tiberium radiation.\nHeals in Tiberium\nImmune to dogs.\nBuildlimit of 1\n\n Strong vs Everything\n  Weak vs Anything
+        BuildLimit: 1
     Buildable:
-        Queue: Infantry
+        Queue: Infantry.Cabal
         BuildPaletteOrder: 309
         BuildLimit: 1
-        Prerequisites: ~cybbar, karadr, kabtech, ~!t1, ~!t2, ~!t3, ~!upgrade.es, !glad2
+        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3
+        Description: Role : Epic Cyborg\nHP: 2000\nArmor: Heavy\nSpeed: 50\nViewrange: 11\nGood vs: Everything\n\nSpecial:\n - SelfHealing
     Selectable:
-        Bounds: 14,30,0,-7
+        Bounds: 24,34,0,-9
         Class: GLAD
     Voiced:
         VoiceSet: CyborgA
         Volume: 2
     Mobile:
-        Speed: 50
+        Speed: 40
+        SharesCell: False
     Health:
         HP: 2000
-    PoisonedByTiberium:
-        Weapon: TiberiumHeal
     RevealsShroud:
         Range: 11c0
     Armament@Plasma1:
@@ -512,7 +464,7 @@ GLAD:
         LocalOffset: 170,200,683, 170,-200,683
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
-     Armament@laser:
+     Armament@laserA:
         Weapon: HarbingerLaserFire
         LocalOffset: 0,-64,1024
         MuzzleSequence: muzzle
@@ -522,33 +474,24 @@ GLAD:
     DetectCloaked:
         Range: 6c0
     WithMuzzleOverlay:
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 200
     ActorLostNotification:
         Notification: CriticalUnitLost
+    SoundOnDamageTransition:
+        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
 
-GLAD2:
-    Inherits@1: GLAD
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 309
-        BuildLimit: 1
-        Prerequisites: ~cybbar, karadr, kabtech, ~!t1, ~!t2, ~!t3, ~upgrade.es, ~!upgrade.nm, !glad
-    RenderSprites:
-        Image: GLAD
-    Explodes:
-        Weapon: UnitExplodeCyborg
-
-Kamikaze:
+KAMIKAZE:
     Inherits@1: ^Cyborg
-    Inherits@2: ^CyborgUpgrades
-    Buildable:
-        Queue: Infantry
-        BuildPaletteOrder: 310
-        Prerequisites: ~cybbar, kabtech, ~napyra, ~!t1, ~!t2, ~!t3
+    Inherits@2: ^HuskUpgrades
     Valued:
         Cost: 400
     Tooltip:
         Name: Headless Kamikaze
-        Description: Frontline suicide cyborg, hands are replaced with bombs bigger than his head.\nImmune to Tiberium radiation.\nCan explode on death\n\n  Strong vs Ground targets\n  Weak vs Everything
     Selectable:
         Bounds: 12,17,0,-9
     Voiced:
@@ -559,7 +502,7 @@ Kamikaze:
     Armor:
         Type: Light
     Mobile:
-        Speed: 90
+        Speed: 40
     RevealsShroud:
         Range: 10c0
     Armament@primary:

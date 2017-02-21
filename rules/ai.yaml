@@ -2,16 +2,16 @@ Player:
     HackyAI@NormalAI:
         Name: Normal AI
         MinimumExcessPower: 50
-        BuildingQueues: Building, Tech
+        BuildingQueues: Building, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
         DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 5    
+        UnitQueues: Infantry.GDI, Infantry.Nod, Infantry.Cabal, Infantry.Forg, Infantry.Scrin, Vehicle.GDI, Vehicle.Nod, Vehicle.Cabal, Vehicle.Forg, Vehicle.Scrin, Air.GDI, Air.Nod, Air.Cabal, Air.Forg, Air.Scrin, Vehicle.GDI.Ace
+        SquadSize: 20
         SquadSizeRandomBonus : 20    
-        AssignRolesInterval: 30
-        RushInterval: 800
+        AssignRolesInterval: 20
+        RushInterval: 600
         AttackForceInterval: 50
         MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 15
+        StructureProductionActiveDelay: 60
         MinimumDefenseRadius: 5
         MaximumDefenseRadius: 20
         NewProductionCashThreshold: 5000        
@@ -21,3017 +21,417 @@ Player:
         RallyPointScanRadius: 8
         MinBaseRadius: 5
         MaxBaseRadius: 20
-        ShouldRepairBuildings: true        
+        RestrictMCVDeploymentFallbackToBase: False
+        ShouldRepairBuildings: True 
+        CapturingActorTypes: engineer, nengineer, kengineer, fengineer
+        CapturableActorTypes: tibtech, cahosp, caarmr, caaray
+        CheckCaptureTargetsForVisibility: false
+        MaximumCaptureTargetOptions: 15
         BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
+            ConstructionYard: gacnst, nacnst, kacnst, facnst, sacnst
+            Refinery: gproc, nproc, kproc, fproc, sproc
+            Power: gapowr, napowr, naapwr, kpr, fapowr, sapowr
+            Barracks: gapile, nahand, cybbar, fabar, saportal
+            VehiclesFactory: gaweap, naweap, kaweap, faweap, saportal
+            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad, saportal
             Silo: gsilo, nasilo, kasilo, fasilo
         UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
+            Mcv: gmcv, nmcv, kmcv, fmcv, smcv
         BuildingLimits:        
 #Power
             gapowr: 10
-            napowr: 10
-            naapwr: 5
-            kpr: 10
-            fapowr: 8
-#Economy            
-            gproc: 3
-            nproc: 3
-#            nawast: 1
-            kproc: 3
-            fproc: 3
-            
-            gasilo: 5
-            nasilo: 5
-            kasilo: 5
-            fasilo: 5
+            napower: 10
+            naapwr: 4
+            kpr: 6
+            fapowr: 10
+            sapowr: 10
+#Economy
+            gproc: 6
+            nproc: 6
+            kproc: 6
+            fproc: 6
+            sproc: 6
+            gasilo: 10     
+            nasilo: 10     
+            kasilo: 10     
+            fasilo: 10     
 #Production
-            gapile: 3
-            nahand: 3
-            cybbar: 3
-            fabar: 3
+            gapile: 4
+            nahand: 4
+            cybbar: 4
+            fabar: 4
             gaweap: 2
             naweap: 2
             kaweap: 2
             faweap: 2
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
+            saportal: 5
             gahpad: 4
             nahpad: 4
             kahpad: 4
             fahpad: 4
+#Radar
+            garadr: 1
+            naradr: 1
+            karadr: 1
+            faradr: 1
+            sanode: 1
+#Armory
+            gaarmory: 1
+            napyra: 1
+            fhovel: 1
 #Tech
             gatech: 1
             natech: 1
+            kabtech: 1
             fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
+            saseed: 1
 #Special
             gadept: 1
+            gadrop: 1
             nastlh: 1
-
-#Defense anti infantry
-            gamg: 6
-            naflamer: 6
-            kablasr: 4            
-            fatower: 10
-#Defense sensor
-            gasentur: 4
-#Defense vehicle
-            gacan: 3
-            nalasr: 6
-            kabcan: 8
-            famissile: 4
-#Defense AA
-            gamis: 4
-            nasam: 4
-            kdark: 2
-            faflak: 4
-#Defense Advanced            
-            gamortar: 2
+            nawast: 1
+#Superweapon
+            gaplug: 1
+            gaplug2: 1
+            gaplug3: 1
+            natmpl: 1
+#Defense
+            gamg: 2
             gamg2: 2
-            gafort: 2
+            gasentur: 2
+            gamis: 2
+            gacan: 2
+            gamortar: 2
+            naflamer: 2
+            nagat: 2
+            nalasr: 2
+            nasam: 2
             naobel: 2
+            napuls: 1
+            kablasr: 2
+            kabcan: 2
+            kdark: 2
             kobel: 2
+            fatower: 6
+            faflak: 4
+            famissile: 3
+            sacannon: 2
+            sasam: 2
 
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
         BuildingFractions:
-#Power
-            gapowr: 35%
-            napowr: 30%
+
+            gapowr: 40%
+            napower: 40%
             naapwr: 20%
-            kpr: 20%
-            fapowr: 35%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 20%
-            nahand: 20%
-            cybbar: 20%
-            fabar: 20%
-            
-#Factories
-            gaweap: 10%
-            naweap: 10%
-            kaweap: 10%
-            faweap: 10%
-#Helipad
+            kpr: 40%
+            fapowr: 40%
+            sapowr: 40%
+            gproc: 50%
+            nproc: 50%
+            kproc: 50%
+            fproc: 50%
+            sproc: 50%
+            gasilo: 1%
+            nasilo: 1%
+            kasilo: 1%
+            fasilo: 1%
+            gapile: 60%
+            nahand: 60%
+            cybbar: 60%
+            fabar: 60%
+            gaweap: 25%
+            naweap: 25%
+            kaweap: 25%
+            faweap: 25%
+            saportal: 30%
             gahpad: 10%
             nahpad: 10%
             kahpad: 10%
             fahpad: 10%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
+            garadr: 40%
+            naradr: 40%
+            karadr: 40%
+            faradr: 40%
+            sanode: 40%
             gaarmory: 1%
             napyra: 1%
-            cytech: 1%
-            kabtech: 1%
             fhovel: 1%
-            
-#Tech
             gatech: 1%
             natech: 1%
+            kabtech: 1%
             fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
+            saseed: 1%
             gadept: 1%
-
             nastlh: 1%
+            nawast: 1%
+            gadrop: 1%
+            gaplug: 1%
+            gaplug3: 1%
+            natmpl: 1%
+            gamg: 40%
+            gamg2: 40%
+            gasentur: 10%
+            gamis: 30%
+            gacan: 35%
+            gamortar: 20%
+            naflamer: 40%
+            nagat: 40%
+            nalasr: 30%
+            nasam: 30%
+            naobel: 20%
+            napuls: 1%
+            kablasr: 20%
+            kabcan: 20%
+            kdark: 20%
+            kobel: 10%
+            fatower: 40%
+            faflak: 20%
+            famissile: 15%
+            sacannon: 25%
+            sasam: 25%
 
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 30%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 20%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
             upgrade.gapowerup1: 1%
             upgrade.gapowerup2: 1%
-            upgrade.emp: 1%
             upgrade.gdf: 1%
             upgrade.st: 1%
             upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 1%
-            upgrade.industry.lvl2: 1%
-            upgrade.tech.lv1: 1%
-            upgrade.tech.lv2: 1%
-            upgrade.propaganda.lvl1: 1%
-            upgrade.propaganda.lvl2: 1%
-            
+            upgrade.industry: 1%
+            upgrade.tech: 1%
+            upgrade.propaganda: 1%
+            upgrade.industry.tibgas: 1%
+            upgrade.industry.tibinfusion: 1%
+            upgrade.industry.tiblaser: 1%
+            upgrade.tech.laser: 1%
+            upgrade.tech.stealth: 1%
+            upgrade.tech.emp: 1%
+            upgrade.propaganda.mass: 1%
+            upgrade.propaganda.nanofiber: 1%
+            upgrade.propaganda.bluehell: 1%
             upgrade.hc: 1%
             upgrade.lc: 1%
             upgrade.mp: 1%
             upgrade.htp: 1%
             upgrade.nm: 1%
             upgrade.es: 1%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
             upgrade.grunt: 1%
+            upgrade.brigand: 1%
             upgrade.fiend: 1%
-            upgrade.warthog: 1%
+            upgrade.mhijack: 1%
+            upgrade.ghost: 1%
+            upgrade.fbuggy: 1%
+            upgrade.fbuggy_mg: 1%
+            upgrade.fbuggy_mis: 1%
+            upgrade.fbuggy_mortar: 1%
+            upgrade.ftruck: 1%
+            upgrade.ftruck_flamer: 1%
+            upgrade.ftruck_mortar: 1%
+            upgrade.ftruck_flak: 1%
             upgrade.gremlin: 1%
-            upgrade.auroch: 1%
+            upgrade.gremlin_mortar: 1%
+            upgrade.gremlin_hcan: 1%
+            upgrade.gremlin_90mm: 1%
+            upgrade.taurus: 1%
+            upgrade.taurus_mg: 1%
+            upgrade.taurus_hcan: 1%
+            upgrade.taurus_mis: 1%
+            upgrade.lizard: 1%
+            upgrade.lizard_mg: 1%
+            upgrade.lizard_90mm: 1%
+            upgrade.lizard_122mm: 1%
+            upgrade.digger: 1%
+            upgrade.digger_mis: 1%
+            upgrade.digger_mortar: 1%
+            upgrade.digger_122mm: 1%
             upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
+            upgrade.bison_130mm: 1%
+            upgrade.bison_145mm: 1%
+            upgrade.bison_180mm: 1%
+            upgrade.auroch: 1%
+            upgrade.auroch_130mm: 1%
+            upgrade.auroch_120mmt: 1%
+            upgrade.auroch_180mm: 1%
+
         UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 80%
-            e2: 40%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 80%
-            nasol2: 80%
-            e3: 40%
-            e32: 40%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 80%            
-            husk2: 80%            
-            hhusk: 50%    
-            hhusk2: 50%    
-            vanguard: 20%        
-            jaguar: 10%                   
-#T1 Infantry Forgotten
-            grunt: 80%
-            huntress: 40%                    
-            fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
+#GDI
             gharv: 1%
-            smech: 80%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 50%        
-            bike: 40%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 40%                
-            dreadfire2: 40%                
-            dreadfire3: 40%                
-            reaper: 60%                
-            reaper2: 60%                
-            reaper3: 60%                
-#T1 Vehicles Forgotten
+            nharv: 1%
+            kharv: 1%
             fharv: 1%
-            taurus: 30%
-            fbuggy: 40%
-            gremlin: 25%          
-#T2 Infantry GDI
-            zmarine: 80% 
-            jumpjet: 40% 
-            cybfly: 40% 
-#T2 Infantry Nod
-            fanatic: 25%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 80%                
-            brigand: 40%                
-            goon: 40%
- #T2 Vehicles GDI
-            vulture: 60%
-            gthtnk: 80%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 40%     
-            triton: 40%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 50%
-            avatar: 40%     
-            termite: 40%     
-#T2 Vehicles Cabal
-            silver: 30%
-            silver2: 30%
-            silver3: 30%
-            tarantula: 30%
-            tarantula2: 30%
-            tarantula3: 30%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 40%
-#T2 Aircraft GDI
-            orca_f1: 5%
-            orca_f2: 5%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterios: 4%
-            kgunship: 2%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 5%            
-            fbomber: 5%            
-#T3 Infantry GDI
-            ztrooper: 30%
-#T3 Infantry Nod
-            spray: 30%
-#T3 Infantry Cabal
-            cyc2: 5% 
-            cyc22: 5% 
-#T3 Vehicles GDI
-            4tnk: 25%
-            mmch: 25%     
-            sonic: 25%     
-            juggy: 10%
-#T3 Vehicles Nod
-            nhwtz: 25%
-            subtank: 25%     
-            stnk: 25%     
-            hailstorm: 25%     
-#T3 Vehicles Cabal
-            kronos: 25%
-            kronos2: 25%
-            kronos3: 25%
-#T3 Aircraft GDI
-            orca_b: 5%
-            fhawk: 5%
-            hornet: 5%
-            condor: 5%
-#T2 Aircraft Nod
-            scrin: 5%
-            scrinb: 5%
-            vertigo: 5%
-            zep: 5%
-            raven: 5%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 5% 
-            ragnarok: 5% 
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%
-            gargantua2: 1%
-            gargantua3: 1%
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            medic: 3
-            repair: 2
-            golem: 2
-            gharv: 10
-            nharv: 10
-            weed: 1
-            kharv: 10
-            fharv: 10
-            iontank: 1
-            hmec: 1
-            nemesis: 1          
-            nfist: 1
-            montauk: 1
-            scorpion: 1          
-            gargantua: 1          
-            avalanche: 1
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
-                Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@2:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 2c0
-
-    HackyAI@HardAI:
-        Name: Hard AI
-        MinimumExcessPower: 100
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 5    
-        SquadSizeRandomBonus : 20    
-        AssignRolesInterval: 20
-        RushInterval: 600
-        AttackForceInterval: 50
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 15
-        MinimumDefenseRadius: 5
-        MaximumDefenseRadius: 20
-        NewProductionCashThreshold: 5000        
-        IdleBaseUnitsMaximum: 12
-        RushAttackScanRadius: 15
-        ProtectUnitScanRadius: 15
-        RallyPointScanRadius: 8
-        MinBaseRadius: 5
-        MaxBaseRadius: 20
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-            gapowr: 10
-            napowr: 10
-            naapwr: 5
-            kpr: 10
-            fapowr: 8
-#Economy            
-            gproc: 4
-            nproc: 4
-#            nawast: 1
-            kproc: 4
-            fproc: 4
+            sharv: 1%
             
-            gasilo: 10
-            nasilo: 10
-            kasilo: 10
-            fasilo: 10
-#Production
-            gapile: 4
-            nahand: 4
-            cybbar: 4
-            fabar: 4
-            gaweap: 4
-            naweap: 4
-            kaweap: 4
-            faweap: 4
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 8
-            nahpad: 8
-            kahpad: 8
-            fahpad: 8
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 1
-            nastlh: 1
-
-#Defense anti infantry
-            gamg: 10
-            naflamer: 10
-            kablasr: 6            
-            fatower: 14
-#Defense sensor
-            gasentur: 6
-#Defense vehicle
-            gacan: 5
-            nalasr: 10
-            kabcan: 10
-            famissile: 8
-#Defense AA
-            gamis: 6
-            nasam: 6
-            kdark: 4
-            faflak: 8
-#Defense Advanced            
-            gamortar: 4
-            gamg2: 4
-            gafort: 4
-            naobel: 4
-            kobel: 4
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 35%
-            napowr: 30%
-            naapwr: 20%
-            kpr: 20%
-            fapowr: 35%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 1%
-            nahand: 1%
-            cybbar: 1%
-            fabar: 1%
-            
-#Factories
-            gaweap: 1%
-            naweap: 1%
-            kaweap: 1%
-            faweap: 1%
-#Helipad
-            gahpad: 1%
-            nahpad: 1%
-            kahpad: 1%
-            fahpad: 1%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1: 1%
-            upgrade.gapowerup2: 1%
-            upgrade.emp: 1%
-            upgrade.gdf: 1%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 1%
-            upgrade.industry.lvl2: 1%
-            upgrade.tech.lv1: 1%
-            upgrade.tech.lv2: 1%
-            upgrade.propaganda.lvl1: 1%
-            upgrade.propaganda.lvl2: 1%
-            
-            upgrade.hc: 1%
-            upgrade.lc: 1%
-            upgrade.mp: 1%
-            upgrade.htp: 1%
-            upgrade.nm: 1%
-            upgrade.es: 1%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 1%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 80%
-            e2: 40%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 80%
-            nasol2: 80%
-            e3: 40%
-            e32: 40%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 80%            
-            husk2: 80%            
-            hhusk: 50%    
-            hhusk2: 50%    
-            vanguard: 20%        
-            vanguard2: 20%        
-            jaguar: 10%                  
-            jaguar2: 10%                  
-#T1 Infantry Forgotten
-            grunt: 80%
-            huntress: 40%                    
-            fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
-            gharv: 1%
-            smech: 80%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 50%        
-            bike: 40%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 40%                
-            dreadfire2: 40%                
-            dreadfire3: 40%                
-            reaper: 60%                
-            reaper2: 60%                
-            reaper3: 60%                
-#T1 Vehicles Forgotten
-            fharv: 1%
-            taurus: 30%
-            fbuggy: 40%
-            gremlin: 25%          
-#T2 Infantry GDI
-            zmarine: 80% 
-            jumpjet: 40% 
-            cybfly: 40% 
-#T2 Infantry Nod
-            fanatic: 25%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 80%                
-            brigand: 40%                
-            goon: 40%
- #T2 Vehicles GDI
-            vulture: 60%
-            gthtnk: 80%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 40%     
-            triton: 40%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 50%
-            avatar: 40%     
-            termite: 40%     
-#T2 Vehicles Cabal
-            silver: 30%
-            silver2: 30%
-            silver3: 30%
-            tarantula: 30%
-            tarantula2: 30%
-            tarantula3: 30%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 40%
-#T2 Aircraft GDI
-            orca_f1: 5%
-            orca_f2: 5%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterios: 4%
-            kgunship: 2%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 5%            
-            fbomber: 5%            
-#T3 Infantry GDI
-            ztrooper: 30%
-#T3 Infantry Nod
-            spray: 30%
-#T3 Infantry Cabal
-            cyc2: 5% 
-            cyc22: 5% 
-#T3 Vehicles GDI
-            4tnk: 25%
-            mmch: 25%     
-            sonic: 25%     
-            juggy: 10%
-#T3 Vehicles Nod
-            nhwtz: 25%
-            subtank: 25%     
-            stnk: 25%     
-            hailstorm: 25%     
-#T3 Vehicles Cabal
-            kronos: 25%
-            kronos2: 25%
-            kronos3: 25%
-#T3 Aircraft GDI
-            orca_b: 5%
-            fhawk: 5%
-            hornet: 5%
-            condor: 5%
-#T2 Aircraft Nod
-            scrin: 5%
-            scrinb: 5%
-            vertigo: 5%
-            zep: 5%
-            raven: 5%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 5% 
-            ragnarok: 5% 
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%
-            gargantua2: 1%
-            gargantua3: 1%
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            medic: 2
-            repair: 1
-            golem: 1
-            gharv: 6
-            nharv: 6
-            weed: 1
-            kharv: 8
-            fharv: 6
-            iontank: 1
-            hmec: 1
-            nemesis: 1          
-            nfist: 1
-            montauk: 1
-            scorpion: 1          
-            gargantua: 1          
-            avalanche: 1
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
-                Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@2:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 2c0
-                
-    HackyAI@RushAI:
-        Name: Rush AI
-        MinimumExcessPower: 50
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 5    
-        SquadSizeRandomBonus : 5    
-        AssignRolesInterval: 20
-        RushInterval: 300
-        AttackForceInterval: 30
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 10
-        MinimumDefenseRadius: 5
-        MaximumDefenseRadius: 15
-        NewProductionCashThreshold: 5000        
-        StructureProductionInactiveDelay: 50
-        StructureProductionRandomBonusDelay: 10
-        MaxResourceCellsToCheck : 10
-        IdleBaseUnitsMaximum: 12
-        RushAttackScanRadius: 20
-        ProtectUnitScanRadius: 20
-        RallyPointScanRadius: 8
-        MinBaseRadius: 7
-        MaxBaseRadius: 30
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-            gapowr: 10
-            napowr: 18
-            naapwr: 8
-            kpr: 15
-            fapowr: 10
-#Economy            
-            gproc: 4
-            nproc: 4
-#            nawast: 1
-            kproc: 4
-            fproc: 4
-            
-            gasilo: 5
-            nasilo: 5
-            kasilo: 5
-            fasilo: 5
-#Production
-            gapile: 6
-            nahand: 6
-            cybbar: 6
-            fabar: 6
-            gaweap: 4
-            naweap: 4
-            kaweap: 4
-            faweap: 4
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 8
-            nahpad: 8
-            kahpad: 8
-            fahpad: 8
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 1
-            nastlh: 1
-
-#Defense anti infantry
-            gamg: 8
-            naflamer: 6
-            kablasr: 6            
-            fatower: 10
-#Defense sensor
-            gasentur: 4
-#Defense vehicle
-            gacan: 3
-            nalasr: 8
-            kabcan: 8
-            famissile: 4
-#Defense AA
-            gamis: 4
-            nasam: 4
-            kdark: 2
-            faflak: 4
-#Defense Advanced            
-            gamortar: 4
-            gamg2: 4
-            gafort: 4
-            naobel: 2
-            kobel: 2
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 25%
-            napowr: 25%
-            naapwr: 10%
-            kpr: 25%
-            fapowr: 25%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 10%
-            nahand: 10%
-            cybbar: 10%
-            fabar: 10%
-            
-#Factories
-            gaweap: 6%
-            naweap: 6%
-            kaweap: 6%
-            faweap: 6%
-#Helipad
-            gahpad: 4%
-            nahpad: 4%
-            kahpad: 4%
-            fahpad: 4%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1: 1%
-            upgrade.gapowerup2: 1%
-            upgrade.emp: 1%
-            upgrade.gdf: 1%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 1%
-            upgrade.industry.lvl2: 1%
-            upgrade.tech.lv1: 1%
-            upgrade.tech.lv2: 1%
-            upgrade.propaganda.lvl1: 10%
-            upgrade.propaganda.lvl2: 10%
-            
-            upgrade.hc: 1%
-            upgrade.lc: 10%
-            upgrade.mp: 10%
-            upgrade.htp: 1%
-            upgrade.nm: 1%
-            upgrade.es: 5%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 5%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
             gasol: 90%
-            e2: 50%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
+            e2: 20%
+            gdog: 10%
+            medic: 5%
+            zmarine: 80%
+            ztrooper: 40%
+            zraider: 25%
             nasol: 90%
             nasol2: 90%
-            e3: 50%
-            e32: 50%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 90%            
-            husk2: 90%            
-            hhusk: 60%    
-            hhusk2: 60%    
-            vanguard: 20%        
-            vanguard2: 20%        
-            jaguar: 10%                  
-            jaguar2: 10%                  
-#T1 Infantry Forgotten
+            E3: 40%
+            E32: 40%
+            ndog: 10%
+            fanatic: 10%
+            nacad: 70%
+            nconf: 70%
+            shadow: 20%
+            bhand: 20%
+            tibtrooper: 20%
+            husk: 80%
+            hhusk: 20%
+            jaguar: 10%
+            overseer: 30%
+            cybfly: 20%
+            cyc2: 10%
+            glad: 1%
             grunt: 90%
-            huntress: 60%                    
+            elitegrunt: 90%
+            brigand: 90%
+            huntress: 40%
             fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
-            gharv: 1%
-            smech: 60%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 80%        
-            bike: 80%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 30%                
-            dreadfire2: 30%                
-            dreadfire3: 30%                
-            reaper: 80%                
-            reaper2: 80%                
-            reaper3: 80%                
-#T1 Vehicles Forgotten
-            fharv: 1%
-            taurus: 20%
-            fbuggy: 60%
-            gremlin: 45%          
-#T2 Infantry GDI
-            zmarine: 90% 
-            jumpjet: 30% 
-            cybfly: 30% 
-#T2 Infantry Nod
-            fanatic: 45%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 90%                
-            brigand: 50%                
-            goon: 50%
- #T2 Vehicles GDI
-            vulture: 50%
-            gthtnk: 70%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 20%     
+            ffiend: 30%
+            goon: 30%
+            ghost: 1%
+            shocker: 90%
+            slasher: 50%
+            locust: 40%
+            
+            gtmtnk: 50%            
+            gthtnk: 60%            
+            firefly: 30%
+            smech: 30%
+            vulture: 40%
+            hvr: 20%
+            airblast: 20%
             triton: 20%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 60%
-            avatar: 30%     
-            termite: 30%     
-#T2 Vehicles Cabal
+            4tnk: 15%
+            mmch: 15%
+            mmch2: 1%
+            poseidon: 1%
+            sonic: 15%
+            behemoth: 10%
+#            jugg: 10%
+            cyclops: 10%
+            hmec: 2%
+            iontank: 2%
+            bggy: 60%
+            gorran: 50%
+            bike: 40%
+            cheetah: 40%
+            termite: 40%
+#            nhwtz: 15%
+            subtank: 20%
+            hailstorm: 20%
+            stnk: 10%
+            avatar: 10%
+            montauk: 1%
+            weed: 1%
+            dreadfire: 40%
+            reaper: 60%
+            golem: 1%
+            tarantula: 20%
             silver: 20%
             silver2: 20%
             silver3: 20%
-            tarantula: 20%
-            tarantula2: 20%
-            tarantula3: 20%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 50%
-#T2 Aircraft GDI
-            orca_f1: 3%
-            orca_f2: 3%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 4%
-            pterois: 6%
-            kgunship: 2%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 3%            
-            fbomber: 3%            
-#T3 Infantry GDI
-            ztrooper: 15%
-#T3 Infantry Nod
-            spray: 15%
-#T3 Infantry Cabal
-            cyc2: 3% 
-            cyc22: 3% 
-#T3 Vehicles GDI
-            4tnk: 15%
-            mmch: 15%     
-            sonic: 15%     
-            juggy: 5%
-#T3 Vehicles Nod
-            nhwtz: 5%
-            subtank: 5%     
-            stnk: 10%     
-            hailstorm: 30%     
-#T3 Vehicles Cabal
-            kronos: 15%
-            kronos2: 15%
-            kronos3: 15%
-#T3 Aircraft GDI
-            orca_b: 2%
-            fhawk: 2%
-            hornet: 2%
-            condor: 2%
-#T2 Aircraft Nod
-            scrin: 2%
-            scrinb: 2%
-            vertigo: 1%
-            raven: 2%
-            zep: 1%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 5%  
-            ragnarok: 5%  
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%
-            gargantua2: 1%
-            gargantua3: 1%
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            medic: 6
-            repair: 4
-            golem: 4
-            gharv: 12
-            nharv: 12
-            weed: 2
-            kharv: 12
-            fharv: 12            
-            glad: 1
-            glad2: 1
-            iontank: 1
-            hmec: 1
-            nemesis: 1          
-            nfist: 1
-            montauk: 1
-            scorpion: 1          
-            gargantua: 1          
-            avalanche: 1
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
-                Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@2:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 2c0
-
-    HackyAI@SteamrollerAI:
-        Name: Steamroller AI
-        MinimumExcessPower: 50
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 40    
-        SquadSizeRandomBonus : 40    
-        AssignRolesInterval: 20
-        RushInterval: 600
-        AttackForceInterval: 30
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 10
-        MinimumDefenseRadius: 5
-        MaximumDefenseRadius: 30
-        NewProductionCashThreshold: 5000        
-        IdleBaseUnitsMaximum: 12
-        RushAttackScanRadius: 15
-        ProtectUnitScanRadius: 15
-        RallyPointScanRadius: 8
-        MinBaseRadius: 5
-        MaxBaseRadius: 50
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-            gapowr: 12
-            napowr: 20
-            naapwr: 8
-            kpr: 20
-            fapowr: 12
-#Economy            
-            gproc: 4
-            nproc: 6
-#            nawast: 1
-            kproc: 4
-            fproc: 4
-            
-            gasilo: 5
-            nasilo: 5
-            kasilo: 5
-            fasilo: 5
-#Production
-            gapile: 4
-            nahand: 4
-            cybbar: 4
-            fabar: 4
-            gaweap: 3
-            naweap: 3
-            kaweap: 3
-            faweap: 3
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 8
-            nahpad: 8
-            kahpad: 8
-            fahpad: 8
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 1
-            nastlh: 1
-
-#Defense anti infantry
-            gamg: 10
-            naflamer: 10
-            kablasr: 8            
-            fatower: 20
-#Defense sensor
-            gasentur: 8
-#Defense vehicle
-            gacan: 4
-            nalasr: 12
-            kabcan: 12
-            famissile: 8
-#Defense AA
-            gamis: 6
-            nasam: 6
-            kdark: 4
-            faflak: 8
-#Defense Advanced            
-            gamortar: 8
-            gamg2: 8
-            gafort: 4
-            naobel: 4
-            kobel: 4
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 35%
-            napowr: 30%
-            naapwr: 20%
-            kpr: 20%
-            fapowr: 35%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 1%
-            nahand: 1%
-            cybbar: 1%
-            fabar: 1%
-            
-#Factories
-            gaweap: 1%
-            naweap: 1%
-            kaweap: 1%
-            faweap: 1%
-#Helipad
-            gahpad: 1%
-            nahpad: 1%
-            kahpad: 1%
-            fahpad: 1%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1: 1%
-            upgrade.gapowerup2: 1%
-            upgrade.emp: 1%
-            upgrade.gdf: 1%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 1%
-            upgrade.industry.lvl2: 1%
-            upgrade.tech.lv1: 1%
-            upgrade.tech.lv2: 1%
-            upgrade.propaganda.lvl1: 1%
-            upgrade.propaganda.lvl2: 1%
-            
-            upgrade.hc: 1%
-            upgrade.lc: 1%
-            upgrade.mp: 1%
-            upgrade.htp: 1%
-            upgrade.nm: 1%
-            upgrade.es: 1%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 1%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 80%
-            e2: 40%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 80%
-            nasol2: 80%
-            e3: 40%
-            e32: 40%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 80%            
-            husk2: 80%            
-            hhusk: 50%    
-            hhusk2: 50%    
-            vanguard: 20%        
-            vanguard2: 20%
-            jaguar: 10%
-            jaguar2: 10%
-#T1 Infantry Forgotten
-            grunt: 80%
-            huntress: 40%                    
-            fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
-            gharv: 1%
-            smech: 80%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 50%        
-            bike: 40%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 40%                
-            dreadfire2: 40%                
-            dreadfire3: 40%                
-            reaper: 60%                
-            reaper2: 60%                
-            reaper3: 60%                
-#T1 Vehicles Forgotten
-            fharv: 1%
-            taurus: 30%
-            fbuggy: 40%
-            gremlin: 25%          
-#T2 Infantry GDI
-            zmarine: 80% 
-            jumpjet: 40% 
-            cybfly: 40% 
-#T2 Infantry Nod
-            fanatic: 25%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 80%                
-            brigand: 40%                
-            goon: 40%
- #T2 Vehicles GDI
-            vulture: 60%
-            gthtnk: 80%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 40%     
-            triton: 40%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 50%
-            avatar: 40%     
-            termite: 40%     
-#T2 Vehicles Cabal
-            silver: 30%
-            silver2: 30%
-            silver3: 30%
-            tarantula: 30%
-            tarantula2: 30%
-            tarantula3: 30%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 40%
-#T2 Aircraft GDI
-            orca_f1: 5%
-            orca_f2: 5%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterois: 5%
-            kgunship: 5%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 5%            
-            fbomber: 5%            
-#T3 Infantry GDI
-            ztrooper: 30%
-#T3 Infantry Nod
-            spray: 30%
-#T3 Infantry Cabal
-            cyc2: 5% 
-            cyc22: 5% 
-#T3 Vehicles GDI
-            4tnk: 25%
-            mmch: 25%     
-            sonic: 25%     
-            juggy: 10%
-#T3 Vehicles Nod
-            nhwtz: 25%
-            subtank: 25%     
-            stnk: 25%     
-            hailstorm: 25%     
-#T3 Vehicles Cabal
-            kronos: 25%
-            kronos2: 25%
-            kronos3: 25%
-#T3 Aircraft GDI
-            orca_b: 5%
-            fhawk: 5%
-            hornet: 5%
-            condor: 5%
-#T2 Aircraft Nod
-            scrin: 5%
-            scrinb: 5%
-            vertigo: 5%
-            raven: 5%
-            zep: 5%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 5%  
-            ragnarok: 5%  
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%            
-            gargantua2: 1%            
-            gargantua3: 1%            
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            medic: 4
-            repair: 2
-            golem: 2
-            gharv: 10
-            nharv: 10
-            weed: 2
-            kharv: 10
-            fharv: 10
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
-                Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@2:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 2c0
-
-    HackyAI@TurtleAI:
-        Name: Turtle AI
-        MinimumExcessPower: 100
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 20    
-        SquadSizeRandomBonus : 20    
-        AssignRolesInterval: 20
-        RushInterval: 1000
-        AttackForceInterval: 50
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 10
-        MinBaseRadius: 6
-        MaximumDefenseRadius: 20
-        NewProductionCashThreshold: 5000        
-        IdleBaseUnitsMaximum: 20
-        RushAttackScanRadius: 10
-        ProtectUnitScanRadius: 20
-        RallyPointScanRadius: 8
-        MaxBaseRadius: 50
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-            gapowr: 20
-            napowr: 30
-            naapwr: 10
-            kpr: 20
-            fapowr: 20
-#Economy            
-            gproc: 6
-            nproc:6
-#            nawast: 1
-            kproc: 6
-            fproc: 6
-            
-            gasilo: 10
-            nasilo: 10
-            kasilo: 10
-            fasilo: 10
-#Production
-            gapile: 4
-            nahand: 4
-            cybbar: 4
-            fabar: 4
-            gaweap: 2
-            naweap: 2
-            kaweap: 2
-            faweap: 2
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 6
-            nahpad: 6
-            kahpad: 6
-            fahpad: 6
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 1
-            nastlh: 2
-
-#Defense anti infantry
-            gamg: 20
-            naflamer: 20
-            kablasr: 16            
-            fatower: 30
-#Defense sensor
-            gasentur: 16
-#Defense vehicle
-            gacan: 8
-            nalasr: 24
-            kabcan: 20
-            famissile: 12
-#Defense AA
-            gamis: 12
-            nasam: 10
-            kdark: 6
-            faflak: 16
-#Defense Advanced            
-            gamortar: 12
-            gamg2: 12
-            gafort: 8
-            naobel: 8
-            kobel: 8
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 35%
-            napowr: 30%
-            naapwr: 20%
-            kpr: 20%
-            fapowr: 35%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 1%
-            nahand: 1%
-            cybbar: 1%
-            fabar: 1%
-            
-#Factories
-            gaweap: 1%
-            naweap: 1%
-            kaweap: 1%
-            faweap: 1%
-#Helipad
-            gahpad: 1%
-            nahpad: 1%
-            kahpad: 1%
-            fahpad: 1%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1:2%
-            upgrade.gapowerup2: 2%
-            upgrade.emp: 1%
-            upgrade.gdf: 2%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 5%
-            upgrade.industry.lvl2: 5%
-            upgrade.tech.lv1: 4%
-            upgrade.tech.lv2: 4%
-            upgrade.propaganda.lvl1: 1%
-            upgrade.propaganda.lvl2: 1%
-            
-            upgrade.hc: 2%
-            upgrade.lc: 1%
-            upgrade.mp: 1%
-            upgrade.htp: 2%
-            upgrade.nm: 2%
-            upgrade.es: 1%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 1%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 80%
-            e2: 40%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 80%
-            nasol2: 80%
-            e3: 40%
-            e32: 40%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 80%            
-            husk2: 80%            
-            hhusk: 50%    
-            hhusk2: 50%    
-            vanguard: 20%        
-            vanguard2: 20%        
-            jaguar: 10%                  
-            jaguar2: 10%                   
-#T1 Infantry Forgotten
-            grunt: 80%
-            huntress: 40%                    
-            fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
-            gharv: 1%
-            smech: 80%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 50%        
-            bike: 40%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 40%                
-            dreadfire2: 40%                
-            dreadfire3: 40%                
-            reaper: 60%                
-            reaper2: 60%                
-            reaper3: 60%                
-#T1 Vehicles Forgotten
-            fharv: 1%
-            taurus: 30%
-            fbuggy: 40%
-            gremlin: 25%          
-#T2 Infantry GDI
-            zmarine: 80% 
-            jumpjet: 40% 
-            cybfly: 40% 
-#T2 Infantry Nod
-            fanatic: 25%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 80%                
-            brigand: 40%                
-            goon: 40%
- #T2 Vehicles GDI
-            vulture: 60%
-            gthtnk: 80%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 40%     
-            triton: 40%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 50%
-            avatar: 40%     
-            termite: 40%     
-#T2 Vehicles Cabal
-            silver: 30%
-            silver2: 30%
-            silver3: 30%
-            tarantula: 30%
-            tarantula2: 30%
-            tarantula3: 30%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 40%
-#T2 Aircraft GDI
-            orca_f1: 5%
-            orca_f2: 5%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterois: 5%
-            kgunship: 5%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 5%            
-            fbomber: 5%            
-#T3 Infantry GDI
-            ztrooper: 30%
-#T3 Infantry Nod
-            spray: 30%
-#T3 Infantry Cabal
-            cyc2: 5% 
-            cyc22: 5% 
-#T3 Vehicles GDI
-            4tnk: 25%
-            mmch: 25%     
-            sonic: 25%     
-            juggy: 10%
-#T3 Vehicles Nod
-            nhwtz: 25%
-            subtank: 25%     
-            stnk: 25%     
-            hailstorm: 25%     
-#T3 Vehicles Cabal
-            kronos: 25%
-            kronos2: 25%
-            kronos3: 25%
-#T3 Aircraft GDI
-            orca_b: 5%
-            fhawk: 5%
-            hornet: 5%
-            condor: 5%
-#T2 Aircraft Nod
-            scrin: 5%
-            scrinb: 5%
-            vertigo: 5%
-            raven: 5%
-            zep: 5%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 10%  
-            ragnarok: 10%  
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%            
-            gargantua2: 1%            
-            gargantua3: 1%            
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            medic: 4
-            repair: 2
-            golem: 2
-            gharv: 16
-            nharv: 18
-            weed: 4
-            kharv: 20
-            fharv: 18
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
-                Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@2:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 2c0
-            
-    HackyAI@HordeAI:
-        Name: Horde AI
-        MinimumExcessPower: 50
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 50    
-        SquadSizeRandomBonus : 50    
-        AssignRolesInterval: 20
-        RushInterval: 350
-        AttackForceInterval: 30
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 10
-        MinimumDefenseRadius: 5
-        MaximumDefenseRadius: 15
-        NewProductionCashThreshold: 5000        
-        StructureProductionInactiveDelay: 50
-        StructureProductionRandomBonusDelay: 10
-        MaxResourceCellsToCheck : 10
-        IdleBaseUnitsMaximum: 12
-        RushAttackScanRadius: 20
-        ProtectUnitScanRadius: 20
-        RallyPointScanRadius: 8
-        MinBaseRadius: 7
-        MaxBaseRadius: 30
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-            gapowr: 10
-            napowr: 18
-            naapwr: 8
-            kpr: 15
-            fapowr: 10
-#Economy            
-            gproc: 4
-            nproc: 4
-#            nawast: 1
-            kproc: 4
-            fproc: 4
-            
-            gasilo: 5
-            nasilo: 5
-            kasilo: 5
-            fasilo: 5
-#Production
-            gapile: 6
-            nahand: 6
-            cybbar: 6
-            fabar: 6
-            gaweap: 4
-            naweap: 4
-            kaweap: 4
-            faweap: 4
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 8
-            nahpad: 8
-            kahpad: 8
-            fahpad: 8
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 1
-            nastlh: 1
-
-#Defense anti infantry
-            gamg: 8
-            naflamer: 6
-            kablasr: 6            
-            fatower: 10
-#Defense sensor
-            gasentur: 4
-#Defense vehicle
-            gacan: 3
-            nalasr: 8
-            kabcan: 8
-            famissile: 8
-#Defense AA
-            gamis: 4
-            nasam: 4
-            kdark: 2
-            faflak: 4
-#Defense Advanced            
-            gamortar: 4
-            gamg2: 4
-            gafort: 4
-            naobel: 2
-            kobel: 2
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 25%
-            napowr: 25%
-            naapwr: 10%
-            kpr: 25%
-            fapowr: 25%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 10%
-            nahand: 10%
-            cybbar: 10%
-            fabar: 10%
-            
-#Factories
-            gaweap: 6%
-            naweap: 6%
-            kaweap: 6%
-            faweap: 6%
-#Helipad
-            gahpad: 4%
-            nahpad: 4%
-            kahpad: 4%
-            fahpad: 4%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1: 1%
-            upgrade.gapowerup2: 1%
-            upgrade.emp: 1%
-            upgrade.gdf: 1%
-            upgrade.st: 2%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 1%
-            upgrade.industry.lvl2: 1%
-            upgrade.tech.lv1: 1%
-            upgrade.tech.lv2: 1%
-            upgrade.propaganda.lvl1: 10%
-            upgrade.propaganda.lvl2: 10%
-            
-            upgrade.hc: 1%
-            upgrade.lc: 10%
-            upgrade.mp: 10%
-            upgrade.htp: 1%
-            upgrade.nm: 1%
-            upgrade.es: 5%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 5%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 90%
-            e2: 40%            
-            gdog: 5%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 90%
-            nasol2: 90%
-            e3: 50%
-            e32: 50%
-            ndog: 5%            
-#T1 Infantry Cabal            
-            husk: 90%            
-            husk2: 90%            
-            hhusk: 50%    
-            hhusk2: 60%    
-            vanguard: 10%        
-            vanguard2: 10%        
-            jaguar: 5%                  
-            jaguar2: 5%                  
-#T1 Infantry Forgotten
-            grunt: 90%
-            huntress: 40%                    
-            fdog: 5%
-            ffiend: 5%
-#T1 Vehicles GDI
-            gharv: 1%
-            smech: 30%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nharv: 1%        
-            weed: 1%        
-            bggy: 80%        
-            bike: 80%        
-            cheetah: 50%        
-#T1 Vehicles Cabal            
-            kharv: 1%                
-            dreadfire: 20%                
-            dreadfire2: 20%                
-            dreadfire3: 20%                
-            reaper: 80%                
-            reaper2: 80%                
-            reaper3: 80%                
-#T1 Vehicles Forgotten
-            fharv: 1%
-            taurus: 10%
-            fbuggy:70%
-            gremlin: 45%          
-#T2 Infantry GDI
-            zmarine: 90% 
-            jumpjet: 20% 
-            cybfly: 20% 
-#T2 Infantry Nod
-            fanatic: 45%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 15%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 90%                
-            brigand: 50%                
-            goon: 60%
- #T2 Vehicles GDI
-            vulture: 30%
-            gthtnk: 70%     
-            hovertnk: 60%     
-            hvr: 40%     
-            airblast: 10%     
-            triton: 10%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 70%
-            avatar: 00%     
-            termite: 00%     
-#T2 Vehicles Cabal
-            silver: 10%
-            silver2: 10%
-            silver3: 10%
-            tarantula: 10%
-            tarantula2: 10%
-            tarantula3: 10%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 50%
-#T2 Aircraft GDI
-            orca_f1: 3%
-            orca_f2: 3%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterois: 4%
-            kgunship: 3%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 3%            
-            fbomber: 3%            
-#T3 Infantry GDI
-            ztrooper: 5%
-#T3 Infantry Nod
-            spray: 10%
-#T3 Infantry Cabal
-            cyc2: 1% 
-            cyc22: 1% 
-#T3 Vehicles GDI
-            4tnk: 10%
-            mmch: 10%     
-            sonic: 10%     
-            juggy: 3%
-#T3 Vehicles Nod
-            nhwtz: 3%
-            subtank: 5%     
-            stnk: 10%     
-            hailstorm: 20%     
-#T3 Vehicles Cabal
             kronos: 10%
-            kronos2: 10%
-            kronos3: 10%
-#T3 Aircraft GDI
-            orca_b: 2%
-            fhawk: 2%
-            hornet: 2%
-            condor: 2%
-#T2 Aircraft Nod
-            scrin: 2%
-            scrinb: 2%
-            vertigo: 1%
-            raven: 2%
-            zep: 1%
-#T3 Vehicles Forgotten
-            auroch: 30% 
-            bison: 30% 
-            howitzer: 3%
-            ragnarok: 3%
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%            
-            gargantua2: 1%            
-            gargantua3: 1%            
-#T4 Vehicles Forgotten
+            fury: 1%
+            gargantua: 1%
+            atruck: 1%
+            fbuggy_mg: 60%
+            fbuggy_mis: 60%
+            fbuggy_mortar: 40%
+            ftruck_flamer: 40%
+            ftruck_mortar: 40%
+            ftruck_flak: 20%
+            gremlin_hcan: 30%
+            gremlin_mortar: 20%
+            gremlin_90mm: 40%
+            taurus_mg: 25%
+            taurus_hcan: 25%
+            taurus_mis: 25%
+            lizard_mg: 20%
+            lizard_90mm: 30%
+            lizard_122mm: 30%
+            digger_mis: 30%
+            digger_mortar: 30%
+            digger_122mm: 30%
+            bison_130mm: 15%
+            bison_145mm: 15%
+            bison_180mm: 15%
+            auroch_130mm: 15%
+            auroch_120mmt: 15%
+            auroch_180mm: 15%
+            ragnarok: 10%
             avalanche: 1%
+            chimera: 50%
+            mantis: 30%
+            corruptor: 20%
+            anhltrpd: 20%
+            hexapod: 1%
+            
+            orca_f1: 8%
+            orca_f2: 8%
+            orca_b: 6%
+            fhawk: 4%
+            hornet: 4%
+            condor: 6%
+            kodiak: 1%
+            venom: 6%
+            hydra: 4%
+            havoc: 2%
+            raven: 2%
+            scrinb: 2%
+            vertigo: 2%
+            zep: 1%
+            kdrone: 4%
+            pterois: 8%
+            kgunship: 2%
+            buzzard: 4%
+            fbomber: 2%
+            striker: 2%
+            scrin: 1%
+            
+            engineer: 1%
+            nengineer: 1%
+            kengineer: 1%
+            fengineer: 1%
+
         UnitLimits:
-            medic: 6
-            repair: 4
-            golem: 4
-            gharv: 10
-            nharv: 10
-            weed: 2
-            kharv: 12
-            fharv: 10            
-            glad: 1
-            glad2: 1
-            iontank: 1
-            hmec: 1
-            nemesis: 1          
-            nfist: 1
-            montauk: 1
-            scorpion: 1          
-            gargantua: 1          
-            avalanche: 1
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
+            medic: 1
+            atruck: 1
+            gharv: 6
+            nharv: 6
+            kharv: 6
+            fharv: 6
+            sharv: 6
+            golem: 2
+            engineer: 1
+            nengineer: 1
+            kengineer: 1
+            fengineer: 1
+
+        SupportPowerDecision@IonCannonPower:
+            OrderName: IonCannonPowerInfoOrder
+            MinimumAttractiveness: 1000
+            FineScanRadius: 2
             Consideration@1:
                 Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
+                Types: Air, Tank, Vehicle, Infantry, Water
+                Attractiveness: 2
                 TargetMetric: Value
                 CheckRadius: 2c0
             Consideration@2:
+                Against: Enemy
+                Types: Structure
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 2c0
+            Consideration@3:
                 Against: Ally
                 Types: Ground, Water
                 Attractiveness: -10
                 TargetMetric: Value
-                CheckRadius: 2c0
-                
-    HackyAI@ExpansionistAI:
-        Name: Expansionist AI
-        MinimumExcessPower: 150
-        BuildingQueues: Building, Tech
-        DefenseQueues: Defense
-        UnitQueues: Infantry, Vehicle, Air, Naval
-        SquadSize: 10    
-        SquadSizeRandomBonus : 20    
-        AssignRolesInterval: 20
-        RushInterval: 1500
-        AttackForceInterval: 80
-        MinimumAttackForceDelay: 0        
-        StructureProductionActiveDelay: 10
-        MinBaseRadius: 5
-        MaximumDefenseRadius: 20
-        NewProductionCashThreshold: 5000        
-        IdleBaseUnitsMaximum: 20
-        RushAttackScanRadius: 10
-        ProtectUnitScanRadius: 20
-        RallyPointScanRadius: 8
-        MaxBaseRadius: 50
-        ShouldRepairBuildings: true        
-        BuildingCommonNames:
-            ConstructionYard: gacnst, nacnst, kacnst, facnst
-            Refinery: gproc, nproc, kproc, fproc, nawast
-            Power: gapowr, napowr, naapwr, kpr, fapowr
-            Barracks: gapile, nahand, cybbar, fabar
-            VehiclesFactory: gaweap, naweap, kaweap, faweap
-            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad
-            Silo: gsilo, nasilo, kasilo, fasilo
-        UnitsCommonNames:
-            Mcv: gmcv, nmcv, kmcv, fmcv
-        BuildingLimits:        
-#Power
-#Economy            
-#Production
-            gapile: 10
-            nahand: 10
-            cybbar: 10
-            fabar: 10
-            gaweap: 10
-            naweap: 10
-            kaweap: 10
-            faweap: 10
-#Radar            
-            garadr: 1
-            naradr: 1
-            karadr: 1
-            faradr: 1
-#Armory    
-            gaarmory: 1
-            napyra: 1
-            cytech: 1
-            kabtech: 1
-            fhovel: 1
-#Helipad
-            gahpad: 12
-            nahpad: 12
-            kahpad: 12
-            fahpad: 12
-#Tech
-            gatech: 1
-            natech: 1
-            fatrade: 1
-#Advanced Tech
-            gadrop: 1
-            natmpl: 1
-#Special
-            gadept: 2
-            nastlh: 4
-
-#Defense anti infantry
-#Defense sensor
-#Defense vehicle
-#Defense AA
-#Defense Advanced            
-
-#Tech            
-            upgrade.gapowerup1: 1
-            upgrade.gapowerup2: 1
-            upgrade.emp: 1
-            upgrade.gdf: 1
-            upgrade.st: 1
-            upgrade.zc: 1
-            upgrade.industry.lvl1: 1
-            upgrade.industry.lvl2: 1
-            upgrade.tech.lv1: 1
-            upgrade.tech.lv2: 1
-            upgrade.propaganda.lvl1: 1
-            upgrade.propaganda.lvl2: 1
-            
-        BuildingFractions:
-#Power
-            gapowr: 35%
-            napowr: 30%
-            naapwr: 20%
-            kpr: 20%
-            fapowr: 35%
-            
-#Refineries
-            gproc: 30%
-            nproc: 30%
-#            nawast: 1%
-            kproc: 30%
-            fproc: 30%
-            
-#Barracks
-            gapile: 1%
-            nahand: 1%
-            cybbar: 1%
-            fabar: 1%
-            
-#Factories
-            gaweap: 1%
-            naweap: 1%
-            kaweap: 1%
-            faweap: 1%
-#Helipad
-            gahpad: 1%
-            nahpad: 1%
-            kahpad: 1%
-            fahpad: 1%
-            
-#Radar
-            garadr: 1%
-            naradr: 1%
-            faradr: 1%
-            karadr: 1%
-            
-#Armory            
-            gaarmory: 1%
-            napyra: 1%
-            cytech: 1%
-            kabtech: 1%
-            fhovel: 1%
-            
-#Tech
-            gatech: 1%
-            natech: 1%
-            fatrade: 1%
-            
-#Advanced Tech
-            gadrop: 1%
-            natmpl: 1%
-            
-#Special
-            gadept: 1%
-
-            nastlh: 1%
-
-#Defense anti infantry
-            gamg: 30%
-            naflamer: 25%
-            kablasr: 25%            
-            fatower: 40%
-            
-#Defense sensor
-            gasentur: 15%
-            
-#Defense vehicle
-            gacan: 10%
-            nalasr: 20%
-            kabcan: 25%
-            famissile: 25%
-            
-#Defense AA
-            gamis: 10%
-            nasam: 10%
-            kdark: 10%
-            faflak: 10%
-            
-#Defense Advanced            
-            gamortar: 15%
-            gamg2: 15%
-            gafort: 15%
-            naobel: 15%
-            kobel: 15%
-
-#Tech
-            upgrade.gapowerup1:2%
-            upgrade.gapowerup2: 2%
-            upgrade.emp: 1%
-            upgrade.gdf: 2%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            
-            upgrade.industry.lvl1: 5%
-            upgrade.industry.lvl2: 5%
-            upgrade.tech.lv1: 4%
-            upgrade.tech.lv2: 4%
-            upgrade.propaganda.lvl1: 1%
-            upgrade.propaganda.lvl2: 1%
-            
-            upgrade.hc: 2%
-            upgrade.lc: 1%
-            upgrade.mp: 1%
-            upgrade.htp: 2%
-            upgrade.nm: 2%
-            upgrade.es: 1%
-            unlock.pterois: 1%
-            unlock.manta: 1%
-            unlock.kronos: 1%
-            unlock.cyc2: 1%
-            unlock.glad: 1%
-            unlock.gargantua: 1%
-            
-            upgrade.brigand: 1%
-            upgrade.goon: 1%
-            upgrade.grunt: 1%
-            upgrade.fiend: 1%
-            upgrade.warthog: 1%
-            upgrade.gremlin: 1%
-            upgrade.auroch: 1%
-            upgrade.bison: 1%
-            upgrade.howitzer: 1%
-            upgrade.ragnarok: 1%
-            
-        UnitsToBuild:
-#T1 Infantry GDI
-            gasol: 80%
-            e2: 40%            
-            gdog: 10%            
-            medic: 1%            
-#T1 Infantry Nod            
-            nasol: 80%
-            nasol2: 80%
-            e3: 40%
-            e32: 40%
-            ndog: 10%            
-#T1 Infantry Cabal            
-            husk: 80%            
-            husk2: 80%            
-            hhusk: 50%    
-            hhusk2: 50%    
-            vanguard: 20%        
-            vanguard2: 20%        
-            jaguar: 10%                  
-            jaguar2: 10%                         
-#T1 Infantry Forgotten
-            grunt: 80%
-            huntress: 40%                    
-            fdog: 10%
-            ffiend: 10%
-#T1 Vehicles GDI
-            gmcv: 1%
-            gharv: 1%
-            smech: 80%
-            apc: 60%
-            gtmtnk: 80%        
-#T1 Vehicles Nod            
-            nmcv: 1%        
-            nharv: 1%        
-            weed: 1%        
-            bggy: 50%        
-            bike: 40%        
-            cheetah: 40%        
-#T1 Vehicles Cabal            
-            kmcv: 1%                
-            kharv: 1%                
-            dreadfire: 40%                
-            dreadfire2: 40%                
-            dreadfire3: 40%                
-            reaper: 60%                
-            reaper2: 60%                
-            reaper3: 60%                
-#T1 Vehicles Forgotten
-            fmcv: 1%
-            fharv: 1%
-            taurus: 30%
-            fbuggy: 40%
-            gremlin: 25%          
-#T2 Infantry GDI
-            zmarine: 80% 
-            jumpjet: 40% 
-            cybfly: 40% 
-#T2 Infantry Nod
-            fanatic: 25%     
-            nacad: 40%     
-            nconf: 40%     
-            shadow: 20%     
-            bhand: 25%     
-#T2 Infantry Cabal 
-            overseer: 20%         
-            overseer2: 20%         
-#T2 Infantry Forgotten    
-            elitegrunt: 80%                
-            brigand: 40%                
-            goon: 40%
- #T2 Vehicles GDI
-            vulture: 60%
-            gthtnk: 80%     
-            hovertnk: 60%     
-            hvr: 60%     
-            airblast: 40%     
-            triton: 40%
- #T2 Vehicles Nod
-            repair: 1%
-            gorran: 50%
-            avatar: 40%     
-            termite: 40%     
-#T2 Vehicles Cabal
-            silver: 30%
-            silver2: 30%
-            silver3: 30%
-            tarantula: 30%
-            tarantula2: 30%
-            tarantula3: 30%
-            golem: 1%
-#T2 Vehicles Forgotten
-            warthog: 40%
-#T2 Aircraft GDI
-            orca_f1: 5%
-            orca_f2: 5%
-            orca_g: 5%
-#T2 Aircraft Nod
-            hydra: 5%
-            venom: 5%
-#T2 Aircraft Cabal
-            kdrone: 5%
-            pterois: 5%
-            kgunship: 5%
-#T2 Aircraft Forgotten
-            buzzard: 5%            
-            striker: 5%            
-            fbomber: 5%            
-#T3 Infantry GDI
-            ztrooper: 30%
-#T3 Infantry Nod
-            spray: 30%
-#T3 Infantry Cabal
-            cyc2: 5% 
-            cyc22: 5% 
-#T3 Vehicles GDI
-            4tnk: 25%
-            mmch: 25%     
-            sonic: 25%     
-            juggy: 10%
-#T3 Vehicles Nod
-            nhwtz: 25%
-            subtank: 25%     
-            stnk: 25%     
-            hailstorm: 25%     
-#T3 Vehicles Cabal
-            kronos: 25%
-            kronos2: 25%
-            kronos3: 25%
-#T3 Aircraft GDI
-            orca_b: 5%
-            fhawk: 5%
-            hornet: 5%
-            condor: 5%
-#T2 Aircraft Nod
-            scrin: 5%
-            scrinb: 5%
-            vertigo: 5%
-            zep: 5%
-            raven: 5%
-#T3 Vehicles Forgotten
-            auroch: 40% 
-            bison: 40% 
-            howitzer: 10%  
-            ragnarok: 10%  
-#T4 Infantry Cabal
-            glad: 1% 
-            glad2: 1% 
-#T4 Vehicles GDI
-            iontank: 1%
-            hmec: 1%
-            nemesis: 1%          
-#T4 Vehicles Nod
-            nfist: 1%
-            montauk: 1%
-            scorpion: 1%
-#T4 Vehicles Cabal
-            gargantua: 1%            
-            gargantua2: 1%            
-            gargantua3: 1%            
-#T4 Vehicles Forgotten
-            avalanche: 1%
-        UnitLimits:
-            gmcv: 1
-            nmcv: 1
-            kmcv: 1
-            fmcv: 1
-            medic: 4
-            repair: 2
-            golem: 2
-            gharv: 30
-            nharv: 30
-            weed: 4
-            kharv: 30
-            fharv: 30
+                CheckRadius: 3c0
         SupportPowerDecision@Airstrike:
             OrderName: OXAirstrikePowerInfoOrder
             MinimumAttractiveness: 2000

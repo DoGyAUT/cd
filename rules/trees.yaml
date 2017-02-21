@@ -2,21 +2,33 @@ TIBTRE01:
     Inherits: ^BlossomTree
     Tooltip:
         Name: Riparius Tree
+    WithIdleOverlay@LIGHTINGGREEN:
+        Sequence: lightg
+        Palette: tibglowfaded
 
 TIBTRE02:
     Inherits: ^BlossomTree
     Tooltip:
         Name: Riparius Tree
+    WithIdleOverlay@LIGHTINGGREEN:
+        Sequence: lightg
+        Palette: tibglowfaded
 
 TIBTRE03:
     Inherits: ^BlossomTree
     Tooltip:
         Name: Riparius Tree
+    WithIdleOverlay@LIGHTINGGREEN:
+        Sequence: lightg
+        Palette: tibglowfaded
         
 TIBTRE04:
     Inherits: ^BlossomTree
     Tooltip:
         Name: Riparius Tree
+    WithIdleOverlay@LIGHTINGGREEN:
+        Sequence: lightg
+        Palette: tibglowfaded
 
 BIGGREEN:
     Inherits: ^BlossomTree
@@ -30,6 +42,9 @@ BIGGREEN:
     SeedsResource:
         ResourceType: Tiberium
         Interval: 50
+    WithIdleOverlay@LIGHTINGGREEN:
+        Sequence: lightg
+        Palette: tibglowfaded
         
 BIGBLUE:
     Inherits: ^BlossomTree
@@ -41,7 +56,10 @@ BIGBLUE:
         Terrain: BlueTiberium
     SeedsResource:
         ResourceType: BlueTiberium
-        Interval: 200
+        Interval: 75
+    WithIdleOverlay@LIGHTINGBLUE:
+        Sequence: lightb
+        Palette: tibglowbluefaded
         
 BIGRED:
     Inherits: ^BlossomTree
@@ -54,7 +72,7 @@ BIGRED:
         Terrain: RedTiberium
     SeedsResource:
         ResourceType: RedTiberium
-        Interval:50
+        Interval: 50
         
 BIGPURPLE:
     Inherits: ^BlossomTree
@@ -67,7 +85,7 @@ BIGPURPLE:
         Terrain: PurpleTiberium
     SeedsResource:
         ResourceType: PurpleTiberium
-        Interval:200
+        Interval: 100
 
 TREE01:
     Inherits: ^Tree
@@ -168,10 +186,10 @@ VEINHOLE:
     AppearsOnRadar:
     RadarColorFromTerrain:
         Terrain: Veins
-    SeedsResource:
-        ResourceType: Veins
-        Interval: 100
-     WithIdleAnimation:   
+#    SeedsResource:
+#        ResourceType: Veins
+#        Interval: 100
+     WithIdleAnimation: 
 
 TREE26:
     Inherits: ^Tree
@@ -209,4 +227,54 @@ BUSH6:
         Palette: player
 
 TREE27:
-    Inherits: ^Tree    
+    Inherits: ^Tree
+
+^TibFlora:
+    Inherits: ^Tree
+    Tooltip:
+        Name: Tiberian Flora
+
+FONA01:
+    Inherits: ^TibFlora
+
+FONA02:
+    Inherits: ^TibFlora
+
+FONA03:
+    Inherits: ^TibFlora
+
+FONA04:
+    Inherits: ^TibFlora
+
+FONA05:
+    Inherits: ^TibFlora
+
+FONA06:
+    Inherits: ^TibFlora
+
+FONA07:
+    Inherits: ^TibFlora
+
+FONA08:
+    Inherits: ^TibFlora
+
+FONA09:
+    Inherits: ^TibFlora
+
+FONA10:
+    Inherits: ^TibFlora
+
+FONA11:
+    Inherits: ^TibFlora
+
+FONA12:
+    Inherits: ^TibFlora
+
+FONA13:
+    Inherits: ^TibFlora
+
+FONA14:
+    Inherits: ^TibFlora
+
+FONA15:
+    Inherits: ^TibFlora

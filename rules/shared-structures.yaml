@@ -31,26 +31,111 @@ TECH:
 TIBTECH:
     Inherits: ^Building
     Tooltip:
-        Name: Tiberium Drill Station
+        Name: Drill Station
     Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4, 4
+        Footprint: xx xx
+        Dimensions: 2, 2
     Armor:
-        Type: Heavy
+        Type: Medium
     Health:
-        HP: 2000
+        HP: 1500
     -MustBeDestroyed:
     -Sellable:
     -GivesBuildableArea:
     Selectable:
         Bounds: 78, 54, 0, -8
     RevealsShroud:
-        Range: 8c0
+        Range: 5c0
     ActorLostNotification:
         Notification: CriticalStructureLost
     AutoTargetIgnore:
+    RenderSprites:
+        Image: CGOILD
+    WithIdleOverlay@flag:
+        Sequence: idle-flag
+    WithIdleOverlay@drill:
+        Sequence: idle-drill
     CashTrickler:
-        Period: 50
-        Amount: 15
+        Period: 250
+        Amount: 200
         CaptureAmount: 0
-   
+    Explodes:
+        Weapon: TiberiumExplosionDrill
+        EmptyWeapon: TiberiumExplosionDrill
+
+CAHOSP:
+    Inherits: ^Building
+    Tooltip:
+        Name: Civilian Hospital
+    Building:
+        Footprint: xxx xxx xxx xxx
+        Dimensions: 3, 4
+    Armor:
+        Type: medium
+    Health:
+        HP: 2000
+    RevealsShroud:
+        Range: 6c0
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+    AutoTargetIgnore:
+    Capturable:
+    ExternalCapturable:
+        CapturableCompleteTime: 7
+    ProximityExternalCondition:
+        Condition: medic_heal
+        Range: 10c0
+    WithRangeCircle:
+        Color: FFFFFFFF
+        Range: 10c0
+        
+CAARMR:
+    Inherits: ^Building
+    Tooltip:
+        Name: Civilian Armory
+    Building:
+        Footprint: xxxx xxxx xxxx xxxx
+        Dimensions: 4, 4
+    Armor:
+        Type: medium
+    Health:
+        HP: 2000
+    RevealsShroud:
+        Range: 10c0
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+    AutoTargetIgnore:
+    WithIdleOverlay@flag:
+        Sequence: idle-flag
+    Capturable:
+    ExternalCapturable:
+        CapturableCompleteTime: 7
+    ProvidesPrerequisite:
+        Prerequisite: armory.upgraded
+
+CAARAY:
+    Inherits: ^Building
+    Tooltip:
+        Name: Civilian Array
+    Building:
+        Footprint: xx xx
+        Dimensions: 2, 2
+    Armor:
+        Type: medium
+    Health:
+        HP: 2000
+    RevealsShroud:
+        Range: 15c0
+    ActorLostNotification:
+        Notification: CriticalStructureLost
+    WithIdleOverlay@dish1:
+        Sequence: idle-dish1
+    WithIdleOverlay@dish1:
+        Sequence: idle-dish2
+    WithIdleOverlay@dish1:
+        Sequence: idle-dish3
+    WithIdleOverlay@light:
+        Sequence: idle-light
+    Capturable:
+    ExternalCapturable:
+        CapturableCompleteTime: 7

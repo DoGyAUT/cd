@@ -23,16 +23,16 @@
     PaletteFromFile@chrome:
         Name: chrome
         Filename: cameo.pal
-        AllowModifiers: false
+        AllowModifiers: False
     PaletteFromFile@chromewithshadow:
         Name: chromewithshadow
         Filename: cameo.pal
-        AllowModifiers: false
+        AllowModifiers: False
         ShadowIndex: 242
     PaletteFromFile@pips:
         Name: pips
         Filename: palette.pal
-        AllowModifiers: false
+        AllowModifiers: False
         ShadowIndex: 4
     PaletteFromFile@ra:
         Name: ra
@@ -49,14 +49,14 @@
         Name: light2
         Filename: clightyelpal2.pal
         ShadowIndex: 0  
-	PaletteFromFile@sidebar:
-		Name: sidebar
-		Filename: sidebar-nod|sidebar.pal
+    PaletteFromFile@sidebar:
+        Name: sidebar
+        Filename: sidebar-nod|sidebar.pal
     PaletteFromPaletteWithAlpha@clock:
         Name: iconclock
         BasePalette: sidebar
         Alpha: 0.5
-        AllowModifiers: false
+        AllowModifiers: False
     PaletteFromFile@swave:
         Name: swave
         Filename: swave.pal
@@ -72,38 +72,66 @@
     PaletteFromFile@gdf:
         Name: gdf
         Filename: gdf.pal
+        AllowModifiers: False
     PaletteFromFile@st:
         Name: st
         Filename: st.pal
+        AllowModifiers: False
     PaletteFromFile@zc:
         Name: zc
         Filename: zc.pal
+        AllowModifiers: False
     PaletteFromFile@ni:
         Name: ni
         Filename: ni.pal
+        AllowModifiers: False
     PaletteFromFile@nt:
         Name: nt
         Filename: nt.pal
+        AllowModifiers: False
     PaletteFromFile@np:
         Name: np
         Filename: np.pal
+        AllowModifiers: False
     PaletteFromFile@forg:
         Name: forg
         Filename: forg.pal
+        AllowModifiers: False
     PaletteFromFile@beaconposter:
         Name: beaconposter
         Filename: cameo.pal
     PaletteFromFile@colorpicker:
         Name: colorpicker
         Filename: unittem.pal
-        AllowModifiers: false
+        AllowModifiers: False
         ShadowIndex: 1
     PaletteFromFile@alpha:
         Name: alpha
         Filename: alpha.pal
+        AllowModifiers: False
     PaletteFromFile@alpha2:
         Name: apolalpha
+        BasePalette: apolra2
+        Alpha: 0.5
+        Premultiply: False
         Filename: alphapalown.pal
+        AllowModifiers: False
+    PaletteFromFile@tibglow:
+        Name: tibglow
+        Filename: tibglowgreen.pal
+        ShadowIndex: 0
+    PaletteFromFile@tibglowblue:
+        Name: tibglowblue
+        Filename: tibglowblue.pal
+        ShadowIndex: 0
+    PaletteFromPaletteWithAlpha@tibglowblue:
+        Name: tibglowbluefaded
+        BasePalette: tibglowblue
+        Alpha: 0.8
+    PaletteFromPaletteWithAlpha@tibglow:
+        Name: tibglowfaded
+        BasePalette: tibglow
+        Alpha: 0.5
     PaletteFromFile@cdvoxels:
         Name: cdvoxels
         Filename: cdvoxels.pal
@@ -136,46 +164,47 @@
         Name: placebuilding
         BasePalette: ra
         Alpha: 0.75
+        AllowModifiers: False
     PaletteFromPaletteWithAlpha@player50alpha:
         Name: player50alpha
         BasePalette: player
         Alpha: 0.5
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@player50alpha:
         Name: player50alpha
         BasePalette: player
         Alpha: 0.5
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@effect75alpha:
         Name: effect75alpha
         BasePalette: effect
         Alpha: 0.75
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@effect50alpha:
         Name: effect50alpha
         BasePalette: effect
         Alpha: 0.5
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@effect25alpha:
         Name: effect25alpha
         BasePalette: effect
         Alpha: 0.25
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@apolra275alpha:
         Name: apolra75alpha
         BasePalette: apolra2
         Alpha: 0.75
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@apolra250alpha:
         Name: apolra50alpha
         BasePalette: apolra2
         Alpha: 0.5
-        Premultiply: false
+        Premultiply: False
     PaletteFromPaletteWithAlpha@apolra225alpha:
         Name: apolra25alpha
         BasePalette: apolra2
         Alpha: 0.25
-        Premultiply: false
+        Premultiply: False
     TSShroudPalette@shroud:
         Name: shroud
         Type: Shroud
@@ -220,6 +249,10 @@
     PaletteFromPlayerPaletteWithAlpha@cloak:
         BaseName: cloak
         BasePalette: player
+        Alpha: 0.55
+    PaletteFromPaletteWithAlpha@terrainalpha:
+        BasePalette: terraindecoration
+        Name: terrainalpha
         Alpha: 0.55
     FlashPaletteEffect:
     PlayerHighlightPalette:

@@ -3,7 +3,7 @@ mpspawn:
         Name: (multiplayer player starting point)
     AlwaysVisible:
     Immobile:
-        OccupiesSpace: false
+        OccupiesSpace: False
     RenderSpritesEditorOnly:
     WithSpriteBody:
     BodyOrientation:
@@ -14,7 +14,7 @@ waypoint:
         Name: (multiplayer player starting point)
     AlwaysVisible:
     Immobile:
-        OccupiesSpace: false
+        OccupiesSpace: False
     RenderSpritesEditorOnly:
     WithSpriteBody:
     BodyOrientation:
@@ -22,6 +22,7 @@ waypoint:
 
 ^mmch.colorpicker:
     Inherits: MMCH
+    -Buildable:
     Mobile:
         InitialFacing: 160
     Turreted:
@@ -42,12 +43,10 @@ CAMERA:
     BodyOrientation:
         QuantizedFacings: 1
     Immobile:
-        OccupiesSpace: false
-    Health:
-        HP: 1000
+        OccupiesSpace: False
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     DetectCloaked:
         Range: 10
         
@@ -56,13 +55,23 @@ camera.paradrop:
     RevealsShroud:
         Range: 6c0
         
+camera.orcascout:
+    Inherits: CAMERA 
+    RenderSpritesEditorOnly:
+        Image: camera
+    EditorOnlyTooltip:
+        Name: (support power proxy camera)
+    DetectCloaked:
+        Range: 10c0
+        CloakTypes: Cloak
+        
 CRATE:
     Inherits: ^Crate
     GiveCashCrateAction:
         Amount: 2500
         SelectionShares: 50
         Effect: dollar
-        UseCashTick: true
+        UseCashTick: True
     LevelUpCrateAction:
         SelectionShares: 40
         Effect: levelup
@@ -75,24 +84,24 @@ CRATE:
     RevealMapCrateAction:
         SelectionShares: 1
         Effect: reveal-map
-    GrantUpgradeCrateAction@cloak:
+    GrantExternalConditionCrateAction@cloak:
         SelectionShares: 5
         Effect: stealth
-        Upgrades: cloakgenerator
+        Condition: crate-cloak
         Notification: cloak5.aud
-    GrantUpgradeCrateAction@firepower:
+    GrantExternalConditionCrateAction@firepower:
         SelectionShares: 5
         Effect: firepower
-        Upgrades: firepower
+        Condition: crate-firepower
         Notification: 00-i070.aud
-    GrantUpgradeCrateAction@armor:
+    GrantExternalConditionCrateAction@armor:
         SelectionShares: 5
         Effect: armor
-        Upgrades: damage
+        Condition: crate-damage
         Notification: 00-i068.aud
-    GrantUpgradeCrateAction@speed:
+    GrantExternalConditionCrateAction@speed:
         SelectionShares: 5
-        Upgrades: speed
+        Condition: crate-speed
         Notification: 00-i080.aud
 
 SROCK01:

@@ -1,14 +1,14 @@
 ORCA_F1:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1400
+        Cost: 1000
     Tooltip:
         Name: Orca F-1
-        Description: Fast assault gunship with\nhellfire rocket launchers and a machinegun.\nEquipped with advanced sensors for stealth detection\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gahpad, ~!upgrade.zc
+        Description: Fast assault gunship with\nhellfire rocket launchers and a machinegun.\nEquipped with advanced sensors for stealth detection\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -16,14 +16,14 @@ ORCA_F1:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 5
-        Speed: 180
+        Speed: 130
     Health:
-        HP: 600
+        HP: 500
     Armor:
         Type: Light
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Weapon: OrcaHellfire
         LocalOffset: 282,132,85, 282,-132,85
@@ -51,35 +51,35 @@ ORCA_F1:
     WithVoxelBody:
     WithMuzzleOverlay:
     DetectCloaked:
-        Range: 5c0
+        Range: 7c0
     RenderDetectionCircle:
-    Contrail@1:
-        Offset: -128,128,100
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -128,-128,100
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+#    Contrail@1:
+#        Offset: -128,128,100
+#        TrailLength: 25
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -128,-128,100
+#        TrailLength: 25
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_F1.Husk
-        Probability: 80
+        Probability: 100
  
 ORCA_F2:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1600
+        Cost: 1250
     Tooltip:
         Name: Orca F-2
-        Description: ZOCOMs improved version of the F-1.\nEquipped with advanced sensors for stealth detection\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gahpad, ~upgrade.zc
+        Description: ZOCOMs improved version of the F-1.\nEquipped with advanced sensors for stealth detection\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -87,14 +87,14 @@ ORCA_F2:
         Bounds: 60,48,0,-10
     Aircraft:
         TurnSpeed: 5
-        Speed: 170
+        Speed: 120
     Health:
-        HP: 700
+        HP: 600
     Armor:
         Type: Light
     RevealsShroud:
         Range: 11c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Weapon: OrcaHellfire2
         LocalOffset: 555,120,128, 555,-120,128
@@ -122,46 +122,47 @@ ORCA_F2:
     WithVoxelBody:
     WithMuzzleOverlay:
     DetectCloaked:
-        Range: 5c0
+        Range: 7c0
     RenderDetectionCircle:
-    Contrail@1:
-        Offset: -64,256,400
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -64,-256,400
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+#    Contrail@1:
+#        Offset: -64,256,400
+#        TrailLength: 25
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -64,-256,400
+#        TrailLength: 25
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_F2.Husk
-        Probability: 80
+        Probability: 100
         
 ORCA_TRAN:
     Inherits: ^Helicopter
     Valued:
-        Cost: 800
+        Cost: 1000
     Tooltip:
         Name: Orca Transport
     Selectable:
         Bounds: 60,48,0,-10
         Priority: 7
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 102
-        Prerequisites: ~gahpad, ~!t1
+        Prerequisites: ~gahpad, ~upgrade.zc, ~!t1
+        Description: ZOCOMs aircraft transport.\nInfantry can garrison it to attack.\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Aircraft:
-        LandWhenIdle: yes
-        TurnSpeed: 5
-        Speed: 120
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 90
         InitialFacing: 0
-        LandableTerrainTypes: Clear
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
@@ -169,21 +170,26 @@ ORCA_TRAN:
     Armor:
         Type: Light
     RevealsShroud:
-        Range: 5c0
-        Type: CenterPosition
+        Range: 9c0
+        Type: GroundPosition
+    AttackGarrisoned:
+        PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+        PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
+        PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
     Cargo:
         Types: Infantry
-        MaxWeight: 10
-        PipCount: 10
+        MaxWeight: 6
+		PipCount: 6
     Selectable:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     ParaDrop:
         DropRange: 4c0
+    AutoTarget:
     SpawnActorOnDeath:
         Actor: ORCA_TRAN.Husk
-        Probability: 80
+        Probability: 100
         
 ORCA_TROOP:
     Inherits: ^Helicopter
@@ -191,29 +197,25 @@ ORCA_TROOP:
         Cost: 1200
     Tooltip:
         Name: Orca Troopship
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 102
-        Prerequisites: ~disabled #~gahpad, garadr, gapile
     Aircraft:
-        LandWhenIdle: yes
+        LandWhenIdle: True
         TurnSpeed: 5
-        Speed: 84
+        Speed: 150
         InitialFacing: 0
-        LandableTerrainTypes: Clear
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 700
+        HP: 800
     Armor:
-        Type: Light
+        Type: Medium
     RevealsShroud:
         Range: 5c0
-        Type: CenterPosition
+        Type: GroundPosition
     Cargo:
         Types: Infantry
-        MaxWeight: 10
-        PipCount: 10
+        MaxWeight: 12
+        PipCount: 12
     Selectable:
     RenderSprites:
     RenderVoxels:
@@ -222,7 +224,7 @@ ORCA_TROOP:
         DropRange: 4c0
     SpawnActorOnDeath:
         Actor: ORCA_TROOP.Husk
-        Probability: 80
+        Probability: 100
 
 TRNSPORT:
     Inherits: ^Helicopter
@@ -230,15 +232,10 @@ TRNSPORT:
         Cost: 750
     Tooltip:
         Name: Orca Carryall
-        Description: VTOL aircraft capable of lifting\nand transporting vehicles.\n  Unarmed
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 103
-        Prerequisites: ~disabled #~gahpad, garadr, gaweap
     Aircraft:
-        LandWhenIdle: yes
+        LandWhenIdle: True
         TurnSpeed: 5
-        Speed: 149
+        Speed: 90
         InitialFacing: 0
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
@@ -251,13 +248,13 @@ TRNSPORT:
         Type: Light
     RevealsShroud:
         Range: 6c0
-        Type: CenterPosition
+        Type: GroundPosition
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     SpawnActorOnDeath:
         Actor: TRNSPORT.Husk
-        Probability: 80
+        Probability: 100
  
 ORCA_OXTRAN:
     Inherits: ^Plane
@@ -265,11 +262,8 @@ ORCA_OXTRAN:
         Cost: 1200
     Tooltip:
         Name: OX-Transport
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 104
-        Prerequisites: ~disabled #~gahpad, garadr
     Aircraft:
+        CruisingCondition: cruising
         CruiseAltitude: 4096
         TurnSpeed: 1
         Speed: 220
@@ -279,7 +273,7 @@ ORCA_OXTRAN:
         Type: Medium
     RevealsShroud:
         Range: 5c0
-        Type: CenterPosition
+        Type: GroundPosition
     Cargo:
         Types: Infantry
         MaxWeight: 5
@@ -303,7 +297,7 @@ ORCA_OXTRAN:
         UsePlayerColor: True
     SpawnActorOnDeath:
         Actor: ORCA_OXTRAN.Husk
-        Probability: 80
+        Probability: 100
         
 GUNNER:
     Inherits: ^Plane
@@ -311,11 +305,8 @@ GUNNER:
         Cost: 1200
     Tooltip:
         Name: OX-Gunship
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 104
-        Prerequisites: ~disabled #~gahpad, garadr
     Aircraft:
+        CruisingCondition: cruising
         CruiseAltitude: 4096
         TurnSpeed: 2
         Speed: 120
@@ -325,7 +316,7 @@ GUNNER:
         Type: Medium
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Selectable:
     RenderSprites:
     RenderVoxels:
@@ -336,130 +327,74 @@ ORCA_G:
     Valued:
         Cost: 1000
     Tooltip:
-        Name: Orca Gunship
-        Description: Fast souting craft.\nEquipped with advanced sensors for stealth detection\n  Strong vs Infantry\n  Weak vs Armored Targets, Aircraft
-    Voiced:
-        VoiceSet: Orca
-        Volume: 2
-    Selectable:
-        Bounds: 60,48,0,-10
+        Name: Orca Scout
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
     Aircraft:
+        CruisingCondition: cruising
         TurnSpeed: 5
-        Speed: 280
+        Speed: 250
     Health:
         HP: 500
     Armor:
         Type: Light
     RevealsShroud:
         Range: 14c0
-        Type: CenterPosition
+        Type: GroundPosition
     RejectsOrders:
-    Armament:
-        Weapon: OrcaCannonRaid
-        Name: gun
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 536,112,87, 536,-112,87
     AttackBomber:
-        Armaments: gun, bombs
-        Guns: gun
-        Bombs: bombs
-    AutoTarget:
     RenderSprites:
     RenderVoxels:    
     WithVoxelBody:
-    WithMuzzleOverlay:
     Contrail@1:
         Offset: -128,144,112
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -128,-144,112
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_G.Husk
-        Probability: 80
+        Probability: 100
+    RejectsOrders:
 
 OXBOMBER:
-    Inherits: ^Plane
+    Inherits: ^AttackPlane
     RenderSprites:
         Image: orca_oxtran
     RenderVoxels:
         Image: orca_oxtran
     Valued:
-        Cost: 1200
-    Tooltip:
-        Name: OX-Bomber
-    Aircraft:
-        CruiseAltitude: 8192
-        TurnSpeed: 1
-        Speed: 220
-    Selectable:
-        Bounds: 60,48,0,-10
-    Health:
-        HP: 500
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 6c0
-        Type: CenterPosition
-    WithVoxelBody:
-    RejectsOrders:
-    AttackBomber:
-        Armaments: gun, bombs
-        Guns: gun
-        Bombs: bombs
-    Armament@BOMBS:
-        Name: bombs
-        Weapon: CarpetBombOX
-        LocalOffset: 0, 0, 0
-    Contrail@1:
-        Offset: -1024,128,400
-        TrailLength: 50
-        Color: FFFFFF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -1024,-128,400
-        TrailLength: 50
-        Color: FFFFFF
-        UsePlayerColor: True
-    SpawnActorOnDeath:
-        Actor: ORCA_OXTRAN.Husk
-        Probability: 80
-        
-ORCA_B:
-    Inherits: ^AttackBomber
-    Valued:
         Cost: 2000
     Tooltip:
-        Name: Orca Bomber
-        Description: Heavy bomber.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
+        Name: OX-Bomber
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 105
-        Prerequisites: ~gahpad, garadr, gaarmory, gatech, ~!t1, ~!t2, ~!upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!upgrade.zc
+        Description: Heavy bomber.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Voiced:
         VoiceSet: Orca
         Volume: 2
+    Aircraft:
+        TurnSpeed: 4
+        Speed: 150
     Selectable:
         Bounds: 60,48,0,-10
-    Aircraft:
-        TurnSpeed: 3
-        Speed: 200
     Health:
-        HP: 1000
+        HP: 1500
     Armor:
-        Type: Heavy
+        Type: Medium
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament:
         Weapon: Bomb
     AttackPlane:
@@ -476,32 +411,108 @@ ORCA_B:
     RenderVoxels:
     WithVoxelBody:
     Contrail@1:
+        Offset: -1100,128,350
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: -1100,-128,400
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@11:
+        Offset: -1100,192,400
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -1100,-192,400
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: -512,1024,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -512,-1024,400
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    SpawnActorOnDeath:
+        Actor: ORCA_OXTRAN.Husk
+        Probability: 100
+        
+ORCA_B:
+    Inherits: ^AttackPlane
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Orca Bomber
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
+    Aircraft:
+        TurnSpeed: 3
+        Speed: 150
+    Health:
+        HP: 1500
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 14c0
+        Type: GroundPosition
+    Armament:
+        Weapon: OrcaBombRun
+    AttackPlane:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 20
+        PipCount: 0
+        ReloadCount: 5
+        ReloadDelay: 50
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+    AttackBomber:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    Contrail@1:
         Offset: -200,450,300
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -200,-450,300
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        UsePlayerColor: True
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_B.Husk
-        Probability: 80
+        Probability: 100
+    RejectsOrders:
         
 PHOENIX:
-    Inherits: ^AttackBomber
+    Inherits: ^AttackPlane
     Valued:
         Cost: 1600
     Tooltip:
         Name: Phoenix Bomber
-        Description: Giant bomber.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
-    Buildable:
-        Queue: Air
-        BuildPaletteOrder: 105
-        Prerequisites: ~disabled #~gahpad, garadr, gaarmory
+#    Buildable:
+#        Queue: Air.GDI
+#        BuildPaletteOrder: 105
+#        Prerequisites: ~disabled #~gahpad, garadr, gaarmory
+#        Description: Giant bomber.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -509,17 +520,17 @@ PHOENIX:
         Bounds: 100,100
     Aircraft:
         TurnSpeed: 1
-        Speed:120
+        Speed: 120
         CruiseAltitude: 8192
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 1200
+        HP: 1700
     Armor:
         Type: Medium
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament:
         Weapon: Bomb
     AttackPlane:
@@ -535,33 +546,33 @@ PHOENIX:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Contrail@1:
-        Offset: -128,600,400
-        TrailLength: 50
-        TrailWidth: 25
-        Color: FFFFFF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -128,-600,400
-        TrailLength: 50
-        TrailWidth: 25
-        Color: FFFFFF
-        UsePlayerColor: True
+#    Contrail@1:
+#        Offset: -128,600,400
+#        TrailLength: 50
+#        TrailWidth: 25
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -128,-600,400
+#        TrailLength: 50
+#        TrailWidth: 25
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: PHOENIX.Husk
-        Probability: 80
+        Probability: 100
 
 FHAWK:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2200
+        Cost: 1600
     Tooltip:
         Name: Firehawk
-        Description: Advanced fighter, constructed for air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~!upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!upgrade.zc
+        Description: Advanced fighter, constructed for air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
@@ -569,158 +580,210 @@ FHAWK:
         Volume: 2
     Aircraft:
         TurnSpeed: 4
-        Speed: 300
+        Speed: 200
     Health:
-        HP: 600
+        HP: 1040
     Armor:
         Type: Light
     RevealsShroud:
-        Range: 23c0
-        Type: CenterPosition
+        Range: 14c0
+        Type: GroundPosition
     Armament@primary:
+        AmmoPoolName: Missiles
         Weapon: HawkMissile
         LocalOffset: -256,512,32, -512,-512,32
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: HawkCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 1000,0,32
+#    Armament@secondary:
+#        AmmoPoolName: Bullets
+#        Weapon: HawkCannon
+#        MuzzleSequence: muzzle
+#        MuzzleSplitFacings: 8
+#        MuzzlePalette: apolra50alpha
+#        LocalOffset: 1000,0,32
     AttackPlane:
-        FacingTolerance: 20
+        FacingTolerance: 45
     AmmoPool@1:
-        Name:primary
-        Ammo: 8
-        PipCount: 0
+        Name: Missiles
+        Ammo: 2
+        PipCount: 2
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
+#        SelfReloads: True
+#        SelfReloadDelay: 200
+#    AmmoPool@2:
+#        Name: Bullets
+#        Ammo: 40
+#        PipCount: 0
+#        PipType: Ammo
+#        PipTypeEmpty: AmmoEmpty
+#        SelfReloads: True
+#        SelfReloadDelay: 5
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
     Contrail@1:
-        Offset: -512,64,128
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        Offset: -512,128,128
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
-        Offset: -512,-64,128
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        Offset: -512,-128,128
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: -64,670,300
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -64,-670,300
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: FHAWK.Husk
-        Probability: 80
+        Probability: 100
         
 HORNET:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2200
+        Cost: 1800
     Tooltip:
         Name: Hornet
-        Description: Even further advanced Firehawk.\nConstructed by ZOCOM for absolute air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Description: Even further advanced Firehawk.\nConstructed by ZOCOM for absolute air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Aircraft:
-        TurnSpeed: 6
-        Speed: 350
+        TurnSpeed: 4
+        Speed: 220
     Health:
         HP: 800
     Armor:
         Type: Light
     RevealsShroud:
-        Range: 23c0
-        Type: CenterPosition
+        Range: 14c0
+        Type: GroundPosition
     Armament@primary:
+        AmmoPoolName: Missiles
         Weapon: HornetMissile
         LocalOffset: 0,400,256, 0,-400,256, 0,512,256, 0,-512,256
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: HornetCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 1200,0,256
+#    Armament@secondary:
+#        AmmoPoolName: Bullets
+#        Weapon: HornetCannon
+#        MuzzleSequence: muzzle
+#        MuzzleSplitFacings: 8
+#        MuzzlePalette: apolra50alpha
+#        LocalOffset: 1200,0,256
     AttackPlane:
-        AttackTurnDelay: 50
-        FacingTolerance: 20
+        FacingTolerance: 45
     AmmoPool@1:
-        Name:primary
-        Ammo: 8
-        PipCount: 0
+        Name: Missiles
+        Ammo: 4
+        PipCount: 4
+        ReloadCount: 1
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
+#        SelfReloads: True
+#        SelfReloadDelay: 200
+#    AmmoPool@2:
+#        Name: Bullets
+#        Ammo: 40
+#        PipCount: 0
+#        PipType: Ammo
+#        PipTypeEmpty: AmmoEmpty
+#        SelfReloads: True
+#        SelfReloadDelay: 5
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
     Contrail@1:
-        Offset: -512,128,256
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        Offset: -700,260,350
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
-        Offset: -512,-128,256
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        Offset: -700,-260,350
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@11:
+        Offset: -700,360,350
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@22:
+        Offset: -700,-360,350
+        TrailLength: 30
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@3:
+        Offset: -400,800,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@4:
+        Offset: -400,-800,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: HORNET.Husk
-        Probability: 80
+        Probability: 100
         
 CONDOR:
-    Inherits: ^AttackBomber
+    Inherits: ^AttackPlane
     Valued:
-        Cost: 2600
+        Cost: 2400
     Tooltip:
         Name: Condor
-        Description: Advanced fighter. Armed with dual Railguns.\n  Strong vs Hard Targets\n  Weak vs Soft Targets
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Description: Advanced fighter. Armed with dual Railguns.\n  Strong vs Hard Targets\n  Weak vs Soft Targets
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Aircraft:
-        TurnSpeed: 3
-        Speed: 350
+        TurnSpeed: 4
+        Speed: 250
         CruiseAltitude: 8192
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 400
+        HP: 1100
     Armor:
-        Type: Medium
+        Type: Light
     RevealsShroud:
         Range: 14c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@primary:
         Weapon: CondorBomb
         MuzzleSequence: muzzle
@@ -730,7 +793,7 @@ CONDOR:
     AttackPlane:
         FacingTolerance: 20
     AmmoPool@1:
-        Name:primary
+        Name: primary
         Ammo: 2
         PipCount: 2
         PipType: Ammo
@@ -742,35 +805,115 @@ CONDOR:
     WithMuzzleOverlay:
     Contrail@1:
         Offset: -512,256,0
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@2:
         Offset: -512,-256,0
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@3:
         Offset: -512,512,0
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
     Contrail@4:
         Offset: -512,-512,0
-        TrailLength: 25
-        TrailWidth: 50
-        Color: FF6400
-        Width: 50
-        UsePlayerColor: True
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@11:
+        Offset: -512,256,128
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@21:
+        Offset: -512,-256,128
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@31:
+        Offset: -512,512,128
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@41:
+        Offset: -512,-512,128
+        TrailLength: 60
+        TrailWidth: 30
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@5:
+        Offset: -500,770,256
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@6:
+        Offset: -500,-770,256
+        TrailLength: 30
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: CONDOR.Husk
-        Probability: 80
+        Probability: 100
+        
+DSHP.SUPPORT:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Supply Dropship
+    Voiced:
+        VoiceSet: Orca
+        Volume: 2
+    ParaDrop:
+        LZRange: 1
+    -Selectable:
+    Aircraft:
+        LandWhenIdle: False
+        TurnSpeed: 8
+        Speed: 180
+        InitialFacing: 0
+        Repulsable: False
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    HiddenUnderFog:
+        AlwaysVisibleStances: None
+        Type: GroundPosition
+    DamageMultiplier@INVULNERABLE:
+        Modifier: 0
+    Health:
+        HP: 800
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 0c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry, Vehicle
+        MaxWeight: 20
+        PipCount: 20
+    RenderSprites:
+        Image: dshp
+    RenderVoxels:
+        Image: dshp
+    WithVoxelBody:
+    -MustBeDestroyed:
+    FlyAwayOnIdle:
+    SpawnActorOnDeath:
+        Actor: DSHP.Husk
+        Probability: 100
         
 DSHP:
     Inherits: ^Helicopter
@@ -778,35 +921,43 @@ DSHP:
         Cost: 1000
     Tooltip:
         Name: Dropship
+    Voiced:
+        VoiceSet: Orca
+        Volume: 2
+    Selectable:
     Buildable:
-        Queue: Air
-        BuildPaletteOrder: 107
-        Prerequisites: ~gahpad, garadr, gadrop, ~!t1, ~!t2, ~upgrade.st
+        Queue: Air.GDI
+        BuildPaletteOrder: 102
+        Prerequisites: ~gahpad, ~upgrade.st, ~!t1
     Aircraft:
-        LandWhenIdle: yes
-        TurnSpeed: 5
-        Speed: 168
+        LandWhenIdle: True
+        TurnSpeed: 2
+        Speed: 100
         InitialFacing: 0
-        LandableTerrainTypes: Clear
+        Repulsable: False
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 800
+        HP: 1000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 10c0
-        Type: CenterPosition
+        Type: GroundPosition
     Cargo:
-        Types: Infantry
-        MaxWeight: 5
-        PipCount: 5
+        Types: Infantry, Vehicle, Epic
+        MaxWeight: 20
+        PipCount: 20
+    Selectable:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
+    ParaDrop:
+        DropRange: 4c0
     SpawnActorOnDeath:
         Actor: DSHP.Husk
-        Probability: 80
+        Probability: 100
 
 KODIAK:
     Inherits: ^Helicopter
@@ -814,11 +965,12 @@ KODIAK:
         Cost: 8000
     Tooltip:
         Name: Kodiak Class
-        Description: Fast assault gunship with\ndual missile launchers.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
     Buildable:
-        Queue: Air
+        Queue: Air.GDI
         BuildPaletteOrder: 107
-        Prerequisites: ~gahpad, garadr, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!t3, ~upgrade.zc
+		BuildLimit: 1
+        Description: Missing
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -827,14 +979,15 @@ KODIAK:
     Aircraft:
         TurnSpeed: 1
         Speed: 45
+        IdealSeparation: 2048
         CruiseAltitude: 8192
     Health:
-        HP: 5000
+        HP: 7000
     Armor:
         Type: Heavy
     RevealsShroud:
         Range: 15c0
-        Type: CenterPosition
+        Type: GroundPosition
     Armament@MG1:
         Weapon: MammothMG
         Name: MG1
@@ -852,20 +1005,12 @@ KODIAK:
         Name: MG4
         LocalOffset: 600,-256,128
     Armament@Ion1:
-        Weapon: KodiakIonCannon1
-        Name: Ion1
-        LocalOffset: 380,800,128
-    Armament@Ion2:
-        Weapon: KodiakIonCannon2
-        Name: Ion2
-        LocalOffset: 380,-800,128
-    Armament@Rail1:
         Weapon: MechRailgun
-        Name: Rail1
-        LocalOffset: 350,400,128
-    Armament@Rail2:
+        Name: Ion1
+        LocalOffset: 3350,400,128
+    Armament@Ion2:
         Weapon: MechRailgun2
-        Name: Rail2
+        Name: Ion2
         LocalOffset: 350,-400,128
     AttackHeli:
         FacingTolerance: 10
@@ -939,82 +1084,3 @@ KODIAK:
     RenderVoxels:    
     WithVoxelBody:
     WithMuzzleOverlay:
-    
-HUNTER:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Hunter-Seeker Droid
-	Health:
-		HP: 500
-	Armor:
-		Type: Light
-    Armament@primary:
-        Weapon: SuicideBomb
-    AttackHeli:
-        FacingTolerance: 10
-	Explodes:
-		Weapon: SuicideBomb
-		EmptyWeapon: SuicideBomb
-	Aircraft:
-        Speed: 355
-		TurnSpeed: 16
-        LandWhenIdle: no
-        CruiseAltitude: 4096
-        CanHover: True
-        IdealSeparation: 1024
-        AltitudeVelocity: 230
-	HiddenUnderFog:
-		Type: CenterPosition
-	RenderSprites:
-		Image: GGHUNT
-	WithFacingSpriteBody:
-	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
-	AppearsOnRadar:
-		UseLocation: yes
-	Selectable:
-	SelectionDecorations:
-		Palette: pips
-    -RenderVoxels:
-    -WithVoxelBody:
-    WithShadow:
-    
-DPOD:
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 10
-    Tooltip:
-        Name: Drop Pod
-    Aircraft:
-        LandWhenIdle: yes
-        TurnSpeed: 5
-        Speed: 149
-        InitialFacing: 0
-        LandableTerrainTypes: Clear
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
-    Health:
-        HP: 60
-    Armor:
-        Type: Light
-    RevealsShroud:
-        Range: 5c0
-        Type: CenterPosition
-    Cargo:
-        Types: Infantry
-        MaxWeight: 1
-        PipCount: 1
-    Armament:
-        Weapon: VulcanDPOD
-    AttackHeli:
-    AmmoPool:
-        Ammo: 5
-        PipCount: 5
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:

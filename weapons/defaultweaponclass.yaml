@@ -1,19 +1,23 @@
 ^Bullet:
     Projectile: Bullet
         Image: bullet
-        Angle: 45
+        LaunchAngle: 45
         Palette: effect
-        Speed: 0c512
+        Speed: 0c712
         Inaccuracy: 0c256
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 32
         Versus:
-            Building: 25
+            Infantry: 100
+            Cyborg: 60
+            Vehicle: 10
+            Aircraft: 100
+            Building: 10
             Light: 100
-            Medium: 20
-            Heavy: 10
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -25,11 +29,11 @@
     Warhead@5Eff: CreateEffect
         Explosions: tiny_flash
         ExplosionPalette: light2
-        
+       
 ^APBullet:
     Projectile: Bullet
         Image: bullet
-        Angle: 45
+        LaunchAngle: 45
         Palette: effect
         Speed: 0c768
         Inaccuracy: 0c128
@@ -38,10 +42,14 @@
         Spread: 128
         Damage: 50
         Versus:
-            Building: 25
-            Light: 200
-            Medium: 100
-            Heavy: 50
+            Infantry: 100
+            Cyborg: 80
+            Vehicle: 30
+            Aircraft: 100
+            Building: 10
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -55,7 +63,7 @@
         ExplosionPalette: light2
 
 ^MissileAPHE
-    ValidTargets: Ground, Air
+    ValidTargets: Ground, Air, MidAir
     Projectile: Missile
         MaximumLaunchSpeed: 213
         Blockable: true
@@ -65,22 +73,32 @@
         HorizontalRateOfTurn: 8
         RangeLimit: 20c0
         Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
+#        MaximumLaunchAngle: 192
+#        VerticalRateOfTurn: 16
+#        CruiseAltitude: 1c512
+        AllowSnapping: true
+        TrailImage: durasmoke
+        TrailPalette: apolra25alpha
+#        ContrailLength: 10
+#        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 50
-        ValidTargets: Ground, Air
+        ValidTargets: Ground, Air, MidAir
         Versus:
-            Building: 120
-            Light: 120
-            Medium: 100
-            Heavy: 40
+            Infantry: 30
+            Cyborg: 70
+            Vehicle: 100
+            Aircraft: 100
+            Building: 80
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_tumu
         ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
         InvalidImpactTypes: Water, Air, AirHit
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -103,28 +121,34 @@
     ValidTargets: Ground
     Projectile: Bullet
         Speed: 0c256
-        Angle: 125
+        LaunchAngle: 125
         Blockable: true
         Shadow: true
         Inaccuracy: 3c0
         Image: missile01
         Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
+        TrailImage: durasmoke
+        TrailPalette: apolra50alpha
+#        ContrailLength: 10
+#        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 60
         ValidTargets: Ground
         Versus:
-            Building: 150
-            Light: 160
+            Infantry: 100
+            Cyborg: 80
+            Vehicle: 40
+            Aircraft: 100
+            Building: 100
+            Light: 100
             Medium: 80
-            Heavy: 30
+            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
         ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
         InvalidImpactTypes: Water, Air, AirHit
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -141,28 +165,32 @@
 ^ShellAP:
     Projectile: Bullet
         Speed: 0c768
-        Inaccuracy: 1c0
+        Inaccuracy: 0c512
         Image: shell02
         Shadow: true
-        Angle: 62
+        LaunchAngle: 62
         Palette: effect
         ContrailLength: 10
         ContrailColor: FFFFFF
         ContrailWidth: 15
         Blockable: true
     Warhead@1Dam: SpreadDamage
-        Spread: 0c256
+        Spread: 0c128
         Damage: 100
         Versus:
-            Building: 25
-            Light: 160
-            Medium: 120
-            Heavy: 50
+            Infantry: 30
+            Cyborg: 70
+            Vehicle: 100
+            Aircraft: 100
+            Building: 60
+            Light: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
         ExplosionPalette: apolra2
-        ImpactSounds: explo03.aud
+        ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
         InvalidImpactTypes: Water
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -174,32 +202,36 @@
     Warhead@5Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light
-                
+
 ^ShellHE:
     Projectile: Bullet
         Speed: 0c512
         Inaccuracy: 1c0
         Image: shell01
         Shadow: true
-        Angle: 62
+        LaunchAngle: 62
         Palette: effect
         ContrailLength: 10
         ContrailColor: FFFFFF
         ContrailWidth: 15
         Blockable: true
     Warhead@1Dam: SpreadDamage
-        Spread: 0c512
+        Spread: 0c256
         Damage: 100
         Versus:
-            Building: 150
-            Light: 160
+            Infantry: 100
+            Cyborg: 80
+            Vehicle: 70
+            Aircraft: 100
+            Building: 100
+            Light: 100
             Medium: 80
-            Heavy: 30
+            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
         ExplosionPalette: apolra2
-        ImpactSounds: explo03.aud
+        ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
         InvalidImpactTypes: Water
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -219,34 +251,67 @@
         Spread: 0c128
         Damage: 50
         Versus:
-            Building: 100
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 70
             Light: 100
-            Medium: 100
-            Heavy: 50
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-   
-^TiberiumLaser:
-    Projectile: LaserZap
-        Width: 50
+
+^PlasmaWarhead:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 50
         Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
             Building: 100
             Light: 100
-            Medium: 100
-            Heavy: 100
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-                        
-^PlasmaLaser:
-    Projectile: LaserZap
-        Width: 50
+        
+^Railgun:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 50
         Versus:
-            Building: 100
+            Infantry: 40
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 60
             Light: 100
-            Medium: 100
-            Heavy: 50
+            Medium: 80
+            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+                
+^Fire:
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 50
+        Falloff: 100, 80
+        Versus:
+            Infantry: 200
+            Cyborg: 100
+            Vehicle: 25
+            Aircraft: 25
+            Building: 200
+            Light: 100
+            Medium: 80
+            Heavy: 70
+        DamageTypes: Prone100Percent, TriggerProne, FireDeath		
+
+^ShellAPElite:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c384
+    Warhead@2Eff: CreateEffect
+        Explosions: large_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
