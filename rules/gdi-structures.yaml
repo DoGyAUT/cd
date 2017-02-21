@@ -108,7 +108,7 @@ GAPOWR:
         Condition: upgrade.gapowerup2
         Prerequisites: upgrade.gapowerup2
     Power@pluga:
-        Condition: upgrade.gapowerup1
+        RequiresCondition: upgrade.gapowerup1
         Amount: 75
     WithIdleOverlay@pluga:
         RequiresCondition: upgrade.gapowerup1
