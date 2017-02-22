@@ -182,13 +182,31 @@ AssaultMG:
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
-        
-GattlingCannon:
+# split in half in order to hit something
+GattlingCannonAttack:
     Inherits: ^APBullet
     ReloadDelay: 125
-    Range: 6c0
+    Range: 7c512
     Burst: 200
-    ValidTargets: Ground, Air
+    ValidTargets: Ground, Air, MidAir, HighAir     
+    BurstDelay: 2
+    Report: gattling01.aud, gattling02.aud, gattling03.aud
+    Projectile: Bullet
+		Image: 
+        Speed: 10c0
+        Inaccuracy: 0c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 20
+            Aircraft: 1
+        ValidTargets: Ground, Air, MidAir, HighAir     
+        
+GattlingCannonVisual:
+    Inherits: ^APBullet
+    ReloadDelay: 125
+    Range: 7c512
+    Burst: 200
+    ValidTargets: Ground, Air, MidAir, HighAir     
     BurstDelay: 2
     Report: gattling01.aud, gattling02.aud, gattling03.aud
     Projectile: Bullet
@@ -196,9 +214,8 @@ GattlingCannon:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 20
-            Aircraft: 1
-        ValidTargets: Ground, Air
+        Damage: 0
+        ValidTargets: Ground, Air, MidAir, HighAir     
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
