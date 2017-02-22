@@ -168,7 +168,7 @@ CruiserIonCannon:
                 
 BehemothIonCannon:
     ReloadDelay: 240
-    Range: 14c0
+    Range: 12c0
     MinRange: 5c0
     Report: railuse5.aud
     Projectile: LaserZap
@@ -293,7 +293,7 @@ KodiakIonCannon2:
         
 TitanRailgun:
     Inherits: ^Railgun
-    ReloadDelay: 110
+    ReloadDelay: 150
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
     Projectile: Bullet
@@ -308,7 +308,7 @@ TitanRailgun:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 400
+        Damage: 700
         DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1

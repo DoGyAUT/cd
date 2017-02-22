@@ -312,11 +312,11 @@ RAVEN:
         Cost: 1400
     Tooltip:
         Name: Raven
-#    Buildable:
-#        Queue: Air.Nod
-#        BuildPaletteOrder: 203
-#        Prerequisites: ~nahpad, ~!t1
-#        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a Minigun
+    Buildable:
+        Queue: Air.Nod
+        BuildPaletteOrder: 203
+        Prerequisites: ~nahpad, ~!t1, ~propaganda
+        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a Minigun
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -335,13 +335,26 @@ RAVEN:
         Range: 14c0
         Type: GroundPosition
     Armament@primaryAA:
-        Weapon: RavenCannonAA
+        Weapon: RavenMissileAA
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 700,128,200, 700,-128,200
     Armament@primary2AAwings:
-        Weapon: RavenCannonAA
+        Weapon: RavenMissileAA
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        FireDelay: 5
+        LocalOffset: 256,800,-32, 256,-800,-32
+    Armament@primary:
+        Weapon: RavenMissile
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 700,128,200, 700,-128,200
+    Armament@primary2wings:
+        Weapon: RavenMissile
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
@@ -352,12 +365,11 @@ RAVEN:
 	AttackTurreted:
     AmmoPool@1:
         Name:primary
-        Ammo: 80
-        PipCount: 0
+        Ammo: 2
+        PipCount: 2
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
+        SelfReloads: False
     AutoTarget:
     RenderSprites:
     RenderVoxels:

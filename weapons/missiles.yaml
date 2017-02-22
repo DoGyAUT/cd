@@ -317,7 +317,7 @@ HoverMissile:
         Spread: 256
         Damage: 200
         ValidTargets: Ground
-                
+		
 HoverMissileAA:
     Inherits: ^MissileAPHE
     ReloadDelay: 200
@@ -336,6 +336,55 @@ HoverMissileAA:
         Spread: 256
         Damage: 60
         ValidTargets: Air, MidAir
+		
+# test weapon
+RavenMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Range: 6c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        Speed : 0c768
+        RangeLimit: 20c0
+        Inaccuracy: 0c128
+        MinimumLaunchAngle: 128
+        MaximumLaunchAngle: 192
+        CruiseAltitude: 2c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c768
+        Damage: 700
+        ValidTargets: Ground
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 20
+            Building: 100
+            Light: 100
+            Medium: 50
+            Heavy: 20	
+RavenMissileAA:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Range: 8c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, MidAir, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        Speed : 0c768
+        RangeLimit: 20c0
+        Inaccuracy: 0c128
+        MinimumLaunchAngle: 128
+        MaximumLaunchAngle: 192
+        CruiseAltitude: 2c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 400
+        ValidTargets: Air, MidAir, HighAir        
+
                
 ComponentMissile:
     Inherits: ^MissileAPHE
@@ -383,7 +432,7 @@ PoseidonTusk:
 
 MammothTusk:
     Inherits: ^MissileAPHE
-    ReloadDelay: 180
+    ReloadDelay: 200
     Range: 8c0
     Burst: 2
     BurstDelay: 8
@@ -401,7 +450,7 @@ MammothTusk:
 
 MammothWalkerTusk:
     Inherits: ^MissileAPHE
-    ReloadDelay: 200
+    ReloadDelay: 180
     Range: 12c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Ground, Air, MidAir
@@ -780,7 +829,7 @@ HawkMissile:
     Range: 10c0
     MinRange: 2c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir, HighAir
+    ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 0c512
         MinimumLaunchSpeed: 0c512
@@ -794,7 +843,34 @@ HawkMissile:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
-        ValidTargets: Ground, Air, MidAir, HighAir
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu, small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		
+HawkMissileAA:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 2
+    Range: 15c0
+    MinRange: 2c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, MidAir, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 30
+        RangeLimit: 20c0
+        ContrailLength: 20
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
         ExplosionPalette: apolra50alpha

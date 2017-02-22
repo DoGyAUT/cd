@@ -278,10 +278,12 @@ APCMG:
     Burst: 20
     BurstDelay: 4
     Report: cygun1.aud
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Bullet
         Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
+	    ValidTargets: Ground, Air, MidAir, HighAir
         Spread: 128
         Damage: 25
     Warhead@2Eff: CreateEffect
