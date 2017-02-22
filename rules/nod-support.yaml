@@ -186,8 +186,15 @@ NAGAT:
     AttackTurreted:
     WithSpriteTurret:
         Recoils: True
-    Armament: 
-        Weapon: GattlingCannon
+    Armament@1: 
+        Weapon: GattlingCannonAttack
+        LocalOffset: 700,180,650, 700,-180,650
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 50
+        RecoilRecovery: 5
+    Armament@2: 
+        Weapon: GattlingCannonVisual
         LocalOffset: 700,180,650, 700,-180,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
