@@ -144,24 +144,45 @@ VultureGat:
         Explosions: gatpiff
         InvalidImpactTypes: Water
         
-RaiderCannon:
+RaiderCannonVisual:
     Inherits: ^Bullet
     ReloadDelay: 125
-    Range: 5c0
+    Range: 7c0
     Burst: 20
+    ValidTargets: Ground, Air, MidAir, HighAir    
     Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
     Projectile: Bullet
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 30
+        Damage: 0
+		ValidTargets: Ground, Air, MidAir, HighAir    
         Versus:
             Infantry: 150
             Cyborg: 120
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
+
+RaiderCannonAttack:
+    Inherits: ^Bullet
+    ReloadDelay: 125
+    Range: 7c0
+    Burst: 20
+    ValidTargets: Ground, Air, MidAir, HighAir    
+    Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
+    Projectile: Bullet
+        Image: 
+        Speed: 10c0
+        Inaccuracy: 0c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c64
+        Damage: 30
+		ValidTargets: Ground, Air, MidAir, HighAir    
+        Versus:
+            Infantry: 150
+            Cyborg: 120
 
 AssaultMG:
     Inherits: ^Bullet

@@ -245,7 +245,7 @@ JumpCannonAA:
 
 WatchSniper:
     Inherits: ^APBullet
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 100
     Range: 10c0
     Report: sniper1.aud, sniper2.aud, sniper3.aud
@@ -256,7 +256,7 @@ WatchSniper:
         ContrailColor: FFFFFF
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, MidAir
+        ValidTargets: Ground, Air, MidAir, HighAir   
         Spread: 0c64
         Damage: 200
         Versus:
@@ -269,7 +269,7 @@ WatchSniper:
 
 ShadowSniper:
     Inherits: ^APBullet
-    ValidTargets: Ground, Air
+    ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 100
     Range: 10c0
     MinRange: 4c0
@@ -292,7 +292,7 @@ ShadowSniper:
             Light: 100
             Medium: 80
             Heavy: 70
-        ValidTargets: Ground, Air
+        ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2prone: SpreadDamage
         Spread: 250
         Damage: 1
@@ -303,7 +303,7 @@ ShadowSniper:
 
 MutantSniper:
     Inherits: ^APBullet
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 150
     Range: 7c0
     MinRange: 2c0
@@ -315,13 +315,13 @@ MutantSniper:
         ContrailColor: FFFFFF
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air
+        ValidTargets: Ground, Air, MidAir, HighAir   
         Spread: 0c64
         Damage: 150
         Versus:
-            Infantry: 40
-            Cyborg: 65
-            Vehicle: 100
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 10
             Aircraft: 50
             Building: 25
             Light: 100

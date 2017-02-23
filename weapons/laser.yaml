@@ -5,7 +5,7 @@ InfLaserFire:
     Range: 10c0
     MinRange: 4c0
     Report: laserpulse.aud
-    ValidTargets: Ground, Air
+    ValidTargets: Ground, Air, MidAir, HighAir   
     Projectile: LaserZap
         Color: C80000
         Width: 30
@@ -27,7 +27,7 @@ InfLaserFire:
             Light: 100
             Medium: 80
             Heavy: 70
-        ValidTargets: Ground, Air
+        ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
