@@ -231,20 +231,29 @@ GORRAN:
         Recoil: 200
         RecoilRecovery: 10
     Armament@secondary:
-        Weapon: LightTankMG
-        LocalOffset: 50,-50,775
+        Weapon: GorranMissile
+        LocalOffset: 50,-256,775
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.tibgas
     AttackTurreted:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    WithVoxelTurret:
+    WithVoxelTurret@normal:
+        RequiresCondition: !upgrade.tibgas
+        Recoils: False
+    WithVoxelTurret@upgrade:
+        RequiresCondition: upgrade.tibgas
+        Sequence: turret2
         Recoils: False
     WithVoxelBarrel:
-    WithMuzzleOverlay:    
+    WithMuzzleOverlay:
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.tibgas
+        Prerequisites: upgrade.tibgas
     
 BIKE:
     Inherits@1: ^VoxelVehicle

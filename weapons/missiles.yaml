@@ -336,23 +336,52 @@ HoverMissileAA:
         Spread: 256
         Damage: 60
         ValidTargets: Air, MidAir
-		
-# test weapon
-RavenMissile:
+        
+GorranMissile:
     Inherits: ^MissileAPHE
-    ReloadDelay: 100
-    Range: 6c0
+    ReloadDelay: 180
+    Range: 7c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 0c256
         MinimumLaunchSpeed: 0c64
-        Speed : 0c768
+        Speed : 256
         RangeLimit: 20c0
         Inaccuracy: 0c128
         MinimumLaunchAngle: 128
         MaximumLaunchAngle: 192
-        CruiseAltitude: 2c512
+        CruiseAltitude: 3c512
+        ContrailLength: 15
+        ContrailColor: 00FF64
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 250
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        InvalidImpactTypes: Water, Air, AirHit
+
+RavenMissile:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Range: 6c0
+    Burst: 2
+    BurstDelay: 5
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        Speed : 0c768
+        RangeLimit: 20c0
+        Inaccuracy: 0c128
+        MinimumLaunchAngle: 25
+        MaximumLaunchAngle: 128
+        ContrailLength: 40
+        ContrailColor: FF9000
+        ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 0c768
         Damage: 700
@@ -364,28 +393,73 @@ RavenMissile:
             Building: 100
             Light: 100
             Medium: 50
-            Heavy: 20	
+            Heavy: 20  
+    Warhead@2Eff: CreateEffect
+        Explosions: napalm1, napalm2
+        ExplosionPalette: apolra2
+        InvalidImpactTypes: Water
+    Warhead@3Sound: CreateEffect
+        ImpactSounds: flamtnk1.aud, firstrm1.aud
+        InvalidImpactTypes: Water
+            
 RavenMissileAA:
     Inherits: ^MissileAPHE
     ReloadDelay: 100
     Range: 8c0
+    Burst: 2
+    BurstDelay: 5
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Air, MidAir, HighAir
     Projectile: Missile
-        MaximumLaunchSpeed: 0c256
-        MinimumLaunchSpeed: 0c64
+        MaximumLaunchSpeed: 0c512
         Speed : 0c768
         RangeLimit: 20c0
         Inaccuracy: 0c128
-        MinimumLaunchAngle: 128
-        MaximumLaunchAngle: 192
-        CruiseAltitude: 2c512
+        MinimumLaunchAngle: 25
+        MaximumLaunchAngle: 128
+        ContrailLength: 40
+        ContrailColor: FF9000
+        ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 400
-        ValidTargets: Air, MidAir, HighAir        
+        ValidTargets: Air, MidAir, HighAir  
 
-               
+BluehellRavenMissile:
+    Inherits: RavenMissile
+    Projectile: Missile
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        ContrailLength: 10
+        ContrailColor: 0096D2
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 500
+    Warhead@2Eff: CreateEffect
+        Explosions: napalm1, napalm2
+        ExplosionPalette: apolra2
+        InvalidImpactTypes: Water
+
+BluehellRavenMissileAA:
+    Inherits: RavenMissileAA
+    Projectile: Missile
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        ContrailLength: 10
+        ContrailColor: 0096D2
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 256
+        Damage: 800
+    Warhead@2Eff: CreateEffect
+        Explosions: napalm1, napalm2
+        ExplosionPalette: apolra2
+        InvalidImpactTypes: Water
+    Warhead@3Sound: CreateEffect
+        ImpactSounds: flamtnk1.aud, firstrm1.aud
+        InvalidImpactTypes: Water
+
 ComponentMissile:
     Inherits: ^MissileAPHE
     ReloadDelay: 68

@@ -339,32 +339,34 @@ RAVEN:
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        LocalOffset: 700,128,200, 700,-128,200
-    Armament@primary2AAwings:
-        Weapon: RavenMissileAA
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        FireDelay: 5
         LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: !upgrade.bluehell
     Armament@primary:
         Weapon: RavenMissile
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        LocalOffset: 700,128,200, 700,-128,200
-    Armament@primary2wings:
-        Weapon: RavenMissile
+        LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: !upgrade.bluehell
+    Armament@primaryAAupgrade:
+        Weapon: BluehellRavenMissileAA
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        FireDelay: 5
         LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: upgrade.bluehell
+    Armament@primaryupgrade:
+        Weapon: BluehellRavenMissile
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: upgrade.bluehell
 	Turreted: 
         TurnSpeed: 360
 	AttackTurreted:
     AmmoPool@1:
-        Name:primary
+        Name: primary
         Ammo: 2
         PipCount: 2
         PipType: Ammo
@@ -375,6 +377,9 @@ RAVEN:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.bluehell
+        Prerequisites: upgrade.bluehell
     Contrail@1:
         Offset: -555,0,256
         TrailLength: 30
