@@ -404,9 +404,13 @@ NAOBEL:
         LocalOffset: 3150,-450,800
         MuzzlePalette: apolra50alpha
         RequiresCondition: upgrade.laser && !upgrade.tiblaser
-    AttackCharge:
-        ChargeAudio: obelcharge01.aud
-        InitialChargeDelay: 70
+    AttackCharges:
+        ChargeLevel: 70
+        ChargingCondition: charging
+    AmbientSound:
+        RequiresCondition: charging
+        SoundFile: obelcharge01.aud
+        Interval: 30, 40
     WithChargeOverlay:
         Sequence: active
         Palette: player

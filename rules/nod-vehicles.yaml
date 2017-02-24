@@ -119,6 +119,20 @@ SAPC:
     Mobile:
         TurnSpeed: 5
         Speed: 80
+		RequiresCondition: !empdisable && !loading
+		Subterranean: true
+		SubterraneanCondition: submerged
+		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
+		SubterraneanTransitionCost: 120
+		SubterraneanTransitionSound: drilldwn.aud
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionPalette : player
+		TerrainSpeeds:
+            Subterranean: 120
+    RejectsOrders:
+        RequiresCondition: submerged
+        Except: Attack, AttackMove, Guard, Move
     Health:
         HP: 600
     Armor:
@@ -130,12 +144,18 @@ SAPC:
         MaxWeight: 8
         PipCount: 8
         EjectOnDeath: True
+		LoadingCondition: loading
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Cloak@underground:
-        IsPlayerPalette: True
-        CloakTypes: Underground
+        RequiresCondition: !submerged
+    Targetable:
+        RequiresCondition: !inside-tunnel && !submerged
+    LeavesTrails@ground:
+        Image: dust
+        Palette: player50alpha
+        TerrainTypes: Clear, Rough, Green, DirtRoad
+        RequiresCondition: !submerged
     AnnounceOnSeen:
         PingRadar: True
         Notification: SubterraneanUnitDetected
@@ -354,7 +374,8 @@ CHEETAH:
     WithVoxelBarrel:
     WithMuzzleOverlay:
     -Cloak:
-    -ExternalConditions@EXTERNALCLOAK:
+    -ExternalCondition@EXTERNALCLOAK1:
+    -ExternalCondition@EXTERNALCLOAK2:
     Cloak@stealth:
         InitialDelay: 90
         CloakDelay: 90
@@ -769,6 +790,19 @@ SUBTANK:
     Mobile:
         TurnSpeed: 4
         Speed: 70
+		Subterranean: true
+		SubterraneanCondition: submerged
+		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
+		SubterraneanTransitionCost: 120
+		SubterraneanTransitionSound: drilldwn.aud
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionPalette : player
+		TerrainSpeeds:
+            Subterranean: 120
+    RejectsOrders:
+        RequiresCondition: submerged
+        Except: Attack, AttackMove, Guard, Move
     Health:
         HP: 800
     Armor:
@@ -787,38 +821,19 @@ SUBTANK:
         Weapon: FireballLauncher
         LocalOffset: 840,360,300
         RequiresCondition: !deployed
-#    Targetable:
-#        TargetTypes: Ground, Vehicle, Repair, Flameproof
-#        RequiresCondition: !deployed
-#    Targetable@sub:
-#        TargetTypes: Underground
-#        RequiresCondition: deployed
-    Cloak@underground:
-        RequiresCondition: deployed
-        InitialDelay: 0
-        CloakDelay: 0
-        IsPlayerPalette: True
-        CloakTypes: Underground
-    WithSpriteBody@deployed:
-        RequiresCondition: !deployed
     AttackFrontal:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-        DeployAnimation: make
-        Facing: -1
-        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
-        DeploySound: drilldwn.aud
-        UndeploySound: drillup.aud
-        CanDeployOnRamps: True
+        RequiresCondition: !submerged
+    Targetable:
+        RequiresCondition: !inside-tunnel && !submerged
     LeavesTrails@ground:
         Image: dust
         Palette: player50alpha
         TerrainTypes: Clear, Rough, Green, DirtRoad
-        RequiresCondition: !deployed
+        RequiresCondition: !submerged
     AnnounceOnSeen:
         PingRadar: True
         Notification: SubterraneanUnitDetected
@@ -826,7 +841,7 @@ SUBTANK:
 STNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1500
+        Cost: 1400
     Tooltip:
         Name: Stealth Tank
     Selectable:

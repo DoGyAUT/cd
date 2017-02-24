@@ -210,9 +210,13 @@ KDARK:
     Armament:
         Weapon: CabalObeliskLaserAA
         LocalOffset: 1600,0,2000
-    AttackCharge:
-        ChargeAudio: charge01.aud
-        InitialChargeDelay: 40
+    AttackCharges:
+        ChargeLevel: 40
+        ChargingCondition: charging
+    AmbientSound:
+        RequiresCondition: charging
+        SoundFile: charge01.aud
+        Interval: 30, 40
     WithChargeOverlay:
         Sequence: active
         Palette: player
@@ -256,9 +260,13 @@ KOBEL:
     Armament:
         Weapon: CabalObeliskLaser
         LocalOffset: 1600,0,800
-    AttackCharge:
-        ChargeAudio: charge01.aud
-        InitialChargeDelay: 40
+    AttackCharges:
+        ChargeLevel: 40
+        ChargingCondition: charging
+    AmbientSound:
+        RequiresCondition: charging
+        SoundFile: charge01.aud
+        Interval: 30, 40
     WithChargeOverlay:
         Sequence: active
         Palette: player

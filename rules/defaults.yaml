@@ -18,7 +18,7 @@
     AlwaysVisible:
         
 ^EmpDisable:
-    UpgradeOverlay@EMPDISABLE:
+    WithColoredOverlay@EMPDISABLE:
         RequiresCondition: empdisable
         Palette: disabled
     DisableOnCondition@EMPDISABLE:
@@ -35,8 +35,8 @@
     PowerMultiplier@EMPDISABLE:
         RequiresCondition: empdisable
         Modifier: 0
-    ExternalConditions@EMPDISABLE:
-        Conditions: empdisable
+    ExternalCondition@EMPDISABLE:
+        Condition: empdisable
         
 ^WebDisable:
     DisableOnCondition@WEBDISABLE:
@@ -47,8 +47,8 @@
     WithSpriteBody@webguy:
         Sequence: web-overlay
         RequiresCondition: webdisable
-    ExternalConditions@WEBDISABLE:
-        Conditions: webdisable
+    ExternalCondition@WEBDISABLE:
+        Condition: webdisable
         
 ^SpriteActor:
     BodyOrientation:
@@ -298,8 +298,12 @@
     SpeedMultiplier@CRATES:
         RequiresCondition: crate-speed
         Modifier: 170
-    ExternalConditions@CRATES:
-        Conditions: crate-firepower, crate-damage, crate-speed
+    ExternalCondition@CRATE-FIREPOWER:
+        Condition: crate-firepower
+    ExternalCondition@CRATE-DAMAGE:
+        Condition: crate-damage
+    ExternalCondition@CRATE-SPEED:
+        Condition: crate-speed
         
 ^Cloakable:
     Cloak:
@@ -310,9 +314,10 @@
         CloakSound: stealth01.aud
         UncloakSound: unstealth01.aud
         UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    ExternalConditions@EXTERNALCLOAK:
-        Conditions: cloakgenerator, crate-cloak
-
+    ExternalCondition@EXTERNALCLOAK1:
+        Condition: cloakgenerator
+    ExternalCondition@EXTERNALCLOAK2:
+        Condition: crate-cloak
 
 ^BasicBuilding:
     Inherits@1: ^ExistsInWorld
@@ -567,6 +572,7 @@
     Valued:
         Cost: 100
     RevealsShroud:
+		RequiresCondition: !inside-tunnel
         Range: 4c0
         MaxHeightDelta: 3
     Mobile:
@@ -587,6 +593,7 @@
             RedTiberium: 90
             PurpleTiberium: 90
             Veins: 90
+		TunnelCondition: inside-tunnel
     SelectionDecorations:
         SelectionBoxColor: 00FF00
         Palette: pips
@@ -596,6 +603,7 @@
     Voiced:
         VoiceSet: Infantry
     Targetable:
+		RequiresCondition: !inside-tunnel
         TargetTypes: Ground, Infantry
     QuantizeFacingsFromSequence:
         Sequence: stand
@@ -630,6 +638,7 @@
         WarnProbability: 0
     Parachutable:
     DamagedByTerrain@Tiberium:
+		RequiresCondition: !inside-tunnel
         Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         Damage: 8
         DamageInterval: 10
@@ -704,8 +713,8 @@
         HealIfBelow: 100
         DamageCooldown: 125
         RequiresCondition: medic_heal
-    ExternalConditions@medic:
-        Conditions: medic_heal
+    ExternalCondition@medic:
+        Condition: medic_heal
     ProducibleWithLevel:
         Prerequisites: armory.upgraded
     RevealOnFire:
@@ -971,7 +980,7 @@
         TargetTypes: Ground, Infantry
     -WithDecoration@medic:
     -SelfHealing@medic:
-    -ExternalConditions@medic:
+    -ExternalCondition@medic:
     -GrantConditionOnPrerequisite@nanofiber:
     -DamageMultiplier@nanofiber:
     Mobile:
@@ -1015,7 +1024,7 @@
         Range: 1c0, 4c0
     -WithDecoration@medic:
     -SelfHealing@medic:
-    -ExternalConditions@medic:
+    -ExternalCondition@medic:
     -GrantConditionOnPrerequisite@nanofiber:
     -DamageMultiplier@nanofiber:
     Mobile:
@@ -1071,8 +1080,10 @@
     TimedConditionBar@fenzy:
         Condition: fenzy
         Color: FF0000
-    ExternalConditions@conf:
-        Conditions: confessorboost, fenzy
+    ExternalCondition@conf:
+        Condition: confessorboost
+    ExternalCondition@fenzy:
+        Condition: fenzy
 		
 ^ZepUpgrades:
     WithDecoration@zep:
@@ -1089,8 +1100,8 @@
     ReloadDelayMultiplier@zep:        
         RequiresCondition: zepdebuff
         Modifier: 120
-    ExternalConditions@zep:
-        Conditions: zepdebuff
+    ExternalCondition@zep:
+        Condition: zepdebuff
 
 ^AvatarUpgrades:
     WithDecoration@avatar:
@@ -1104,8 +1115,8 @@
     FirepowerMultiplier@avatar:        
         RequiresCondition: avatarboost
         Modifier: 120
-    ExternalConditions@avatar:
-        Conditions: avatarboost
+    ExternalCondition@avatar:
+        Condition: avatarboost
 
 ^InfusionUpgrade:
     GrantConditionOnPrerequisite@infusion:
@@ -1144,8 +1155,8 @@
     ReloadDelayMultiplier@husk:        
         RequiresCondition: overseerboost
         Modifier: 80
-    ExternalConditions@overseer:
-        Conditions: overseerboost
+    ExternalCondition@overseer:
+        Condition: overseerboost
  
 ^GoonUpgrades:
 # Need palette which would make unit slightly red
@@ -1201,12 +1212,14 @@
         TurnSpeed: 5
         Voice: Move
         RequiresCondition: !empdisable
+		TunnelCondition: inside-tunnel
     Crushable:
         CrushClasses: mediumvehicle
         WarnProbability: 0
     RevealsShroud:
         Range: 6c0
         MaxHeightDelta: 3
+		RequiresCondition: !inside-tunnel
     Selectable:
         Bounds: 40,24
     SelectionDecorations:
@@ -1217,6 +1230,7 @@
         VoiceSet: Vehicle
     Targetable:
         TargetTypes: Ground, Vehicle, Repair
+		RequiresCondition: !inside-tunnel
     Repairable:
         RepairBuildings: gadept
         Voice: Move
@@ -1261,6 +1275,7 @@
         Image: dust
         Palette: player50alpha
         TerrainTypes: Clear, Rough, Green, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
+		RequiresCondition: !inside-tunnel
     WithDecoration@repair:
         Image: pips
         Sequence: medic
@@ -1277,8 +1292,8 @@
         HealIfBelow: 100
         DamageCooldown: 200
         RequiresCondition: repair_healboost
-    ExternalConditions@repair:
-        Conditions: repair_healboost
+    ExternalCondition@repair:
+        Condition: repair_healboost
     WithDecoration@repair_golem:
         Image: pips
         Sequence: medic
@@ -1295,8 +1310,8 @@
         HealIfBelow: 100
         DamageCooldown: 200
         RequiresCondition: repair_heal
-    ExternalConditions@repair_golem:
-        Conditions: repair_heal
+    ExternalCondition@repair_golem:
+        Condition: repair_heal
     ReloadDelayMultiplier@repair:
         RequiresCondition: repair_healboost
         Modifier: 90
