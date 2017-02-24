@@ -11,15 +11,14 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 #Installation of Crystallized Doom:
 
 1. Download required OpenRA version from https://github.com/DoGyAUT/OpenRA
-1.1 A precompiled build is available via our Discord group for Windows (it has also the LAA flag for more RAM usage enabled)
-2. Download required AS.dll library from from https://github.com/DoGyAUT/OpenRA.Mods.AS
-3. Place the library into your OpenRA folder
-4. Start OpenRA.exe
-5. Download Tiberian Sun mod content (via ingame modchooser) and start it at least once.
-6. Choose Crystallized Doom to launch the mod
-7. Enjoy!
+2. A precompiled build is available via our Discord group for Windows (it has also the LAA flag for more RAM usage enabled)
+3. Download required AS.dll library from from https://github.com/DoGyAUT/OpenRA.Mods.AS
+4. Place the library into your OpenRA folder
+5. Start OpenRA.exe
+6. Download Tiberian Sun mod content (via ingame modchooser) and start it at least once.
+7. Choose Crystallized Doom to launch the mod
 
-#Optional
+#Optional Soundtrack:
 
 The soundtrack is as seperate download available at our discord.
 
