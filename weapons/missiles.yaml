@@ -995,7 +995,7 @@ HornetMissile:
     Range: 10c0
     MinRange: 2c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir, HighAir
+    ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 0c512
         MinimumLaunchSpeed: 0c512
@@ -1009,7 +1009,35 @@ HornetMissile:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
-        ValidTargets: Ground, Air, MidAir, HighAir
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu, small_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        
+HornetMissileAA:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 100
+    Burst: 4
+    BurstDelay: 6
+    Range: 15c0
+    MinRange: 2c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Air, MidAir, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Inaccuracy: 0c128
+        HorizontalRateOfTurn: 30
+        Acceleration: 10
+        RangeLimit: 30c0
+        ContrailLength: 20
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
         ExplosionPalette: apolra50alpha

@@ -173,12 +173,21 @@ BGGY:
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.laser
     Armament@visual:
         Weapon: RaiderCannonVisual
         LocalOffset: 200,0,600
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.laser
+    Armament@laser:
+        Weapon: BuggyLaserFire
+        LocalOffset: 200,0,600
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.laser
     Turreted:
         TurnSpeed: 7
         Offset: -96,0,0
@@ -192,6 +201,9 @@ BGGY:
     WithVoxelBody:
     WithVoxelTurret:
     WithMuzzleOverlay:
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.laser
+        Prerequisites: upgrade.laser
 
 GORRAN:
     Inherits: ^VoxelVehicle
