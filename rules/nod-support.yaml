@@ -306,21 +306,13 @@ NASAM:
     WithSpriteTurret:
         Recoils: True
     Armament@normal:
-        Weapon: RedEye
+        Weapon: RedEye2
         LocalOffset: 400,0,900
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 25
         RecoilRecovery: 10
         RequiresCondition: !industry
-    Armament@upgrade: 
-        Weapon: RedEye2
-        LocalOffset: 400,0,900, 400,128,900, 400,-128,900
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-        RequiresCondition: industry
     Power:
         Amount: -75
     GrantConditionOnPrerequisite@upgrade1:
