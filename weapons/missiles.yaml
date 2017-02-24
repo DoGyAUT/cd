@@ -24,7 +24,7 @@ BazookaGas:
     Inherits: Bazooka
     Projectile: Missile
         ContrailLength: 10
-        ContrailWidth: 25
+        ContrailWidth: 15
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -45,16 +45,15 @@ BazookaGasAA:
 
 MarauderBazooka:
     Inherits: ^MissileAPHE
-    ValidTargets: Ground
+    ValidTargets: Ground, Air, MidAir, HighAir
     ReloadDelay: 120
     Range: 8c0
     MinRange: 1c512
     Report: smaw.aud
-#    ValidTargets: Vehicle, Building, Air, Cyborg
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 200
-        ValidTargets: Vehicle, Building, Air, Cyborg, HeavyCyborg
+        ValidTargets: Ground, Air, MidAir, HighAir
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
@@ -126,8 +125,6 @@ AirblastMissile:
         Image: missile01
         HorizontalRateOfTurn: 8
         Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 80
@@ -353,6 +350,7 @@ GorranMissile:
         MaximumLaunchAngle: 192
         CruiseAltitude: 3c512
         ContrailLength: 15
+        ContrailWidth: 15
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 256
@@ -381,7 +379,7 @@ RavenMissile:
         MaximumLaunchAngle: 128
         ContrailLength: 40
         ContrailColor: FF9000
-        ContrailWidth: 30
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c768
         Damage: 700
@@ -419,7 +417,7 @@ RavenMissileAA:
         MaximumLaunchAngle: 128
         ContrailLength: 40
         ContrailColor: FF9000
-        ContrailWidth: 30
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 400
@@ -448,7 +446,7 @@ BluehellRavenMissileAA:
         TrailPalette: effect50alpha
         ContrailLength: 10
         ContrailColor: 0096D2
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 800
@@ -480,7 +478,7 @@ ComponentMissile:
         RangeLimit: 20c0
         Palette: effect
         ContrailLength: 10
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 150
@@ -562,8 +560,6 @@ BuggyMissile:
         MinimumLaunchSpeed: 350
         Speed : 350
         Palette: effect
-        ContrailLength: 30
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 40
@@ -654,6 +650,46 @@ StealthDragon:
             Medium: 80
             Heavy: 70
 
+StealthDragonEMP:
+    Inherits: ^MissileAPHE
+    ReloadDelay: 175
+    Range: 8c0
+    Burst: 2
+    BurstDelay: 0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 384
+        MinimumLaunchSpeed: 213
+        Speed : 384
+        Inaccuracy: 0c512
+        ContrailLength: 20
+        ContrailColor: C8C8FF
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 80
+        ValidTargets: Ground
+        Versus:
+            Infantry: 30
+            Cyborg: 80
+            Vehicle: 125
+            Aircraft: 100
+            Building: 80
+            Light: 100
+            Medium: 80
+            Heavy: 70
+    Warhead@emp1: GrantExternalCondition
+        Range: 0c512
+        Duration: 75
+        Condition: empdisable
+        ValidTargets: Vehicle, Cyborg, Building
+    Warhead@5Eff: CreateEffect
+        Explosions: small_emp
+        ExplosionPalette: effect
+        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+
+            
 StealthDragonAA:
     Inherits: ^MissileAPHE
     ReloadDelay: 100
@@ -718,6 +754,7 @@ StormdragonGas:
     Inherits: Stormdragon
     Projectile: Missile
         ContrailLength: 30
+        ContrailWidth: 15
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
@@ -822,7 +859,7 @@ HavocMissilesNapalm:
         TrailPalette: effect50alpha
         ContrailLength: 10
         ContrailColor: 0096D2
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 220
@@ -913,7 +950,7 @@ HawkMissile:
         HorizontalRateOfTurn: 30
         RangeLimit: 20c0
         ContrailLength: 20
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
@@ -940,7 +977,7 @@ HawkMissileAA:
         HorizontalRateOfTurn: 30
         RangeLimit: 20c0
         ContrailLength: 20
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
@@ -968,7 +1005,7 @@ HornetMissile:
         Acceleration: 10
         RangeLimit: 30c0
         ContrailLength: 20
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
@@ -977,69 +1014,6 @@ HornetMissile:
         Explosions: tiny_tumu, small_tumu
         ExplosionPalette: apolra50alpha
         ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        
-WyvernMissile:
-    Inherits: ^MissileAPHE
-    ReloadDelay: 100
-    Burst: 2
-    Range: 22c0
-    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-    ValidTargets: Air, MidAir, HighAir
-    Projectile: Missile
-        MaximumLaunchSpeed: 0c768
-        MinimumLaunchSpeed: 0c768
-        Speed : 0c768
-        Inaccuracy: 0c128
-        HorizontalRateOfTurn: 10
-        Acceleration: 15
-        RangeLimit: 30c0
-        ContrailLength: 20
-        ContrailWidth: 25
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 60
-        ValidTargets: Air, MidAir, HighAir
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_tumu, small_tumu
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud
-        
-WyvernNapalm:
-    Inherits: ^MissileAPHE
-    ReloadDelay: 100
-    Burst: 2
-    Range: 18c0
-    Report: rocket01.aud
-    ValidTargets: Ground
-    Projectile: Missile
-        MaximumLaunchSpeed: 0c512
-        MinimumLaunchSpeed: 0c512
-        Speed : 0c512
-        Inaccuracy: 2c128
-        Image: missile01
-        HorizontalRateOfTurn: 8
-        RangeLimit: 30c0
-        Palette: effect
-        ContrailLength: 20
-        ContrailWidth: 40
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c512
-        Damage: 100
-        ValidTargets: Ground
-    Warhead@2Eff: CreateEffect
-        Explosions: napalm1, napalm2
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water
-    Warhead@2Smu: LeaveSmudge
-        SmudgeType: LargeScorch
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-        InvalidImpactTypes: Water, Air, AirHit
 
 BuzzardStorm:
     Inherits: ^MissileAPHE
@@ -1056,8 +1030,6 @@ BuzzardStorm:
         Inaccuracy: 1c0
         HorizontalRateOfTurn: 7
         RangeLimit: 20c0
-        ContrailLength: 10
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 80
@@ -1097,7 +1069,7 @@ StrikerMissiles:
         HorizontalRateOfTurn: 30
         RangeLimit: 30c0
         ContrailLength: 10
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 300
@@ -1139,7 +1111,7 @@ BuzzardMissiles:
         HorizontalRateOfTurn: 7
         RangeLimit: 20c0
         ContrailLength: 10
-        ContrailWidth: 25
+        ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 85
         Damage: 70
@@ -1177,8 +1149,6 @@ RedEye:
         Image: missile01
         HorizontalRateOfTurn: 8
         RangeLimit: 30c0
-        ContrailLength: 30
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200

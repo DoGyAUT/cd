@@ -851,18 +851,41 @@ STNK:
         LocalOffset: 128,164,600, 128,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
+        RequiresCondition: !upgrade.emp
     Armament@2:
         Weapon: StealthDragon
         LocalOffset: 128,164,600, 128,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         FireDelay: 10
+        RequiresCondition: !upgrade.emp
     Armament@3:
         Weapon: StealthDragon
         LocalOffset: 128,164,600, 0,-164,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         FireDelay: 20
+        RequiresCondition: !upgrade.emp
+    Armament@1upgrade:
+        Weapon: StealthDragonEMP
+        LocalOffset: 128,164,600, 128,-164,600
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.emp
+    Armament@2upgrade:
+        Weapon: StealthDragonEMP
+        LocalOffset: 128,164,600, 128,-164,600
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        FireDelay: 10
+        RequiresCondition: upgrade.emp
+    Armament@3upgrade:
+        Weapon: StealthDragonEMP
+        LocalOffset: 128,164,600, 0,-164,600
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        FireDelay: 20
+        RequiresCondition: upgrade.emp
     Armament@antiair:
         Weapon: StealthDragonAA
         LocalOffset: 128,164,600, 128,-164,600
@@ -880,8 +903,8 @@ STNK:
     -MustBeDestroyed:
     WithMuzzleOverlay:
     GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
+        Condition: upgrade.emp
+        Prerequisites: upgrade.emp
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
