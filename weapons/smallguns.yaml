@@ -241,6 +241,35 @@ GattlingCannonVisual:
         Explosions: gatpiff
         InvalidImpactTypes: Water
 
+BuzzardGattlingCannonAttack:
+    Inherits: GattlingCannonAttack
+    -Burst:
+    ReloadDelay: 2
+    ValidTargets: Ground
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 20
+            Aircraft: 1
+        ValidTargets: Ground    
+    
+BuzzardGattlingCannonVisual:
+    Inherits: GattlingCannonVisual
+    -Burst:
+    ReloadDelay: 2
+    ValidTargets: Ground
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 0
+        ValidTargets: Ground   
+
+BuzzardGattlingCannonVisual2:
+    Inherits: BuzzardGattlingCannonVisual
+    ReloadDelay:1
+        
+BuzzardGattlingCannonAttack2:
+    Inherits: BuzzardGattlingCannonAttack
+    ReloadDelay:1
+
 TaurusMG:
     Inherits: ^Bullet
     ReloadDelay: 200

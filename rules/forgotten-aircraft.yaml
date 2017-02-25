@@ -25,31 +25,31 @@ BUZZARD:
     RevealsShroud:
         Range: 15c0
         Type: GroundPosition
+    Armament@gattling: # make gattlings
+        Weapon: BuzzardGattlingCannonAttack
+        LocalOffset: 800,0,160
+        RequiresCondition:!upgrade.gattling
+    Armament@gattlingvis: # make gattlings
+        Weapon: BuzzardGattlingCannonVisual
+        LocalOffset: 800,0,160
+        RequiresCondition:!upgrade.gattling
+    Armament@gattling2: # make gattlings
+        Weapon: BuzzardGattlingCannonAttack2
+        LocalOffset: 800,0,160
+        RequiresCondition:upgrade.gattling
+    Armament@gattling2vis: # make gattlings
+        Weapon: BuzzardGattlingCannonVisual2
+        LocalOffset: 800,0,160
+        RequiresCondition: upgrade.gattling
     Armament@missiles:
         Weapon: BuzzardMissiles
         MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 0,256,160, 0,-256,160
-    Armament@rockets:
-        Weapon: BuzzardStorm
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 0,128,160, 0,-128,160
-    Armament@primary:
-        Weapon: BuzzardCannon
-        MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        LocalOffset: 800,0,160
+        LocalOffset: 0,256,160, 0,-256,160
+        RequiresCondition:upgrade.missiles
     AttackHeli:
         FacingTolerance: 20
-    AmmoPool:
-        Ammo: 10
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
     AutoTarget:
     WithIdleOverlay@ROTORAIR:
         Offset: 0,0,800
@@ -67,6 +67,12 @@ BUZZARD:
     SpawnActorOnDeath:
         Actor: BUZZARD.Husk
         Probability: 100
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.missiles
+        Prerequisites: upgrade.missiles
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.gattling
+        Prerequisites: upgrade.gattling
     
 FBOMBER:
     Inherits: ^AttackPlane

@@ -1049,7 +1049,7 @@ BuzzardStorm:
 	MinRange: 1c0
     Range: 7c0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-    Burst: 10
+    Burst: 12
     ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 512
@@ -1128,7 +1128,7 @@ BuzzardMissiles:
 	MinRange: 1c0
     Range: 7c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    Burst: 2
+    Burst: 4
     ValidTargets: Ground
     Projectile: Missile
         MaximumLaunchSpeed: 0c512
@@ -1142,7 +1142,7 @@ BuzzardMissiles:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 85
-        Damage: 70
+        Damage: 140
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_bang

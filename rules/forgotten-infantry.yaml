@@ -344,10 +344,13 @@ MHIJACK:
         CaptureTypes: Vehicle
         PlayerExperience: 50
     -AutoTarget:
-    Cloak:
-        Condition:
-        CloakSound:
-        UncloakSound: cloak5.aud
+    Cloak@self:
+        InitialDelay: 90
+        CloakDelay: 90
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        IsPlayerPalette: true
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     SoundOnDamageTransition:
         DamagedSounds: thief_f1.aud, thief_f2.aud, thief_f3.aud, thief_f4.aud
 
