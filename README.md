@@ -24,14 +24,3 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 The soundtrack is as seperate download available at our discord.
 
 You have to place those files into OpenRA\mods\cd\audio\data\theme
-
-#Making Crystallized Doom Running on Linux:
-
-find . -type f -exec dos2unix '{}' +
-cd thirdparty
-chmod +x *.sh
-cd ..
-make dependencies
-(don't recompile, because the source code and binaries are out of sync)
-
-Thx for Matt for the instructions!
