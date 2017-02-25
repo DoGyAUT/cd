@@ -248,6 +248,10 @@ NENGINEER:
     -ProducibleWithLevel:
     SoundOnDamageTransition:
         DamagedSounds: nodeng_f1.aud, nodeng_f2.aud, nodeng_f3.aud, nodeng_f4.aud, nodeng_f5.aud
+    Cloak:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+        InitialDelay: 90
+        CloakDelay: 250
         
 FANATIC:
     Inherits@1: ^SoldierFearless
