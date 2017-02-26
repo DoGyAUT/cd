@@ -300,7 +300,7 @@ CYBFLY:
     Inherits@1: ^SoldierJumpjet
     Inherits@2: ^HuskUpgrades
     Valued:
-        Cost: 700
+        Cost: 500
     Tooltip:
         Name: Skirmisher
     Buildable:
@@ -326,7 +326,7 @@ CYBFLY:
     Hovers@CRUISING:
         RequiresCondition: cruising
     Health:
-        HP: 300
+        HP: 200
     Armor@base:
         Type: Aircraft
     Armor:
@@ -358,18 +358,18 @@ CYBFLY:
         IdleSequences: stand-air
     BodyOrientation:
     WithShadow:
-    Contrail@1:
-        Offset: -256,64,800
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -256,-64,800
-        TrailLength: 25
-        TrailWidth: 25
-        Color: 0080FF
-        UsePlayerColor: True
+    # Contrail@1:
+        # Offset: -256,64,800
+        # TrailLength: 25
+        # TrailWidth: 25
+        # Color: 0080FF
+        # UsePlayerColor: True
+    # Contrail@2:
+        # Offset: -256,-64,800
+        # TrailLength: 25
+        # TrailWidth: 25
+        # Color: 0080FF
+        # UsePlayerColor: True
     SoundOnDamageTransition:
         DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
         

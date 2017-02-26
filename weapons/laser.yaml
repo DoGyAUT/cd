@@ -637,8 +637,10 @@ SkirmishLaserFire:
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground, Air
         Spread: 42
-        Damage: 35
+        Damage: 18
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+        Versus:
+            Aircraft: 50
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
