@@ -676,13 +676,13 @@ upgrade.auroch_180mm:
     ProvidesPrerequisite:
         Prerequisite: upgrade.auroch_180mm
         
-upgrade.buzzard_missiles:
+upgrade.buzzard:
     Inherits: ^Tech
     Tooltip:
-        Name: Buzzard Missiles Upgrade
+        Name: Light Attack Chopper "Buzzard"
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.buzzard_missiles
+        Prerequisites: ~!t2, !upgrade.buzzard, !upgrade.griffin
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -692,7 +692,25 @@ upgrade.buzzard_missiles:
     RenderSprites:
         Image: buzzard
     ProvidesPrerequisite:
-        Prerequisite: upgrade.missiles
+        Prerequisite: upgrade.buzzard
+        
+upgrade.buzzard_missiles:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Buzzard Missiles Upgrade
+    Buildable:
+        BuildPaletteOrder: 421
+        Prerequisites: ~!t2, !upgrade.buzzard_missiles, ~upgrade.buzzard, !upgrade.buzzard_gattling
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds missiles to Buzzard attack helicopter
+    Valued:
+        Cost: 750
+    RenderSprites:
+        Image: buzzard
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.buzzard_missile
         
 upgrade.buzzard_gattling:
     Inherits: ^Tech
@@ -700,7 +718,7 @@ upgrade.buzzard_gattling:
         Name: Buzzard Adv. Gattling Upgrade
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t3 , !upgrade.buzzard_gattling
+        Prerequisites: ~!t2, !upgrade.buzzard_missiles, ~upgrade.buzzard, !upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -710,4 +728,58 @@ upgrade.buzzard_gattling:
     RenderSprites:
         Image: buzzard
     ProvidesPrerequisite:
-        Prerequisite: upgrade.gattling
+        Prerequisite: upgrade.buzzard_gattling
+        
+upgrade.griffin:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Heavy Attack Chopper "Griffin"
+    Buildable:
+        BuildPaletteOrder: 421
+        Prerequisites: ~!t2, !upgrade.buzzard, !upgrade.griffin
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Unlocks Griffin Chopper
+    Valued:
+        Cost: 750
+    RenderSprites:
+        Image: buzzard
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.griffin
+        
+upgrade.griffin_missiles:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Griffin Missiles Upgrade
+    Buildable:
+        BuildPaletteOrder: 421
+        Prerequisites: ~!t2, !upgrade.griffin_missiles, !upgrade.griffin_autocannon, ~upgrade.griffin
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds missiles to Griffin attack helicopter
+    Valued:
+        Cost: 750
+    RenderSprites:
+        Image: buzzard
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.griffin_missile
+        
+upgrade.griffin_autocannon:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Griffin Autocannon Upgrade
+    Buildable:
+        BuildPaletteOrder: 421
+        Prerequisites: ~!t2, !upgrade.griffin_missiles, !upgrade.griffin_autocannon, ~upgrade.griffin
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds Autocannon to Griffin attack helicopter
+    Valued:
+        Cost: 750
+    RenderSprites:
+        Image: buzzard
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.griffin_autocannon

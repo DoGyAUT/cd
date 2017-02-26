@@ -245,22 +245,19 @@ BuzzardGattlingCannonAttack:
     Inherits: GattlingCannonAttack
     -Burst:
     ReloadDelay: 2
-    ValidTargets: Ground
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
-            Aircraft: 1
-        ValidTargets: Ground    
+        Versus:
+            Aircraft: 25   
     
 BuzzardGattlingCannonVisual:
     Inherits: GattlingCannonVisual
     -Burst:
     ReloadDelay: 2
-    ValidTargets: Ground
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 0
-        ValidTargets: Ground   
+        Damage: 0  
 
 BuzzardGattlingCannonVisual2:
     Inherits: BuzzardGattlingCannonVisual

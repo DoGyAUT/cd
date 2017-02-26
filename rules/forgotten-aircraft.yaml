@@ -1,4 +1,4 @@
-BUZZARD:
+BUZZARD: #adv gattling/ "mortar"
     Inherits: ^Helicopter
     Valued:
         Cost: 1200
@@ -7,7 +7,7 @@ BUZZARD:
     Buildable:
         Queue: Air.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fahpad, ~!t1
+        Prerequisites: ~fahpad, ~!t1, upgrade.buzzard
         Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
     Selectable:
         Bounds: 60,48,0,-10
@@ -16,7 +16,7 @@ BUZZARD:
         Volume: 2
     Aircraft:
         TurnSpeed: 6
-        Speed: 100
+        Speed: 120
         IdealSeparation: 2048
     Health:
         HP: 350
@@ -25,29 +25,30 @@ BUZZARD:
     RevealsShroud:
         Range: 15c0
         Type: GroundPosition
-    Armament@gattling: # make gattlings
+    Armament@gattling:
         Weapon: BuzzardGattlingCannonAttack
         LocalOffset: 800,0,160
-        RequiresCondition:!upgrade.gattling
-    Armament@gattlingvis: # make gattlings
+        RequiresCondition:!upgrade.buzzard_gattling
+    Armament@gattlingvis:
         Weapon: BuzzardGattlingCannonVisual
         LocalOffset: 800,0,160
-        RequiresCondition:!upgrade.gattling
-    Armament@gattling2: # make gattlings
+        RequiresCondition:!upgrade.buzzard_gattling
+    #adv gattling instead of flamer
+    Armament@gattling2: 
         Weapon: BuzzardGattlingCannonAttack2
         LocalOffset: 800,0,160
-        RequiresCondition:upgrade.gattling
-    Armament@gattling2vis: # make gattlings
+        RequiresCondition: upgrade.buzzard_gattling
+    Armament@gattling2vis: 
         Weapon: BuzzardGattlingCannonVisual2
         LocalOffset: 800,0,160
-        RequiresCondition: upgrade.gattling
-    Armament@missiles:
+        RequiresCondition: upgrade.buzzard_gattling
+    Armament@missiles: #placeholder for "artyweapon"
         Weapon: BuzzardMissiles
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 0,256,160, 0,-256,160
-        RequiresCondition:upgrade.missiles
+        RequiresCondition: upgrade.buzzard_missiles
     AttackHeli:
         FacingTolerance: 20
     AutoTarget:
@@ -68,11 +69,84 @@ BUZZARD:
         Actor: BUZZARD.Husk
         Probability: 100
     GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.missiles
-        Prerequisites: upgrade.missiles
+        Condition: upgrade.buzzard_missiles
+        Prerequisites: upgrade.buzzard_missiles
     GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.gattling
-        Prerequisites: upgrade.gattling
+        Condition: upgrade.buzzard_gattling
+        Prerequisites: upgrade.buzzard_gattling
+        
+GRIFFIN: #missile / autocannon
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: GRIFFIN
+    Buildable:
+        Queue: Air.Forg
+        BuildPaletteOrder: 400
+        Prerequisites: ~fahpad, ~!t1, upgrade.griffin
+        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
+    Selectable:
+        Bounds: 60,48,0,-10
+    Voiced:
+        VoiceSet: Grunt
+        Volume: 2
+    Aircraft:
+        TurnSpeed: 6
+        Speed: 70
+        IdealSeparation: 2048
+    Health:
+        HP: 500
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 15c0
+        Type: GroundPosition
+    Armament@mg: # make gattlings
+        Weapon: BuzzardGattlingCannonAttack
+        LocalOffset: 800,0,160
+    Armament@mgvis: # make gattlings
+        Weapon: BuzzardGattlingCannonVisual
+        LocalOffset: 800,0,160
+    Armament@missiles:
+        Weapon: BuzzardMissiles
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 0,256,160, 0,-256,160
+        RequiresCondition:upgrade.griffin_missiles
+    Armament@autocannnon:
+        Weapon: GremlinShotgun
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 0,256,160, 0,-256,160
+        RequiresCondition:upgrade.griffin_autocannon
+    AttackHeli:
+        FacingTolerance: 20
+    AutoTarget:
+    WithIdleOverlay@ROTORAIR:
+        Offset: 0,0,800
+        Sequence: rotor
+        RequiresCondition: airborne
+    WithIdleOverlay@ROTORGROUND:
+        Offset: 0,0,800
+        Sequence: slow-rotor
+        RequiresCondition: airborne
+    RenderSprites:
+    WithMuzzleOverlay:
+    DetectCloaked:
+        Range: 7c0
+    RenderDetectionCircle:
+    SpawnActorOnDeath:
+        Actor: BUZZARD.Husk
+        Probability: 100
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.griffin_missiles
+        Prerequisites: upgrade.griffin_missiles
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.griffin_autocannon
+        Prerequisites: upgrade.griffin_autocannon
     
 FBOMBER:
     Inherits: ^AttackPlane
