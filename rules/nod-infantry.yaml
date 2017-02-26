@@ -127,7 +127,7 @@ CHAMSPY:
         Prerequisites: ~nahand, naradr
         Description: Nod´s unarmed and invisible agent. Can steal money and sabotage specific buildings.\n\n Role: Infiltrator\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 12c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Stealthed\n - Huge Vision Range\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
-        Cost: 500
+        Cost: 1000
     Tooltip:
         Name: Chameleon Spy
     Selectable:
@@ -252,6 +252,9 @@ NENGINEER:
         RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
         InitialDelay: 90
         CloakDelay: 250
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.stealth
+        Prerequisites: upgrade.stealth
         
 FANATIC:
     Inherits@1: ^SoldierFearless

@@ -3,13 +3,13 @@ LtRail:
     ReloadDelay: 125
     Range: 6c0
     Report: rail01.aud, rail02.aud, rail03.aud, rail04.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
         Inaccuracy: 0c256
         Blockable: true
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 00FFFF
         ContrailWidth: 25
@@ -31,7 +31,7 @@ LocustNail:
     Range: 7c0
     Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
     ValidTargets: Ground, Air, MidAir
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c512
         Inaccuracy: 0c64
         Shadow: true
@@ -69,13 +69,13 @@ MechRailgun:
     Burst: 2 # for alternating muzzle offsets, dmg/s identical to original
     BurstDelay: 60
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud#railuse5.aud, bigggun1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 00FFFF
         ContrailWidth: 25
@@ -100,13 +100,13 @@ GuardianRailgun:
     ReloadDelay: 80
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud#railuse5.aud, bigggun1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 00FFFF
         ContrailWidth: 25
@@ -216,7 +216,7 @@ CyclopsCannon:
     Burst: 4
     BurstDelay: 15
     Report: sonic1.aud, sonic2.aud, sonic3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Inaccuracy: 1c0
         Image: shell02
@@ -245,13 +245,13 @@ KodiakIonCannon1:
     ReloadDelay: 300
     Range: 10c0
     Report: plsecan2.aud   
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: false
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 60
         ContrailColor: C8FFFA
         ContrailWidth: 50
@@ -296,13 +296,13 @@ TitanRailgun:
     ReloadDelay: 150
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 00FFFF
         ContrailWidth: 25
@@ -325,13 +325,13 @@ TitanRailgun2:
     BurstDelay: 10
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 00FFFF
         ContrailWidth: 25
@@ -348,13 +348,13 @@ TitanRailgun2:
         SmudgeType: MediumScorch
 
 SonicZap:
-    ReloadDelay: 180
+    ReloadDelay: 72
     Range: 6c0
     Report: sonic5.aud, sonic6.aud, sonic7.aud #sonic4.aud
     Projectile: AreaBeam
         Speed: 0c256
-        Duration: 90
-        DamageInterval: 5 # Roughly 18 impacts.
+        Duration: 36
+        DamageInterval: 4 # Roughly 18 impacts.
         Width: 512
         Shape: Flat
         BeyondTargetRange: 0c256
@@ -514,8 +514,8 @@ BansheeCannon:
     Report: scrin5b.aud
     Burst: 5
     BurstDelay: 4
-    #Projectile: Bullet
-    Projectile: Bullet
+    #Projectile: BulletAS
+    Projectile: BulletAS
         Image: dualproton
         Speed: 2c0
         Inaccuracy: 0c768
@@ -607,7 +607,7 @@ BansheeCannonAA:
     Report: scrin5b.aud
     Burst: 10
     BurstDelay: 8
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: dualproton
         Speed: 3c0
         Inaccuracy: 0c0
@@ -647,7 +647,7 @@ StormRaiderCannon:
     Report: scrin5b.aud
     Burst: 10
     BurstDelay: 5
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: dualproton
         Speed: 2c0
 		#speed: 2c512
@@ -686,7 +686,7 @@ StormRaiderCannonAA:
     Report: scrin5b.aud
     Burst: 10
     BurstDelay: 8
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: dualproton
         Speed: 1c512
         Inaccuracy: 0c256
@@ -727,7 +727,7 @@ BansheeProton:
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
     Burst: 3
     BurstDelay: 10
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: TORPEDO
         RangeLimit: 20c0
         Speed: 1c512
@@ -771,7 +771,7 @@ MontaukProton:
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
     Burst: 6
     BurstDelay: 10
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: TORPEDO
         RangeLimit: 20c0
         Speed: 0c512
@@ -814,7 +814,7 @@ SimpleShockerDisc:
     Burst: 2
     BurstDelay: 5
     Report: bursterhit01.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c64
         LaunchAngle: 45
         Speed: 2c0
@@ -852,7 +852,7 @@ ShockerDisc:
     Burst: 3
     BurstDelay: 10
     Report: plasmashot01.aud, plasmashot02.aud, plasmashot03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
         Image: energyblast1
         Shadow: true
@@ -892,7 +892,7 @@ HeavyShockerDisc:
     Burst: 2
     BurstDelay: 10
     Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
         Image: energyblast1
         Shadow: true
@@ -932,7 +932,7 @@ MantisShockerDisc:
     Burst: 3
     BurstDelay: 20
     Report: rail1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c512
         Image: energyblast2
         Shadow: true
@@ -975,7 +975,7 @@ HexapodShockerDisc:
     Burst: 3
     BurstDelay: 10
     Report: rail1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c512
         Image: energyblast2
         Shadow: true
@@ -1019,7 +1019,7 @@ ShardLauncher:
     BurstDelay: 10
     Report: rail1.aud
     ValidTargets: Air, MidAir, HighAir
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
         Image: CRYSTAL4
         Shadow: true

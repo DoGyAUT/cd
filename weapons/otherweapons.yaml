@@ -3,7 +3,7 @@ FireballLauncher:
     ReloadDelay: 100
     Range: 5c256
     Report: flamtnk1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
         Image: flametrailer
@@ -31,7 +31,7 @@ BlueFireballLauncher:
     ReloadDelay: 50
     Range: 5c256
     Report: firstrm1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
         Image: blueflametrailer
@@ -76,7 +76,7 @@ DreadfireLauncher:
     ReloadDelay: 60
     Range: 4c256
     InvalidTargets: Flameproof
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
         Image: flametrailer
@@ -92,7 +92,7 @@ BlackHandFlamer:
     ReloadDelay: 60
     Range: 4c256
     InvalidTargets: Flameproof
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
         Image: flametrailer
@@ -111,7 +111,7 @@ BlackHandFlamerBlue:
     Range: 4c256
     Report: firstrm1.aud
     InvalidTargets: Flameproof
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
         Image: blueflametrailer
@@ -135,7 +135,7 @@ DogJaw:
     ReloadDelay: 20
     Range: 1c512
     Report: dog_a1.aud, dog_m1.aud, dog_s1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 3c768
         Blockable: true
     Warhead@1Dam: SpreadDamage
@@ -152,7 +152,7 @@ MutantDogJaw:
     ReloadDelay: 20
     Range: 1c0
     Report: mdog_a1.aud, mdog_m1.aud, mdog_s1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 3c768
         Blockable: true
     Warhead@1Dam: SpreadDamage
@@ -169,7 +169,7 @@ JaguarClaw:
     ReloadDelay: 20
     Range: 1c0
     Report: jaguar_a1.aud, jaguar_s1.aud, jaguar_s2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 3c768
         Blockable: true
     Warhead@1Dam: SpreadDamage
@@ -186,7 +186,7 @@ GoonHammer:
     Range: 1c512
 	ValidTargets: Infantry, Mutant, Goon
     Report: splatter01.aud, splatter02.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
@@ -214,7 +214,7 @@ GoonHammer2:
     Range: 1c512
 	InvalidTargets: Infantry, Mutant
     Report: metal01.aud, metal02.aud, metal03.aud, metal04.aud, metal05.aud, metal06.aud, metal07.aud, metal08.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
@@ -233,7 +233,7 @@ GoonHammer2:
 FanticBoom:
     ReloadDelay: 1
     Range: 2c0
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
@@ -283,7 +283,7 @@ FanticBoomExplosion:
 SuicideBomb:
     ReloadDelay: 1
     Range: 2c0
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
     ValidTargets: Ground, Water, Air, HighAir
     Warhead@1Dam: SpreadDamage
@@ -319,7 +319,7 @@ WebLauncher:
     Burst: 3
     BurstDelay: 5
     Report: fireweb1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         High: yes
         Shadow: false
@@ -346,7 +346,7 @@ CorruptorBlast:
     Burst: 5
     BurstDelay: 10
     Report: tripod_f1.aud, tripod_f2.aud, tripod_f3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: CRYSTAL4
         Inaccuracy: 1c0
@@ -393,7 +393,7 @@ FiendShard:
     Burst: 3
     Range: 5c0
     Report: fiend2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 213
         Image: CRYSTAL4
         Inaccuracy: 512
@@ -422,7 +422,7 @@ FiendShardGreen:
     Burst: 3
     Range: 5c0
     Report: fiend2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: CRYSTAL4
         Inaccuracy: 0c512
@@ -458,7 +458,7 @@ FiendShardBlue:
     Burst: 3
     Range: 6c0
     Report: fiend2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Image: CRYSTAL4
         Inaccuracy: 0c512
@@ -495,7 +495,7 @@ FiendShardRed:
     Burst: 4
     Range: 6c0
     Report: fiend2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c768
         Image: CRYSTAL4
         Inaccuracy: 0c512
@@ -531,7 +531,7 @@ FiendShardPurple:
     Burst: 4
     Range: 7c0
     Report: fiend2.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c768
         Image: CRYSTAL4
         Inaccuracy: 0c512
@@ -567,7 +567,7 @@ SlimeAttack:
     ReloadDelay: 60
     Range: 2c0
     Report: vicer1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Damage: 100
@@ -586,7 +586,7 @@ SmallSlimeAttack:
     ReloadDelay: 60
     Range: 2c0
     Report: vicer1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Damage: 50
@@ -605,7 +605,7 @@ CorruptSlimeAttack:
     ReloadDelay: 60
     Range: 2c0
     Report: vicer1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Damage: 100
@@ -640,7 +640,7 @@ Veins:
 NodWarCry:
     ReloadDelay: 120
     Range: 1c0
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
     Warhead@target: SpreadDamage
         Spread: 1c0

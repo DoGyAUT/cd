@@ -4,7 +4,7 @@ upgrade.grunt:
         Name: Choose Scoundrel
     Buildable:
         BuildPaletteOrder: 400
-        Prerequisites: ~fhovel, ~!t1, ~!upgrade.brigand
+        Prerequisites: ~!upgrade.brigand
         Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Brigand useage.
         Queue: Tech.Forg
         BuildLimit: 1
@@ -21,7 +21,7 @@ upgrade.brigand:
         Name: Choose Brigand
     Buildable:
         BuildPaletteOrder: 401
-        Prerequisites: ~fhovel, ~!t1, ~!upgrade.grunt
+        Prerequisites: ~!upgrade.grunt
         Queue: Tech.Forg
         BuildLimit: 1
         Description: Allows you to train Brigand units (replaces Grunt). \n  Disables Scoundrel useage.
@@ -38,7 +38,7 @@ upgrade.fiend:
         Name: Choose Fiend
     Buildable:
         BuildPaletteOrder: 402
-        Prerequisites: ~fhovel, faradr, ~!t1, ~!upgrade.mhijack
+        Prerequisites: ~faradr, ~!upgrade.mhijack
         Queue: Tech.Forg
         BuildLimit: 1
         Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Goon useage.
@@ -55,7 +55,7 @@ upgrade.mhijack:
         Name: Choose Hijacker
     Buildable:
         BuildPaletteOrder: 403
-        Prerequisites: ~fhovel, faradr, ~!t1, ~!upgrade.fiend
+        Prerequisites: ~faradr, ~!upgrade.fiend
         Queue: Tech.Forg
         BuildLimit: 1
         Description: Allows you to train Hijacker units. \n  Disables Fiend useage.
@@ -72,10 +72,10 @@ upgrade.goon:
         Name: Choose Goon
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: ~fhovel, fatrade, ~!t1, ~!upgrade.ghost
+        Prerequisites: ~fatrade, ~!upgrade.ghost
         Queue: Tech.Forg
         BuildLimit: 1
-        Description: Allows you to train Bounty Hunter units. \n  Disables Goon useage.
+        Description: Allows you to train Goon units. \n  Disables Bounty Hunter useage.
     Valued:
         Cost: 750
     RenderSprites:
@@ -89,7 +89,7 @@ upgrade.ghost:
         Name: Choose Bounty Hunter
     Buildable:
         BuildPaletteOrder: 404
-        Prerequisites: ~fhovel, fatrade, ~!t1, ~!upgrade.goon
+        Prerequisites: ~fatrade, ~!upgrade.goon
         Queue: Tech.Forg
         BuildLimit: 1
         Description: Allows you to train Bounty Hunter units. \n  Disables Goon useage.
@@ -106,7 +106,7 @@ upgrade.fbuggy:
         Name: Assault Buggy chassis
     Buildable:
         BuildPaletteOrder: 405
-        Prerequisites: ~fhovel, ~!t1, ~!upgrade.ftruck
+        Prerequisites: ~!upgrade.ftruck, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -124,7 +124,7 @@ upgrade.fbuggy_mg:
         Name: Choose Assault Buggy (Flamer)
     Buildable:
         BuildPaletteOrder: 406
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
+        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -142,7 +142,7 @@ upgrade.fbuggy_mis:
         Name: Choose Assault Buggy (Rockets)
     Buildable:
         BuildPaletteOrder: 407
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mortar
+        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -160,7 +160,7 @@ upgrade.fbuggy_mortar:
         Name: Choose Assault Buggy (Mortar)
     Buildable:
         BuildPaletteOrder: 408
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis
+        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -178,7 +178,7 @@ upgrade.ftruck:
         Name: Assault Truck chassis
     Buildable:
         BuildPaletteOrder: 410
-        Prerequisites: ~fhovel, ~!t1, ~!upgrade.fbuggy
+        Prerequisites: ~!upgrade.fbuggy, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar, ~!upgrade.ftruck_flamer
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -196,7 +196,7 @@ upgrade.ftruck_flamer:
         Name: Choose Assault Truck (MG)
     Buildable:
         BuildPaletteOrder: 409
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar
+        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -214,7 +214,7 @@ upgrade.ftruck_flak:
         Name: Choose Assault Truck (Flak)
     Buildable:
         BuildPaletteOrder: 410
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_mortar
+        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -232,7 +232,7 @@ upgrade.ftruck_mortar:
         Name: Choose Assault Truck (Mortar)
     Buildable:
         BuildPaletteOrder: 411
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_flak
+        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_flak
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -250,11 +250,11 @@ upgrade.gremlin:
         Name: Gremlin chassis
     Buildable:
         BuildPaletteOrder: 412
-        Prerequisites: ~fhovel, ~!t1
+        Prerequisites: ~!upgrade.lizard, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
-        Description: Allows you to use the Gremlin chassis.
+        Description: Allows you to use the Gremlin chassis. Disables lizard usage
     Valued:
         Cost: 250
     RenderSprites:
@@ -268,7 +268,7 @@ upgrade.gremlin_mortar:
         Name: Choose Gremlin (Howitzer)
     Buildable:
         BuildPaletteOrder: 413
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm
+        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -286,7 +286,7 @@ upgrade.gremlin_hcan:
         Name: Choose Gremlin (HE-Cannon)
     Buildable:
         BuildPaletteOrder: 414
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
+        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -304,7 +304,7 @@ upgrade.gremlin_90mm:
         Name: Choose Gremlin (90mm + MG)
     Buildable:
         BuildPaletteOrder: 415
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_mortar
+        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -322,7 +322,7 @@ upgrade.taurus:
         Name: Taurus chassis
     Buildable:
         BuildPaletteOrder: 416
-        Prerequisites: ~fhovel, ~faradr, ~!t1, ~!upgrade.lizard, ~!upgrade.digger
+        Prerequisites: ~faradr, ~!upgrade.digger, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -340,7 +340,7 @@ upgrade.taurus_mg:
         Name: Choose Taurus (Autocannon)
     Buildable:
         BuildPaletteOrder: 417
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.taurus, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mis
+        Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mis
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -358,7 +358,7 @@ upgrade.taurus_hcan:
         Name: Choose Taurus (HE-Cannon)
     Buildable:
         BuildPaletteOrder: 418
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
+        Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -376,7 +376,7 @@ upgrade.taurus_mis:
         Name: Choose Taurus (Missile)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, ~!t1, ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_hcan
+        Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_hcan
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -394,7 +394,7 @@ upgrade.lizard:
         Name: Lizard chassis
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~!upgrade.taurus, ~!upgrade.digger
+        Prerequisites: ~!upgrade.gremlin, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm, ~!upgrade.lizard_mg
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -412,7 +412,7 @@ upgrade.lizard_mg:
         Name: Choose Lizard (Autocannon)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~upgrade.lizard, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm
+        Prerequisites:  ~upgrade.lizard, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -430,7 +430,7 @@ upgrade.lizard_90mm:
         Name: Choose Lizard (90mm)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_122mm
+        Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_122mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -448,7 +448,7 @@ upgrade.lizard_122mm:
         Name: Choose Lizard (122mm)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_90mm
+        Prerequisites:  ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_90mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -466,11 +466,11 @@ upgrade.digger:
         Name: Digger chassis
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~!upgrade.taurus, ~!upgrade.lizard
+        Prerequisites: ~faradr, ~!upgrade.taurus, ~!upgrade.digger_122mm, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
-        Description: Allows you to use the Bison chassis. Disables Taurus and Lizard usage.
+        Description: Allows you to use the Bison chassis. Disables Taurus
     Valued:
         Cost: 250
     RenderSprites:
@@ -481,10 +481,10 @@ upgrade.digger:
 upgrade.digger_mis:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Digger (Missile
+        Name: Choose Digger (Missile)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, ~!t1, faradr, ~upgrade.digger, ~!upgrade.digger_mortar, ~!upgrade.digger_122mm
+        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mortar, ~!upgrade.digger_122mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -502,7 +502,7 @@ upgrade.digger_mortar:
         Name: Choose Digger (Howitzer)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, ~!t1, faradr, ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_122mm
+        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_122mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -520,7 +520,7 @@ upgrade.digger_122mm:
         Name: Choose Digger (122mm)
     Buildable:
         BuildPaletteOrder: 419
-        Prerequisites: ~fhovel, faradr, ~!t1, ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
+        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -538,7 +538,7 @@ upgrade.bison:
         Name: Bison chassis
     Buildable:
         BuildPaletteOrder: 420
-        Prerequisites: ~fhovel, fatrade, ~!t1, ~!upgrade.auroch
+        Prerequisites:   ~fatrade, ~!upgrade.auroch, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -556,7 +556,7 @@ upgrade.bison_130mm:
         Name: Choose Bison (130mm + MG)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
+        Prerequisites: ~upgrade.bison, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -574,7 +574,7 @@ upgrade.bison_145mm:
         Name: Choose Bison (145mm + Grenade Launcher + MG)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_180mm
+        Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -592,7 +592,7 @@ upgrade.bison_180mm:
         Name: Choose Bison (180mm)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm
+        Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -610,7 +610,7 @@ upgrade.auroch:
         Name: Auroch chassis
     Buildable:
         BuildPaletteOrder: 422
-        Prerequisites: ~fhovel, fatrade, ~!t1, ~!upgrade.bison
+        Prerequisites:   ~fatrade, ~!upgrade.bison, ~!upgrade.auroch_120mmt , ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -628,7 +628,7 @@ upgrade.auroch_130mm:
         Name: Choose Auroch (130mm + MG)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
+        Prerequisites: ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -646,7 +646,7 @@ upgrade.auroch_120mmt:
         Name: Choose Auroch (120mm Twin Cannon)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
+        Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -664,7 +664,7 @@ upgrade.auroch_180mm:
         Name: Choose Auroch (180mm)
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~fhovel, ~!t1, ~!t2, ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_130mm
+        Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_130mm
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -682,7 +682,7 @@ upgrade.buzzard:
         Name: Light Attack Chopper "Buzzard"
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.buzzard, !upgrade.griffin
+        Prerequisites: ~fahpad, !upgrade.griffin, ~!upgrade.buzzard_gattling, ~!upgrade.buzzard_missiles
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -700,7 +700,7 @@ upgrade.buzzard_missiles:
         Name: Buzzard HE Rocket Upgrade
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.buzzard_missiles, ~upgrade.buzzard, !upgrade.buzzard_gattling
+        Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -718,7 +718,7 @@ upgrade.buzzard_gattling:
         Name: Buzzard Adv. Gattling Upgrade
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.buzzard_missiles, ~upgrade.buzzard, !upgrade.buzzard_gattling
+        Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -736,7 +736,7 @@ upgrade.griffin:
         Name: Heavy Attack Chopper "Griffin"
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.buzzard, !upgrade.griffin
+        Prerequisites: ~fahpad, ~!upgrade.buzzard, ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -754,7 +754,7 @@ upgrade.griffin_missiles:
         Name: Griffin Missiles Upgrade
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.griffin_missiles, !upgrade.griffin_autocannon, ~upgrade.griffin
+        Prerequisites:  ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
@@ -772,7 +772,7 @@ upgrade.griffin_autocannon:
         Name: Griffin Autocannon Upgrade
     Buildable:
         BuildPaletteOrder: 421
-        Prerequisites: ~!t2, !upgrade.griffin_missiles, !upgrade.griffin_autocannon, ~upgrade.griffin
+        Prerequisites: ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1

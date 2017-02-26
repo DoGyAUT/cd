@@ -7,7 +7,7 @@ BUZZARD: #adv gattling/ "mortar"
     Buildable:
         Queue: Air.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fahpad, ~!t1, upgrade.buzzard
+        Prerequisites: upgrade.buzzard, ~!upgrade.griffin
         Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
     Selectable:
         Bounds: 60,48,0,-10
@@ -93,11 +93,11 @@ GRIFFIN: #missile / autocannon
     Valued:
         Cost: 1200
     Tooltip:
-        Name: GRIFFIN
+        Name: Griffin
     Buildable:
         Queue: Air.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fahpad, ~!t1, upgrade.griffin
+        Prerequisites: upgrade.griffin, ~!upgrade.buzzard
         Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
     Selectable:
         Bounds: 60,48,0,-10

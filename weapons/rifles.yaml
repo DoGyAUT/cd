@@ -5,7 +5,7 @@ Minigun:
     Report: rifle_g1.aud, rifle_g2.aud
     Burst: 3
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -22,7 +22,7 @@ Minigun2:
     Report: rifle_n1.aud, rifle_n2.aud
     Burst: 2
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -39,8 +39,8 @@ HuskGun:
     Burst: 6
     BurstDelay: 2
     Report: rifle_c1.aud, rifle_c2.aud, rifle_c3.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         LaunchAngle: 45
         Palette: effect
         Inaccuracy: 0c128
@@ -56,7 +56,7 @@ SMG:
     Report: smg_f1.aud, smg_f2.aud
     Burst: 4
     BurstDelay: 3
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -77,8 +77,8 @@ M1Carbine:
     Burst: 3
     BurstDelay: 4
     Report: carbine_g1.aud, carbine_g2.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Damage: 50
@@ -94,7 +94,7 @@ ConfCarbine:
     Report: confcarbine01.aud, confcarbine02.aud, confcarbine03.aud
     Burst: 3
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -107,7 +107,7 @@ M2Carbine:
     Report: carbine_n1.aud, carbine_n2.aud, carbine_n3.aud
     Burst: 8
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -120,7 +120,7 @@ Machal:
     Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
     Burst: 5
     BurstDelay: 3
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -132,8 +132,8 @@ TibCarbine:
     Range: 6c0
     Report: tibrifle01.aud, tibrifle02.aud, tibrifle03.aud
     Burst: 4
-    Projectile: Bullet
-        Image: tiberiumbullet
+    Projectile: BulletAS
+        Image: tiberiumBullet
         Inaccuracy: 0c128
         ContrailLength: 10
         ContrailColor: 00FF64
@@ -165,8 +165,8 @@ TibCarbine:
 TibCarbineE:
     Inherits: TibCarbine
     BurstDelay: 2
-    Projectile: Bullet
-        Image: bluetiberiumbullet
+    Projectile: BulletAS
+        Image: bluetiberiumBullet
         ContrailColor: 5980FF
             
 Vulcan:
@@ -175,8 +175,8 @@ Vulcan:
     Range: 5c0
     Report: mgfire.aud #machinegun5.aud #stormgun1.aud,stormgun2.aud,stormgun3.aud
     Burst: 2
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -191,7 +191,7 @@ MarauderGun:
     Report: hmg.aud
     ValidTargets: Ground, Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
     InvalidTargets: Vehicle, Buildings
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -206,7 +206,7 @@ OverGun:
     BurstDelay: 2
     Range: 5c0
     Report: fg42_01.aud, fg42_02.aud, fg42_03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -222,7 +222,7 @@ JumpCannon:
     Range: 6c0
     Report: jumpjet1.aud
     ValidTargets: Ground
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -236,7 +236,7 @@ JumpCannonAA:
     Range: 10c0
     Report: jumpjet1.aud
     ValidTargets: Air
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -249,7 +249,7 @@ WatchSniper:
     ReloadDelay: 100
     Range: 10c0
     Report: sniper1.aud, sniper2.aud, sniper3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c512
         Inaccuracy: 0c64
         ContrailLength: 10
@@ -274,7 +274,7 @@ ShadowSniper:
     Range: 10c0
     MinRange: 4c0
     Report: sniper1.aud, sniper2.aud, sniper3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c32
         ContrailLength: 10
@@ -308,7 +308,7 @@ MutantSniper:
     Range: 7c0
     MinRange: 2c0
     Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
         Inaccuracy: 0c64
         ContrailLength: 10
@@ -338,8 +338,8 @@ MutantSniper:
 
 ShadowSniperEMP:
     Inherits: ShadowSniper
-    Projectile: Bullet
-        Image: energybullet
+    Projectile: BulletAS
+        Image: energyBullet
         Speed: 1c0
         Inaccuracy: 0c64
         ContrailLength: 6
@@ -365,7 +365,7 @@ VulcanShotgun:
     BurstDelay: 6
     Range: 3c0
     Report: shotgun1.aud, shotgun2.aud,shotgun4.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
@@ -380,7 +380,7 @@ BrigandShotgun:
     ReloadDelay: 50
     Range: 4c0
     Report: shotgun3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 1c256
     Warhead@1Dam: SpreadDamage
         Spread: 256
@@ -395,8 +395,8 @@ Pistola:
     ReloadDelay: 20
     Range: 4c0
     Report: pistol.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 1c682
     Warhead@1Dam: SpreadDamage
         Spread: 128

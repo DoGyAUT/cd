@@ -58,7 +58,7 @@ HarbingerMachal:
         HorizontalRateOfTurn: 3
         RangeLimit: 20c0
         Shadow: true
-        Image: plasmabullet
+        Image: plasmaBullet
         LaunchAngle: 45
         Palette: effect
         Speed: 1c0
@@ -101,9 +101,9 @@ DroneMachal:
     Report: machal01.aud, machal02.aud, machal03.aud, machal04.aud
     Burst: 10
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
-        Image: energybullet #plasmabullet
+        Image: energyBullet #plasmaBullet
         LaunchAngle: 45
         Speed: 2c256
         ContrailLength: 6
@@ -148,7 +148,7 @@ PteroisMachal:
         HorizontalRateOfTurn: 3
         RangeLimit: 20c0
         Shadow: true
-        Image: plasmabullet
+        Image: plasmaBullet
         LaunchAngle: 45
         Palette: effect
         Speed: 1c0
@@ -189,13 +189,13 @@ MantaMachal:
     Burst: 3
     BurstDelay: 20
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c512
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 0080FF
         ContrailWidth: 25
@@ -233,7 +233,7 @@ PlasmaGun:
     Burst: 3
     BurstDelay: 10
     Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c0
         Image: pulsball
         Shadow: true
@@ -278,7 +278,7 @@ CommandoLaserFire:
     Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
     Burst: 40
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Inaccuracy: 0c128
         LaunchAngle: 45
         Speed: 0c768
@@ -315,13 +315,13 @@ CabalPulseCannon:
     ReloadDelay: 100
     Range: 8c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c512
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 0080FF
         ContrailWidth: 25
@@ -357,13 +357,13 @@ KronosCannon:
     Range: 10c0
 #    MinRange: 3c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c0
         Inaccuracy: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
-        Image: plasmabullet #pulsball
+        Image: plasmaBullet #pulsball
         ContrailLength: 30
         ContrailColor: 0080FF
         ContrailWidth: 25
@@ -401,7 +401,7 @@ PlasmaBombardeCannon:
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 #    Burst: 2
     ValidTargets: Ground
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed : 0c128
         Blockable: true
         HorizontalRateOfTurn: 1

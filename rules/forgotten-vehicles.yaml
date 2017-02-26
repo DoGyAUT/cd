@@ -972,9 +972,6 @@ DIGGER_MIS:
     Voiced:
         VoiceSet: Grunt
         Volume: 2
-    Mobile:
-        Speed: 55
-        TurnSpeed: 4
     Health:
         HP: 900
     Armor:
@@ -1002,9 +999,8 @@ DIGGER_MIS:
         RequiresCondition: !deployed
     WithVoxelBody@deployed:
         Sequence: digged
-        RequiresCondition: !deployed
+        RequiresCondition: deployed
     WithSpriteBody@deployed:
-        RequiresCondition: !deployed
     GrantConditionOnDeploy:
         DeployedCondition: deployed
         DeployAnimation: make
@@ -1012,9 +1008,6 @@ DIGGER_MIS:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    ReloadDelayMultiplier@deploy:        
-        RequiresCondition: deployed
-        Modifier: 80
     Armor@deployed:
         Type: Heavy
         RequiresCondition: deployed
@@ -1043,6 +1036,7 @@ DIGGER_MORTAR:
     Mobile:
         Speed: 55
         TurnSpeed: 4
+        RequiresCondition: !deployed
     Health:
         HP: 900
     Armor:
@@ -1066,13 +1060,12 @@ DIGGER_MORTAR:
     RenderVoxels:
         Image: digger
     WithVoxelBody:
-        Sequence: idle-mortar
+        Sequence: idle-mis
         RequiresCondition: !deployed
     WithVoxelBody@deployed:
         Sequence: digged
-        RequiresCondition: !deployed
+        RequiresCondition: deployed
     WithSpriteBody@deployed:
-        RequiresCondition: !deployed
     GrantConditionOnDeploy:
         DeployedCondition: deployed
         DeployAnimation: make
@@ -1080,9 +1073,6 @@ DIGGER_MORTAR:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    ReloadDelayMultiplier@deploy:        
-        RequiresCondition: deployed
-        Modifier: 80
     Armor@deployed:
         Type: Heavy
         RequiresCondition: deployed
@@ -1113,6 +1103,7 @@ DIGGER_122MM:
     Mobile:
         Speed: 55
         TurnSpeed: 4
+        RequiresCondition: !deployed
     Health:
         HP: 900
     Armor:
@@ -1136,13 +1127,12 @@ DIGGER_122MM:
     RenderVoxels:
         Image: digger
     WithVoxelBody:
-        Sequence: idle-122mm
+        Sequence: idle-mis
         RequiresCondition: !deployed
     WithVoxelBody@deployed:
         Sequence: digged
-        RequiresCondition: !deployed
+        RequiresCondition: deployed
     WithSpriteBody@deployed:
-        RequiresCondition: !deployed
     GrantConditionOnDeploy:
         DeployedCondition: deployed
         DeployAnimation: make
@@ -1150,9 +1140,6 @@ DIGGER_122MM:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    ReloadDelayMultiplier@deploy:        
-        RequiresCondition: deployed
-        Modifier: 80
     Armor@deployed:
         Type: Heavy
         RequiresCondition: deployed
@@ -1366,7 +1353,7 @@ AUROCH_130MM:
         Speed: 40
         TurnSpeed: 3
     Health:
-        HP: 1300
+        HP: 2000
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -1437,7 +1424,7 @@ AUROCH_120MMT:
         Speed: 40
         TurnSpeed: 3
     Health:
-        HP: 1900
+        HP: 2000
     Armor:
         Type: Heavy
     RevealsShroud:
@@ -1507,7 +1494,7 @@ AUROCH_180MM:
         Speed: 40
         TurnSpeed: 3
     Health:
-        HP: 1300
+        HP: 2000
     Armor:
         Type: Heavy
     RevealsShroud:

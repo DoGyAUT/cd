@@ -3,13 +3,15 @@ Grenade:
     ReloadDelay: 80
     Range: 5c512
     MinRange: 1c512
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Blockable: false
         Shadow: true
         LaunchAngle: 45
         Inaccuracy: 0c512
         Image: DISCUS
+        BounceCount: 2
+        BounceRangeModifier: 60
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 70
@@ -37,7 +39,7 @@ Grenade:
 
 GrenadeEMP:
     Inherits: Grenade
-    Projectile: Bullet
+    Projectile: BulletAS
         ContrailLength: 10
         ContrailColor: 6464FF
         ContrailWidth: 15
@@ -67,7 +69,7 @@ SmokeGrenade:
     Burst: 2
     BurstDelay: 20
     Report: m203.aud, gp25.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Blockable: false
         Shadow: true
@@ -96,7 +98,7 @@ SonicGrenade:
     MinRange: 1c512
     Burst: 3
     BurstDelay: 10
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 512
         Blockable: false
         Shadow: true
@@ -139,7 +141,7 @@ Molotov:
     ReloadDelay: 200
     Range: 5c0
     MinRange: 1c512
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 150
         Blockable: false
         Shadow: true
@@ -187,7 +189,7 @@ M203:
     ReloadDelay: 120
     Range: 6c768
     Report: m203.aud, gp25.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: 120mm
         LaunchAngle: 62
@@ -211,7 +213,7 @@ DemolisherLauncher:
     Burst: 6
     BurstDelay: 6
     Report: m203.aud, gp25.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: 120mm
         LaunchAngle: 62
@@ -235,7 +237,7 @@ Bomb:
     BurstDelay: 5
     Range: 5c0
     Report: bombdrop.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 1c0
         Image: shell01
@@ -279,7 +281,7 @@ OrcaBombRun:
     Burst: 10
     BurstDelay: 8
     Range: 6c0
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         
 CondorBomb:
@@ -289,7 +291,7 @@ CondorBomb:
     BurstDelay: 0
     Range: 7c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c0
         Inaccuracy: 0c256
         Blockable: false
@@ -332,7 +334,7 @@ VertigoBomb:
     BurstDelay: 5
     Range: 3c0
     Report: bombdrop.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c128
         Image: shell01
@@ -373,7 +375,7 @@ VertigoBomb:
 
 VertigoBombEMP:
     Inherits: VertigoBomb
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c128
         Image: shell01
@@ -401,7 +403,7 @@ VertigoBombEMP:
 
 VertigoBombGas:
     Inherits: VertigoBomb
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c128
         Image: shell01
@@ -426,7 +428,7 @@ ZepBomb:
     Range: 2c0
 	MinRange: 1
     Report: bombdrop.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Inaccuracy: 0c128
         Image: shell01
@@ -510,7 +512,7 @@ AssaultLauncher:
     ReloadDelay: 200
     Range: 6c768
     Report: m203.aud, gp25.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: 120mm
         LaunchAngle: 62
@@ -543,7 +545,7 @@ BisonLauncher:
     Burst: 6
     BurstDelay: 10
     Report: m203.aud, gp25.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c256
         Image: 120mm
         LaunchAngle: 62
@@ -565,7 +567,7 @@ RPGTower:
     ReloadDelay: 80
     Range: 8c0
     Report: glnch4.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 384
         Blockable: false
         Shadow: true

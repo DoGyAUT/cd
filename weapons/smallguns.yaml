@@ -4,8 +4,8 @@ MammothMG:
     Range: 8c0
     Report:  TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
     Burst: 40
-    Projectile: Bullet
-        Image: bullet    
+    Projectile: BulletAS
+        bullet    
         Speed: 0c682
         Inaccuracy: 1c512
     Warhead@1Dam: SpreadDamage
@@ -24,8 +24,8 @@ VulcanDPOD:
     Burst: 3
     Range: 6c0
     Report: tsgun4.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 1c682
     Warhead@1Dam: SpreadDamage
         Spread: 128
@@ -55,8 +55,8 @@ VulcanTower:
     Burst: 3
     Range: 7c0
     Report: chaingn1.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 0c682
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
@@ -75,8 +75,8 @@ VulcanTower1:
     Burst: 3
     Range: 8c0
     Report: chaingn1.aud
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
@@ -104,7 +104,7 @@ FireflyCannon:
     Report: tsgun4.aud
     Burst: 6
     BurstDelay: 3
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
@@ -121,7 +121,7 @@ AssaultCannon:
     Report: Gat01.aud, Gat02.aud, Gat03.aud #tsgun4.aud
     Burst: 20
     BurstDelay: 3
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -138,7 +138,7 @@ VultureGat:
     Report: mgfire.aud
     Burst: 16
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -155,7 +155,7 @@ RaiderCannonVisual:
     Burst: 20
     ValidTargets: Ground, Air, MidAir, HighAir    
     Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -176,7 +176,7 @@ RaiderCannonAttack:
     Burst: 20
     ValidTargets: Ground, Air, MidAir, HighAir    
     Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: 
         Speed: 10c0
         Inaccuracy: 0c0
@@ -195,7 +195,7 @@ AssaultMG:
     Burst: 20
     BurstDelay: 2
     Report: chaingn1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -216,7 +216,7 @@ GattlingCannonAttack:
     ValidTargets: Ground, Air, MidAir, HighAir     
     BurstDelay: 2
     Report: gattling01.aud, gattling02.aud, gattling03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
 		Image: 
         Speed: 10c0
         Inaccuracy: 0c0
@@ -234,7 +234,7 @@ GattlingCannonVisual:
     ValidTargets: Ground, Air, MidAir, HighAir     
     BurstDelay: 2
     Report: gattling01.aud, gattling02.aud, gattling03.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -280,7 +280,7 @@ TaurusMG:
     Burst: 50
     BurstDelay: 4
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
@@ -297,7 +297,7 @@ WarthogMG:
     Burst: 50
     BurstDelay: 2
     Report: m3.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -314,7 +314,7 @@ TankMG:
     Burst: 50
     BurstDelay: 4
     Report: TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
@@ -331,7 +331,7 @@ LightTankMG:
     Burst: 20
     BurstDelay: 4
     Report: cygun1.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -349,7 +349,7 @@ APCMG:
     BurstDelay: 4
     Report: cygun1.aud
     ValidTargets: Ground, Air, MidAir, HighAir
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
@@ -369,7 +369,7 @@ VenomCannon:
     Report: cygun1.aud
     Burst: 20
     BurstDelay: 3
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -389,7 +389,7 @@ HydraCannon:
     Report: tsgun4.aud
     Burst: 50
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -408,7 +408,7 @@ HavocCannon:
     Report: quadcannon1.aud
     Burst: 10
     BurstDelay: 6
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -432,7 +432,7 @@ RavenCannon:
     Report: mg6.aud
     Burst: 20
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
         Inaccuracy: 1c256
         ContrailLength: 10
@@ -455,7 +455,7 @@ RavenCannonAA:
     Report: mg6.aud
     Burst: 20
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c512
         Inaccuracy: 0c512
         ContrailLength: 10
@@ -480,7 +480,7 @@ OrcaCannon:
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 10
     BurstDelay: 4
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -499,7 +499,7 @@ OrcaCannonRaid:
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 30
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c512
         LaunchAngle: 62
         Inaccuracy: 0c512
@@ -524,8 +524,8 @@ HawkCannon:
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 5
     BurstDelay: 4
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 2c512
         Inaccuracy: 0c512
         ContrailLength: 10
@@ -552,8 +552,8 @@ HornetCannon:
     Report: Gat01.aud, Gat02.aud, Gat03.aud
     Burst: 20
     BurstDelay: 4
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 2c512
         Inaccuracy: 0c512
         ContrailLength: 10
@@ -581,8 +581,8 @@ BuzzardCannon:
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
     Burst: 50
     BurstDelay: 3
-    Projectile: Bullet
-        Image: bullet
+    Projectile: BulletAS
+        bullet
         Speed: 1c0
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
@@ -602,7 +602,7 @@ StrikerCannon:
     Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
     Burst: 30
     BurstDelay: 2
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 2c512
         Inaccuracy: 0c256
         ContrailLength: 10
@@ -629,7 +629,7 @@ Sniper:
     ReloadDelay: 60
     Range: 6c768
     Report: silencer.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 1c682
     Warhead@1Dam: SpreadDamage
         Spread: 42
@@ -642,7 +642,7 @@ WatchMG:
     Report:
     Burst: 7
     BurstDelay: 1
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
@@ -657,7 +657,7 @@ WatchMGsound:
     ReloadDelay: 70
     Range: 7c0
     Report: cancerousmg.wav
-    Projectile: Bullet
+    Projectile: BulletAS
         Image: 
         Blockable: true
     Warhead@1Dam: SpreadDamage
@@ -674,7 +674,7 @@ ReaperCannon:
     Burst: 8
     BurstDelay: 4
     Report: Overgun01.aud, Overgun02.aud, Overgun03.aud, Overgun04.aud, Overgun05.aud
-    Projectile: Bullet
+    Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
