@@ -686,7 +686,7 @@ upgrade.buzzard:
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
-        Description: Adds missiles to Buzzard attack helicopter
+        Description: Unlocks Buzzard Chopper, disables Griffin usage
     Valued:
         Cost: 750
     RenderSprites:
@@ -740,11 +740,11 @@ upgrade.griffin:
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
-        Description: Unlocks Griffin Chopper
+        Description: Unlocks Griffin Chopper, disables Buzzard usage
     Valued:
         Cost: 750
     RenderSprites:
-        Image: buzzard
+        Image: griffin
     ProvidesPrerequisite:
         Prerequisite: upgrade.griffin
         
@@ -762,7 +762,7 @@ upgrade.griffin_missiles:
     Valued:
         Cost: 750
     RenderSprites:
-        Image: buzzard
+        Image: griffin
     ProvidesPrerequisite:
         Prerequisite: upgrade.griffin_missile
         
@@ -780,6 +780,6 @@ upgrade.griffin_autocannon:
     Valued:
         Cost: 750
     RenderSprites:
-        Image: buzzard
+        Image: griffin
     ProvidesPrerequisite:
         Prerequisite: upgrade.griffin_autocannon

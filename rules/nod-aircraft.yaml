@@ -95,7 +95,6 @@ HYDRA:
     Aircraft:
         TurnSpeed: 5
         Speed: 90
-        IdealSeparation: 2048
     Health:
         HP: 500
     Armor:
@@ -167,7 +166,7 @@ HYDRA:
     WithIdleOverlay@ROTORGROUND:
         Offset: 0,0,930
         Sequence: slow-rotor
-        RequiresCondition: airborne
+        RequiresCondition: !airborne
     DetectCloaked:
         Range: 7c0
     RenderDetectionCircle:
@@ -194,7 +193,6 @@ HAVOC:
     Aircraft:
         TurnSpeed: 4
         Speed: 80
-        IdealSeparation: 2048
     Health:
         HP: 450
     Armor:

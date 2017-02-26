@@ -17,7 +17,6 @@ BUZZARD: #adv gattling/ "mortar"
     Aircraft:
         TurnSpeed: 6
         Speed: 120
-        IdealSeparation: 2048
     Health:
         HP: 350
     Armor:
@@ -28,11 +27,11 @@ BUZZARD: #adv gattling/ "mortar"
     Armament@gattling:
         Weapon: BuzzardGattlingCannonAttack
         LocalOffset: 800,0,160
-        RequiresCondition:!upgrade.buzzard_gattling
+        RequiresCondition: !upgrade.buzzard_gattling
     Armament@gattlingvis:
         Weapon: BuzzardGattlingCannonVisual
         LocalOffset: 800,0,160
-        RequiresCondition:!upgrade.buzzard_gattling
+        RequiresCondition: !upgrade.buzzard_gattling
     #adv gattling instead of flamer
     Armament@gattling2: 
         Weapon: BuzzardGattlingCannonAttack2
@@ -49,7 +48,10 @@ BUZZARD: #adv gattling/ "mortar"
         MuzzlePalette: apolra50alpha
         LocalOffset: 0,256,160, 0,-256,160
         RequiresCondition: upgrade.buzzard_missiles
-    AttackHeli:
+    Turreted:
+        TurnSpeed: 5
+        Offset: 400,0,0
+    AttackTurreted:
         FacingTolerance: 20
     AutoTarget:
     WithIdleOverlay@ROTORAIR:
@@ -59,8 +61,9 @@ BUZZARD: #adv gattling/ "mortar"
     WithIdleOverlay@ROTORGROUND:
         Offset: 0,0,800
         Sequence: slow-rotor
-        RequiresCondition: airborne
+        RequiresCondition: !airborne
     RenderSprites:
+    WithVoxelTurret:
     WithMuzzleOverlay:
     DetectCloaked:
         Range: 7c0
@@ -92,9 +95,8 @@ GRIFFIN: #missile / autocannon
         VoiceSet: Grunt
         Volume: 2
     Aircraft:
-        TurnSpeed: 6
-        Speed: 70
-        IdealSeparation: 2048
+        TurnSpeed: 5
+        Speed: 100
     Health:
         HP: 500
     Armor:
@@ -104,24 +106,24 @@ GRIFFIN: #missile / autocannon
         Type: GroundPosition
     Armament@mg: # make gattlings
         Weapon: BuzzardGattlingCannonAttack
-        LocalOffset: 800,0,160
+        LocalOffset: 700,0,80
     Armament@mgvis: # make gattlings
         Weapon: BuzzardGattlingCannonVisual
-        LocalOffset: 800,0,160
+        LocalOffset: 700,0,80
     Armament@missiles:
         Weapon: BuzzardMissiles
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 0,256,160, 0,-256,160
-        RequiresCondition:upgrade.griffin_missiles
+        RequiresCondition: upgrade.griffin_missiles
     Armament@autocannnon:
         Weapon: GremlinShotgun
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 0,256,160, 0,-256,160
-        RequiresCondition:upgrade.griffin_autocannon
+        RequiresCondition: upgrade.griffin_autocannon
     AttackHeli:
         FacingTolerance: 20
     AutoTarget:
@@ -132,14 +134,14 @@ GRIFFIN: #missile / autocannon
     WithIdleOverlay@ROTORGROUND:
         Offset: 0,0,800
         Sequence: slow-rotor
-        RequiresCondition: airborne
+        RequiresCondition: !airborne
     RenderSprites:
     WithMuzzleOverlay:
     DetectCloaked:
         Range: 7c0
     RenderDetectionCircle:
     SpawnActorOnDeath:
-        Actor: BUZZARD.Husk
+        Actor: GRIFFIN.Husk
         Probability: 100
     GrantConditionOnPrerequisite@upgrade1:
         Condition: upgrade.griffin_missiles
