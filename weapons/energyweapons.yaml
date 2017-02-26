@@ -509,16 +509,16 @@ CyCannon:
         ExplosionPalette: light
 
 BansheeCannon:
-    ReloadDelay: 150
+    ReloadDelay: 75
     Range: 7c0
     Report: scrin5b.aud
-    Burst: 10
-    BurstDelay: 5
+    Burst: 5
+    BurstDelay: 4
+    #Projectile: Bullet
     Projectile: Bullet
         Image: dualproton
         Speed: 2c0
-		#speed: 2c512
-        Inaccuracy: 0c256
+        Inaccuracy: 0c768
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 60
@@ -546,6 +546,59 @@ BansheeCannon:
         Explosions: small_flash
         ExplosionPalette: light
 
+BansheeSpecial:
+    Inherits: ^ShellHE
+    ReloadDelay: 150
+    Range: 7c0
+    Report: scrin5b.aud
+    Projectile: Missile
+        ContrailColor: 15811b
+        MaximumLaunchSpeed: 0c10
+        MinimumLaunchSpeed: 0c1
+        Speed : 0c768
+        Inaccuracy: 0c0
+        HorizontalRateOfTurn: 30
+        Acceleration: 50
+        RangeLimit: 30c0
+        ContrailLength: 20
+        ContrailWidth: 25
+        Image:TORPEDO
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 100
+            Aircraft: 100
+            Building: 100
+            Light: 100
+            Medium: 100
+            Heavy: 100
+        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+        
+BansheeSpecialE:
+    Inherits: BansheeSpecial
+    Burst: 2
+    BurstDelay: 10
+    Warhead@1Dam: SpreadDamage
+        Damage: 300
+
 BansheeCannonAA:
     ReloadDelay: 150
     Range: 8c0
@@ -556,8 +609,8 @@ BansheeCannonAA:
     BurstDelay: 8
     Projectile: Bullet
         Image: dualproton
-        Speed: 2c0
-        Inaccuracy: 0c256
+        Speed: 3c0
+        Inaccuracy: 0c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 50

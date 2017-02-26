@@ -92,7 +92,7 @@ FATOWER:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 403
-        Prerequisites: anypower, fproc, ~structures.forgotten
+        Prerequisites: anypower, fabar, ~structures.forgotten
         Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery, Armor
     Valued:
         Cost: 500
@@ -111,8 +111,20 @@ FATOWER:
         HP: 800
     RevealsShroud:
         Range: 10c0
-    Armament:
+    Armament@attack1:
         Weapon: WatchMG
+        LocalOffset: 0,0,1000
+    Armament@attack2:
+        Weapon: WatchMG
+        LocalOffset: 0,0,1000
+    Armament@attack3:
+        Weapon: WatchMG
+        LocalOffset: 0,0,1000
+    Armament@attack4:
+        Weapon: WatchMG
+        LocalOffset: 0,0,1000
+    Armament@sound:
+        Weapon: WatchMGsound
         LocalOffset: 0,0,1000
     AttackOmni:
     AutoTarget:
@@ -129,7 +141,7 @@ FAFLAK:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 404
-        Prerequisites: anypower, faradr, ~structures.forgotten, ~!t1
+        Prerequisites: anypower, fabar, faradr, ~structures.forgotten
         Description: Anti-Air base defense.\nRequires no power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Valued:
         Cost: 500
@@ -175,7 +187,7 @@ FAMISSILE:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 405
-        Prerequisites: anypower, faradr, ~structures.forgotten, ~!t1
+        Prerequisites: anypower, fabar, faradr, ~structures.forgotten
         Description: Anti-Armor base defense.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft
     Valued:
         Cost: 1400

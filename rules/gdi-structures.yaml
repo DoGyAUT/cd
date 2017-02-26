@@ -359,7 +359,7 @@ GAARMORY:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 107
-        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+        Prerequisites: anypower, garadr, ~structures.gdi
         Description: Gives access to research projects and subfactions.\nPromotes new infantry to veterancy rank 1.
     Valued:
         Cost: 500
@@ -407,7 +407,7 @@ GAHPAD:
     Buildable:
         BuildPaletteOrder: 108
         Queue: Building
-        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+        Prerequisites: anypower, garadr, ~structures.gdi
         Description: Produces, rearms and\nrepairs aircraft.
     Building:
         Footprint: xx xx
@@ -463,7 +463,7 @@ GADEPT:
         Name: Service Depot
     Buildable:
         BuildPaletteOrder: 109
-        Prerequisites: anypower, gaweap, ~structures.gdi, ~!t1
+        Prerequisites: anypower, gaweap, ~structures.gdi
         Queue: Building
         Description: Repairs vehicles.
     Building:
@@ -513,7 +513,7 @@ GATECH:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 110
-        Prerequisites: anypower, garadr, gaarmory, ~structures.gdi, ~!t1, ~!t2
+        Prerequisites: anypower, garadr, gaarmory, ~structures.gdi
         Description: Provides access to advanced GDI technologies.
     Valued:
         Cost: 4000
@@ -563,7 +563,7 @@ GADROP:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 111
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~upgrade.st
+        Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.st
 		BuildLimit: 1
         Description: Provides access to GDI strongest arsenal.
     Valued:
@@ -611,88 +611,4 @@ GADROP:
 #        Sequence: idle-strip
     ProvidesPrerequisite@buildingname:
 
-GAPLUG:
-    Inherits: ^Building
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: GDI Upgrade Center
-    Selectable:
-        Bounds: 115,104,0,-24
-    Buildable:
-        BuildPaletteOrder: 112
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4, ~!upgrade.gdf
-        Queue: Building
-		BuildLimit: 1
-        Description: Can be upgraded for additional technology and superweapons.
-    Building:
-        Footprint: xxx xxx
-        Dimensions: 2,3
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    WithIdleOverlay@DISH:
-        Sequence: idle-dish
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithIdleOverlay@STRIP:
-        Sequence: idle-strip
-    Health:
-        HP: 4000
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 2c0
-    IonCannonPower:
-        RequiresCondition: plug.ioncannona || plug.ioncannonb
-        Icon: ioncannon
-        Effect: ionring
-        WeaponDelay: 0
-        ChargeTime: 180
-        Description: Ion Cannon
-        LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
-        EndChargeSpeechNotification: IonCannonReady
-        SelectTargetSpeechNotification: SelectTarget
-        DisplayRadarPing: True
-        CameraActor: camera
-    Exit@1:
-    ExitsDebugOverlay:
-    SupportPowerChargeBar:
-    Power:
-        Amount: -100
-    Power@ioncannon:
-        RequiresCondition: plug.ioncannona || plug.ioncannonb
-        Amount: -100
-    Power@hunterseeker:
-        RequiresCondition: plug.hunterseekera || plug.hunterseekerb
-        Amount: -50
-    Pluggable@pluga:
-        Offset: 0,2
-        Conditions:
-            plug.ioncannon: plug.ioncannona
-            plug.hunterseeker: plug.hunterseekera
-    WithIdleOverlay@ioncannona:
-        RequiresCondition: plug.ioncannona
-        Sequence: idle-ioncannona
-    WithIdleOverlay@hunterseekera:
-        RequiresCondition: plug.hunterseekera
-        Sequence: idle-hunterseekera
-    Pluggable@plugb:
-        Offset: 1,2
-        Conditions:
-            plug.ioncannon: plug.ioncannonb
-            plug.hunterseeker: plug.hunterseekerb
-    WithIdleOverlay@ioncannonb:
-        RequiresCondition: plug.ioncannonb
-        Sequence: idle-ioncannonb
-    WithIdleOverlay@hunterseekerb:
-        RequiresCondition: plug.hunterseekerb
-        Sequence: idle-hunterseekerb
-    ProvidesPrerequisite@buildingname:
-    SelectionDecorations:
-        VisualBounds: 115,104,0,-24
-    -FrozenUnderFog:
-    AlwaysVisible:		
+	

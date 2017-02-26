@@ -96,8 +96,8 @@ KABLASR:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 303
-        Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
+        Prerequisites: anypower, cybbar, ~structures.cabal
+        Description: Anti-INFANTRY base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -143,7 +143,7 @@ KABCAN:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 304
-        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+        Prerequisites: anypower, cybbar, karadr, ~structures.cabal
         Description: Anti-Armor base defense.\nDetects cloaked units.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: x
@@ -192,7 +192,7 @@ KDARK:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 305
-        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
+        Prerequisites: anypower, cybbar, karadr, ~structures.cabal
         Description: Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Building:
         Footprint: x
@@ -242,7 +242,7 @@ KOBEL:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 306
-        Prerequisites: anypower, kabtech, ~structures.cabal, ~!t1, ~!t2
+        Prerequisites: anypower, kabtech, ~structures.cabal
         Description: Advanced base defense.\nDetects cloaked units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx

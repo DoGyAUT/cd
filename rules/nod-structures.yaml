@@ -423,7 +423,7 @@ NAPYRA:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 208
-        Prerequisites: anypower, nahand, naweap, naradr, ~structures.nod, ~!t1, ~ideology
+        Prerequisites: anypower, naradr, ~structures.nod, ~ideology
         Description: Gives access to ideologies.\nPromotes new infantry to veterancy rank 1.
     Valued:
         Cost: 4000
@@ -503,55 +503,12 @@ NATECH:
         Amount: -150
     ProvidesPrerequisite@buildingname:
 
-NASTLH:
-    Inherits: ^Building
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Stealth Generator
-    Buildable:
-        BuildPaletteOrder: 210
-        Prerequisites: anypower, napyra, ~structures.nod, ~!t1, ~!t2, ~technology, ~ideology
-        Queue: Building
-        Description: Generates a cloaking field to hide your forces from the enemy.\nExclusive to the Technology Ideology.
-    Building:
-        Footprint: xxxxx xxxxx
-        Dimensions: 5,2
-    Health:
-        HP: 1000
-    Armor:
-        Type: Medium
-    RevealsShroud:
-        Range: 6c0
-    WithIdleOverlay@pulse:
-        Sequence: pulse
-        PauseOnLowPower: True
-    WithRangeCircle:
-        Range: 12c0
-        Type: cloakgenerator
-    Power:
-        Amount: -200
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    ProximityExternalCondition:
-        Condition: cloakgenerator
-        Range: 12c0
-        EnableSound: stealth01.aud
-        DisableSound: unstealth01.aud
-        AffectsParent: True
-    Selectable:
-        Bounds: 106, 60, 8, -15
-        
 NATMPL:
     Inherits: ^Building
     Buildable:
         Queue: Building
         BuildPaletteOrder: 211
-        Prerequisites: naradr, napyra, ~structures.nod, ~!t1, ~!t2, ~!t3, ~ideology
+        Prerequisites: anypower, napyra, ~structures.nod, ~ideology, ~propaganda
         BuildLimit: 1
         Description: Provides access to NOD's strongest arsenal.
     ProvidesPrerequisite@buildingname:
@@ -575,64 +532,6 @@ NATMPL:
         Amount: -200
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
-
-NAMISL:
-    Inherits: ^Building
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 212
-        Prerequisites: napyra, ~structures.nod, ~!t1, ~!t2, ~!t3, ~industry, ~ideology
-        BuildLimit: 1
-        Description: Launches a devastating missile at a target location.\nRequires power to operate.
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: Nod Missile Silo
-    ProvidesPrerequisite:
-        Prerequisite: tech
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 75,48
-    Health:
-        HP: 4000
-    Armor:
-        Type: Heavy
-    RevealsShroud:
-        Range: 2c0
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    Power:
-        Amount: -150
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    RequiresPower:
-    DisabledOverlay:
-    ProvidesPrerequisite@buildingname:
-    SupportPowerChargeBar:
-    NukePower:
-        Icon: clustermissile
-        ChargeTime: 360
-        Description: Cluster Missile
-        LongDesc: Launches a conventional warhead\nat a target location.
-        MissilePalette: player
-        IsPlayerPalette: True
-        EndChargeSpeechNotification: ClusterMissileReady
-        SelectTargetSpeechNotification: SelectTarget
-        IncomingSpeechNotification: MissileLaunchDetected
-        LaunchSound: icbm1.aud
-        MissileWeapon: ClusterMissile
-        SpawnOffset: 0,427,0
-        DisplayTimerStances: None
-        DisplayBeacon: False
-        DisplayRadarPing: True
-        BeaconPoster:
-        CameraActor: camera
-	-FrozenUnderFog:
-	AlwaysVisible:
 
 NAWAST:
     Inherits: ^Building

@@ -697,20 +697,20 @@ upgrade.buzzard:
 upgrade.buzzard_missiles:
     Inherits: ^Tech
     Tooltip:
-        Name: Buzzard Missiles Upgrade
+        Name: Buzzard HE Rocket Upgrade
     Buildable:
         BuildPaletteOrder: 421
         Prerequisites: ~!t2, !upgrade.buzzard_missiles, ~upgrade.buzzard, !upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1
-        Description: Adds missiles to Buzzard attack helicopter
+        Description: Adds HE missile to Buzzard attack helicopter
     Valued:
         Cost: 750
     RenderSprites:
         Image: buzzard
     ProvidesPrerequisite:
-        Prerequisite: upgrade.buzzard_missile
+        Prerequisite: upgrade.buzzard_missiles
         
 upgrade.buzzard_gattling:
     Inherits: ^Tech
@@ -764,7 +764,7 @@ upgrade.griffin_missiles:
     RenderSprites:
         Image: griffin
     ProvidesPrerequisite:
-        Prerequisite: upgrade.griffin_missile
+        Prerequisite: upgrade.griffin_missiles
         
 upgrade.griffin_autocannon:
     Inherits: ^Tech

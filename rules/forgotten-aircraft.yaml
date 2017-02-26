@@ -42,7 +42,8 @@ BUZZARD: #adv gattling/ "mortar"
         LocalOffset: 800,0,160
         RequiresCondition: upgrade.buzzard_gattling
     Armament@missiles: #placeholder for "artyweapon"
-        Weapon: BuzzardMissiles
+        AmmoPoolName: HEMissile
+        Weapon: BuzzardHErocket
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
@@ -51,6 +52,15 @@ BUZZARD: #adv gattling/ "mortar"
     Turreted:
         TurnSpeed: 5
         Offset: 400,0,0
+    AmmoPool@1:
+        Name: HEMissile
+        Ammo: 1
+        PipCount: 1
+        ReloadCount: 1
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 300
     AttackTurreted:
         FacingTolerance: 20
     AutoTarget:
@@ -104,11 +114,8 @@ GRIFFIN: #missile / autocannon
     RevealsShroud:
         Range: 15c0
         Type: GroundPosition
-    Armament@mg: # make gattlings
-        Weapon: BuzzardGattlingCannonAttack
-        LocalOffset: 700,0,80
-    Armament@mgvis: # make gattlings
-        Weapon: BuzzardGattlingCannonVisual
+    Armament@mg:
+        Weapon: GriffinDPOD
         LocalOffset: 700,0,80
     Armament@missiles:
         Weapon: BuzzardMissiles
@@ -118,7 +125,7 @@ GRIFFIN: #missile / autocannon
         LocalOffset: 0,256,160, 0,-256,160
         RequiresCondition: upgrade.griffin_missiles
     Armament@autocannnon:
-        Weapon: GremlinShotgun
+        Weapon: GriffinAutocannon
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha

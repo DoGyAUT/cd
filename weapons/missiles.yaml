@@ -3,12 +3,12 @@ Bazooka:
     ValidTargets: Ground
     ReloadDelay: 100
     Range: 6c0
-    MinRange: 1c512
+    # MinRange: 1c512
     Report: javelin.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 100
-            Vehicle: 150
+            Vehicle: 250
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
         ExplosionPalette: apolra50alpha
@@ -31,7 +31,7 @@ BazookaGas:
         Damage: 140
             Infantry: 50
             Cyborg: 80
-            Vehicle: 150
+            Vehicle: 200
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
         ExplosionPalette: effect50alpha
@@ -354,7 +354,7 @@ GorranMissile:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 250
+        Damage: 175
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
@@ -1126,7 +1126,7 @@ BuzzardMissiles:
     Inherits: ^MissileAPHE
     ReloadDelay: 200
 	MinRange: 1c0
-    Range: 7c0
+    Range: 5c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     Burst: 4
     ValidTargets: Ground
@@ -1191,3 +1191,12 @@ RedEye2:
     Inherits: RedEye
     Burst: 3
     BurstDelay: 10
+    
+BuzzardHErocket:
+    Inherits: ^RocketHE
+    Range: 7c0
+    ReloadDelay: 1
+    Projectile: Bullet
+        Inaccuracy: 0c0
+    Warhead@1Dam: SpreadDamage
+        Damage: 150

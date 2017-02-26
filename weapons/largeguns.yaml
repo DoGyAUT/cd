@@ -27,6 +27,13 @@ GremlinShotgun:
     Warhead@4Smu: LeaveSmudge
         SmudgeType: SmallCrater
         InvalidImpactTypes: Water, Air, AirHit
+        
+GriffinAutocannon:
+    Inherits:GremlinShotgun
+    -Burst
+    ReloadDelay: 15
+    Projectile:Bullet
+        Inaccuracy:0c512
 
 BuggyFlak:
     Inherits: ^ShellHE
@@ -165,7 +172,7 @@ GorranCannon:
         Damage: 200
         
 105mmHE:
-    Inherits: ^ShellAP
+    Inherits: ^ShellHE
     ReloadDelay: 200
     Range: 7c768
     Report: 105mm.aud, 122mm.aud, 128mm.aud

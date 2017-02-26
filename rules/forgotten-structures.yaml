@@ -354,7 +354,7 @@ FHOVEL:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 407
-        Prerequisites:  anypower, fabar, ~structures.forgotten, ~!t1
+        Prerequisites:  anypower, fproc, ~structures.forgotten
         Description: Gives access to the army expander.\nPromotes new infantry to veterancy rank 1.
     Valued:
         Cost: 500
@@ -404,7 +404,7 @@ FAHPAD:
     Buildable:
         BuildPaletteOrder: 408
         Queue: Building
-        Prerequisites: anypower, faradr, ~structures.forgotten, ~!t1
+        Prerequisites: anypower, faradr, ~structures.forgotten
         Description: Produces, rearms and\nrepairs aircraft.
     Building:
         Footprint: xx xx
@@ -450,7 +450,7 @@ FATRADE:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 409
-        Prerequisites:  anypower, fabar, faradr, fhovel, ~structures.forgotten, ~!t1, ~!t2
+        Prerequisites:  anypower, faradr, fhovel, ~structures.forgotten
         Description: Gives access to the Forgotten advanced tech.
     Valued:
         Cost: 4000

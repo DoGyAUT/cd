@@ -99,7 +99,7 @@ GAMG:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 103
-        Prerequisites: anypower, gproc, ~structures.gdi, ~!upgrade.st
+        Prerequisites: anypower, gapile, ~structures.gdi, ~!upgrade.st
         Description: Basic base defense.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
@@ -164,7 +164,7 @@ GAMG2:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 104
-        Prerequisites: anypower, gproc, ~structures.gdi, ~!t1, ~upgrade.st
+        Prerequisites: anypower, gapile, ~structures.gdi, ~upgrade.st
         Description: Improved basic base defense, with more armor and weapons.\nSteel Talon exclusive defense.\n\n  Strong vs Infantry, Light armor, Medium armor\n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
@@ -257,7 +257,7 @@ GASENTUR:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 105
-        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+        Prerequisites: anypower, gapile, garadr, ~structures.gdi, ~!t1
         Description: Sensor base defense.\nDetects cloaked units.\n\n  Strong vs Infantry, Light Armor\n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
@@ -314,7 +314,7 @@ GAMIS:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 106
-        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+        Prerequisites: anypower, gapile, garadr, ~structures.gdi
         Description: Anti-Air base defense.\nCan attack ground units.\n\n  Strong vs Aircraft, Light armor, Medium armor \n  Weak vs Infantry, Artillery
     Building:
     Selectable:
@@ -371,7 +371,7 @@ GACAN:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 107
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~!t2
+        Prerequisites: anypower, gapile, gatech, ~structures.gdi
         Description: Anti-Armor base defense.\nArmed with a railgun and HE grenades.\n\n  Strong vs Armor \n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
@@ -436,7 +436,7 @@ GAMORTAR:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 109
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!t1, ~upgrade.gdf
+        Prerequisites: anypower, gatech, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
         Description: Artillery base defense.\nExclusive to GDF.\n\n  Strong vs Infantry, Light armor, Artillery \n  Weak vs Aircraft, Armor
     Building:
     Selectable:
@@ -492,7 +492,7 @@ GAFORT:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 108
-        Prerequisites: anypower, gaarmory, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
+        Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
         Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xxxx xxxx xxxx xxxx
@@ -538,7 +538,7 @@ GABOOM:
     Buildable:
         Queue: Building
         BuildPaletteOrder: 112
-        Prerequisites: gaarmory, garadr, gatech, ~structures.gdi, ~!t1, ~!t2, ~upgrade.gdf
+        Prerequisites: anypower, gaarmory, gatech, ~structures.gdi, ~upgrade.gdf
         Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
     Building:
         Footprint: xxxx xxxx xxxx xxxx
@@ -625,7 +625,7 @@ GAPLUG2:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 111
-        Prerequisites: gaplug, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4
+        Prerequisites: anypower, gaplug, ~structures.gdi
         Description: Enables use of the hunter-seeker droid.
     Plug:
         Type: plug.hunterseeker
@@ -642,8 +642,94 @@ GAPLUG3:
         Queue: Defense
         BuildPaletteOrder: 112
         Description: Enables use of the Ion Cannon.
-        Prerequisites: gaplug, ~structures.gdi, ~!t1, ~!t2, ~!t3, ~!t4, ~!upgrade.gdf
+        Prerequisites: anypower, gaplug, ~structures.gdi, ~!upgrade.gdf
     Plug:
         Type: plug.ioncannon
     Power:
         Amount: -200
+        
+GAPLUG:
+    Inherits: ^Building
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: GDI Upgrade Center
+    Selectable:
+        Bounds: 115,104,0,-24
+    Buildable:
+        BuildPaletteOrder: 112
+        Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
+        Queue: Defense
+		BuildLimit: 1
+        Description: Can be upgraded for additional technology and superweapons.
+    Building:
+        Footprint: xxx xxx
+        Dimensions: 2,3
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    WithIdleOverlay@DISH:
+        Sequence: idle-dish
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    WithIdleOverlay@STRIP:
+        Sequence: idle-strip
+    Health:
+        HP: 4000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 2c0
+    IonCannonPower:
+        RequiresCondition: plug.ioncannona || plug.ioncannonb
+        Icon: ioncannon
+        Effect: ionring
+        WeaponDelay: 0
+        ChargeTime: 180
+        Description: Ion Cannon
+        LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+        EndChargeSpeechNotification: IonCannonReady
+        SelectTargetSpeechNotification: SelectTarget
+        DisplayRadarPing: True
+        CameraActor: camera
+    Exit@1:
+    ExitsDebugOverlay:
+    SupportPowerChargeBar:
+    Power:
+        Amount: -100
+    Power@ioncannon:
+        RequiresCondition: plug.ioncannona || plug.ioncannonb
+        Amount: -100
+    Power@hunterseeker:
+        RequiresCondition: plug.hunterseekera || plug.hunterseekerb
+        Amount: -50
+    Pluggable@pluga:
+        Offset: 0,2
+        Conditions:
+            plug.ioncannon: plug.ioncannona
+            plug.hunterseeker: plug.hunterseekera
+    WithIdleOverlay@ioncannona:
+        RequiresCondition: plug.ioncannona
+        Sequence: idle-ioncannona
+    WithIdleOverlay@hunterseekera:
+        RequiresCondition: plug.hunterseekera
+        Sequence: idle-hunterseekera
+    Pluggable@plugb:
+        Offset: 1,2
+        Conditions:
+            plug.ioncannon: plug.ioncannonb
+            plug.hunterseeker: plug.hunterseekerb
+    WithIdleOverlay@ioncannonb:
+        RequiresCondition: plug.ioncannonb
+        Sequence: idle-ioncannonb
+    WithIdleOverlay@hunterseekerb:
+        RequiresCondition: plug.hunterseekerb
+        Sequence: idle-hunterseekerb
+    ProvidesPrerequisite@buildingname:
+    SelectionDecorations:
+        VisualBounds: 115,104,0,-24
+    -FrozenUnderFog:
+    AlwaysVisible:	

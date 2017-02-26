@@ -97,7 +97,7 @@ NAFLAMER:
         Name: Flamer Turret
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, nproc, ~structures.nod, ~ideology, ~!industry
+        Prerequisites: anypower, nahand, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 203
         Description: Anti-Infantry base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased fire burst amount (Industry)\n\n  Strong vs Infantry\n  Weak vs Aircraft, Armor, Artillery
     Building:
@@ -162,7 +162,7 @@ NAGAT:
         Name: Gattling Cannon
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, nproc, ~structures.nod, ~industry
+        Prerequisites: anypower, nahand, ~structures.nod, ~industry
         BuildPaletteOrder: 203
         Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Building:
@@ -217,7 +217,7 @@ NALASR:
         Name: Laser Turret
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology, ~!industry
+        Prerequisites: anypower, nahand, naradr, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 204
         Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Improved laser range (Technology)\n Improved laser damage (Technology)\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
     Building:
@@ -281,7 +281,7 @@ NASAM:
         Name: SAM Site
     Buildable:
         Queue: Defense
-        Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology, ~!industry
+        Prerequisites: anypower, naradr, nahand, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 205
         Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
     Building:
@@ -374,7 +374,7 @@ NAOBEL:
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 206
-        Prerequisites: anypower, napyra, ~structures.nod, ~!t1, ~!t2, ~ideology
+        Prerequisites: anypower, napyra, ~structures.nod, ~ideology
         Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
     Building:
         Footprint: xx xx
@@ -438,8 +438,9 @@ NAPULS:
         Name: E.M. Pulse Cannon
     Buildable:
         Queue: Defense
+        BuildLimit: 1
         BuildPaletteOrder: 207
-        Prerequisites: napyra, ~technology, ~!industry, ~!propaganda
+        Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
         Description: Disables mechanical units in an area.\nRequires power to operate.
     Building:
         Footprint: xx xx
@@ -488,3 +489,105 @@ NAPULS:
         SelectTargetSpeechNotification: SelectTarget
         #Prerequisites: emp.nod
         OrderName: Nodemp
+        
+NAMISL:
+    Inherits: ^Building
+    Buildable:
+        Queue: Defense
+        BuildPaletteOrder: 212
+        Prerequisites: anypower, napyra, ~structures.nod, ~industry, ~ideology
+        BuildLimit: 1
+        Description: Launches a devastating missile at a target location.\nRequires power to operate.
+    Valued:
+        Cost: 4000
+    Tooltip:
+        Name: Nod Missile Silo
+    ProvidesPrerequisite:
+        Prerequisite: tech
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Selectable:
+        Bounds: 75,48
+    Health:
+        HP: 4000
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        Range: 2c0
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+    Power:
+        Amount: -150
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    RequiresPower:
+    DisabledOverlay:
+    ProvidesPrerequisite@buildingname:
+    SupportPowerChargeBar:
+    NukePower:
+        Icon: clustermissile
+        ChargeTime: 360
+        Description: Cluster Missile
+        LongDesc: Launches a conventional warhead\nat a target location.
+        MissilePalette: player
+        IsPlayerPalette: True
+        EndChargeSpeechNotification: ClusterMissileReady
+        SelectTargetSpeechNotification: SelectTarget
+        IncomingSpeechNotification: MissileLaunchDetected
+        LaunchSound: icbm1.aud
+        MissileWeapon: ClusterMissile
+        SpawnOffset: 0,427,0
+        DisplayTimerStances: None
+        DisplayBeacon: False
+        DisplayRadarPing: True
+        BeaconPoster:
+        CameraActor: camera
+	-FrozenUnderFog:
+	AlwaysVisible:
+    
+NASTLH:
+    Inherits: ^Building
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Stealth Generator
+    Buildable:
+        BuildPaletteOrder: 210
+        Prerequisites: anypower, napyra, ~structures.nod, ~technology, ~ideology
+        Queue: Defense
+        Description: Generates a cloaking field to hide your forces from the enemy.\nExclusive to the Technology Ideology.
+    Building:
+        Footprint: xxxxx xxxxx
+        Dimensions: 5,2
+    Health:
+        HP: 1000
+    Armor:
+        Type: Medium
+    RevealsShroud:
+        Range: 6c0
+    WithIdleOverlay@pulse:
+        Sequence: pulse
+        PauseOnLowPower: True
+    WithRangeCircle:
+        Range: 12c0
+        Type: cloakgenerator
+    Power:
+        Amount: -200
+    RequiresPower:
+    CanPowerDown:
+        IndicatorPalette: mouse
+        PowerupSpeech: EnablePower
+        PowerdownSpeech: DisablePower
+    DisabledOverlay:
+    ProximityExternalCondition:
+        Condition: cloakgenerator
+        Range: 12c0
+        EnableSound: stealth01.aud
+        DisableSound: unstealth01.aud
+        AffectsParent: True
+    Selectable:
+        Bounds: 106, 60, 8, -15
+        

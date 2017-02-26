@@ -44,6 +44,10 @@ VulcanDPOD:
         Explosions: water_piff
         ExplosionPalette: ra
         ValidImpactTypes: Water
+        
+GriffinDPOD:
+    Inherits: VulcanDPOD
+    Range: 4c0
 
 VulcanTower:
     Inherits: ^APBullet
@@ -244,6 +248,7 @@ GattlingCannonVisual:
 BuzzardGattlingCannonAttack:
     Inherits: GattlingCannonAttack
     -Burst:
+    Range: 5c0
     ReloadDelay: 2
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -254,6 +259,7 @@ BuzzardGattlingCannonAttack:
 BuzzardGattlingCannonVisual:
     Inherits: GattlingCannonVisual
     -Burst:
+    Range: 5c0
     ReloadDelay: 2
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -633,9 +639,9 @@ WatchMG:
     Inherits: ^Bullet
     ReloadDelay: 70
     Range: 7c0
-    Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
-    Burst: 30
-    BurstDelay: 2
+    Report:
+    Burst: 7
+    BurstDelay: 1
     Projectile: Bullet
         Speed: 0c512
         Inaccuracy: 0c256
@@ -645,7 +651,22 @@ WatchMG:
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
-            
+        
+WatchMGsound:
+    Inherits: ^Bullet
+    ReloadDelay: 70
+    Range: 7c0
+    Report: cancerousmg.wav
+    Projectile: Bullet
+        Image: 
+        Blockable: true
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 0
+    -Warhead@2Eff: CreateEffect
+    -Warhead@3EffWater: CreateEffect
+    -Warhead@5Eff: CreateEffect
+    
 ReaperCannon:
     Inherits: ^APBullet
     ReloadDelay: 85

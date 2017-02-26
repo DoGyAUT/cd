@@ -403,7 +403,7 @@ RAVEN:
 SCRINB:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 2250
+        Cost: 2750 #from 2250
     Tooltip:
         Name: Banshee MK.II
     Buildable:
@@ -434,25 +434,17 @@ SCRINB:
     Armament@primaryAA:
         Weapon: BansheeCannonAA
         LocalOffset: 550,0,32
+    Armament@special:
+        Weapon:BansheeSpecial
+        LocalOffset: 550,0,32
+        RequiresCondition: !rank-heroic
+    Armament@specialE:
+        Weapon:BansheeSpecialE
+        LocalOffset: 550,0,32
+        RequiresCondition: rank-heroic
 	Turreted: 
         TurnSpeed: 360
 	AttackTurreted:
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name:secondary
-        Ammo: 6
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
     AutoTarget:
     RenderSprites:
     RenderVoxels:
