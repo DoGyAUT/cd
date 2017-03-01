@@ -1,5 +1,6 @@
 GremlinShotgun:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+    Inherits@wh: ^APHEWH
     ReloadDelay: 100
     Burst: 10
     Range: 5c0
@@ -36,7 +37,8 @@ GriffinAutocannon:
         Inaccuracy:0c512
 
 BuggyFlak:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 100
     Burst: 10
     BurstDelay: 4
@@ -70,7 +72,8 @@ BuggyFlak:
         ValidImpactTypes: Air, AirHit
         
 FlakCannon:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 100
     Burst: 20
     BurstDelay: 4
@@ -101,10 +104,9 @@ FlakCannon:
         ValidImpactTypes: Air, AirHit
 
 GorranCannon:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 100
-    Burst: 10
-    BurstDelay: 6
     Range: 5c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
     Projectile: BulletAS
@@ -115,9 +117,7 @@ GorranCannon:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 25
-        Versus:
-            Building: 60
+        Damage: 250
     Warhead@2Eff: CreateEffect
         Explosions: tiny_clsn, tiny_bang
         ExplosionPalette: apolra2
@@ -128,18 +128,20 @@ GorranCannon:
 
 60mm:
     Inherits: ^ShellAP
+    Inherits@wh: ^HEWH
     ReloadDelay: 70
     Range: 5c768
     Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
     Projectile: BulletAS
         Speed: 0c512
-        Inaccuracy: 1c0
+        Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 80
+        Damage: 160
         
 75mm1:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 40
     Range: 5c768
     Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
@@ -151,7 +153,8 @@ GorranCannon:
         Damage: 40
 
 75mm2:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 60
     Range: 6c768
     Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
@@ -163,7 +166,8 @@ GorranCannon:
         Damage: 60
 
 90mm:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 120
     Range: 6c768
     Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
@@ -172,7 +176,8 @@ GorranCannon:
         Damage: 200
         
 105mmHE:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 200
     Range: 7c768
     Report: 105mm.aud, 122mm.aud, 128mm.aud
@@ -188,7 +193,8 @@ GorranCannon:
         SmudgeType: LargeCrater
 
 125mmAP:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 60
     Range: 6c768
     Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
@@ -204,7 +210,8 @@ GorranCannon:
         InvalidImpactTypes: Water
 
 122mmAP:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 140
     Range: 6c768
     Report: 90mm1.aud, 90mm2.aud, 90mm3.aud, 90mm4.aud
@@ -220,7 +227,8 @@ GorranCannon:
         InvalidImpactTypes: Water
 
 130mmAP:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 200
     Range: 6c768
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -236,7 +244,8 @@ GorranCannon:
         InvalidImpactTypes: Water
 
 135mmAP:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 130
     Range: 7c768
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -252,7 +261,8 @@ GorranCannon:
         InvalidImpactTypes: Water
 
 145mmAP:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 220
     Range: 6c768
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -268,7 +278,8 @@ GorranCannon:
         InvalidImpactTypes: Water
 
 128mmAPHE:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 80
     Range: 8c0
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -291,8 +302,11 @@ GorranCannon:
         SmudgeType: LargeCrater
 
 120mm1:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 180
+    Burst: 1
+    BurstDelay: 10
     Range: 6c768
     Report: shot01.aud, shot02.aud, shot03.aud
     Projectile: BulletAS
@@ -306,13 +320,21 @@ GorranCannon:
         ExplosionPalette: apolra2
         ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
         InvalidImpactTypes: Water
+        
+auroch120mmx: 
+    Inherits: 120mm1
+    -Burst:
+    ReloadDelay: 50
+    Warhead@1Dam: SpreadDamage
+        Damage: 125
 
 120mm2:
     Inherits: 120mm1
     ReloadDelay: 190
  
 AurochCannon:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 220
     Range: 10c0
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -330,7 +352,8 @@ AurochCannon:
         InvalidImpactTypes: Water
  
 PoseidonCannon:
-    Inherits: ^ShellAP
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
     ReloadDelay: 220
     Range: 10c0
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -348,7 +371,8 @@ PoseidonCannon:
         InvalidImpactTypes: Water
 
 TritonCannon:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 210
     Range: 18c0
     Report: 120mmf.aud
@@ -364,7 +388,6 @@ TritonCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
-            Building: 200
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra2
@@ -372,7 +395,8 @@ TritonCannon:
         InvalidImpactTypes: Water
 
 160mm:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 70
     Range: 7c768
     Report: shot01.aud, shot02.aud, shot03.aud
@@ -392,7 +416,8 @@ TritonCannon:
         InvalidImpactTypes: Water
 
 180mmHE:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 290
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -426,7 +451,8 @@ TritonCannon:
     ReloadDelay: 310
       
 155mm:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 200
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -485,7 +511,8 @@ TritonCannon:
         ImpactSounds: plsecan2.aud
       
 155mmInferno:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -522,7 +549,8 @@ TritonCannon:
         SmudgeType: LargeCrater
       
 155mmNapalm:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -554,7 +582,8 @@ TritonCannon:
         SmudgeType: LargeCrater
 
 BuggyMortar:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 80
     Range: 10c0
     Report: 120mmf.aud
@@ -570,10 +599,11 @@ BuggyMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 50
+        Damage: 80
 
 WarthogMortar:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 120
     Range: 12c0
     Report: 120mmf.aud
@@ -589,10 +619,11 @@ WarthogMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 75
+        Damage: 180
 
 AurochMortar:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 160
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -608,10 +639,11 @@ AurochMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 100
+        Damage: 230
         
 240mm:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 150
     Burst: 3
     BurstDelay: 6
@@ -632,7 +664,8 @@ AurochMortar:
         Damage: 200
         
 RagnarCannon:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 400
     Range: 20c0
     Report: artyfire2.aud
@@ -658,7 +691,8 @@ RagnarCannon:
         SmudgeType: LargeCrater
                
 RagnarCannonCluster:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 400
     Range: 14c0
     Report: artyfire2.aud
@@ -684,7 +718,8 @@ RagnarCannonCluster:
         SmudgeType: MediumCrater         
 
 Mortar_155mm:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 120
     Range: 16c0
     Report: 120mmf.aud
@@ -708,7 +743,8 @@ Mortar_155mm:
         InvalidImpactTypes: Water
         
 280mmHE:
-    Inherits: ^ShellHE
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 400
     Burst: 3
     BurstDelay: 10

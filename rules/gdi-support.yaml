@@ -13,9 +13,7 @@ GAWALL:
     Tooltip:
         Name: Concrete Wall
     Health:
-        HP: 300
-    Armor:
-        Type: Heavy
+        HP: 400
     BlocksProjectiles:
         Height: 640
     Crushable:
@@ -65,9 +63,7 @@ GASILO:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -83,9 +79,9 @@ GASILO:
         Capacity: 1000
     Power:
         Amount: -10  
-    Explodes:
-        Weapon: TiberiumExplosionSilo
-        EmptyWeapon: TiberiumExplosionSilo
+    # Explodes:
+        # Weapon: TiberiumExplosionSilo
+        # EmptyWeapon: TiberiumExplosionSilo
         
 GAMG:
     Inherits: ^Defense
@@ -107,9 +103,7 @@ GAMG:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 10c0
     BodyOrientation:
@@ -172,9 +166,7 @@ GAMG2:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1500
-    Armor:
-        Type: Medium
+        HP: 1800
     RevealsShroud:
         Range: 9c0
     BodyOrientation:
@@ -265,9 +257,7 @@ GASENTUR:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1200
-    Armor:
-        Type: Medium
+        HP: 1440
     RevealsShroud:
         Range: 10c0
     BodyOrientation:
@@ -322,9 +312,7 @@ GAMIS:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 11c0
     BodyOrientation:
@@ -379,9 +367,7 @@ GACAN:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 2000
-    Armor:
-        Type: Medium
+        HP: 2400
     RevealsShroud:
         Range: 11c0
     BodyOrientation:
@@ -444,9 +430,7 @@ GAMORTAR:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1600
-    Armor:
-        Type: Medium
+        HP: 2000
     RevealsShroud:
         Range: 8c0
     BodyOrientation:
@@ -501,9 +485,7 @@ GAFORT:
         Bounds: 120, 90, 0, -12
     DisabledOverlay:
     Health:
-        HP: 2000
-    Armor:
-        Type: Heavy
+        HP: 2600
     RevealsShroud:
         Range: 16c0
     RenderDetectionCircle:
@@ -548,9 +530,7 @@ GABOOM:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 4000
-    Armor:
-        Type: Heavy
+        HP: 5200
     RevealsShroud:
         Range: 10c0
     BodyOrientation:
@@ -678,9 +658,7 @@ GAPLUG:
     WithIdleOverlay@STRIP:
         Sequence: idle-strip
     Health:
-        HP: 4000
-    Armor:
-        Type: Heavy
+        HP: 5200
     RevealsShroud:
         Range: 2c0
     IonCannonPower:

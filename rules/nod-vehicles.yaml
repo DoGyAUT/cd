@@ -17,9 +17,7 @@ NMCV:
         VoiceSet: Nmcv        
         Volume: 2
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1300
     Mobile:
         Speed: 40
     RevealsShroud:
@@ -59,7 +57,7 @@ NHARV:
         Volume: 2        
     Harvester:
         DeliveryBuildings: gproc, nproc, kproc, fproc
-        Capacity: 14
+        Capacity: 10
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -68,24 +66,40 @@ NHARV:
         HarvestVoice: Action
         DeliverVoice: Move
         PipCount: 5
+    DamageMultiplier@prop:        
+        RequiresCondition: propaganda   
+        Modifier: 75
     -DamagedByTerrain@Veins:
     Mobile:
-        Speed: 60
+        Speed: 50
     Health:
-        HP: 1000
+        HP: 1200
+    Armament@primary:
+        Weapon: NodHarvGun
+        LocalOffset: 200,0,600
+        RequiresCondition: industry
+    AttackTurreted:
+    AutoTarget:
+    Turreted:
+        TurnSpeed: 360
+        Offset: 0,0,0
 #    SelfHealing:
 #        Step: 0
 #        PercentageStep: 1
 #        Delay: 10
 #        HealIfBelow: 100
 #        DamageCooldown: 200
-    Armor:
-        Type: Medium
     GrantConditionOnPrerequisite@cloak:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
+        Condition: technology
+        Prerequisites: technology
+    GrantConditionOnPrerequisite@tanky:
+        Condition: propaganda
+        Prerequisites: propaganda
+    GrantConditionOnPrerequisite@gun:
+        Condition: industry
+        Prerequisites: industry
     Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+        RequiresCondition: crate-cloak || cloakgenerator || technology
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -135,8 +149,6 @@ SAPC:
         Except: Attack, AttackMove, Guard, Move
     Health:
         HP: 600
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 6c0
     Cargo:
@@ -183,8 +195,6 @@ BGGY:
         Crushes: crate
     Health:
         HP: 450
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 6c0
     Armament@primary:
@@ -245,9 +255,7 @@ GORRAN:
         Speed: 80
         TurnSpeed: 4
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 6c0
     Turreted:
@@ -310,8 +318,6 @@ BIKE:
         Crushes: crate
     Health:
         HP: 300
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 7c0
     DetectCloaked:
@@ -349,9 +355,7 @@ CHEETAH:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 700
-    Armor:
-        Type: Medium
+        HP: 820
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -412,8 +416,6 @@ REPAIR:
         Delay: 10
         HealIfBelow: 100
         DamageCooldown: 200
-    Armor:
-        Type: Light
     Mobile:
         Speed: 70
         TurnSpeed: 5
@@ -464,9 +466,7 @@ RECKONER:
         TurnSpeed: 5
         Speed: 60
     Health:
-        HP: 800
-    Armor:
-        Type: Heavy
+        HP: 1080
     RevealsShroud:
         Range: 10c0
     AttackGarrisoned:
@@ -505,10 +505,7 @@ TERMITE:
     RevealsShroud:
         Range: 9c0
     Health:
-        HP: 1600
-    Armor:
-        Type: Medium
-        RequiresCondition: !deployed
+        HP: 2000
     Turreted:
         Turret: primary
         TurnSpeed: 2
@@ -574,9 +571,6 @@ TERMITE:
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
         CanDeployOnRamps: True
-    Armor@deployed:
-        Type: Heavy
-        RequiresCondition: deployed
     RenderRangeCircle:
 
 HAILSTORM:
@@ -602,8 +596,6 @@ HAILSTORM:
         RequiresCondition: !deployed
     Health:
         HP: 600
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 8c0
     Armament@primary:
@@ -687,8 +679,6 @@ NHWTZ:
         Volume: 1
     Health:
         HP: 500
-    Armor:
-        Type: Light
     Mobile:
         Speed: 50
         TurnSpeed: 2
@@ -774,7 +764,7 @@ NHWTZ:
 SUBTANK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1000
+        Cost: 1400
     Tooltip:
         Name: Devil's Tongue
     Selectable:
@@ -804,9 +794,7 @@ SUBTANK:
         RequiresCondition: submerged
         Except: Attack, AttackMove, Guard, Move
     Health:
-        HP: 800
-    Armor:
-        Type: Medium
+        HP: 960
     RevealsShroud:
         Range: 7c0
     Armament@primary:
@@ -858,9 +846,7 @@ STNK:
         TurnSpeed: 10
         Speed: 80
     Health:
-        HP: 700
-    Armor:
-        Type: Medium
+        HP: 820
     RevealsShroud:
         Range: 9c0
     Cloak@self:
@@ -957,15 +943,13 @@ AVATAR:
         TurnSpeed: 5
         Speed: 55
     Health:
-        HP: 1400
+        HP: 1820
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
+        HealIfBelow: 1
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 9c0
     BodyOrientation:
@@ -1016,15 +1000,13 @@ MONTAUK:
         TurnSpeed: 2
         Speed: 71
     Health:
-        HP: 5000
+        HP: 6500
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 1
+        HealIfBelow: 100
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 15c0
     Armament@nose:
@@ -1104,15 +1086,13 @@ WEED:
         Speed: 71
         TurnSpeed: 5
     Health:
-        HP: 600
+        HP: 780
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
         HealIfBelow: 100
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 4c0
     -ProducibleWithLevel:

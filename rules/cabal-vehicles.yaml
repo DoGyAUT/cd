@@ -16,9 +16,7 @@ KMCV:
         VoiceSet: Cabalbeep
         Volume: 2
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1300
     Mobile:
         Speed: 40
     RevealsShroud:
@@ -69,9 +67,9 @@ KHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 3
+        PipCount: 5
     Mobile:
-        Speed: 80
+        Speed: 50
         TerrainSpeeds:
             Clear: 100
             Road: 100
@@ -88,15 +86,13 @@ KHARV:
             Veins: 100
     -DamagedByTerrain@Veins:
     Health:
-        HP: 700
+        HP: 1200
 #    SelfHealing:
 #        Step: 0
 #        PercentageStep: 1
 #        Delay: 10
 #        HealIfBelow: 100
 #        DamageCooldown: 200
-    Armor:
-        Type: Medium
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -131,9 +127,7 @@ DREADFIRE:
     RevealsShroud:
         Range: 5c0
     Health:
-        HP: 1200
-    Armor:
-        Type: Medium
+        HP: 1440
     AttackFrontal:
     AutoTarget:
     Targetable:
@@ -178,8 +172,6 @@ REAPER:
         Crushes: crate
     Health:
         HP: 1000
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 9c0
     AttackFrontal:
@@ -241,15 +233,13 @@ GOLEM:
     RevealsShroud:
         Range: 6c0
     Health:
-        HP: 400
+        HP: 520
     SelfHealing:
         Step: 0
         PercentageStep: 1
         Delay: 10
         HealIfBelow: 100
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     AttackFrontal:
 #    AutoTarget:
 #        ScanRadius: 5
@@ -296,9 +286,7 @@ TARANTULA:
         TurnSpeed: 6
         Speed: 55
     Health:
-        HP: 800
-    Armor:
-        Type: Medium
+        HP: 960
     RevealsShroud:
         Range: 13c0
     BodyOrientation:
@@ -366,8 +354,6 @@ SILVER:
     -DamagedByTerrain@Veins:
     Health:
         HP: 500
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 7c0
     Armament@primary:
@@ -407,9 +393,7 @@ KRONOS:
         TerrainSpeeds:
             Water: 80
     Health:
-        HP: 1600
-    Armor:
-        Type: Heavy
+        HP: 2080
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -423,10 +407,10 @@ KRONOS:
         Recoil: 200
         RecoilRecovery: 10
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
+        HealIfBelow: 100
         DamageCooldown: 200
     AttackTurreted:
     AutoTarget:
@@ -478,9 +462,7 @@ FURY:
         TerrainSpeeds:
             Water: 80
     Health:
-        HP: 8000
-    Armor:
-        Type: Heavy
+        HP: 10400
     RevealsShroud:
         Range: 10c0
     Turreted@main:
@@ -573,15 +555,13 @@ GARGANTUA:
         TurnSpeed: 5
         Speed: 50
     Health:
-        HP: 10000
+        HP: 13000
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
+        Step: 1
+        PercentageStep: 0
+        Delay: 1
         HealIfBelow: 50
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 15c0
     AttackFrontal:

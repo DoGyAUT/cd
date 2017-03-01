@@ -15,9 +15,7 @@ FMCV:
     Voiced:
         VoiceSet: Fmcv
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1300
     Mobile:
         Speed: 40
     RevealsShroud:
@@ -71,15 +69,21 @@ FHARV:
         Speed: 70
     -DamagedByTerrain@Veins:
     Health:
-        HP: 800
+        HP: 1200
 #    SelfHealing:
 #        Step: 0
 #        PercentageStep: 1
 #        Delay: 10
 #        HealIfBelow: 100
 #        DamageCooldown: 200
-    Armor:
-        Type: Medium
+    Armament@primary:
+        Weapon: 60mm
+        LocalOffset: 200,0,600
+    AttackTurreted:
+    AutoTarget:
+    Turreted:
+        TurnSpeed: 360
+        Offset: 0,0,0
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -109,9 +113,7 @@ ATRUCK:
     Voiced:
         VoiceSet: Fmcv
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     Cargo:
         Types: Infantry
         MaxWeight: 10
@@ -125,9 +127,9 @@ ATRUCK:
     RenderVoxels:
     WithVoxelBody:
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
         HealIfBelow: 100
         DamageCooldown: 200
     ProximityExternalCondition:
@@ -160,8 +162,6 @@ FBUGGY_MG:
         Crushes: crate
     Health:
         HP: 400
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 6c0
     Armament@primary:
@@ -210,8 +210,6 @@ FBUGGY_MIS:
         Crushes: crate
     Health:
         HP: 400
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 8c0
     Armament@primary:
@@ -260,8 +258,6 @@ FBUGGY_MORTAR:
         Crushes: crate
     Health:
         HP: 400
-    Armor:
-        Type: Light
     Armament@primary:
         Weapon: BuggyMortar
         LocalOffset: 220,0,800
@@ -306,8 +302,6 @@ FTRUCK_FLAMER:
         Speed: 70
     Health:
         HP: 550
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 5c0
     Armament@primary:
@@ -356,8 +350,6 @@ FTRUCK_MORTAR:
         Speed: 70
     Health:
         HP: 550
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 11c0
     Armament@primary:
@@ -406,8 +398,6 @@ FTRUCK_FLAK:
         Speed: 70
     Health:
         HP: 550
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 8c0
     Armament@primary:
@@ -459,9 +449,7 @@ GREMLIN_HCAN:
         Speed: 80
         TurnSpeed: 5
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 6c0
     Turreted:
@@ -508,9 +496,7 @@ GREMLIN_MORTAR:
         Speed: 80
         TurnSpeed: 4
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -557,9 +543,7 @@ GREMLIN_90MM:
         Speed: 80
         TurnSpeed: 5
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -616,9 +600,7 @@ TAURUS_MG:
     RevealsShroud:
         Range: 7c0
     Health:
-        HP: 650
-    Armor:
-        Type: Medium
+        HP: 780
     Cargo:
         Types: Infantry
         MaxWeight: 6
@@ -686,9 +668,7 @@ TAURUS_HCAN:
     RevealsShroud:
         Range: 6c0
     Health:
-        HP: 650
-    Armor:
-        Type: Medium
+        HP: 780
     Cargo:
         Types: Infantry
         MaxWeight: 6
@@ -755,9 +735,7 @@ TAURUS_MIS:
     RevealsShroud:
         Range: 9c0
     Health:
-        HP: 650
-    Armor:
-        Type: Medium
+        HP: 780
     Cargo:
         Types: Infantry
         MaxWeight: 6
@@ -811,7 +789,7 @@ LIZARD_MG:
     Buildable:
         Queue: Vehicle.Forg
         BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.lizard_mg
+        Prerequisites: ~faweap, ~upgrade.lizard_mg
         Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
         VoiceSet: Grunt
@@ -820,9 +798,7 @@ LIZARD_MG:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 900
-    Armor:
-        Type: Medium
+        HP: 1080
     RevealsShroud:
         Range: 7c0
     Turreted:
@@ -861,7 +837,7 @@ LIZARD_90MM:
     Buildable:
         Queue: Vehicle.Forg
         BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.lizard_90mm
+        Prerequisites: ~faweap, ~upgrade.lizard_90mm
         Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
         VoiceSet: Grunt
@@ -870,9 +846,7 @@ LIZARD_90MM:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 900
-    Armor:
-        Type: Medium
+        HP: 1080
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -918,7 +892,7 @@ LIZARD_122MM:
     Buildable:
         Queue: Vehicle.Forg
         BuildPaletteOrder: 407
-        Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.lizard_122mm
+        Prerequisites: ~faweap, ~upgrade.lizard_122mm
         Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
         VoiceSet: Grunt
@@ -927,9 +901,7 @@ LIZARD_122MM:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1080
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -973,12 +945,13 @@ DIGGER_MIS:
         VoiceSet: Grunt
         Volume: 2
     Health:
-        HP: 900
-    Armor:
-        Type: Medium
-        RequiresCondition: !deployed
+        HP: 1080
     RevealsShroud:
         Range: 9c0
+    Mobile:
+        Speed: 55
+        TurnSpeed: 4
+        RequiresCondition: !deployed
     Turreted:
         TurnSpeed: 3
     Armament@primary:
@@ -1008,9 +981,6 @@ DIGGER_MIS:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    Armor@deployed:
-        Type: Heavy
-        RequiresCondition: deployed
     WithVoxelTurret:
         Recoils: False
         Sequence: turret-mis
@@ -1038,10 +1008,7 @@ DIGGER_MORTAR:
         TurnSpeed: 4
         RequiresCondition: !deployed
     Health:
-        HP: 900
-    Armor:
-        Type: Medium
-        RequiresCondition: !deployed
+        HP: 1080
     RevealsShroud:
         Range: 15c0
     Turreted:
@@ -1073,9 +1040,6 @@ DIGGER_MORTAR:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    Armor@deployed:
-        Type: Heavy
-        RequiresCondition: deployed
     WithVoxelTurret:
         Recoils: False
         Sequence: turret-mortar
@@ -1105,10 +1069,7 @@ DIGGER_122MM:
         TurnSpeed: 4
         RequiresCondition: !deployed
     Health:
-        HP: 900
-    Armor:
-        Type: Medium
-        RequiresCondition: !deployed
+        HP: 1080
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -1140,9 +1101,6 @@ DIGGER_122MM:
         AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
         DeploySound: drilldwn.aud
         UndeploySound: drillup.aud
-    Armor@deployed:
-        Type: Heavy
-        RequiresCondition: deployed
     WithVoxelTurret:
         Recoils: False
         Sequence: turret-122mm
@@ -1172,9 +1130,7 @@ BISON_130MM:
         Speed: 50
         TurnSpeed: 4
     Health:
-        HP: 1100
-    Armor:
-        Type: Heavy
+        HP: 1430
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -1237,9 +1193,7 @@ BISON_145MM:
         Speed: 50
         TurnSpeed: 3
     Health:
-        HP: 1400
-    Armor:
-        Type: Heavy
+        HP: 1430
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -1303,9 +1257,7 @@ BISON_180MM:
         Speed: 50
         TurnSpeed: 3
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1430
     RevealsShroud:
         Range: 11c0
     Turreted:
@@ -1354,8 +1306,6 @@ AUROCH_130MM:
         TurnSpeed: 3
     Health:
         HP: 2000
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -1397,13 +1347,13 @@ AUROCH_130MM:
         Sequence: barrel-130mm
     WithMuzzleOverlay:
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
+        HealIfBelow: 100
         DamageCooldown: 200
 
-AUROCH_120MMT:
+AUROCH_120MMT: #NO CHANGES WITHOUT INFORMING ME ASTOR
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
@@ -1425,8 +1375,6 @@ AUROCH_120MMT:
         TurnSpeed: 3
     Health:
         HP: 2000
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -1434,7 +1382,7 @@ AUROCH_120MMT:
         Offset: 128,0,0
     Armament@primary:
         Name: primary
-        Weapon: 120mm1
+        Weapon: auroch120mmx
         LocalOffset: 1126,282,770
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1442,12 +1390,13 @@ AUROCH_120MMT:
         RecoilRecovery: 10
     Armament@secondary:
         Name: secondary
-        Weapon: 120mm1
+        Weapon: auroch120mmx
         LocalOffset: 1126,-282,770
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 200
-        RecoilRecovery: 10
+        RecoilRecovery: 10 
+        FireDelay: 25 # must be always 1/2 of auroch120mmx reloaddelay
     AttackTurreted:
     AutoTarget:
     RenderSprites:
@@ -1467,12 +1416,29 @@ AUROCH_120MMT:
         Armament: secondary
     WithMuzzleOverlay:
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
-
+        Step: 1
+        PercentageStep: 0
+        Delay: 1
+        HealIfBelow: 100
+        DamageCooldown: 200 #same attackspeed forever recompensated by damage
+    -ReloadDelayMultiplier@veteran1:
+    -ReloadDelayMultiplier@veteran2:
+    -DamageMultiplier@veteran3:
+    -ReloadDelayMultiplier@elite:
+    -ReloadDelayMultiplier@heroic:
+    FirepowerMultiplier@veteran1:
+        Modifier: 120
+    FirepowerMultiplier@veteran2:
+        Modifier: 140
+    FirepowerMultiplier@veteran3:
+        Modifier: 160
+    FirepowerMultiplier@elite:
+        Modifier: 180
+    FirepowerMultiplier@heroic:
+        Modifier: 200
+    
+    
+    
 AUROCH_180MM:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
@@ -1495,8 +1461,6 @@ AUROCH_180MM:
         TurnSpeed: 3
     Health:
         HP: 2000
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 11c0
     Turreted:
@@ -1523,10 +1487,10 @@ AUROCH_180MM:
         Sequence: barrel-180mm
     WithMuzzleOverlay:
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
+        HealIfBelow: 100
         DamageCooldown: 200
 
 RAGNAROK:
@@ -1547,9 +1511,7 @@ RAGNAROK:
         VoiceSet: Grunt
         Volume: 2
     Health:
-        HP: 700
-    Armor:
-        Type: Heavy
+        HP: 900
     Mobile:
         Speed: 50
         TurnSpeed: 1
@@ -1625,15 +1587,13 @@ AVALANCHE:
         Speed: 50
         TurnSpeed: 2
     Health:
-        HP: 6000
+        HP: 8000
     SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
+        Step: 1
+        PercentageStep: 0
+        Delay: 1
+        HealIfBelow: 100
         DamageCooldown: 200
-    Armor:
-        Type: Heavy
     RevealsShroud:
         Range: 15c0
     Turreted:

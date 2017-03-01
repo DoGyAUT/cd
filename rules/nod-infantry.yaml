@@ -20,8 +20,6 @@ NASOL:
         Volume: 2
     Health:
         HP: 100
-    Armor:
-        Type: Light
     Mobile:
         Speed: 55
     RevealsShroud:
@@ -47,7 +45,7 @@ NASOL2:
     RenderSprites:
         Image: NASOL
     Valued:
-        Cost: 40
+        Cost: 35
 
 E3:
     Inherits@1: ^Soldier
@@ -60,7 +58,7 @@ E3:
         Prerequisites: ~nahand, ~!upgrade.mass
         Description: Nod Soldiers armed with a Rocket Launcher.\n\n Role: Anti Tank/Air\n HP: 125\n Armor: Light\n Speed: 60\n Viewrange: 9c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special: \n - Can attack Air\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Tiberium Gas Missiles increases the damage (Industry)\n - Can be stealthed with Stealth Emitter (Technology Nod)\n - Costs get halved with Mass Recruitment (Propaganda)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
-        Cost: 200
+        Cost: 250
     Tooltip:
         Name: Rocketeer
     Selectable:
@@ -71,8 +69,6 @@ E3:
         Volume: 2
     Health:
         HP: 125
-    Armor:
-        Type: Light
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -85,18 +81,7 @@ E3:
         Weapon: BazookaAA
         LocalOffset: 280,84,700
         RequiresCondition: !upgrade.tibgas
-    Armament@upgrade:
-        Weapon: BazookaGas
-        LocalOffset: 280,84,700
-        RequiresCondition: upgrade.tibgas
-    Armament@upgradeAA:
-        Weapon: BazookaGasAA
-        LocalOffset: 280,84,700
-        RequiresCondition: upgrade.tibgas
     AttackFrontal:
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
     GrantConditionOnPrerequisite@upgrade2:
         Condition: upgrade.stealth
         Prerequisites: upgrade.stealth
@@ -116,7 +101,7 @@ E32:
     RenderSprites:
         Image: E3
     Valued:
-        Cost: 100
+        Cost: 125
 
 CHAMSPY:
     Inherits@1: ^Soldier
@@ -138,8 +123,6 @@ CHAMSPY:
         Volume: 2
     Health:
         HP: 100
-    Armor:
-        Type: Light
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -181,8 +164,6 @@ NDOG:
         VoiceSet: Dog
     Health:
         HP: 300
-    Armor:
-        Type: Light
     Mobile:
         Speed: 60
     RevealsShroud:
@@ -234,8 +215,6 @@ NENGINEER:
         Range: 6c0
     Health:
         HP: 250
-    Armor:
-        Type: Light
     Passenger:
         PipType: Yellow
     EngineerRepair:
@@ -277,8 +256,6 @@ FANATIC:
         Volume: 2
     Health:
         HP: 200
-    Armor:
-        Type: Light
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -321,9 +298,7 @@ NACAD:
         VoiceSet: Bhand
         Volume: 2
     Health:
-        HP: 360
-    Armor:
-        Type: Medium
+        HP: 430
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -364,9 +339,7 @@ NCONF:
         VoiceSet: Confessor
         Volume: 2
     Health:
-        HP: 400
-    Armor:
-        Type: Medium
+        HP: 480
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -418,9 +391,7 @@ SHADOW:
         VoiceSet: Shadow
         Volume: 2
     Health:
-        HP: 160
-    Armor:
-        Type: Medium
+        HP: 200
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -469,9 +440,7 @@ BHAND:
         VoiceSet: Bhand
         Volume: 2
     Health:
-        HP: 800
-    Armor:
-        Type: Heavy
+        HP: 1040
     Passenger:
         CargoType: Infantry
         Voice: Move
@@ -523,8 +492,6 @@ TIBTROOPER:
         Volume: 2
     Health:
         HP: 500
-    Armor:
-        Type: Medium
     Mobile:
         Speed: 50
     RevealsShroud:

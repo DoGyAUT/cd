@@ -1,5 +1,6 @@
 PlasmaBombarde:
     Inherits: ^MissileAPHE
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 250
     Range: 10c0
     MinRange: 3c0
@@ -21,11 +22,6 @@ PlasmaBombarde:
         Spread: 0c512
         Damage: 400
         ValidTargets: Ground
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp01
         ExplosionPalette: effect50alpha
@@ -46,6 +42,7 @@ PlasmaBombarde:
         ExplosionPalette: light
         
 HarbingerMachal:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 7c0
     ValidTargets: Ground
@@ -70,15 +67,6 @@ HarbingerMachal:
         Spread: 0c128
         Damage: 30
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
@@ -94,6 +82,7 @@ HarbingerMachal:
         ExplosionPalette: light
 
 DroneMachal:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 14c0
 	MinRange: 2c0
@@ -114,12 +103,6 @@ DroneMachal:
         Damage: 36
         ValidStances: Neutral, Enemy
         ValidTargets: Air, MidAir, HighAir
-        Versus:
-            Aircraft: 100
-            Building: 0
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: epiff
@@ -135,6 +118,7 @@ DroneMachal:
         ExplosionPalette: light
         
 PteroisMachal:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 6c0
 	MinRange: 1c0
@@ -160,15 +144,6 @@ PteroisMachal:
         Spread: 0c128
         Damage: 60
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 120
-            Aircraft: 200
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
@@ -184,6 +159,7 @@ PteroisMachal:
         ExplosionPalette: light
 
 MantaMachal:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 16c0
     Burst: 3
@@ -202,15 +178,6 @@ MantaMachal:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 300
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
@@ -227,6 +194,7 @@ MantaMachal:
         ExplosionPalette: light
 
 PlasmaGun:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 6c0
     MinRange: 1c512
@@ -246,15 +214,6 @@ PlasmaGun:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 50
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1 #plasmawave1
@@ -273,6 +232,7 @@ PlasmaGun:
         ExplosionPalette: light
         
 CommandoLaserFire:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 7c0
     Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
@@ -288,15 +248,6 @@ CommandoLaserFire:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: epiff
@@ -312,6 +263,7 @@ CommandoLaserFire:
         ExplosionPalette: light
         
 CabalPulseCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 8c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
@@ -328,15 +280,6 @@ CabalPulseCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 550
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
@@ -353,6 +296,7 @@ CabalPulseCannon:
         ExplosionPalette: light
         
 KronosCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 240
     Range: 10c0
 #    MinRange: 3c0
@@ -370,15 +314,6 @@ KronosCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 650
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp01
@@ -395,6 +330,7 @@ KronosCannon:
         ExplosionPalette: light
 
 PlasmaBombardeCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 12c0
     MinRange: 5c0
@@ -419,15 +355,6 @@ PlasmaBombardeCannon:
         Spread: 1c0
         Damage: 500
         ValidTargets: Ground
-        Versus:
-            Infantry: 60
-            Cyborg: 80
-            Vehicle: 50
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp01
@@ -456,6 +383,7 @@ PlasmaBombardeCannonE:
         HorizontalRateOfTurn: 10
         
 HarbCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 7c0
     Report: cablaser01.aud
@@ -474,14 +402,6 @@ HarbCannon:
         Spread: 0c512
         Damage: 120
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_med

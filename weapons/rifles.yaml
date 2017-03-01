@@ -1,5 +1,6 @@
 Minigun:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 30
     Range: 5c0
     Report: rifle_g1.aud, rifle_g2.aud
@@ -17,6 +18,7 @@ MinigunGarrison:
 
 Minigun2:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 20
     Range: 4c0
     Report: rifle_n1.aud, rifle_n2.aud
@@ -34,23 +36,23 @@ Minigun2Garrison:
 
 HuskGun:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 70
     Range: 5c0
     Burst: 6
     BurstDelay: 2
     Report: rifle_c1.aud, rifle_c2.aud, rifle_c3.aud
     Projectile: BulletAS
-        bullet
         LaunchAngle: 45
         Palette: effect
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 25
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 SMG:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 40
     Range: 4c0
     Report: smg_f1.aud, smg_f2.aud
@@ -64,14 +66,10 @@ SMG:
     Warhead@2Dam: SpreadDamage
         Spread: 0c128
         Damage: 1
-            Infantry: 0
-            Cyborg: 0
-            Vehicle: 0
-            Aircraft: 0
-            Building: 100
 
 M1Carbine:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 60
     Range: 6c0
     Burst: 3
@@ -89,6 +87,7 @@ M1CarbineGarrison:
     
 ConfCarbine:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 30
     Range: 5c0
     Report: confcarbine01.aud, confcarbine02.aud, confcarbine03.aud
@@ -102,6 +101,7 @@ ConfCarbine:
 
 M2Carbine:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 50
     Range: 5c0
     Report: carbine_n1.aud, carbine_n2.aud, carbine_n3.aud
@@ -115,6 +115,7 @@ M2Carbine:
 
 Machal:
     Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 80
     Range: 5c0
     Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
@@ -127,7 +128,8 @@ Machal:
         Damage: 20  
 
 TibCarbine:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
+    Inherits@wh: ^TiberiumWH
     ReloadDelay: 50
     Range: 6c0
     Report: tibrifle01.aud, tibrifle02.aud, tibrifle03.aud
@@ -141,16 +143,6 @@ TibCarbine:
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 60
-        Versus:
-            Infantry: 120
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tpiff
         InvalidImpactTypes: Water
@@ -161,6 +153,14 @@ TibCarbine:
     Warhead@5Eff: CreateEffect
         Explosions: tiny_flash
         ExplosionPalette: light
+        
+NodHarvGun:
+    Inherits: TibCarbine
+    ReloadDelay: 15
+    Range: 5c0
+    -Burst:
+    Warhead@1Dam: SpreadDamage
+        Damage: 45
 		
 TibCarbineE:
     Inherits: TibCarbine
@@ -170,7 +170,8 @@ TibCarbineE:
         ContrailColor: 5980FF
             
 Vulcan:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 35
     Range: 5c0
     Report: mgfire.aud #machinegun5.aud #stormgun1.aud,stormgun2.aud,stormgun3.aud
@@ -183,24 +184,22 @@ Vulcan:
         Damage: 40
 
 MarauderGun:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 80
     Burst: 20
     BurstDelay: 3
     Range: 5c0
     Report: hmg.aud
-    ValidTargets: Ground, Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-    InvalidTargets: Vehicle, Buildings
     Projectile: BulletAS
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
-        ValidTargets: Infantry, Cyborg, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-        DamageTypes: Prone100Percent, TriggerProne, BulletDeath, BountyKill
 
 OverGun:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 95
     Burst: 5
     BurstDelay: 2
@@ -216,7 +215,8 @@ OverGun:
         InvalidImpactTypes: Water
 
 JumpCannon:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 90
     Burst: 10
     Range: 6c0
@@ -230,7 +230,8 @@ JumpCannon:
         ValidTargets: Ground
 
 JumpCannonAA:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 90
     Burst: 10
     Range: 10c0
@@ -244,7 +245,8 @@ JumpCannonAA:
         ValidTargets: Air
 
 WatchSniper:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 100
     Range: 10c0
@@ -260,15 +262,14 @@ WatchSniper:
         Spread: 0c64
         Damage: 200
         Versus:
-            Infantry: 200
-            Cyborg: 100
             Vehicle: 100
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
 
 ShadowSniper:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 100
     Range: 10c0
@@ -282,27 +283,20 @@ ShadowSniper:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 250
+        Damage: 500
         Versus:
-            Infantry: 200
-            Cyborg: 100
-            Vehicle: 60
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 80
-            Heavy: 70
+            Aircraft: 25
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2prone: SpreadDamage
         Spread: 250
         Damage: 1
-    DamageTypes: Prone200Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
 
 MutantSniper:
-    Inherits: ^APBullet
+    Inherits: ^Bullet
+    Inherits@wh: ^BulletWH
     ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 150
     Range: 7c0
@@ -318,20 +312,9 @@ MutantSniper:
         ValidTargets: Ground, Air, MidAir, HighAir   
         Spread: 0c64
         Damage: 150
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 10
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone200Percent, TriggerProne, BulletDeath
     Warhead@2prone: SpreadDamage
         Spread: 0c256
         Damage: 1
-    DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
@@ -359,7 +342,8 @@ ShadowSniperEMP:
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 
 VulcanShotgun:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 100
     Burst: 10
     BurstDelay: 6
@@ -376,7 +360,8 @@ VulcanShotgun2:
     Report:
 
 BrigandShotgun:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 50
     Range: 4c0
     Report: shotgun3.aud
@@ -391,7 +376,8 @@ BrigandShotgun2:
     Report:
     
 Pistola:
-    Inherits: ^Bullet
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
     ReloadDelay: 20
     Range: 4c0
     Report: pistol.aud

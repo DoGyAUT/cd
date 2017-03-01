@@ -9,9 +9,6 @@ UnitExplode:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
@@ -34,9 +31,6 @@ UnitExplodeEpic:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -63,9 +57,6 @@ UnitExplodeSmall:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: medium_brnl, small_twlt, tiny_twlt
@@ -80,7 +71,7 @@ UnitExplodeSmall:
 UnitExplodeHeli:
     Warhead@1Dam: SpreadDamage
         Spread: 426
-        Damage: 100
+        Damage: 300
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
@@ -88,9 +79,6 @@ UnitExplodeHeli:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
@@ -104,8 +92,8 @@ UnitExplodeHeli:
                 
 UnitExplodePlane:
     Warhead@1Dam: SpreadDamage
-        Spread: 426
-        Damage: 200
+        Spread: 512
+        Damage: 700
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
@@ -113,9 +101,6 @@ UnitExplodePlane:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
@@ -130,17 +115,13 @@ UnitExplodePlane:
 UnitExplodeCrapJet:
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 300
+        Damage: 900
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Versus:
             Infantry: 100
             Cyborg: 100
             Vehicle: 100
             Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: crapexplo
@@ -162,9 +143,6 @@ UnitExplodeCyborg:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
         ValidStances: Neutral, Enemy
     Warhead@2Eff: CreateEffect
@@ -213,9 +191,6 @@ LargeTiberiumExplosion:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
     Warhead@2Res: CreateResource
         AddsResourceType: Tiberium
@@ -238,9 +213,6 @@ LargeVeinExplosion:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
     Warhead@2Res: CreateResource
         AddsResourceType: Veins

@@ -13,9 +13,7 @@ NAWALL:
     Tooltip:
         Name: Concrete Wall
     Health:
-        HP: 300
-    Armor:
-        Type: Heavy
+        HP: 400
     BlocksProjectiles:
         Height: 640
     Crushable:
@@ -65,9 +63,7 @@ NASILO:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -85,9 +81,9 @@ NASILO:
         Capacity: 1000
     Power:
         Amount: -10
-    Explodes:
-        Weapon: TiberiumExplosionSilo
-        EmptyWeapon: TiberiumExplosionSilo
+    # Explodes:
+        # Weapon: TiberiumExplosionSilo
+        # EmptyWeapon: TiberiumExplosionSilo
 
 NAFLAMER:
     Inherits: ^Defense
@@ -106,9 +102,7 @@ NAFLAMER:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 9c0
     BodyOrientation:
@@ -171,9 +165,7 @@ NAGAT:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 8c0
     BodyOrientation:
@@ -226,9 +218,7 @@ NALASR:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1500
-    Armor:
-        Type: Medium
+        HP: 1800
     RevealsShroud:
         Range: 11c0
     BodyOrientation:
@@ -290,9 +280,7 @@ NASAM:
     DisabledOverlay:
     RequiresPower:
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 11c0
     BodyOrientation:
@@ -341,9 +329,7 @@ NABUNKER:
         Bounds: 40, 36, -3, -8
     DisabledOverlay:
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1300
     RevealsShroud:
         Range: 10c0
     RenderRangeCircle:
@@ -384,9 +370,7 @@ NAOBEL:
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 3000
-    Armor:
-        Type: Heavy
+        HP: 3900
     RevealsShroud:
         Range: 15c0
     Armament@normalA:
@@ -450,9 +434,7 @@ NAPULS:
     RequiresPower:
     DisabledOverlay:
     Health:
-        HP: 2000
-    Armor:
-        Type: Heavy
+        HP: 2600
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -510,9 +492,7 @@ NAMISL:
     Selectable:
         Bounds: 75,48
     Health:
-        HP: 4000
-    Armor:
-        Type: Heavy
+        HP: 5200
     RevealsShroud:
         Range: 2c0
     WithIdleOverlay@LIGHTS:
@@ -551,7 +531,7 @@ NAMISL:
 NASTLH:
     Inherits: ^Building
     Valued:
-        Cost: 2000
+        Cost: 500
     Tooltip:
         Name: Stealth Generator
     Buildable:
@@ -563,9 +543,7 @@ NASTLH:
         Footprint: xxxxx xxxxx
         Dimensions: 5,2
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 6c0
     WithIdleOverlay@pulse:
@@ -575,7 +553,7 @@ NASTLH:
         Range: 12c0
         Type: cloakgenerator
     Power:
-        Amount: -200
+        Amount: -150
     RequiresPower:
     CanPowerDown:
         IndicatorPalette: mouse

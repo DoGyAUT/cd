@@ -1,5 +1,5 @@
 LtRail:
-    Inherits: ^Railgun
+    Inherits@wh: ^RailgunWH
     ReloadDelay: 125
     Range: 6c0
     Report: rail01.aud, rail02.aud, rail03.aud, rail04.aud
@@ -16,7 +16,6 @@ LtRail:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 400
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
         ExplosionPalette: effect50alpha
@@ -26,7 +25,7 @@ LtRail:
         SmudgeType: SmallScorch
 
 LocustNail:
-    Inherits: ^Railgun
+    Inherits@wh: ^RailgunWH
     ReloadDelay: 100
     Range: 7c0
     Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
@@ -45,12 +44,10 @@ LocustNail:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 200
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
         ValidTargets: Ground
     Warhead@2Dam: SpreadDamage
         Spread: 0c256
         Damage: 100
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
         ValidTargets: Air, MidAir
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_tiny
@@ -63,7 +60,7 @@ LocustNail:
         ExplosionPalette: light
 
 MechRailgun:
-    Inherits: ^Railgun
+    Inherits@wh: ^RailgunWH
     ReloadDelay: 100
     Range: 8c0
     Burst: 2 # for alternating muzzle offsets, dmg/s identical to original
@@ -82,7 +79,6 @@ MechRailgun:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 400
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
         ExplosionPalette: effect50alpha
@@ -96,7 +92,7 @@ MechRailgun2:
     ReloadDelay: 80
 
 GuardianRailgun:
-    Inherits: ^Railgun
+    Inherits@wh: ^RailgunWH
     ReloadDelay: 80
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud#railuse5.aud, bigggun1.aud
@@ -113,7 +109,6 @@ GuardianRailgun:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 300
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
         ExplosionPalette: effect50alpha
@@ -147,10 +142,6 @@ CruiserIonCannon:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: swave
         ExplosionPalette: swave
@@ -191,9 +182,6 @@ BehemothIonCannon:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: swave
@@ -210,6 +198,7 @@ BehemothIonCannon:
 
 CyclopsCannon:
     Inherits: ^ShellHE
+    Inherits@wh: ^SonicWH
     ReloadDelay: 180
     Range: 12c0
     MinRange: 5c0
@@ -265,10 +254,6 @@ KodiakIonCannon1:
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: ionring
         ExplosionPalette: effect50alpha
@@ -292,7 +277,7 @@ KodiakIonCannon2:
     ReloadDelay: 280
         
 TitanRailgun:
-    Inherits: ^Railgun
+    Inherits: ^RailgunWH
     ReloadDelay: 150
     Range: 8c0
     Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
@@ -309,7 +294,6 @@ TitanRailgun:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 700
-        DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
         ExplosionPalette: effect50alpha
@@ -319,7 +303,7 @@ TitanRailgun:
         SmudgeType: MediumScorch
         
 TitanRailgun2:
-    Inherits: ^Railgun
+    Inherits: ^RailgunWH
     ReloadDelay: 110
     Burst: 2
     BurstDelay: 10
@@ -338,7 +322,6 @@ TitanRailgun2:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 400
-        DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmawave1
         ExplosionPalette: effect50alpha
@@ -348,13 +331,14 @@ TitanRailgun2:
         SmudgeType: MediumScorch
 
 SonicZap:
+    Inherits@wh: ^SonicWH
     ReloadDelay: 72
     Range: 6c0
     Report: sonic5.aud, sonic6.aud, sonic7.aud #sonic4.aud
     Projectile: AreaBeam
         Speed: 0c256
         Duration: 36
-        DamageInterval: 4 # Roughly 18 impacts.
+        DamageInterval: 4 # Roughly 9 impacts.
         Width: 512
         Shape: Flat
         BeyondTargetRange: 0c256
@@ -373,15 +357,7 @@ SonicZap:
         AffectsParent: false
         ValidStances: Neutral, Enemy
         Versus:
-            Infantry: 100
-            Cyborg: 100
             Vehicle: 200
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
     Warhead@2Dam: SpreadDamage
         Range: 0, 32
         Falloff: 50, 50
@@ -390,17 +366,10 @@ SonicZap:
         AffectsParent: false
         ValidStances: Ally
         Versus:
-            Infantry: 100
-            Cyborg: 100
             Vehicle: 200
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 ChimeraZap:
+    Inherits@wh: ^SonicWH
     ReloadDelay: 80
     Range: 7c0
     Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
@@ -421,17 +390,10 @@ ChimeraZap:
         AffectsParent: false
         ValidStances: Neutral, Enemy
         Versus:
-            Infantry: 100
-            Cyborg: 100
             Vehicle: 200
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
 
 MantisZap:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 8c0
     Burst: 6
@@ -453,18 +415,9 @@ MantisZap:
         Damage: 20
         AffectsParent: false
         ValidStances: Neutral, Enemy
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 50
-            Aircraft: 0
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
 
 CyCannon:
+    Inherits@wh: ^SonicWH
     ReloadDelay: 120
     Range: 7c0
     Report: scrin5b.aud
@@ -482,16 +435,6 @@ CyCannon:
         Spread: 0c256
         Damage: 300
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_small
         ExplosionPalette: effect50alpha
@@ -509,6 +452,7 @@ CyCannon:
         ExplosionPalette: light
 
 BansheeCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 75
     Range: 7c0
     Report: scrin5b.aud
@@ -523,15 +467,7 @@ BansheeCannon:
         Spread: 0c256
         Damage: 60
         Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
             Building: 35
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_tiny
         ExplosionPalette: effect50alpha
@@ -548,6 +484,7 @@ BansheeCannon:
 
 BansheeSpecial:
     Inherits: ^ShellHE
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 7c0
     Report: scrin5b.aud
@@ -566,16 +503,6 @@ BansheeSpecial:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 200
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 100
-            Heavy: 100
-        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
         ExplosionPalette: apolra2
@@ -600,6 +527,7 @@ BansheeSpecialE:
         Damage: 300
 
 BansheeCannonAA:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 8c0
 	MinRange: 2c0
@@ -614,16 +542,6 @@ BansheeCannonAA:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 50
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
         ValidTargets: Air, MidAir, HighAir
         ValidStances: Neutral, Enemy
     Warhead@2Eff: CreateEffect
@@ -642,6 +560,7 @@ BansheeCannonAA:
         ExplosionPalette: light
 
 StormRaiderCannon:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 7c0
     Report: scrin5b.aud
@@ -658,13 +577,6 @@ StormRaiderCannon:
         Versus:
             Infantry: 50
             Cyborg: 50
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_tiny
         ExplosionPalette: effect50alpha
@@ -680,6 +592,7 @@ StormRaiderCannon:
         ExplosionPalette: light
 
 StormRaiderCannonAA:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 150
     Range: 8c0
     ValidTargets: Air, MidAir, HighAir
@@ -693,16 +606,6 @@ StormRaiderCannonAA:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 50
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
         ValidTargets: Air, MidAir, HighAir
         ValidStances: Neutral, Enemy
     Warhead@2Eff: CreateEffect
@@ -721,6 +624,7 @@ StormRaiderCannonAA:
         ExplosionPalette: light
 
 BansheeProton:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 400
     Range: 14c0
     ValidTargets: Ground
@@ -738,17 +642,7 @@ BansheeProton:
     Warhead@2Dam: SpreadDamage
         Spread: 0c512
         Damage: 100
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 200
-            Medium: 80
-            Heavy: 70
         ValidTargets: Ground
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -765,6 +659,7 @@ BansheeProton:
         ExplosionPalette: light
  
 MontaukProton:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 250
     Range: 14c0
     ValidTargets: Ground
@@ -783,16 +678,6 @@ MontaukProton:
         Spread: 1c0
         Damage: 300
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -809,6 +694,7 @@ MontaukProton:
         ExplosionPalette: light
 
 SimpleShockerDisc:
+    Inherits@wh: ^BulletWH
     ReloadDelay: 30
     Range: 5c0
     Burst: 2
@@ -824,16 +710,6 @@ SimpleShockerDisc:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 15
-        Versus:
-            Infantry: 100
-            Cyborg: 80
-            Vehicle: 20
-            Aircraft: 100
-            Building: 20
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: epiff
         ExplosionPalette: effect50alpha
@@ -847,6 +723,7 @@ SimpleShockerDisc:
         ExplosionPalette: light
 
 ShockerDisc:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 100
     Range: 6c0
     Burst: 3
@@ -862,17 +739,7 @@ ShockerDisc:
         TrailPalette: effect50alpha
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 40
-        Versus:
-            Infantry: 100
-            Cyborg: 80
-            Vehicle: 80
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+        Damage: 30
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
@@ -887,6 +754,7 @@ ShockerDisc:
         ExplosionPalette: light
 
 HeavyShockerDisc:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 40
     Range: 7c0
     Burst: 2
@@ -902,17 +770,7 @@ HeavyShockerDisc:
         TrailPalette: effect50alpha
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 200
-        Versus:
-            Infantry: 50
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+        Damage: 150
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
@@ -927,6 +785,7 @@ HeavyShockerDisc:
         ExplosionPalette: light
 
 MantisShockerDisc:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 220
     Range: 8c0
     Burst: 3
@@ -945,17 +804,7 @@ MantisShockerDisc:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 300
-        Versus:
-            Infantry: 50
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+        Damage: 225
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_small
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -970,6 +819,7 @@ MantisShockerDisc:
         ExplosionPalette: light
 
 HexapodShockerDisc:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 170
     Range: 8c0
     Burst: 3
@@ -988,17 +838,7 @@ HexapodShockerDisc:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 400
-        Versus:
-            Infantry: 50
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_small
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -1013,6 +853,7 @@ HexapodShockerDisc:
         ExplosionPalette: light
 
 ShardLauncher:
+    Inherits@wh: ^PlasmaWH
     ReloadDelay: 80
     Range: 8c0
     Burst: 4
@@ -1034,17 +875,7 @@ ShardLauncher:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 100
-        Versus:
-            Infantry: 50
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 100
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidTargets: Air, MidAir, HighAir
-        DamageTypes: SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_small
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud

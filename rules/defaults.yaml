@@ -131,9 +131,9 @@
         RequiresCondition: rank-elite && !rank-heroic
         Modifier: 60      
     SelfHealing@elite:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
         HealIfBelow: 100
         DamageCooldown: 200
         RequiresCondition: rank-elite
@@ -232,9 +232,9 @@
         RequiresCondition: rank-elite && !rank-heroic
         Modifier: 60      
     SelfHealing@elite:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
         HealIfBelow: 100
         DamageCooldown: 200
         RequiresCondition: rank-elite
@@ -561,6 +561,8 @@
     Inherits@3: ^SpriteActor
     Inherits@4: ^NanofiberUpgrade
     Inherits@5: ^Cloakable
+    Inherits@6: ^ZepUpgrades
+    Inherits@7: ^DeployBuffUpgrades
     DrawLineToTarget:
     Health:
         HP: 50
@@ -1102,6 +1104,13 @@
         Modifier: 120
     ExternalCondition@zep:
         Condition: zepdebuff
+        
+^DeployBuffUpgrades:
+    DamageMultiplier@dep:        
+        RequiresCondition: deployed   
+        Modifier: 70
+    ExternalCondition@dep:
+        Condition: deployed
 
 ^AvatarUpgrades:
     WithDecoration@avatar:
@@ -1193,6 +1202,8 @@
     Inherits@3: ^EmpDisable
     Inherits@4: ^DamagedByVeins
     Inherits@5: ^Cloakable
+    Inherits@6: ^ZepUpgrades
+    Inherits@7: ^DeployBuffUpgrades
     DrawLineToTarget:
     Mobile:
         Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1706,10 +1717,8 @@
         Shape: Circle
             Radius: 256
             VerticalTopOffset: 512
-    Armor:
-        Type: Light
     Mobile:
-        Speed: 113
+        Speed: 90
         TurnSpeed: 16
         Crushes: crate
         SharesCell: no

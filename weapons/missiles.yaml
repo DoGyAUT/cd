@@ -1,5 +1,6 @@
 Bazooka:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ValidTargets: Ground
     ReloadDelay: 100
     Range: 6c0
@@ -7,8 +8,7 @@ Bazooka:
     Report: javelin.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 100
-            Vehicle: 250
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
         ExplosionPalette: apolra50alpha
@@ -22,6 +22,7 @@ BazookaAA:
 
 BazookaGas:
     Inherits: Bazooka
+    Inherits@wh: ^TiberiumWH
     Projectile: Missile
         ContrailLength: 10
         ContrailWidth: 15
@@ -44,7 +45,8 @@ BazookaGasAA:
     Range: 7c512
 
 MarauderBazooka:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ValidTargets: Ground, Air, MidAir, HighAir
     ReloadDelay: 120
     Range: 8c0
@@ -52,8 +54,10 @@ MarauderBazooka:
     Report: smaw.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 200
+        Damage: 300
         ValidTargets: Ground, Air, MidAir, HighAir
+        Versus:
+            Aircraft: 50
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
@@ -62,7 +66,8 @@ MarauderBazooka:
         InvalidImpactTypes: Water, Air, AirHit
     
 FireflyMissiles:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 150
     Range: 7c0
     Burst: 2
@@ -79,7 +84,8 @@ FireflyMissiles:
         InvalidImpactTypes: Water, Air, AirHit
 
 ZRaiderBazooka:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 60
     Range: 8c0
     MinRange: 1c512
@@ -98,7 +104,8 @@ ZRaiderBazooka:
         InvalidImpactTypes: Water, Air, AirHit
 
 MissileBarrage:
-    Inherits: ^RocketHE
+    Inherits: ^RocketHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 200
     Burst: 8
     Range: 14c0
@@ -109,7 +116,8 @@ MissileBarrage:
         Damage: 60
         
 AirblastMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 200
     Burst: 8
     BurstDelay: 15
@@ -131,7 +139,8 @@ AirblastMissile:
         ValidTargets: Air, MidAir
         
 MLRSBarrage:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ValidTargets: Ground
     ReloadDelay: 220
     Burst: 6
@@ -147,16 +156,7 @@ MLRSBarrage:
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
-        Versus:
-            Infantry: 40
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 150
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 80
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_tumu, medium_tumu, large_tumu
@@ -171,7 +171,8 @@ MLRSBarrage:
         ExplosionPalette: light
                 
 RPGMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ValidTargets: Ground
     ReloadDelay: 100
     Burst: 2
@@ -202,7 +203,8 @@ RPGMissile:
         ExplosionPalette: light
                 
 TankMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ValidTargets: Ground, Air, MidAir
     ReloadDelay: 220
     Range: 8c0
@@ -216,7 +218,7 @@ TankMissile:
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 300
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_tumu, medium_tumu, large_tumu
@@ -231,13 +233,14 @@ TankMissile:
         ExplosionPalette: light
 
 WarthogMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 150
     Burst: 6
     BurstDelay: 8
     Range: 8c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         Inaccuracy: 0c256
         MaximumLaunchSpeed: 0c256
@@ -246,41 +249,42 @@ WarthogMissile:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 40
-        ValidTargets: Ground, Air, MidAir
+        ValidTargets: Ground, Air, MidAir, HighAir
 
 BisonMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Burst: 2
     BurstDelay: 25
     Range: 8c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 80      
-        ValidTargets: Ground, Air, MidAir
+        ValidTargets: Ground, Air, MidAir, HighAir
         
 VultureMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 80
     Burst: 2
     Range: 8c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 60   
-        Versus:
-            Vehicle: 50   
-        ValidTargets: Ground, Air, MidAir
+        ValidTargets: Ground, Air, MidAir, HighAir
 
 TritonMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 150
     Burst: 2
     Range: 8c0
@@ -294,7 +298,8 @@ TritonMissile:
         ValidTargets: Air, MidAir
         
 HoverMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
     BurstDelay: 8
@@ -312,17 +317,18 @@ HoverMissile:
         CruiseAltitude: 2c512
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 200
+        Damage: 250
         ValidTargets: Ground
 		
 HoverMissileAA:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Burst: 8
     BurstDelay: 2
     Range: 10c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Air, MidAir
+    ValidTargets: Air, MidAir, HighAir
     Projectile: Missile
         MaximumLaunchSpeed: 0c256
         MinimumLaunchSpeed: 0c64
@@ -332,10 +338,11 @@ HoverMissileAA:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 60
-        ValidTargets: Air, MidAir
+        ValidTargets: Air, MidAir, HighAir
         
 GorranMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 180
     Range: 7c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
@@ -363,7 +370,8 @@ GorranMissile:
         InvalidImpactTypes: Water, Air, AirHit
 
 RavenMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^FireWH
     ReloadDelay: 100
     Range: 6c0
     Burst: 2
@@ -382,16 +390,8 @@ RavenMissile:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c768
-        Damage: 700
-        ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 20
-            Building: 100
-            Light: 100
-            Medium: 50
-            Heavy: 20  
+        Damage: 300
+        ValidTargets: Ground 
     Warhead@2Eff: CreateEffect
         Explosions: napalm1, napalm2
         ExplosionPalette: apolra2
@@ -401,7 +401,8 @@ RavenMissile:
         InvalidImpactTypes: Water
             
 RavenMissileAA:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^FireWH
     ReloadDelay: 100
     Range: 8c0
     Burst: 2
@@ -433,7 +434,7 @@ BluehellRavenMissile:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 768
-        Damage: 800
+        Damage: 500
     Warhead@2Eff: CreateEffect
         Explosions: napalm1, napalm2
         ExplosionPalette: apolra2
@@ -459,7 +460,8 @@ BluehellRavenMissileAA:
         InvalidImpactTypes: Water
 
 ComponentMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 68
     Burst: 2
     Range: 8c0
@@ -485,7 +487,8 @@ ComponentMissile:
         ValidTargets: Air, MidAir, HighAir
        
 PoseidonTusk:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 150
     Range: 10c0
     Burst: 2
@@ -503,7 +506,8 @@ PoseidonTusk:
         ValidTargets: Ground, Air, MidAir
 
 MammothTusk:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 200
     Range: 8c0
     Burst: 2
@@ -521,7 +525,8 @@ MammothTusk:
         ValidTargets: Ground, Air, MidAir
 
 MammothWalkerTusk:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 180
     Range: 12c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
@@ -542,7 +547,8 @@ MammothWalkerTusk:
         ValidTargets: Ground, Air, MidAir
         
 BuggyMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 180
     Burst: 4
     BurstDelay: 3
@@ -562,11 +568,12 @@ BuggyMissile:
         Palette: effect
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 40
+        Damage: 60
         ValidTargets: Ground, Air, MidAir
      
 BikeMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
     BurstDelay: 0
@@ -584,26 +591,18 @@ BikeMissile:
         Palette: effect
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 70
+        Damage: 120
         ValidTargets: Ground, Air, MidAir
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 50
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
 
 Dragon:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 100
     Range: 8c0
     Burst: 2
     BurstDelay: 10
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         MaximumLaunchSpeed: 384
         MinimumLaunchSpeed: 213
@@ -611,20 +610,12 @@ Dragon:
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 50
-        ValidTargets: Ground, Air, MidAir
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 50
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 125
+        ValidTargets: Ground, Air, MidAir, HighAir
         
 StealthDragon:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 175
     Range: 8c0
     Burst: 2
@@ -638,20 +629,12 @@ StealthDragon:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 60
+        Damage: 110
         ValidTargets: Ground
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 125
-            Aircraft: 100
-            Building: 80
-            Light: 100
-            Medium: 80
-            Heavy: 70
 
 StealthDragonEMP:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 175
     Range: 8c0
     Burst: 2
@@ -668,17 +651,8 @@ StealthDragonEMP:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 80
+        Damage: 120
         ValidTargets: Ground
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 125
-            Aircraft: 100
-            Building: 80
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@emp1: GrantExternalCondition
         Range: 0c512
         Duration: 75
@@ -691,7 +665,8 @@ StealthDragonEMP:
 
             
 StealthDragonAA:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 100
     Range: 14c0
     Burst: 6
@@ -710,7 +685,8 @@ StealthDragonAA:
         ValidTargets: Air, MidAir
 
 Stormdragon:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^HEWH
     ReloadDelay: 220
     MinRange: 3c0
     Range: 14c0
@@ -729,11 +705,6 @@ Stormdragon:
         Spread: 256
         Damage: 150
         ValidTargets: Ground
-        Versus:
-            Building: 100
-            Light: 120
-            Medium: 40
-            Heavy: 20
         
 StormdragonAA:
     Inherits: Stormdragon
@@ -752,6 +723,7 @@ StormdragonAA:
 
 StormdragonGas:
     Inherits: Stormdragon
+    Inherits@wh: ^TiberiumWH
     Projectile: Missile
         ContrailLength: 30
         ContrailWidth: 15
@@ -759,8 +731,6 @@ StormdragonGas:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 200
-            Infantry: 50
-            Cyborg: 80
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
         ExplosionPalette: effect50alpha
@@ -781,7 +751,8 @@ StormdragonGasAA:
         ValidTargets: Air, MidAir
 
 OrcaHellfire:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 120
     Range: 6c0
 	MinRange: 1c0
@@ -829,7 +800,8 @@ OrcaHellfire2:
         ValidTargets: Ground
 
 HavocMissiles:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Range: 7c0
 	MinRange: 1c0
@@ -854,6 +826,7 @@ HavocMissiles:
         
 HavocMissilesNapalm:
     Inherits: HavocMissiles
+    Inherits@wh: ^FireWH
     Projectile: Missile
         TrailImage: blueflametrailer
         TrailPalette: effect50alpha
@@ -864,7 +837,6 @@ HavocMissilesNapalm:
         Spread: 0c256
         Damage: 220
         ValidTargets: Ground
-        DamageTypes: Prone100Percent, TriggerProne, FireDeath
     Warhead@2Eff: CreateEffect
         Explosions: napalm1, napalm2
         ExplosionPalette: apolra2
@@ -881,7 +853,8 @@ HavocMissilesNapalm:
         InvalidImpactTypes: Water, Air, AirHit
         
 HydraMissiles:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 160
     Range: 6c0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -897,7 +870,7 @@ HydraMissiles:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 100
+        Damage: 80
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_bang, medium_bang, large_bang
@@ -920,6 +893,7 @@ HydraMissiles:
 
 HydraGasMissiles:
     Inherits: HydraMissiles
+    Inherits@wh: ^TiberiumWH
     Projectile: Missile
         ContrailLength: 30
         ContrailColor: 00FF64
@@ -934,7 +908,8 @@ HydraGasMissiles:
         InvalidImpactTypes: Water, Air, AirHit
     
 HawkMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
     Range: 10c0
@@ -953,7 +928,7 @@ HawkMissile:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 400
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
@@ -961,7 +936,8 @@ HawkMissile:
         ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		
 HawkMissileAA:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 100
     Burst: 2
     Range: 15c0
@@ -988,7 +964,8 @@ HawkMissileAA:
         ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
         
 HornetMissile:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 100
     Burst: 4
     BurstDelay: 6
@@ -1016,7 +993,8 @@ HornetMissile:
         ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
         
 HornetMissileAA:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 100
     Burst: 4
     BurstDelay: 6
@@ -1044,7 +1022,8 @@ HornetMissileAA:
         ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 
 BuzzardStorm:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 200
 	MinRange: 1c0
     Range: 7c0
@@ -1082,7 +1061,8 @@ BuzzardStorm:
         InvalidImpactTypes: Water, Air, AirHit
         
 StrikerMissiles:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 50
     Range: 18c0
     MinRange: 4c0
@@ -1123,7 +1103,8 @@ StrikerMissiles:
         InvalidImpactTypes: Water, Air, AirHit
         
 BuzzardMissiles:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
     ReloadDelay: 200
 	MinRange: 1c0
     Range: 5c0
@@ -1161,7 +1142,8 @@ BuzzardMissiles:
         ValidImpactTypes: Air, AirHit
  
 RedEye:
-    Inherits: ^MissileAPHE
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
     ReloadDelay: 55
     Range: 8c0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1181,7 +1163,6 @@ RedEye:
         Spread: 0c512
         Damage: 200
         ValidTargets: Air, MidAir, HighAir
-        DamageTypes: SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
         ExplosionPalette: apolra50alpha
@@ -1193,10 +1174,11 @@ RedEye2:
     BurstDelay: 10
     
 BuzzardHErocket:
-    Inherits: ^RocketHE
+    Inherits: ^RocketHE 
+	Inherits@wh: ^HEWH
     Range: 7c0
     ReloadDelay: 1
     Projectile: BulletAS
         Inaccuracy: 0c0
     Warhead@1Dam: SpreadDamage
-        Damage: 150
+        Damage: 225

@@ -1,5 +1,6 @@
 MammothMG:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 8c0
     Report:  TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
@@ -20,23 +21,17 @@ MammothMG:
         ValidImpactTypes: Water
 
 VulcanDPOD:
+    Inherits: ^APBullet
+    Inherits@wh: ^BulletWH
     ReloadDelay: 50
     Burst: 3
     Range: 6c0
     Report: tsgun4.aud
     Projectile: BulletAS
-        bullet
         Speed: 1c682
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 50
-        Versus:
-            None: 100
-            Wood: 60
-            Light: 40
-            Heavy: 25
-            Concrete: 10
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
         InvalidImpactTypes: Water
@@ -50,41 +45,35 @@ GriffinDPOD:
     Range: 4c0
 
 VulcanTower:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 26
     Burst: 3
     Range: 7c0
     Report: chaingn1.aud
     Projectile: BulletAS
-        bullet
         Speed: 0c682
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
-        Versus:
-            Infantry: 200
-            Cyborg: 160
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
         
 VulcanTower1:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 26
     Burst: 3
     Range: 8c0
     Report: chaingn1.aud
     Projectile: BulletAS
-        bullet
         Speed: 0c682
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 20
-        Versus:
-            Infantry: 200
-            Cyborg: 160
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
@@ -98,7 +87,8 @@ VulcanTower3:
     ReloadDelay: 33
 
 FireflyCannon:
-    Inherits: ^Bullet    
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 100
     Range: 5c0
     Report: tsgun4.aud
@@ -115,7 +105,8 @@ FireflyCannon:
         InvalidImpactTypes: Water
 
 AssaultCannon:
-    Inherits: ^Bullet    
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH    
     ReloadDelay: 150
     Range: 5c0
     Report: Gat01.aud, Gat02.aud, Gat03.aud #tsgun4.aud
@@ -132,7 +123,8 @@ AssaultCannon:
         InvalidImpactTypes: Water
 
 VultureGat:
-    Inherits: ^Bullet  
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH  
     ReloadDelay: 150
     Range: 6c0
     Report: mgfire.aud
@@ -149,7 +141,8 @@ VultureGat:
         InvalidImpactTypes: Water
         
 RaiderCannonVisual:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 7c0
     Burst: 20
@@ -161,16 +154,14 @@ RaiderCannonVisual:
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
         Damage: 0
-		ValidTargets: Ground, Air, MidAir, HighAir    
-        Versus:
-            Infantry: 150
-            Cyborg: 120
+		ValidTargets: Ground, Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
 
 RaiderCannonAttack:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 7c0
     Burst: 20
@@ -184,12 +175,10 @@ RaiderCannonAttack:
         Spread: 0c64
         Damage: 30
 		ValidTargets: Ground, Air, MidAir, HighAir    
-        Versus:
-            Infantry: 150
-            Cyborg: 120
 
 AssaultMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 60
     Range: 4c0
     Burst: 20
@@ -201,15 +190,13 @@ AssaultMG:
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
         Damage: 40
-        Versus:
-            Infantry: 150
-            Cyborg: 120
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
 # split in half in order to hit something
 GattlingCannonAttack:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 7c512
     Burst: 200
@@ -223,11 +210,11 @@ GattlingCannonAttack:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
-            Aircraft: 1
         ValidTargets: Ground, Air, MidAir, HighAir     
         
 GattlingCannonVisual:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 7c512
     Burst: 200
@@ -274,7 +261,8 @@ BuzzardGattlingCannonAttack2:
     ReloadDelay:1
 
 TaurusMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 6c768
     Burst: 50
@@ -291,7 +279,8 @@ TaurusMG:
         InvalidImpactTypes: Water
 
 WarthogMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 100
     Range: 6c0
     Burst: 50
@@ -308,7 +297,8 @@ WarthogMG:
         InvalidImpactTypes: Water
   
 TankMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 6c0
     Burst: 50
@@ -325,7 +315,8 @@ TankMG:
         InvalidImpactTypes: Water
   
 LightTankMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 6c0
     Burst: 20
@@ -342,7 +333,8 @@ LightTankMG:
         InvalidImpactTypes: Water
   
 APCMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 100
     Range: 6c0
     Burst: 20
@@ -361,7 +353,8 @@ APCMG:
         InvalidImpactTypes: Water
 
 VenomCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 6c0
 	MinRange: 1c0
@@ -381,7 +374,8 @@ VenomCannon:
         InvalidImpactTypes: Water
         
 HydraCannon:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 6c0
 	MinRange: 1c0
@@ -401,7 +395,8 @@ HydraCannon:
         InvalidImpactTypes: Water
        
 HavocCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 7c0
     ValidTargets: Ground
@@ -425,7 +420,8 @@ HavocCannon:
         InvalidImpactTypes: Water, Air, AirHit
         
 RavenCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 14c0
     MinRange: 3c0
@@ -440,14 +436,10 @@ RavenCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 10
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
 
 RavenCannonAA:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 14c0
     MinRange: 2c0
@@ -463,16 +455,12 @@ RavenCannonAA:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 40
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidTargets: Air, MidAir, HighAir
         ValidStances: Neutral, Enemy
  
 OrcaCannon:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 6c0
 	MinRange: 1c0 
@@ -492,7 +480,8 @@ OrcaCannon:
         InvalidImpactTypes: Water
         
 OrcaCannonRaid:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 12c0
     MinRange: 2c0
@@ -506,17 +495,13 @@ OrcaCannonRaid:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 30
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
 
 HawkCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 60
     Range: 16c0
     MinRange: 2c0
@@ -533,18 +518,14 @@ HawkCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 40
-        Versus:
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidTargets: Ground, Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
         
 HornetCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 16c0
     MinRange: 2c0
@@ -561,11 +542,6 @@ HornetCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 50
-        Versus:
-            Building: 0
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidStances: Neutral, Enemy
         ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
@@ -573,7 +549,8 @@ HornetCannon:
         InvalidImpactTypes: Water
 
 BuzzardCannon:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 100
 	MinRange: 1c0
     Range: 7c0
@@ -594,7 +571,8 @@ BuzzardCannon:
         InvalidImpactTypes: Water
        
 StrikerCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 150
     Range: 18c0
     MinRange: 2c0
@@ -610,14 +588,6 @@ StrikerCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 30
-        Versus:
-            Infantry: 120
-            Vehicle: 20
-            Aircraft: 100
-            Building: 10
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidStances: Neutral, Enemy
         ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
@@ -625,7 +595,8 @@ StrikerCannon:
         InvalidImpactTypes: Water, Air
 
 Sniper:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 60
     Range: 6c768
     Report: silencer.aud
@@ -636,7 +607,8 @@ Sniper:
         Damage: 150
         
 WatchMG:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 70
     Range: 7c0
     Report:
@@ -653,7 +625,8 @@ WatchMG:
         InvalidImpactTypes: Water
         
 WatchMGsound:
-    Inherits: ^Bullet
+    Inherits: ^Bullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 70
     Range: 7c0
     Report: cancerousmg.wav
@@ -668,7 +641,8 @@ WatchMGsound:
     -Warhead@5Eff: CreateEffect
     
 ReaperCannon:
-    Inherits: ^APBullet
+    Inherits: ^APBullet 
+	Inherits@wh: ^BulletWH
     ReloadDelay: 85
     Range: 8c0
     Burst: 8
@@ -680,15 +654,6 @@ ReaperCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 20
-        Versus:
-            Infantry: 30
-            Cyborg: 80
-            Vehicle: 100
-            Aircraft: 0
-            Building: 50
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: tiny_brnl
         ExplosionPalette: apolra2

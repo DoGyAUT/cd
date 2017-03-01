@@ -1,6 +1,7 @@
 # Laser Shadow
 InfLaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 160
     Range: 10c0
     MinRange: 4c0
@@ -18,15 +19,6 @@ InfLaserFire:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 300
-        Versus:
-            Infantry: 200
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 50
-            Building: 25
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -41,10 +33,11 @@ InfLaserFire:
         
 BuggyLaserFire:
     Inherits: ^BasicLaser
-    ReloadDelay: 160
+    Inherits@wh: ^LaserWH
+    ReloadDelay: 60
     Range: 6c0
-    Burst: 5
-    BurstDelay: 3
+    Burst: 2
+    BurstDelay: 2
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
     Projectile: LaserZap
@@ -59,15 +52,6 @@ BuggyLaserFire:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 40
-        Versus:
-            Infantry: 200
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 25
-            Light: 100
-            Medium: 80
-            Heavy: 70
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -83,10 +67,9 @@ BuggyLaserFire:
 # Laser turret tib upgraded
 TibLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^TiberiumWH
     ReloadDelay: 45
-    Burst: 3
-    BurstDelay: 10
-    Range: 6c512
+    Range: 8c512
     Report: bigggun1.aud
     ValidTargets: Ground
     Projectile: LaserZap
@@ -112,6 +95,7 @@ TibLaser:
 # Laser Turret basic
 LaserFire2:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 55
     Range: 8c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
@@ -127,15 +111,6 @@ LaserFire2:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 200
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -172,6 +147,7 @@ CheetahLaserFire:
  # Obelisk laser
 LaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 90
     Range: 10c512
     Projectile: LaserZap
@@ -185,15 +161,6 @@ LaserFire:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 800
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -232,6 +199,7 @@ LaserFireME1:
  # Obelisk laser
 LaserFireTib:
     Inherits: ^BasicLaser
+    Inherits@wh: ^TiberiumWH
     ReloadDelay: 90
     Range: 10c512
     Report: obelray1.aud
@@ -244,17 +212,8 @@ LaserFireTib:
         SecondaryBeamZOffset: 2047
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
-        Spread: 42
+        Spread: 256
         Damage: 1200
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_tiny
         ExplosionPalette: effect50alpha
@@ -267,6 +226,7 @@ LaserFireTib:
  # Obelisk laser
 LaserFireUpgrade:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 90
     Range: 10c512
     Report: obelray1.aud
@@ -278,17 +238,8 @@ LaserFireUpgrade:
         SecondaryBeamZOffset: 2047
         SecondaryBeamColor: FFF200
     Warhead@1Dam: SpreadDamage
-        Spread: 512
-        Damage: 800
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Spread: 0c84
+        Damage: 1200
     Warhead@2Eff: CreateEffect
         Explosions: scexplo
         ExplosionPalette: effect50alpha
@@ -300,6 +251,7 @@ LaserFireUpgrade:
 # Venom Laser
 AirLaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 40
     Range: 6c0
 	MinRange: 1c0
@@ -319,7 +271,6 @@ AirLaserFire:
         ValidTargets: Ground
         Spread: 42
         Damage: 30
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -335,6 +286,7 @@ AirLaserFire:
 # Hydra Laser
 HydraLaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^TiberiumWH
     ReloadDelay: 90
     Range: 6c0
 	MinRange: 1c0
@@ -355,7 +307,6 @@ HydraLaserFire:
         ValidTargets: Ground
         Spread: 42
         Damage: 50
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: tpiff
         InvalidImpactTypes: Water
@@ -364,6 +315,7 @@ HydraLaserFire:
 
 AvatarLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 130
     Range: 8c512
     Report: obelray1.aud
@@ -380,7 +332,6 @@ AvatarLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 500
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: scexplo
         ExplosionPalette: effect50alpha
@@ -405,6 +356,7 @@ AvatarLaserE:
 	
 TripodLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 40
     Burst: 3
     BurstDelay: 30
@@ -423,7 +375,6 @@ TripodLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
         Damage: 150
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
@@ -438,6 +389,7 @@ TripodLaser:
 # Obelisk laser
 CabalObeliskLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 80
     Range: 12c512
     Report: cablaser01.aud
@@ -454,16 +406,6 @@ CabalObeliskLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 900
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
         ExplosionPalette: effect50alpha
@@ -478,6 +420,7 @@ CabalObeliskLaser:
 # Darkness laser
 CabalObeliskLaserAA:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 120
     Range: 13c0
     Report: cablaser01.aud
@@ -496,7 +439,6 @@ CabalObeliskLaserAA:
         ValidTargets: Air, MidAir, HighAir
         Spread: 0c512
         Damage: 800
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02
         ExplosionPalette: effect50alpha
@@ -512,6 +454,7 @@ CabalObeliskLaserAA:
 
 TarantulaLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 60
     Range: 7c0
     Burst: 2
@@ -530,7 +473,6 @@ TarantulaLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 30
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02
         ExplosionPalette: effect50alpha
@@ -544,6 +486,7 @@ TarantulaLaser:
 
 TarantulaLaserAA:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 90
     Range: 12c0
     Burst: 2
@@ -564,7 +507,6 @@ TarantulaLaserAA:
         ValidTargets: Air, MidAir
         Spread: 42
         Damage: 100
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02
         ExplosionPalette: effect50alpha
@@ -581,6 +523,7 @@ TarantulaLaserAA:
 # Laser turret Sesno
 LaserFire3:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 70
     Range: 7c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
@@ -599,16 +542,6 @@ LaserFire3:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 50
-        Versus:
-            Infantry: 150
-            Cyborg: 100
-            Vehicle: 50
-            Aircraft: 100
-            Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@3Eff: CreateEffect
         Explosions: piff
         InvalidImpactTypes: Water
@@ -618,6 +551,7 @@ LaserFire3:
 # Skirmisher Laser
 SkirmishLaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 180
     Range: 4c0
     MinRange: 1c0
@@ -638,7 +572,6 @@ SkirmishLaserFire:
         ValidTargets: Ground, Air
         Spread: 42
         Damage: 18
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
         Versus:
             Aircraft: 50
     Warhead@2Eff: CreateEffect
@@ -652,6 +585,7 @@ SkirmishLaserFire:
 # Harbinger Laser
 HarbingerLaserFire:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 120
     Range: 7c512
     Burst: 3
@@ -672,7 +606,6 @@ HarbingerLaserFire:
         ValidTargets: Ground, Air, MidAir
         Spread: 42
         Damage: 100
-        DamageTypes: Prone200Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl1
         ExplosionPalette: effect50alpha
@@ -684,6 +617,7 @@ HarbingerLaserFire:
 
 GargantuaLaser:
     Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
     ReloadDelay: 70
     Range: 7c0
     Burst: 8
@@ -704,7 +638,6 @@ GargantuaLaser:
         ValidTargets: Ground, Air, MidAir
         Spread: 42
         Damage: 80
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
         ExplosionPalette: effect50alpha

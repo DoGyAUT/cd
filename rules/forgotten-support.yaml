@@ -13,9 +13,7 @@ FAWALL:
     Tooltip:
         Name: Concrete Wall
     Health:
-        HP: 300
-    Armor:
-        Type: Heavy
+        HP: 400
     BlocksProjectiles:
         Height: 640
     Crushable:
@@ -65,9 +63,7 @@ FASILO:
         Bounds: 80, 48, -5, 0
     -GivesBuildableArea:
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 4c0
     RenderSprites:
@@ -83,9 +79,9 @@ FASILO:
         Capacity: 1000
     Power:
         Amount: -10   
-    Explodes:
-        Weapon: TiberiumExplosionSilo
-        EmptyWeapon: TiberiumExplosionSilo
+    # Explodes:
+        # Weapon: TiberiumExplosionSilo
+        # EmptyWeapon: TiberiumExplosionSilo
 
 FATOWER:
     Inherits: ^Defense
@@ -105,10 +101,8 @@ FATOWER:
         Bounds: 48, 62, 0, -25
     Power:
         Amount: -25
-    Armor:
-        Type: Medium
     Health:
-        HP: 800
+        HP: 940
     RevealsShroud:
         Range: 10c0
     Armament@attack1:
@@ -154,10 +148,8 @@ FAFLAK:
         Bounds: 48, 40, 0, 8
     Power:
         Amount: -25
-    Armor:
-        Type: Medium
     Health:
-        HP: 800
+        HP: 940
     RevealsShroud:
         Range: 13c0
     BodyOrientation:
@@ -200,10 +192,8 @@ FAMISSILE:
         Bounds: 60, 48, -5, 0
     Power:
         Amount: -50
-    Armor:
-        Type: Medium
     Health:
-        HP: 1500
+        HP: 1800
     RevealsShroud:
         Range: 13c0
     BodyOrientation:

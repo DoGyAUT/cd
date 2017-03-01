@@ -8,16 +8,7 @@
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 32
-        Versus:
-            Infantry: 100
-            Cyborg: 60
-            Vehicle: 10
-            Aircraft: 100
-            Building: 10
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 0
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -40,16 +31,7 @@
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 50
-        Versus:
-            Infantry: 100
-            Cyborg: 80
-            Vehicle: 30
-            Aircraft: 100
-            Building: 10
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 0
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: piff
@@ -63,7 +45,7 @@
         ExplosionPalette: light2
 
 ^MissileAPHE
-    ValidTargets: Ground, Air, MidAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         MaximumLaunchSpeed: 213
         Blockable: true
@@ -83,17 +65,8 @@
 #        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 50
-        ValidTargets: Ground, Air, MidAir
-        Versus:
-            Infantry: 30
-            Cyborg: 70
-            Vehicle: 100
-            Aircraft: 100
-            Building: 80
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 0
+        ValidTargets: Ground, Air, MidAir, HighAir
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_tumu
@@ -133,17 +106,8 @@
 #        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 60
+        Damage: 0
         ValidTargets: Ground
-        Versus:
-            Infantry: 100
-            Cyborg: 80
-            Vehicle: 40
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
@@ -176,16 +140,7 @@
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 100
-        Versus:
-            Infantry: 30
-            Cyborg: 70
-            Vehicle: 100
-            Aircraft: 100
-            Building: 60
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 0
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
@@ -217,16 +172,7 @@
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 100
-        Versus:
-            Infantry: 100
-            Cyborg: 80
-            Vehicle: 70
-            Aircraft: 100
-            Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
+        Damage: 0
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
         Explosions: small_clsn
@@ -245,69 +191,134 @@
         ExplosionPalette: light2
         
 ^BasicLaser:
+    Inherits: ^LaserWH
     Projectile: LaserZap
         Width: 50
     Warhead@1Dam: SpreadDamage
+        Damage: 0
+        
+^LaserWH:
+    Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 50
         Versus:
             Infantry: 100
             Cyborg: 100
             Vehicle: 100
             Aircraft: 100
             Building: 70
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-
-^PlasmaWarhead:
+        
+^BulletWH:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 50
+        Damage: 0
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 10
+            Aircraft: 100
+            Building: 10
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+        
+^APWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 0
+        Versus:
+            Infantry: 10
+            Cyborg: 10
+            Vehicle: 100
+            Aircraft: 100
+            Building: 60
+        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+        
+^HEWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 0
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 10
+            Aircraft: 100
+            Building: 100
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+        
+^APHEWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 0
+        Versus:
+            Infantry: 30
+            Cyborg: 30
+            Vehicle: 70
+            Aircraft: 100
+            Building: 80
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+        
+^SonicWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 0
+        Versus:
+            Infantry: 100
+            Cyborg: 100
+            Vehicle: 70
+            Aircraft: 100
+            Building: 100
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+        
+^PlasmaWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 0
         Versus:
             Infantry: 100
             Cyborg: 100
             Vehicle: 100
             Aircraft: 100
             Building: 100
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
         
-^Railgun:
+^RailgunWH:
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 50
+        Damage: 0
         Versus:
-            Infantry: 40
-            Cyborg: 100
+            Infantry: 30
+            Cyborg: 30
             Vehicle: 100
             Aircraft: 100
             Building: 60
-            Light: 100
-            Medium: 80
-            Heavy: 70
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
                 
-^Fire:
+^FireWH:
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 50
+        Damage: 0
         Falloff: 100, 80
         Versus:
-            Infantry: 200
-            Cyborg: 100
+            Infantry: 100
+            Cyborg: 50
             Vehicle: 25
             Aircraft: 100
-            Building: 200
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: Prone100Percent, TriggerProne, FireDeath		
+            Building: 100
+        DamageTypes: Prone100Percent, TriggerProne, FireDeath
+        
+^TiberiumWH:        
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 0
+        Versus:
+            Infantry: 100
+            Cyborg: 50
+            Vehicle: 50
+            Aircraft: 100
+            Building: 50
+        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath, TriggerVisceroid        
 
 ^ShellAPElite:
+    Inherits: ^ShellAP
     Warhead@1Dam: SpreadDamage
         Spread: 0c384
     Warhead@2Eff: CreateEffect

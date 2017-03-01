@@ -20,8 +20,6 @@ ORCA_F1:
         IdealSeparation: 768
     Health:
         HP: 500
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -91,8 +89,6 @@ ORCA_F2:
         Speed: 120
     Health:
         HP: 600
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 11c0
         Type: GroundPosition
@@ -168,8 +164,6 @@ ORCA_TRAN:
         LandingSound: dropdwn1.aud
     Health:
         HP: 700
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 9c0
         Type: GroundPosition
@@ -207,9 +201,7 @@ ORCA_TROOP:
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 800
-    Armor:
-        Type: Medium
+        HP: 940
     RevealsShroud:
         Range: 5c0
         Type: GroundPosition
@@ -245,8 +237,6 @@ TRNSPORT:
 #        Automatic: True
     Health:
         HP: 700
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 6c0
         Type: GroundPosition
@@ -269,9 +259,7 @@ ORCA_OXTRAN:
         TurnSpeed: 1
         Speed: 220
     Health:
-        HP: 500
-    Armor:
-        Type: Medium
+        HP: 600
     RevealsShroud:
         Range: 5c0
         Type: GroundPosition
@@ -312,9 +300,7 @@ GUNNER:
         TurnSpeed: 2
         Speed: 120
     Health:
-        HP: 1000
-    Armor:
-        Type: Medium
+        HP: 1200
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -339,8 +325,6 @@ ORCA_G:
         Speed: 250
     Health:
         HP: 500
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -390,9 +374,7 @@ OXBOMBER:
     Selectable:
         Bounds: 60,48,0,-10
     Health:
-        HP: 1500
-    Armor:
-        Type: Medium
+        HP: 1800
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -465,9 +447,7 @@ ORCA_B:
         TurnSpeed: 3
         Speed: 150
     Health:
-        HP: 1500
-    Armor:
-        Type: Heavy
+        HP: 2000
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -526,9 +506,7 @@ PHOENIX:
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 1700
-    Armor:
-        Type: Medium
+        HP: 2040
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -584,8 +562,6 @@ FHAWK:
         Speed: 200
     Health:
         HP: 850
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -680,8 +656,6 @@ HORNET:
         Speed: 220
     Health:
         HP: 1000
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -792,8 +766,6 @@ CONDOR:
         LandingSound: dropdwn1.aud
     Health:
         HP: 1100
-    Armor:
-        Type: Light
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -818,61 +790,61 @@ CONDOR:
     WithMuzzleOverlay:
     Contrail@1:
         Offset: -512,256,0
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@2:
         Offset: -512,-256,0
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@3:
         Offset: -512,512,0
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@4:
         Offset: -512,-512,0
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@11:
         Offset: -512,256,128
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@21:
         Offset: -512,-256,128
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@31:
         Offset: -512,512,128
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@41:
         Offset: -512,-512,128
-        TrailLength: 60
+        TrailLength: 30
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@5:
         Offset: -500,770,256
-        TrailLength: 30
+        TrailLength: 15
         TrailWidth: 20
         Color: FFFFFF
         UsePlayerColor: False
     Contrail@6:
         Offset: -500,-770,256
-        TrailLength: 30
+        TrailLength: 15
         TrailWidth: 20
         Color: FFFFFF
         UsePlayerColor: False
@@ -907,9 +879,7 @@ DSHP.SUPPORT:
     DamageMultiplier@INVULNERABLE:
         Modifier: 0
     Health:
-        HP: 800
-    Armor:
-        Type: Heavy
+        HP: 1040
     RevealsShroud:
         Range: 0c0
         Type: GroundPosition
@@ -952,9 +922,7 @@ DSHP:
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 1000
-    Armor:
-        Type: Heavy
+        HP: 1300
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -995,9 +963,7 @@ KODIAK:
         IdealSeparation: 2048
         CruiseAltitude: 8192
     Health:
-        HP: 7000
-    Armor:
-        Type: Heavy
+        HP: 9100
     RevealsShroud:
         Range: 15c0
         Type: GroundPosition
