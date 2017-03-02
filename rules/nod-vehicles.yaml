@@ -137,13 +137,13 @@ SAPC:
 		Subterranean: true
 		SubterraneanCondition: submerged
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-		SubterraneanTransitionCost: 120
+		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drilldwn.aud
 		SubterraneanTransitionImage: dig
 		SubterraneanTransitionSequence: idle
 		SubterraneanTransitionPalette : player
 		TerrainSpeeds:
-            Subterranean: 120
+            Subterranean: 110
     RejectsOrders:
         RequiresCondition: submerged
         Except: Attack, AttackMove, Guard, Move
@@ -151,6 +151,7 @@ SAPC:
         HP: 600
     RevealsShroud:
         Range: 6c0
+        RequiresCondition: !submerged
     Cargo:
         Types: Infantry
         MaxWeight: 8
@@ -470,9 +471,9 @@ RECKONER:
     RevealsShroud:
         Range: 10c0
     AttackGarrisoned:
-        PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
-        PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
-        PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
+        PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
+        PortYaws: 0, 176, 341, 512, 682, 853
+        PortCones: 86, 86, 86, 86, 86, 86
     Cargo:
         Types: Infantry
         MaxWeight: 6
@@ -783,13 +784,13 @@ SUBTANK:
 		Subterranean: true
 		SubterraneanCondition: submerged
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-		SubterraneanTransitionCost: 120
+		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drilldwn.aud
 		SubterraneanTransitionImage: dig
 		SubterraneanTransitionSequence: idle
 		SubterraneanTransitionPalette : player
 		TerrainSpeeds:
-            Subterranean: 120
+            Subterranean: 110
     RejectsOrders:
         RequiresCondition: submerged
         Except: Attack, AttackMove, Guard, Move
@@ -797,6 +798,7 @@ SUBTANK:
         HP: 960
     RevealsShroud:
         Range: 7c0
+        RequiresCondition: !submerged
     Armament@primary:
         Weapon: FireballLauncher
         LocalOffset: 840,0,512

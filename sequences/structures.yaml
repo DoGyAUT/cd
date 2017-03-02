@@ -2498,38 +2498,6 @@ gafort:
         Offset: 0, 0
         UseTilesetCode: false
 
-gaboom:
-    Defaults: 
-        Offset: 12, -38
-        UseTilesetCode: false
-    idle: 
-        ShadowStart: 3
-    damaged-idle: 
-        Start: 1
-        ShadowStart: 4
-    dead: 
-        Start: 2
-        ShadowStart: 5
-        Tick: 400
-    make: gafortmk
-        Length: 26
-        ShadowStart: 26
-    turret: gaboom_tur
-        Facings: 32
-        ShadowStart: 32
-    muzzle: gunfire
-        Length: *
-        Offset: 0, 0
-    emp-overlay: emp_fx01
-        Length: *
-        Offset: 0, 0, 25
-        UseTilesetCode: false
-        ZOffset: 512
-        BlendMode: Additive
-    icon: gaforticon
-        Offset: 0, 0
-        UseTilesetCode: false
-        
 gamg:
     Defaults: gatwr
         Offset: 0, -12
