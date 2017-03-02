@@ -509,92 +509,6 @@ GAFORT:
     Power:
         Amount: -100
     ProvidesPrerequisite@buildingname:
-        
-GABOOM:
-    Inherits: ^Defense
-    WithSpriteBody:
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: Fortress Artillery Bunker
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 112
-        Prerequisites: anypower, gaarmory, gatech, ~structures.gdi, ~upgrade.gdf
-        Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
-    Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4,4
-    Selectable:
-        Bounds: 120, 90, 0, -12
-    DisabledOverlay:
-    RequiresPower:
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 10c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    #RenderDetectionCircle:
-    #DetectCloaked:
-    #    Range: 6c0
-    #    CloakTypes: Cloak, Underground
-    AttackTurreted:
-    Turreted:
-        TurnSpeed: 2
-    Armament@primary:
-        Weapon: 280mmHE
-        LocalOffset: 2000,0,2900
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
-		ForceTargetStances: None
-    Armament@primary2:
-        Weapon: 280mmHE
-        LocalOffset: 2000,128,2600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
-		ForceTargetStances: None
-    Armament@primary3:
-        Weapon: 280mmHE
-        LocalOffset: 2000,-128,2600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 10
-		ForceTargetStances: None
-    CanPowerDown:
-        IndicatorPalette: mouse
-    -AutoTarget:
-    WithSpriteTurret:
-        Recoils: True
-    WithMuzzleOverlay:
-    Power:
-        Amount: -100
-    ProvidesPrerequisite@buildingname:
-	RejectsOrders:
-		Except: Stop
-	AttackOrderPower@arty:
-        Cursor: emp
-        Icon: emp
-        ChargeTime: 150
-        Description: Artillery Barrage
-        LongDesc: Fires a destructive volley of missiles\nwhich crush enemy units.
-        EndChargeSpeechNotification: EmPulseCannonReady
-        SelectTargetSpeechNotification: SelectTarget
-        OrderName: gdiarty
-	# FireArmamentPower:
-		# Icon: emp
-		# ChargeTime: 135
-		# Description: Artillery Barrage
-		# LongDesc: Fires a destructive volley of missiles\nwhich crush enemy units.
-		# AllowMultiple: false
-		# MaximumFiringInstances: 1
-	-FrozenUnderFog:
-	AlwaysVisible:
     
 GAPLUG2:
     Inherits: ^BuildingPlug
@@ -636,12 +550,12 @@ GAPLUG:
         Name: GDI Upgrade Center
     Selectable:
         Bounds: 115,104,0,-24
-    Buildable:
-        BuildPaletteOrder: 112
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
-        Queue: Defense
-		BuildLimit: 1
-        Description: Can be upgraded for additional technology and superweapons.
+#    Buildable:
+#        BuildPaletteOrder: 112
+#        Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
+#        Queue: Defense
+#		BuildLimit: 1
+#        Description: Can be upgraded for additional technology and superweapons.
     Building:
         Footprint: xxx xxx
         Dimensions: 2,3
