@@ -517,11 +517,11 @@ GABOOM:
         Cost: 4000
     Tooltip:
         Name: Fortress Artillery Bunker
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 112
-        Prerequisites: anypower, gaarmory, gatech, ~structures.gdi, ~upgrade.gdf
-        Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
+    # Buildable:
+        # Queue: Building
+        # BuildPaletteOrder: 112
+        # Prerequisites: anypower, gaarmory, gatech, ~structures.gdi, ~upgrade.gdf
+        # Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
@@ -636,12 +636,12 @@ GAPLUG:
         Name: GDI Upgrade Center
     Selectable:
         Bounds: 115,104,0,-24
-    Buildable:
-        BuildPaletteOrder: 112
-        Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
-        Queue: Defense
-		BuildLimit: 1
-        Description: Can be upgraded for additional technology and superweapons.
+    # Buildable:
+        # BuildPaletteOrder: 112
+        # Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
+        # Queue: Defense
+		# BuildLimit: 1
+        # Description: Can be upgraded for additional technology and superweapons.
     Building:
         Footprint: xxx xxx
         Dimensions: 2,3

@@ -286,12 +286,16 @@ WarthogMG:
     Burst: 50
     BurstDelay: 2
     Report: m3.aud
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: BulletAS
-        Speed: 0c682
+        Speed: 2c0
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 128
         Damage: 50
+        Versus:
+            Aircraft: 33
+        ValidTargets: Ground, Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
@@ -631,7 +635,7 @@ WatchMGsound:
     Range: 7c0
     Report: cancerousmg.wav
     Projectile: BulletAS
-        Image: 
+        -Image: 
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c128

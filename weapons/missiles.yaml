@@ -8,7 +8,7 @@ Bazooka:
     Report: javelin.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 300
+        Damage: 120
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu
         ExplosionPalette: apolra50alpha
@@ -140,7 +140,7 @@ AirblastMissile:
         
 MLRSBarrage:
     Inherits: ^MissileAPHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^APHEWH
     ValidTargets: Ground
     ReloadDelay: 220
     Burst: 6
@@ -156,7 +156,7 @@ MLRSBarrage:
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 80
+        Damage: 110
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_tumu, medium_tumu, large_tumu
@@ -985,7 +985,7 @@ HornetMissile:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 400
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu

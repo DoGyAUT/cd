@@ -15,7 +15,7 @@ FMCV:
     Voiced:
         VoiceSet: Fmcv
     Health:
-        HP: 1300
+        HP: 2000
     Mobile:
         Speed: 40
     RevealsShroud:
@@ -528,7 +528,7 @@ GREMLIN_90MM:
     Valued:
         Cost: 700
     Tooltip:
-        Name: Gremlin (90mm + MG)
+        Name: Gremlin (90mm)
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
@@ -555,14 +555,6 @@ GREMLIN_90MM:
         MuzzlePalette: apolra50alpha
         Recoil: 200
         RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: TaurusMG
-        LocalOffset: 140,-160,950
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0 
     AttackTurreted:
     AutoTarget:
     RenderSprites:
@@ -1299,7 +1291,7 @@ AUROCH_130MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_130mm
         Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: MammothApocalypse #Grunt
         Volume: 2
     Mobile:
         Speed: 40
@@ -1368,7 +1360,7 @@ AUROCH_120MMT: #NO CHANGES WITHOUT INFORMING ME ASTOR
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_120mmt
         Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: MammothApocalypse
         Volume: 2
     Mobile:
         Speed: 40
@@ -1454,7 +1446,7 @@ AUROCH_180MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_180mm
         Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: MammothApocalypse
         Volume: 2
     Mobile:
         Speed: 40

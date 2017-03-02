@@ -8,13 +8,16 @@ GremlinShotgun:
     Projectile: BulletAS
         Image: shell02
         Speed: 1c0
-        Inaccuracy: 1c256
+        Inaccuracy: 0c768
         Palette: effect
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 30
+        Damage: 35
+        Versus:
+            Infantry: 100
+            Cyborg: 100
         DamageTypes: Prone70Percent, TriggerProne, BulletDeath
     Warhead@2Eff: CreateEffect
         Explosions: tiny_clsn, tiny_bang
