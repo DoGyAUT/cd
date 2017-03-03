@@ -341,17 +341,17 @@ APCMG:
 	Inherits@wh: ^BulletWH
     ReloadDelay: 100
     Range: 6c0
-    Burst: 20
+    Burst: 10
     BurstDelay: 4
     Report: cygun1.aud
-    ValidTargets: Ground, Air, MidAir, HighAir
+    ValidTargets: Air, MidAir, HighAir
     Projectile: BulletAS
-        Speed: 0c682
+        Speed: 2c0
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
-	    ValidTargets: Ground, Air, MidAir, HighAir
+	    ValidTargets: Air, MidAir, HighAir
         Spread: 128
-        Damage: 25
+        Damage: 5
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water

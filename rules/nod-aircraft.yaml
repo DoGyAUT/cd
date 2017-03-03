@@ -297,7 +297,7 @@ NODCARRY:
         Probability: 100
 
 RAVEN:
-    Inherits: ^AttackAdvancedPlane
+    Inherits: ^AttackPlane
     Valued:
         Cost: 1200
     Tooltip:
@@ -360,7 +360,6 @@ RAVEN:
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
         SelfReloads: False
-    AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
@@ -590,7 +589,7 @@ ZEP:
         TurnSpeed: 2
         CruiseAltitude: 8192
 		Speed: 25
-        IdealSeparation: 4096
+        IdealSeparation: 2048
         AltitudeVelocity: 40
     Health:
         HP: 4550

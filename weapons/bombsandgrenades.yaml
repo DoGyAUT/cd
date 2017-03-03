@@ -14,8 +14,10 @@ Grenade:
         BounceCount: 2
         BounceRangeModifier: 60
     Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 70
+        Spread: 0c256
+        Damage: 55
+        Versus:
+            Building: 200
     Warhead@2Eff: CreateEffect
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
         ExplosionPalette: apolra2
@@ -375,7 +377,7 @@ VertigoBombGas:
 
 ZepBomb:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^APHEWH
     ReloadDelay: 20
     Range: 2c0
 	MinRange: 1
@@ -389,7 +391,7 @@ ZepBomb:
         Palette: effect
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 400
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
         ExplosionPalette: apolra2

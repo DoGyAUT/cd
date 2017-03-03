@@ -508,7 +508,7 @@ PoseidonTusk:
 MammothTusk:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^HEWH
-    ReloadDelay: 200
+    ReloadDelay: 100
     Range: 8c0
     Burst: 2
     BurstDelay: 8
@@ -521,7 +521,7 @@ MammothTusk:
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 200
+        Damage: 150
         ValidTargets: Ground, Air, MidAir
 
 MammothWalkerTusk:
@@ -928,7 +928,7 @@ HawkMissile:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 400
+        Damage: 550
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
@@ -956,7 +956,7 @@ HawkMissileAA:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 300
         ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
@@ -985,7 +985,7 @@ HornetMissile:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 400
+        Damage: 550
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu
@@ -1014,7 +1014,7 @@ HornetMissileAA:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 300
         ValidTargets: Air, MidAir, HighAir
     Warhead@2Eff: CreateEffect
         Explosions: tiny_tumu, small_tumu

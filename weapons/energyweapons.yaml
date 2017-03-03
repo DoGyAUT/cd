@@ -158,6 +158,7 @@ CruiserIonCannon:
         InvalidImpactTypes: Water, Air, AirHit
                 
 BehemothIonCannon:
+    Inherits@wh: ^HEWH
     ReloadDelay: 240
     Range: 12c0
     MinRange: 5c0
@@ -174,7 +175,7 @@ BehemothIonCannon:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 0c768
-        Damage: 600
+        Damage: 420
         Falloff: 100, 50, 25, 0
         Versus:
             Infantry: 100

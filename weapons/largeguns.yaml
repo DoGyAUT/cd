@@ -140,7 +140,7 @@ GorranCannon:
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 160
+        Damage: 90
         
 75mm1:
     Inherits: ^ShellAP 
@@ -307,7 +307,7 @@ GorranCannon:
 120mm1:
     Inherits: ^ShellAP 
 	Inherits@wh: ^APWH
-    ReloadDelay: 180
+    ReloadDelay: 200
     Burst: 1
     BurstDelay: 10
     Range: 6c768
@@ -317,7 +317,7 @@ GorranCannon:
         ContrailWidth: 20
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 250
+        Damage: 270
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra2
@@ -586,7 +586,7 @@ TritonCannon:
 
 BuggyMortar:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^TiberiumWH
     ReloadDelay: 80
     Range: 10c0
     Report: 120mmf.aud
@@ -603,10 +603,15 @@ BuggyMortar:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 80
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        InvalidImpactTypes: Water, Air, AirHit
 
 WarthogMortar:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^TiberiumWH
     ReloadDelay: 120
     Range: 12c0
     Report: 120mmf.aud
@@ -623,10 +628,15 @@ WarthogMortar:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 180
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        InvalidImpactTypes: Water, Air, AirHit
 
 AurochMortar:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^TiberiumWH
     ReloadDelay: 160
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -642,7 +652,12 @@ AurochMortar:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 230
+        Damage: 350
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        InvalidImpactTypes: Water, Air, AirHit
         
 240mm:
     Inherits: ^ShellHE 
