@@ -55,7 +55,7 @@ GHARV:
         VoiceSet: Gharv
         Volume: 2
     Harvester:
-        DeliveryBuildings: gproc, nproc, kproc, fproc
+        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
         Capacity: 10
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
@@ -123,7 +123,7 @@ APC:
 #            gasol: apc_mg
             e2: apc_gren
             medic: apc_medic
-        EjectOnDeath: True
+        EjectOnDeath: False
     Armament@Cannon:
         Name: primary
         Weapon: 60mm
@@ -191,50 +191,6 @@ APC:
     DetectCloaked:
         Range: 6c0
     RenderDetectionCircle:
-
-FIREFLY:
-    Inherits@1: ^Walker
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 450
-    Tooltip:
-        Name: Firefly
-    Selectable:
-        Bounds: 42,42, 0, -10
-#    Buildable:
-#        Queue: Vehicle.GDI
-#        BuildPaletteOrder: 104
-#        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc, ~!upgrade.gdf
-#        Description: Anti-personnel walker.\n\n  Role: Anti Infantry\n  HP: 700\n  Armor: Medium\n  Speed: 60\n  Viewrange: 8\n\n Good vs Infantry, Light Armor, VTOL's\n\n Special:\n\n - Crushes infantry
-    Voiced:
-        VoiceSet: Wolverine
-        Volume: 2
-    Mobile:
-        TurnSpeed: 6
-        Speed: 80
-        Crushes: crate
-    Health:
-        HP: 500
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 8
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: FireflyCannon
-        LocalOffset: 128,200,650, 128,-200,650
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: FireflyMissiles
-        LocalOffset: -32,32,780, -32,-32,780
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    RenderSprites:
-    WithInfantryBody:
-    WithMuzzleOverlay:
         
 SMECH:
     Inherits: ^Walker
@@ -430,7 +386,7 @@ HVR:
         Prerequisites: ~gaweap, ~upgrade.zc
         Description: Hovering vehicle, armed with long range missiles.\n\n  Role: Support/Artillery/Anti VTOL\n  HP: 400\n  Armor: Medium\n  Speed: 80\n  Viewrange: 13\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Hovers\n - Full burst lock on VTOLs\n - Crushes infantry 
     Voiced:
-        VoiceSet: Archon
+        VoiceSet: Slingshot
         Volume: 2
     Mobile:
         Speed: 70
@@ -638,7 +594,7 @@ MMCH:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1700
+        Cost: 1600
     Tooltip:
         Name: Titan
     Buildable:
@@ -795,7 +751,7 @@ SONIC:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1700
+        Cost: 2000
     Tooltip:
         Name: Colossus
     Buildable:
@@ -814,7 +770,7 @@ SONIC:
         TurnSpeed: 3
         Speed: 40
     Health:
-        HP: 1820
+        HP: 2200
     RevealsShroud:
         Range: 7c0
     Armament@Color1:

@@ -55,7 +55,7 @@ FHARV:
         VoiceSet: Fharv
         Volume: 2
     Harvester:
-        DeliveryBuildings: gproc, nproc, kproc, fproc
+        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
         Capacity: 12
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
@@ -1100,7 +1100,7 @@ BISON_130MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_130mm
         Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: Marauder
         Volume: 2
     Mobile:
         Speed: 50
@@ -1163,7 +1163,7 @@ BISON_145MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_145mm
         Description: Fast tank.\n Armed with a 145mm cannon, grenade launcher and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: Marauder
         Volume: 2
     Mobile:
         Speed: 50
@@ -1227,7 +1227,7 @@ BISON_180MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_180mm
         Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
     Voiced:
-        VoiceSet: Grunt
+        VoiceSet: Marauder
         Volume: 2
     Mobile:
         Speed: 50
@@ -1264,7 +1264,7 @@ AUROCH_130MM:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1700
+        Cost: 1800
     Tooltip:
         Name: Auroch (130mm + MG)
     Selectable:
@@ -1275,7 +1275,7 @@ AUROCH_130MM:
         Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_130mm
         Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
     Voiced:
-        VoiceSet: MammothApocalypse #Grunt
+        VoiceSet: MammothApocalypse
         Volume: 2
     Mobile:
         Speed: 40
@@ -1333,7 +1333,7 @@ AUROCH_120MMT: #NO CHANGES WITHOUT INFORMING ME ASTOR
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1700
+        Cost: 1800
     Tooltip:
         Name: Auroch (120mm Twin Cannon)
     Selectable:
@@ -1412,14 +1412,12 @@ AUROCH_120MMT: #NO CHANGES WITHOUT INFORMING ME ASTOR
         Modifier: 180
     FirepowerMultiplier@heroic:
         Modifier: 200
-    
-    
-    
+
 AUROCH_180MM:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1700
+        Cost: 1800
     Tooltip:
         Name: Auroch (180mm)
     Selectable:

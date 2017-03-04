@@ -324,7 +324,7 @@ GARADR:
         CloakTypes: Underground
     AirstrikePower@orcascout:
         OrderName: OrcaScoutRun
-        Prerequisites: garadr, ~canteither
+        Prerequisites: garadr
         Icon: orcascout
         ChargeTime: 180
         Description: Orca Scout Run
@@ -341,6 +341,9 @@ GARADR:
         DisplayBeacon: true
         DisplayRadarPing: True
         BeaconPoster: orcascout
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
     
 GAARMORY:
     Inherits: ^Building
@@ -519,7 +522,7 @@ GATECH:
     ProvidesPrerequisite@buildingname:
     AirstrikePower@orcabomber:
         OrderName: OrcaBomberAirstrikePowerInfoOrder
-        Prerequisites: garadr, ~youcant
+        Prerequisites: gahpad
         Icon: orcabomber
         ChargeTime: 300
         QuantizedFacings: 8
@@ -537,6 +540,9 @@ GATECH:
         BeaconPosterPalette: beaconposter
         DisplayRadarPing: True
         CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
    
 GADROP:
     Inherits: ^Building

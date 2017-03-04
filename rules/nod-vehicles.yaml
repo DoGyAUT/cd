@@ -38,16 +38,16 @@ NMCV:
     ActorLostNotification:
         Notification: CriticalUnitLost
 
-NHARV:
+NIHARV:
     Inherits: ^VoxelTank
     Valued:
         Cost: 1000
     Tooltip:
-        Name: Nod Harvester
+        Name: Nod Industry Harvester
     Buildable:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 201
-        Prerequisites: ~naweap, nproc
+        Prerequisites: ~naweap, niproc
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -56,7 +56,7 @@ NHARV:
         VoiceSet: Nharv
         Volume: 2        
     Harvester:
-        DeliveryBuildings: gproc, nproc, kproc, fproc
+        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
         Capacity: 10
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
@@ -66,9 +66,6 @@ NHARV:
         HarvestVoice: Action
         DeliverVoice: Move
         PipCount: 5
-    DamageMultiplier@prop:        
-        RequiresCondition: propaganda   
-        Modifier: 75
     -DamagedByTerrain@Veins:
     Mobile:
         Speed: 50
@@ -76,28 +73,65 @@ NHARV:
         HP: 1200
     Armament@primary:
         Weapon: NodHarvGun
-        LocalOffset: 200,0,600
-        RequiresCondition: industry
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+        LocalOffset: 256,0,750
     AttackTurreted:
     AutoTarget:
     Turreted:
-        TurnSpeed: 360
-        Offset: 0,0,0
-#    SelfHealing:
-#        Step: 0
-#        PercentageStep: 1
-#        Delay: 10
-#        HealIfBelow: 100
-#        DamageCooldown: 200
+        TurnSpeed: 10
+        Offset: 220,0,0
+    RevealsShroud:
+        Range: 6c0
+    -ProducibleWithLevel:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelTurret:
+    -WithVoxelBody:
+    WithVoxelUnloadBody:
+    WithMuzzleOverlay
+    Explodes:
+        Weapon: LargeTiberiumExplosion
+    WithHarvestOverlay:
+        Offset: 384,0,0
+        Palette: effect
+
+NTHARV:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Nod Technology Harvester
+    Buildable:
+        Queue: Vehicle.Nod
+        BuildPaletteOrder: 201
+        Prerequisites: ~naweap, ntproc
+        Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
+    Selectable:
+        Priority: 7
+        Bounds: 36,36
+    Voiced:
+        VoiceSet: Nharv
+        Volume: 2        
+    Harvester:
+        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+        Capacity: 10
+        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+        BaleLoadDelay: 12
+        BaleUnloadDelay: 6
+        SearchFromProcRadius: 36
+        SearchFromOrderRadius: 18
+        HarvestVoice: Action
+        DeliverVoice: Move
+        PipCount: 5
+    -DamagedByTerrain@Veins:
+    Mobile:
+        Speed: 50
+    Health:
+        HP: 1200
     GrantConditionOnPrerequisite@cloak:
         Condition: technology
         Prerequisites: technology
-    GrantConditionOnPrerequisite@tanky:
-        Condition: propaganda
-        Prerequisites: propaganda
-    GrantConditionOnPrerequisite@gun:
-        Condition: industry
-        Prerequisites: industry
     Cloak:
         RequiresCondition: crate-cloak || cloakgenerator || technology
     RevealsShroud:
@@ -113,6 +147,54 @@ NHARV:
         Offset: 384,0,0
         Palette: effect
 
+NPHARV:
+    Inherits: ^VoxelTank
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Nod Propaganda Harvester
+    Buildable:
+        Queue: Vehicle.Nod
+        BuildPaletteOrder: 201
+        Prerequisites: ~naweap, npproc
+        Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
+    Selectable:
+        Priority: 7
+        Bounds: 36,36
+    Voiced:
+        VoiceSet: Nharv
+        Volume: 2        
+    Harvester:
+        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+        Capacity: 10
+        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+        BaleLoadDelay: 12
+        BaleUnloadDelay: 6
+        SearchFromProcRadius: 36
+        SearchFromOrderRadius: 18
+        HarvestVoice: Action
+        DeliverVoice: Move
+        PipCount: 5
+    DamageMultiplier@prop:         
+        Modifier: 75
+    -DamagedByTerrain@Veins:
+    Mobile:
+        Speed: 50
+    Health:
+        HP: 1200
+    RevealsShroud:
+        Range: 6c0
+    -ProducibleWithLevel:
+    RenderSprites:
+    RenderVoxels:
+    -WithVoxelBody:
+    WithVoxelUnloadBody:
+    Explodes:
+        Weapon: LargeTiberiumExplosion
+    WithHarvestOverlay:
+        Offset: 384,0,0
+        Palette: effect
+        
 SAPC:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
@@ -156,7 +238,7 @@ SAPC:
         Types: Infantry
         MaxWeight: 8
         PipCount: 8
-        EjectOnDeath: True
+        EjectOnDeath: False
 		LoadingCondition: loading
     RenderSprites:
     RenderVoxels:
@@ -802,15 +884,15 @@ SUBTANK:
     Armament@primary:
         Weapon: FireballLauncher
         LocalOffset: 840,0,512
-        RequiresCondition: !deployed
+        RequiresCondition: !submerged
     Armament@secondary:
         Weapon: FireballLauncher
         LocalOffset: 840,-360,300
-        RequiresCondition: !deployed
+        RequiresCondition: !submerged
     Armament@secondary2:
         Weapon: FireballLauncher
         LocalOffset: 840,360,300
-        RequiresCondition: !deployed
+        RequiresCondition: !submerged
     AttackFrontal:
     AutoTarget:
     RenderSprites:

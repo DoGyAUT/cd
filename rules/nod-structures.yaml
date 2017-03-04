@@ -139,16 +139,16 @@ NAAPWR:
     ScalePowerWithHealth:
     DisabledOverlay:
 
-NPROC:
+NIPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
         Cost: 1500
     Tooltip:
-        Name: Nod Tiberium Refinery
+        Name: Nod Industry Tiberium Refinery
     Buildable:
         Queue: Building
         BuildPaletteOrder: 202
-        Prerequisites: anypower, ~structures.nod, ~ideology
+        Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
         Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
     Building:
         Footprint: xxx= xx== xxx=
@@ -174,7 +174,7 @@ NPROC:
     CustomSellValue:
         Value: 500
     FreeActor:
-        Actor: NHARV
+        Actor: NIHARV
         SpawnOffset: 2,1
         Facing: 160
 #    WithIdleOverlay@REDLIGHTS:
@@ -192,8 +192,40 @@ NPROC:
     Explodes:
         Weapon: TiberiumExplosionRef
         EmptyWeapon: TiberiumExplosionRef
+    RenderSprites:
+        Image: NPROC
     ProvidesPrerequisite@buildingname:   
-    
+    ProvidesPrerequisite@nodref:   
+        Prerequisite: nproc
+
+NTPROC:
+    Inherits: NIPROC
+    Tooltip:
+        Name: Nod Technology Tiberium Refinery
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 202
+        Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+    FreeActor:
+        Actor: NTHARV
+        SpawnOffset: 2,1
+        Facing: 160
+
+NPPROC:
+    Inherits: NIPROC
+    Tooltip:
+        Name: Nod Propaganda Tiberium Refinery
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 202
+        Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
+        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+    FreeActor:
+        Actor: NPHARV
+        SpawnOffset: 2,1
+        Facing: 160
+
 NAHAND:
     Inherits: ^Building
     Buildable:
@@ -445,7 +477,9 @@ NAPYRA:
     ProvidesPrerequisite@buildingname:
     DetonateWeaponPower@frenzy:
         OrderName: FrenzyPowerInfoOrder
-        Prerequisites: napyra, ~propaganda, ~noitcrashes
+        Prerequisites: napyra, ~propaganda
+        Description: Frenzy
+        LongDesc: Grants friendly infantry a time limited boost in movement speed.
         ActivationSequence:
         Icon: fenzy
         ChargeTime: 180
@@ -459,6 +493,9 @@ NAPYRA:
         EndChargeSound: nod1_s8.aud
         LaunchSound: nod1_s5.aud
         IncomingSound:  nod1_a8.aud
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
    
 NATECH:
     Inherits: ^Building

@@ -29,7 +29,7 @@ Player:
         MaximumCaptureTargetOptions: 15
         BuildingCommonNames:
             ConstructionYard: gacnst, nacnst, kacnst, facnst, sacnst
-            Refinery: gproc, nproc, kproc, fproc, sproc
+            Refinery: gproc, niproc, ntproc, npproc, kproc, fproc, sproc
             Power: gapowr, napowr, naapwr, kpr, fapowr, sapowr
             Barracks: gapile, nahand, cybbar, fabar, saportal
             VehiclesFactory: gaweap, naweap, kaweap, faweap, saportal
@@ -37,6 +37,7 @@ Player:
             Silo: gsilo, nasilo, kasilo, fasilo
         UnitsCommonNames:
             Mcv: gmcv, nmcv, kmcv, fmcv, smcv
+            ExcludeFromSquads: gharv, niharv, ntharv, npharv, kharv, fharv, sharv
         BuildingLimits:        
 #Power
             gapowr: 10
@@ -254,7 +255,9 @@ Player:
         UnitsToBuild:
 #GDI
             gharv: 1%
-            nharv: 1%
+            niharv: 1%
+            ntharv: 1%
+            npharv: 1%
             kharv: 1%
             fharv: 1%
             sharv: 1%
@@ -400,7 +403,9 @@ Player:
             medic: 1
             atruck: 1
             gharv: 6
-            nharv: 6
+            niharv: 6
+            ntharv: 6
+            npharv: 6
             kharv: 6
             fharv: 6
             sharv: 6

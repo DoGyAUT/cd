@@ -213,14 +213,16 @@ KDARK:
         IsPlayerPalette: True
     AutoTarget:
     RenderRangeCircle:
-    WithIdleOverlay@LIGHTS:
+    WithIdleOverlayAS@LIGHTS:
+        RequiresCondition: !charging
+        PauseOnLowPower: True
+        Image: kdark
         Sequence: idle-lights
     Power:
         Amount: -150
     RenderDetectionCircle:
     DetectCloaked:
         Range: 6c0
-        CloakTypes: Cloak, Underground
     ProvidesPrerequisite@buildingname:
         
 KOBEL:

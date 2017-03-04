@@ -42,7 +42,7 @@ Medic:
         Move: medic_m1, medic_m2, medic_m3, medic_m4, medic_m5, medic_m6, medic_m7, medic_m8, medic_m9, medic_m10
         Action: medic_a1, medic_a2, medic_a3, medic_a4, medic_a5, medic_a6, medic_a7, medic_a8, medic_a9, medic_a10
 #        Feedback: medic_f1, medic_f2, medic_f3, medic_f4
-        Die: medic_d1, medic_d2, medic_d3, medic_d4, medic_d5
+        Die: medic_d1, medic_d2, medic_d3, medic_d4, medic_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: dedman2
         Zapped: electro1
 
@@ -81,7 +81,7 @@ Spy:
         Move: spy_m1, spy_m2, spy_m3, spy_m4, spy_m5, spy_m6, spy_m7, spy_m8, spy_m9, spy_m10
         Action: spy_a1, spy_a2 ,spy_a3 ,spy_a4, spy_a5, spy_a6, spy_a7, spy_a8, spy_a9
 #        Feedback: spy_f1, spy_f2, spy_f3, spy_f4, spy_f5
-        Die: spy_d1, spy_d2, spy_d3, spy_d4, spy_d5
+        Die: spy_d1, spy_d2, spy_d3, spy_d4, spy_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: dedman2
         Zapped: electro1
 
@@ -206,7 +206,7 @@ Marine:
         Move: gdi1_m1, gdi1_m2, gdi1_m3, gdi1_m4, gdi1_m5, gdi1_m6, gdi1_m7, gdi1_m8, gdi1_m9, gdi1_m10
         Action: gdi1_a1, gdi1_a2, gdi1_a3, gdi1_a4, gdi1_a5, gdi1_a6, gdi1_a7, gdi1_a8
 #        Feedback: gdi1_f1, gdi1_f2, gdi1_f3, gdi1_f4, gdi1_f5, gdi1_f6, gdi1_f7, gdi1_f8, gdi1_f9, gdi1_f10, gdi1_f11, gdi1_f12, gdi1_f13, gdi1_f14
-        Die: gdi1_d1, gdi1_d2, gdi1_d3, gdi1_d4, gdi1_d5, gdi1_d6
+        Die: gdi1_d1, gdi1_d2, gdi1_d3, gdi1_d4, gdi1_d5, gdi1_d6, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: dedman2
         Zapped: electro1
         Build: gdi1_s3
@@ -217,7 +217,7 @@ Discthrower:
         Move: gdi2_m1, gdi2_m2, gdi2_m3, gdi2_m4, gdi2_m5
         Action: gdi2_a1, gdi2_a2, gdi2_a3, gdi2_a4, gdi2_a5, gdi2_a6, gdi2_a7, gdi2_a8, gdi2_a9, gdi2_a10, gdi2_a11
 #        Feedback: gdi2_f1, gdi2_f2, gdi2_f3, gdi2_f4, gdi2_f5, gdi2_f6, gdi2_f7, gdi2_f8
-        Die: gdi2_d1, gdi2_d2, gdi2_d3, gdi2_d4, gdi2_d5
+        Die: gdi2_d1, gdi2_d2, gdi2_d3, gdi2_d4, gdi2_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: dedman2
         Zapped: electro1
         
@@ -227,7 +227,7 @@ ZoneMarine:
         Move: zmarine_m1, zmarine_m2, zmarine_m3, zmarine_m4, zmarine_m5, zmarine_m6, zmarine_m7, zmarine_m8, zmarine_m9, zmarine_m10
         Action: zmarine_a1, zmarine_a2, zmarine_a3, zmarine_a4, zmarine_a5, zmarine_a6, zmarine_a7, zmarine_a8, zmarine_a9, zmarine_a10
 #        Feedback: zmarine_f1, zmarine_f2, zmarine_f3, zmarine_f4, zmarine_f5
-        Die: zmarine_d1, zmarine_d2, zmarine_d3, zmarine_d4, zmarine_d5
+        Die: zmarine_d1, zmarine_d2, zmarine_d3, zmarine_d4, zmarine_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: dedman2
         Zapped: electro1
 
@@ -320,10 +320,19 @@ Grunt:
         Move: grunt_m1, grunt_m2, grunt_m3, grunt_m4, grunt_m5, grunt_m6, grunt_m7, grunt_m8
         Action: grunt_a1, grunt_a2, grunt_a3, grunt_a4, grunt_a5, grunt_a6, grunt_a7, grunt_a8, grunt_a9, grunt_a10, grunt_a11
 #        Feedback: grunt_f1, grunt_f2, grunt_f3, grunt_f4, grunt_f5, grunt_f6, grunt_d2, grunt_d3
-        Die: grunt_d1, grunt_d4, grunt_d5, grunt_d6
+        Die: grunt_d1, grunt_d4, grunt_d5, grunt_d6, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: grunt_d1, grunt_d4, grunt_d5, grunt_d6
         Zapped: electro1
 
+Marauder:
+    Voices:
+        Select: mut1_s1, mut1_s2, mut1_s3, mut1_s4, mut1_s5, mut1_s6, mut1_s7, mut1_s8, mut1_s9, mut1_s10, mut1_s11
+        Move: mut1_m1, mut1_m2, mut1_m3, mut1_m4, mut1_m5
+        Action: mut1_a1, mut1_a2, mut1_a3, mut1_a4, mut1_a5, mut1_a6, mut1_a7, mut1_a8
+#        Feedback: mut1_f1, mut1_f2, mut1_f3, mut1_f4, mut1_f5
+        Die: grunt_d1, grunt_d4, grunt_d5, grunt_d6, dedman1, dedman3, dedman4, dedman5, dedman6
+        Burned: grunt_d1, grunt_d4, grunt_d5, grunt_d6
+        Zapped: electro1
         
 Hunter:
     Voices:
@@ -369,7 +378,7 @@ Rookie:
         Move: nod1_m1, nod1_m2, nod1_m3, nod1_m4, nod1_m5, nod1_m6, nod1_m7, nod1_m8, nod1_m9, nod1_m10, nod1_m11, nod1_m12
         Action: nod1_a1, nod1_a2, nod1_a3, nod1_a4, nod1_a5, nod1_a6, nod1_a7, nod1_a8, nod1_a9, nod1_a10, nod1_a11, nod1_a12
 #        Feedback: nod1_f1, nod1_f2, nod1_f3, nod1_f4, nod1_f5, nod1_f6, nod1_f7
-        Die: nod1_d1, nod1_d2, nod1_d3, nod1_d4, nod1_d5
+        Die: nod1_d1, nod1_d2, nod1_d3, nod1_d4, nod1_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: nod1_d1, nod1_d2, nod1_d3, nod1_d4, nod1_d5
         Zapped: electro1
 
@@ -379,7 +388,7 @@ Rocketeer:
         Move: nod2_m1, nod2_m2, nod2_m3, nod2_m4, nod2_m5, nod2_m6, nod2_m7, nod2_m8, nod2_m9
         Action: nod2_a1, nod2_a2, nod2_a3, nod2_a4, nod2_a5, nod2_a6, nod2_a7
 #        Feedback: nod2_f1, nod2_f2, nod2_f3, nod2_f4, nod2_f5, nod2_f6, nod2_f7
-        Die: nod2_d1, nod2_d2, nod2_d3, nod2_d4, nod2_d5
+        Die: nod2_d1, nod2_d2, nod2_d3, nod2_d4, nod2_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: nod2_d1, nod2_d2, nod2_d3, nod2_d4, nod2_d5
         Zapped: electro1
     
@@ -389,7 +398,7 @@ Scout:
         Move: spotter_m1, spotter_m2, spotter_m3, spotter_m4, spotter_m5, spotter_m6, spotter_m7, spotter_m8
         Action: spotter_m1, spotter_m2, spotter_m3, spotter_m4, spotter_m5, spotter_m6, spotter_m7, spotter_m8
 #        Feedback: spotter_f1, spotter_f2, spotter_f3
-        Die: spotter_d1, spotter_d2, spotter_d3, spotter_d4, spotter_d5, spotter_d6, spotter_d7
+        Die: spotter_d1, spotter_d2, spotter_d3, spotter_d4, spotter_d5, spotter_d6, spotter_d7, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: spotter_d1, spotter_d2, spotter_d3, spotter_d4, spotter_d5, spotter_d6, spotter_d7
         Zapped: electro1
             
@@ -426,7 +435,7 @@ Mechanic:
         Move: mechanic_m1, mechanic_m2, mechanic_m3, mechanic_m4, mechanic_m5, mechanic_m6, mechanic_m7, mechanic_m8, mechanic_m9, mechanic_m10, mechanic_a1, mechanic_a2, mechanic_a3, mechanic_a4, mechanic_a5
         Action: mechanic_m1, mechanic_m2, mechanic_m3, mechanic_m4, mechanic_m5, mechanic_m6, mechanic_m7, mechanic_m8, mechanic_m9, mechanic_m10, mechanic_a1, mechanic_a2, mechanic_a3, mechanic_a4, mechanic_a5
 #        Feedback: mechanic_f1, mechanic_f2, mechanic_f3
-        Die: mechanic_d1, mechanic_d2, mechanic_d3, mechanic_d4
+        Die: mechanic_d1, mechanic_d2, mechanic_d3, mechanic_d4, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: mechanic_d1, mechanic_d2, mechanic_d3, mechanic_d4
         Zapped: electro1
 
@@ -436,7 +445,7 @@ Saboteur:
         Move: nodeng_m1, nodeng_m2, nodeng_m3, nodeng_m4, nodeng_m5, nodeng_m6, nodeng_m7, nodeng_m8, nodeng_m9, nodeng_m10, nodeng_m11, nodeng_m12, nodeng_m13, nodeng_a1, nodeng_a2, nodeng_a3, nodeng_a4, nodeng_a5, nodeng_a6, nodeng_a7, nodeng_a8, nodeng_a9, nodeng_a10
         Action: nodeng_m1, nodeng_m2, nodeng_m3, nodeng_m4, nodeng_m5, nodeng_m6, nodeng_m7, nodeng_m8, nodeng_m9, nodeng_m10, nodeng_m11, nodeng_m12, nodeng_m13, nodeng_a1, nodeng_a2, nodeng_a3, nodeng_a4, nodeng_a5, nodeng_a6, nodeng_a7, nodeng_a8, nodeng_a9, nodeng_a10
 #        Feedback: nodeng_f1, nodeng_f2, nodeng_f3, nodeng_f4, nodeng_f5
-        Die: nodeng_d1, nodeng_d2, nodeng_d3, nodeng_d4, nodeng_d5, nodeng_d6
+        Die: nodeng_d1, nodeng_d2, nodeng_d3, nodeng_d4, nodeng_d5, nodeng_d6, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: nodeng_d1, nodeng_d2, nodeng_d3, nodeng_d4, nodeng_d5, nodeng_d6
         Zapped: electro1
 
@@ -472,7 +481,7 @@ Thief:
         Move: thief_m1, thief_m2, thief_m3, thief_m4, thief_m5, thief_m6, thief_m7, thief_m8
         Action: thief_a1, thief_a2, thief_a3, thief_a4, thief_a5, thief_a6, thief_a7, thief_a8, thief_a9
 #        Feedback: thief_f1, thief_f2, thief_f3, thief_f4
-        Die: thief_d1, thief_d2, thief_d3, thief_d4
+        Die: thief_d1, thief_d2, thief_d3, thief_d4, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: thief_d1, thief_d2, thief_d3, thief_d4
         Zapped: electro1
         
@@ -507,7 +516,7 @@ Fanatic:
         Move: fanatic_m1, fanatic_m2, fanatic_m3, fanatic_m4, fanatic_m5, fanatic_m6
         Action: fanatic_a1, fanatic_a2, fanatic_a3, fanatic_a4, fanatic_a5, fanatic_a6, fanatic_a7, fanatic_a8, fanatic_a9
 #        Feedback: fanatic_f1, fanatic_f2, fanatic_f3, fanatic_f4, fanatic_f5, fanatic_f6, fanatic_f7
-        Die: fanatic_d1, fanatic_d2, fanatic_d3, fanatic_d4, fanatic_d5
+        Die: fanatic_d1, fanatic_d2, fanatic_d3, fanatic_d4, fanatic_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: fanatic_d1, fanatic_d2, fanatic_d3, fanatic_d4, fanatic_d5
         Zapped: electro1    
             
@@ -517,7 +526,7 @@ Shadow:
         Move: shadow_m1, shadow_m2, shadow_m3, shadow_m4, shadow_m5, shadow_m6, shadow_m7, shadow_m8, shadow_m9, shadow_m10
         Action: shadow_a1, shadow_a2, shadow_a3, shadow_a4, shadow_a5, shadow_a6, shadow_a7, shadow_a8, shadow_a9
 #        Feedback: shadow_f1, shadow_f2, shadow_f3, shadow_f4, shadow_f5
-        Die: shadow_d1, shadow_d2, shadow_d3, shadow_d4, shadow_d5, shadow_d6
+        Die: shadow_d1, shadow_d2, shadow_d3, shadow_d4, shadow_d5, shadow_d6, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: shadow_d1, shadow_d2, shadow_d3, shadow_d4, shadow_d5, shadow_d6
         Zapped: electro1
         
@@ -540,7 +549,7 @@ Blackhand:
         Move: bhand_m1, bhand_m2, bhand_m3, bhand_mT1
         Action: bhand_a1, bhand_a2, bhand_a3, bhand_a4, bhand_a5, bhand_a6, bhand_a7, bhand_a8, bhand_a9, bhand_a10, bhand_aT1
 #        Feedback: bhand_f1, bhand_f2, bhand_f3, bhand_f4
-        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
+        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
         Zapped: electro1        
         
@@ -550,7 +559,7 @@ Confessor:
         Move: confessor_m1, confessor_m2, confessor_m3, confessor_m4, confessor_m5, confessor_m6
         Action: confessor_a1, confessor_a2, confessor_a3, confessor_a4, confessor_a5, confessor_a6, confessor_a7, confessor_a8, confessor_a9, confessor_a10, confessor_a11, confessor_a12, confessor_a13, confessor_a14, confessor_a15, confessor_a16, confessor_a17
 #        Feedback: confessor_f1, confessor_f2, confessor_f3, confessor_f4, confessor_f5
-        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
+        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
         Zapped: electro1    
 
@@ -599,6 +608,12 @@ Titan:
         Move: titan_m1, titan_m2, titan_m3, titan_m4, titan_m5, titan_m6, titan_m7
         Action: titan_a1, titan_a2, titan_a3, titan_a4, titan_a5, titan_a6, titan_a7, titan_a8, titan_a9, titan_a10
 
+Slingshot:
+    Voices:
+        Select: slingshot_s1, slingshot_s2, slingshot_s3, slingshot_s4, slingshot_s5, slingshot_s6, slingshot_s7, slingshot_s8, slingshot_s9, slingshot_s10
+        Move: slingshot_m1, slingshot_m2, slingshot_m3, slingshot_m4, slingshot_m5, slingshot_m6, slingshot_m7
+        Action: slingshot_a1, slingshot_a2, slingshot_a3, slingshot_a4, slingshot_a5, slingshot_a6, slingshot_a7, slingshot_a8, slingshot_a9, slingshot_a10, slingshot_a11, slingshot_a12
+
 Avatar:
     Voices:
         Select: avatar_s1, avatar_s2, avatar_s3, avatar_s4, avatar_s5, avatar_s6, avatar_s7, avatar_s8, avatar_st1, avatar_st2
@@ -620,7 +635,7 @@ Bhand:
         Move: bhand_m1, bhand_m2, bhand_m3, bhand_mt1
         Action: bhand_a1, bhand_a2, bhand_a3, bhand_a4, bhand_a5, bhand_a6, bhand_a7, bhand_a8, bhand_a9, bhand_a10, bhand_at1
 #        Feedback: bhand_f1, bhand_f2, bhand_f3, bhand_f4
-        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
+        Die: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: bhand_d1, bhand_d2, bhand_d3, bhand_d4, bhand_d5
         Zapped: electro1
 
@@ -666,7 +681,7 @@ Trooper:
         Move: trooper_m1, trooper_m2, trooper_m3, trooper_m4, trooper_m5, trooper_m6, trooper_m7, trooper_m8, trooper_m9, trooper_m10, trooper_m11, trooper_mt1
         Action: trooper_a1, trooper_a2, trooper_a3, trooper_a4, trooper_a5, trooper_a6, trooper_a7, trooper_a8, trooper_a9, trooper_a10, trooper_a11, trooper_a12, trooper_a13, trooper_a14, trooper_a15
 #        Feedback: trooper_f1, trooper_f2, trooper_f3
-        Die: trooper_d1, trooper_d2, trooper_d3, trooper_d4, trooper_d5
+        Die: trooper_d1, trooper_d2, trooper_d3, trooper_d4, trooper_d5, dedman1, dedman3, dedman4, dedman5, dedman6
         Burned: trooper_d1, trooper_d2, trooper_d3, trooper_d4, trooper_d5
         Zapped: electro1
 
@@ -706,8 +721,9 @@ Vertigo:
         Action: vertigo_a1, vertigo_a2, vertigo_a3, vertigo_a4, vertigo_ab1, vertigo_ab2, vertigo_ab3
 		
 MammothApocalypse:
-	DefaultVariant: .wav
+    DefaultVariant: .wav
     Voices:
-		Select: MammothApocalypse_20, MammothApocalypse_21, MammothApocalypse_22, MammothApocalypse_23, MammothApocalypse_24, MammothApocalypse_25, MammothApocalypse_26, MammothApocalypse_27, MammothApocalypse_28, MammothApocalypse_29, MammothApocalypse_30, MammothApocalypse_31, MammothApocalypse_32
-		Move: MammothApocalypse_8, MammothApocalypse_14, MammothApocalypse_15, MammothApocalypse_16, MammothApocalypse_17, MammothApocalypse_18, MammothApocalypse_19
-		Action: MammothApocalypse_1, MammothApocalypse_2, MammothApocalypse_3, MammothApocalypse_4, MammothApocalypse_5, MammothApocalypse_6, MammothApocalypse_7, MammothApocalypse_9, MammothApocalypse_10, MammothApocalypse_11, MammothApocalypse_12, MammothApocalypse_13, MammothApocalypse_14
+        Select: MammothApocalypse_20, MammothApocalypse_21, MammothApocalypse_22, MammothApocalypse_23, MammothApocalypse_24, MammothApocalypse_25, MammothApocalypse_26, MammothApocalypse_27, MammothApocalypse_28, MammothApocalypse_29, MammothApocalypse_30, MammothApocalypse_31, MammothApocalypse_32
+        Move: MammothApocalypse_8, MammothApocalypse_14, MammothApocalypse_15, MammothApocalypse_16, MammothApocalypse_17, MammothApocalypse_18, MammothApocalypse_19
+        Action: MammothApocalypse_1, MammothApocalypse_2, MammothApocalypse_3, MammothApocalypse_4, MammothApocalypse_5, MammothApocalypse_6, MammothApocalypse_7, MammothApocalypse_9, MammothApocalypse_10, MammothApocalypse_11, MammothApocalypse_12, MammothApocalypse_13, MammothApocalypse_14
+        

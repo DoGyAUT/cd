@@ -376,33 +376,38 @@ NAOBEL:
     Armament@normalA:
         Weapon: LaserFire
         LocalOffset: 3150,-450,800
-        MuzzlePalette: apolra50alpha
         RequiresCondition: !upgrade.tiblaser || !upgrade.laser
+        MuzzleSequence: muzzle
+        MuzzlePalette: player50alpha
     Armament@tibA:
         Weapon: LaserFireTib
         LocalOffset: 3150,-450,800
-        MuzzlePalette: apolra50alpha
         RequiresCondition: upgrade.tiblaser && !upgrade.laser
+        MuzzleSequence: muzzle
+        MuzzlePalette: player50alpha
     Armament@upgradeA:
         Weapon: LaserFireUpgrade
         LocalOffset: 3150,-450,800
-        MuzzlePalette: apolra50alpha
         RequiresCondition: upgrade.laser && !upgrade.tiblaser
+        MuzzleSequence: muzzle
+        MuzzlePalette: player50alpha
     AttackCharges:
         ChargeLevel: 70
         ChargingCondition: charging
     AmbientSound:
         RequiresCondition: charging
         SoundFile: obelcharge01.aud
-        Interval: 30, 40
+        Interval: 70
     WithChargeOverlay:
         Sequence: active
         Palette: player
         IsPlayerPalette: True
     AutoTarget:
     RenderRangeCircle:
-    WithIdleOverlay@LIGHTS:
+    WithIdleOverlayAS@LIGHTS:
+        RequiresCondition: !charging
         PauseOnLowPower: True
+        Image: naobel
         Sequence: idle-lights
     Power:
         Amount: -150
@@ -420,12 +425,12 @@ NAPULS:
         Cost: 2000
     Tooltip:
         Name: E.M. Pulse Cannon
-#    Buildable:
-#        Queue: Defense
-#        BuildLimit: 1
-#        BuildPaletteOrder: 207
-#        Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
-#        Description: Disables mechanical units in an area.\nRequires power to operate.
+    Buildable:
+        Queue: Defense
+        BuildLimit: 1
+        BuildPaletteOrder: 207
+        Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
+        Description: Disables mechanical units in an area.\nRequires power to operate.
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -445,20 +450,16 @@ NAPULS:
         Weapon: EMPulseCannon
         LocalOffset: 150,0,1250
         LocalYaw: 0,100
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
     -AutoTarget:
     RenderRangeCircle:
     WithSpriteTurret:
         Sequence: turret
     Power:
         Amount: -150
-    ProvidesPrerequisite@gdi:
-        Prerequisite: emp.gdi
-        Factions: gdi
-        ResetOnOwnerChange: True
-    ProvidesPrerequisite@nod:
-        Prerequisite: emp.nod
-        Factions: nod
-        ResetOnOwnerChange: True
+    WithMuzzleOverlay:
+    ProvidesPrerequisite@buildingname:
 	RejectsOrders:
 		Except: Stop, Sell
     AttackOrderPower@nod:
@@ -469,8 +470,11 @@ NAPULS:
         LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
         EndChargeSpeechNotification: EmPulseCannonReady
         SelectTargetSpeechNotification: SelectTarget
-        #Prerequisites: emp.nod
+        Prerequisites: napuls
         OrderName: Nodemp
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
         
 NAMISL:
     Inherits: ^Building
@@ -521,12 +525,15 @@ NAMISL:
         MissileWeapon: ClusterMissile
         SpawnOffset: 0,427,0
         DisplayTimerStances: None
-        DisplayBeacon: False
+        DisplayBeacon: True
         DisplayRadarPing: True
         BeaconPoster:
         CameraActor: camera
-	-FrozenUnderFog:
-	AlwaysVisible:
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+    -FrozenUnderFog:
+    AlwaysVisible:
     
 NASTLH:
     Inherits: ^Building
@@ -568,4 +575,3 @@ NASTLH:
         AffectsParent: True
     Selectable:
         Bounds: 106, 60, 8, -15
-        

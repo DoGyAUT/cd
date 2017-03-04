@@ -544,7 +544,7 @@ PHOENIX:
 FHAWK:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 1600
+        Cost: 2200
     Tooltip:
         Name: Firehawk
     Buildable:
@@ -561,7 +561,7 @@ FHAWK:
         TurnSpeed: 4
         Speed: 200
     Health:
-        HP: 850
+        HP: 650
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -638,7 +638,7 @@ FHAWK:
 HORNET:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 1800
+        Cost: 2600
     Tooltip:
         Name: Hornet
     Buildable:
@@ -655,7 +655,7 @@ HORNET:
         TurnSpeed: 4
         Speed: 220
     Health:
-        HP: 1000
+        HP: 800
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -812,30 +812,6 @@ CONDOR:
         TrailWidth: 30
         Color: FFFFFF
         UsePlayerColor: False
-    Contrail@11:
-        Offset: -512,256,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@21:
-        Offset: -512,-256,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@31:
-        Offset: -512,512,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@41:
-        Offset: -512,-512,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
     Contrail@5:
         Offset: -500,770,256
         TrailLength: 15
@@ -855,7 +831,7 @@ CONDOR:
 DSHP.SUPPORT:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Supply Dropship
     Voiced:
@@ -901,13 +877,14 @@ DSHP.SUPPORT:
 DSHP:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Dropship
     Voiced:
         VoiceSet: Orca
         Volume: 2
     Selectable:
+        Bounds: 60,48,0,-10
     Buildable:
         Queue: Air.GDI
         BuildPaletteOrder: 102

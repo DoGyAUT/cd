@@ -334,7 +334,7 @@
     Building:
         Dimensions: 1,1
         Footprint: x
-        BuildSounds: place2.aud
+        BuildSounds: buildupsound.aud #place2.aud
         TerrainTypes: Clear, Road, DirtRoad, Rough, Green
         Adjacent: 4
         RequiresBaseProvider: True
@@ -1329,6 +1329,15 @@
     ProducibleWithLevel:
         Prerequisites: armory.upgraded
     RevealOnFire:
+    GrantConditionOnDamageState:
+        Condition: damaged
+        ValidDamageStates: Medium, Heavy, Critical
+    SmokeParticleEmitter:
+        RequiresCondition: damaged
+        Offset: 0,0,0
+        Gravity: 0,0,0
+        Image: durasmoke
+        Palette: apolra25alpha
 
 ^LightVehicle
     Crushable:
