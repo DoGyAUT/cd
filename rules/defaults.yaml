@@ -1329,13 +1329,14 @@
     ProducibleWithLevel:
         Prerequisites: armory.upgraded
     RevealOnFire:
-    GrantConditionOnDamageState:
+    GrantConditionOnDamageState@smoke:
         Condition: damaged
         ValidDamageStates: Medium, Heavy, Critical
     SmokeParticleEmitter:
         RequiresCondition: damaged
-        Offset: 0,0,0
-        Gravity: 0,0,0
+        Sequence : idle
+        SpawnFrequency: 5
+        Gravity: -48,-48,48, 48,48,48
         Image: durasmoke
         Palette: apolra25alpha
 
