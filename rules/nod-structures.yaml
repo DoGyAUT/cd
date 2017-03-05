@@ -433,6 +433,23 @@ NAHPAD:
     Selectable:
         Bounds: 78, 54, 0, -8
     ProvidesPrerequisite@buildingname:
+    ProduceActorPower@Havoc:
+        OrderName: ProduceHavocPowerInfoOrder
+        Actors: havoc
+        Type: Air.Nod
+        Icon: havoc
+        Description: Havoc Ace call
+        LongDesc: Calls in a heavy ace class Havoc attack chopper.
+        SelectTargetSpeechNotification: SelectTarget
+        EndChargeSpeechNotification: Reinforce
+        ChargeTime: 240
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: havoc
+        Prerequisites: industry, napyra
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock        
  
 NAPYRA:
     Inherits: ^Building

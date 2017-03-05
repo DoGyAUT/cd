@@ -190,35 +190,34 @@ HAVOC:
         TurnSpeed: 4
         Speed: 80
     Health:
-        HP: 450
+        HP: 700
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
-    Armament@primary:
-        Weapon: HavocMissiles
-        LocalOffset: 450,512,300, 450,-512,300
+    Armament@primaryA:
+        Weapon: HydraCannon
+        LocalOffset: 1000,0,200
         MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.bluehell
-    Armament@upgrade:
+        RequiresCondition: !upgrade.tiblaser
+    Armament@laserA:
+        Weapon: HydraLaserFire
+        LocalOffset: 1000,0,200
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        RequiresCondition: upgrade.tiblaser
+    Armament@primary:
         Weapon: HavocMissilesNapalm
         LocalOffset: 450,512,300, 450,-512,300
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.bluehell
     AttackHeli:
         FacingTolerance: 20
-    AmmoPool@1:
+    AmmoPool:
         Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name:primary2
-        Ammo: 6
+        Ammo: 10
         PipCount: 0
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
@@ -240,14 +239,32 @@ HAVOC:
         Offset: 200,-700,900
         Sequence: slow-rotor
         RequiresCondition: !airborne
+    GrantConditionOnPrerequisite@upgrade1:
+        Condition: upgrade.tiblaser
+        Prerequisites: upgrade.tiblaser
+    AmmoPool@1:
+        Name:primary
+        Ammo: 40
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    AmmoPool@2:
+        Name:primary2
+        Ammo: 8
+        PipCount: 0
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+        SelfReloads: True
+        SelfReloadDelay: 5
+    DetectCloaked:
+        Range: 7c0
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.bluehell
-        Prerequisites: upgrade.bluehell
     SpawnActorOnDeath:
         Actor: HAVOC.Husk
         Probability: 100
