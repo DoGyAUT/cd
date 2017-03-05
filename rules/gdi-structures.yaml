@@ -386,6 +386,22 @@ GAARMORY:
         PowerdownSpeech: DisablePower
     DisabledOverlay:
     ProvidesPrerequisite@buildingname:
+    GrantExternalConditionPower@fortification:
+        OrderName: GrantFortificationPowerInfoOrder
+        Icon: fortification
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: SupportPowerReady
+        Description: Fortification
+        LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction.
+        Condition: fortification
+        OnFireSound: fortificate.wav
+        Sequence: idle
+        ChargeTime: 120
+        Prerequisites: upgrade.gdf
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
 
 GAHPAD:
     Inherits: ^Building

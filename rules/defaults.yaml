@@ -361,6 +361,7 @@
 ^Building:
     Inherits@1: ^BasicBuilding
     Inherits@2: ^EmpDisable
+    Inherits@fortification: ^FortificationUpgrades
     GivesBuildableArea:
     Capturable:
     ExternalCapturable:
@@ -1183,6 +1184,21 @@
     FirepowerMultiplier@goon:        
         RequiresCondition: berserk
         Modifier: 130       
+ 
+^FortificationUpgrades:
+    WithDecoration@goon:
+        Image: fortbufficon
+        Sequence: buff
+        ReferencePoint: Bottom, Right
+        Offset: 30, 0
+        ZOffset: 256
+        ValidStances: Ally, Neutral, Enemy
+        RequiresCondition: fortification
+    DamageMultiplier@fortification:
+        RequiresCondition: fortification
+        Modifier: 75
+    ExternalCondition@fortification:
+        Condition: fortification
 
 ^CivilianInfantry:
     Inherits: ^Infantry
@@ -1331,7 +1347,7 @@
     RevealOnFire:
     GrantConditionOnDamageState@smoke:
         Condition: damaged
-        ValidDamageStates: Medium, Heavy, Critical
+        ValidDamageStates: Critical
     SmokeParticleEmitter:
         RequiresCondition: damaged
         Sequence : idle
@@ -1382,6 +1398,15 @@
         StationaryInterval: 18
         MovingInterval: 6
 
+^TankMoveSounds:
+    GrantConditionOnMovement@tracks:
+        Condition: tracks
+    AmbientSound@tracks:
+        SoundFile: tankmove1.aud
+        Delay: 1
+        Interval: 250
+        RequiresCondition: tracks || !nottracks
+        
 ^Tank:
     Inherits: ^Vehicle
     Crushable:

@@ -252,6 +252,13 @@ VULTURE:
     Mobile:
         TurnSpeed: 4
         Speed: 55
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: stomp3.aud
+        Delay: 3
+        Interval: 13
+        RequiresCondition: walker
     Health:
         HP: 1080
     RevealsShroud:
@@ -305,13 +312,6 @@ GTMTNK:
     Mobile:
         Speed: 60
         TurnSpeed: 4
-    GrantConditionOnMovement@steps:
-        Condition: tracks
-    AmbientSound@step1:
-        SoundFile: tankmove1.aud
-        Delay: 1
-        Interval: 250
-        RequiresCondition: tracks
     Health:
         HP: 1200
     RevealsShroud:
@@ -618,7 +618,7 @@ MMCH:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFile: step1.aud
+        SoundFile: stomp1.aud
         Delay: 3
         Interval: 16
         RequiresCondition: walker
@@ -864,8 +864,8 @@ JUGG:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFile: step1.aud
-        Delay: 3
+        SoundFile: stomp4.aud
+        Delay: 4
         Interval: 15
         RequiresCondition: walker
 #    AmbientSound@step2:
