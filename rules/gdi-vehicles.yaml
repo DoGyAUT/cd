@@ -305,6 +305,13 @@ GTMTNK:
     Mobile:
         Speed: 60
         TurnSpeed: 4
+    GrantConditionOnMovement@steps:
+        Condition: tracks
+    AmbientSound@step1:
+        SoundFile: tankmove1.aud
+        Delay: 1
+        Interval: 250
+        RequiresCondition: tracks
     Health:
         HP: 1200
     RevealsShroud:
@@ -608,6 +615,13 @@ MMCH:
     Mobile:
         TurnSpeed: 5
         Speed: 55
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: step1.aud
+        Delay: 3
+        Interval: 16
+        RequiresCondition: walker
     Health:
         HP: 1440
     RevealsShroud:
@@ -847,6 +861,18 @@ JUGG:
         TurnSpeed: 5
         Speed: 55
         RequiresCondition: !deployed
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: step1.aud
+        Delay: 3
+        Interval: 15
+        RequiresCondition: walker
+#    AmbientSound@step2:
+#        SoundFile: step2.wav
+#        Delay: 6
+#        Interval: 20
+#        RequiresCondition: walker
     Health:
         HP: 780
     Armor:
