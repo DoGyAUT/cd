@@ -2,15 +2,21 @@
     Inherits@1: ^CivilianVoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 500
+        Cost: 1500
     Tooltip:
         Name: Truck
     Health:
-        HP: 200
+        HP: 300
     Mobile:
         Speed: 56
     RevealsShroud:
-        Range: 5c0
+        Range: 5c0    
+    Explodes:
+        Weapon: UnitExplodeEpic
+    Armament@primary:
+        Weapon: UnitExplodeEpic
+    AttackSuicides:
+    AttackFrontal:
 
 TRUCKA:
     Inherits: ^TRUCK
@@ -44,14 +50,14 @@ BUS:
     Inherits@1: ^CivilianVoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: School Bus
     Mobile:
         TurnSpeed: 5
         Speed: 113
     Health:
-        HP: 100
+        HP: 300
     RevealsShroud:
         Range: 5c0
     Cargo:
@@ -64,14 +70,14 @@ PICK:
     Inherits@1: ^CivilianVoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Pickup
     Mobile:
         TurnSpeed: 5
         Speed: 113
     Health:
-        HP: 100
+        HP: 300
     RevealsShroud:
         Range: 5c0
     Cargo:
@@ -84,46 +90,36 @@ CAR:
     Inherits@1: ^CivilianVoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Automobile
     Mobile:
         TurnSpeed: 5
         Speed: 113
     Health:
-        HP: 100
+        HP: 300
     RevealsShroud:
         Range: 5c0
-    Cargo:
-        Types: Infantry
-        MaxWeight: 4
-        PipCount: 5
-        UnloadVoice: Action
 
 WINI:
     Inherits@1: ^CivilianVoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Recreational Vehicle
     Mobile:
         TurnSpeed: 5
         Speed: 113
     Health:
-        HP: 200
+        HP: 300
     RevealsShroud:
         Range: 5c0
-    Cargo:
-        Types: Infantry
-        MaxWeight: 5
-        PipCount: 5
-        UnloadVoice: Action
 
 LOCOMOTIVE:
     Inherits: ^Train
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Train Locomotive
     Cargo:
@@ -133,7 +129,7 @@ LOCOMOTIVE:
 TRAINCAR:
     Inherits: ^Train
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Passenger Car
     Cargo:
@@ -143,7 +139,7 @@ TRAINCAR:
 CARGOCAR:
     Inherits: ^Train
     Valued:
-        Cost: 800
+        Cost: 1500
     Tooltip:
         Name: Cargo Car
     Cargo:

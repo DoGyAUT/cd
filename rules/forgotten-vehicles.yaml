@@ -70,12 +70,13 @@ FHARV:
     -DamagedByTerrain@Veins:
     Health:
         HP: 1200
-#    SelfHealing:
-#        Step: 0
-#        PercentageStep: 1
-#        Delay: 10
-#        HealIfBelow: 100
-#        DamageCooldown: 200
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 200
+        RequiresCondition: upgrade.harvester_selfheal
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -86,8 +87,24 @@ FHARV:
     Explodes:
         Weapon: LargeTiberiumExplosion
     WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
+    Armament@primary:
+        Offset: 0,0,0
+        Armament@PRIMARY:
+        Weapon: 122mmAP
+        RequiresCondition: upgrade.harvester_122mm
+    AttackFrontal:
+    GrantConditionOnPrerequisite@gun:
+        Condition: upgrade.harvester_122mm
+        Prerequisites: upgrade.harvester_122mm
+    GrantConditionOnPrerequisite@boom:
+        Condition: upgrade.harvester_selfheal
+        Prerequisites: upgrade.harvester_selfheal
+    GrantConditionOnPrerequisite@tanky:
+        Condition: upgrade.harvester_tanky
+        Prerequisites: upgrade.harvester_tanky
+    DamageMultiplier@prop:        
+         RequiresCondition: upgrade.harvester_tanky 
+         Modifier: 50
         
 ATRUCK:
     Inherits: ^VoxelVehicle

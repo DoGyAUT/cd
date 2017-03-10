@@ -604,11 +604,11 @@ MMCH:
         Cost: 1600
     Tooltip:
         Name: Titan
-    Buildable:
-        Queue: Vehicle.GDI
-        BuildPaletteOrder: 107
-        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
-        Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
+    # Buildable:
+        # Queue: Vehicle.GDI
+        # BuildPaletteOrder: 107
+        # Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+        # Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Titan
         Volume: 2
@@ -707,13 +707,13 @@ MMCH2:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 3000
+        Cost: 2000
     Tooltip:
         Name: Titan MK.II
     Buildable:
         Queue: Vehicle.GDI.Ace
         BuildPaletteOrder: 107
-        Prerequisites: ~gadrop
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
         BuildLimit: 1
         Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 2000\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
     Voiced:
@@ -803,7 +803,7 @@ SONIC:
 BEHEMOTH:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1750
+        Cost: 2500
     Tooltip:
         Name: Atlas
     Buildable:

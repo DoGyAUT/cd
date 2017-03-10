@@ -1032,6 +1032,15 @@
     -DamageMultiplier@nanofiber:
     Mobile:
         RequiresCondition: !empdisable
+    SelfHealing@repair_golem:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 200
+        RequiresCondition: repair_heal
+    ExternalCondition@repair_golem:
+        Condition: repair_heal
         
 ^HeavyCyborg:
     Inherits@1: ^Cyborg

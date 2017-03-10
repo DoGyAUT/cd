@@ -592,6 +592,8 @@ BikeMissile:
     Warhead@1Dam: SpreadDamage
         Spread: 256
         Damage: 120
+        Versus:
+            Building: 30
         ValidTargets: Ground, Air, MidAir
 
 Dragon:
@@ -900,7 +902,9 @@ HydraGasMissiles:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 150
+        Damage: 100
+        Versus:
+            Vehicle: 100
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2

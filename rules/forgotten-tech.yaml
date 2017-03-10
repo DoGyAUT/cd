@@ -699,7 +699,7 @@ upgrade.buzzard_missiles:
     Tooltip:
         Name: Buzzard HE Rocket Upgrade
     Buildable:
-        BuildPaletteOrder: 421
+        BuildPaletteOrder: 422
         Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
@@ -717,7 +717,7 @@ upgrade.buzzard_gattling:
     Tooltip:
         Name: Buzzard Adv. Gattling Upgrade
     Buildable:
-        BuildPaletteOrder: 421
+        BuildPaletteOrder: 423
         Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
         Queue: Tech.Forg
         BuildLimit: 1
@@ -735,7 +735,7 @@ upgrade.griffin:
     Tooltip:
         Name: Heavy Attack Chopper "Griffin"
     Buildable:
-        BuildPaletteOrder: 421
+        BuildPaletteOrder: 424
         Prerequisites: ~fahpad, ~!upgrade.buzzard, ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon
         Queue: Tech.Forg
         BuildLimit: 1
@@ -753,7 +753,7 @@ upgrade.griffin_missiles:
     Tooltip:
         Name: Griffin Missiles Upgrade
     Buildable:
-        BuildPaletteOrder: 421
+        BuildPaletteOrder: 425
         Prerequisites:  ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
         Queue: Tech.Forg
         BuildLimit: 1
@@ -771,7 +771,7 @@ upgrade.griffin_autocannon:
     Tooltip:
         Name: Griffin Autocannon Upgrade
     Buildable:
-        BuildPaletteOrder: 421
+        BuildPaletteOrder: 426
         Prerequisites: ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
         Queue: Tech.Forg
         BuildLimit: 1
@@ -783,3 +783,57 @@ upgrade.griffin_autocannon:
         Image: griffin
     ProvidesPrerequisite:
         Prerequisite: upgrade.griffin_autocannon
+        
+upgrade.harvester_122mm:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Harvester Combat Upgrade
+    Buildable:
+        BuildPaletteOrder: 427
+        Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, ~!upgrade.harvester_tanky, !upgrade.harvester_122mm
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds 122mm gun to harvester
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: fharv
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.harvester_122mm
+        
+upgrade.harvester_tanky:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Harvester Armor Plating
+    Buildable:
+        BuildPaletteOrder: 428
+        Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, !upgrade.harvester_tanky, ~!upgrade.harvester_122mm
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds more durability to harvester
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: fharv
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.harvester_tanky
+        
+upgrade.harvester_selfheal:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Harvester selfheal
+    Buildable:
+        BuildPaletteOrder: 429
+        Prerequisites: ~fatrade , !upgrade.harvester_selfheal, ~!upgrade.harvester_tanky, ~!upgrade.harvester_122mm
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
+        Description: Adds selfhealing to harvesters
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: fharv
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.harvester_selfheal

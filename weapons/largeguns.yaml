@@ -587,7 +587,7 @@ BuggyMortar:
     Inherits: ^ShellHE 
 	Inherits@wh: ^TiberiumWH
     ReloadDelay: 80
-    Range: 10c0
+    Range: 9c0
     Report: 120mmf.aud
     Projectile: BulletAS
         Speed: 400
@@ -612,7 +612,7 @@ WarthogMortar:
     Inherits: ^ShellHE 
 	Inherits@wh: ^TiberiumWH
     ReloadDelay: 120
-    Range: 12c0
+    Range: 10c0
     Report: 120mmf.aud
     Projectile: BulletAS
         Speed: 350
@@ -637,7 +637,7 @@ AurochMortar:
     Inherits: ^ShellHE 
 	Inherits@wh: ^TiberiumWH
     ReloadDelay: 160
-    Range: 14c0
+    Range: 10c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
         Speed: 350
@@ -788,3 +788,15 @@ Mortar_155mm:
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: LargeCrater  
+        
+ReaperCannon:
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
+    ReloadDelay: 120
+    Burst: 2
+    BurstDelay: 5
+    Range: 6c768
+    Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 75

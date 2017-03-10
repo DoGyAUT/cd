@@ -246,7 +246,7 @@ JumpCannonAA:
 
 WatchSniper:
     Inherits: ^Bullet
-    Inherits@wh: ^BulletWH
+    Inherits@wh: ^APWH
     ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 100
     Range: 10c0
@@ -260,9 +260,7 @@ WatchSniper:
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground, Air, MidAir, HighAir   
         Spread: 0c64
-        Damage: 200
-        Versus:
-            Vehicle: 100
+        Damage: 250
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water

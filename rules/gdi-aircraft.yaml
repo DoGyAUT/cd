@@ -28,12 +28,6 @@ ORCA_F1:
         LocalOffset: 282,132,85, 282,-132,85
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: OrcaCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 611,0,71
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -547,11 +541,11 @@ FHAWK:
         Cost: 2200
     Tooltip:
         Name: Firehawk
-    Buildable:
-        Queue: Air.GDI
-        BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!upgrade.zc
-        Description: Advanced fighter, constructed for air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
+    # Buildable:
+        # Queue: Air.GDI
+        # BuildPaletteOrder: 106
+        # Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!upgrade.zc
+        # Description: Advanced fighter, constructed for air-superiority.\n  Strong vs Aircraft\n  Useless vs Ground Targets
     Selectable:
         Bounds: 60,48,0,-10
     Voiced:
@@ -751,7 +745,7 @@ CONDOR:
     Buildable:
         Queue: Air.GDI
         BuildPaletteOrder: 106
-        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~upgrade.zc
+        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~upgrade.st
         Description: Advanced fighter. Armed with dual Railguns.\n  Strong vs Hard Targets\n  Weak vs Soft Targets
     Selectable:
         Bounds: 60,48,0,-10
