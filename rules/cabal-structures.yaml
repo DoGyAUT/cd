@@ -152,6 +152,20 @@ KPROC:
         Weapon: TiberiumExplosionRef
         EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
+    Exit@1:
+        SpawnOffset: 0,0,0
+        ExitCell: 3,1
+        ExitDelay: 1
+    ExitsDebugOverlay:
+    Production:
+        Produces: Vehicle.Cabal.Harvester
+    ProductionQueue@Vehicle:
+        Type: Vehicle.Cabal.Harvester
+        Group: Vehicle
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    DisabledOverlay:
+    ProductionBar:
  
 CYBBAR:
     Inherits: ^Building

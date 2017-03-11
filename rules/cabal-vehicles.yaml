@@ -47,9 +47,9 @@ KHARV:
     Tooltip:
         Name: Cabal Harvester
     Buildable:
-        Queue: Vehicle.Cabal
+        Queue: Vehicle.Cabal.Harvester
         BuildPaletteOrder: 301
-        Prerequisites: ~kaweap, kproc
+        Prerequisites: kproc
         Description: Collects Tiberium for processing.\nFast hovering harvester with small storage.\n\n  Role: Harvester\n  HP: 700\n  Armor: Medium\n  Speed: 80\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (10 Capacity)\n - Immune to Veins\n - Hovers
     Selectable:
         Priority: 7
@@ -59,7 +59,7 @@ KHARV:
         Volume: 2
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 10
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -67,7 +67,7 @@ KHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 5
+        PipCount: 7
     Mobile:
         Speed: 50
         TerrainSpeeds:
@@ -110,7 +110,7 @@ KHARV:
 DREADFIRE:
     Inherits@1: ^Walker
     Valued:
-        Cost: 1000
+        Cost: 850
     Tooltip:
         Name: Dreadfire
     Selectable:
@@ -153,7 +153,6 @@ DREADFIRE:
 
 REAPER:
     Inherits@1: ^Walker
-    Inherits@2: ^LightVehicle
     Valued:
         Cost: 1200
     Tooltip:
@@ -268,7 +267,7 @@ GOLEM:
 TARANTULA:
     Inherits@1: ^Walker
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Tarantula
     Selectable:

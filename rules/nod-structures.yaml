@@ -197,6 +197,24 @@ NIPROC:
     ProvidesPrerequisite@buildingname:   
     ProvidesPrerequisite@nodref:   
         Prerequisite: nproc
+    RallyPoint:
+        Offset: 4,1
+        Palette: mouse
+        IsPlayerPalette: False
+    Exit@1:
+        SpawnOffset: 0,0,0
+        ExitCell: 3,1
+        ExitDelay: 1
+    ExitsDebugOverlay:
+    Production:
+        Produces: Vehicle.Nod.Harvester
+    ProductionQueue@Vehicle:
+        Type: Vehicle.Nod.Harvester
+        Group: Vehicle
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    DisabledOverlay:
+    ProductionBar:
 
 NTPROC:
     Inherits: NIPROC
@@ -316,12 +334,12 @@ NAWEAP:
         Group: Vehicle
         BuildDurationModifier: 60
         LowPowerSlowdown: 3
+    DisabledOverlay:
+    ProductionBar:
     CanPowerDown:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    ProductionBar:
     WithIdleOverlay@ROOF:
         Sequence: idle-roof
     WithProductionDoorOverlay@DOOR:

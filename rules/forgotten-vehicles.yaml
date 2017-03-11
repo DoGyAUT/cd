@@ -44,9 +44,9 @@ FHARV:
     Tooltip:
         Name: Forgotten Harvester
     Buildable:
-        Queue: Vehicle.Forg
+        Queue: Vehicle.Forg.Harvester
         BuildPaletteOrder: 401
-        Prerequisites: ~faweap, fproc
+        Prerequisites: fproc
         Description: Collects Tiberium for processing.\nVery Fast harvester with below average storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 90\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (12 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
     Selectable:
         Priority: 7
@@ -56,7 +56,7 @@ FHARV:
         Volume: 2
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 12
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -64,19 +64,14 @@ FHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 4
+        PipCount: 7
     Mobile:
-        Speed: 70
+        Speed: 50
+        TerrainSpeeds:
+            Tiberium: 100
     -DamagedByTerrain@Veins:
     Health:
         HP: 1200
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 100
-        DamageCooldown: 200
-        RequiresCondition: upgrade.harvester_selfheal
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -96,15 +91,13 @@ FHARV:
     GrantConditionOnPrerequisite@gun:
         Condition: upgrade.harvester_122mm
         Prerequisites: upgrade.harvester_122mm
-    GrantConditionOnPrerequisite@boom:
-        Condition: upgrade.harvester_selfheal
-        Prerequisites: upgrade.harvester_selfheal
     GrantConditionOnPrerequisite@tanky:
         Condition: upgrade.harvester_tanky
         Prerequisites: upgrade.harvester_tanky
     DamageMultiplier@prop:        
          RequiresCondition: upgrade.harvester_tanky 
          Modifier: 50
+    AutoTarget:
         
 ATRUCK:
     Inherits: ^VoxelVehicle
@@ -152,7 +145,7 @@ FBUGGY_MG:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 400
+        Cost: 500
     Tooltip:
         Name: Assault Buggy (Flamer)
     Buildable:
@@ -200,7 +193,7 @@ FBUGGY_MIS:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 400
+        Cost: 500
     Tooltip:
         Name: Assault Buggy (Missile)
     Buildable:
@@ -248,7 +241,7 @@ FBUGGY_MORTAR:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 400
+        Cost: 500
     Tooltip:
         Name: Assault Buggy (Mortar)
     Buildable:

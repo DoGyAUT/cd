@@ -45,9 +45,9 @@ NIHARV:
     Tooltip:
         Name: Nod Industry Harvester
     Buildable:
-        Queue: Vehicle.Nod
+        Queue: Vehicle.Nod.Harvester
         BuildPaletteOrder: 201
-        Prerequisites: ~naweap, niproc
+        Prerequisites: niproc, ~industry
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -57,7 +57,7 @@ NIHARV:
         Volume: 2        
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 10
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -65,10 +65,12 @@ NIHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 5
+        PipCount: 7
     -DamagedByTerrain@Veins:
     Mobile:
         Speed: 50
+        TerrainSpeeds:
+            Tiberium: 100
     Health:
         HP: 1200
     Armament@primary:
@@ -103,9 +105,9 @@ NTHARV:
     Tooltip:
         Name: Nod Technology Harvester
     Buildable:
-        Queue: Vehicle.Nod
+        Queue: Vehicle.Nod.Harvester
         BuildPaletteOrder: 201
-        Prerequisites: ~naweap, ntproc
+        Prerequisites: ntproc, ~technology
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -115,7 +117,7 @@ NTHARV:
         Volume: 2        
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 10
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -123,10 +125,12 @@ NTHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 5
+        PipCount: 7
     -DamagedByTerrain@Veins:
     Mobile:
         Speed: 50
+        TerrainSpeeds:
+            Tiberium: 100
     Health:
         HP: 1200
     GrantConditionOnPrerequisite@cloak:
@@ -154,9 +158,9 @@ NPHARV:
     Tooltip:
         Name: Nod Propaganda Harvester
     Buildable:
-        Queue: Vehicle.Nod
+        Queue: Vehicle.Nod.Harvester
         BuildPaletteOrder: 201
-        Prerequisites: ~naweap, npproc
+        Prerequisites: npproc, ~propaganda
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -166,7 +170,7 @@ NPHARV:
         Volume: 2        
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 10
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -174,12 +178,14 @@ NPHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 5
+        PipCount: 7
     DamageMultiplier@prop:         
         Modifier: 75
     -DamagedByTerrain@Veins:
     Mobile:
         Speed: 50
+        TerrainSpeeds:
+            Tiberium: 100
     Health:
         HP: 1200
     RevealsShroud:

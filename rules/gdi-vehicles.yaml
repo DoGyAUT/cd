@@ -44,9 +44,9 @@ GHARV:
     Tooltip:
         Name: GDI Harvester
     Buildable:
-        Queue: Vehicle.GDI
+        Queue: Vehicle.GDI.Harvester
         BuildPaletteOrder: 101
-        Prerequisites: ~gaweap, gproc
+        Prerequisites: gproc
         Description: Collects Tiberium for processing.\nSlow harvester with big storage.\n\n  Role: Harvester\n  HP: 1200\n  Armor: Medium\n  Speed: 50\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (20 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
     Selectable:
         Priority: 7
@@ -56,7 +56,7 @@ GHARV:
         Volume: 2
     Harvester:
         DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 10
+        Capacity: 14
         Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         BaleLoadDelay: 12
         BaleUnloadDelay: 6
@@ -64,9 +64,11 @@ GHARV:
         SearchFromOrderRadius: 18
         HarvestVoice: Action
         DeliverVoice: Move
-        PipCount: 5
+        PipCount: 7
     Mobile:
         Speed: 50
+        TerrainSpeeds:
+            Tiberium: 100
     -DamagedByTerrain@Veins:
 #    Carryable:
     Health:
@@ -92,8 +94,9 @@ GHARV:
         
 APC:
     Inherits: ^VoxelVehicle
+    Inherits@light: ^LightVehicle
     Valued:
-        Cost: 700
+        Cost: 500
     Tooltip:
         Name: Amphibious APC
     Selectable:
@@ -108,11 +111,11 @@ APC:
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 80
+        Speed: 100
         TerrainSpeeds:
             Water: 80
     Health:
-        HP: 1300
+        HP: 600
     RevealsShroud:
         Range: 9c0
     Cargo:
@@ -711,7 +714,7 @@ MMCH2:
     Tooltip:
         Name: Titan MK.II
     Buildable:
-        Queue: Vehicle.GDI.Ace
+        Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
         BuildLimit: 1
@@ -723,7 +726,7 @@ MMCH2:
         TurnSpeed: 5
         Speed: 55
     Health:
-        HP: 3900
+        HP: 2000
     RevealsShroud:
         Range: 9c0
     BodyOrientation:

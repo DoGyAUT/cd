@@ -166,6 +166,20 @@ FPROC:
         Weapon: TiberiumExplosionForgRef
         EmptyWeapon: TiberiumExplosionForgRef
     ProvidesPrerequisite@buildingname:
+    Exit@1:
+        SpawnOffset: 0,0,0
+        ExitCell: 5,1
+        ExitDelay: 1
+    ExitsDebugOverlay:
+    Production:
+        Produces: Vehicle.Forg.Harvester
+    ProductionQueue@Vehicle:
+        Type: Vehicle.Forg.Harvester
+        Group: Vehicle
+        BuildDurationModifier: 60
+        LowPowerSlowdown: 3
+    DisabledOverlay:
+    ProductionBar:
 
 FABAR:
     Inherits: ^Building

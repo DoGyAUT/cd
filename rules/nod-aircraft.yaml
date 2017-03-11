@@ -281,8 +281,8 @@ NODCARRY:
     Buildable:
         Queue: Air.Nod
         BuildPaletteOrder: 203
-        Prerequisites: ~nahpad, ~!t1, ~propaganda
-        Description: Requires Technology Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
+        Prerequisites: ~nahpad, ~propaganda
+        Description: Requires Propaganda Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -314,7 +314,7 @@ NODCARRY:
         Probability: 100
 
 RAVEN:
-    Inherits: ^AttackPlane
+    Inherits: ^AttackAdvancedPlane
     Valued:
         Cost: 1800
     Tooltip:
@@ -367,9 +367,6 @@ RAVEN:
         MuzzlePalette: apolra50alpha
         LocalOffset: 256,800,-32, 256,-800,-32
         RequiresCondition: upgrade.bluehell
-	Turreted: 
-        TurnSpeed: 360
-	AttackTurreted:
     AmmoPool@1:
         Name: primary
         Ammo: 2
@@ -405,6 +402,9 @@ RAVEN:
     SpawnActorOnDeath:
         Actor: RAVEN.Husk
         Probability: 100
+    AttackPlane:
+        FacingTolerance: 45
+    AutoTarget:
 
 SCRINB:
     Inherits: ^AttackAdvancedPlane
