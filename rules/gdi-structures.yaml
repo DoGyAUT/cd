@@ -120,7 +120,7 @@ GAPOWR:
 GPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: GDI Tiberium Refinery
     Buildable:
@@ -138,7 +138,7 @@ GPROC:
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
-        HP: 1800
+        HP: 2000
     RevealsShroud:
         Range: 6c0
     TiberianSunRefinery:
@@ -150,10 +150,14 @@ GPROC:
         PipCount: 10
         Capacity: 1000
     CustomSellValue:
-        Value: 500
+        Value: 0
     FreeActor:
         Actor: GHARV
         SpawnOffset: 2,1
+        Facing: 160
+    FreeActor@2:
+        Actor: GHARV
+        SpawnOffset: 2,2
         Facing: 160
     WithIdleOverlay@REDLIGHTS:
         Sequence: idle-redlights
@@ -168,20 +172,6 @@ GPROC:
         Weapon: TiberiumExplosionRef
         EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
-    Exit@1:
-        SpawnOffset: 0,0,0
-        ExitCell: 3,1
-        ExitDelay: 1
-    ExitsDebugOverlay:
-    Production:
-        Produces: Vehicle.GDI.Harvester
-    ProductionQueue@Vehicle:
-        Type: Vehicle.GDI.Harvester
-        Group: Vehicle
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    DisabledOverlay:
-    ProductionBar:
 
 GAPILE:
     Inherits: ^Building
@@ -239,7 +229,7 @@ GAPILE:
 GAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: GDI War Factory
     ProvidesPrerequisite:

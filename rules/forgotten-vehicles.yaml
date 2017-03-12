@@ -44,9 +44,9 @@ FHARV:
     Tooltip:
         Name: Forgotten Harvester
     Buildable:
-        Queue: Vehicle.Forg.Harvester
+        Queue: Vehicle.Forg
         BuildPaletteOrder: 401
-        Prerequisites: fproc
+        Prerequisites: fproc, ~faweap
         Description: Collects Tiberium for processing.\nVery Fast harvester with below average storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 90\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (12 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
     Selectable:
         Priority: 7
@@ -792,7 +792,7 @@ LIZARD_MG:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 1080
+        HP: 850
     RevealsShroud:
         Range: 7c0
     Turreted:
@@ -840,7 +840,7 @@ LIZARD_90MM:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 1080
+        HP: 850
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -887,7 +887,7 @@ LIZARD_122MM:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 1080
+        HP: 850
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -917,7 +917,7 @@ LIZARD_122MM:
 DIGGER_MIS:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1200
+        Cost: 1400
     Tooltip:
         Name: Digger (Missile)
     Selectable:
@@ -931,7 +931,7 @@ DIGGER_MIS:
         VoiceSet: Grunt
         Volume: 2
     Health:
-        HP: 1080
+        HP: 1400
     RevealsShroud:
         Range: 9c0
     Mobile:
@@ -976,7 +976,7 @@ DIGGER_MIS:
 DIGGER_MORTAR:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1200
+        Cost: 1400
     Tooltip:
         Name: Digger (Howitzer)
     Selectable:
@@ -994,7 +994,7 @@ DIGGER_MORTAR:
         TurnSpeed: 4
         RequiresCondition: !deployed
     Health:
-        HP: 1080
+        HP: 1400
     RevealsShroud:
         Range: 15c0
     Turreted:
@@ -1037,7 +1037,7 @@ DIGGER_MORTAR:
 DIGGER_122MM:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1200
+        Cost: 1400
     Tooltip:
         Name: Digger (122mm)
     Selectable:
@@ -1055,7 +1055,7 @@ DIGGER_122MM:
         TurnSpeed: 4
         RequiresCondition: !deployed
     Health:
-        HP: 1080
+        HP: 1400
     RevealsShroud:
         Range: 8c0
     Turreted:

@@ -111,7 +111,7 @@ FPROC:
         Prerequisites: anypower, ~structures.forgotten
         Description: Processes raw Tiberium into useable resources. \n\nStores 1500$.
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: Forgotten Refinery
     Building:
@@ -125,7 +125,7 @@ FPROC:
         Bounds: 160, 96, -5, -25
     GivesBuildableArea:
     Health:
-        HP: 2040
+        HP: 2100
     TiberianSunRefinery:
         DockAngle: 160
         DockOffset: 5,0
@@ -137,6 +137,10 @@ FPROC:
     FreeActor:
         Actor: FHARV
         SpawnOffset: 5,0
+        Facing: 160
+    FreeActor@2:
+        Actor: FHARV
+        SpawnOffset: 5,1
         Facing: 160
     RevealsShroud:
         Range: 4c0
@@ -159,27 +163,13 @@ FPROC:
         Sequence: idle-smoke3
         Palette: player50alpha
     CustomSellValue:
-        Value: 500
+        Value: 0
     Power:
         Amount: -50
     Explodes:
         Weapon: TiberiumExplosionForgRef
         EmptyWeapon: TiberiumExplosionForgRef
     ProvidesPrerequisite@buildingname:
-    Exit@1:
-        SpawnOffset: 0,0,0
-        ExitCell: 5,1
-        ExitDelay: 1
-    ExitsDebugOverlay:
-    Production:
-        Produces: Vehicle.Forg.Harvester
-    ProductionQueue@Vehicle:
-        Type: Vehicle.Forg.Harvester
-        Group: Vehicle
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    DisabledOverlay:
-    ProductionBar:
 
 FABAR:
     Inherits: ^Building
@@ -233,7 +223,7 @@ FABAR:
 FAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Forgotten War Factory
     ProvidesPrerequisite:

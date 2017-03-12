@@ -455,7 +455,7 @@ TritonCannon:
       
 155mm:
     Inherits: ^ShellHE 
-	Inherits@wh: ^APWH
+	Inherits@wh: ^APHEWH
     ReloadDelay: 200
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -572,7 +572,7 @@ TritonCannon:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c712
-        Damage: 500
+        Damage: 600
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
         ExplosionPalette: effect50alpha
@@ -635,7 +635,7 @@ WarthogMortar:
 
 AurochMortar:
     Inherits: ^ShellHE 
-	Inherits@wh: ^TiberiumWH
+	Inherits@wh: ^HEWH
     ReloadDelay: 160
     Range: 10c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -652,11 +652,6 @@ AurochMortar:
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 350
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_lrg2
-        ExplosionPalette: effect50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
         
 240mm:
     Inherits: ^ShellHE 

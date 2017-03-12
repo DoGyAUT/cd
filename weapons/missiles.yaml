@@ -336,7 +336,7 @@ HoverMissileAA:
         RangeLimit: 20c0
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
-        Spread: 256
+        Spread: 1
         Damage: 60
         ValidTargets: Air, MidAir, HighAir
         
@@ -361,7 +361,7 @@ GorranMissile:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 175
+        Damage: 225
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
@@ -438,6 +438,38 @@ BluehellRavenMissile:
     Warhead@2Eff: CreateEffect
         Explosions: napalm1, napalm2
         ExplosionPalette: apolra2
+        InvalidImpactTypes: Water
+        
+TiberiumRavenMissile:
+    Inherits: RavenMissile
+    Inherits@2: ^TiberiumWH
+    Projectile: Missile
+        ContrailLength: 10
+        ContrailColor: 008000
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 768
+        Damage: 400
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud
+        InvalidImpactTypes: Water
+        
+TiberiumRavenMissileAA:
+    Inherits: RavenMissileAA
+    Inherits@2: ^TiberiumWH
+    Projectile: Missile
+        ContrailLength: 10
+        ContrailColor: 008000
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 768
+        Damage: 400
+    Warhead@2Eff: CreateEffect
+        Explosions: protonexpl_lrg2
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew12.aud
         InvalidImpactTypes: Water
 
 BluehellRavenMissileAA:
@@ -689,7 +721,7 @@ StealthDragonAA:
 Stormdragon:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^HEWH
-    ReloadDelay: 220
+    ReloadDelay: 180
     MinRange: 3c0
     Range: 14c0
     Burst: 8

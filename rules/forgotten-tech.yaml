@@ -514,23 +514,23 @@ upgrade.digger_mortar:
     ProvidesPrerequisite:
         Prerequisite: upgrade.digger_mortar
 
-upgrade.digger_122mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Digger (122mm)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Digger units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.digger_122mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.digger_122mm
+# upgrade.digger_122mm:
+    # Inherits: ^Tech
+    # Tooltip:
+        # Name: Choose Digger (122mm)
+    # Buildable:
+        # BuildPaletteOrder: 419
+        # Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Digger units.
+    # Valued:
+        # Cost: 250
+    # RenderSprites:
+        # Image: forg.digger_122mm
+    # ProvidesPrerequisite:
+        # Prerequisite: upgrade.digger_122mm
 
 upgrade.bison:
     Inherits: ^Tech

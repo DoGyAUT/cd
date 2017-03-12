@@ -45,9 +45,9 @@ NIHARV:
     Tooltip:
         Name: Nod Industry Harvester
     Buildable:
-        Queue: Vehicle.Nod.Harvester
+        Queue: Vehicle.Nod
         BuildPaletteOrder: 201
-        Prerequisites: niproc, ~industry
+        Prerequisites: niproc, ~industry, ~naweap
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -105,9 +105,9 @@ NTHARV:
     Tooltip:
         Name: Nod Technology Harvester
     Buildable:
-        Queue: Vehicle.Nod.Harvester
+        Queue: Vehicle.Nod
         BuildPaletteOrder: 201
-        Prerequisites: ntproc, ~technology
+        Prerequisites: ntproc, ~technology, ~naweap
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -158,9 +158,9 @@ NPHARV:
     Tooltip:
         Name: Nod Propaganda Harvester
     Buildable:
-        Queue: Vehicle.Nod.Harvester
+        Queue: Vehicle.Nod
         BuildPaletteOrder: 201
-        Prerequisites: npproc, ~propaganda
+        Prerequisites: npproc, ~propaganda, ~naweap
         Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
     Selectable:
         Priority: 7
@@ -205,7 +205,7 @@ SAPC:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 650
+        Cost: 500
     Tooltip:
         Name: Subterranean APC
     Selectable:
@@ -666,7 +666,7 @@ HAILSTORM:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 1600
+        Cost: 1500
     Tooltip:
         Name: Hailstorm
     Selectable:

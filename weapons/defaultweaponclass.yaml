@@ -255,6 +255,17 @@
             Aircraft: 100
             Building: 80
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+^HEAPWH:
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 0
+        Versus:
+            Infantry: 70
+            Cyborg: 70
+            Vehicle: 30
+            Aircraft: 100
+            Building: 80
+        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
         
 ^SonicWH:
     Warhead@1Dam: SpreadDamage
@@ -311,7 +322,7 @@
         Damage: 0
         Versus:
             Infantry: 100
-            Cyborg: 50
+            Cyborg: 100
             Vehicle: 50
             Aircraft: 100
             Building: 50

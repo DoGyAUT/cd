@@ -142,7 +142,7 @@ NAAPWR:
 NIPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: Nod Industry Tiberium Refinery
     Buildable:
@@ -160,7 +160,7 @@ NIPROC:
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
-        HP: 1800
+        HP: 2000
     RevealsShroud:
         Range: 6c0
     TiberianSunRefinery:
@@ -176,6 +176,10 @@ NIPROC:
     FreeActor:
         Actor: NIHARV
         SpawnOffset: 2,1
+        Facing: 160
+    FreeActor@2:
+        Actor: NIHARV
+        SpawnOffset: 2,2
         Facing: 160
 #    WithIdleOverlay@REDLIGHTS:
 #        Sequence: idle-redlights
@@ -197,24 +201,8 @@ NIPROC:
     ProvidesPrerequisite@buildingname:   
     ProvidesPrerequisite@nodref:   
         Prerequisite: nproc
-    RallyPoint:
-        Offset: 4,1
-        Palette: mouse
-        IsPlayerPalette: False
-    Exit@1:
-        SpawnOffset: 0,0,0
-        ExitCell: 3,1
-        ExitDelay: 1
-    ExitsDebugOverlay:
-    Production:
-        Produces: Vehicle.Nod.Harvester
-    ProductionQueue@Vehicle:
-        Type: Vehicle.Nod.Harvester
-        Group: Vehicle
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    DisabledOverlay:
-    ProductionBar:
+    CustomSellValue:
+        Value: 0
 
 NTPROC:
     Inherits: NIPROC
@@ -229,6 +217,10 @@ NTPROC:
         Actor: NTHARV
         SpawnOffset: 2,1
         Facing: 160
+    FreeActor@2:
+        Actor: NTHARV
+        SpawnOffset: 2,2
+        Facing: 160
 
 NPPROC:
     Inherits: NIPROC
@@ -242,6 +234,10 @@ NPPROC:
     FreeActor:
         Actor: NPHARV
         SpawnOffset: 2,1
+        Facing: 160
+    FreeActor@2:
+        Actor: NPHARV
+        SpawnOffset: 2,2
         Facing: 160
 
 NAHAND:
@@ -299,7 +295,7 @@ NAHAND:
 NAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Nod War Factory
     ProvidesPrerequisite:
