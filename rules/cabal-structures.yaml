@@ -104,7 +104,7 @@ KPR:
 KPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: Cabal Tiberium Refinery
     Buildable:
@@ -122,7 +122,7 @@ KPROC:
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
-        HP: 1800
+        HP: 2000
     RevealsShroud:
         Range: 6c0
     TiberianSunRefinery:
@@ -139,6 +139,10 @@ KPROC:
         Actor: KHARV
         SpawnOffset: 2,1
         Facing: 160
+    FreeActor@2:
+        Actor: KHARV
+        SpawnOffset: 2,2
+        Facing: 160
     WithIdleOverlay@REDLIGHTS:
         Sequence: idle-redlights
     WithIdleOverlay@BIB:
@@ -152,6 +156,8 @@ KPROC:
         Weapon: TiberiumExplosionRef
         EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
+    CustomSellValue:
+        Value: 0
  
 CYBBAR:
     Inherits: ^Building
@@ -209,7 +215,7 @@ CYBBAR:
 KAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Cabal War Factory
     ProvidesPrerequisite:
@@ -395,18 +401,18 @@ KABTECH:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    Production@Tech:
-        Produces: Tech.Cabal
-        MoveIntoWorld: False
-    ProductionQueue@Tech:
-        Type: Tech.Cabal
-        Group: Tech
-        QueuedAudio: BuildTech
-        ReadyAudio: TechComplete
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
+    # Production@Tech:
+        # Produces: Tech.Cabal
+        # MoveIntoWorld: False
+    # ProductionQueue@Tech:
+        # Type: Tech.Cabal
+        # Group: Tech
+        # QueuedAudio: BuildTech
+        # ReadyAudio: TechComplete
+        # BuildDurationModifier: 60
+        # LowPowerSlowdown: 3
     Exit:
     ExitsDebugOverlay:
-    ProductionBar:
+    # ProductionBar:
     DisabledOverlay:
     ProvidesPrerequisite@buildingname:

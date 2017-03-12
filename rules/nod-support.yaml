@@ -418,11 +418,15 @@ NAOBEL:
     GrantConditionOnPrerequisite@laser:
         Condition: upgrade.laser
         Prerequisites: upgrade.laser
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 6c0
+        CloakTypes: Cloak, Underground
 
 NAPULS:
     Inherits: ^Defense
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: E.M. Pulse Cannon
     Buildable:
@@ -538,7 +542,7 @@ NAMISL:
 NASTLH:
     Inherits: ^Building
     Valued:
-        Cost: 500
+        Cost: 1000
     Tooltip:
         Name: Stealth Generator
     Buildable:

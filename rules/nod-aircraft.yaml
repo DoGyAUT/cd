@@ -281,8 +281,8 @@ NODCARRY:
     Buildable:
         Queue: Air.Nod
         BuildPaletteOrder: 203
-        Prerequisites: ~nahpad, ~!t1, ~propaganda
-        Description: Requires Technology Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
+        Prerequisites: ~nahpad, ~propaganda
+        Description: Requires Propaganda Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -314,7 +314,7 @@ NODCARRY:
         Probability: 100
 
 RAVEN:
-    Inherits: ^AttackPlane
+    Inherits: ^AttackAdvancedPlane
     Valued:
         Cost: 1800
     Tooltip:
@@ -322,7 +322,7 @@ RAVEN:
     Buildable:
         Queue: Air.Nod
         BuildPaletteOrder: 203
-        Prerequisites: ~nahpad, ~!t1, ~propaganda
+        Prerequisites: ~nahpad, ~!t1, ~!technology
         Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a Minigun
     Selectable:
         Bounds: 60,48
@@ -345,14 +345,14 @@ RAVEN:
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 256,800,-32, 256,-800,-32
-        RequiresCondition: !upgrade.bluehell
+        RequiresCondition: !upgrade.bluehell && !upgrade.tibgas
     Armament@primary:
         Weapon: RavenMissile
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
         LocalOffset: 256,800,-32, 256,-800,-32
-        RequiresCondition: !upgrade.bluehell
+        RequiresCondition: !upgrade.bluehell && !upgrade.tibgas
     Armament@primaryAAupgrade:
         Weapon: BluehellRavenMissileAA
         MuzzleSequence: muzzle
@@ -367,9 +367,20 @@ RAVEN:
         MuzzlePalette: apolra50alpha
         LocalOffset: 256,800,-32, 256,-800,-32
         RequiresCondition: upgrade.bluehell
-	Turreted: 
-        TurnSpeed: 360
-	AttackTurreted:
+    Armament@primaryupgrade2:
+        Weapon: TiberiumRavenMissile
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: upgrade.tibgas
+    Armament@primaryAAupgrade2:
+        Weapon: TiberiumRavenMissileAA
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        LocalOffset: 256,800,-32, 256,-800,-32
+        RequiresCondition: upgrade.tibgas
     AmmoPool@1:
         Name: primary
         Ammo: 2
@@ -384,6 +395,9 @@ RAVEN:
     GrantConditionOnPrerequisite@upgrade1:
         Condition: upgrade.bluehell
         Prerequisites: upgrade.bluehell
+    GrantConditionOnPrerequisite@upgrade2:
+        Condition: upgrade.tibgas
+        Prerequisites: upgrade.tibgas
     Contrail@1:
         Offset: -555,0,256
         TrailLength: 30
@@ -405,6 +419,9 @@ RAVEN:
     SpawnActorOnDeath:
         Actor: RAVEN.Husk
         Probability: 100
+    AttackPlane:
+        FacingTolerance: 45
+    AutoTarget:
 
 SCRINB:
     Inherits: ^AttackAdvancedPlane

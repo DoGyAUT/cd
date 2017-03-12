@@ -158,13 +158,13 @@ upgrade.fbuggy_mortar:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Assault Buggy (Mortar)
-    Buildable:
-        BuildPaletteOrder: 408
-        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount a high rate of fire mortar on Assault Buggy units. \n\n Weapon Class: Small T1
+    # Buildable:
+        # BuildPaletteOrder: 408
+        # Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Mount a high rate of fire mortar on Assault Buggy units. \n\n Weapon Class: Small T1
     Valued:
         Cost: 250
     RenderSprites:
@@ -230,13 +230,13 @@ upgrade.ftruck_mortar:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Assault Truck (Mortar)
-    Buildable:
-        BuildPaletteOrder: 411
-        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_flak
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount a high rate of fire mortar on Assault Truck units.
+    # Buildable:
+        # BuildPaletteOrder: 411
+        # Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_flak
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Mount a high rate of fire mortar on Assault Truck units.
     Valued:
         Cost: 250
     RenderSprites:
@@ -266,13 +266,13 @@ upgrade.gremlin_mortar:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Gremlin (Howitzer)
-    Buildable:
-        BuildPaletteOrder: 413
-        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Gremlin units.
+    # Buildable:
+        # BuildPaletteOrder: 413
+        # Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Gremlin units.
     Valued:
         Cost: 250
     RenderSprites:
@@ -428,13 +428,13 @@ upgrade.lizard_90mm:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Lizard (90mm)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Lizard units.
+    # Buildable:
+        # BuildPaletteOrder: 419
+        # Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_122mm
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Lizard units.
     Valued:
         Cost: 250
     RenderSprites:
@@ -514,23 +514,23 @@ upgrade.digger_mortar:
     ProvidesPrerequisite:
         Prerequisite: upgrade.digger_mortar
 
-upgrade.digger_122mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Digger (122mm)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Digger units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.digger_122mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.digger_122mm
+# upgrade.digger_122mm:
+    # Inherits: ^Tech
+    # Tooltip:
+        # Name: Choose Digger (122mm)
+    # Buildable:
+        # BuildPaletteOrder: 419
+        # Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Digger units.
+    # Valued:
+        # Cost: 250
+    # RenderSprites:
+        # Image: forg.digger_122mm
+    # ProvidesPrerequisite:
+        # Prerequisite: upgrade.digger_122mm
 
 upgrade.bison:
     Inherits: ^Tech
@@ -554,13 +554,13 @@ upgrade.bison_130mm:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Bison (130mm + MG)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites: ~upgrade.bison, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
+    # Buildable:
+        # BuildPaletteOrder: 421
+        # Prerequisites: ~upgrade.bison, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Bison units. Disables Auroch usage.
     Valued:
         Cost: 250
     RenderSprites:
@@ -625,7 +625,7 @@ upgrade.auroch:
 upgrade.auroch_130mm:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Auroch (130mm + MG)
+        Name: Choose Auroch (130mm + Rocket)
     Buildable:
         BuildPaletteOrder: 421
         Prerequisites: ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
@@ -662,13 +662,13 @@ upgrade.auroch_180mm:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Auroch (180mm)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_130mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
+    # Buildable:
+        # BuildPaletteOrder: 421
+        # Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_130mm
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to produce Bison units. Disables Auroch usage.
     Valued:
         Cost: 250
     RenderSprites:
@@ -819,21 +819,3 @@ upgrade.harvester_tanky:
         Image: fharv
     ProvidesPrerequisite:
         Prerequisite: upgrade.harvester_tanky
-        
-upgrade.harvester_selfheal:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Harvester selfheal
-    Buildable:
-        BuildPaletteOrder: 429
-        Prerequisites: ~fatrade , !upgrade.harvester_selfheal, ~!upgrade.harvester_tanky, ~!upgrade.harvester_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds selfhealing to harvesters
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: fharv
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.harvester_selfheal

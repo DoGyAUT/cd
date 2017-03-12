@@ -223,9 +223,9 @@ ChromeLayout:
 	cd|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/settings.yaml
 	common|chrome/credits.yaml
-	common|chrome/lobby.yaml
+	cd|chrome/lobby.yaml
 	common|chrome/lobby-mappreview.yaml
-	common|chrome/lobby-players.yaml
+	cd|chrome/lobby-players.yaml
 	common|chrome/lobby-options.yaml
 	common|chrome/lobby-music.yaml
 	common|chrome/lobby-kickdialogs.yaml
@@ -315,44 +315,20 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 	TilesetCodes:
 		TEMPERATE: t
 		SNOW: a
-		
+
 GameSpeeds:
-	slower:
-		Name: Slower (low latency)
-		Timestep: 50
-		OrderLatency: 3
 	default:
-		Name: Normal (low latency)
-		Timestep: 40
-		OrderLatency: 3
-	faster:
-		Name: Faster (low latency)
-		Timestep: 30
-		OrderLatency: 4
-	fastest:
-		Name: Fastest (low latency)
-		Timestep: 20
-		OrderLatency: 6
-	hlslower:
-		Name: Slower 
-		Timestep: 50
-		OrderLatency: 6
-	hldefault:
 		Name: Normal 
 		Timestep: 40
 		OrderLatency: 6
-	hlfaster:
+	faster:
 		Name: Faster 
 		Timestep: 30
 		OrderLatency: 8
-	hlfastest:
+	fastest:
 		Name: Fastest 
 		Timestep: 20
 		OrderLatency: 12
-	xhlslower:
-		Name: Slower (high latency)
-		Timestep: 50
-		OrderLatency: 9
 	xhldefault:
 		Name: Normal (high latency)
 		Timestep: 40
@@ -365,6 +341,10 @@ GameSpeeds:
 		Name: Fastest (high latency)
 		Timestep: 20
 		OrderLatency: 18
+	aitestspeed:
+		Name: AI Testspeed only
+		Timestep: 1
+		OrderLatency: 1
         
 ColorValidator:
 

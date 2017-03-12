@@ -13,7 +13,7 @@ FireballLauncher:
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 50
+        Damage: 75
         Falloff: 100, 80
     Warhead@2Eff: CreateEffect
         Explosions: fire01a, fire02a, fire03a
@@ -41,7 +41,7 @@ BlueFireballLauncher:
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 70
+        Damage: 100
         Falloff: 100, 90, 80
     Warhead@2Eff: CreateEffect
         Explosions: fire01a, fire02a, fire03a
@@ -62,7 +62,7 @@ BlueFireballLauncherM:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 110
+        Damage: 150
         Falloff: 100, 90, 80
 
         
@@ -212,13 +212,13 @@ GoonHammer2:
 
 FanticBoom:
     Inherits@wh: ^FireWH
-    ReloadDelay: 1
-    Range: 2c0
+    ReloadDelay: 1000
+    Range: 1c0
     Projectile: BulletAS
         Speed: 1c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 200
+        Damage: 0
         Falloff: 100, 75, 50, 25, 0
         AffectsParent: True
         Versus:
