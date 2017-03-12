@@ -136,6 +136,7 @@ GAMG:
     WithMuzzleOverlay:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -225,8 +226,9 @@ GAMG2:
         Recoil: 25
         RecoilRecovery: 10
     WithMuzzleOverlay:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -286,6 +288,9 @@ GASENTUR:
         Recoil: 25
         RecoilRecovery: 10
     WithMuzzleOverlay:
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -336,6 +341,9 @@ GAMIS:
         Recoil: 25
         RecoilRecovery: 10
     WithMuzzleOverlay:
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -398,8 +406,9 @@ GACAN:
         Recoil: 50
         RecoilRecovery: 10
     WithMuzzleOverlay:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -454,8 +463,9 @@ GAMORTAR:
         Recoil: 50
         RecoilRecovery: 10
     WithMuzzleOverlay:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
+        PauseOnLowPower: True
     LineBuildNode:
         Types: turret
     Power:
@@ -477,6 +487,7 @@ FTWR:
         Footprint: xx xx
         Dimensions: 2,2
         Adjacent: 8
+    GivesBuildableArea:
     Selectable:
         Bounds: 48, 48, 0, -12
     DisabledOverlay:
