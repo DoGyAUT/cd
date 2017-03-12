@@ -800,3 +800,23 @@ ReaperCannon:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 75
+
+FortressCannon:
+    Inherits: ^ShellAP 
+    Inherits@wh: ^APWH
+    ReloadDelay: 220
+    Burst: 1
+    BurstDelay: 10
+    Range: 7c0
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: BulletAS
+        Speed: 0c512
+        ContrailWidth: 20
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water

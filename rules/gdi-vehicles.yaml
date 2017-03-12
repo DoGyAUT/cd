@@ -28,8 +28,8 @@ GMCV:
         IntoActor: gacnst
         Offset: -1,-1
         Facing: 96
-        TransformSounds: place2.aud
-        NoTransformSounds:
+        TransformSounds: buildupsound.aud
+        NoTransformNotification: BuildingCannotPlaceAudio
         Voice: Move
     RenderSprites:
     RenderVoxels:
@@ -441,16 +441,16 @@ HVR:
 AIRBLAST:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 900
+        Cost: 1700
     Tooltip:
-        Name: Airblast
+        Name: Pioneer
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 106
         Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.gdf
-        Description: Light armored MLRS.\n\n  Role: Support/Artillery/Anti VTOL\n  HP: 500\n  Armor: Medium\n  Speed: 80\n  Viewrange: 12\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Full burst lock on VTOLs\n - Crushes infantry
+        Description: Light armored MLRS.\n\n  Role: Support\n  HP: 600\n  Armor: Medium\n  Speed: 80\n  Viewrange: 12\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Full burst lock on VTOLs\n - Crushes infantry
     Voiced:
         VoiceSet: Archon
         Volume: 2
@@ -460,29 +460,18 @@ AIRBLAST:
     Health:
         HP: 600
     RevealsShroud:
-        Range: 12c0
-    Armament@primary:
-        Weapon: MissileBarrage
-        LocalOffset: 256,171,800, 256,-171,800
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@AAMissiles:
-        Weapon: AirblastMissile
-        LocalOffset: 256,171,800, 256,-171,800
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Turreted:
-        TurnSpeed: 3
-        Offset: -128,0,85
-    AttackTurreted:
-    AutoTarget:
+        Range: 8c0
+    Transforms:
+        IntoActor: ftwr
+        Offset: -1,-1
+        Facing: 96
+        TransformSounds: buildupsound.aud
+        NoTransformNotification: BuildingCannotPlaceAudio
+        Voice: Move
     RenderSprites:
     RenderVoxels:
-    WithVoxelTurret:
-        Recoils: False
     WithVoxelBody:
-    WithMuzzleOverlay:
-
+    
 TRITON:
     Inherits: ^Walker
     Valued:
@@ -604,11 +593,11 @@ MMCH:
         Cost: 1600
     Tooltip:
         Name: Titan
-    # Buildable:
-        # Queue: Vehicle.GDI
-        # BuildPaletteOrder: 107
-        # Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
-        # Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
+    Buildable:
+        Queue: Vehicle.GDI
+        BuildPaletteOrder: 107
+        Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+        Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
     Voiced:
         VoiceSet: Titan
         Volume: 2
@@ -722,6 +711,13 @@ MMCH2:
     Mobile:
         TurnSpeed: 5
         Speed: 55
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: stomp4.aud
+        Delay: 3
+        Interval: 19
+        RequiresCondition: walker
     Health:
         HP: 3900
     RevealsShroud:

@@ -134,8 +134,8 @@ GAMG:
         Recoil: 25
         RecoilRecovery: 10
     WithMuzzleOverlay:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
+    WithIdleOverlay@LIGHTS:
+        Sequence: idle-lights
     LineBuildNode:
         Types: turret
     Power:
@@ -412,7 +412,6 @@ GACAN:
     
 GAMORTAR:
     Inherits: ^Defense
-    Inherits@gdf: ^GainsExperience
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -466,10 +465,87 @@ GAMORTAR:
         Range: 6c0
         CloakTypes: Cloak, Underground
     ProvidesPrerequisite@buildingname:
+
+FTWR:
+    Inherits: ^Defense
+    WithSpriteBody:
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Fortress Outpost
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+        Adjacent: 8
+    Selectable:
+        Bounds: 48, 48, 0, -12
+    DisabledOverlay:
+    RequiresPower:
+    Health:
+        HP: 3000
+    RevealsShroud:
+        Range: 10c0
+    BodyOrientation:
+        QuantizedFacings: 32
+    AutoTarget:
+    Turreted@cannon:
+        TurnSpeed: 6
+        Offset: 150,0,-100
+        InitialFacing: 85
+    Turreted@sensor:
+        Turret: secondary
+        TurnSpeed: 10
+        Offset: 170,0,200
+        InitialFacing: 85
+    AttackTurreted:
+    CanPowerDown:
+        IndicatorPalette: mouse
+    WithSpriteTurret@cannon:
+        Recoils: True
+        Sequence: turret-cnnd
+    WithSpriteTurret@sensor:
+        Recoils: True
+        Sequence: turret-sensor
+        Turret: secondary
+    Armament@sensor:
+        Turret: secondary
+        Weapon: WatchSniper
+        LocalOffset: 600,0,1500
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+    Armament@cannon1:
+        Weapon: FortressCannon
+        LocalOffset: 1200,240,1300
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+    Armament@canno2:
+        Weapon: FortressCannon
+        LocalOffset: 1200,-240,1300
+        MuzzleSequence: muzzle
+        MuzzlePalette: apolra50alpha
+        Recoil: 25
+        RecoilRecovery: 10
+        FireDelay: 10
+    WithMuzzleOverlay:
+    LineBuildNode:
+        Types: turret
+    Power:
+        Amount: -100
+    RenderDetectionCircle:
+    DetectCloaked:
+        Range: 8c0
+        CloakTypes: Cloak, Underground
+    ProvidesPrerequisite@buildingname:
+    BaseProvider:
+        Range: 8c0
+    ActorLostNotification:
+        Notification: CriticalStructureLost
         
 GAFORT:
     Inherits: ^Defense
-    Inherits@gdf: ^GainsExperience
     WithSpriteBody:
     Valued:
         Cost: 1500

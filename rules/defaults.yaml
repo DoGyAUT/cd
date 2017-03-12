@@ -1611,6 +1611,7 @@
     
 ^AttackPlane:
     Inherits: ^Aircraft
+    ReturnOnIdle:
     Aircraft:
         LandWhenIdle: False
         CruiseAltitude: 8192
@@ -1640,6 +1641,7 @@
         CruiseAltitude: 8192
         Repulsable: True
         IdealSeparation: 1024
+    ReturnOnIdle:
     Targetable@GROUND:
         TargetTypes: Ground
         RequiresCondition: !airborne

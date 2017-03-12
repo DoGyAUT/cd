@@ -3778,8 +3778,8 @@ gaarmory:
         Offset: 0,0
         UseTilesetCode: false        
         
-ftwr_arty:
-    Defaults: ftwr
+ftwr:
+    Defaults:
         Offset: 0, -24
         UseTilesetCode: false
     idle:
@@ -3799,8 +3799,60 @@ ftwr_arty:
         Length: 11
         ShadowStart: 11
         Tick: 120
-    turret: ftwr_arty
+    turret-mg: ftwr_mg
         Facings: 32
+        UseTilesetCode: false
+    turret-arty: ftwr_arty
+        Facings: 32
+        UseTilesetCode: false
+    turret-cnns: ftwr_cnns
+        Facings: 32
+        UseTilesetCode: false
+    turret-cnnd: ftwr_cnnd
+        Facings: 32
+        UseTilesetCode: false
+    turret-dis: ftwr_dis
+        Facings: 32
+        UseTilesetCode: false
+    turret-sam: ftwr_sam
+        Facings: 32
+        UseTilesetCode: false
+    turret-sensor: gasensor_tur
+        Facings: 32
+    muzzle: gunfire
+        Length: *
+        Offset: 0, 0
+    muzzle0: mgun-n
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle1: mgun-nw
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle2: mgun-w
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle3: mgun-sw
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle4: mgun-s
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle5: mgun-se
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle6: mgun-e
+        Length: *
+        Offset: 0, 0
+        UseTilesetCode: false
+    muzzle7: mgun-ne
+        Length: *
+        Offset: 0, 0
         UseTilesetCode: false
     make: ftwrmk
         Length: 25

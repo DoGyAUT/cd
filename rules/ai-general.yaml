@@ -1,0 +1,78 @@
+Player:
+    HackyAI@NormalAI:
+        Name: Normal AI
+        MinimumExcessPower: 10
+        BuildingQueues: Building, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
+        DefenseQueues: Defense
+        UnitQueues: Infantry.GDI, Infantry.Nod, Infantry.Cabal, Infantry.Forg, Infantry.Scrin, Vehicle.GDI, Vehicle.Nod, Vehicle.Cabal, Vehicle.Forg, Vehicle.Scrin, Air.GDI, Air.Nod, Air.Cabal, Air.Forg, Air.Scrin, Vehicle.GDI.Ace
+        SquadSize: 5
+        SquadSizeRandomBonus : 5    
+        AssignRolesInterval: 20
+        RushInterval: 600
+        AttackForceInterval: 50
+        MinimumAttackForceDelay: 0        
+        StructureProductionActiveDelay: 60
+        MinimumDefenseRadius: 5
+        MaximumDefenseRadius: 20
+        NewProductionCashThreshold: 5000        
+        IdleBaseUnitsMaximum: 12
+        RushAttackScanRadius: 15
+        ProtectUnitScanRadius: 15
+        RallyPointScanRadius: 8
+        MinBaseRadius: 5
+        MaxBaseRadius: 20
+        RestrictMCVDeploymentFallbackToBase: False
+        ShouldRepairBuildings: True 
+        #CapturingActorTypes: engineer, nengineer, kengineer, fengineer
+        CapturableActorTypes: tibtech, cahosp, caarmr, caaray
+        CheckCaptureTargetsForVisibility: false
+        MaximumCaptureTargetOptions: 15
+        BuildingCommonNames:
+            ConstructionYard: gacnst, nacnst, kacnst, facnst, sacnst
+            Refinery: gproc, niproc, ntproc, npproc, kproc, fproc, sproc
+            Power: gapowr, napowr, naapwr, kpr, fapowr, sapowr
+            Barracks: gapile, nahand, cybbar, fabar, saportal
+            VehiclesFactory: gaweap, naweap, kaweap, faweap, saportal
+            Production: gapile, nahand, cybbar, fabar, gahpad, nahpad, kahpad, fahpad, saportal
+            Silo: gsilo, nasilo, kasilo, fasilo
+        UnitsCommonNames:
+            Mcv: gmcv, nmcv, kmcv, fmcv, smcv
+            ExcludeFromSquads: gharv, niharv, ntharv, npharv, kharv, fharv, sharv
+
+        SupportPowerDecision@IonCannonPower:
+            OrderName: IonCannonPowerInfoOrder
+            MinimumAttractiveness: 1000
+            FineScanRadius: 2
+            Consideration@1:
+                Against: Enemy
+                Types: Air, Tank, Vehicle, Infantry, Water
+                Attractiveness: 2
+                TargetMetric: Value
+                CheckRadius: 2c0
+            Consideration@2:
+                Against: Enemy
+                Types: Structure
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 2c0
+            Consideration@3:
+                Against: Ally
+                Types: Ground, Water
+                Attractiveness: -10
+                TargetMetric: Value
+                CheckRadius: 3c0
+        SupportPowerDecision@Airstrike:
+            OrderName: OXAirstrikePowerInfoOrder
+            MinimumAttractiveness: 2000
+            Consideration@1:
+                Against: Enemy
+                Types: Vehicle, Infantry
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 2c0
+            Consideration@2:
+                Against: Ally
+                Types: Ground, Water
+                Attractiveness: -10
+                TargetMetric: Value
+                CheckRadius: 2c0
