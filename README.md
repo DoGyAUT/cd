@@ -24,7 +24,7 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 3. Rename "cd-master" folder to "cd"
 4. Modfolder should look now like "OpenRA\mods\cd"
 5. Start OpenRA.exe
-6. Download Tiberian Sun mod content (via ingame modchooser) - this has only to be once
+6. Download Tiberian Sun content (via ingame modchooser) - this has only to be done once
 7. Choose Crystallized Doom to launch the mod (Mods can be switched in the "Extras" ingamemenu)
 
 ## Optional Soundtrack:
