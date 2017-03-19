@@ -49,7 +49,7 @@ ELITEGRUNT:
     Health:
         HP: 200
     Mobile:
-        Speed: 50
+        Speed: 60
     RevealsShroud:
         Range: 6c0
     Armament@primary:
@@ -73,7 +73,7 @@ BRIGAND:
         Prerequisites: ~fabar, ~!t1, ~upgrade.brigand
         Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
-        Cost: 300
+        Cost: 200
     Tooltip:
         Name: Brigand
     Selectable:
@@ -227,7 +227,7 @@ FDOG:
         Prerequisites: ~fabar, ~!upgrade.fiend
         Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
     Valued:
-        Cost: 250
+        Cost: 300
     Tooltip:
         Name: Hellhound
     Selectable:
@@ -271,7 +271,7 @@ FFIEND:
         Prerequisites: ~fabar, faradr, ~!t1, ~upgrade.fiend
         Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
     Valued:
-        Cost: 400
+        Cost: 300
     Tooltip:
         Name: Fiend
     Selectable:
@@ -346,7 +346,7 @@ GOON:
         Prerequisites: ~fabar, fatrade, ~!t1, ~!t2, ~upgrade.goon
         Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Goon
     Selectable:
@@ -394,7 +394,7 @@ GHOST:
     Mobile:
         Speed: 50
     Health:
-        HP: 360
+        HP: 310
     RevealsShroud:
         Range: 9c0
     Armament@gun:
@@ -414,6 +414,6 @@ GHOST:
         PingRadar: True
         Notification: StealthUnitDetected
     Cloak:
-        Condition: crate-cloak || cloakgenerator
+        # Condition: crate-cloak || cloakgenerator
         CloakSound:
         UncloakSound: cloak5.aud
