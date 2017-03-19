@@ -4,7 +4,6 @@ InfLaserFire:
     Inherits@wh: ^LaserWH
     ReloadDelay: 100
     Range: 10c0
-    MinRange: 4c0
     Report: laserpulse.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
     Projectile: LaserZap
@@ -525,11 +524,11 @@ TarantulaLaserAA:
 LaserFire3:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 70
+    ReloadDelay: 80
     Range: 7c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
     Burst: 5
-    BurstDelay: 20
+    BurstDelay: 7
     Projectile: LaserZap
         Color: 0064FF
         Width: 40
