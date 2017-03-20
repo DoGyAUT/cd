@@ -33,10 +33,8 @@ InfLaserFire:
 BuggyLaserFire:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 60
+    ReloadDelay: 30
     Range: 6c0
-    Burst: 2
-    BurstDelay: 2
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
     Projectile: LaserZap
@@ -252,11 +250,9 @@ LaserFireUpgrade:
 AirLaserFire:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 40
+    ReloadDelay: 20
     Range: 6c0
 	MinRange: 1c0
-    Burst: 2
-    BurstDelay: 10
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground
     Projectile: LaserZap

@@ -108,7 +108,7 @@ FlakCannon:
 
 GorranCannon:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^HEAPWH
     ReloadDelay: 100
     Range: 5c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
@@ -355,23 +355,15 @@ AurochCannon:
         InvalidImpactTypes: Water
  
 PoseidonCannon:
-    Inherits: ^ShellAP 
-	Inherits@wh: ^APWH
+    Inherits: MechRailgun
     ReloadDelay: 220
     Range: 10c0
-    Report: shot01.aud, shot02.aud, shot03.aud
     Projectile: BulletAS
         Speed: 1c0
         Inaccuracy: 0c512
-        ContrailWidth: 20
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 800
-    Warhead@2Eff: CreateEffect
-        Explosions: medium_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
 
 TritonCannon:
     Inherits: ^ShellHE 
