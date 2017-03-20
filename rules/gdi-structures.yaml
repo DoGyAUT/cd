@@ -401,11 +401,12 @@ GAARMORY:
         Condition: fortification
         OnFireSound: fortificate.wav
         Sequence: idle
-        ChargeTime: 120
+        ChargeTime: 180
         Prerequisites: upgrade.gdf
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+        Range: 2
 
 GAHPAD:
     Inherits: ^Building
@@ -620,7 +621,7 @@ GADROP:
         Icon: poseidon
         OrderName: PoseidonDropOrder
         SquadSize: 1
-        ChargeTime: 300
+        ChargeTime: 180
         Description: Poseidon tank drop
         LongDesc: Drops a Steel Talon tank battalion on the field.
         SelectTargetSpeechNotification: SelectTarget

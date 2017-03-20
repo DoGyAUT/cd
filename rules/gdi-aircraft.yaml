@@ -222,11 +222,13 @@ TRNSPORT:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 5
-        Speed: 90
+        Speed: 180
         InitialFacing: 0
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
 #    Carryall:
 #        Automatic: True
     Health:
