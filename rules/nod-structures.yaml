@@ -456,6 +456,7 @@ NAHPAD:
         LongDesc: Calls in a heavy ace class Havoc attack chopper.
         SelectTargetSpeechNotification: SelectTarget
         EndChargeSpeechNotification: Reinforce
+        InsufficientPowerSpeechNotification: InsufficientPower
         ChargeTime: 240
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -527,7 +528,23 @@ NAPYRA:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-   
+    SpawnActorPower@subambush:
+        OrderName: SubAmbushPowerInfoOrder
+        Prerequisites: napyra, ~industry
+        Description: Subterranean APC Ambush
+        LongDesc: Spawns a fully loaded Subterranean APC.
+        Actor: sapc1
+        Icon: subapcambush
+        LifeTime: -1
+        DeploySound: drillup.aud
+        EffectImage: dig
+        EffectPalette: effect
+        EffectSequence: idle
+        ChargeTime: 200
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: Reinforce
+
 NATECH:
     Inherits: ^Building
     Valued:

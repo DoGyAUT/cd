@@ -210,6 +210,7 @@ SAPC:
         Name: Subterranean APC
     Selectable:
         Bounds: 42,42, 0, -5
+        Class: SAPC
     Buildable:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 202
@@ -221,16 +222,16 @@ SAPC:
     Mobile:
         TurnSpeed: 5
         Speed: 80
-		RequiresCondition: !empdisable && !loading
-		Subterranean: true
-		SubterraneanCondition: submerged
-		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-		SubterraneanTransitionCost: 1
-		SubterraneanTransitionSound: drilldwn.aud
-		SubterraneanTransitionImage: dig
-		SubterraneanTransitionSequence: idle
-		SubterraneanTransitionPalette : player
-		TerrainSpeeds:
+        RequiresCondition: !empdisable && !loading
+        Subterranean: true
+        SubterraneanCondition: submerged
+        SubterraneanTransitionTerrainTypes: Clear, Rough, Green
+        SubterraneanTransitionCost: 1
+        SubterraneanTransitionSound: drilldwn.aud
+        SubterraneanTransitionImage: dig
+        SubterraneanTransitionSequence: idle
+        SubterraneanTransitionPalette : player
+        TerrainSpeeds:
             Subterranean: 110
     RejectsOrders:
         RequiresCondition: submerged
@@ -245,7 +246,7 @@ SAPC:
         MaxWeight: 8
         PipCount: 8
         EjectOnDeath: False
-		LoadingCondition: loading
+        LoadingCondition: loading
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
@@ -260,7 +261,24 @@ SAPC:
     AnnounceOnSeen:
         PingRadar: True
         Notification: SubterraneanUnitDetected
-        
+
+SAPC1:
+    Inherits: SAPC
+    -Buildable:
+    RenderSprites:
+        Image: sapc
+    RenderVoxels:
+        Image: sapc
+    Valued:
+        Cost: 500
+    Cargo:
+        Types: Infantry
+        MaxWeight: 8
+        PipCount: 8
+        InitialUnits: NASOL,NASOL,NASOL,NASOL,E3,E3,E3,E3
+        EjectOnDeath: False
+        LoadingCondition: loading
+
 BGGY:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
