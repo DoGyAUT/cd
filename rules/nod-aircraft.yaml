@@ -344,7 +344,6 @@ NODCARRY.SUPPORT:
         MaxWeight: 10
         PipCount: 10
     -Selectable:
-    -Targetable:
     RenderSprites:
         Image: nodcarry
     RenderVoxels:
@@ -390,7 +389,8 @@ VALKYRIE.SUPPORT:
     RenderVoxels:
         Image: valkyrie
     WithVoxelBody:
-    -Targetable:
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
     -Guardable:
     -MustBeDestroyed:
     Contrail@1:

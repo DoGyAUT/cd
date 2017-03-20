@@ -287,27 +287,25 @@ NAHAND:
     Power:
         Amount: -35
     ProvidesPrerequisite@buildingname:
-    DetonateWeaponPower@frenzy:
-        OrderName: FrenzyPowerInfoOrder
-        Prerequisites: ~propaganda
+    GrantExternalConditionPower@frenzy:
         Description: Frenzy
         LongDesc: Grants friendly infantry a time limited boost in movement speed.
+        OrderName: FrenzyPowerInfoOrder
         ActivationSequence:
         Icon: fenzy
-        ChargeTime: 180
-        Weapon: NodWarCry
-        DisplayRadarPing: True
-        CameraActor: camera
-        DisplayBeacon: True
-        BeaconPoster: circles
-        BeaconPosterPalette: beaconposter
-        SelectTargetSound: nod1_s6.aud
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
         EndChargeSound: nod1_s8.aud
-        LaunchSound: nod1_s5.aud
-        IncomingSound:  nod1_a8.aud
+        Condition: fenzy
+        OnFireSound: nod1_s5.aud
+        Sequence: idle
+        ChargeTime: 180
+        Prerequisites: ~propaganda
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+        Range: 8
+        Duration: 450
 
 NAWEAP:
     Inherits: ^Building

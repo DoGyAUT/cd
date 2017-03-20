@@ -861,7 +861,8 @@ DSHP.SUPPORT:
     WithVoxelBody:
     -Guardable:
     -MustBeDestroyed:
-    -Targetable:
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
     FlyAwayOnIdle:
     ParaDrop:
         DropRange: 3c512
