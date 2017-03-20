@@ -327,7 +327,7 @@ NODCARRY.SUPPORT:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 3
-        Speed: 90
+        Speed: 180
         InitialFacing: 0
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
@@ -342,6 +342,7 @@ NODCARRY.SUPPORT:
         MaxWeight: 10
         PipCount: 10
     -Selectable:
+    -Targetable:
     RenderSprites:
         Image: nodcarry
     RenderVoxels:
@@ -351,6 +352,59 @@ NODCARRY.SUPPORT:
     -MustBeDestroyed:
     SpawnActorOnDeath:
         Actor: NODCARRY.Husk
+        Probability: 100
+
+VALKYRIE.SUPPORT:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 650
+    Tooltip:
+        Name: Valkyrie
+    ParaDrop:
+        LZRange: 1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 180
+        InitialFacing: 0
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 700
+    RevealsShroud:
+        Range: 9c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry
+        MaxWeight: 6
+        PipCount: 6
+    -Selectable:
+    RenderSprites:
+        Image: valkyrie
+    RenderVoxels:
+        Image: valkyrie
+    WithVoxelBody:
+    -Targetable:
+    -Guardable:
+    -MustBeDestroyed:
+    Contrail@1:
+        Offset: 0,750,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: 0,-750,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    SpawnActorOnDeath:
+        Actor: VALKYRIE.Husk
         Probability: 100
 
 RAVEN:

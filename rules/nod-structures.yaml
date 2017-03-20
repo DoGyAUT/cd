@@ -376,7 +376,7 @@ NAWEAP:
         ChargeTime: 200
         SelectTargetSpeechNotification: SelectTarget
         InsufficientPowerSpeechNotification: InsufficientPower
-        EndChargeSpeechNotification: Reinforce
+        LaunchSpeechNotification: Reinforce
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -435,10 +435,29 @@ NARADR:
         LongDesc: Drops an infantry battalion on the field.
         SelectTargetSpeechNotification: SelectTarget
         InsufficientPowerSpeechNotification: InsufficientPower
-        EndChargeSpeechNotification: Reinforce
+        LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True
         BeaconPoster: nodcarry
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+    ParatroopersPower@techcarry:
+        UnitType: valkyrie.support
+        Prerequisites: ~technology
+        DropItems: nacad,nacad,e3,e3,shadow,shadow
+        Icon: valkyrie
+        OrderName: ShadowTrooperInfantryDropOrder
+        SquadSize: 1
+        ChargeTime: 180
+        Description: Shadow Trooper Drop
+        LongDesc: Drops a special infantry taskforce on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: valkyrie
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
@@ -558,25 +577,6 @@ NAPYRA:
     ExitsDebugOverlay:
     ProductionBar@Tech:
     ProvidesPrerequisite@buildingname:
-    ParatroopersPower@techcarry:
-        UnitType: nodcarry.support
-        Prerequisites: ~technology
-        DropItems: shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow
-        Icon: nodcarry
-        OrderName: ShadowTrooperInfantryDropOrder
-        SquadSize: 1
-        ChargeTime: 300
-        Description: Shadow Trooper Drop
-        LongDesc: Drops a taskforce of Shadowtroopers on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
-        EndChargeSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: nodcarry
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
 
 NATECH:
     Inherits: ^Building

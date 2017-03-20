@@ -859,13 +859,14 @@ DSHP.SUPPORT:
     WithVoxelBody:
     -Guardable:
     -MustBeDestroyed:
+    -Targetable:
     FlyAwayOnIdle:
     ParaDrop:
         DropRange: 3c512
     SpawnActorOnDeath:
         Actor: DSHP.Husk
         Probability: 100
-        
+
 DSHP:
     Inherits: ^Helicopter
     Valued:
