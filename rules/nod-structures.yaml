@@ -284,13 +284,30 @@ NAHAND:
         PowerdownSpeech: DisablePower
     DisabledOverlay:
     ProductionBar:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
-#    WithProductionOverlay@LIGHT:
-#        Sequence: production-light
     Power:
         Amount: -35
     ProvidesPrerequisite@buildingname:
+    DetonateWeaponPower@frenzy:
+        OrderName: FrenzyPowerInfoOrder
+        Prerequisites: ~propaganda
+        Description: Frenzy
+        LongDesc: Grants friendly infantry a time limited boost in movement speed.
+        ActivationSequence:
+        Icon: fenzy
+        ChargeTime: 180
+        Weapon: NodWarCry
+        DisplayRadarPing: True
+        CameraActor: camera
+        DisplayBeacon: True
+        BeaconPoster: circles
+        BeaconPosterPalette: beaconposter
+        SelectTargetSound: nod1_s6.aud
+        EndChargeSound: nod1_s8.aud
+        LaunchSound: nod1_s5.aud
+        IncomingSound:  nod1_a8.aud
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
 
 NAWEAP:
     Inherits: ^Building
@@ -339,13 +356,27 @@ NAWEAP:
     WithIdleOverlay@ROOF:
         Sequence: idle-roof
     WithProductionDoorOverlay@DOOR:
-#    WithProductionOverlay@LIGHTS:
-#        Sequence: production-lights
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
         Amount: -75
     ProvidesPrerequisite@buildingname:
+    SpawnActorPower@subambush:
+        OrderName: SubAmbushPowerInfoOrder
+        Prerequisites: nahand, ~industry
+        Description: Subterranean APC Ambush
+        LongDesc: Spawns a fully loaded Subterranean APC.
+        Actor: sapc1
+        Icon: subapcambush
+        LifeTime: -1
+        DeploySound: drillup.aud
+        EffectImage: dig
+        EffectPalette: player
+        EffectSequence: idle
+        ChargeTime: 200
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: Reinforce
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -391,6 +422,26 @@ NARADR:
     DetectCloaked:
         Range: 20c0
         CloakTypes: Underground
+    ParatroopersPower@propcarry:
+        UnitType: nodcarry.support
+        Prerequisites: ~propaganda
+        DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
+        Icon: nodcarry
+        OrderName: PropagandaInfantryDropOrder
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        ChargeTime: 300
+        Description: Propaganda Infantry Drop
+        LongDesc: Drops an infantry battalion on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: nodcarry
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
     
 NAHPAD:
     Inherits: ^Building
@@ -507,43 +558,25 @@ NAPYRA:
     ExitsDebugOverlay:
     ProductionBar@Tech:
     ProvidesPrerequisite@buildingname:
-    DetonateWeaponPower@frenzy:
-        OrderName: FrenzyPowerInfoOrder
-        Prerequisites: napyra, ~propaganda
-        Description: Frenzy
-        LongDesc: Grants friendly infantry a time limited boost in movement speed.
-        ActivationSequence:
-        Icon: fenzy
-        ChargeTime: 180
-        Weapon: NodWarCry
-        DisplayRadarPing: True
-        CameraActor: camera
-        DisplayBeacon: True
-        BeaconPoster: circles
-        BeaconPosterPalette: beaconposter
-        SelectTargetSound: nod1_s6.aud
-        EndChargeSound: nod1_s8.aud
-        LaunchSound: nod1_s5.aud
-        IncomingSound:  nod1_a8.aud
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    SpawnActorPower@subambush:
-        OrderName: SubAmbushPowerInfoOrder
-        Prerequisites: napyra, ~industry
-        Description: Subterranean APC Ambush
-        LongDesc: Spawns a fully loaded Subterranean APC.
-        Actor: sapc1
-        Icon: subapcambush
-        LifeTime: -1
-        DeploySound: drillup.aud
-        EffectImage: dig
-        EffectPalette: effect
-        EffectSequence: idle
-        ChargeTime: 200
+    ParatroopersPower@techcarry:
+        UnitType: nodcarry.support
+        Prerequisites: ~technology
+        DropItems: shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow,shadow
+        Icon: nodcarry
+        OrderName: ShadowTrooperInfantryDropOrder
+        SquadSize: 1
+        ChargeTime: 300
+        Description: Shadow Trooper Drop
+        LongDesc: Drops a taskforce of Shadowtroopers on the field.
         SelectTargetSpeechNotification: SelectTarget
         InsufficientPowerSpeechNotification: InsufficientPower
         EndChargeSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: nodcarry
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
 
 NATECH:
     Inherits: ^Building

@@ -312,6 +312,46 @@ NODCARRY:
     SpawnActorOnDeath:
         Actor: NODCARRY.Husk
         Probability: 100
+        
+NODCARRY.SUPPORT:
+    Inherits: NODCARRY
+    Valued:
+        Cost: 650
+    Tooltip:
+        Name: Carryall
+    ParaDrop:
+        LZRange: 1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 90
+        InitialFacing: 0
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 700
+    RevealsShroud:
+        Range: 9c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry
+        MaxWeight: 10
+        PipCount: 10
+    -Selectable:
+    RenderSprites:
+        Image: nodcarry
+    RenderVoxels:
+        Image: nodcarry
+    WithVoxelBody:
+    -Guardable:
+    -MustBeDestroyed:
+    SpawnActorOnDeath:
+        Actor: NODCARRY.Husk
+        Probability: 100
 
 RAVEN:
     Inherits: ^AttackAdvancedPlane
