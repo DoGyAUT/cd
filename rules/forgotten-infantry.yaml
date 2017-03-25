@@ -413,6 +413,10 @@ GHOST:
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
-    Cloak:
-        CloakSound:
-        UncloakSound: cloak5.aud
+    Cloak@self:
+        InitialDelay: 90
+        CloakDelay: 90
+        CloakSound: stealth01.aud
+        UncloakSound: unstealth01.aud
+        IsPlayerPalette: true
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
