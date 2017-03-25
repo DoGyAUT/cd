@@ -111,7 +111,7 @@ GRIFFIN: #missile / autocannon
         Range: 15c0
         Type: GroundPosition
     Armament@mg:
-        Weapon: GriffinDPOD
+        Weapon: GriffinMG
         LocalOffset: 700,0,80
     Armament@missiles:
         Weapon: BuzzardMissiles
@@ -179,7 +179,7 @@ FBOMBER:
         Range: 15c0
         Type: GroundPosition
     Armament:
-        Weapon: CarpetBomb
+        Weapon: CrapjetBomb
     AmmoPool:
         Ammo: 10
         PipCount: 10
@@ -264,13 +264,13 @@ STRIKER:
         LocalOffset: -512,512,128, -512,-512,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        AmmoPoolName: Bullets
-        Weapon: StrikerCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 1000,0,128
+    # Armament@secondary:
+        # AmmoPoolName: Bullets
+        # Weapon: StrikerCannon
+        # MuzzleSequence: muzzle
+        # MuzzleSplitFacings: 8
+        # MuzzlePalette: apolra50alpha
+        # LocalOffset: 1000,0,128
 	Turreted:
         TurnSpeed: 360
 	AttackTurreted:
@@ -323,4 +323,4 @@ STRIKER:
     WithMuzzleOverlay:
     SpawnActorOnDeath:
         Actor: STRIKER.Husk
-        Probability: 100
+        Probability: 100        

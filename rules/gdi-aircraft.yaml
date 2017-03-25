@@ -24,7 +24,7 @@ ORCA_F1:
         Range: 10c0
         Type: GroundPosition
     Armament@primary:
-        Weapon: OrcaHellfire
+        Weapon: OrcaF1Missiles
         LocalOffset: 282,132,85, 282,-132,85
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -87,7 +87,7 @@ ORCA_F2:
         Range: 11c0
         Type: GroundPosition
     Armament@primary:
-        Weapon: OrcaHellfire2
+        Weapon: OrcaF2Missiles
         LocalOffset: 555,120,128, 555,-120,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -222,11 +222,13 @@ TRNSPORT:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 5
-        Speed: 90
+        Speed: 180
         InitialFacing: 0
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
 #    Carryall:
 #        Automatic: True
     Health:
@@ -354,11 +356,6 @@ OXBOMBER:
         Cost: 2000
     Tooltip:
         Name: OX-Bomber
-#    Buildable:
-#        Queue: Air.GDI
-#        BuildPaletteOrder: 105
-#        Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~!upgrade.zc
-#        Description: Heavy bomber.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -373,7 +370,7 @@ OXBOMBER:
         Range: 10c0
         Type: GroundPosition
     Armament:
-        Weapon: Bomb
+        Weapon: OxBomberBomb
     AttackPlane:
         FacingTolerance: 20
     AmmoPool:
@@ -446,7 +443,7 @@ ORCA_B:
         Range: 14c0
         Type: GroundPosition
     Armament:
-        Weapon: OrcaBombRun
+        Weapon: OrcaBombingRun
     AttackPlane:
         FacingTolerance: 20
     AmmoPool:
@@ -505,7 +502,7 @@ PHOENIX:
         Range: 10c0
         Type: GroundPosition
     Armament:
-        Weapon: Bomb
+        Weapon: ^Bomb
     AttackPlane:
         FacingTolerance: 20
     AmmoPool:
@@ -864,13 +861,15 @@ DSHP.SUPPORT:
     WithVoxelBody:
     -Guardable:
     -MustBeDestroyed:
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
     FlyAwayOnIdle:
     ParaDrop:
         DropRange: 3c512
     SpawnActorOnDeath:
         Actor: DSHP.Husk
         Probability: 100
-        
+
 DSHP:
     Inherits: ^Helicopter
     Valued:
@@ -958,11 +957,11 @@ KODIAK:
         Name: MG4
         LocalOffset: 600,-256,128
     Armament@Ion1:
-        Weapon: MechRailgun
+        Weapon: GDIEpicRailgun
         Name: Ion1
         LocalOffset: 3350,400,128
     Armament@Ion2:
-        Weapon: MechRailgun2
+        Weapon: GDIEpicRailgun2
         Name: Ion2
         LocalOffset: 350,-400,128
     AttackHeli:

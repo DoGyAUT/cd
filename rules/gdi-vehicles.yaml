@@ -129,7 +129,7 @@ APC:
         EjectOnDeath: False
     Armament@Cannon:
         Name: primary
-        Weapon: 60mm
+        Weapon: APCHEGun
         LocalOffset: 550,0,850
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -227,13 +227,13 @@ SMECH:
     AttackFrontal:
     AutoTarget:
     Armament@primary:
-        Weapon: AssaultCannon
+        Weapon: WolverineGun
         LocalOffset: 480,160,720
     Armament@secondary:
-        Weapon: AssaultCannon
+        Weapon: WolverineGun
         LocalOffset: 480,-160,720
     Armament@missile:
-        Weapon: FireflyMissiles
+        Weapon: WolverineMissiles
         LocalOffset: 480,160,720, 480,-160,720
     RenderSprites:
         Scale: 0.8
@@ -345,7 +345,6 @@ GTMTNK:
 
 GTHTNK:
     Inherits@1: ^VoxelTank
-    Inherits@2: ^Parachutable
     Valued:
         Cost: 1400
     Tooltip:
@@ -426,12 +425,12 @@ HVR:
     RevealsShroud:
         Range: 11c0
     Armament@primary:
-        Weapon: HoverMissile
+        Weapon: HoverMRLSMissile
         LocalOffset: 100,128,384, 100,-128,384
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@primaryAA:
-        Weapon: HoverMissileAA
+        Weapon: HoverMRLSMissileAA
         LocalOffset: 100,128,384, 100,-128,384
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -554,7 +553,7 @@ TRITON:
         Offset: 64,0,0
     Armament@primary: # for love of god keep this firedelay, we don't want to have mtnk nuke something and it works just fine
         Name: primary
-        Weapon: 120mm1
+        Weapon: 120mm
         LocalOffset: 1100,128,750, 1100,-128,750
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -562,7 +561,7 @@ TRITON:
         RecoilRecovery: 10
     Armament@secondary:
         Name: secondary
-        Weapon: 120mm1
+        Weapon: 120mm
         LocalOffset: 1100,-128,750
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -597,7 +596,6 @@ TRITON:
 MMCH:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
-    Inherits@3: ^Parachutable
     Valued:
         Cost: 1400
     Tooltip:
@@ -649,7 +647,6 @@ MMCH:
 POSEIDON:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
-    Inherits@3: ^Parachutable
     Valued:
         Cost: 2000
     Tooltip:
@@ -705,7 +702,6 @@ POSEIDON:
 MMCH2:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
-    Inherits@3: ^Parachutable
     Valued:
         Cost: 3000
     Tooltip:
@@ -742,7 +738,7 @@ MMCH2:
     WithSpriteTurret:
         Recoils: True
     Armament@1:
-        Weapon: TitanRailgun2
+        Weapon: TitanMK2Railgun
         LocalOffset: 750,400,1200, 750,-400,1200
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -795,7 +791,7 @@ SONIC:
     RevealsShroud:
         Range: 7c0
     Armament@Color1:
-        Weapon: SonicZap
+        Weapon: ColossusGun
         LocalOffset: 256,0,810
     AttackTurreted:
     Turreted:
@@ -834,7 +830,7 @@ BEHEMOTH:
         TurnSpeed: 2
         Offset: -180,0,0
     Armament@PRIMARY:
-        Weapon: BehemothIonCannon
+        Weapon: AtlasGun
         LocalOffset: 1600,0,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -896,7 +892,7 @@ JUGG:
         RequiresCondition: deployed
     Armament@primary1:
         Name: primary
-        Weapon: 180mmHE
+        Weapon: JuggernautGun
         LocalOffset: 1024,40,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -904,7 +900,7 @@ JUGG:
         RecoilRecovery: 5
     Armament@primary2:
         Name: secondary
-        Weapon: 180mmHE2
+        Weapon: JuggernautGun2
         LocalOffset: 1024,150,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -912,7 +908,7 @@ JUGG:
         RecoilRecovery: 5
     Armament@primary3:
         Name: tertiary
-        Weapon: 180mmHE3
+        Weapon: JuggernautGun3
         LocalOffset: 1024,-70,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1043,12 +1039,12 @@ HMEC:
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@RAILGUN1:
-        Weapon: MechRailgun
+        Weapon: GDIEpicRailgun
         LocalOffset: 540,-475,1650, 540,475,1650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@RAILGUN2:
-        Weapon: MechRailgun2
+        Weapon: GDIEpicRailgun2
         LocalOffset: 540,-475,1450, 540,475,1450
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1112,7 +1108,7 @@ IONTANK:
     RevealsShroud:
         Range: 10c0
     Armament:
-        Weapon: CruiserIonCannon
+        Weapon: LeviathanGun
         LocalOffset: 650,0,1050
     AttackTurreted:
     Turreted:

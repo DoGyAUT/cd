@@ -284,14 +284,28 @@ NAHAND:
         PowerdownSpeech: DisablePower
     DisabledOverlay:
     ProductionBar:
-#    WithIdleOverlay@LIGHTS:
-#        Sequence: idle-lights
-#    WithProductionOverlay@LIGHT:
-#        Sequence: production-light
     Power:
         Amount: -35
     ProvidesPrerequisite@buildingname:
-
+    GrantExternalConditionPower@frenzy:
+        Description: Frenzy
+        LongDesc: Grants friendly infantry a time limited boost in movement speed.
+        OrderName: FrenzyPowerInfoOrder
+        ActivationSequence:
+        Icon: fenzy
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSound: nod1_s8.aud
+        Condition: fenzy
+        OnFireSound: nod1_s5.aud
+        Sequence: idle
+        ChargeTime: 180
+        Prerequisites: ~propaganda
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        Range: 8
+        Duration: 450
 NAWEAP:
     Inherits: ^Building
     Valued:
@@ -339,13 +353,27 @@ NAWEAP:
     WithIdleOverlay@ROOF:
         Sequence: idle-roof
     WithProductionDoorOverlay@DOOR:
-#    WithProductionOverlay@LIGHTS:
-#        Sequence: production-lights
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
         Amount: -75
     ProvidesPrerequisite@buildingname:
+    SpawnActorPower@subambush:
+        OrderName: SubAmbushPowerInfoOrder
+        Prerequisites: nahand, ~industry
+        Description: Subterranean APC Ambush
+        LongDesc: Spawns a fully loaded Subterranean APC.
+        Actor: sapc1
+        Icon: subapcambush
+        LifeTime: -1
+        DeploySound: drillup.aud
+        EffectImage: dig
+        EffectPalette: player
+        EffectSequence: idle
+        ChargeTime: 200
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -391,6 +419,45 @@ NARADR:
     DetectCloaked:
         Range: 20c0
         CloakTypes: Underground
+    ParatroopersPower@propcarry:
+        UnitType: nodcarry.support
+        Prerequisites: ~propaganda
+        DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
+        Icon: nodcarry
+        OrderName: PropagandaInfantryDropOrder
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        ChargeTime: 300
+        Description: Propaganda Infantry Drop
+        LongDesc: Drops an infantry battalion on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: nodcarry
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+    ParatroopersPower@techcarry:
+        UnitType: valkyrie.support
+        Prerequisites: ~technology
+        DropItems: nacad,nacad,e3,e3,shadow,shadow
+        Icon: valkyrie
+        OrderName: ShadowTrooperInfantryDropOrder
+        SquadSize: 1
+        ChargeTime: 180
+        Description: Shadow Trooper Drop
+        LongDesc: Drops a special infantry taskforce on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: valkyrie
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
     
 NAHPAD:
     Inherits: ^Building
@@ -456,6 +523,7 @@ NAHPAD:
         LongDesc: Calls in a heavy ace class Havoc attack chopper.
         SelectTargetSpeechNotification: SelectTarget
         EndChargeSpeechNotification: Reinforce
+        InsufficientPowerSpeechNotification: InsufficientPower
         ChargeTime: 240
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -506,28 +574,7 @@ NAPYRA:
     ExitsDebugOverlay:
     ProductionBar@Tech:
     ProvidesPrerequisite@buildingname:
-    DetonateWeaponPower@frenzy:
-        OrderName: FrenzyPowerInfoOrder
-        Prerequisites: napyra, ~propaganda
-        Description: Frenzy
-        LongDesc: Grants friendly infantry a time limited boost in movement speed.
-        ActivationSequence:
-        Icon: fenzy
-        ChargeTime: 180
-        Weapon: NodWarCry
-        DisplayRadarPing: True
-        CameraActor: camera
-        DisplayBeacon: True
-        BeaconPoster: circles
-        BeaconPosterPalette: beaconposter
-        SelectTargetSound: nod1_s6.aud
-        EndChargeSound: nod1_s8.aud
-        LaunchSound: nod1_s5.aud
-        IncomingSound:  nod1_a8.aud
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-   
+
 NATECH:
     Inherits: ^Building
     Valued:

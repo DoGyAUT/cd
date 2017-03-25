@@ -580,6 +580,8 @@
     Inherits@5: ^Cloakable
     Inherits@6: ^ZepUpgrades
     Inherits@7: ^DeployBuffUpgrades
+    Inherits@8: ^InitiateUpgrades
+    Inherits@parach: ^Parachutable
     DrawLineToTarget:
     Health:
         HP: 50
@@ -607,10 +609,10 @@
             DirtRoad: 100
             Green: 90
             Rough: 80
-            Tiberium: 90
-            BlueTiberium: 90
-            RedTiberium: 90
-            PurpleTiberium: 90
+            Tiberium: 70
+            BlueTiberium: 70
+            RedTiberium: 70
+            PurpleTiberium: 70
             Veins: 90
 		TunnelCondition: inside-tunnel
     SelectionDecorations:
@@ -1104,7 +1106,10 @@
         Modifier: 65
     SpeedMultiplier@fenzy:        
         RequiresCondition: fenzy
-        Modifier: 130
+        Modifier: 150
+    FirepowerMultiplier@frenzy:
+        RequiresCOndition: fenzy
+        Modifier: 120
     TimedConditionBar@fenzy:
         Condition: fenzy
         Color: FF0000
@@ -1245,6 +1250,7 @@
     Inherits@5: ^Cloakable
     Inherits@6: ^ZepUpgrades
     Inherits@7: ^DeployBuffUpgrades
+    Inherits@parach: ^Parachutable
     DrawLineToTarget:
     Mobile:
         Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags

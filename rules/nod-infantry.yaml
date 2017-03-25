@@ -25,11 +25,11 @@ NASOL:
     RevealsShroud:
         Range: 5c0
     Armament@PRIMARY:
-        Weapon: Minigun2
+        Weapon: RookieGun
         LocalOffset: 256,0,550
         RequiresCondition: !rank-heroic
     Armament@ELITE:
-        Weapon: M2Carbine
+        Weapon: EliteCadreGun
         LocalOffset: 256,0,550
         RequiresCondition: rank-heroic
     AttackFrontal:
@@ -74,13 +74,8 @@ E3:
     RevealsShroud:
         Range: 7c0
     Armament@primary:
-        Weapon: Bazooka
+        Weapon: RocketeerGun
         LocalOffset: 280,84,700
-        RequiresCondition: !upgrade.tibgas
-    Armament@primaryAA:
-        Weapon: BazookaAA
-        LocalOffset: 280,84,700
-        RequiresCondition: !upgrade.tibgas
     AttackFrontal:
     GrantConditionOnPrerequisite@upgrade2:
         Condition: upgrade.stealth
@@ -170,7 +165,7 @@ NDOG:
         Range: 10c0
     Armament@primary:
         Name: Bite
-        Weapon: DogJaw
+        Weapon: DogBite
     AttackFrontal:
         Armaments: Bite
     WithInfantryBody:
@@ -304,7 +299,7 @@ NACAD:
     RevealsShroud:
         Range: 6c0
     Armament@PRIMARY:
-        Weapon: M2Carbine
+        Weapon: EliteCadreGun
         LocalOffset: 256,0,550
     AttackFrontal:
     WithInfantryBody:
@@ -345,10 +340,10 @@ NCONF:
     RevealsShroud:
         Range: 8c0
     Armament@PRIMARY:
-        Weapon: ConfCarbine
+        Weapon: ConfessorGun
         LocalOffset: 256,0,550
     Armament@secondary:
-        Weapon: M203
+        Weapon: ConfessorGrenade
         LocalOffset: 256,0,550
     AttackFrontal:
     WithInfantryBody:
@@ -397,11 +392,11 @@ SHADOW:
     RevealsShroud:
         Range: 11c0
     Armament@PRIMARY:
-        Weapon: ShadowSniper
+        Weapon: ShadowTrooperGun
         LocalOffset: 256,0,550
         RequiresCondition: !upgrade.laser
     Armament@LaserA:
-        Weapon: InfLaserFire
+        Weapon: ShadowTrooperLaser
         LocalOffset: 256,0,550
         RequiresCondition: upgrade.laser
     AttackFrontal:
@@ -497,11 +492,11 @@ TIBTROOPER:
     RevealsShroud:
         Range: 7c0
     Armament@PRIMARY:
-        Weapon: TibCarbine
+        Weapon: AcolyteGun
         LocalOffset: 256,0,550
         RequiresCondition: !rank-elite
     Armament@PRIMARYE:
-        Weapon: TibCarbineE
+        Weapon: AcolyteGunE
         LocalOffset: 256,0,550
         RequiresCondition: rank-elite
     -DamagedByTerrain@Tiberium:

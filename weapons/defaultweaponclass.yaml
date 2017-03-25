@@ -1,3 +1,76 @@
+Tiberium:
+    ReloadDelay: 30
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 10
+        DamageTypes: TriggerVisceroid, BulletDeath
+        
+Veins:
+    ReloadDelay: 16
+    Warhead@Damage: SpreadDamage
+        Spread: 42
+        Damage: 50
+        DamageTypes: EnergyDeath # TODO: FIX ME!
+    Warhead@Effect: CreateEffect
+        Explosions: veins
+        ExplosionPalette: player       
+
+FireballLauncher:
+    Inherits@wh: ^FireWH
+    ReloadDelay: 100
+    Range: 5c256
+    Report: flamtnk1.aud
+    Projectile: BulletAS
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: flametrailer
+        TrailImage: flametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    InvalidTargets: Flameproof
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 75
+        Falloff: 100, 80
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+        
+BlueFireballLauncher:
+    Inherits@wh: ^FireWH
+    ReloadDelay: 50
+    Range: 5c256
+    Report: firstrm1.aud
+    Projectile: BulletAS
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: blueflametrailer
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    InvalidTargets: Flameproof
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 100
+        Falloff: 100, 90, 80
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light
+        
 ^Bullet:
     Projectile: BulletAS
         Image: bullet
@@ -44,7 +117,7 @@
         Explosions: tiny_flash
         ExplosionPalette: light2
 
-^MissileAPHE
+^MissileAPHE:
     ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: Missile
         MaximumLaunchSpeed: 213
@@ -190,6 +263,43 @@
         Explosions: medium_flash
         ExplosionPalette: light2
         
+^Bomb: #also used for phoenix
+    Inherits: ^ShellHE 
+	Inherits@wh: ^HEWH
+    ReloadDelay: 60
+    Burst: 5
+    BurstDelay: 5
+    Range: 5c0
+    Report: bombdrop.aud
+    Projectile: BulletAS
+        Speed: 0c512
+        Inaccuracy: 1c0
+        Image: shell01
+        Shadow: true
+        LaunchAngle: 60
+        Palette: effect
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+        
 ^BasicLaser:
     Inherits: ^LaserWH
     Projectile: LaserZap
@@ -262,7 +372,7 @@
         Versus:
             Infantry: 70
             Cyborg: 70
-            Vehicle: 30
+            Vehicle: 50
             Aircraft: 100
             Building: 80
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
@@ -337,3 +447,31 @@
         ExplosionPalette: apolra2
         ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
         InvalidImpactTypes: Water
+        
+RedEye:
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APHEWH
+    ReloadDelay: 55
+    Range: 8c0
+    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+    ValidTargets: Air, MidAir, HighAir
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Arm: 2
+        Blockable: false
+        Shadow: true
+        Inaccuracy: 0c128
+        Image: missile01
+        HorizontalRateOfTurn: 8
+        RangeLimit: 30c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 200
+        ValidTargets: Air, MidAir, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+        

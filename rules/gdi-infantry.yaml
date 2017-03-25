@@ -21,21 +21,21 @@ GASOL:
     RevealsShroud:
         Range: 6c0    
     Armament@PRIMARY:
-        Weapon: Minigun
+        Weapon: MarineGun
         LocalOffset: 256,0,550
         RequiresCondition: !rank-heroic
     Armament@GARRISONED:
         Name: garrisoned
-        Weapon: MinigunGarrison
+        Weapon: MarineGunGarrison
         LocalOffset: 256,0,550
         RequiresCondition: !rank-heroic
     Armament@GARRISONEDELITE:
         Name: garrisoned
-        Weapon: M1CarbineGarrison
+        Weapon: ZoneMarineGunGarrison
         LocalOffset: 256,0,550
         RequiresCondition: rank-heroic
     Armament@ELITE:
-        Weapon: M1Carbine
+        Weapon: ZoneMarineGun
         LocalOffset: 256,0,550
         RequiresCondition: rank-heroic
     AttackFrontal:
@@ -53,7 +53,7 @@ E2:
         Queue: Infantry.GDI
         BuildPaletteOrder: 102
         Prerequisites: ~gapile, ~!upgrade.zc
-        Description: GDI's basic anti-vehicle infantry.\nArmed with throwable explosive discuses.\n\n  Role: Anti Armor\n  HP: 150\n  Armor: Light\n  Speed: 56\n  Viewrange: 8\n\n Good vs Buildings, Infantry Mobs, Cyborgs, Medium Armor\n\n Special:\n\n - EMP Grenades on veterancy rank 5
+        Description: GDI's basic anti-vehicle infantry.\nArmed with throwable explosive discuses.\n\n  Role: Anti Armor\n  HP: 150\n  Armor: Light\n  Speed: 56\n  Viewrange: 8\n\n Good vs Buildings, Infantry Mobs, Cyborgs, Medium Armor\n\n Special:\n\n - EMP DiscThrowerGuns on veterancy rank 5
     Valued:
         Cost: 200
     Tooltip:
@@ -70,24 +70,24 @@ E2:
     RevealsShroud:
         Range: 7c0    
     Armament@primary:
-        Weapon: Grenade
+        Weapon: DiscThrowerGun
         LocalOffset: 0,0,555
         FireDelay: 5
         RequiresCondition: !rank-heroic
     Armament@garrisoned:
         Name: garrisoned
-        Weapon: Grenade
+        Weapon: DiscThrowerGun
         LocalOffset: 0,0,555
         FireDelay: 5
         RequiresCondition: !rank-heroic
     Armament@ELITE:
-        Weapon: GrenadeEMP
+        Weapon: DiscThrowerGunEMP
         LocalOffset: 0,0,555
         FireDelay: 5
         RequiresCondition: rank-heroic
     Armament@ELITEGARRISONED:
         Name: garrisoned
-        Weapon: GrenadeGarrisonEMP
+        Weapon: DiscThrowerGunGarrisonEMP
         LocalOffset: 0,0,555
         FireDelay: 5
         RequiresCondition: rank-heroic
@@ -158,7 +158,7 @@ GDOG:
         Range: 10c0
     Armament@primary:
         Name: Bite
-        Weapon: DogJaw
+        Weapon: DogBite
     AttackFrontal:
         Armaments: Bite
     WithInfantryBody:
@@ -287,14 +287,14 @@ ZMARINE:
     RevealsShroud:
         Range: 7c0
     Armament@PRIMARY:
-        Weapon: M1Carbine
+        Weapon: ZoneMarineGun
         LocalOffset: 300,0,480
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
     Armament@GARRISONED:
         Name: garrisoned
-        Weapon: M1CarbineGarrison
+        Weapon: ZoneMarineGunGarrison
         LocalOffset: 300,0,480
     AttackFrontal:
     -DamagedByTerrain@Tiberium:
@@ -328,7 +328,7 @@ ZTROOPER:
     RevealsShroud:
         Range: 7c0
     Armament@primary:
-        Weapon: LtRail
+        Weapon: ZoneTrooperGun
         LocalOffset: 512,64,800
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
@@ -365,12 +365,12 @@ ZRAIDER:
     RevealsShroud:
         Range: 9c0
     Armament@primary:
-        Weapon: SonicGrenade
+        Weapon: ZoneRaiderGun
         LocalOffset: 512,64,800
         MuzzleSequence: muzzle
         MuzzlePalette: effect50alpha
     Armament@Missiles:
-        Weapon: ZRaiderBazooka
+        Weapon: ZoneRaiderBazooka
         LocalOffset: 0,90,900, 0,-90,900
         MuzzlePalette: effect50alpha
     AttackFrontal:

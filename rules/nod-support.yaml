@@ -113,19 +113,19 @@ NAFLAMER:
         InitialFacing: 85
     AttackTurreted:
     Armament@right: 
-        Weapon: FireballLauncher
+        Weapon: FlamerTurretFireballLauncher
         LocalOffset: 700,180,650
         RequiresCondition: !upgrade.bluehell
     Armament@left: 
-        Weapon: FireballLauncher
+        Weapon: FlamerTurretFireballLauncher
         LocalOffset: 700,-180,650
         RequiresCondition: !upgrade.bluehell
     Armament@upgrade1: 
-        Weapon: BlueFireballLauncher
+        Weapon: FlamerTurretBlueFireballLauncher
         LocalOffset: 700,180,650
         RequiresCondition: upgrade.bluehell
     Armament@upgrade2: 
-        Weapon: BlueFireballLauncher
+        Weapon: FlamerTurretBlueFireballLauncher
         LocalOffset: 700,-180,650
         RequiresCondition: upgrade.bluehell
     Targetable:
@@ -240,15 +240,15 @@ NALASR:
         Condition: upgrade.tiblaser
         Prerequisites: upgrade.tiblaser 
     Armament@default: 
-        Weapon: LaserFire2
+        Weapon: LaserTurretLaser
         LocalOffset: 900,0,625
         RequiresCondition: !upgrade.laser || !upgrade.tiblaser
     Armament@laser:
-        Weapon: LaserFire2u
+        Weapon: LaserTurretLaserUpgraded
         LocalOffset: 900,0,625
         RequiresCondition: upgrade.laser && !upgrade.tiblaser
     Armament@tiblaser: 
-        Weapon: TibLaser
+        Weapon: LaserTurretTibLaser
         LocalOffset: 900,0,625
         RequiresCondition: upgrade.tiblaser && !upgrade.laser
     WithSpriteTurret:
@@ -294,7 +294,7 @@ NASAM:
     WithSpriteTurret:
         Recoils: True
     Armament@normal:
-        Weapon: RedEye2
+        Weapon: SAMSiteMissile
         LocalOffset: 400,0,900
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -374,19 +374,19 @@ NAOBEL:
     RevealsShroud:
         Range: 15c0
     Armament@normalA:
-        Weapon: LaserFire
+        Weapon: ObeliskLaser
         LocalOffset: 3150,-450,800
         RequiresCondition: !upgrade.tiblaser || !upgrade.laser
         MuzzleSequence: muzzle
         MuzzlePalette: player50alpha
     Armament@tibA:
-        Weapon: LaserFireTib
+        Weapon: ObeliskLaserTib
         LocalOffset: 3150,-450,800
         RequiresCondition: upgrade.tiblaser && !upgrade.laser
         MuzzleSequence: muzzle
         MuzzlePalette: player50alpha
     Armament@upgradeA:
-        Weapon: LaserFireUpgrade
+        Weapon: ObeliskLaserUpgraded
         LocalOffset: 3150,-450,800
         RequiresCondition: upgrade.laser && !upgrade.tiblaser
         MuzzleSequence: muzzle

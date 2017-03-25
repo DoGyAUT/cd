@@ -153,7 +153,7 @@ GAMG2:
 #    WithWallSpriteBody:
 #        Type: wall
     Valued:
-        Cost: 600
+        Cost: 800
     Tooltip:
         Name: Talon Tower
     Buildable:
@@ -334,7 +334,7 @@ GAMIS:
         Recoils: True
         Sequence: turret-sam
     Armament@SAM:
-        Weapon: ComponentMissile
+        Weapon: SAMMissile
         LocalOffset: 350,240,1224, 350,-240,1224
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -392,14 +392,14 @@ GACAN:
         Recoils: True
         Sequence: turret-rpg
     Armament@cannon:
-        Weapon: GuardianRailgun
+        Weapon: GuardianTowerRailgun
         LocalOffset: 900,220,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 50
         RecoilRecovery: 10
     Armament@RPG:
-        Weapon: RPGMissile
+        Weapon: GuardianTowerMissile
         LocalOffset: 200,-210,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -457,7 +457,7 @@ GAMORTAR:
         Recoils: True
         Sequence: turret-mortar
     Armament:
-        Weapon: Mortar_155mm
+        Weapon: HowitzerTurretGun
         LocalOffset: 750,0,2000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha

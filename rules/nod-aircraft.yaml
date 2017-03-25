@@ -33,7 +33,7 @@ VENOM:
         RequiresCondition: !upgrade.laser
     Armament@laserA:
         Name: primary
-        Weapon: AirLaserFire
+        Weapon: VenomLaserFire
         LocalOffset: 660,0,48
         MuzzlePalette: apolra50alpha
         RequiresCondition: upgrade.laser
@@ -194,35 +194,27 @@ HAVOC:
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
-    Armament@primaryA:
-        Weapon: HydraCannon
-        LocalOffset: 1000,0,200
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.tiblaser
+    # Armament@primaryA:
+        # Weapon: 
+        # LocalOffset: 1000,0,200
+        # MuzzleSequence: muzzle
+        # MuzzleSplitFacings: 8
+        # MuzzlePalette: apolra50alpha
+        # RequiresCondition: !upgrade.tiblaser
     Armament@laserA:
-        Weapon: HydraLaserFire
+        Weapon: HavocLaserFire
         LocalOffset: 1000,0,200
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.tiblaser
     Armament@primary:
-        Weapon: HavocMissilesNapalm
+        AmmoPoolName: rockets
+        Weapon: HavocMissilesTibGas
         LocalOffset: 450,512,300, 450,-512,300
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     AttackHeli:
         FacingTolerance: 20
-    AmmoPool:
-        Name:primary
-        Ammo: 10
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
     WithIdleOverlay@ROTORAIR1:
         Offset: 200,700,900
         Sequence: rotor
@@ -242,22 +234,14 @@ HAVOC:
     GrantConditionOnPrerequisite@upgrade1:
         Condition: upgrade.tiblaser
         Prerequisites: upgrade.tiblaser
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AmmoPool@2:
-        Name:primary2
+    AmmoPool@rockets:
+        Name:rockets
         Ammo: 8
-        PipCount: 0
+        PipCount: 8
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
         SelfReloads: True
-        SelfReloadDelay: 5
+        SelfReloadDelay: 40
     DetectCloaked:
         Range: 7c0
     AutoTarget:
@@ -268,6 +252,9 @@ HAVOC:
     SpawnActorOnDeath:
         Actor: HAVOC.Husk
         Probability: 100
+    ProducibleWithLevel:
+        -Prerequisites:
+        InitialLevels: 5
         
 NODCARRY:
     Inherits: ^Helicopter
@@ -312,6 +299,103 @@ NODCARRY:
     SpawnActorOnDeath:
         Actor: NODCARRY.Husk
         Probability: 100
+        
+NODCARRY.SUPPORT:
+    Inherits: NODCARRY
+    -Buildable:
+    Valued:
+        Cost: 650
+    Tooltip:
+        Name: Carryall
+    ParaDrop:
+        LZRange: 1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 180
+        InitialFacing: 0
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
+    Health:
+        HP: 700
+    RevealsShroud:
+        Range: 9c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry
+        MaxWeight: 10
+        PipCount: 10
+    -Selectable:
+    RenderSprites:
+        Image: nodcarry
+    RenderVoxels:
+        Image: nodcarry
+    WithVoxelBody:
+    -Guardable:
+    -MustBeDestroyed:
+    SpawnActorOnDeath:
+        Actor: NODCARRY.Husk
+        Probability: 100
+
+VALKYRIE.SUPPORT:
+    Inherits: ^Helicopter
+    Valued:
+        Cost: 650
+    Tooltip:
+        Name: Valkyrie
+    ParaDrop:
+        LZRange: 1
+    Voiced:
+        VoiceSet: Venom
+        Volume: 2
+    Aircraft:
+        LandWhenIdle: True
+        TurnSpeed: 3
+        Speed: 180
+        InitialFacing: 0
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+        TakeoffSound: dropup1.aud
+        LandingSound: dropdwn1.aud
+    Health:
+        HP: 700
+    RevealsShroud:
+        Range: 9c0
+        Type: GroundPosition
+    Cargo:
+        Types: Infantry
+        MaxWeight: 6
+        PipCount: 6
+    -Selectable:
+    RenderSprites:
+        Image: valkyrie
+    RenderVoxels:
+        Image: valkyrie
+    WithVoxelBody:
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
+    -Guardable:
+    -MustBeDestroyed:
+    Contrail@1:
+        Offset: 0,750,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    Contrail@2:
+        Offset: 0,-750,0
+        TrailLength: 15
+        TrailWidth: 20
+        Color: FFFFFF
+        UsePlayerColor: False
+    SpawnActorOnDeath:
+        Actor: VALKYRIE.Husk
+        Probability: 100
 
 RAVEN:
     Inherits: ^AttackAdvancedPlane
@@ -323,7 +407,7 @@ RAVEN:
         Queue: Air.Nod
         BuildPaletteOrder: 203
         Prerequisites: ~nahpad, ~!t1, ~!technology
-        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a Minigun
+        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a MarineGun
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -631,7 +715,7 @@ ZEP:
         Range: 14c0
         Type: GroundPosition
     Armament@primary:
-        Weapon: ZepBomb
+        Weapon: BrotherhoodBattleshipBomb
         LocalOffset: -256,0,-1024
     # AttackHeli:
         # FacingTolerance: 20

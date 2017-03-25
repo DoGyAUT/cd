@@ -107,7 +107,7 @@ ATRUCK:
         Prerequisites: ~faweap
         Description: Repairs Vehicles in a radius and can transport infantry. \n  Unarmed
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Forgotten Ammo Truck
     Selectable:
@@ -167,7 +167,7 @@ FBUGGY_MG:
     RevealsShroud:
         Range: 6c0
     Armament@primary:
-        Weapon: FireballLauncher
+        Weapon: BuggyFireballLauncher
         LocalOffset: 350,0,450
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -307,7 +307,7 @@ FTRUCK_FLAMER:
     RevealsShroud:
         Range: 5c0
     Armament@primary:
-        Weapon: AssaultMG
+        Weapon: AssaultTruckMG
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 0
         MuzzlePalette: apolra50alpha
@@ -457,7 +457,7 @@ GREMLIN_HCAN:
     Turreted:
         TurnSpeed: 4
     Armament@primary:
-        Weapon: GremlinShotgun
+        Weapon: ForgHECannon
         LocalOffset: 750,220,650, 750,-220,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -504,7 +504,7 @@ GREMLIN_MORTAR:
     Turreted:
         TurnSpeed: 3
     Armament@primary:
-        Weapon: WarthogMortar
+        Weapon: GremlinMortar
         LocalOffset: 680,0,1080
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -604,7 +604,7 @@ TAURUS_MG:
         TurnSpeed: 5
         Offset: -64,0,0
     Armament@primary:
-        Weapon: WarthogMG
+        Weapon: TaurusMG
         LocalOffset: 550,128,850, 550,-128,850
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -672,7 +672,7 @@ TAURUS_HCAN:
         TurnSpeed: 5
         Offset: -64,0,0
     Armament@primary:
-        Weapon: GremlinShotgun
+        Weapon: ForgHECannon
         LocalOffset: 800,220,650, 800,-220,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -739,7 +739,7 @@ TAURUS_MIS:
         TurnSpeed: 5
         Offset: -64,0,0
     Armament@primary:
-        Weapon: WarthogMissile
+        Weapon: ForgottenT2Missile
         LocalOffset: 256,180,768, 256,-180,768
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -798,7 +798,7 @@ LIZARD_MG:
     Turreted:
         TurnSpeed: 3
     Armament@primary:
-        Weapon: WarthogMG
+        Weapon: TaurusMG
         LocalOffset: 575,128,820, 575,-128,820
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -941,7 +941,7 @@ DIGGER_MIS:
     Turreted:
         TurnSpeed: 3
     Armament@primary:
-        Weapon: WarthogMissile
+        Weapon: ForgottenT2Missile
         LocalOffset: 256,180,768, 256,-180,768
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1129,7 +1129,7 @@ BISON_130MM:
         Recoil: 200
         RecoilRecovery: 10
     Armament@secondary:
-        Weapon: TaurusMG
+        Weapon: BisonMG
         LocalOffset: 374,0,1000
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -1137,7 +1137,7 @@ BISON_130MM:
         Recoil: 0
         RecoilRecovery: 0 
     Armament@missile:
-        Weapon: TankMissile
+        Weapon: ForgottenT3Missile
         LocalOffset: 374,256,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1192,7 +1192,7 @@ BISON_145MM:
         Recoil: 200
         RecoilRecovery: 10
     Armament@secondary:
-        Weapon: TaurusMG
+        Weapon: BisonMG
         LocalOffset: 260,-170,950
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -1249,7 +1249,7 @@ BISON_180MM:
     Turreted:
         TurnSpeed: 2
     Armament@primary:
-        Weapon: AurochCannon
+        Weapon: 180mm
         LocalOffset: 1320,0,770
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1304,7 +1304,7 @@ AUROCH_130MM:
         Recoil: 200
         RecoilRecovery: 10
     Armament@secondary:
-        Weapon: TaurusMG
+        Weapon: BisonMG
         LocalOffset: 374,0,935
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -1312,7 +1312,7 @@ AUROCH_130MM:
         Recoil: 0
         RecoilRecovery: 0
     Armament@missile:
-        Weapon: TankMissile
+        Weapon: ForgottenT3Missile
         LocalOffset: 374,256,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1450,7 +1450,7 @@ AUROCH_180MM:
     Turreted:
         TurnSpeed: 2
     Armament@primary:
-        Weapon: AurochCannon
+        Weapon: 180mm
         LocalOffset: 1320,0,770
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -1502,44 +1502,44 @@ RAGNAROK:
     RevealsShroud:
         Range: 7c0
     Armament@primary:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         LocalOffset: 850,0,1500
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
     Armament@secondary1:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary2:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary3:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary4:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary5:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary6:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary7:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary8:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     Armament@secondary9:
-        Weapon: RagnarCannonCluster
+        Weapon: RagnarokCannon
         MuzzlePalette: apolra50alpha
         LocalOffset: 850,0,1500
     AttackFrontal:
