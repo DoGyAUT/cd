@@ -75,7 +75,7 @@ ZoneCommandoGun2: #no sound version
         
 DiscThrowerGun:
     Inherits: ^ShellHE 
-	Inherits@wh: ^APHEWH
+	Inherits@wh: ^HEAPWH
     ReloadDelay: 80
     Range: 5c512
     MinRange: 1c512
@@ -90,9 +90,9 @@ DiscThrowerGun:
         BounceRangeModifier: 60
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 65
+        Damage: 100
         Versus:
-            Building: 200
+            Building: 145
     Warhead@2Eff: CreateEffect
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
         ExplosionPalette: apolra2
@@ -133,7 +133,7 @@ DiscThrowerGunGarrisonEMP:
 JuggernautGun:
     Inherits: ^ShellHE 
 	Inherits@wh: ^HEAPWH
-    ReloadDelay: 290
+    ReloadDelay: 230
     Range: 14c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
@@ -159,11 +159,11 @@ JuggernautGun:
         
 JuggernautGun2:
     Inherits: JuggernautGun
-    ReloadDelay: 300
+    ReloadDelay: 240
         
 JuggernautGun3:
     Inherits: JuggernautGun
-    ReloadDelay: 310
+    ReloadDelay: 250
     
 TitanMK2Grenade:
     Inherits: ^ShellHE 
@@ -534,7 +534,7 @@ CondorBomb:
         ContrailColor: 00FFFF
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
-        Spread: 42
+        Spread: 256
         Damage: 700
     Warhead@2Eff: CreateEffect
         Explosions: swave
@@ -672,7 +672,7 @@ ColossusGun:
     Warhead@1Dam: SpreadDamage
         Range: 0, 32
         Falloff: 100, 100
-        Damage: 50
+        Damage: 35
         AffectsParent: false
         ValidStances: Neutral, Enemy
         Versus:
@@ -680,7 +680,7 @@ ColossusGun:
     Warhead@2Dam: SpreadDamage
         Range: 0, 32
         Falloff: 50, 50
-        Damage: 25
+        Damage: 15
         InvalidTargets: Disruptor # Does not affect friendly disruptors at all
         AffectsParent: false
         ValidStances: Ally
@@ -802,7 +802,7 @@ APCMGvisual:
     Warhead@1Dam: SpreadDamage
 	    ValidTargets: Air, MidAir, HighAir
         Spread: 128
-        Damage: 5
+        Damage: 0
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
@@ -816,7 +816,7 @@ APCMGattack:
     Warhead@1Dam: SpreadDamage
 	    ValidTargets: Air, MidAir, HighAir
         Spread: 128
-        Damage: 5
+        Damage:  10
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
@@ -881,7 +881,7 @@ TritonCannon:
         
 HowitzerTurretGun:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^HEAPWH
     ReloadDelay: 120
     Range: 16c0
     Report: 120mmf.aud

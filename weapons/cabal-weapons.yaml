@@ -284,8 +284,8 @@ PlasmaBlasterGun:
         ContrailColor: 0080FF
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 550
+        Spread: 0c768
+        Damage: 150
         DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp02 #plasmawave1
@@ -695,15 +695,15 @@ TarantulaLaserAA:
 SabercutLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 80
+    ReloadDelay: 150
     Range: 7c512
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
-    Burst: 5
-    BurstDelay: 7
+    Burst: 3
+    BurstDelay: 4
     Projectile: LaserZap
         Color: 0064FF
         Width: 40
-        BeamDuration: 10
+        BeamDuration: 3
         ZOffset: 2047
         UsePlayerColor: false
         SecondaryBeam: true
@@ -712,7 +712,7 @@ SabercutLaser:
         SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 50
+        Damage: 125
     Warhead@3Eff: CreateEffect
         Explosions: piff
         InvalidImpactTypes: Water
@@ -729,7 +729,7 @@ SkirmishLaserFire:
     Burst: 6
     BurstDelay: 10
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-    ValidTargets: Ground, Air
+    ValidTargets: Ground, Air, HighAir, Midair
     Projectile: LaserZap
         Color: 0064FF
         Width: 30
@@ -740,7 +740,7 @@ SkirmishLaserFire:
         SecondaryBeamZOffset: 2047
         SecondaryBeamColor: 00C8FF
     Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air
+        ValidTargets: Ground, Air, HighAir, Midair
         Spread: 42
         Damage: 18
         Versus:

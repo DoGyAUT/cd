@@ -2,18 +2,35 @@ upgrade.grunt:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Scoundrel
-    Buildable:
-        BuildPaletteOrder: 400
-        Prerequisites: ~!upgrade.brigand
-        Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Brigand useage.
-        Queue: Tech.Forg
-        BuildLimit: 1
+    # Buildable:
+        # BuildPaletteOrder: 400
+        # Prerequisites: ~!upgrade.brigand
+        # Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Brigand useage.
+        # Queue: Tech.Forg
+        # BuildLimit: 1
     Valued:
         Cost: 500
     RenderSprites:
         Image: forg.warrior
     ProvidesPrerequisite:
         Prerequisite: upgrade.grunt
+        
+upgrade.huntress:
+    Inherits: ^Tech
+    Tooltip:
+        Name: Choose Huntress
+    Buildable:
+        BuildPaletteOrder: 400
+        Prerequisites: ~!upgrade.brigand
+        Description: Allows you to train Huntress units
+        Queue: Tech.Forg
+        BuildLimit: 1
+    Valued:
+        Cost: 500
+    RenderSprites:
+        Image: forg.huntress
+    ProvidesPrerequisite:
+        Prerequisite: upgrade.huntress
 
 upgrade.brigand:
     Inherits: ^Tech
@@ -21,7 +38,7 @@ upgrade.brigand:
         Name: Choose Brigand
     Buildable:
         BuildPaletteOrder: 401
-        Prerequisites: ~!upgrade.grunt
+        Prerequisites: ~!upgrade.huntress
         Queue: Tech.Forg
         BuildLimit: 1
         Description: Allows you to train Brigand units (replaces Grunt). \n  Disables Scoundrel useage.

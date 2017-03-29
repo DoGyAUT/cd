@@ -18,7 +18,7 @@ GMCV:
     Health:
         HP: 2000
     Mobile:
-        Speed: 40
+        Speed: 35
     RevealsShroud:
         Range: 6c0
     MustBeDestroyed:
@@ -88,6 +88,7 @@ GHARV:
     WithVoxelUnloadBody:
     Explodes:
         Weapon: LargeTiberiumExplosion
+        EmptyWeapon: SmallTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
@@ -346,7 +347,7 @@ GTMTNK:
 GTHTNK:
     Inherits@1: ^VoxelTank
     Valued:
-        Cost: 1400
+        Cost: 1250
     Tooltip:
         Name: Grizzly Tank
     Selectable:
@@ -528,7 +529,7 @@ TRITON:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 2000
+        Cost: 1800
     Tooltip:
         Name: Mammoth Tank
     Buildable:
@@ -597,7 +598,7 @@ MMCH:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1400
+        Cost: 1250
     Tooltip:
         Name: Titan
     Buildable:
@@ -768,7 +769,7 @@ SONIC:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 2000
+        Cost: 1800
     Tooltip:
         Name: Colossus
     Buildable:
