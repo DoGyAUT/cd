@@ -1,7 +1,7 @@
 ScoundrelGrenade:
     Inherits: ^ShellHE 
-	Inherits@wh: ^FireWH
-    ReloadDelay: 200
+    Inherits@wh: ^APWH
+    ReloadDelay: 110
     Range: 5c0
     MinRange: 1c512
     Projectile: BulletAS
@@ -11,14 +11,14 @@ ScoundrelGrenade:
         LaunchAngle: 100
         Inaccuracy: 1c0
         Image: DISCUS
-        ContrailLength: 10
-        ContrailColor: FF7F27
-        ContrailWidth: 15
-        TrailImage: small_smoke_trail
-        TrailPalette: apolra50alpha
+        # ContrailLength: 10
+        # ContrailColor: FF7F27
+        # ContrailWidth: 15
+        # TrailImage: small_smoke_trail
+        # TrailPalette: apolra50alpha
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 100
+        Damage: 120
     Warhead@2Eff: CreateEffect
         Explosions: medium_brnl, small_brnl
         ExplosionPalette: apolra2
@@ -49,7 +49,7 @@ GruntGun:
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 20
+        Damage: 14
         
 HuntressGun:
     Inherits: ^Bullet
@@ -69,6 +69,8 @@ HuntressGun:
         ValidTargets: Ground, Air, MidAir, HighAir   
         Spread: 0c64
         Damage: 150
+        Versus:
+            Air: 25
     Warhead@2prone: SpreadDamage
         Spread: 0c256
         Damage: 1
@@ -514,7 +516,7 @@ GoonHammer:
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 300		
+        Damage: 250		
         DamageTypes: Prone350Percent, TriggerProne, BulletDeath
     Warhead@21Dam: SpreadDamage
         DebugOverlayColor: 00FF00
@@ -533,7 +535,7 @@ GoonHammer2:
         Speed: 426
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 200		
+        Damage: 150		
         Versus:
             Infantry: 100
             Cyborg: 100
@@ -545,7 +547,7 @@ GoonHammer2:
             Heavy: 70
         DamageTypes: BulletDeath
 
-MutantDogBite:
+HellHoundBite:
     ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
     InvalidTargets: Vehicle, Buildings
     ReloadDelay: 20
@@ -556,7 +558,7 @@ MutantDogBite:
         Blockable: true
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 100
+        Damage: 225
         DamageTypes: Prone100Percent, TriggerProne, BulletDeath
         
 BuggyFireballLauncher:

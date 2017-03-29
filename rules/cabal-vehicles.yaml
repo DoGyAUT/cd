@@ -102,6 +102,7 @@ KHARV:
     WithVoxelUnloadBody:
     Explodes:
         Weapon: LargeTiberiumExplosion
+        EmptyWeapon: SmallTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
@@ -119,7 +120,7 @@ DREADFIRE:
     Buildable:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 303
-        Prerequisites: ~kaweap
+        Prerequisites: ~kaweap, karadr
         Description: Heavy walker equipped with double flamethrowers.\n\nRole : Anti-infantry Walker\nHP: 1200\nArmor: Medium\nSpeed: 60\nViewrange: 6\nGood vs: Infantry, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Huge AoE damage
     Mobile:
         TurnSpeed: 5
@@ -149,12 +150,12 @@ DREADFIRE:
     -ThrowsShrapnel@human:
     Explodes:
         Weapon: UnitExplodeSmall
-        Chance: 50
+        Chance: 100
 
 REAPER:
     Inherits@1: ^Walker
     Valued:
-        Cost: 1200
+        Cost: 1400
     Tooltip:
         Name: Reaper
     Selectable:
@@ -372,7 +373,7 @@ KRONOS:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 2500
+        Cost: 2200
     Tooltip:
         Name: Kronos
     Selectable:

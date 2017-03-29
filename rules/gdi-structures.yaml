@@ -485,7 +485,7 @@ GADEPT:
         Range: 5c0
     Reservable:
     RepairsUnits:
-        HpPerStep: 50
+        HpPerStep: 150
         Interval: 10
         FinishRepairingNotification: UnitRepaired
         PlayerExperience: 15
@@ -543,7 +543,7 @@ GATECH:
     ProvidesPrerequisite@buildingname:
     AirstrikePower@orcabomber:
         OrderName: OrcaBomberAirstrikePowerInfoOrder
-        Prerequisites: gahpad
+        Prerequisites: gahpad, ~garadr
         Icon: orcabomber
         ChargeTime: 300
         QuantizedFacings: 8

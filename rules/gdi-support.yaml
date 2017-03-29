@@ -245,7 +245,7 @@ GASENTUR:
 #    WithWallSpriteBody:
 #        Type: wall
     Valued:
-        Cost: 1000
+        Cost: 600
     Tooltip:
         Name: Sniper-Sensor Tower
     Buildable:
@@ -361,13 +361,13 @@ GACAN:
 #    WithWallSpriteBody:
 #        Type: wall
     Valued:
-        Cost: 1500
+        Cost: 800
     Tooltip:
         Name: Guardian Tower
     Buildable:
         Queue: Defense
         BuildPaletteOrder: 107
-        Prerequisites: anypower, gapile, gatech, ~structures.gdi
+        Prerequisites: anypower, gapile, garadr, ~structures.gdi
         Description: Anti-Armor base defense.\nArmed with a railgun and HE grenades.\n\n  Strong vs Armor \n  Weak vs Aircraft, Artillery
     Building:
     Selectable:
@@ -392,19 +392,19 @@ GACAN:
         Recoils: True
         Sequence: turret-rpg
     Armament@cannon:
-        Weapon: GuardianTowerRailgun
+        Weapon: 122mmAP
         LocalOffset: 900,220,1000
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 50
         RecoilRecovery: 10
-    Armament@RPG:
-        Weapon: GuardianTowerMissile
-        LocalOffset: 200,-210,1000
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
+    # Armament@RPG:
+        # Weapon: GuardianTowerMissile
+        # LocalOffset: 200,-210,1000
+        # MuzzleSequence: muzzle
+        # MuzzlePalette: apolra50alpha
+        # Recoil: 50
+        # RecoilRecovery: 10
     WithMuzzleOverlay:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
@@ -561,7 +561,7 @@ GAFORT:
     Inherits: ^Defense
     WithSpriteBody:
     Valued:
-        Cost: 1500
+        Cost: 1000
     Tooltip:
         Name: Fortress Garrison Bunker
     Buildable:
