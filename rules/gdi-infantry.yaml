@@ -47,6 +47,99 @@ GASOL:
 #    AnnounceOnBuildAS:
 #        Voice: Build
 
+JUMPJET:
+    Inherits: ^Soldier
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Bombardier
+    Buildable:
+        Queue: Infantry.GDI
+        BuildPaletteOrder: 101
+        Prerequisites: ~gapile
+        Description: Airborne soldier.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+    Voiced:
+        VoiceSet: Marine
+    Mobile:
+        Speed: 50
+        Jumpjet: True
+        JumpjetTransitionCost: 200
+        JumpjetCondition: airborne
+        TerrainSpeeds:
+            Jumpjet: 110
+    Health:
+        HP: 150
+    Passenger:
+        PipType: Green
+    RevealsShroud:
+        Range: 8c0
+    Armament@Primary:
+        Weapon: BombardierGun
+    Armament@GARRISONED:
+        Name: garrisoned
+        Weapon: BombardierGunGarrison
+    -Crushable:
+    AttackFrontal:
+    WithInfantryBody:
+        RequiresCondition: !airborne
+        DefaultAttackSequence: attack
+    WithInfantryBody@flying:
+        RequiresCondition: airborne
+        DefaultAttackSequence: flying-attack
+        StandSequences: flying
+        MoveSequence: flying
+    -TakeCover:
+    Hovers:
+        RequiresCondition: airborne
+    DamagedByTerrain@Tiberium:
+        RequiresCondition: !inside-tunnel && !airborne
+    Targetable:
+        RequiresCondition: !airborne && !inside-tunnel
+    Targetable@AIRBORNE:
+        TargetTypes: Air
+        RequiresCondition: airborne
+    DeathSounds@airborne:
+        RequiresCondition: airborne
+    WithDeathAnimation@normal:
+        RequiresCondition: !airborne
+    WithDeathAnimation@explosion:
+        RequiresCondition: !airborne
+    WithDeathAnimation@energy:
+        RequiresCondition: !airborne
+    WithDeathAnimation:
+        RequiresCondition: !airborne
+    DeathSounds@NORMAL:
+        RequiresCondition: !airborne
+    DeathSounds@EXPLOSION:
+        RequiresCondition: !airborne
+    DeathSounds@BURNED:
+        RequiresCondition: !airborne
+    DeathSounds@ZAPPED:
+        RequiresCondition: !airborne
+    SpawnActorOnDeath@FLAMEGUY:
+        RequiresCondition: !airborne
+
+JUMPJET.Husk:
+    BodyOrientation:
+        QuantizedFacings: 1
+    HiddenUnderFog:
+        Type: GroundPosition
+    AutoTargetIgnore:
+    ScriptTriggers:
+    Tooltip:
+        Name: Jumpjet Infantry
+    FallsToEarth:
+        Velocity: 86
+        Explosion:
+    Aircraft:
+        Speed: 186
+        CanHover: True
+    RenderSprites:
+        Image: jumpjet
+    AutoSelectionSize:
+    WithSpriteBody:
+        Sequence: die-falling
+
 E2:
     Inherits: ^Soldier
     Buildable:
@@ -382,3 +475,55 @@ ZRAIDER:
     WithMuzzleOverlay:
     SoundOnDamageTransition:
         DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud
+
+ZCOMMANDO:
+    Inherits: ^SoldierFearlessHeavy
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Zone Commander
+    Selectable:
+        Bounds: 24,34,0,-9
+    Voiced:
+        VoiceSet: Trooper
+        Volume: 2        
+    Health:
+        HP: 4000
+    Mobile:
+        Speed: 50
+        SharesCell: False
+    RevealsShroud:
+        Range: 7c0
+    Armament@primary1:
+        Weapon: ZoneCommandoGun
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary2:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary3:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary4:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary5:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    -DamagedByTerrain@Tiberium:
+    WithMuzzleOverlay:
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
+    SoundOnDamageTransition:
+        DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud

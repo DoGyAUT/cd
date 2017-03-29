@@ -564,6 +564,25 @@ GATECH:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+    ParatroopersPower@zonecommander:
+        UnitType: dshp.support
+        DropItems: ztrooper, ztrooper, zcommando, zraider, zraider
+        Prerequisites: gaarmory, ~upgrade.zc
+        Icon: zonecommando
+        OrderName: ZoneInfDropOrder
+        SquadSize: 1
+        ChargeTime: 180
+        Description: Zone Commander drop
+        LongDesc: Drops a Zone Commander with a squad of 2 Troopers and 2 Raiders.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: zonecommando
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
    
 GADROP:
     Inherits: ^Building

@@ -850,7 +850,7 @@ VertigoBombGas:
         ImpactSounds: expnew12.aud
         InvalidImpactTypes: Water, Air, AirHit
         
-BrotherhoodBattleshipBomb:
+ZodiacBomb:
     Inherits: ^ShellHE 
 	Inherits@wh: ^APHEWH
     ReloadDelay: 20
@@ -860,10 +860,10 @@ BrotherhoodBattleshipBomb:
     Projectile: BulletAS
         Speed: 0c256
         Inaccuracy: 0c128
-        Image: shell01
+        Image: zodiacbomb
         Shadow: true
         LaunchAngle: 60
-        Palette: effect
+        Palette: player
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 400

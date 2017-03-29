@@ -42,6 +42,36 @@ ZoneTrooperGun:
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: SmallScorch
+
+ZoneCommandoGun:
+    Inherits@wh: ^RailgunWH
+    ReloadDelay: 80
+    Range: 5c0
+    Report: shotgun3.aud
+    Projectile: BulletAS
+        Speed: 1c0
+        Inaccuracy: 1c0
+        Blockable: true
+        Shadow: true
+        LaunchAngle: 45
+        Image: plasmaBullet #pulsball
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 150
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmawave1
+        ExplosionPalette: effect50alpha
+        ImpactSounds: expnew13.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+
+ZoneCommandoGun2: #no sound version
+    Inherits: ZoneCommandoGun
+    Report: rail01.aud, rail02.aud, rail03.aud, rail04.aud
         
 DiscThrowerGun:
     Inherits: ^ShellHE 
@@ -1271,3 +1301,39 @@ HoverMRLSMissileAA:
         Spread: 1
         Damage: 60
         ValidTargets: Air, MidAir, HighAir
+        
+BombardierGun:
+    Inherits: ^ShellHE 
+	Inherits@wh: ^APWH
+    ReloadDelay: 100
+    Burst: 3
+    BurstDelay: 4
+    ValidTargets: Ground, Air, MidAir, HighAir
+    Range: 6c0
+    Report: smaw.aud
+    Projectile: BulletAS
+        Image: shell02
+        Speed: 1c512
+        Inaccuracy: 0c512
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 50
+        ValidTargets: Ground, Air, MidAir, HighAir
+        DamageTypes: SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew13.aud
+        InvalidImpactTypes: Water 
+    Warhead@4EffAir: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: expnew12.aud
+        ValidImpactTypes: Air, AirHit
+        
+BombardierGunGarrison:
+    Inherits: BombardierGun
+    Range: 9c0 
