@@ -88,7 +88,7 @@ KPR:
         Prerequisites: ~structures.cabal
         Description: Provides power for other structures.
     Valued:
-        Cost: 1000
+        Cost: 500
     Tooltip:
         Name: Cabal Power Core
     ProvidesPrerequisite:
@@ -103,7 +103,7 @@ KPR:
     Selectable:
         Bounds: 88, 80, 2, -12
     Health:
-        HP: 1600
+        HP: 1400
     RevealsShroud:
         Range: 4c0
     WithIdleOverlay@LIGHTS:
@@ -111,11 +111,58 @@ KPR:
     WithIdleOverlay@LIGHTS2:
         Sequence: idle-lights2
     Power:
-        Amount: 400
+        Amount: 200
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
     DisabledOverlay:
+
+NKPR:
+    Inherits: KPR
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 308
+        Prerequisites: ~structures.cabal, karadr
+        Description: Provides power for other structures.
+    Valued:
+        Cost: 3000
+    Tooltip:
+        Name: Cabal Nuclear Reactor
+    Health:
+        HP: 4000
+    Power:
+        Amount: 2000
+    Explodes:
+        Weapon: ClusterMissile
+        EmptyWeapon: ClusterMissile
+    RenderSprites:
+        Scale: 1.5
+        Image: kpr
+    SelfHealing@kys:
+        Step: 1
+        PercentageStep: -110
+        Delay: 1
+        HealIfBelow: 101
+        DamageCooldown: 0
+        RequiresCondition: kys
+    GrantExternalConditionPower@kys:
+        Description: Boom
+        LongDesc: Makes your power plant go boom
+        OrderName: KillYourselfOrder
+        ActivationSequence:
+        Icon: kys
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        Condition: kys
+        Sequence: idle
+        ChargeTime: 1
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        Range: 1
+        Duration: 450
+    ExternalCondition@kys:
+        Condition: kys
 
 KPROC:
     Inherits: ^BuildingInfiltrate
@@ -149,8 +196,6 @@ KPROC:
         PipColor: Green
         PipCount: 10
         Capacity: 700
-    CustomSellValue:
-        Value: 250
     FreeActor:
         Actor: KHARV
         SpawnOffset: 2,1

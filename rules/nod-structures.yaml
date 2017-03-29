@@ -171,8 +171,6 @@ NIPROC:
         PipColor: Green
         PipCount: 10
         Capacity: 1000
-    CustomSellValue:
-        Value: 500
     FreeActor:
         Actor: NIHARV
         SpawnOffset: 2,1
@@ -287,25 +285,6 @@ NAHAND:
     Power:
         Amount: -35
     ProvidesPrerequisite@buildingname:
-    GrantExternalConditionPower@frenzy:
-        Description: Frenzy
-        LongDesc: Grants friendly infantry a time limited boost in movement speed.
-        OrderName: FrenzyPowerInfoOrder
-        ActivationSequence:
-        Icon: fenzy
-        SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
-        EndChargeSound: nod1_s8.aud
-        Condition: fenzy
-        OnFireSound: nod1_s5.aud
-        Sequence: idle
-        ChargeTime: 180
-        Prerequisites: ~propaganda
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        Range: 8
-        Duration: 450
 
 NAWEAP:
     Inherits: ^Building
@@ -459,6 +438,25 @@ NARADR:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+    GrantExternalConditionPower@frenzy:
+        Description: Frenzy
+        LongDesc: Grants friendly infantry a time limited boost in movement speed.
+        OrderName: FrenzyPowerInfoOrder
+        ActivationSequence:
+        Icon: fenzy
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSound: nod1_s8.aud
+        Condition: fenzy
+        OnFireSound: nod1_s5.aud
+        Sequence: idle
+        ChargeTime: 180
+        Prerequisites: ~propaganda
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        Range: 8
+        Duration: 450
     
 NAHPAD:
     Inherits: ^Building

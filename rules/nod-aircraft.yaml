@@ -510,7 +510,7 @@ RAVEN:
 SCRINB:
     Inherits: ^AttackAdvancedPlane
     Valued:
-        Cost: 3000
+        Cost: 2500
     Tooltip:
         Name: Banshee MK.II
     Buildable:
@@ -529,7 +529,7 @@ SCRINB:
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
     Health:
-        HP: 1200
+        HP: 1800
     RevealsShroud:
         Range: 14c0
         Type: GroundPosition
@@ -687,12 +687,12 @@ VERTIGO:
         Actor: VERTIGO.Husk
         Probability: 100
         
-ZEP:
+ZODIAC:
     Inherits: ^Helicopter
     Valued:
         Cost: 2000
     Tooltip:
-        Name: Brotherhood Battleship
+        Name: Zodiac Battleship
     Buildable:
         Queue: Air.Nod
         BuildPaletteOrder: 206
@@ -706,7 +706,7 @@ ZEP:
     Aircraft:
         TurnSpeed: 2
         CruiseAltitude: 8192
-		Speed: 25
+        Speed: 25
         IdealSeparation: 2048
         AltitudeVelocity: 40
     Health:
@@ -715,26 +715,26 @@ ZEP:
         Range: 14c0
         Type: GroundPosition
     Armament@primary:
-        Weapon: BrotherhoodBattleshipBomb
+        Weapon: ZodiacBomb
         LocalOffset: -256,0,-1024
-    # AttackHeli:
-        # FacingTolerance: 20
-	Turreted: #That's the only way to correct bombing, works just fine
+    Turreted:
         TurnSpeed: 360
-	AttackTurreted:
+    AttackTurreted:
     AutoTarget:
     RenderSprites:
-    RenderVoxels:
-        Scale: 2
+    -RenderVoxels:
+    WithFacingSpriteBody:
     -WithVoxelBody:
-    WithVoxelWalkerBody:
-        TickRate: 2
     DetectCloaked:
         Range: 10c0
+    WithShadow:
     RenderDetectionCircle:
     SpawnActorOnDeath:
-        Actor: ZEP.Husk
+        Actor: ZODIAC.Husk
         Probability: 100
+    AmbientSound:
+        SoundFile: propaganda.aud
+        Delay: 25,100
     ProximityExternalCondition:
         Condition: zepdebuff
         Range: 10c0

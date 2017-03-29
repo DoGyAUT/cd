@@ -66,7 +66,7 @@ SAPOWR:
         Prerequisites: ~structures.scrin
         Description: Provides power for other structures.
     Valued:
-        Cost: 900
+        Cost: 500
     Tooltip:
         Name: Dark Matter Generator
     ProvidesPrerequisite:
@@ -81,11 +81,11 @@ SAPOWR:
     Selectable:
         Bounds: 88, 80, 2, -12
     Health:
-        HP: 1500
+        HP: 1200
     RevealsShroud:
         Range: 4c0
     Power:
-        Amount: 350
+        Amount: 200
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
@@ -123,8 +123,6 @@ SPROC:
         PipColor: Green
         PipCount: 0
         Capacity: 500000
-    CustomSellValue:
-        Value: 250
     FreeActor:
         Actor: SHARV
         SpawnOffset: 2,1

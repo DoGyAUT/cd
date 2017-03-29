@@ -14,11 +14,11 @@ DevilsTongueGun:
         Inaccuracy: 1c0
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 75
+        Spread: 768
+        Damage: 55
         Falloff: 100, 80
         
-DevilsTongueGunBlue:
+DevilsTongueGunTiberium:
     Inherits@wh: BlueFireballLauncher
     ReloadDelay: 100
     Range: 5c256
@@ -32,8 +32,8 @@ DevilsTongueGunBlue:
         Inaccuracy: 1c0
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 90
+        Spread: 768
+        Damage: 75
         Falloff: 100, 80     
         
 GorranMissile:
@@ -256,25 +256,25 @@ NodHarvGun:
 
 SpecterGun:
     Inherits: ^ShellHE 
-	Inherits@wh: ^APHEWH
+	Inherits@wh: ^HEAPWH
     ReloadDelay: 200
     Range: 14c0
     MinRange: 5c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
-        Speed: 10c0
-        Inaccuracy: 1c512
+        Speed: 6c0
+        Inaccuracy: 0
         Image: #shell01
-        # LaunchAngle: 165
+        LaunchAngle: 165
         Shadow: true
         Blockable: false
         Palette: effect
-        # ContrailLength: 20
-        # ContrailColor: FFFFFF
-        # ContrailWidth: 30
+        ContrailLength: 20
+        ContrailColor: FFFFFF
+        ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 500
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
         ExplosionPalette: apolra2
@@ -297,13 +297,13 @@ SpecterGunEMP:
         # Palette: effect
         # TrailImage: plasmatrail
         # TrailPalette: effect50alpha
-        # ContrailLength: 20
-        # ContrailColor: C8C8FF
-        # ContrailWidth: 30
+        ContrailLength: 20
+        ContrailColor: C8C8FF
+        ContrailWidth: 30
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 500
+        Damage: 350
     Warhead@emp1: GrantExternalCondition
         Range: 2c512
         Duration: 100
@@ -328,13 +328,13 @@ SpecterGunInferno:
         # Palette: effect
         # TrailImage: blueflametrailer
         # TrailPalette: effect50alpha
-        # ContrailLength: 40
-        # ContrailColor: 0096D2
-        # ContrailWidth: 20
+        ContrailLength: 40
+        ContrailColor: 0096D2
+        ContrailWidth: 20
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 600
+        Damage: 400
         DamageTypes: Prone100Percent, TriggerProne, FireDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -365,13 +365,13 @@ SpecterGunNapalm:
         # Palette: effect
         # TrailImage: tiberiumtrail
         # TrailPalette: effect50alpha
-        # ContrailLength: 40
-        # ContrailColor: 00FF64
-        # ContrailWidth: 30
+        ContrailLength: 40
+        ContrailColor: 00FF64
+        ContrailWidth: 30
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c712
-        Damage: 600
+        Damage: 400
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
         ExplosionPalette: effect50alpha
@@ -387,6 +387,7 @@ RaiderGunVisual:
 	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 6c0
+    BurstDelay: 2
     Burst: 20
     ValidTargets: Ground, Air, MidAir, HighAir    
     Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
@@ -406,6 +407,7 @@ RaiderGunAttack:
 	Inherits@wh: ^BulletWH
     ReloadDelay: 125
     Range: 6c0
+    BurstDelay: 2
     Burst: 20
     ValidTargets: Ground, Air, MidAir, HighAir    
     Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
@@ -415,7 +417,7 @@ RaiderGunAttack:
         Inaccuracy: 0c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 30
+        Damage: 25
         Versus:
             Air: 50
 		ValidTargets: Ground, Air, MidAir, HighAir  
@@ -423,7 +425,7 @@ RaiderGunAttack:
 RaiderGunLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 30
+    ReloadDelay: 20
     Range: 6c0
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
@@ -438,9 +440,10 @@ RaiderGunLaser:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 40
+        Damage: 26
         Versus:
             Air: 50
+            Infantry: 150
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -529,7 +532,7 @@ ClusterMissile:
     ValidTargets: Ground, Water, Air, MidAir, HighAir
     Warhead@ImpactDamage0: SpreadDamage
         Spread: 1c0
-        Damage: 150
+        Damage: 75
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         ValidTargets: Ground, Water, Air, HighAir
         Versus:
@@ -542,7 +545,7 @@ ClusterMissile:
         Size: 1
     Warhead@ClusterDamage1: SpreadDamage
         Spread: 2c0
-        Damage: 60
+        Damage: 30
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Delay: 5
         ValidTargets: Ground, Water, Air, HighAir
@@ -558,7 +561,7 @@ ClusterMissile:
         Delay: 5
     Warhead@ClusterDamage2: SpreadDamage
         Spread: 3c0
-        Damage: 60
+        Damage: 30
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Delay: 10
         ValidTargets: Ground, Water, Air, HighAir
@@ -574,7 +577,7 @@ ClusterMissile:
         Delay: 10
     Warhead@ClusterDamage3: SpreadDamage
         Spread: 4c0
-        Damage: 60
+        Damage: 30
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Delay: 15
         ValidTargets: Ground, Water, Air, HighAir
@@ -590,7 +593,7 @@ ClusterMissile:
         Delay: 15
     Warhead@ClusterDamage4: SpreadDamage
         Spread: 5c0
-        Damage: 60
+        Damage: 30
         Falloff: 1000, 368, 135, 50, 18, 7, 0
         Delay: 20
         ValidTargets: Ground, Water, Air, HighAir
@@ -714,7 +717,7 @@ AcolyteGunE:
 ShadowTrooperGun:
     Inherits: ^Bullet
     Inherits@wh: ^BulletWH
-    ValidTargets: Ground, Air, MidAir, HighAir   
+    ValidTargets: Ground 
     ReloadDelay: 100
     Range: 10c0
     Report: sniper1.aud, sniper2.aud, sniper3.aud
@@ -729,7 +732,7 @@ ShadowTrooperGun:
         Damage: 500
         Versus:
             Aircraft: 25
-        ValidTargets: Ground, Air, MidAir, HighAir   
+        ValidTargets: Ground
     Warhead@2prone: SpreadDamage
         Spread: 250
         Damage: 1
@@ -847,7 +850,7 @@ VertigoBombGas:
         ImpactSounds: expnew12.aud
         InvalidImpactTypes: Water, Air, AirHit
         
-BrotherhoodBattleshipBomb:
+ZodiacBomb:
     Inherits: ^ShellHE 
 	Inherits@wh: ^APHEWH
     ReloadDelay: 20
@@ -857,10 +860,10 @@ BrotherhoodBattleshipBomb:
     Projectile: BulletAS
         Speed: 0c256
         Inaccuracy: 0c128
-        Image: shell01
+        Image: zodiacbomb
         Shadow: true
         LaunchAngle: 60
-        Palette: effect
+        Palette: player
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
         Damage: 400
@@ -1171,7 +1174,7 @@ ShadowTrooperLaser:
     ReloadDelay: 100
     Range: 10c0
     Report: laserpulse.aud
-    ValidTargets: Ground, Air, MidAir, HighAir   
+    ValidTargets: Ground 
     Projectile: LaserZap
         Color: C80000
         Width: 30
@@ -1184,7 +1187,7 @@ ShadowTrooperLaser:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 300
-        ValidTargets: Ground, Air, MidAir, HighAir   
+        ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
         ExplosionPalette: player50alpha
@@ -1613,7 +1616,7 @@ StealthTankMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^HEWH
     ReloadDelay: 100
-    Range: 14c0
+    Range: 10c0
     Burst: 6
     BurstDelay: 5
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1675,7 +1678,7 @@ HailstormMissileGas:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 200
+        Damage: 170
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
         ExplosionPalette: effect50alpha
@@ -1814,7 +1817,7 @@ SAMSiteMissile:
 BlackHandFlamer:
     Inherits: FireballLauncher
     ReloadDelay: 60
-    Range: 4c256
+    Range: 3c256
     InvalidTargets: Flameproof
     Projectile: BulletAS
         Speed: 0c128
@@ -1824,15 +1827,15 @@ BlackHandFlamer:
         TrailPalette: effect50alpha
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 150
+        Spread: 384
+        Damage: 175
         Falloff: 100, 80
         InvalidTargets: Flameproof
 
 BlackHandFlamerBlue:
     Inherits: BlackHandFlamer
     ReloadDelay: 60
-    Range: 4c256
+    Range: 3c256
     Report: firstrm1.aud
     InvalidTargets: Flameproof
     Projectile: BulletAS
@@ -1843,7 +1846,7 @@ BlackHandFlamerBlue:
         TrailPalette: effect50alpha
         Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
-        Spread: 512
+        Spread: 256
         Damage: 200
         Versus:
             Vehicle: 75
@@ -1852,4 +1855,28 @@ BlackHandFlamerBlue:
     Warhead@6Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light
-           
+        
+TermiteGun: #termitegun
+    Inherits: ^ShellAP 
+	Inherits@wh: ^APWH
+    ReloadDelay: 130
+    Range: 7c768
+    Report: shot01.aud, shot02.aud, shot03.aud
+    Projectile: BulletAS
+        Inaccuracy: 0c512
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c128
+        Damage: 350
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_clsn
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+        
+TermiteGunDeployed:        
+     Inherits: TermiteGun
+     ReloadDelay: 121
+     Burst: 3
+     BurstDelay: 3
+     Warhead@1Dam: SpreadDamage
+        Damage: 250

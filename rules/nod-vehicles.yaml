@@ -19,7 +19,7 @@ NMCV:
     Health:
         HP: 2000
     Mobile:
-        Speed: 40
+        Speed: 35
     RevealsShroud:
         Range: 6c0
     MustBeDestroyed:
@@ -94,6 +94,7 @@ NIHARV:
     WithMuzzleOverlay
     Explodes:
         Weapon: LargeTiberiumExplosion
+        EmptyWeapon: SmallTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
@@ -147,6 +148,7 @@ NTHARV:
     WithVoxelUnloadBody:
     Explodes:
         Weapon: LargeTiberiumExplosion
+        EmptyWeapon: SmallTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
@@ -197,6 +199,7 @@ NPHARV:
     WithVoxelUnloadBody:
     Explodes:
         Weapon: LargeTiberiumExplosion
+        EmptyWeapon: SmallTiberiumExplosion
     WithHarvestOverlay:
         Offset: 384,0,0
         Palette: effect
@@ -214,7 +217,7 @@ SAPC:
     Buildable:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 202
-        Prerequisites: ~naweap, naradr, ~!t1, ~industry
+        Prerequisites: ~naweap, ~!t1, ~industry
         Description: Requires Industry Nod Doctrine.\n\n Industry Nod´s subterranean transport unit.\n\n Role: Light Vehicle\n HP: 600\n Armor: Light\n Speed: 71\n Viewrange: 6c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Subterranean Movement\n - 8 slots\n - Crushes infantry\n - Crushes light vehicles
     Voiced:
         VoiceSet: SAPC    
@@ -283,7 +286,7 @@ BGGY:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 300
+        Cost: 400
     Tooltip:
         Name: Raider
     Selectable:
@@ -406,7 +409,7 @@ BIKE:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 500
+        Cost: 700
     Tooltip:
         Name: Attack Bike
     Selectable:
@@ -589,10 +592,10 @@ RECKONER:
     WithVoxelBody:
     AutoTarget:
 
-TERMITE:
+TERMITE: #wip
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 1400
+        Cost: 1600
     Tooltip:
         Name: Termite
     Buildable:
@@ -612,7 +615,7 @@ TERMITE:
     RevealsShroud:
         Range: 9c0
     Health:
-        HP: 2000
+        HP: 2600
     Turreted:
         Turret: primary
         TurnSpeed: 2
@@ -626,7 +629,7 @@ TERMITE:
     Armament@secondary:
         Name: secondary
         Turret: secondary
-        Weapon: 135mmAP
+        Weapon: TermiteGunDeployed
         LocalOffset: 1000,0,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -636,7 +639,7 @@ TERMITE:
     Armament@primary:
         Name: primary
         Turret: primary
-        Weapon: 135mmAP
+        Weapon: TermiteGun
         LocalOffset: 850,0,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
@@ -871,7 +874,7 @@ NHWTZ:
 SUBTANK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1400
+        Cost: 1000
     Tooltip:
         Name: Devil's Tongue
     Selectable:
@@ -879,7 +882,7 @@ SUBTANK:
     Buildable:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 210
-        Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~industry
+        Prerequisites: ~naweap, naradr, ~!t1, ~industry
         Description: Requires Industry Nod.\n\n Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\n Role: Medium Tank\n HP: 800\n Armor: Medium\n Speed: 71\n Viewrange: 9c0\n\n Good vs Infantry, Cyborgs, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Subterranean movement\n - Can crush infantry\n - Can crush light vehicles
     Voiced:
         VoiceSet: Devil
@@ -901,34 +904,34 @@ SUBTANK:
         RequiresCondition: submerged
         Except: Attack, AttackMove, Guard, Move
     Health:
-        HP: 960
+        HP: 650
     RevealsShroud:
         Range: 7c0
         RequiresCondition: !submerged
     Armament@primary:
         Weapon: DevilsTongueGun
         LocalOffset: 840,0,512
-        RequiresCondition: !submerged && !upgrade.bluehell
+        RequiresCondition: !submerged && !upgrade.tibgas
     Armament@secondary:
         Weapon: DevilsTongueGun
         LocalOffset: 840,-360,300
-        RequiresCondition: !submerged && !upgrade.bluehell
+        RequiresCondition: !submerged && !upgrade.tibgas
     Armament@secondary2:
         Weapon: DevilsTongueGun
         LocalOffset: 840,360,300
-        RequiresCondition: !submerged && !upgrade.bluehell
+        RequiresCondition: !submerged && !upgrade.tibgas
     Armament@primaryB:
-        Weapon: DevilsTongueGunBlue
+        Weapon: DevilsTongueGunTiberium
         LocalOffset: 840,0,512
-        RequiresCondition: !submerged && upgrade.bluehell
+        RequiresCondition: !submerged && upgrade.tibgas
     Armament@secondaryB:
-        Weapon: DevilsTongueGunBlue
+        Weapon: DevilsTongueGunTiberium
         LocalOffset: 840,-360,300
-        RequiresCondition: !submerged && upgrade.bluehell
+        RequiresCondition: !submerged && upgrade.tibgas
     Armament@secondary2B:
-        Weapon: DevilsTongueGunBlue
+        Weapon: DevilsTongueGunTiberium
         LocalOffset: 840,360,300
-        RequiresCondition: !submerged && upgrade.bluehell
+        RequiresCondition: !submerged && upgrade.tibgas
     AttackFrontal:
     AutoTarget:
     RenderSprites:
@@ -952,7 +955,7 @@ SUBTANK:
 STNK:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1400
+        Cost: 1200
     Tooltip:
         Name: Stealth Tank
     Selectable:
@@ -1050,7 +1053,7 @@ AVATAR:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1800
+        Cost: 1600
     Tooltip:
         Name: Avatar
     Selectable:

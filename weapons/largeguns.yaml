@@ -42,23 +42,6 @@
         ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
         InvalidImpactTypes: Water
 
-135mmAP:
-    Inherits: ^ShellAP 
-	Inherits@wh: ^APWH
-    ReloadDelay: 130
-    Range: 7c768
-    Report: shot01.aud, shot02.aud, shot03.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c512
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 400
-    Warhead@2Eff: CreateEffect
-        Explosions: medium_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
-
 145mmAP:
     Inherits: ^ShellAP 
 	Inherits@wh: ^APWH

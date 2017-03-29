@@ -65,6 +65,9 @@
         OpeningSequence: open
         Sequence: idle
         ClosingSequence: close
+    Targetable@parachute:
+        RequiresCondition: parachute
+        TargetTypes: Air
         
 ^SpriteActor:
     BodyOrientation:
@@ -381,7 +384,7 @@
     GivesBuildableArea:
     Capturable:
     ExternalCapturable:
-        CapturableCompleteTime: 7
+        CaptureCompleteTime: 7
     ExternalCapturableBar:
     RepairableBuilding:
         IndicatorPalette: mouse
@@ -624,7 +627,7 @@
     Voiced:
         VoiceSet: Infantry
     Targetable:
-		RequiresCondition: !inside-tunnel
+        RequiresCondition: !inside-tunnel && !parachute
         TargetTypes: Ground, Infantry
     QuantizeFacingsFromSequence:
         Sequence: stand
@@ -657,7 +660,6 @@
     Crushable:
         CrushSound: squish6.aud
         WarnProbability: 0
-    Parachutable:
     DamagedByTerrain@Tiberium:
 		RequiresCondition: !inside-tunnel
         Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
@@ -703,14 +705,6 @@
         Voice: Zapped
         DeathTypes: EnergyDeath    
     ConditionManager:  
-#    WithParachute:
-#        RequiresCondition: parachute
-#        Image: parach
-#        Sequence: idle
-#        IsPlayerPalette: True
-#        OpeningSequence: open
-#        ClosingSequence: close
-#        Offset: 0,0,427
     ThrowsShrapnel@sparks:
         Weapons: Bloody
         Pieces: 0, 10
@@ -1154,7 +1148,7 @@
         RequiresCondition: avatarboost
     FirepowerMultiplier@avatar:        
         RequiresCondition: avatarboost
-        Modifier: 120
+        Modifier: 115
     ExternalCondition@avatar:
         Condition: avatarboost
 
@@ -1177,7 +1171,7 @@
         Prerequisites: upgrade.nanofiber
     DamageMultiplier@nanofiber:
         RequiresCondition: upgrade.nanofiber
-        Modifier: 70
+        Modifier: 85
         
 ^HuskUpgrades:
     Inherits@1: ^CyborgUpgrades
@@ -1288,7 +1282,7 @@
         VoiceSet: Vehicle
     Targetable:
         TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !inside-tunnel
+		RequiresCondition: !inside-tunnel && !parachute
     Repairable:
         RepairBuildings: gadept
         Voice: Move

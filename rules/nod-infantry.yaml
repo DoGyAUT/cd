@@ -217,6 +217,7 @@ NENGINEER:
         RepairNotification: BridgeRepaired
     ExternalCaptures:
         Type: building
+        ConsumeActor: true
         PlayerExperience: 50
     -AutoTarget:
     -ProducibleWithLevel:
@@ -325,7 +326,7 @@ NCONF:
         Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
         Description: Requires Propaganda Nod Doctrine.\n\n Black Hand Soldiers armed with a Combat Rifle, Grenade Launcher and enhance surrounding Nod Soldiers.\n\n Role: Advanced Infantry\n HP: 400\n Armor: Medium\n Speed: 70\n Viewrange: 8c0 \n\n Good vs Infantry, Cyborgs\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Buffs friendly Nod Soldiers in damage and attackspeed\n - Detects Stealth\n\n Upgrades:\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
-        Cost: 750
+        Cost: 850
     Tooltip:
         Name: Confessor
     Selectable:
@@ -377,7 +378,7 @@ SHADOW:
         Prerequisites: ~nahand, naradr, ~technology
         Description: Requires Technology Nod Doctrine.\n\n Advanced Infantry for Technology Nod.\n\n Role: Advanced Infantry\n HP: 160\n Armor: Medium\n Speed: 80\n Viewrange: 11c0 \n\n Good vs Infantry, Cyborgs, Vehicles, Vtol´s\n Useless vs Jets, Bombers\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)\n - Can be stealthed with Stealth Emitter (Technology)
     Valued:
-        Cost: 900
+        Cost: 800
     Tooltip:
         Name: Shadow Trooper
     Selectable:
@@ -461,7 +462,7 @@ BHAND:
         Prerequisites: upgrade.bluehell
     Explodes:
         Weapon: UnitExplodeSmall
-        Chance: 50
+        Chance: 100
         TargetTypes: Ground, VeryHeavyInfantry, Flameproof
     SoundOnDamageTransition:
         DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud

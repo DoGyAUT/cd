@@ -47,15 +47,108 @@ GASOL:
 #    AnnounceOnBuildAS:
 #        Voice: Build
 
+JUMPJET:
+    Inherits: ^Soldier
+    Valued:
+        Cost: 400
+    Tooltip:
+        Name: Bombardier
+    Buildable:
+        Queue: Infantry.GDI
+        BuildPaletteOrder: 101
+        Prerequisites: ~gapile
+        Description: Airborne soldier.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+    Voiced:
+        VoiceSet: Marine
+    Mobile:
+        Speed: 50
+        Jumpjet: True
+        JumpjetTransitionCost: 200
+        JumpjetCondition: airborne
+        TerrainSpeeds:
+            Jumpjet: 110
+    Health:
+        HP: 150
+    Passenger:
+        PipType: Green
+    RevealsShroud:
+        Range: 8c0
+    Armament@Primary:
+        Weapon: BombardierGun
+    Armament@GARRISONED:
+        Name: garrisoned
+        Weapon: BombardierGunGarrison
+    -Crushable:
+    AttackFrontal:
+    WithInfantryBody:
+        RequiresCondition: !airborne
+        DefaultAttackSequence: attack
+    WithInfantryBody@flying:
+        RequiresCondition: airborne
+        DefaultAttackSequence: flying-attack
+        StandSequences: flying
+        MoveSequence: flying
+    -TakeCover:
+    Hovers:
+        RequiresCondition: airborne
+    DamagedByTerrain@Tiberium:
+        RequiresCondition: !inside-tunnel && !airborne
+    Targetable:
+        RequiresCondition: !airborne && !inside-tunnel
+    Targetable@AIRBORNE:
+        TargetTypes: Air
+        RequiresCondition: airborne
+    DeathSounds@airborne:
+        RequiresCondition: airborne
+    WithDeathAnimation@normal:
+        RequiresCondition: !airborne
+    WithDeathAnimation@explosion:
+        RequiresCondition: !airborne
+    WithDeathAnimation@energy:
+        RequiresCondition: !airborne
+    WithDeathAnimation:
+        RequiresCondition: !airborne
+    DeathSounds@NORMAL:
+        RequiresCondition: !airborne
+    DeathSounds@EXPLOSION:
+        RequiresCondition: !airborne
+    DeathSounds@BURNED:
+        RequiresCondition: !airborne
+    DeathSounds@ZAPPED:
+        RequiresCondition: !airborne
+    SpawnActorOnDeath@FLAMEGUY:
+        RequiresCondition: !airborne
+
+JUMPJET.Husk:
+    BodyOrientation:
+        QuantizedFacings: 1
+    HiddenUnderFog:
+        Type: GroundPosition
+    AutoTargetIgnore:
+    ScriptTriggers:
+    Tooltip:
+        Name: Jumpjet Infantry
+    FallsToEarth:
+        Velocity: 86
+        Explosion:
+    Aircraft:
+        Speed: 186
+        CanHover: True
+    RenderSprites:
+        Image: jumpjet
+    AutoSelectionSize:
+    WithSpriteBody:
+        Sequence: die-falling
+
 E2:
     Inherits: ^Soldier
     Buildable:
         Queue: Infantry.GDI
         BuildPaletteOrder: 102
-        Prerequisites: ~gapile, ~!upgrade.zc
+        Prerequisites: ~gapile, garadr, ~upgrade.st
         Description: GDI's basic anti-vehicle infantry.\nArmed with throwable explosive discuses.\n\n  Role: Anti Armor\n  HP: 150\n  Armor: Light\n  Speed: 56\n  Viewrange: 8\n\n Good vs Buildings, Infantry Mobs, Cyborgs, Medium Armor\n\n Special:\n\n - EMP DiscThrowerGuns on veterancy rank 5
     Valued:
-        Cost: 200
+        Cost: 300
     Tooltip:
         Name: Disc Thrower
     Selectable:
@@ -64,7 +157,7 @@ E2:
         VoiceSet: Discthrower
         Volume: 2
     Health:
-        HP: 150
+        HP: 200
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -97,6 +190,9 @@ E2:
         Voice: Move
     SoundOnDamageTransition:
         DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
+    Explodes:
+        Weapon: UnitExplodeSmaller
+        EmptyWeapon: UnitExplodeSmaller
 
 SCOUT:
     Inherits: ^Soldier
@@ -208,6 +304,7 @@ ENGINEER:
         RepairNotification: BridgeRepaired
     ExternalCaptures:
         Type: building
+        ConsumeActor: true
         PlayerExperience: 50
     -AutoTarget:
     -ProducibleWithLevel:
@@ -215,7 +312,7 @@ ENGINEER:
 MEDIC:
     Inherits: ^Soldier
     Valued:
-        Cost: 400
+        Cost: 300
     Tooltip:
         Name: Medic
     Buildable:
@@ -312,7 +409,7 @@ ZTROOPER:
         Prerequisites: ~gapile, garadr, ~!t1, ~upgrade.zc
         Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\n  Role: Anti Armor\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Armored Targets\n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
     Valued:
-        Cost: 1000
+        Cost: 800
     Tooltip:
         Name: Zone Trooper
     Selectable:
@@ -349,7 +446,7 @@ ZRAIDER:
         Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
         Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area\nIt also uses shoulder mounted missile launchers vs incoming VTOLs.\n\n  Role: Anti Infantry/Building/VTOL\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Soft Targets, Buildings, VTOL's \n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
     Valued:
-        Cost: 1200
+        Cost: 1000
     Tooltip:
         Name: Zone Raider
     Selectable:
@@ -378,3 +475,55 @@ ZRAIDER:
     WithMuzzleOverlay:
     SoundOnDamageTransition:
         DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud
+
+ZCOMMANDO:
+    Inherits: ^SoldierFearlessHeavy
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Zone Commander
+    Selectable:
+        Bounds: 24,34,0,-9
+    Voiced:
+        VoiceSet: Trooper
+        Volume: 2        
+    Health:
+        HP: 4000
+    Mobile:
+        Speed: 50
+        SharesCell: False
+    RevealsShroud:
+        Range: 7c0
+    Armament@primary1:
+        Weapon: ZoneCommandoGun
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary2:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary3:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary4:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    Armament@primary5:
+        Weapon: ZoneCommandoGun2
+        LocalOffset: 512,64,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    -DamagedByTerrain@Tiberium:
+    WithMuzzleOverlay:
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:
+    SoundOnDamageTransition:
+        DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
