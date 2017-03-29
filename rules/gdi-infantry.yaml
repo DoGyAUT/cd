@@ -61,12 +61,9 @@ JUMPJET:
     Voiced:
         VoiceSet: Marine
     Mobile:
-        Speed: 50
-        Jumpjet: True
-        JumpjetTransitionCost: 200
-        JumpjetCondition: airborne
+        Speed: 90
         TerrainSpeeds:
-            Jumpjet: 110
+            Water: 70
     Health:
         HP: 150
     Passenger:
@@ -81,64 +78,14 @@ JUMPJET:
     -Crushable:
     AttackFrontal:
     WithInfantryBody:
-        RequiresCondition: !airborne
-        DefaultAttackSequence: attack
-    WithInfantryBody@flying:
-        RequiresCondition: airborne
         DefaultAttackSequence: flying-attack
         StandSequences: flying
         MoveSequence: flying
+        IdleSequences: flying
     -TakeCover:
     Hovers:
-        RequiresCondition: airborne
-    DamagedByTerrain@Tiberium:
-        RequiresCondition: !inside-tunnel && !airborne
-    Targetable:
-        RequiresCondition: !airborne && !inside-tunnel
-    Targetable@AIRBORNE:
-        TargetTypes: Air
-        RequiresCondition: airborne
-    DeathSounds@airborne:
-        RequiresCondition: airborne
-    WithDeathAnimation@normal:
-        RequiresCondition: !airborne
-    WithDeathAnimation@explosion:
-        RequiresCondition: !airborne
-    WithDeathAnimation@energy:
-        RequiresCondition: !airborne
-    WithDeathAnimation:
-        RequiresCondition: !airborne
-    DeathSounds@NORMAL:
-        RequiresCondition: !airborne
-    DeathSounds@EXPLOSION:
-        RequiresCondition: !airborne
-    DeathSounds@BURNED:
-        RequiresCondition: !airborne
-    DeathSounds@ZAPPED:
-        RequiresCondition: !airborne
-    SpawnActorOnDeath@FLAMEGUY:
-        RequiresCondition: !airborne
-
-JUMPJET.Husk:
-    BodyOrientation:
-        QuantizedFacings: 1
-    HiddenUnderFog:
-        Type: GroundPosition
-    AutoTargetIgnore:
-    ScriptTriggers:
-    Tooltip:
-        Name: Jumpjet Infantry
-    FallsToEarth:
-        Velocity: 86
-        Explosion:
-    Aircraft:
-        Speed: 186
-        CanHover: True
-    RenderSprites:
-        Image: jumpjet
-    AutoSelectionSize:
-    WithSpriteBody:
-        Sequence: die-falling
+    -DamagedByTerrain@Tiberium:
+    WithShadow:
 
 E2:
     Inherits: ^Soldier

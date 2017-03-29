@@ -240,7 +240,7 @@ RocketeerGun:
         ExplosionPalette: apolra50alpha
         ImpactSounds: expnew12.aud
         InvalidImpactTypes: Water, Air, AirHit
-        
+
 RocketeerGunAA:
     Inherits: RocketeerGun
     ValidTargets: 
@@ -262,9 +262,9 @@ SpecterGun:
     MinRange: 5c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
-        Speed: 6c0
+        Speed: 1c0
         Inaccuracy: 0
-        Image: #shell01
+        Image: shell01
         LaunchAngle: 165
         Shadow: true
         Blockable: false
@@ -282,7 +282,7 @@ SpecterGun:
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: LargeCrater
-        
+
 SpecterGunEMP:
     Inherits: SpecterGun
     Range: 14c0
@@ -290,13 +290,13 @@ SpecterGunEMP:
     Projectile: BulletAS
         # Speed: 0c256
         # Inaccuracy: 1c0
-        Image: #shell01
+        #Image: shell01
         # LaunchAngle: 165
         # Shadow: true
         # Blockable: false
-        # Palette: effect
-        # TrailImage: plasmatrail
-        # TrailPalette: effect50alpha
+        Palette: effect
+        TrailImage: plasmatrail
+        TrailPalette: effect50alpha
         ContrailLength: 20
         ContrailColor: C8C8FF
         ContrailWidth: 30
@@ -312,7 +312,7 @@ SpecterGunEMP:
     Warhead@EMPEff: CreateEffect
         Explosions: pulse_explosion
         ImpactSounds: plsecan2.aud
-      
+
 SpecterGunInferno:
     Inherits: SpecterGun
     ReloadDelay: 200
@@ -321,13 +321,13 @@ SpecterGunInferno:
     Projectile: BulletAS
         # Speed: 0c256
         # Inaccuracy: 0c512
-        Image: #shell01
+        #Image: shell01
         # LaunchAngle: 165
         # Shadow: true
         # Blockable: false
         # Palette: effect
-        # TrailImage: blueflametrailer
-        # TrailPalette: effect50alpha
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
         ContrailLength: 40
         ContrailColor: 0096D2
         ContrailWidth: 20
