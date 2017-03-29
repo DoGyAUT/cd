@@ -477,7 +477,49 @@ gasol:
     web-overlay: webguy
         Length: 6
         ShadowStart: 6
-    icon: gasolicon    
+    icon: gasolicon
+    
+g3:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+    run:
+        Start: 8
+        Length: 5
+        Facings: 8
+    idle1:
+        Start: 112
+        Length: 27
+    idle2:
+        Start: 139
+        Length: 28
+    die1:
+        Start: 168
+        Length: 26
+    die2:
+        Start: 194
+        Length: 27
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed:
+        Start: 187
+        Length: 7
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 48
+        Length: 8
+        Facings: 8
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: gasolicon
 
 zmarine:
     Defaults:
@@ -666,7 +708,52 @@ zraider:
         Length: 6
         ShadowStart: 6
     icon: zraidericon
-    
+
+zcommando:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+    run:
+        Start: 8
+        Length: 10
+        Facings: 8
+    idle1:
+        Start: 88
+        Length: 33
+    idle2:
+        Start: 121
+        Length: 39
+    die1:
+        Start: 320
+        Length: 23
+    die2:
+        Start: 343
+        Length: 21
+    die3: infdie
+        Length: *
+    die4:
+        Start: 320
+        Length: 23
+    die-crushed:
+        Start: 354
+        Length: 10
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 160
+        Length: 20
+        Facings: 8
+    die6: electro
+        Length: *
+    muzzle: plassabogsml
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: zcommandoicon
+
 nacad:
     Defaults:
         Tick: 80
@@ -2556,24 +2643,11 @@ jumpjet:
     stand:
         Facings: 8
         ShadowStart: 451
-    air-stand:
-        Start: 340
-        Length: 6
-        Facings: 8
     run:
         Start: 8
         Length: 6
         Facings: 8
         ShadowStart: 459
-    air-run:
-        Start: 292
-        Length: 6
-        Facings: 8
-    air-idle:
-        Start: 340
-        Length: 6
-        Facings: 8
-        Tick: 100
     idle1:
         Start: 56
         Length: 15
@@ -2590,15 +2664,31 @@ jumpjet:
     prone-stand:
         Facings: 8
         ShadowStart: 451
-    die1: # TODO: animation for falling from sky starts at 436
+    flying:
+        Facings: 8
+        Length: 6
+        Start: 292
+        ShadowStart: 743
+    die-twirling: # TODO: animation for falling from sky starts at 436
         Start: 445
         Length: 6
         ShadowStart: 896
-    die2: # TODO: animation for falling from sky starts at 436
-        Start: 445
-        Length: 6
-        ShadowStart: 896
-    die3: # TODO: animation for falling from sky starts at 436
+    die1:
+        Start: 436
+        Length: 9
+        ShadowStart: 887
+    die2:
+        Start: 436
+        Length: 9
+        ShadowStart: 887
+    die3:
+        Start: 436
+        Length: 9
+        ShadowStart: 887
+    die-falling:
+        Start: 436
+        Length: 9
+    die-flying: # TODO: animation for falling from sky starts at 436
         Start: 445
         Length: 6
         ShadowStart: 896
@@ -2607,28 +2697,29 @@ jumpjet:
     die-crushed:
         Start: 450
         ShadowStart: 901
-        Tick: 80
+        Tick: 800
         ZOffset: -511
-    shoot:
+    attack:
         Start: 164
         Length: 6
         Facings: 8
         ShadowStart: 615
-    air-shoot:
+    flying-attack:
         Start: 388
-        Length: 6
         Facings: 8
-    prone-shoot:
+        Length: 6
+        ShadowStart: 839
+    prone-attack:
         Start: 212
         Length: 6
         Facings: 8
         ShadowStart: 663
-    standup-0:
+    standup:
         Start: 260
         Length: 2
         Facings: 8
         ShadowStart: 711
-    die6: electro
+    die-melting: electro
         Length: *
     web-overlay: webguy
         Length: 6

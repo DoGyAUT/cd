@@ -374,18 +374,18 @@ VERTIGO.Husk:
         Color: FFFFFF
         UsePlayerColor: False
 
-ZEP.Husk:
+ZODIAC.Husk:
     Inherits: ^AircraftHuskPlane
     Tooltip:
-        Name: Zeppelin Husk
+        Name: Zodiac Husk
     Aircraft:
         TurnSpeed: 1
         Speed: 10
-    RenderVoxels:
-        Image: zep
-        Scale: 2
+    -RenderVoxels:
     RenderSprites:
-        Image: zep
+        Image: zodiac
+    WithFacingSpriteBody:
+    WithShadow:
     FallsToEarth:
         Explosion: UnitExplodeCrapJet
         
