@@ -2060,12 +2060,12 @@ kdark:
         UseTilesetCode: false
         
 naflamer:
-    Defaults:
+    Defaults: nasam
         Offset: 0, -12
         UseTilesetCode: false
     idle: nasam
         ShadowStart: 3
-    damaged-idle:
+    damaged-idle: nasam
         Start: 1
         ShadowStart: 4
     dead: nasam
@@ -3247,7 +3247,7 @@ fproc:
         UseTilesetCode: false
     idle: farefn
         ShadowStart: 3
-    damaged-idle: farefn2
+    damaged-idle: farefn
         Start: 1
         ShadowStart: 4
     dead: farefn
@@ -3352,10 +3352,7 @@ saseed:
     dead:
         Start: 2
         ShadowStart: 5
-        Tick: 400
-    idle-light: sapowr_a
-        Length: 8
-        Tick: 100      
+        Tick: 400   
     make: 
         Length: 3
         ShadowStart: 3
