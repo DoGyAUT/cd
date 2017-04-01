@@ -462,6 +462,29 @@ GAHPAD:
     Selectable:
         Bounds: 88, 66, 0, -5
     ProvidesPrerequisite@buildingname:
+    AirstrikePower@orcabomber:
+        OrderName: OrcaBomberAirstrikePowerInfoOrder
+        Prerequisites: garadr
+        Icon: orcabomber
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: Orca Bombing run
+        LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
+        SelectTargetSound: orca_s5.aud
+        EndChargeSound: orca_s5.aud
+        LaunchSound: orca_ab2.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: orca_b
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        DisplayBeacon: True
+        BeaconPoster: orcabomber
+        BeaconPosterPalette: beaconposter
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
 
 GADEPT:
     Inherits: ^Building
@@ -541,29 +564,6 @@ GATECH:
     Power:
         Amount: -100
     ProvidesPrerequisite@buildingname:
-    AirstrikePower@orcabomber:
-        OrderName: OrcaBomberAirstrikePowerInfoOrder
-        Prerequisites: gahpad, ~garadr
-        Icon: orcabomber
-        ChargeTime: 300
-        QuantizedFacings: 8
-        Description: Orca Bombing run
-        LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
-        SelectTargetSound: orca_s5.aud
-        EndChargeSound: orca_s5.aud
-        LaunchSound: orca_ab2.aud
-        IncomingSound: g_00-cd004.aud
-        UnitType: orca_b
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        DisplayBeacon: True
-        BeaconPoster: orcabomber
-        BeaconPosterPalette: beaconposter
-        DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
     ParatroopersPower@zonecommander:
         UnitType: dshp.support
         DropItems: ztrooper, ztrooper, zcommando, zraider, zraider

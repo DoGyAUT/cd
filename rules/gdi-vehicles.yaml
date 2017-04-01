@@ -112,7 +112,7 @@ APC:
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 100
+        Speed: 95
         TerrainSpeeds:
             Water: 80
     Health:
@@ -128,14 +128,14 @@ APC:
             # e2: apc_gren
             # medic: apc_medic
         EjectOnDeath: False
-    Armament@Cannon:
-        Name: primary
-        Weapon: APCHEGun
-        LocalOffset: 550,0,850
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
+    # Armament@Cannon: 1
+        # Name: primary
+        # Weapon: APCHEGun
+        # LocalOffset: 550,0,850
+        # MuzzleSequence: muzzle
+        # MuzzlePalette: apolra50alpha
+        # Recoil: 200
+        # RecoilRecovery: 10
     Armament@MG:
         Weapon: APCMGattack
         Name: secondary
@@ -173,17 +173,17 @@ APC:
     # WithVoxelBody@Medic:
         # Sequence: medic
         # RequiresCondition: apc_medic && !inwater
-    WithVoxelTurret@Normal:
-        Sequence: turret
-        Recoils: False
+    # WithVoxelTurret@Normal:1
+        # Sequence: turret
+        # Recoils: False
         # RequiresCondition: !apc_gren
     # WithVoxelTurret@Grenade:
         # Sequence: turret_gren
         # Recoils: False
         # RequiresCondition: apc_gren
-    WithVoxelBarrel@Cannon:
-        Sequence: barrel
-        Armament: primary
+    # WithVoxelBarrel@Cannon: 1
+        # Sequence: barrel
+        # Armament: primary
     WithVoxelBarrel@MG:
         Sequence: barrel_mg
         Armament: secondary
@@ -268,7 +268,7 @@ VULTURE:
         Interval: 13
         RequiresCondition: walker
     Health:
-        HP: 1080
+        HP: 950
     RevealsShroud:
         Range: 9c0
     BodyOrientation:
@@ -282,14 +282,14 @@ VULTURE:
         Range: 6c0
     RenderDetectionCircle:
     AutoTarget:
-    Armament@primary:
-        Weapon: VultureGat #22mmAPHE
-        LocalOffset: 150,280,850, 150,-280,850
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
+    # Armament@primary:
+        # Weapon: VultureGat #22mmAPHE
+        # LocalOffset: 150,280,850, 150,-280,850
+        # MuzzleSequence: muzzle
+        # MuzzleSplitFacings: 8
+        # MuzzlePalette: apolra50alpha
+        # Recoil: 50
+        # RecoilRecovery: 10
     Armament@secondary:
         Weapon: VultureMissile
         LocalOffset: -180,150,1400, -180,-150,1400
@@ -364,7 +364,7 @@ GTHTNK:
         Speed: 50
         TurnSpeed: 3
     Health:
-        HP: 1820
+        HP: 1600
     RevealsShroud:
         Range: 8c0
     Turreted:
@@ -598,7 +598,7 @@ MMCH:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1250
+        Cost: 1350
     Tooltip:
         Name: Titan
     Buildable:

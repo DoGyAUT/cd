@@ -189,19 +189,19 @@ BluehellRavenMissileAA:
         
 GorranCannon:
     Inherits: ^ShellHE 
-	Inherits@wh: ^HEAPWH
-    ReloadDelay: 100
-    Range: 5c0
+	Inherits@wh: ^APWH
+    ReloadDelay: 85
+    Range: 6c0
     Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
     Projectile: BulletAS
         Image: shell02
-        Speed: 0c512
-        Inaccuracy: 0c512
+        Speed: 1c0
+        Inaccuracy: 0c128
         ContrailLength: 10
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 250
+        Spread: 0c128
+        Damage: 130
     Warhead@2Eff: CreateEffect
         Explosions: tiny_clsn, tiny_bang
         ExplosionPalette: apolra2
@@ -274,7 +274,9 @@ SpecterGun:
         ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 300
+        Damage: 150
+        Versus:
+            Building: 160
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
         ExplosionPalette: apolra2
@@ -303,7 +305,7 @@ SpecterGunEMP:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 350
+        Damage: 175
     Warhead@emp1: GrantExternalCondition
         Range: 2c512
         Duration: 100
@@ -334,7 +336,7 @@ SpecterGunInferno:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 400
+        Damage: 200
         DamageTypes: Prone100Percent, TriggerProne, FireDeath
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -371,7 +373,7 @@ SpecterGunNapalm:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c712
-        Damage: 400
+        Damage: 200
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
         ExplosionPalette: effect50alpha
@@ -385,7 +387,7 @@ SpecterGunNapalm:
 RaiderGunVisual:
     Inherits: ^Bullet 
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 125
+    ReloadDelay: 75
     Range: 6c0
     BurstDelay: 2
     Burst: 20
@@ -403,29 +405,27 @@ RaiderGunVisual:
         InvalidImpactTypes: Water
 
 RaiderGunAttack:
-    Inherits: ^Bullet 
-	Inherits@wh: ^BulletWH
-    ReloadDelay: 125
+    Inherits: RaiderGunVisual 
+    ReloadDelay: 75
     Range: 6c0
     BurstDelay: 2
     Burst: 20
-    ValidTargets: Ground, Air, MidAir, HighAir    
-    Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
     Projectile: BulletAS
         Image: 
         Speed: 10c0
         Inaccuracy: 0c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c64
-        Damage: 25
+        Damage: 15
         Versus:
             Air: 50
-		ValidTargets: Ground, Air, MidAir, HighAir  
         
 RaiderGunLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 20
+    ReloadDelay: 40
+    Burst: 3
+    BurstDelay: 3
     Range: 6c0
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
@@ -443,7 +443,7 @@ RaiderGunLaser:
         Damage: 26
         Versus:
             Air: 50
-            Infantry: 150
+            Infantry: 350
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -1065,13 +1065,13 @@ GattlingCannonVisual:
 VenomCannon:
     Inherits: ^APBullet 
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 150
+    ReloadDelay: 75
     Range: 6c0
 	MinRange: 1c0
     ValidTargets: Ground
     Report: cygun1.aud
     Burst: 20
-    BurstDelay: 3
+    BurstDelay: 2
     Projectile: BulletAS
         Speed: 0c512
         Inaccuracy: 0c512
@@ -1651,7 +1651,9 @@ HailstormMissile:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 150
+        Damage: 75
+        Versus:
+            Building: 200
         ValidTargets: Ground
         
 HailstormMissileAA:
@@ -1678,7 +1680,9 @@ HailstormMissileGas:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 170
+        Damage: 85
+        Versus:
+            Building: 100
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg2
         ExplosionPalette: effect50alpha

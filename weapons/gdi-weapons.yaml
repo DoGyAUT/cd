@@ -147,8 +147,8 @@ JuggernautGun:
     MinRange: 5c0
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 300
-            Building: 180
+        Damage: 150
+            Building: 360
     Warhead@2Eff: CreateEffect
         Explosions: artexplo01, artexplo02, artexplo03, artexplo04
         ExplosionPalette: apolra2
@@ -322,14 +322,14 @@ AtlasGun:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 0c768
-        Damage: 420
+        Damage: 210
         Falloff: 100, 50, 25, 0
         Versus:
             Infantry: 100
             Cyborg: 100
             Vehicle: 100
             Aircraft: 100
-            Building: 100
+            Building: 200
         DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
     Warhead@2Eff: CreateEffect
         Explosions: swave
@@ -366,7 +366,9 @@ CyclopsCannon:
         ContrailWidth: 30
     Warhead@1Dam: SpreadDamage
         Spread: 0c384
-        Damage: 200
+        Damage: 100
+        Versus:
+            Building: 200
     Warhead@2Eff: CreateEffect
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
         ExplosionPalette: apolra2
@@ -506,7 +508,7 @@ OrcaBombingRun:
     Inherits: ^Bomb
     Inherits@wh: ^HEAPWH
     Burst: 10
-    BurstDelay: 8
+    BurstDelay: 6
     Range: 6c0
     Projectile: BulletAS
         Speed: 0c256
@@ -515,6 +517,7 @@ OrcaBombingRun:
         Damage: 500
         Versus:
             Buildings: 30
+            Vehicles: 40
             
 CondorBomb:
     Inherits: ^RailgunWH
@@ -790,12 +793,12 @@ VultureGat:
 APCMGvisual:
     Inherits: ^Bullet 
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 100
+    ReloadDelay: 75
     Range: 6c0
     Burst: 25
-    BurstDelay: 3
+    BurstDelay: 2
     Report: cygun1.aud
-    ValidTargets: Air, MidAir, HighAir
+    ValidTargets: Ground, Air, MidAir, HighAir
     Projectile: BulletAS
         Speed: 1c0
         Inaccuracy: 0c256
@@ -814,7 +817,7 @@ APCMGattack:
         Speed: 6c0
         Inaccuracy: 0c0
     Warhead@1Dam: SpreadDamage
-	    ValidTargets: Air, MidAir, HighAir
+	    ValidTargets: Ground ,Air, MidAir, HighAir
         Spread: 128
         Damage:  10
     Warhead@2Eff: CreateEffect
@@ -853,7 +856,7 @@ APCHEGun:
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 30
+        Damage: 50
         
 TritonCannon:
     Inherits: ^ShellHE 
@@ -896,7 +899,7 @@ HowitzerTurretGun:
         Blockable: false
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
-        Spread: 1c0
+        Spread: 768
         Damage: 500
     Warhead@2Eff: CreateEffect
         Explosions: fireexpl
@@ -1006,7 +1009,9 @@ VultureMissile:
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 256
-        Damage: 60   
+        Damage: 80
+        Versus:
+            Buildings: 75
         ValidTargets: Ground, Air, MidAir, HighAir
         
 PoseidonTusk:

@@ -399,30 +399,10 @@ NARADR:
     DetectCloaked:
         Range: 20c0
         CloakTypes: Underground
-    ParatroopersPower@propcarry:
-        UnitType: nodcarry.support
-        Prerequisites: ~propaganda
-        DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
-        Icon: nodcarry
-        OrderName: PropagandaInfantryDropOrder
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        ChargeTime: 300
-        Description: Propaganda Infantry Drop
-        LongDesc: Drops an infantry battalion on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
-        LaunchSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: nodcarry
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
     ParatroopersPower@techcarry:
         UnitType: valkyrie.support
         Prerequisites: ~technology
-        DropItems: nacad,nacad,e3,e3,shadow,shadow
+        DropItems: shadow,shadow,shadow,shadow,shadow
         Icon: valkyrie
         OrderName: ShadowTrooperInfantryDropOrder
         SquadSize: 1
@@ -531,6 +511,26 @@ NAHPAD:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock        
+    ParatroopersPower@propcarry:
+        UnitType: nodcarry.support
+        Prerequisites: ~propaganda
+        DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
+        Icon: nodcarry
+        OrderName: PropagandaInfantryDropOrder
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        ChargeTime: 300
+        Description: Propaganda Infantry Drop
+        LongDesc: Drops an infantry battalion on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: nodcarry
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
  
 NAPYRA:
     Inherits: ^Building
