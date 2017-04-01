@@ -1,13 +1,14 @@
 upgrade.grunt:
     Inherits: ^Tech
     Tooltip:
-        Name: Choose Scoundrel
-    # Buildable:
-        # BuildPaletteOrder: 400
-        # Prerequisites: ~!upgrade.brigand
-        # Description: Allows you to train Scoundrel units (replaces Grunt). \n  Disables Brigand useage.
-        # Queue: Tech.Forg
-        # BuildLimit: 1
+        Name: Choose Grenadier
+    Buildable:
+        BuildPaletteOrder: 400
+        Prerequisites: ~!upgrade.fiend
+        Description: Allows you to train Grenadier \n Disables Fiend
+        Queue: Tech.Forg
+        BuildLimit: 1
+        BuildDuration: 1
     Valued:
         Cost: 500
     RenderSprites:
@@ -25,6 +26,7 @@ upgrade.huntress:
         Description: Allows you to train Huntress units
         Queue: Tech.Forg
         BuildLimit: 1
+        BuildDuration: 1
     Valued:
         Cost: 500
     RenderSprites:
@@ -36,12 +38,13 @@ upgrade.brigand:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Brigand
-    Buildable:
-        BuildPaletteOrder: 401
-        Prerequisites: ~!upgrade.huntress
-        Queue: Tech.Forg
-        BuildLimit: 1
-        Description: Allows you to train Brigand units (replaces Grunt). \n  Disables Scoundrel useage.
+    # Buildable:
+        # BuildPaletteOrder: 401
+        # Prerequisites: ~!upgrade.huntress
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to train Brigand units (replaces Grunt). \n  Disables Scoundrel useage.
     Valued:
         Cost: 500
     RenderSprites:
@@ -55,10 +58,11 @@ upgrade.fiend:
         Name: Choose Fiend
     Buildable:
         BuildPaletteOrder: 402
-        Prerequisites: ~faradr, ~!upgrade.mhijack
+        Prerequisites: ~faradr, ~!upgrade.grunt
         Queue: Tech.Forg
         BuildLimit: 1
-        Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Goon useage.
+        BuildDuration: 1
+        Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Grenadier useage.
     Valued:
         Cost: 500
     RenderSprites:
@@ -70,12 +74,13 @@ upgrade.mhijack:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Hijacker
-    Buildable:
-        BuildPaletteOrder: 403
-        Prerequisites: ~faradr, ~!upgrade.fiend
-        Queue: Tech.Forg
-        BuildLimit: 1
-        Description: Allows you to train Hijacker units. \n  Disables Fiend useage.
+    # Buildable:
+        # BuildPaletteOrder: 403
+        # Prerequisites: ~faradr, ~!upgrade.fiend
+        # Queue: Tech.Forg
+        # BuildLimit: 1
+        # BuildDuration: 1
+        # Description: Allows you to train Hijacker units. \n  Disables Fiend useage.
     Valued:
         Cost: 500
     RenderSprites:
@@ -92,6 +97,7 @@ upgrade.goon:
         Prerequisites: ~fatrade, ~!upgrade.ghost
         Queue: Tech.Forg
         BuildLimit: 1
+        BuildDuration: 1
         Description: Allows you to train Goon units. \n  Disables Bounty Hunter useage.
     Valued:
         Cost: 750
@@ -109,6 +115,7 @@ upgrade.ghost:
         Prerequisites: ~fatrade, ~!upgrade.goon
         Queue: Tech.Forg
         BuildLimit: 1
+        BuildDuration: 1
         Description: Allows you to train Bounty Hunter units. \n  Disables Goon useage.
     Valued:
         Cost: 750

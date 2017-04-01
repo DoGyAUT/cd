@@ -384,7 +384,7 @@
     GivesBuildableArea:
     Capturable:
     ExternalCapturable:
-        CaptureCompleteTime: 7
+        CaptureCompleteTime: 9
     ExternalCapturableBar:
     RepairableBuilding:
         IndicatorPalette: mouse
@@ -733,6 +733,27 @@
     ProducibleWithLevel:
         Prerequisites: armory.upgraded
     RevealOnFire:
+    WithDecoration@repair:
+        Image: pips
+        Sequence: medic
+        Palette: pips
+        ReferencePoint: Bottom, Left
+        Offset: 0, 0
+        ZOffset: 256
+        ValidStances: Ally, Neutral
+        RequiresCondition: repair_healboost
+    SelfHealing@repair:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 200
+        RequiresCondition: repair_healboost
+    ExternalCondition@repair:
+        Condition: repair_healboost
+    ReloadDelayMultiplier@repair:
+        RequiresCondition: repair_healboost
+        Modifier: 90
 
 ^Soldier:
     Inherits@1: ^Infantry
@@ -921,7 +942,7 @@
     Explodes:
         Weapon: TiberiumExplosion
         EmptyWeapon: TiberiumExplosion
-        Chance: 25
+        Chance: 10
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
@@ -944,7 +965,7 @@
     Explodes:
         Weapon: TiberiumExplosion
         EmptyWeapon: TiberiumExplosion
-        Chance: 25
+        Chance: 10
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
@@ -968,7 +989,7 @@
     Explodes:
         Weapon: TiberiumExplosion
         EmptyWeapon: TiberiumExplosion
-        Chance: 50
+        Chance: 10
     Targetable:
         TargetTypes: Ground, Goon
     -DamagedByTerrain@Tiberium:
@@ -1328,24 +1349,6 @@
         Palette: player50alpha
         TerrainTypes: Clear, Rough, Green, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
 		RequiresCondition: !inside-tunnel
-    WithDecoration@repair:
-        Image: pips
-        Sequence: medic
-        Palette: pips
-        ReferencePoint: Bottom, Left
-        Offset: 0, 0
-        ZOffset: 256
-        ValidStances: Ally, Neutral
-        RequiresCondition: repair_healboost
-    SelfHealing@repair:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 100
-        DamageCooldown: 200
-        RequiresCondition: repair_healboost
-    ExternalCondition@repair:
-        Condition: repair_healboost
     WithDecoration@repair_golem:
         Image: pips
         Sequence: medic
@@ -1364,9 +1367,6 @@
         RequiresCondition: repair_heal
     ExternalCondition@repair_golem:
         Condition: repair_heal
-    ReloadDelayMultiplier@repair:
-        RequiresCondition: repair_healboost
-        Modifier: 90
     ProducibleWithLevel:
         Prerequisites: armory.upgraded
     RevealOnFire:

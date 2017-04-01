@@ -410,12 +410,11 @@ GLAD:
         Cost: 4000
     Tooltip:
         Name: Harbinger
-        BuildLimit: 1
     Buildable:
-        Queue: Infantry.Cabal
+        Queue: Infantry.Cabal 
         BuildPaletteOrder: 309
         BuildLimit: 1
-        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3
+        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3, ~!glad
         Description: Role : Epic Cyborg\nHP: 2000\nArmor: Heavy\nSpeed: 50\nViewrange: 11\nGood vs: Everything\n\nSpecial:\n - SelfHealing
     Selectable:
         Bounds: 24,34,0,-9
@@ -456,7 +455,7 @@ GLAD:
         Range: 6c0
     WithMuzzleOverlay:
     SelfHealing:
-        Step: 1
+        Step: 2
         PercentageStep: 0
         Delay: 1
         HealIfBelow: 100

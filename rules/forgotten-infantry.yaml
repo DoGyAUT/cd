@@ -1,10 +1,10 @@
 GRUNT:
     Inherits: ^Mutant
-    Buildable:
-        Queue: Infantry.Forg
-        BuildPaletteOrder: 400
-        Prerequisites: ~fabar, ~!upgrade.huntress, ~!upgrade.brigand
-        Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
+    # Buildable:
+        # Queue: Infantry.Forg
+        # BuildPaletteOrder: 400
+        # Prerequisites: ~fabar, ~!upgrade.huntress, ~!upgrade.brigand
+        # Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
         Cost: 100
     Tooltip:
@@ -35,10 +35,10 @@ ELITEGRUNT: #codename Scoundrel:
     Buildable:
         Queue: Infantry.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fabar
+        Prerequisites: ~fabar, ~!upgrade.fiend, !upgrade.grunt
         Description: Anti tank only
     Valued:
-        Cost: 300
+        Cost: 200
     Tooltip:
         Name: Grenadier
     Selectable:
@@ -49,7 +49,7 @@ ELITEGRUNT: #codename Scoundrel:
     Health:
         HP: 200
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     # Armament@primary:
@@ -70,10 +70,10 @@ BRIGAND:
     Buildable:
         Queue: Infantry.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~fabar, ~!t1, ~upgrade.brigand
+        Prerequisites: ~fabar, ~!t1
         Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
-        Cost: 300
+        Cost: 250
     Tooltip:
         Name: Brigand
     Selectable:
@@ -82,7 +82,7 @@ BRIGAND:
         VoiceSet: Brigand
         Volume: 3
     Health:
-        HP: 480
+        HP: 250
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -111,7 +111,7 @@ HUNTRESS:
     Buildable:
         Queue: Infantry.Forg
         BuildPaletteOrder: 401
-        Prerequisites: ~fabar, ~upgrade.huntress
+        Prerequisites: ~fabar
         Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
         Cost: 250
@@ -123,7 +123,7 @@ HUNTRESS:
         VoiceSet: Hunter #Huntress 
         Volume: 1
     Health:
-        HP: 300
+        HP: 190
     Mobile:
         Speed: 50
     RevealsShroud:
@@ -138,7 +138,7 @@ HUNTRESS:
 FENGINEER:
     Inherits: ^Mutant
     Valued:
-        Cost: 600
+        Cost: 500
     Tooltip:
         Name: Mechanic
     Buildable:
@@ -153,7 +153,7 @@ FENGINEER:
         VoiceSet: Mechanic
         Volume: 3
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     Health:
@@ -269,7 +269,7 @@ FFIEND:
     Buildable:
         Queue: Infantry.Forg
         BuildPaletteOrder: 405
-        Prerequisites: ~fabar, faradr, ~!t1, ~upgrade.fiend
+        Prerequisites: ~fabar, ~!t1, ~upgrade.fiend
         Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.    \n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
     Valued:
         Cost: 300
@@ -306,7 +306,7 @@ MHIJACK:
     Buildable:
         Queue: Infantry.Forg
         BuildPaletteOrder: 406
-        Prerequisites: ~fabar, faradr, ~!t1, ~upgrade.mhijack
+        Prerequisites: ~fabar, faradr, ~!t1
         Description: Hijacks enemy vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
     Valued:
         Cost: 600
@@ -318,7 +318,7 @@ MHIJACK:
         VoiceSet: Thief
         Volume: 3
     Health:
-        HP: 360
+        HP: 300
     Mobile:
         Speed: 75
     RevealsShroud:
