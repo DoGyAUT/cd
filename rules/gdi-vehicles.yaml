@@ -123,71 +123,31 @@ APC:
         Types: Infantry
         MaxWeight: 5
         PipCount: 5
-        # PassengerConditions:
-#            gasol: apc_mg
-            # e2: apc_gren
-            # medic: apc_medic
         EjectOnDeath: False
-    # Armament@Cannon: 1
-        # Name: primary
-        # Weapon: APCHEGun
-        # LocalOffset: 550,0,850
-        # MuzzleSequence: muzzle
-        # MuzzlePalette: apolra50alpha
-        # Recoil: 200
-        # RecoilRecovery: 10
     Armament@MG:
         Weapon: APCMGattack
-        Name: secondary
-        LocalOffset: 256,96,800, 256,128,800
+        LocalOffset: 300,32,825, 300,-32,825
     Armament@MGvisual:
         Weapon: APCMGvisual
-        Name: secondary2
-        LocalOffset: 256,96,800, 256,128,800
+        LocalOffset: 300,32,825, 300,-32,825
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
         MuzzlePalette: apolra50alpha
-        # RequiresCondition: apc_mg
-    # Armament@Grenade:
-        # Name: tertiary
-        # Weapon: Grenade
-        # LocalOffset: 64,-128,800
-        # MuzzleSequence: muzzle
-        # MuzzleSplitFacings: 8
-        # MuzzlePalette: apolra50alpha
-        # RequiresCondition: apc_gren
     Turreted:
         TurnSpeed: 4
         Offset: -128,0,0
     AttackTurreted:
-        Armaments: primary, secondary, secondary2 #, tertiary
     AutoTarget:
     GrantConditionOnTerrain:
         Condition: inwater
         TerrainTypes: Water
     WithVoxelBody:
-        RequiresCondition: !inwater && !apc_medic
+        RequiresCondition: !inwater
     WithVoxelBody@water:
         Sequence: water
         RequiresCondition: inwater
-    # WithVoxelBody@Medic:
-        # Sequence: medic
-        # RequiresCondition: apc_medic && !inwater
-    # WithVoxelTurret@Normal:1
-        # Sequence: turret
-        # Recoils: False
-        # RequiresCondition: !apc_gren
-    # WithVoxelTurret@Grenade:
-        # Sequence: turret_gren
-        # Recoils: False
-        # RequiresCondition: apc_gren
-    # WithVoxelBarrel@Cannon: 1
-        # Sequence: barrel
-        # Armament: primary
-    WithVoxelBarrel@MG:
-        Sequence: barrel_mg
-        Armament: secondary
-        # RequiresCondition: apc_mg
+    WithVoxelTurret:
+    WithVoxelBarrel:
     WithMuzzleOverlay:
     LeavesTrails@water:
         Image: wake
@@ -282,14 +242,14 @@ VULTURE:
         Range: 6c0
     RenderDetectionCircle:
     AutoTarget:
-    # Armament@primary:
-        # Weapon: VultureGat #22mmAPHE
-        # LocalOffset: 150,280,850, 150,-280,850
-        # MuzzleSequence: muzzle
-        # MuzzleSplitFacings: 8
-        # MuzzlePalette: apolra50alpha
-        # Recoil: 50
-        # RecoilRecovery: 10
+    Armament@primary:
+        Weapon: VultureGat #22mmAPHE
+        LocalOffset: 150,280,850, 150,-280,850
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+        MuzzlePalette: apolra50alpha
+        Recoil: 50
+        RecoilRecovery: 10
     Armament@secondary:
         Weapon: VultureMissile
         LocalOffset: -180,150,1400, -180,-150,1400
@@ -371,7 +331,7 @@ GTHTNK:
         TurnSpeed: 2
     Armament@PRIMARY:
         Weapon: 122mmAP
-        LocalOffset: 1250,0,650
+        LocalOffset: 1250,0,700
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 280
