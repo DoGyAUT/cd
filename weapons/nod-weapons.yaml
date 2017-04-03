@@ -34,7 +34,48 @@ DevilsTongueGunTiberium:
     Warhead@1Dam: SpreadDamage
         Spread: 768
         Damage: 75
-        Falloff: 100, 80     
+        Falloff: 100, 80
+        
+PyradonGun:
+    Inherits: FireballLauncher
+    Inherits@wh: ^FireWH
+    ReloadDelay: 80
+    Burst: 2
+    BurstDelay: 25
+    Range: 4c0
+    Report: flamtnk1.aud
+    Projectile: BulletAS
+        Speed: 0c256
+        LaunchAngle: 90
+        Image: flametrailer
+        TrailImage: flametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 0c0
+    InvalidTargets: Flameproof
+    Warhead@1Dam: SpreadDamage
+        Spread: 768
+        Damage: 110
+        Falloff: 100, 80
+        
+PyradonGunBlue:
+    Inherits@wh: BlueFireballLauncher
+    ReloadDelay: 80
+    Range: 4c0
+    Burst: 2
+    BurstDelay: 25
+    Report: flamtnk1.aud
+    Projectile: BulletAS
+        Speed: 0c256
+        LaunchAngle: 90
+        Image: blueflametrailer
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 0c0
+    InvalidTargets: Flameproof
+    Warhead@1Dam: SpreadDamage
+        Spread: 768
+        Damage: 150
+        Falloff: 100, 80
         
 GorranMissile:
     Inherits: ^MissileAPHE 
