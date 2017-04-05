@@ -556,6 +556,59 @@ REPAIR:
 #    AutoTarget:
 #        ScanRadius: 5
 
+FTNK:
+    Inherits: ^VoxelVehicle
+    Valued:
+        Cost: 1000
+    Tooltip:
+        Name: Pyradon Tank
+    Selectable:
+        Bounds: 42,42, 0, -5
+    Buildable:
+        Queue: Vehicle.Nod
+        BuildPaletteOrder: 206
+        Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
+        Description: Requires Propaganda Nod Doctrine.\n\n 
+    Voiced:
+        VoiceSet: Devil
+        Volume: 2
+    Mobile:
+        Speed: 70
+        TurnSpeed: 4
+    Health:
+        HP: 650
+    RevealsShroud:
+        Range: 7c0
+    Turreted:
+        TurnSpeed: 3
+        Offset: 160, 0, 0
+    Armament@primary1:
+        Weapon: PyradonGun
+        LocalOffset: 950,100,700
+        RequiresCondition: !upgrade.bluehell
+    Armament@primary2:
+        Weapon: PyradonGun
+        LocalOffset: 950,-100,700
+        RequiresCondition: !upgrade.bluehell
+    Armament@upgrade1:
+        Weapon: PyradonGunBlue
+        LocalOffset: 950,100,700
+        RequiresCondition: !upgrade.bluehell
+    Armament@upgrade2:
+        Weapon: PyradonGunBlue
+        LocalOffset: 950,-100,700
+        RequiresCondition: !upgrade.bluehell
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.bluehell
+        Prerequisites: upgrade.bluehell
+    AttackTurreted:
+    AutoTarget:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+        Recoils: False
+
 RECKONER:
     Inherits: ^VoxelVehicle
     Valued:
