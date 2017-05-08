@@ -521,7 +521,7 @@ OrcaBombingRun:
             
 CondorBomb:
     Inherits: ^RailgunWH
-    ReloadDelay: 60
+    ReloadDelay: 200
     Burst: 2
     BurstDelay: 0
     Range: 7c0
@@ -1126,7 +1126,7 @@ OrcaF2Missiles:
 HawkMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 2
     Range: 10c0
     MinRange: 2c0
@@ -1154,7 +1154,7 @@ HawkMissile:
 HawkMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 2
     Range: 15c0
     MinRange: 2c0
@@ -1182,7 +1182,7 @@ HawkMissileAA:
 HornetMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 4
     BurstDelay: 6
     Range: 10c0
@@ -1211,7 +1211,7 @@ HornetMissile:
 HornetMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 4
     BurstDelay: 6
     Range: 15c0
@@ -1307,38 +1307,23 @@ HoverMRLSMissileAA:
         Damage: 60
         ValidTargets: Air, MidAir, HighAir
         
-BombardierGun:
-    Inherits: ^ShellHE 
+JavelinGun:
+    Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
-    ReloadDelay: 100
-    Burst: 3
-    BurstDelay: 4
     ValidTargets: Ground, Air, MidAir, HighAir
+    ReloadDelay: 100
     Range: 6c0
+    # MinRange: 1c512
     Report: smaw.aud
-    Projectile: BulletAS
-        Image: shell02
-        Speed: 1c512
-        Inaccuracy: 0c512
-        Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 50
-        ValidTargets: Ground, Air, MidAir, HighAir
-        DamageTypes: SmallExplosionDeath
+        Damage: 120
     Warhead@2Eff: CreateEffect
-        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew13.aud
-        InvalidImpactTypes: Water 
-    Warhead@4EffAir: CreateEffect
-        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-        ExplosionPalette: apolra2
+        Explosions: tiny_tumu
+        ExplosionPalette: apolra50alpha
         ImpactSounds: expnew12.aud
-        ValidImpactTypes: Air, AirHit
+        InvalidImpactTypes: Water, Air, AirHit
         
-BombardierGunGarrison:
-    Inherits: BombardierGun
-    Range: 9c0 
+JavelinGunGarrison:
+    Inherits: JavelinGun
+    Range: 8c0 

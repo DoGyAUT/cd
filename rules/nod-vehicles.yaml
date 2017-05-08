@@ -3,7 +3,7 @@ NMCV:
     Buildable:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 200
-        Prerequisites: ~naweap
+        Prerequisites: ~naweap, naradr
         Description: The heart of any Nod base.\n\n Provides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Crushes Light Vehicles\n - Cannot be sold
     Valued:
         Cost: 3000
@@ -19,7 +19,7 @@ NMCV:
     Health:
         HP: 2000
     Mobile:
-        Speed: 35
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     MustBeDestroyed:
@@ -443,21 +443,21 @@ BIKE:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    WithMuzzleOverlay:  
+    WithMuzzleOverlay:
 
 CHEETAH:
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 1100
+        Cost: 1150
     Tooltip:
         Name: Phantom
     Selectable:
         Bounds: 42,42, 0, -5
-#    Buildable:
-#        Queue: Vehicle.Nod
-#        BuildPaletteOrder: 205
-#        Prerequisites: ~naweap, naradr, ~technology
-#        Description: Requires Technology Nod Doctrine.\n\n A stealthed tank in the arsenal of Technology Nod used for hit and run tactics. \n Role: Medium Tank\n HP: 700\n Armor: Medium\n Speed: 90\n Viewrange: 11c0\n\n Good vs Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Stealthed\n - Can crush infantry\n - Can crush light vehicles
+    Buildable:
+        Queue: Vehicle.Nod
+        BuildPaletteOrder: 205
+        Prerequisites: ~naweap, naradr, ~technology
+        Description: Requires Technology Nod Doctrine.\n\n A standard frontline Tank for Technology Nod.\n Role: Medium Tank\n HP: 1500\n Armor: Medium\n Speed: 90\n Viewrange: 11c0\n\n Good vs Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Stealthed\n - Can crush infantry\n - Can crush light vehicles
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
@@ -465,19 +465,24 @@ CHEETAH:
         Speed: 60
         TurnSpeed: 4
     Health:
-        HP: 820
+        HP: 1500
     RevealsShroud:
         Range: 8c0
     Turreted:
         TurnSpeed: 3
         Offset: 160, 0, 0
     Armament@PRIMARY:
-        Weapon: 122mmAP
+        Weapon: 90mm
         LocalOffset: 900,100,600
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 200
         RecoilRecovery: 10
+        RequiresCondition: !upgrade.laser
+    Armament@upgrade:
+        Weapon: PhantomLaser
+        LocalOffset: 850,100,600
+        RequiresCondition: upgrade.laser
     AttackTurreted:
     AutoTarget:
     RenderSprites:
@@ -487,20 +492,10 @@ CHEETAH:
         Recoils: False
     WithVoxelBarrel:
     WithMuzzleOverlay:
-    -Cloak:
-    -ExternalCondition@EXTERNALCLOAK1:
-    -ExternalCondition@EXTERNALCLOAK2:
-    Cloak@stealth:
-        InitialDelay: 90
-        CloakDelay: 90
-        IsPlayerPalette: True
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
- 
+    GrantConditionOnPrerequisite@upgrade:
+        Condition: upgrade.laser
+        Prerequisites: upgrade.laser
+
 REPAIR:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
@@ -559,7 +554,7 @@ REPAIR:
 FTNK:
     Inherits: ^VoxelVehicle
     Valued:
-        Cost: 1000
+        Cost: 900
     Tooltip:
         Name: Pyradon Tank
     Selectable:
@@ -573,7 +568,7 @@ FTNK:
         VoiceSet: Devil
         Volume: 2
     Mobile:
-        Speed: 70
+        Speed: 75
         TurnSpeed: 4
     Health:
         HP: 650
@@ -593,11 +588,11 @@ FTNK:
     Armament@upgrade1:
         Weapon: PyradonGunBlue
         LocalOffset: 950,100,700
-        RequiresCondition: !upgrade.bluehell
+        RequiresCondition: upgrade.bluehell
     Armament@upgrade2:
         Weapon: PyradonGunBlue
         LocalOffset: 950,-100,700
-        RequiresCondition: !upgrade.bluehell
+        RequiresCondition: upgrade.bluehell
     GrantConditionOnPrerequisite@upgrade:
         Condition: upgrade.bluehell
         Prerequisites: upgrade.bluehell
@@ -608,6 +603,9 @@ FTNK:
     WithVoxelBody:
     WithVoxelTurret:
         Recoils: False
+    Explodes:
+        Weapon: UnitExplodeSmall
+        Chance: 100
 
 RECKONER:
     Inherits: ^VoxelVehicle
@@ -615,11 +613,11 @@ RECKONER:
         Cost: 800
     Tooltip:
         Name: Reckoner
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 206
-        Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
-        Description: Requires Propaganda Nod Doctrine.\n\n A fast moving trooptransport that can be deployed to a bunker.\n\n Role: Medium Tank\n HP: 1000\n Armor: Medium\n Speed: 105\n Viewrange: 6c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Can deploy into a bunker\n - Can only deploy one time into a bunker\n - When deployed into a bunker gains heavy armor and has 10 slots for infantry to garrision\n - Can crush infantry\n - Can crush Light Vehicles
+#    Buildable:
+#        Queue: Vehicle.Nod
+#        BuildPaletteOrder: 206
+#        Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
+#        Description: Requires Propaganda Nod Doctrine.\n\n A fast moving trooptransport that can be deployed to a bunker.\n\n Role: Medium Tank\n HP: 1000\n Armor: Medium\n Speed: 105\n Viewrange: 6c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Can deploy into a bunker\n - Can only deploy one time into a bunker\n - When deployed into a bunker gains heavy armor and has 10 slots for infantry to garrision\n - Can crush infantry\n - Can crush Light Vehicles
     Selectable:
         Bounds: 42,42, 0, -5
     Voiced:

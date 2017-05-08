@@ -20,13 +20,13 @@ upgrade.huntress:
     Inherits: ^Tech
     Tooltip:
         Name: Choose Huntress
-    Buildable:
-        BuildPaletteOrder: 400
-        Prerequisites: ~!upgrade.brigand
-        Description: Allows you to train Huntress units
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
+#    Buildable:
+#        BuildPaletteOrder: 400
+#        Prerequisites: ~!upgrade.brigand
+#        Description: Allows you to train Huntress units
+#        Queue: Tech.Forg
+#        BuildLimit: 1
+#        BuildDuration: 1
     Valued:
         Cost: 500
     RenderSprites:
@@ -58,7 +58,7 @@ upgrade.fiend:
         Name: Choose Fiend
     Buildable:
         BuildPaletteOrder: 402
-        Prerequisites: ~faradr, ~!upgrade.grunt
+        Prerequisites: ~!upgrade.grunt
         Queue: Tech.Forg
         BuildLimit: 1
         BuildDuration: 1

@@ -34,10 +34,10 @@ NACNST:
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     Valued:
-        Cost: 2500
+        Cost: 3000
     Tooltip:
         Name: Nod Construction Yard
-    -Sellable:
+#    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: nmcv
@@ -142,14 +142,14 @@ NAAPWR:
 NIPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 2000
+        Cost: 1500
     Tooltip:
         Name: Nod Industry Tiberium Refinery
     Buildable:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
@@ -160,7 +160,7 @@ NIPROC:
     Selectable:
         Bounds: 134, 122, 0, -18
     Health:
-        HP: 2000
+        HP: 1500
     RevealsShroud:
         Range: 6c0
     TiberianSunRefinery:
@@ -170,15 +170,15 @@ NIPROC:
     StoresResources:
         PipColor: Green
         PipCount: 10
-        Capacity: 1000
+        Capacity: 700
     FreeActor:
         Actor: NIHARV
         SpawnOffset: 2,1
         Facing: 160
-    FreeActor@2:
-        Actor: NIHARV
-        SpawnOffset: 2,2
-        Facing: 160
+#    FreeActor@2:
+#        Actor: NIHARV
+#        SpawnOffset: 2,2
+#        Facing: 160
 #    WithIdleOverlay@REDLIGHTS:
 #        Sequence: idle-redlights
     WithIdleOverlay@BIB:
@@ -200,7 +200,7 @@ NIPROC:
     ProvidesPrerequisite@nodref:   
         Prerequisite: nproc
     CustomSellValue:
-        Value: 0
+        Value: 500
 
 NTPROC:
     Inherits: NIPROC
@@ -210,15 +210,15 @@ NTPROC:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
     FreeActor:
         Actor: NTHARV
         SpawnOffset: 2,1
         Facing: 160
-    FreeActor@2:
-        Actor: NTHARV
-        SpawnOffset: 2,2
-        Facing: 160
+#    FreeActor@2:
+#        Actor: NTHARV
+#        SpawnOffset: 2,2
+#        Facing: 160
 
 NPPROC:
     Inherits: NIPROC
@@ -228,15 +228,15 @@ NPPROC:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
     FreeActor:
         Actor: NPHARV
         SpawnOffset: 2,1
         Facing: 160
-    FreeActor@2:
-        Actor: NPHARV
-        SpawnOffset: 2,2
-        Facing: 160
+#    FreeActor@2:
+#        Actor: NPHARV
+#        SpawnOffset: 2,2
+#        Facing: 160
 
 NAHAND:
     Inherits: ^Building
@@ -283,13 +283,13 @@ NAHAND:
     DisabledOverlay:
     ProductionBar:
     Power:
-        Amount: -35
+        Amount: -25
     ProvidesPrerequisite@buildingname:
 
 NAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: Nod War Factory
     ProvidesPrerequisite:
@@ -350,7 +350,7 @@ NAWEAP:
         EffectImage: dig
         EffectPalette: player
         EffectSequence: idle
-        ChargeTime: 200
+        ChargeTime: 180
         SelectTargetSpeechNotification: SelectTarget
         InsufficientPowerSpeechNotification: InsufficientPower
         LaunchSpeechNotification: Reinforce
@@ -393,7 +393,7 @@ NARADR:
     Targetable:
         TargetTypes: Ground, C4, SpyInfiltrate
     Power:
-        Amount: -50
+        Amount: -100
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:

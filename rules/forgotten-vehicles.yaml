@@ -3,7 +3,7 @@ FMCV:
     Buildable:
         Queue: Vehicle.Forg
         BuildPaletteOrder: 400
-        Prerequisites: ~faweap
+        Prerequisites: ~faweap, faradr
         Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
     Valued:
         Cost: 3000
@@ -17,7 +17,7 @@ FMCV:
     Health:
         HP: 2000
     Mobile:
-        Speed: 35
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -1283,7 +1283,7 @@ AUROCH_130MM:
     Valued:
         Cost: 1600
     Tooltip:
-        Name: Auroch (130mm + MG)
+        Name: Auroch (130mm + AGRocket)
     Selectable:
         Bounds: 42,42, 0, -5
     Buildable:
@@ -1310,14 +1310,14 @@ AUROCH_130MM:
         MuzzlePalette: apolra50alpha
         Recoil: 200
         RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: BisonMG
-        LocalOffset: 374,0,935
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 0
-        RecoilRecovery: 0
+#    Armament@secondary:
+#        Weapon: BisonMG
+#        LocalOffset: 374,0,935
+#        MuzzleSequence: muzzle
+#        MuzzleSplitFacings: 8
+#        MuzzlePalette: apolra50alpha
+#        Recoil: 0
+#        RecoilRecovery: 0
     Armament@missile:
         Weapon: ForgottenT3Missile
         LocalOffset: 374,256,1000

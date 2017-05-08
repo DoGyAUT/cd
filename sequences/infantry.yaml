@@ -479,6 +479,76 @@ gasol:
         ShadowStart: 6
     icon: gasolicon
     
+gmisinf:
+    Defaults:
+        Tick: 80
+        Offset: 0, 0, 16
+    stand:
+        Facings: 8
+        ShadowStart: 301
+    run:
+        Start: 8
+        Length: 6
+        Facings: 8
+        ShadowStart: 309
+    idle1:
+        Start: 56
+        Length: 15
+        ShadowStart: 357
+    idle2:
+        Start: 71
+        Length: 15
+        ShadowStart: 372
+    prone-run:
+        Start: 165
+        Length: 6
+        Facings: 8
+        ShadowStart: 466
+    prone-stand:
+        Start: 165
+        Facings: 8
+        Stride: 6
+        ShadowStart: 546
+    die1:
+        Start: 86
+        Length: 15
+        ShadowStart: 387
+    die2:
+        Start: 101
+        Length: 15
+        ShadowStart: 402
+    die3: infdie
+        Length: *
+    die4: s_bang34
+        Length: *
+    die-crushed:
+        Start: 111
+        Length: 5
+        ShadowStart: 412
+        Tick: 80
+        ZOffset: -511
+    shoot:
+        Start: 116
+        Length: 6
+        Facings: 8
+        ShadowStart: 417
+    prone-shoot:
+        Start: 245
+        Length: 6
+        Facings: 8
+        ShadowStart: 504
+    standup-0:
+        Start: 229
+        Length: 2
+        Facings: 8
+        ShadowStart: 530
+    die6: electro
+        Length: *
+    web-overlay: webguy
+        Length: 6
+        ShadowStart: 6
+    icon: gmisinficon
+    
 g3:
     Defaults:
         Tick: 80
@@ -1817,7 +1887,6 @@ elitegrunt:
         Length: 6
         Facings: 8
         ShadowStart: 456
-        Tick: 100
     prone-shoot:
         Start: 212
         Length: 6
