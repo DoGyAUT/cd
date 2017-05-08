@@ -104,8 +104,8 @@ CHAMSPY:
     Buildable:
         Queue: Infantry.Nod
         BuildPaletteOrder: 206
-        Prerequisites: ~nahand, naradr
-        Description: Nod´s unarmed and invisible agent. Can steal money and sabotage specific buildings.\n\n Role: Infiltrator\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 12c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Stealthed\n - Huge Vision Range\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Prerequisites: ~nahand, naradr, ~technology
+        Description: Technology Nod´s unarmed and invisible agent. Can steal money and sabotage specific buildings.\n\n Role: Infiltrator\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 12c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Stealthed\n - Huge Vision Range\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
         Cost: 1000
     Tooltip:
@@ -460,10 +460,10 @@ BHAND:
     GrantConditionOnPrerequisite@upgrade:
         Condition: upgrade.bluehell
         Prerequisites: upgrade.bluehell
-    Explodes:
-        Weapon: UnitExplodeSmall
-        Chance: 100
-        TargetTypes: Ground, VeryHeavyInfantry, Flameproof
+#    Explodes:
+#        Weapon: UnitExplodeSmall
+#        Chance: 100
+#        TargetTypes: Ground, VeryHeavyInfantry, Flameproof
     SoundOnDamageTransition:
         DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud
 

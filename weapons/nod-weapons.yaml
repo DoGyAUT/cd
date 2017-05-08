@@ -26,10 +26,11 @@ DevilsTongueGunTiberium:
     Projectile: BulletAS
         Speed: 0c128
         LaunchAngle: 90
-        Image: flametrailer
-        TrailImage: flametrailer
+        Image: tibflametrailer
+        TrailImage: tibflametrailer
         TrailPalette: effect50alpha
         Inaccuracy: 1c0
+        DamageTypes: Prone100Percent, TriggerProne, TriggerVisceroid
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
         Spread: 768
@@ -109,7 +110,7 @@ GorranMissile:
 RavenMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^FireWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Range: 6c0
     Burst: 2
     BurstDelay: 5
@@ -140,7 +141,7 @@ RavenMissile:
 RavenMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^FireWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Range: 8c0
     Burst: 2
     BurstDelay: 5
@@ -1292,11 +1293,37 @@ LaserTurretLaser:
         InvalidImpactTypes: Water
     Warhead@3Smu: LeaveSmudge
         SmudgeType: SmallScorch
+        
+# Phantom Laser
+PhantomLaser:
+    Inherits: ^BasicLaser
+    Inherits@wh: ^LaserWH
+    ReloadDelay: 70
+    Range: 6c768
+    Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
+    Projectile: LaserZap
+        Color: C80000
+        Width: 40
+        BeamDuration: 40
+        ZOffset: 2047
+        SecondaryBeam: true
+        SecondaryBeamWidth: 20
+        SecondaryBeamZOffset: 2047
+        SecondaryBeamColor: FFFFFF
+    Warhead@1Dam: SpreadDamage
+        Spread: 42
+        Damage: 300
+    Warhead@2Eff: CreateEffect
+        Explosions: plasmaexpl2
+        ExplosionPalette: player50alpha
+        InvalidImpactTypes: Water
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: SmallScorch
 
 # Laser gun techno upgraded
 LaserTurretLaserUpgraded:
     Inherits: LaserTurretLaser
-    Range: 9c512
+    Range: 8c512
     ReloadDelay: 35
     Projectile: LaserZap
         Color: C80000
@@ -1310,12 +1337,13 @@ LaserTurretLaserUpgraded:
     Warhead@1Dam: SpreadDamage
         Spread: 42
         Damage: 300
+
  # Obelisk laser
 ObeliskLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
     ReloadDelay: 90
-    Range: 10c512
+    Range: 9c0
     Report: obelray1.aud
     Projectile: LaserZap
         Color: C80000
@@ -1345,7 +1373,7 @@ ObeliskLaserTib:
     Inherits: ^BasicLaser
     Inherits@wh: ^TiberiumWH
     ReloadDelay: 90
-    Range: 10c512
+    Range: 9c0
     Report: obelray1.aud
     Projectile: LaserZap
         Color: 00FF00
@@ -1372,7 +1400,7 @@ ObeliskLaserUpgraded:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
     ReloadDelay: 90
-    Range: 10c512
+    Range: 9c0
     Report: obelray1.aud
     Projectile: LaserZap
         Color: C80000
@@ -1905,7 +1933,7 @@ TermiteGun: #termitegun
     Inherits: ^ShellAP 
 	Inherits@wh: ^APWH
     ReloadDelay: 130
-    Range: 7c768
+    Range: 7c0
     Report: shot01.aud, shot02.aud, shot03.aud
     Projectile: BulletAS
         Inaccuracy: 0c512

@@ -31,10 +31,10 @@ KACNST:
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     Valued:
-        Cost: 2500
+        Cost: 3000
     Tooltip:
         Name: Cabal Construction Yard
-    -Sellable:
+#    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: kmcv
@@ -128,6 +128,7 @@ NKPR:
         Cost: 2000
     Tooltip:
         Name: Fusion Core
+    -Sellable:        
     Health:
         HP: 3000
     Power:
@@ -145,36 +146,36 @@ NKPR:
         HealIfBelow: 101
         DamageCooldown: 0
         RequiresCondition: kys
-    GrantExternalConditionPower@kys:
-        Description: Boom
-        LongDesc: Makes your power plant go boom
-        OrderName: KillYourselfOrder
-        ActivationSequence:
-        Icon: kys
-        SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
-        Condition: kys
-        Sequence: idle
-        ChargeTime: 1
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        Range: 1
-        Duration: 450
+#    GrantExternalConditionPower@kys:
+#        Description: Boom
+#        LongDesc: Makes your power plant go boom
+#        OrderName: KillYourselfOrder
+#        ActivationSequence:
+#        Icon: kys
+#        SelectTargetSpeechNotification: SelectTarget
+#        InsufficientPowerSpeechNotification: InsufficientPower
+#        Condition: kys
+#        Sequence: idle
+#        ChargeTime: 1
+#        ArrowSequence: arrow
+#        CircleSequence: circles
+#        ClockSequence: clock
+#       Range: 1
+#        Duration: 450
     ExternalCondition@kys:
         Condition: kys
 
 KPROC:
     Inherits: ^BuildingInfiltrate
     Valued:
-        Cost: 2500
+        Cost: 1500
     Tooltip:
         Name: Cabal Tiberium Refinery
     Buildable:
         Queue: Building
         BuildPaletteOrder: 302
         Prerequisites: anypower, ~structures.cabal
-        Description: Processes raw Tiberium into useable resources. \n\nStores 1000$.
+        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
@@ -200,10 +201,10 @@ KPROC:
         Actor: KHARV
         SpawnOffset: 2,1
         Facing: 160
-    FreeActor@2:
-        Actor: KHARV
-        SpawnOffset: 2,2
-        Facing: 160
+#    FreeActor@2:
+#        Actor: KHARV
+#        SpawnOffset: 2,2
+#        Facing: 160
     WithIdleOverlay@REDLIGHTS:
         Sequence: idle-redlights
     WithIdleOverlay@BIB:
@@ -218,7 +219,7 @@ KPROC:
         EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
     CustomSellValue:
-        Value: 0
+        Value: 500
  
 CYBBAR:
     Inherits: ^Building
@@ -270,13 +271,13 @@ CYBBAR:
     WithIdleOverlay@LIGHTS2:
         Sequence: idle-lights2
     Power:
-        Amount: -35
+        Amount: -25
     ProvidesPrerequisite@buildingname:    
     
 KAWEAP:
     Inherits: ^Building
     Valued:
-        Cost: 1500
+        Cost: 2000
     Tooltip:
         Name: Cabal War Factory
     ProvidesPrerequisite:
@@ -373,7 +374,7 @@ KARADR:
     Targetable:
         TargetTypes: Ground, C4, SpyInfiltrate
     Power:
-        Amount: -50
+        Amount: -100
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
@@ -444,7 +445,7 @@ KABTECH:
         Prerequisites: anypower, karadr, ~structures.cabal
         Description: Gives access to improved technology.
     Valued:
-        Cost: 4500
+        Cost: 4000
     Tooltip:
         Name: Cyborg Enhancement Center
     Building:

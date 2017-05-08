@@ -521,7 +521,7 @@ OrcaBombingRun:
             
 CondorBomb:
     Inherits: ^RailgunWH
-    ReloadDelay: 60
+    ReloadDelay: 200
     Burst: 2
     BurstDelay: 0
     Range: 7c0
@@ -1126,7 +1126,7 @@ OrcaF2Missiles:
 HawkMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 2
     Range: 10c0
     MinRange: 2c0
@@ -1154,7 +1154,7 @@ HawkMissile:
 HawkMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 2
     Range: 15c0
     MinRange: 2c0
@@ -1182,7 +1182,7 @@ HawkMissileAA:
 HornetMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 4
     BurstDelay: 6
     Range: 10c0
@@ -1211,7 +1211,7 @@ HornetMissile:
 HornetMissileAA:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 100
+    ReloadDelay: 200
     Burst: 4
     BurstDelay: 6
     Range: 15c0
@@ -1310,8 +1310,8 @@ HoverMRLSMissileAA:
 BombardierGun:
     Inherits: ^ShellHE 
 	Inherits@wh: ^APWH
-    ReloadDelay: 100
-    Burst: 3
+    ReloadDelay: 80
+    Burst: 1
     BurstDelay: 4
     ValidTargets: Ground, Air, MidAir, HighAir
     Range: 6c0
@@ -1325,7 +1325,7 @@ BombardierGun:
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 50
+        Damage: 100
         ValidTargets: Ground, Air, MidAir, HighAir
         DamageTypes: SmallExplosionDeath
     Warhead@2Eff: CreateEffect

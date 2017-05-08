@@ -15,7 +15,7 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 3. Download required AS.dll library from https://github.com/DoGyAUT/OpenRA.Mods.AS
 4. Place the library into your OpenRA folder
 5. If you don't use the precompiled build, start make.cmd in your OpenRA folder, type in "dependencies" and let it finish. After that start make.cmd again and type in "all".
-6. Start OpenRA.exe
+6. Start OpenRA Tiberian Sun to download Tiberian Sun content, this has to be done only once - *OpenRA.Game.exe Game.Mod=ts*
 
 ## Installation of Crystallized Doom:
 
@@ -23,9 +23,7 @@ The planned playable ones are GDI, Nod, Cabal, Forgotten, Scrin and Seraphs - wh
 2. Extract the zip to OpenRA\mods
 3. Rename "cd-master" folder to "cd"
 4. Modfolder should look now like "OpenRA\mods\cd"
-5. Start OpenRA.exe
-6. Download Tiberian Sun content (via ingame modchooser) - this has only to be done once
-7. Choose Crystallized Doom to launch the mod (Mods can be switched in the "Extras" ingamemenu)
+5. Start Crystallized Doom - *OpenRA.Game.exe Game.Mod=cd*
 
 ## Optional Soundtrack:
 
