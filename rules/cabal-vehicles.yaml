@@ -3,7 +3,7 @@ KMCV:
     Buildable:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 300
-        Prerequisites: ~kaweap
+        Prerequisites: ~kaweap, karadr
         Description: The heart of any base.\nProvides a build radius for structures.\n\nRole : MCV\nHP: 1000\nArmor: Heavy\nSpeed: 85\nViewrange: 6
     Valued:
         Cost: 3000
@@ -18,7 +18,7 @@ KMCV:
     Health:
         HP: 2000
     Mobile:
-        Speed: 40
+        Speed: 50
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -111,7 +111,7 @@ KHARV:
 DREADFIRE:
     Inherits@1: ^Walker
     Valued:
-        Cost: 850
+        Cost: 900
     Tooltip:
         Name: Dreadfire
     Selectable:
@@ -124,11 +124,11 @@ DREADFIRE:
         Description: Heavy walker equipped with double flamethrowers.\n\nRole : Anti-infantry Walker\nHP: 1200\nArmor: Medium\nSpeed: 60\nViewrange: 6\nGood vs: Infantry, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Huge AoE damage
     Mobile:
         TurnSpeed: 5
-        Speed: 55
+        Speed: 50
     RevealsShroud:
         Range: 5c0
     Health:
-        HP: 1440
+        HP: 1600
     AttackFrontal:
     AutoTarget:
     Targetable:
