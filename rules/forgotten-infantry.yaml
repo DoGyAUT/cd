@@ -29,47 +29,12 @@ GRUNT:
     AttackFrontal:
     SoundOnDamageTransition:
         DamagedSounds: grunt_f1.aud, grunt_f2.aud, grunt_f3.aud, grunt_f4.aud, grunt_f5.aud, grunt_f6.aud, grunt_d2.aud, grunt_d3.aud
-    
-ELITEGRUNT: #codename Scoundrel:
-    Inherits: ^Mutant
-    Buildable:
-        Queue: Infantry.Forg
-        BuildPaletteOrder: 400
-        Prerequisites: ~fabar, ~!upgrade.fiend, ~upgrade.grunt
-        Description: Anti tank only
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Grenadier
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Marauder
-        Volume: 2
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    # Armament@primary:
-        # Weapon: ScoundrelGun
-        # LocalOffset: 300,50,550
-    # Armament@secondary:
-        # Weapon: ScoundrelGun
-        # LocalOffset: 300,-50,550
-    Armament@grenade:
-        Weapon: ScoundrelGrenade
-        LocalOffset: 300,0,550
-    AttackFrontal:
-    SoundOnDamageTransition:
-        DamagedSounds: grunt_f1.aud, grunt_f2.aud, grunt_f3.aud, grunt_f4.aud, grunt_f5.aud, grunt_f6.aud, grunt_d2.aud, grunt_d3.aud
-    
+
 BRIGAND:
     Inherits: ^MutantFearless
     Buildable:
         Queue: Infantry.Forg
-        BuildPaletteOrder: 400
+        BuildPaletteOrder: 401
         Prerequisites: ~fabar, ~!t1
         Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
@@ -110,7 +75,7 @@ HUNTRESS:
     Inherits: ^MutantFearless
     Buildable:
         Queue: Infantry.Forg
-        BuildPaletteOrder: 401
+        BuildPaletteOrder: 402
         Prerequisites: ~fabar
         Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
     Valued:
@@ -143,7 +108,7 @@ FENGINEER:
         Name: Mechanic
     Buildable:
         Queue: Infantry.Forg
-        BuildPaletteOrder: 405
+        BuildPaletteOrder: 403
         Prerequisites: ~fabar
         Description: Captures enemy structures and repairs vehicles.\n\n  -Unarmed\n  -Heals in Tiberium
     Selectable:
@@ -219,7 +184,37 @@ EXPLORER:
         Notification: StealthUnitDetected
     SoundOnDamageTransition:
         DamagedSounds: hunter_f1.aud,hunter_f2.aud,hunter_f3.aud,hunter_f4.aud
-        
+
+ELITEGRUNT: #codename Scoundrel:
+    Inherits: ^Mutant
+    Buildable:
+        Queue: Infantry.Forg
+        BuildPaletteOrder: 404
+        Prerequisites: ~fabar, ~!upgrade.fiend, ~upgrade.grunt
+        Description: Anti tank only
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Scoundrel
+    Selectable:
+        Bounds: 12,17,0,-9
+    Voiced:
+        VoiceSet: Marauder
+        Volume: 2
+    Health:
+        HP: 200
+    Mobile:
+        Speed: 50
+    RevealsShroud:
+        Range: 6c0
+    Armament@grenade:
+        Weapon: ScoundrelGrenade
+        LocalOffset: 0,0,555
+        FireDelay: 5
+    AttackFrontal:
+    SoundOnDamageTransition:
+        DamagedSounds: grunt_f1.aud, grunt_f2.aud, grunt_f3.aud, grunt_f4.aud, grunt_f5.aud, grunt_f6.aud, grunt_d2.aud, grunt_d3.aud
+
 FDOG:
     Inherits: ^MutantFearless
     Buildable:

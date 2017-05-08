@@ -47,46 +47,38 @@ GASOL:
 #    AnnounceOnBuildAS:
 #        Voice: Build
 
-JUMPJET:
+GMISINF:
     Inherits: ^Soldier
-    Valued:
-        Cost: 350
-    Tooltip:
-        Name: Bombardier
     Buildable:
         Queue: Infantry.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gapile
         Description: Airborne soldier.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+    Valued:
+        Cost: 250
+    Tooltip:
+        Name: Javelin Trooper
     Voiced:
-        VoiceSet: Marine
+        VoiceSet: Discthrower
     Mobile:
-        Speed: 65
-        TerrainSpeeds:
-            Water: 70
+        Speed: 50
     Health:
-        HP: 150
-    Passenger:
-        PipType: Green
+        HP: 125
     RevealsShroud:
-        Range: 8c0
+        Range: 7c0
     Armament@Primary:
-        Weapon: BombardierGun
+        Weapon: JavelinGun
+        LocalOffset: 280,84,700
     Armament@GARRISONED:
         Name: garrisoned
-        Weapon: BombardierGunGarrison
-    -Crushable:
+        Weapon: JavelinGunGarrison
     AttackFrontal:
-    WithInfantryBody:
-        DefaultAttackSequence: flying-attack
-        StandSequences: flying
-        MoveSequence: flying
-        IdleSequences: flying
-    -TakeCover:
-    Hovers:
-    -DamagedByTerrain@Tiberium:
-    WithShadow:
-
+    Passenger:
+        CargoType: Infantry
+        Voice: Move
+    SoundOnDamageTransition:
+        DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
+ 
 E2:
     Inherits: ^Soldier
     Buildable:
