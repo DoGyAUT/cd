@@ -125,6 +125,13 @@ DREADFIRE:
     Mobile:
         TurnSpeed: 5
         Speed: 50
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: stomp6.aud
+        Delay: 3
+        Interval: 18
+        RequiresCondition: walker
     RevealsShroud:
         Range: 5c0
     Health:
@@ -138,14 +145,16 @@ DREADFIRE:
     Armament@primary:
         Weapon: DreadfireLauncher
         LocalOffset: 700,300,1400
+        FireDelay: 5
     Armament@secondary:
         Weapon: DreadfireLauncher
         LocalOffset: 700,-300,1400
+        FireDelay: 5
     RenderSprites:
     WithInfantryBody:
         DefaultAttackSequence: shoot
     Voiced:
-        VoiceSet: CyborgH
+        VoiceSet: Dreadfire
         Volume: 2
     -ThrowsShrapnel@human:
     Explodes:
@@ -285,6 +294,13 @@ TARANTULA:
     Mobile:
         TurnSpeed: 6
         Speed: 55
+    GrantConditionOnMovement@steps:
+        Condition: walker
+    AmbientSound@step1:
+        SoundFile: stomp5.aud
+        Delay: 4
+        Interval: 31
+        RequiresCondition: walker
     Health:
         HP: 960
     RevealsShroud:
