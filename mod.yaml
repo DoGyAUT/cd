@@ -308,35 +308,35 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		SNOW: a
 
 GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 50
+		OrderLatency: 3
 	default:
-		Name: Normal 
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+	fast:
+		Name: Fast
+		Timestep: 35
+		OrderLatency: 4
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 20
+		OrderLatency: 6
+	hdefault:
+		Name: Normal (HL mode)
 		Timestep: 40
 		OrderLatency: 6
-	faster:
-		Name: Faster 
-		Timestep: 30
-		OrderLatency: 8
-	fastest:
-		Name: Fastest 
-		Timestep: 20
-		OrderLatency: 12
-	xhldefault:
-		Name: Normal (high latency)
+	vhldefault:
+		Name: Normal (VHL mode)
 		Timestep: 40
 		OrderLatency: 9
-	xhlfaster:
-		Name: Faster (high latency)
-		Timestep: 30
-		OrderLatency: 12
-	xhlfastest:
-		Name: Fastest (high latency)
-		Timestep: 20
-		OrderLatency: 18
-	aitestspeed:
-		Name: AI Testspeed only
-		Timestep: 1
-		OrderLatency: 1
-        
+
 ColorValidator:
 
 ModContent:
