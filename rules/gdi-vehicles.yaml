@@ -95,9 +95,9 @@ GHARV:
         
 APC:
     Inherits: ^VoxelVehicle
-    Inherits@light: ^LightVehicle
+#    Inherits@light: ^LightVehicle
     Valued:
-        Cost: 500
+        Cost: 550
     Tooltip:
         Name: Amphibious APC
     Selectable:
@@ -112,7 +112,7 @@ APC:
         Volume: 2
     Mobile:
         TurnSpeed: 5
-        Speed: 95
+        Speed: 75
         TerrainSpeeds:
             Water: 80
     Health:
@@ -215,7 +215,7 @@ VULTURE:
         Prerequisites: ~gaweap, ~!t1, ~upgrade.st
         Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\n  Role: Anti Infantry/VTOLs\n  HP: 800\n  Armor: Medium\n  Speed: 60\n  Viewrange: 11\n\n Good vs Infantry, VTOLs\n\n Special:\n\n - Crushes infantry
     Voiced:
-        VoiceSet: Wolverine
+        VoiceSet: Vulture
         Volume: 2
     Mobile:
         TurnSpeed: 4
@@ -409,7 +409,7 @@ HVR:
 AIRBLAST:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1700
+        Cost: 2000
     Tooltip:
         Name: Pioneer
     Selectable:
@@ -778,7 +778,7 @@ BEHEMOTH:
     Selectable:
         Bounds: 42,42, 0, -5
     Voiced:
-        VoiceSet: Predator
+        VoiceSet: Atlas
         Volume: 2
     Mobile:
         Speed: 50

@@ -42,7 +42,7 @@ PyradonGun:
     Inherits@wh: ^FireWH
     ReloadDelay: 80
     Burst: 2
-    BurstDelay: 25
+    BurstDelay: 20
     Range: 4c0
     Report: flamtnk1.aud
     Projectile: BulletAS
@@ -696,14 +696,14 @@ RookieGun:
     Inherits: ^Bullet
     Inherits@wh: ^BulletWH
     ReloadDelay: 20
-    Range: 4c0
+    Range: 5c0
     Report: rifle_n1.aud, rifle_n2.aud
     Burst: 2
     BurstDelay: 4
     Projectile: BulletAS
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
-        Spread: 0c128
+        Spread: 128
         Damage: 20
         
 RookieGunGarrison:
@@ -1213,7 +1213,7 @@ RavenCannonAA:
 ShadowTrooperLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 100
+    ReloadDelay: 130
     Range: 10c0
     Report: laserpulse.aud
     ValidTargets: Ground 
@@ -1298,7 +1298,7 @@ LaserTurretLaser:
 PhantomLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 70
+    ReloadDelay: 130
     Range: 6c768
     Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
     Projectile: LaserZap
