@@ -47,7 +47,28 @@ UnitExplodeEpic:
         ExplosionPalette: effect50alpha
         ImpactSounds: ion1.aud
         InvalidImpactTypes: Water
-
+        
+PyradonExplosion:
+    Warhead@1Dam: SpreadDamage
+        Spread: 512
+        Damage: 250
+        Versus:
+            Infantry: 100
+            Cyborg: 50
+            Vehicle: 10
+            Aircraft: 100
+            Building: 100
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: medium_brnl, small_twlt, tiny_twlt
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew09.aud
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@4Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+        
 UnitExplodeSmall:
     Warhead@1Dam: SpreadDamage
         Spread: 426
