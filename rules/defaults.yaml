@@ -611,10 +611,14 @@
             DirtRoad: 100
             Green: 90
             Rough: 80
-            Tiberium: 70
-            BlueTiberium: 70
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
             RedTiberium: 70
+                PathingCost: 300
             PurpleTiberium: 70
+                PathingCost: 300
             Veins: 90
         TunnelCondition: inside-tunnel
     SelectionDecorations:
@@ -945,6 +949,15 @@
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
 
 ^MutantFearless:
     Inherits@1: ^Infantry
@@ -968,7 +981,16 @@
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
-        
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
+                
 ^MutantFearlessHeavy:
     Inherits@1: ^Infantry
     Inherits@2: ^WebDisable
@@ -998,7 +1020,16 @@
         Weight: 2
     Mobile:
         RequiresCondition: !webdisable
-        
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
+                
 ^Alien:
     Inherits@1: ^Infantry
     Inherits@2: ^HealsOnTiberium
@@ -1064,6 +1095,15 @@
     -DamageMultiplier@nanofiber:
     Mobile:
         RequiresCondition: !empdisable
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0        
     SelfHealing@repair_golem:
         Step: 0
         PercentageStep: 1
@@ -1274,7 +1314,7 @@
             Bridge: 100
             Rail: 100
             DirtRoad: 90
-            Rough: 50
+            Rough: 80
             Green: 80
             Tiberium: 50
             BlueTiberium: 50
@@ -1449,7 +1489,7 @@
             Bridge: 100
             Rail: 100
             DirtRoad: 90
-            Rough: 70
+            Rough: 90
             Green: 90
             Tiberium: 70
             BlueTiberium: 70

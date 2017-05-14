@@ -22,14 +22,14 @@ NACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -191,9 +191,6 @@ NIPROC:
         Palette: effect
     Power:
         Amount: -50
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     RenderSprites:
         Image: NPROC
     ProvidesPrerequisite@buildingname:   
@@ -274,7 +271,7 @@ NAHAND:
     ProductionQueue@Infantry:
         Type: Infantry.Nod
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -322,7 +319,7 @@ NAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.Nod
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     DisabledOverlay:
     ProductionBar:
@@ -336,7 +333,7 @@ NAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
     SpawnActorPower@subambush:
         OrderName: SubAmbushPowerInfoOrder
@@ -441,7 +438,7 @@ NARADR:
 NAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1000
+        Cost: 750
     Tooltip:
         Name: Nod Helipad
     Buildable:
@@ -467,7 +464,7 @@ NAHPAD:
     ProductionQueue@Air:
         Type: Air.Nod
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -562,7 +559,7 @@ NAPYRA:
         Group: Tech
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse

@@ -19,14 +19,14 @@ KACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -214,9 +214,6 @@ KPROC:
         Palette: effect
     Power:
         Amount: -50
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
     CustomSellValue:
         Value: 500
@@ -256,7 +253,7 @@ CYBBAR:
     ProductionQueue@Infantry:
         Type: Infantry.Cabal
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -310,7 +307,7 @@ KAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.Cabal
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -330,7 +327,7 @@ KAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
 
 KARADR:
@@ -410,7 +407,7 @@ KAHPAD:
     ProductionQueue@Air:
         Type: Air.Cabal
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
