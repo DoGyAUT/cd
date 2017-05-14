@@ -65,7 +65,7 @@ ORCA_F1:
 ORCA_F2:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1250
+        Cost: 1200
     Tooltip:
         Name: Orca F-2
     Buildable:
@@ -91,12 +91,12 @@ ORCA_F2:
         LocalOffset: 555,120,128, 555,-120,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: OrcaCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 650,0,100
+#    Armament@secondary:
+#        Weapon: OrcaCannon
+#        MuzzleSequence: muzzle
+#        MuzzleSplitFacings: 8
+#        MuzzlePalette: apolra50alpha
+#        LocalOffset: 650,0,100
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -227,8 +227,6 @@ TRNSPORT:
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
 #    Carryall:
 #        Automatic: True
     Health:
@@ -903,8 +901,6 @@ DSHP.SUPPORT:
     HiddenUnderFog:
         AlwaysVisibleStances: None
         Type: GroundPosition
-    DamageMultiplier@INVULNERABLE:
-        Modifier: 0
     Health:
         HP: 1040
     RevealsShroud:
@@ -921,8 +917,6 @@ DSHP.SUPPORT:
     WithVoxelBody:
     -Guardable:
     -MustBeDestroyed:
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
     FlyAwayOnIdle:
     ParaDrop:
         DropRange: 3c512
@@ -948,7 +942,7 @@ DSHP:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 2
-        Speed: 100
+        Speed: 120
         InitialFacing: 0
         Repulsable: False
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
@@ -957,7 +951,7 @@ DSHP:
     Health:
         HP: 1300
     RevealsShroud:
-        Range: 10c0
+        Range: 2c0
         Type: GroundPosition
     Cargo:
         Types: Infantry, Vehicle, Epic

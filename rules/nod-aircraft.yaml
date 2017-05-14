@@ -1,7 +1,7 @@
 VENOM:
     Inherits: ^Helicopter
     Valued:
-        Cost: 600
+        Cost: 700
     Tooltip:
         Name: Venom
     Buildable:
@@ -276,7 +276,7 @@ NODCARRY:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 3
-        Speed: 90
+        Speed: 110
         InitialFacing: 0
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
@@ -284,7 +284,7 @@ NODCARRY:
     Health:
         HP: 700
     RevealsShroud:
-        Range: 9c0
+        Range: 2c0
         Type: GroundPosition
     Cargo:
         Types: Infantry, Vehicle
@@ -320,8 +320,6 @@ NODCARRY.SUPPORT:
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
     Health:
         HP: 700
     RevealsShroud:
@@ -377,8 +375,6 @@ VALKYRIE.SUPPORT:
     RenderVoxels:
         Image: valkyrie
     WithVoxelBody:
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
     -Guardable:
     -MustBeDestroyed:
 #    Contrail@1:

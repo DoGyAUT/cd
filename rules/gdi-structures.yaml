@@ -19,14 +19,14 @@ GACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -176,9 +176,6 @@ GPROC:
         Palette: effect
     Power:
         Amount: -50 
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
 
 GAPILE:
@@ -216,7 +213,7 @@ GAPILE:
     ProductionQueue@Infantry:
         Type: Infantry.GDI
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -270,7 +267,7 @@ GAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.GDI
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -289,7 +286,7 @@ GAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
 
 GARADR:
@@ -356,7 +353,6 @@ GARADR:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
     
 GAARMORY:
     Inherits: ^Building
@@ -388,7 +384,7 @@ GAARMORY:
         Group: Tech
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     Exit:
     ExitsDebugOverlay:
@@ -415,7 +411,6 @@ GAARMORY:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
         Range: 2
     ProvidesAIPrerequisite@gafortAI:
         Prerequisite: gafortAI
@@ -491,7 +486,7 @@ GAARMORY:
 GAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1000
+        Cost: 750
     Tooltip:
         Name: GDI Helipad
     Buildable:
@@ -516,7 +511,7 @@ GAHPAD:
     ProductionQueue@Air:
         Type: Air.GDI
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -660,7 +655,6 @@ GATECH:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
    
 GADROP:
     Inherits: ^Building
@@ -699,7 +693,7 @@ GADROP:
     ProductionQueue@Vehicle:
         Type: Vehicle.GDI.Ace
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     ProductionAirdrop:
         Produces: Vehicle.GDI.Ace
@@ -730,7 +724,6 @@ GADROP:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
     ParatroopersPower@titans:
         UnitType: dshp.support
         DropItems: mmch, mmch2, mmch, mmch
@@ -749,4 +742,3 @@ GADROP:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock

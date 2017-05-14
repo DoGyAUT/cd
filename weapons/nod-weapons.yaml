@@ -63,7 +63,7 @@ PyradonGunBlue:
     ReloadDelay: 80
     Range: 4c0
     Burst: 2
-    BurstDelay: 25
+    BurstDelay: 20
     Report: flamtnk1.aud
     Projectile: BulletAS
         Speed: 0c256
@@ -264,7 +264,7 @@ EliteCadreGun:
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 20
+        Damage: 15
         
 RocketeerGun:
     Inherits: ^MissileAPHE 
@@ -1272,7 +1272,7 @@ ShadowTrooperLaser:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 300
+        Damage: 200
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -1654,7 +1654,7 @@ BikeMissile:
 	Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
-    BurstDelay: 0
+    BurstDelay: 20
     Range: 6c0
     Report: misl1.aud
     ValidTargets: Ground, Air, MidAir
@@ -1678,7 +1678,7 @@ StealthTankMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
     ReloadDelay: 175
-    Range: 8c0
+    Range: 9c0
     Burst: 2
     BurstDelay: 0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1697,7 +1697,7 @@ StealthTankMissileEMP:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
     ReloadDelay: 175
-    Range: 8c0
+    Range: 9c0
     Burst: 2
     BurstDelay: 0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1886,7 +1886,7 @@ HydraMissiles:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 80
+        Damage: 100
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_bang, medium_bang, large_bang
@@ -1916,7 +1916,7 @@ HydraGasMissiles:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 100
+        Damage: 120
         Versus:
             Vehicle: 100
         ValidTargets: Ground

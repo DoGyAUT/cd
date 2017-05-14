@@ -242,7 +242,7 @@ NALASR:
     Armament@default: 
         Weapon: LaserTurretLaser
         LocalOffset: 900,0,625
-        RequiresCondition: !upgrade.laser || !upgrade.tiblaser
+        RequiresCondition: upgrade.laser || !upgrade.tiblaser
     Armament@laser:
         Weapon: LaserTurretLaserUpgraded
         LocalOffset: 900,0,625
