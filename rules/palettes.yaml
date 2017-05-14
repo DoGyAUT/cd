@@ -66,6 +66,12 @@
     PaletteFromFile@apolra2:
         Name: apolra2
         Filename: apolra2.pal
+    PaletteFromFile@napalmnuke:
+        Name: napalmnuke
+        Filename: napalmnuke.pal
+    PaletteFromFile@tiberiumbomb:
+        Name: tiberiumbomb
+        Filename: tiberiumbomb.pal
     PaletteFromFile@effectra2:
         Name: effectra2
         Filename: effectra2.pal
@@ -199,6 +205,16 @@
         Name: apolra25alpha
         BasePalette: apolra2
         Alpha: 0.25
+        Premultiply: False
+    PaletteFromPaletteWithAlpha@napalmnukealpha:
+        Name: napalmnuke50
+        BasePalette: napalmnuke
+        Alpha: 0.9
+        Premultiply: False
+    PaletteFromPaletteWithAlpha@tiberiumbombalpha:
+        Name: tiberiumbomb50
+        BasePalette: tiberiumbomb
+        Alpha: 0.5
         Premultiply: False
     TSShroudPalette@shroud:
         Name: shroud

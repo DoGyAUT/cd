@@ -22,14 +22,14 @@ NACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -60,6 +60,16 @@ NACNST:
         Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
+    ProvidesAIPrerequisite@AImoney:
+        Prerequisite: AImoney
+    GrantConditionOnPrerequisite@AImoney:
+        Condition: money
+        Prerequisites: AImoney
+    CashTrickler@AImoney:
+        Interval: 1000
+        Amount: 10000
+        ShowTicks: False
+        RequiresCondition: money
 
 NAPOWR:
     Inherits: ^BuildingInfiltrate
@@ -191,9 +201,6 @@ NIPROC:
         Palette: effect
     Power:
         Amount: -50
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     RenderSprites:
         Image: NPROC
     ProvidesPrerequisite@buildingname:   
@@ -274,7 +281,7 @@ NAHAND:
     ProductionQueue@Infantry:
         Type: Infantry.Nod
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -322,7 +329,7 @@ NAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.Nod
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     DisabledOverlay:
     ProductionBar:
@@ -336,7 +343,7 @@ NAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
     SpawnActorPower@subambush:
         OrderName: SubAmbushPowerInfoOrder
@@ -354,6 +361,24 @@ NAWEAP:
         SelectTargetSpeechNotification: SelectTarget
         InsufficientPowerSpeechNotification: InsufficientPower
         LaunchSpeechNotification: Reinforce
+    GrantExternalConditionPower@emergencyrepairNod:
+        OrderName: EmergancyRepairs2PowerInfoOrder
+        Prerequisites: ~industry
+        Icon: emergencyrepairs2
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: SupportPowerReady
+        Description: Emergency Repairs
+        LongDesc: Repairs vehicles and buildings in a specific radius.
+        Condition: emergencyrepairs
+        OnFireSound: fixit1.aud
+        Sequence: idle
+        ChargeTime: 180
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        Range: 8
+        Duration: 450
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -418,6 +443,7 @@ NARADR:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+        #BeaconPosterPalette: iconclock
     GrantExternalConditionPower@frenzy:
         Description: Frenzy
         LongDesc: Grants friendly infantry a time limited boost in movement speed.
@@ -435,13 +461,14 @@ NARADR:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+        #BeaconPosterPalette: iconclock
         Range: 8
         Duration: 450
     
 NAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1000
+        Cost: 750
     Tooltip:
         Name: Nod Helipad
     Buildable:
@@ -467,7 +494,7 @@ NAHPAD:
     ProductionQueue@Air:
         Type: Air.Nod
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -504,13 +531,14 @@ NAHPAD:
         EndChargeSpeechNotification: Reinforce
         InsufficientPowerSpeechNotification: InsufficientPower
         ChargeTime: 240
-        DisplayBeacon: true
-        DisplayRadarPing: True
+        DisplayBeacon: false
+        DisplayRadarPing: false
         BeaconPoster: havoc
         Prerequisites: industry, napyra
         ArrowSequence: arrow
         CircleSequence: circles
-        ClockSequence: clock        
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
     ParatroopersPower@propcarry:
         UnitType: nodcarry.support
         Prerequisites: ~propaganda
@@ -531,6 +559,7 @@ NAHPAD:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+        #BeaconPosterPalette: iconclock
  
 NAPYRA:
     Inherits: ^Building
@@ -562,7 +591,7 @@ NAPYRA:
         Group: Tech
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -573,6 +602,46 @@ NAPYRA:
     ExitsDebugOverlay:
     ProductionBar@Tech:
     ProvidesPrerequisite@buildingname:
+    AirstrikePower@VertigoNapalmAirstrikePower:
+        OrderName: VertigoNapalmAirstrikePowerInfoOrder
+        Prerequisites: naradr, ~technology
+        Icon: vertigo
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: Vertigo Napalm Strike
+        LongDesc: Deploy a devastating Napalm bomb.
+        SelectTargetSound:  vertigo_s2.aud
+        EndChargeSound: vertigo_st1.aud
+        LaunchSound: vertigo_a1.aud
+        UnitType: vertigo
+        SquadSize: 1
+        DisplayBeacon: True
+        BeaconPoster: vertigo
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+    AirstrikePower@VertigoTiberiumAirstrikePower:
+        OrderName: VertigoTiberiumAirstrikePowerInfoOrder
+        Prerequisites: naradr, ~industry
+        Icon: vertigo
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: Vertigo Tiberium Strike
+        LongDesc: Deploy a devastating Tiberium bomb.
+        SelectTargetSound:  vertigo_s2.aud
+        EndChargeSound: vertigo_st1.aud
+        LaunchSound: vertigo_a1.aud
+        UnitType: vertigo2
+        SquadSize: 1
+        DisplayBeacon: True
+        BeaconPoster: vertigo
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock        
 
 NATECH:
     Inherits: ^Building

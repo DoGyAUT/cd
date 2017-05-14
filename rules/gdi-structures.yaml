@@ -19,14 +19,14 @@ GACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -34,7 +34,6 @@ GACNST:
         Cost: 3000
     Tooltip:
         Name: GDI Construction Yard
-#    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: gmcv
@@ -45,7 +44,6 @@ GACNST:
         ProductionType: Building
     ProductionBar@Defense:
         ProductionType: Defense
-#    WithBuildingPlacedOverlay:
     ProvidesRadar:
     Power:
         Amount: 0
@@ -57,6 +55,16 @@ GACNST:
         Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
+    ProvidesAIPrerequisite@AImoney:
+        Prerequisite: AImoney
+    GrantConditionOnPrerequisite@AImoney:
+        Condition: money
+        Prerequisites: AImoney
+    CashTrickler@AImoney:
+        Interval: 1000
+        Amount: 10000
+        ShowTicks: False
+        RequiresCondition: money
 
 GAPOWR:
     Inherits: ^BuildingInfiltrate
@@ -168,9 +176,6 @@ GPROC:
         Palette: effect
     Power:
         Amount: -50 
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
 
 GAPILE:
@@ -208,7 +213,7 @@ GAPILE:
     ProductionQueue@Infantry:
         Type: Infantry.GDI
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -262,7 +267,7 @@ GAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.GDI
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -281,7 +286,7 @@ GAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
 
 GARADR:
@@ -379,7 +384,7 @@ GAARMORY:
         Group: Tech
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     Exit:
     ExitsDebugOverlay:
@@ -407,11 +412,81 @@ GAARMORY:
         CircleSequence: circles
         ClockSequence: clock
         Range: 2
+    ProvidesAIPrerequisite@gafortAI:
+        Prerequisite: gafortAI
+    AirstrikePower@artillery:
+        OrderName: ArtilleryStrikePowerInfoOrder
+        Prerequisites: garadr, upgrade.gdf
+        Icon: artystrike
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: Artillery Strike
+        LongDesc: Deploy an artillery strike to the destinated position.
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: SupportPowerReady
+        UnitType: artillery_beacon
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        DisplayBeacon: True
+        BeaconPoster: artystrike
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
+    AirstrikePower@orcabomber:
+        OrderName: OrcaBomberAirstrikePowerInfoOrder
+        Prerequisites: garadr, upgrade.st
+        Icon: orcabomber
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: Orca Bombing run
+        LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
+        SelectTargetSound: orca_s5.aud
+        EndChargeSound: orca_s5.aud
+        LaunchSound: orca_ab2.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: orca_b
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        DisplayBeacon: True
+        BeaconPoster: orcabomber
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
+    AirstrikePower@oxbomber:
+        OrderName: OXBomberAirstrikePowerInfoOrder
+        Prerequisites: garadr, upgrade.st
+        Icon: orcaoxbomber
+        ChargeTime: 300
+        QuantizedFacings: 8
+        Description: OX-Sonic Bombing run
+        LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
+        SelectTargetSound: orca_s5.aud
+        EndChargeSound: orca_s5.aud
+        LaunchSound: orca_ab2.aud
+        IncomingSound: g_00-cd004.aud
+        UnitType: oxbomber
+        SquadSize: 1
+        SquadOffset: -3072,3072,0
+        DisplayBeacon: True
+        BeaconPoster: orcaoxbomber
+        DisplayRadarPing: True
+        CameraActor: camera
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
 
 GAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 1000
+        Cost: 750
     Tooltip:
         Name: GDI Helipad
     Buildable:
@@ -436,7 +511,7 @@ GAHPAD:
     ProductionQueue@Air:
         Type: Air.GDI
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -462,29 +537,8 @@ GAHPAD:
     Selectable:
         Bounds: 88, 66, 0, -5
     ProvidesPrerequisite@buildingname:
-    AirstrikePower@orcabomber:
-        OrderName: OrcaBomberAirstrikePowerInfoOrder
-        Prerequisites: garadr
-        Icon: orcabomber
-        ChargeTime: 300
-        QuantizedFacings: 8
-        Description: Orca Bombing run
-        LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
-        SelectTargetSound: orca_s5.aud
-        EndChargeSound: orca_s5.aud
-        LaunchSound: orca_ab2.aud
-        IncomingSound: g_00-cd004.aud
-        UnitType: orca_b
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        DisplayBeacon: True
-        BeaconPoster: orcabomber
-        BeaconPosterPalette: beaconposter
-        DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
+    ProvidesAIPrerequisite@OrcatransAI:
+        Prerequisite: OrcatransAI
 
 GADEPT:
     Inherits: ^Building
@@ -536,6 +590,24 @@ GADEPT:
     Power:
         Amount: -30
     ProvidesPrerequisite@buildingname:
+    GrantExternalConditionPower@emergencyrepairGDI:
+        OrderName: EmergancyRepairsPowerInfoOrder
+        Icon: emergencyrepairs
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: SupportPowerReady
+        Description: Emergency Repairs
+        LongDesc: Repairs vehicles and buildings in a specific radius.
+        Condition: emergencyrepairs
+        OnFireSound: fixit1.aud
+        Sequence: idle
+        ChargeTime: 180
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
+        Range: 8
+        Duration: 450
 
 GATECH:
     Inherits: ^Building
@@ -621,7 +693,7 @@ GADROP:
     ProductionQueue@Vehicle:
         Type: Vehicle.GDI.Ace
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     ProductionAirdrop:
         Produces: Vehicle.GDI.Ace

@@ -375,11 +375,19 @@
     Guardable:
         Range: 3c0
     Demolishable:
+    DamagedByTerrain@TibGas:
+        Damage: 20
+        DamageInterval: 16
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
+        RequiresCondition: gasdamage
+    ExternalCondition@gasdamage:
+        Condition: gasdamage
 
 ^Building:
     Inherits@1: ^BasicBuilding
     Inherits@2: ^EmpDisable
     Inherits@fortification: ^FortificationUpgrades
+    Inherits@Erepairs: ^EmergencyRepairsUpgrades
     GivesBuildableArea:
     Capturable:
     ExternalCapturable:
@@ -611,10 +619,14 @@
             DirtRoad: 100
             Green: 90
             Rough: 80
-            Tiberium: 70
-            BlueTiberium: 70
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
             RedTiberium: 70
+                PathingCost: 300
             PurpleTiberium: 70
+                PathingCost: 300
             Veins: 90
         TunnelCondition: inside-tunnel
     SelectionDecorations:
@@ -660,7 +672,7 @@
         CrushSound: squish6.aud
         WarnProbability: 0
     DamagedByTerrain@Tiberium:
-		RequiresCondition: !inside-tunnel
+        RequiresCondition: !inside-tunnel
         Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
         Damage: 8
         DamageInterval: 10
@@ -753,6 +765,14 @@
     ReloadDelayMultiplier@repair:
         RequiresCondition: repair_healboost
         Modifier: 90
+    DamagedByTerrain@TibGas:
+        Damage: 10
+        DamageInterval: 16
+        DamageTypes: TriggerVisceroid
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
+        RequiresCondition: gasdamage
+    ExternalCondition@gasdamage:
+        Condition: gasdamage
 
 ^Soldier:
     Inherits@1: ^Infantry
@@ -945,6 +965,15 @@
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
 
 ^MutantFearless:
     Inherits@1: ^Infantry
@@ -968,7 +997,16 @@
     -DamagedByTerrain@Tiberium:
     Mobile:
         RequiresCondition: !webdisable
-        
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
+                
 ^MutantFearlessHeavy:
     Inherits@1: ^Infantry
     Inherits@2: ^WebDisable
@@ -998,7 +1036,16 @@
         Weight: 2
     Mobile:
         RequiresCondition: !webdisable
-        
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0
+                
 ^Alien:
     Inherits@1: ^Infantry
     Inherits@2: ^HealsOnTiberium
@@ -1064,6 +1111,15 @@
     -DamageMultiplier@nanofiber:
     Mobile:
         RequiresCondition: !empdisable
+        TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+            RedTiberium: 70
+                PathingCost: 0
+            PurpleTiberium: 70
+                PathingCost: 0        
     SelfHealing@repair_golem:
         Step: 0
         PercentageStep: 1
@@ -1230,7 +1286,7 @@
         Modifier: 130       
  
 ^FortificationUpgrades:
-    WithDecoration@goon:
+    WithDecoration@fortification:
         Image: fortbufficon
         Sequence: buff
         ReferencePoint: Bottom, Right
@@ -1243,6 +1299,28 @@
         Modifier: 75
     ExternalCondition@fortification:
         Condition: fortification
+ 
+^EmergencyRepairsUpgrades:
+    WithDecoration@Erepairs:
+        Image: repairbufficon
+        Sequence: buff
+        ReferencePoint: Bottom, Right
+        Offset: 30, 0
+        ZOffset: 256
+        ValidStances: Ally, Neutral, Enemy
+        RequiresCondition: emergencyrepairs
+    TimedConditionBar@Erepairs:
+        Condition: emergencyrepairs
+        Color: FFFFFF
+    SelfHealing@Erepairs:
+        Step: 10
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 0
+        RequiresCondition: emergencyrepairs
+    ExternalCondition@Erepairs:
+        Condition: emergencyrepairs
 
 ^CivilianInfantry:
     Inherits: ^Infantry
@@ -1265,6 +1343,7 @@
     Inherits@6: ^ZepUpgrades
     Inherits@7: ^DeployBuffUpgrades
     Inherits@parach: ^Parachutable
+    Inherits@Erepairs: ^EmergencyRepairsUpgrades
     DrawLineToTarget:
     Mobile:
         Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1274,7 +1353,7 @@
             Bridge: 100
             Rail: 100
             DirtRoad: 90
-            Rough: 50
+            Rough: 80
             Green: 80
             Tiberium: 50
             BlueTiberium: 50
@@ -1379,6 +1458,13 @@
         Gravity: -48,-48,48, 48,48,48
         Image: durasmoke
         Palette: apolra25alpha
+    DamagedByTerrain@TibGas:
+        Damage: 10
+        DamageInterval: 16
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
+        RequiresCondition: gasdamage
+    ExternalCondition@gasdamage:
+        Condition: gasdamage
 
 ^LightVehicle
     Crushable:
@@ -1449,7 +1535,7 @@
             Bridge: 100
             Rail: 100
             DirtRoad: 90
-            Rough: 70
+            Rough: 90
             Green: 90
             Tiberium: 70
             BlueTiberium: 70
@@ -1555,7 +1641,7 @@
         LandWhenIdle: False
         MaximumPitch: 200
         AltitudeVelocity: 200
-        WaitDistanceFromResupplyBase: 4c0
+        WaitDistanceFromResupplyBase: 6c0
     Voiced:
         VoiceSet: Heli
     HiddenUnderFog:
@@ -1811,9 +1897,68 @@
     Guardable:
     WithSpriteBody:
     WithAttackAnimation:
-        DefaultAttackSequence: attack
+        AttackSequence: attack
     AutoTarget:
         ScanRadius: 6
+
+^Clouds:
+    Inherits@1: ^ExistsInWorld
+    Inherits@2: ^SpriteActor
+    DrawLineToTarget:
+    Health:
+        HP: 100
+        Shape: Circle
+            Radius: 256
+            VerticalTopOffset: 512
+    Mobile:
+        Speed: 50
+        TurnSpeed: 16
+        SharesCell: yes
+        TerrainSpeeds:
+            Clear: 100
+            Road: 100
+            Bridge: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Green: 100
+            Tiberium: 100
+            BlueTiberium: 100
+            RedTiberium: 100
+            Veins: 100
+            Water: 100
+    RenderSprites:
+        Palette: effect25alpha
+    Wanders:
+        WanderMoveRadius: 3
+        MinMoveDelay: 5
+        MaxMoveDelay: 15
+    RevealsShroud:
+        Range: 1c0
+        MaxHeightDelta: 3
+    SelectionDecorations:
+        SelectionBoxColor: 00FF00
+        Palette: pips
+    WithTextControlGroupDecoration:
+    HiddenUnderFog:
+    WithSpriteBody:
+    WithDeathAnimation:
+#        DeathSequencePalette: effect50alpha
+        DeathSequence: die
+        UseDeathTypeSuffix: False
+    Hovers:
+    Selectable:
+    GrantPeriodicCondition@kill:
+        Condition: killcloud
+        CooldownDuration: 500
+        ActiveDuration: 200
+    KillsSelf:
+        RequiresCondition: killcloud
+        Delay: 0,190
+    ProximityExternalCondition@gasdamage:
+        Condition: gasdamage
+        ValidStances: Ally, Neutral, Enemy
+        Range: 3c0
 
 ^BlossomTree:
     Inherits@1: ^SpriteActor

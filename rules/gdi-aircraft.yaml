@@ -65,7 +65,7 @@ ORCA_F1:
 ORCA_F2:
     Inherits: ^Helicopter
     Valued:
-        Cost: 1250
+        Cost: 1200
     Tooltip:
         Name: Orca F-2
     Buildable:
@@ -91,12 +91,12 @@ ORCA_F2:
         LocalOffset: 555,120,128, 555,-120,128
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
-    Armament@secondary:
-        Weapon: OrcaCannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 650,0,100
+#    Armament@secondary:
+#        Weapon: OrcaCannon
+#        MuzzleSequence: muzzle
+#        MuzzleSplitFacings: 8
+#        MuzzlePalette: apolra50alpha
+#        LocalOffset: 650,0,100
     AttackHeli:
         FacingTolerance: 20
     AmmoPool@1:
@@ -227,8 +227,6 @@ TRNSPORT:
         LandableTerrainTypes: Clear
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
 #    Carryall:
 #        Automatic: True
     Health:
@@ -270,40 +268,65 @@ ORCA_OXTRAN:
     ParaDrop:
         DropRange: 4c0
 #    RejectsOrders:
-    Contrail@1:
-        Offset: -1024,128,400
-        TrailLength: 50
-        Color: FFFFFF
-        UsePlayerColor: True
-    Contrail@2:
-        Offset: -1024,-128,400
-        TrailLength: 50
-        Color: FFFFFF
-        UsePlayerColor: True
+#    Contrail@1:
+#        Offset: -1024,128,400
+#        TrailLength: 50
+#        Color: FFFFFF
+#        UsePlayerColor: True
+#    Contrail@2:
+#        Offset: -1024,-128,400
+#        TrailLength: 50
+#        Color: FFFFFF
+#        UsePlayerColor: True
     SpawnActorOnDeath:
         Actor: ORCA_OXTRAN.Husk
         Probability: 100
         
 GUNNER:
-    Inherits: ^Plane
+    Inherits: ^AttackPlane
     Valued:
-        Cost: 1200
+        Cost: 5000
     Tooltip:
         Name: OX-Gunship
+#    Buildable:
+#        Queue: Air.GDI
+#        BuildPaletteOrder: 101
+#        Prerequisites: ~gahpad
+#        Description: Fast assault gunship with\nhellfire rocket launchers and a machinegun.\nEquipped with advanced sensors for stealth detection\n  Strong vs Ground targets, VTOLs\n  Weak vs Fighters
+    Selectable:
+        Bounds: 60,48
+    Voiced:
+        VoiceSet: Orca
+        Volume: 2
     Aircraft:
         CruisingCondition: cruising
-        CruiseAltitude: 4096
+        CruiseAltitude: 8192
         TurnSpeed: 2
-        Speed: 120
+        Speed: 200
+    Armament@small:
+        Weapon: GuardianTowerRailgun
+        LocalOffset: 0,0,0
+    Armament@medium:
+        Weapon: CyclopsCannon
+        LocalOffset: 0,0,0
+    Armament@large:
+        Weapon: AtlasGun
+        LocalOffset: 0,0,0
     Health:
-        HP: 1200
+        HP: 5000
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
-    Selectable:
+    Turreted: 
+        TurnSpeed: 360
+    AttackTurreted:
+    AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
+    DetectCloaked:
+        Range: 7c0
+    RenderDetectionCircle:
 
 ORCA_G:
     Inherits: ^Plane
@@ -329,18 +352,18 @@ ORCA_G:
     RenderSprites:
     RenderVoxels:    
     WithVoxelBody:
-    Contrail@1:
-        Offset: -128,144,112
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -128,-144,112
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -128,144,112
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -128,-144,112
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_G.Husk
         Probability: 100
@@ -356,73 +379,72 @@ OXBOMBER:
         Cost: 2000
     Tooltip:
         Name: OX-Bomber
-    Voiced:
-        VoiceSet: Orca
-        Volume: 2
     Aircraft:
         TurnSpeed: 4
-        Speed: 150
-    Selectable:
-        Bounds: 60,48,0,-10
+        Speed: 300
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
     Health:
-        HP: 1800
+        HP: 2500
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
     Armament:
-        Weapon: OxBomberBomb
-    AttackPlane:
-        FacingTolerance: 20
+        Weapon: SonicBomb
     AmmoPool:
-        Ammo: 10
-        PipCount: 10
+        Ammo: 5
+        PipCount: 0
         ReloadCount: 5
         ReloadDelay: 50
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-    AutoTarget:
+    AttackBomber:
+        FacingTolerance: 20
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Contrail@1:
-        Offset: -1100,128,350
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -1100,-128,400
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@11:
-        Offset: -1100,192,400
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@21:
-        Offset: -1100,-192,400
-        TrailLength: 60
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: -512,1024,400
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -512,-1024,400
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -1100,128,350
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -1100,-128,400
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@11:
+#        Offset: -1100,192,400
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@21:
+#        Offset: -1100,-192,400
+#        TrailLength: 60
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: -512,1024,400
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -512,-1024,400
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_OXTRAN.Husk
         Probability: 100
+    RejectsOrders:
         
 ORCA_B:
     Inherits: ^AttackPlane
@@ -444,8 +466,6 @@ ORCA_B:
         Type: GroundPosition
     Armament:
         Weapon: OrcaBombingRun
-    AttackPlane:
-        FacingTolerance: 20
     AmmoPool:
         Ammo: 20
         PipCount: 0
@@ -454,24 +474,62 @@ ORCA_B:
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
     AttackBomber:
+        FacingTolerance: 20
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Contrail@1:
-        Offset: -200,450,300
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -200,-450,300
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -200,450,300
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -200,-450,300
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: ORCA_B.Husk
         Probability: 100
+    RejectsOrders:
+    
+ARTILLERY_BEACON:
+    Inherits: ^AttackPlane
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Artillery Beacon
+    -Voiced:
+    -Selectable:
+    -Targetable@AIRBORNE:
+    SelectionDecorations:
+        RenderSelectionBars: False
+    Aircraft:
+        CruiseAltitude: 20480
+        IdealSeparation: 1024
+        TurnSpeed: 3
+        Speed: 300
+    Health:
+        HP: 2000
+    RevealsShroud:
+        Range: 5c0
+        Type: GroundPosition
+    Armament:
+        Weapon: ArtilleryStrikeGun
+    AttackBomber:
+        FacingTolerance: 20
+    AmmoPool:
+        Ammo: 10
+        PipCount: 0
+        ReloadCount: 5
+        ReloadDelay: 50
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+    -RenderSprites:
+    -RenderVoxels:
+    -WithVoxelBody:
     RejectsOrders:
         
 PHOENIX:
@@ -598,30 +656,30 @@ FHAWK:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    Contrail@1:
-        Offset: -512,128,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -512,-128,128
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: -64,670,300
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -64,-670,300
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -512,128,128
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -512,-128,128
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: -64,670,300
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -64,-670,300
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: FHAWK.Husk
         Probability: 100
@@ -693,42 +751,42 @@ HORNET:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    Contrail@1:
-        Offset: -700,260,350
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -700,-260,350
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@11:
-        Offset: -700,360,350
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@22:
-        Offset: -700,-360,350
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: -400,800,0
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -400,-800,0
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -700,260,350
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -700,-260,350
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@11:
+#        Offset: -700,360,350
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@22:
+#        Offset: -700,-360,350
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: -400,800,0
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -400,-800,0
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: HORNET.Husk
         Probability: 100
@@ -779,42 +837,42 @@ CONDOR:
     RenderVoxels:
     WithVoxelBody:
     WithMuzzleOverlay:
-    Contrail@1:
-        Offset: -512,256,0
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -512,-256,0
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: -512,512,0
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -512,-512,0
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@5:
-        Offset: -500,770,256
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@6:
-        Offset: -500,-770,256
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -512,256,0
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -512,-256,0
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: -512,512,0
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -512,-512,0
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@5:
+#        Offset: -500,770,256
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@6:
+#        Offset: -500,-770,256
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: CONDOR.Husk
         Probability: 100
@@ -843,8 +901,6 @@ DSHP.SUPPORT:
     HiddenUnderFog:
         AlwaysVisibleStances: None
         Type: GroundPosition
-    DamageMultiplier@INVULNERABLE:
-        Modifier: 0
     Health:
         HP: 1040
     RevealsShroud:
@@ -861,8 +917,6 @@ DSHP.SUPPORT:
     WithVoxelBody:
     -Guardable:
     -MustBeDestroyed:
-    Targetable@AIRBORNE:
-        TargetTypes: Impossible
     FlyAwayOnIdle:
     ParaDrop:
         DropRange: 3c512
@@ -888,7 +942,7 @@ DSHP:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 2
-        Speed: 100
+        Speed: 120
         InitialFacing: 0
         Repulsable: False
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
@@ -897,7 +951,7 @@ DSHP:
     Health:
         HP: 1300
     RevealsShroud:
-        Range: 10c0
+        Range: 2c0
         Type: GroundPosition
     Cargo:
         Types: Infantry, Vehicle, Epic

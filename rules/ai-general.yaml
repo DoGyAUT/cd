@@ -23,8 +23,8 @@ Player:
         MaxBaseRadius: 20
         RestrictMCVDeploymentFallbackToBase: False
         ShouldRepairBuildings: True 
-        #CapturingActorTypes: engineer, nengineer, kengineer, fengineer
-        CapturableActorTypes: tibtech, cahosp, caarmr, caaray
+        CapturingActorTypes: engineer, nengineer, kengineer, fengineer
+#        CapturableActorTypes: #tibtech, cahosp, caarmr, caaray
         CheckCaptureTargetsForVisibility: false
         MaximumCaptureTargetOptions: 15
         BuildingCommonNames:
@@ -42,37 +42,270 @@ Player:
         SupportPowerDecision@IonCannonPower:
             OrderName: IonCannonPowerInfoOrder
             MinimumAttractiveness: 1000
-            FineScanRadius: 2
             Consideration@1:
                 Against: Enemy
-                Types: Air, Tank, Vehicle, Infantry, Water
-                Attractiveness: 2
+                Types: Building, Vehicle
+                Attractiveness: 1
                 TargetMetric: Value
-                CheckRadius: 2c0
+                CheckRadius: 5c0
             Consideration@2:
+                Against: Ally
+                Types: Air, Ground, Water
+                Attractiveness: -10
+                TargetMetric: Value
+                CheckRadius: 7c0
+        SupportPowerDecision@OrcaScoutRun:
+            OrderName: OrcaScoutRun
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@GrantFortificationPower:
+            OrderName: GrantFortificationPowerInfoOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Ally
+                Types: Building
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@EmergencyRepairsPower:
+            OrderName: EmergancyRepairsPowerInfoOrder                
+            MinimumAttractiveness: 10
+            Consideration@1:
+                Against: Ally
+                Types: Building
+                Attractiveness: 5
+                TargetMetric: Value
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Ally
+                Types: Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@OrcaBomberAirstrikePower:
+            OrderName: OrcaBomberAirstrikePowerInfoOrder
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 5c0
+        SupportPowerDecision@ArtilleryStrikePower:
+            OrderName: ArtilleryStrikePowerInfoOrder
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@OXBomberAirstrikePower:
+            OrderName: OXBomberAirstrikePowerInfoOrder
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@ZoneInfDrop:
+            OrderName: ZoneInfDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@PoseidonDrop:
+            OrderName: PoseidonDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@TitanDrop:
+            OrderName: TitanDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@NukePower:
+            OrderName: NukePowerInfoOrder
+            MinimumAttractiveness: 1000
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 5c0
+            Consideration@2:
+                Against: Ally
+                Types: Air, Ground, Water
+                Attractiveness: -10
+                TargetMetric: Value
+                CheckRadius: 7c0
+        SupportPowerDecision@FrenzyPower:
+            OrderName: FrenzyPowerInfoOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Ally
+                Types: Infantry
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@ShadowTrooperInfantry:
+            OrderName: ShadowTrooperInfantryDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@ProduceHavocPower:
+            OrderName: ProduceHavocPowerInfoOrder
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@PropagandaInfantry:
+            OrderName: PropagandaInfantryDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@SubAmbushPower:
+            OrderName: SubAmbushPowerInfoOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
                 Against: Enemy
                 Types: Structure
                 Attractiveness: 1
-                TargetMetric: Value
-                CheckRadius: 2c0
-            Consideration@3:
-                Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
-                TargetMetric: Value
-                CheckRadius: 3c0
-        SupportPowerDecision@Airstrike:
-            OrderName: OXAirstrikePowerInfoOrder
-            MinimumAttractiveness: 2000
-            Consideration@1:
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
                 Against: Enemy
-                Types: Vehicle, Infantry
-                Attractiveness: 1
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@EmergencyRepairs2Power:
+            OrderName: EmergancyRepairs2PowerInfoOrder                
+            MinimumAttractiveness: 10
+            Consideration@1:
+                Against: Ally
+                Types: Building
+                Attractiveness: 5
                 TargetMetric: Value
-                CheckRadius: 2c0
+                CheckRadius: 8c0
             Consideration@2:
                 Against: Ally
-                Types: Ground, Water
-                Attractiveness: -10
+                Types: Vehicle
+                Attractiveness: 1
                 TargetMetric: Value
-                CheckRadius: 2c0
+                CheckRadius: 8c0
+        SupportPowerDecision@NodempPower:
+            OrderName: NodempPowerInfoOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Structure, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@VertigoNapalmAirstrikePower:
+            OrderName: VertigoNapalmAirstrikePowerInfoOrder
+            MinimumAttractiveness: 20
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 10
+                TargetMetric: Value
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Infantry, Vehicle
+                Attractiveness: 5
+                TargetMetric: Value
+                CheckRadius: 8c0
+            Consideration@3:
+                Against: Enemy
+                Types: Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@VertigoTiberiumAirstrikePower:
+            OrderName: VertigoTiberiumAirstrikePowerInfoOrder
+            MinimumAttractiveness: 20
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 10
+                TargetMetric: Value
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Infantry, Vehicle
+                Attractiveness: 5
+                TargetMetric: Value
+                CheckRadius: 8c0
+            Consideration@3:
+                Against: Enemy
+                Types: Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
