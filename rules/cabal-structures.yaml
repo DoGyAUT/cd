@@ -19,14 +19,14 @@ KACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -34,7 +34,6 @@ KACNST:
         Cost: 3000
     Tooltip:
         Name: Cabal Construction Yard
-#    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: kmcv
@@ -52,7 +51,6 @@ KACNST:
         Sequence: idle-lights
     WithIdleOverlay@player:
         Sequence: idle-player
-#    WithBuildingPlacedOverlay:
     Power:
         Amount: 0
     Selectable:
@@ -63,22 +61,16 @@ KACNST:
         Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
-#    DetonateWeaponPower@vortex:
-#        Description: Vortex
-#        OrderName: CabalFancySWTest
-#        Prerequisites: anypower
-#        ChargeTime: 180
-#        Weapon: PlasmaVortexCannon
-#        ActivationSequence: idle
-#        DisplayRadarPing: True
-#        CameraActor: camera
-#        # DisplayBeacon: True
-#        # BeaconPoster: circles
-#        # BeaconPosterPalette: beaconposter
-#        # SelectTargetSound: nod1_s6.aud
-#        # LaunchSound: nod1_s5.aud
-#        # IncomingSound:  nod1_a8.aud
-#        Icon: fenzy
+    ProvidesAIPrerequisite@AImoney:
+        Prerequisite: AImoney
+    GrantConditionOnPrerequisite@AImoney:
+        Condition: money
+        Prerequisites: AImoney
+    CashTrickler@AImoney:
+        Interval: 1000
+        Amount: 10000
+        ShowTicks: False
+        RequiresCondition: money
 
 KPR:
     Inherits: ^BuildingInfiltrate
@@ -214,9 +206,6 @@ KPROC:
         Palette: effect
     Power:
         Amount: -50
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
     CustomSellValue:
         Value: 500
@@ -256,7 +245,7 @@ CYBBAR:
     ProductionQueue@Infantry:
         Type: Infantry.Cabal
         Group: Infantry
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -310,7 +299,7 @@ KAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.Cabal
         Group: Vehicle
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -330,7 +319,7 @@ KAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -75
+        Amount: -50
     ProvidesPrerequisite@buildingname:
 
 KARADR:
@@ -410,7 +399,7 @@ KAHPAD:
     ProductionQueue@Air:
         Type: Air.Cabal
         Group: Air
-        BuildDurationModifier: 60
+        BuildDurationModifier: 73
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse

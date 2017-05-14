@@ -47,6 +47,10 @@ beacon:
     circles: ring
         Length: 12
         BlendMode: Additive
+    artystrike: artystrikeicon
+        Offset: 0,-42
+    orcaoxbomber: orca_oxicon
+        Offset: 0,-42
     orcabomber: orca_bicon
         Offset: 0,-42
     orcascout: orca_gicon
@@ -62,6 +66,12 @@ beacon:
     nodcarry: nodcarryicon
         Offset: 0,-42
     valkyrie: valkyrieicon
+        Offset: 0,-42
+    gunner: gunnericon
+        Offset: 0,-42
+    emp: empicon
+        Offset: 0,-42
+    vertigo: vertigoicon
         Offset: 0,-42
     zonecommando: zcommandoicon
         Offset: 0,-42
@@ -181,7 +191,7 @@ resources:
 explosion:
     Defaults:
         Length: *
-        ZOffset: 511
+        ZOffset: 768
         Offset: 0, 0, 24
     building: twlt070
         BlendMode: Additive
@@ -327,6 +337,9 @@ explosion:
         BlendMode: Additive
     expmed: expmed
     tibbomb: tibbomb
+    napalmnuke: napalmnuke
+    tiberiumbomb: tiberiumbomb
+        Tick: 80
     scexplo: scexplo
     plasmaexp01: plasmaexp01
     plasmaexp02: plasmaexp02
@@ -450,6 +463,12 @@ fortbufficon:
         idle:
             Length: 1
             ZOffset: 511
+			
+repairbufficon:
+    buff: repairbuff
+        idle:
+            Length: 1
+            ZOffset: 511
 
 parach:
     open:
@@ -553,6 +572,12 @@ blueflametrailer:
         BlendMode: Additive
         ZOffset: 1023
         
+ringtrail:
+    idle:
+        Length: *
+        BlendMode: Additive
+        ZOffset: 1023
+
 large_smoke_trail:
     idle: smokey
         Length: *
@@ -736,9 +761,12 @@ icon:
     hunterseeker: detnicon
     emp: pulsicon
     orcabomber: orca_bicon
+    orcaoxbomber: orca_oxicon
     orcascout: orca_gicon
     fenzy: nodfenzyicon
     fortification: forticon
+    emergencyrepairs: erepairicon
+    emergencyrepairs2: nrepairicon
     havoc: havocicon
     poseidon: poseidonicon
     titan: titan2icon
@@ -747,6 +775,9 @@ icon:
     valkyrie: valkyrieicon
     kys: kpricon
     zonecommando: zcommandoicon
+    artystrike: artystrikeicon
+    gunner: gunnericon
+    vertigo: vertigoicon
 
 clustermissile:
     up: nukeup
@@ -875,6 +906,26 @@ dualproton:
         Length: 1
         Facings: 32
 
+photon1:
+    idle:
+        Length: *
+        Facings: 1
+        
+photon2:
+    idle:
+        Length: *
+        Facings: 1
+        
+photon3:
+    idle:
+        Length: *
+        Facings: 1
+        
+photon4:
+    idle:
+        Length: *
+        Facings: 1        
+        
 shell01:
     idle:
         Length: 1
@@ -919,6 +970,20 @@ smoke_m:
         Length: 26
         Offset: 2, -5
         ZOffset: 512
+        
+cloud1:
+    idle:
+        Length: 28
+        Tick: 80
+    die: cloud1d
+        Length: *
+        
+cloud2:
+    idle:
+        Length: 28
+        Tick: 80
+    die: cloud2d
+        Length: *
 
 dbrissm:
     Defaults:

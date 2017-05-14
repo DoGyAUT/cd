@@ -1,0 +1,75 @@
+ORCA_TRAN_marine:
+    Inherits: ORCA_TRAN
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: orca_tran
+    RenderVoxels:
+        Image: orca_tran
+    Buildable:
+        Queue: Air.GDI
+        BuildPaletteOrder: 102
+        Prerequisites: ~gahpad, ~upgrade.zc, ~!t1, ~OrcatransAI
+        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+    Cargo:
+        MaxWeight: 6
+        PipCount: 6
+        Types: Infantry
+        InitialUnits: zmarine, zmarine, zmarine, zmarine, zmarine, zmarine
+        
+ORCA_TRAN_missiles:
+    Inherits: ORCA_TRAN
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: orca_tran
+    RenderVoxels:
+        Image: orca_tran
+    Buildable:
+        Queue: Air.GDI
+        BuildPaletteOrder: 102
+        Prerequisites: ~gahpad, ~upgrade.zc, ~!t1, ~OrcatransAI
+        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+    Cargo:
+        MaxWeight: 6
+        PipCount: 6
+        Types: Infantry
+        InitialUnits: gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf
+        
+ORCA_TRAN_trooper:
+    Inherits: ORCA_TRAN
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: orca_tran
+    RenderVoxels:
+        Image: orca_tran
+    Buildable:
+        Queue: Air.GDI
+        BuildPaletteOrder: 102
+        Prerequisites: ~gahpad, ~upgrade.zc, ~!t1, ~OrcatransAI
+        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+    Cargo:
+        MaxWeight: 6
+        PipCount: 6
+        Types: Infantry
+        InitialUnits: ztrooper, ztrooper, ztrooper
+        
+ORCA_TRAN_raider:
+    Inherits: ORCA_TRAN
+    Valued:
+        Cost: 1000
+    RenderSprites:
+        Image: orca_tran
+    RenderVoxels:
+        Image: orca_tran
+    Buildable:
+        Queue: Air.GDI
+        BuildPaletteOrder: 102
+        Prerequisites: ~gahpad, ~upgrade.zc, ~!t1, ~OrcatransAI
+        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+    Cargo:
+        MaxWeight: 6
+        PipCount: 6
+        Types: Infantry
+        InitialUnits: zraider, zraider, zraider
