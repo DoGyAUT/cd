@@ -9,7 +9,7 @@ NASOL:
         Prerequisites: ~nahand, ~!upgrade.mass, ~!technology
         Description: Nod's basic combat infantry.\n\n Role: Infantry\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 8c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Elite weapon on veterancy rank 5\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Costs get halved with Mass Recruitment (Propaganda)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
-        Cost: 60
+        Cost: 50
     Tooltip:
         Name: Rookie
     Selectable:
@@ -45,7 +45,7 @@ NASOL2:
     RenderSprites:
         Image: NASOL
     Valued:
-        Cost: 30
+        Cost: 35
 
 E3:
     Inherits@1: ^Soldier
@@ -104,7 +104,7 @@ CHAMSPY:
     Buildable:
         Queue: Infantry.Nod
         BuildPaletteOrder: 206
-        Prerequisites: ~nahand, napyra, ~technology
+        Prerequisites: ~nahand, naradr, ~technology
         Description: Technology Nod´s unarmed and invisible agent. Can steal money and sabotage specific buildings.\n\n Role: Infiltrator\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 12c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Stealthed\n - Huge Vision Range\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
     Valued:
         Cost: 1000
@@ -443,15 +443,6 @@ BHAND:
     Mobile:
         Speed: 50
         SharesCell: False
-        TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 0
-			BlueTiberium: 70
-				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
     RevealsShroud:
         Range: 6c0
     Armament@primary:
@@ -499,15 +490,6 @@ TIBTROOPER:
         HP: 500
     Mobile:
         Speed: 50
-        TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 0
-			BlueTiberium: 70
-				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
     RevealsShroud:
         Range: 7c0
     Armament@PRIMARY:

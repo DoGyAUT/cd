@@ -242,7 +242,7 @@ NALASR:
     Armament@default: 
         Weapon: LaserTurretLaser
         LocalOffset: 900,0,625
-        RequiresCondition: upgrade.laser || !upgrade.tiblaser
+        RequiresCondition: !upgrade.laser || !upgrade.tiblaser
     Armament@laser:
         Weapon: LaserTurretLaserUpgraded
         LocalOffset: 900,0,625
@@ -450,7 +450,10 @@ NAPULS:
         TurnSpeed: 10
         InitialFacing: 300
     AttackTurreted:
+    AttackSounds:
+        Sounds: hunter2.aud
     Armament:
+        Name: superweapon
         Weapon: EMPulseCannon
         LocalOffset: 150,0,1250
         LocalYaw: 0,100
@@ -464,9 +467,11 @@ NAPULS:
         Amount: -150
     WithMuzzleOverlay:
     ProvidesPrerequisite@buildingname:
-	RejectsOrders:
-		Except: Stop, Sell
-    AttackOrderPower@nod:
+    RejectsOrders:
+        Except: Stop, Sell
+    FireArmamentPower@NodempPower:
+        OrderName: NodempPowerInfoOrder 
+        ArmamentName: superweapon
         Cursor: emp
         Icon: emp
         ChargeTime: 60
@@ -474,11 +479,9 @@ NAPULS:
         LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
         EndChargeSpeechNotification: EmPulseCannonReady
         SelectTargetSpeechNotification: SelectTarget
-        Prerequisites: napuls
-        OrderName: Nodemp
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
+        AllowMultiple: false
+#        MaximumFiringInstances: 2
+#        BeaconPosterPalette: iconclock
         
 NAMISL:
     Inherits: ^Building
@@ -517,6 +520,7 @@ NAMISL:
     SupportPowerChargeBar:
     NukePower:
         Icon: clustermissile
+        OrderName: NukePowerInfoOrder
         ChargeTime: 360
         Description: Cluster Missile
         LongDesc: Launches a conventional warhead\nat a target location.

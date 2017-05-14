@@ -979,6 +979,10 @@ DIGGER_MIS:
         Sequence: turret-mis
     WithMuzzleOverlay:
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
 
 DIGGER_MORTAR:
     Inherits: ^VoxelTank
@@ -1040,6 +1044,10 @@ DIGGER_MORTAR:
         Sequence: barrel-mortar
     WithMuzzleOverlay:
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
 
 DIGGER_122MM:
     Inherits: ^VoxelTank
@@ -1101,6 +1109,10 @@ DIGGER_122MM:
         Sequence: barrel-122mm
     WithMuzzleOverlay:
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
 
 BISON_130MM:
     Inherits@1: ^VoxelTank

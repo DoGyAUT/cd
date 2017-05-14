@@ -134,6 +134,8 @@ JuggernautGun:
     Inherits: ^ShellHE 
 	Inherits@wh: ^HEAPWH
     ReloadDelay: 230
+    Burst: 3
+    BurstDelay: 10
     Range: 17c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
@@ -156,14 +158,6 @@ JuggernautGun:
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: LargeCrater  
-        
-JuggernautGun2:
-    Inherits: JuggernautGun
-    ReloadDelay: 240
-        
-JuggernautGun3:
-    Inherits: JuggernautGun
-    ReloadDelay: 250
     
 TitanMK2Grenade:
     Inherits: ^ShellHE 
@@ -518,6 +512,73 @@ OrcaBombingRun:
         Versus:
             Buildings: 30
             Vehicles: 40
+            
+ArtilleryStrikeGun:
+    Inherits: ^Bomb
+    Inherits@wh: ^HEAPWH
+    ReloadDelay: 230
+    Burst: 10
+    BurstDelay: 3
+    Range: 6c0
+    Report: incoming1.aud, incoming2.aud, incoming3.aud, incoming4.aud, incoming5.aud, incoming6.aud, incoming7.aud
+    Projectile: BulletAS
+        Speed: 0c512
+        Inaccuracy: 2c0
+        Image: shell02
+        ContrailLength: 40
+        ContrailWidth: 30
+        Blockable: false
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c0
+        Damage: 500
+        Versus:
+            Buildings: 30
+            Vehicles: 40
+    Warhead@2Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+        
+SonicBomb:
+    Inherits: ^SonicWH
+    ReloadDelay: 200
+    Range: 6c0
+    Burst: 5
+    BurstDelay: 10
+    Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
+    Projectile: BulletAS
+        Speed: 1c0
+        Inaccuracy: 0c256
+        Blockable: false
+        Shadow: true
+        LaunchAngle: 75
+        Image: shell02
+        ContrailLength: 30
+        ContrailColor: 00FFFF
+        ContrailWidth: 25
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 1500
+    Warhead@1Eff: CreateEffect
+        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+        ExplosionPalette: apolra2
+        ImpactSounds:  sonic5.aud, sonic6.aud, sonic7.aud
+        InvalidImpactTypes: Water
+    Warhead@2Eff: CreateEffect
+        Explosions: swave
+        ExplosionPalette: swave
+        ImpactSounds: ion1.aud
+        InvalidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@5Eff: CreateEffect
+        Explosions: beamzap
+        ExplosionPalette: beamzap
+        ImpactSounds: plasmaexplo02.aud
+        InvalidImpactTypes: Water, Air, AirHit
             
 CondorBomb:
     Inherits: ^RailgunWH
@@ -1089,7 +1150,7 @@ OrcaF1Missiles:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 120
+        Damage: 80
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_bang, medium_bang, large_bang
@@ -1120,7 +1181,7 @@ OrcaF2Missiles:
     BurstDelay: 6
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 120
+        Damage: 100
         ValidTargets: Ground
         
 HawkMissile:

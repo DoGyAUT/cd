@@ -439,6 +439,10 @@ AIRBLAST:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
     
 TRITON:
     Inherits: ^Walker
@@ -767,7 +771,7 @@ SONIC:
 BEHEMOTH:
     Inherits: ^VoxelTank
     Valued:
-        Cost: 1750
+        Cost: 2000
     Tooltip:
         Name: Atlas Cannon
     Buildable:
@@ -810,7 +814,7 @@ JUGG:
     Inherits@1: ^Walker
     Inherits@2: ^HeavyVehicle
     Valued:
-        Cost: 1750
+        Cost: 1500
     Tooltip:
         Name: Juggernaut
     Buildable:
@@ -832,11 +836,6 @@ JUGG:
         Delay: 4
         Interval: 15
         RequiresCondition: walker
-#    AmbientSound@step2:
-#        SoundFile: step2.wav
-#        Delay: 6
-#        Interval: 20
-#        RequiresCondition: walker
     Health:
         HP: 780
     Armor:
@@ -849,28 +848,11 @@ JUGG:
         Offset: 0,0,512
         InitialFacing: 96
     AttackTurreted:
-        Armaments: primary, secondary, tertiary
         RequiresCondition: deployed
     Armament@primary1:
         Name: primary
         Weapon: JuggernautGun
-        LocalOffset: 1024,40,1400
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 5
-    Armament@primary2:
-        Name: secondary
-        Weapon: JuggernautGun2
-        LocalOffset: 1024,150,1400
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 5
-    Armament@primary3:
-        Name: tertiary
-        Weapon: JuggernautGun3
-        LocalOffset: 1024,-70,1400
+        LocalOffset: 1024,40,1400, 1024,150,1400, 1024,-70,1400
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 25
@@ -901,6 +883,10 @@ JUGG:
     RenderRangeCircle:
     WithMuzzleOverlay:
     RenderSprites:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
         
 CYCLOPS:
     Inherits@1: ^VoxelVehicle
@@ -942,7 +928,7 @@ CYCLOPS:
         Range: 7c0
     Armament:
         Weapon: CyclopsCannon
-        LocalOffset: 1500,0,500
+        LocalOffset: 1300,0,550
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 100

@@ -63,7 +63,7 @@ PyradonGunBlue:
     ReloadDelay: 80
     Range: 4c0
     Burst: 2
-    BurstDelay: 20
+    BurstDelay: 25
     Report: flamtnk1.aud
     Projectile: BulletAS
         Speed: 0c256
@@ -264,7 +264,7 @@ EliteCadreGun:
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 15
+        Damage: 20
         
 RocketeerGun:
     Inherits: ^MissileAPHE 
@@ -300,11 +300,11 @@ SpecterGun:
     Inherits: ^ShellHE 
 	Inherits@wh: ^HEAPWH
     ReloadDelay: 200
-    Range: 14c0
+    Range: 17c0
     MinRange: 5c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
-        Speed: 1c0
+        Speed: 0c512
         Inaccuracy: 0
         Image: shell01
         LaunchAngle: 165
@@ -329,7 +329,7 @@ SpecterGun:
 
 SpecterGunEMP:
     Inherits: SpecterGun
-    Range: 14c0
+    Range: 17c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
     Projectile: BulletAS
         # Speed: 0c256
@@ -360,7 +360,7 @@ SpecterGunEMP:
 SpecterGunInferno:
     Inherits: SpecterGun
     ReloadDelay: 200
-    Range: 14c0
+    Range: 17c0
     Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
     Projectile: BulletAS
         # Speed: 0c256
@@ -541,11 +541,14 @@ AvatarLaserE:
         
 EMPulseCannon:
     ReloadDelay: 100
-    Range: 500c0
+    Range: 250c0
+    MinRange: 6c0
+    Burst: 6
+    BurstDelay: 10
     Report: plsecan2.aud
-	ValidTargets: Ground
-	InvalidTargets: Vehicle, Building, Infantry, C4, SpyInfiltrate, Wall, Soldier, HeavyInfantry, VeryHeavyInfantry, Mutant, Goon, HeavyCyborg, Cyborg, Repair
+    ValidTargets: Ground
     Projectile: BulletAS
+        Inaccuracy: 1000c0
         Speed: 425
         Blockable: false
         Shadow: true
@@ -559,14 +562,9 @@ EMPulseCannon:
     Warhead@2Eff: CreateEffect
         Explosions: pulse_explosion
         ImpactSounds: psl.aud
-# Dummy warhead to allow targeting
-    Warhead@target: SpreadDamage
-        Spread: 0
-        Damage: 0
-        ValidTargets: Vehicle
     Warhead@emp: GrantExternalCondition
         Range: 4c0
-        Duration: 250
+        Duration: 300
         Condition: empdisable
         ValidTargets: Vehicle, Cyborg, Building
         
@@ -692,6 +690,7 @@ MultiCluster:
         ValidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: MediumCrater
+
 RookieGun:
     Inherits: ^Bullet
     Inherits@wh: ^BulletWH
@@ -804,14 +803,51 @@ ConfessorGrenade:
         InvalidImpactTypes: Water
     Warhead@4Smu: LeaveSmudge
         SmudgeType: SmallCrater    
+
+VertigoBombGas:
+    Inherits: ^ShellHE 
+    Inherits@wh: ^TiberiumWH
+    ReloadDelay: 60
+    Range: 1c512
+    Report: bombdrop.aud
+    Projectile: BulletAS
+        Speed: 0c512
+        Inaccuracy: 0c128
+        Image: shell01
+        Shadow: true
+        LaunchAngle: 60
+        Palette: effect
+        ContrailLength: 10
+        ContrailWidth: 15
+        ContrailColor: 00FF64
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 3000
+    Warhead@2Eff: CreateEffect
+        Explosions: tiberiumbomb
+        ExplosionPalette: tiberiumbomb50
+        ImpactSounds: snukexpl.aud
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: LargeCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: large_flash
+        ExplosionPalette: light2
+    WarheadAS: FireShrapnel
+        Weapon: TiberiumProtonShrapnel
+        Amount: 30
+        AimChance: 0        
         
-VertigoBomb: #3 vertigo variants, unused
+VertigoBombNapalm:
     Inherits: ^ShellHE 
 	Inherits@wh: ^HEWH
     ReloadDelay: 60
-    Burst: 1
-    BurstDelay: 5
-    Range: 3c0
+    Range: 1c512
     Report: bombdrop.aud
     Projectile: BulletAS
         Speed: 0c512
@@ -824,12 +860,12 @@ VertigoBomb: #3 vertigo variants, unused
         ContrailColor: FFFFFF
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 800
+        Spread: 1c512
+        Damage: 1500
     Warhead@2Eff: CreateEffect
-        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+        Explosions: napalmnuke
+        ExplosionPalette: napalmnuke50
+        ImpactSounds: snukexpl.aud
         InvalidImpactTypes: Water
     Warhead@3EffWater: CreateEffect
         Explosions: small_watersplash
@@ -840,57 +876,65 @@ VertigoBomb: #3 vertigo variants, unused
         SmudgeType: LargeCrater
     Warhead@5Eff: CreateEffect
         Explosions: large_flash
-        ExplosionPalette: light2        
-
-VertigoBombEMP:
-    Inherits: VertigoBomb
+        ExplosionPalette: light2   
+    WarheadAS: FireShrapnel
+        Weapon: NapalmShrapnel
+        Amount: 30
+        AimChance: 0
+        
+NapalmShrapnel:
+    Inherits@wh: ^FireWH
+    Range: 5c512
     Projectile: BulletAS
-        Speed: 0c512
-        Inaccuracy: 0c128
-        Image: shell01
-        Shadow: true
-        LaunchAngle: 60
-        Palette: effect
-        ContrailLength: 10
-        ContrailColor: 0080FF
-        ContrailWidth: 30
-    Warhead@emp1: GrantExternalCondition
-        Range: 2c512
-        Duration: 200
-        Condition: empdisable
-        ValidTargets: Vehicle, Cyborg
-        InvalidTargets: Reaper, Harbinger, Cabal Commando, Light Post
-    Warhead@emp2: GrantExternalCondition
-        Range: 2c512
-        Duration: 200
-        Condition: empdisable
-        ValidTargets: Building
-        InvalidTargets: Reaper, Harbinger, Cabal Commando, Light Post
-    Warhead@EMPEff: CreateEffect
-        Explosions: pulse_explosion
-        ImpactSounds: plsecan2.aud
-
-VertigoBombGas:
-    Inherits: VertigoBomb
-    Inherits@wh: ^TiberiumWH
-    Projectile: BulletAS
-        Speed: 0c512
-        Inaccuracy: 0c128
-        Image: shell01
-        Shadow: true
-        LaunchAngle: 60
-        Palette: effect
-        ContrailLength: 10
-        ContrailColor: 00FF64
-        ContrailWidth: 30
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: flametrailer
+        TrailImage: flametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
     Warhead@1Dam: SpreadDamage
-        Spread: 0c768
-        Damage: 900
-    Warhead@3Eff: CreateEffect
+        Spread: 1c512
+        Damage: 100
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ImpactSounds: flamtnk1.aud
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+        
+TiberiumProtonShrapnel:
+    Inherits@wh: ^TiberiumWH
+    Range: 4c512
+    Projectile: BulletAS
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: tibflametrailer
+        TrailImage: tibflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 200
+    Warhead@2Eff: CreateEffect
         Explosions: protonexpl_lrg
+        ImpactSounds: scrin5b.aud
         ExplosionPalette: effect50alpha
-        ImpactSounds: expnew12.aud
-        InvalidImpactTypes: Water, Air, AirHit
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+    WarheadAS: SpawnActor
+        Range: 2
+        Actors: Cloud1, Cloud2
+        Owner: Creeps
         
 ZodiacBomb:
     Inherits: ^ShellHE 
@@ -1228,7 +1272,7 @@ ShadowTrooperLaser:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 200
+        Damage: 300
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -1610,7 +1654,7 @@ BikeMissile:
 	Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
-    BurstDelay: 20
+    BurstDelay: 0
     Range: 6c0
     Report: misl1.aud
     ValidTargets: Ground, Air, MidAir
@@ -1634,7 +1678,7 @@ StealthTankMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
     ReloadDelay: 175
-    Range: 9c0
+    Range: 8c0
     Burst: 2
     BurstDelay: 0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1653,7 +1697,7 @@ StealthTankMissileEMP:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
     ReloadDelay: 175
-    Range: 9c0
+    Range: 8c0
     Burst: 2
     BurstDelay: 0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1842,7 +1886,7 @@ HydraMissiles:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 100
+        Damage: 80
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
         Explosions: small_bang, medium_bang, large_bang
@@ -1872,7 +1916,7 @@ HydraGasMissiles:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
-        Damage: 120
+        Damage: 100
         Versus:
             Vehicle: 100
         ValidTargets: Ground

@@ -409,7 +409,7 @@ BIKE:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^LightVehicle
     Valued:
-        Cost: 650
+        Cost: 700
     Tooltip:
         Name: Attack Bike
     Selectable:
@@ -733,6 +733,10 @@ TERMITE: #wip
         UndeploySound: drillup.aud
         CanDeployOnRamps: True
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
 
 HAILSTORM:
     Inherits@1: ^VoxelVehicle
@@ -821,6 +825,10 @@ HAILSTORM:
         RequiresCondition: deployed
     WithMuzzleOverlay:   
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
 
 NHWTZ:
     Inherits: ^VoxelVehicle
@@ -921,6 +929,10 @@ NHWTZ:
         Condition: upgrade.tibgas
         Prerequisites: upgrade.tibgas
     RenderRangeCircle:
+    AIDeployHelper:
+        DeployChance: 50
+        DeployTicks: 2500
+        UndeployTicks: 450
     
 SUBTANK:
     Inherits: ^VoxelTank
@@ -1013,7 +1025,7 @@ STNK:
         Bounds: 42,42, 0, -5
     Buildable:
         BuildPaletteOrder: 208
-        Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~technology
+        Prerequisites: ~naweap, naradr, ~!t1, ~!t2, ~technology
         Queue: Vehicle.Nod
         Description: Requires Technology Nod Doctrine.\n\n Stealthed tank used for hit and run tactics and armed with rocket launchers.\n\n Role: Medium Tank\n HP: 700\n Armor: Medium\n Speed: 120\n Viewrange: 13c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special:\n - Stealthed\n - Can attack Vtols\n - Can attack Jets\n - Can crush infantry\n - Can crush light vehicles\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)
     Voiced:
@@ -1021,11 +1033,11 @@ STNK:
         Volume: 2
     Mobile:
         TurnSpeed: 10
-        Speed: 90
+        Speed: 80
     Health:
         HP: 820
     RevealsShroud:
-        Range: 10c0
+        Range: 9c0
     Cloak@self:
         InitialDelay: 90
         CloakDelay: 90

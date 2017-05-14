@@ -1,7 +1,7 @@
 VENOM:
     Inherits: ^Helicopter
     Valued:
-        Cost: 700
+        Cost: 600
     Tooltip:
         Name: Venom
     Buildable:
@@ -276,7 +276,7 @@ NODCARRY:
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 3
-        Speed: 110
+        Speed: 90
         InitialFacing: 0
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
@@ -284,7 +284,7 @@ NODCARRY:
     Health:
         HP: 700
     RevealsShroud:
-        Range: 2c0
+        Range: 9c0
         Type: GroundPosition
     Cargo:
         Types: Infantry, Vehicle
@@ -320,6 +320,8 @@ NODCARRY.SUPPORT:
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
         TakeoffSound: dropup1.aud
         LandingSound: dropdwn1.aud
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
     Health:
         HP: 700
     RevealsShroud:
@@ -375,20 +377,22 @@ VALKYRIE.SUPPORT:
     RenderVoxels:
         Image: valkyrie
     WithVoxelBody:
+    Targetable@AIRBORNE:
+        TargetTypes: Impossible
     -Guardable:
     -MustBeDestroyed:
-    Contrail@1:
-        Offset: 0,750,0
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: 0,-750,0
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: 0,750,0
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: 0,-750,0
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: VALKYRIE.Husk
         Probability: 100
@@ -478,24 +482,24 @@ RAVEN:
     GrantConditionOnPrerequisite@upgrade2:
         Condition: upgrade.tibgas
         Prerequisites: upgrade.tibgas
-    Contrail@1:
-        Offset: -555,0,256
-        TrailLength: 30
-        TrailWidth: 50
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: 0,900,128
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: 0,-900,128
-        TrailLength: 15
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -555,0,256
+#        TrailLength: 30
+#        TrailWidth: 50
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: 0,900,128
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: 0,-900,128
+#        TrailLength: 15
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: RAVEN.Husk
         Probability: 100
@@ -543,37 +547,37 @@ SCRINB:
         Weapon:BansheeSpecialE
         LocalOffset: 550,0,32
         RequiresCondition: rank-heroic
-	Turreted: 
+    Turreted: 
         TurnSpeed: 360
-	AttackTurreted:
+    AttackTurreted:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    Contrail@1:
-        Offset: -512,180,160
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -512,-180,160
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-     Contrail@3:
-        Offset: -512,180,32
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -512,-180,32
-        TrailLength: 30
-        TrailWidth: 30
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -512,180,160
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -512,-180,160
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#     Contrail@3:
+#        Offset: -512,180,32
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -512,-180,32
+#        TrailLength: 30
+#        TrailWidth: 30
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: SCRINB.Husk
         Probability: 100
@@ -592,8 +596,10 @@ VERTIGO:
     Voiced:
         VoiceSet: Vertigo
         Volume: 2
-    Selectable:
-        Bounds: 60,48
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
     Aircraft:
         TurnSpeed: 4
         Speed: 180
@@ -603,15 +609,8 @@ VERTIGO:
         Range: 15c0
         Type: GroundPosition
     Armament@primary:
-        Weapon: VertigoBomb
-        RequiresCondition: !upgrade.emp || !upgrade.tibgas
-    Armament@primary2:
-        Weapon: VertigoBombEMP
-        RequiresCondition: upgrade.emp && !upgrade.tibgas
-    Armament@primary3:
-        Weapon: VertigoBombGas
-        RequiresCondition: upgrade.tibgas && !upgrade.emp
-    AttackPlane:
+        Weapon: VertigoBombNapalm
+    AttackBomber:
         FacingTolerance: 20
     AmmoPool:
         Ammo: 1
@@ -620,7 +619,6 @@ VERTIGO:
         ReloadDelay: 250
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-    AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
@@ -631,57 +629,61 @@ VERTIGO:
     GrantConditionOnPrerequisite@upgrade1:
         Condition: upgrade.stealth
         Prerequisites: upgrade.stealth
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.emp
-        Prerequisites: upgrade.emp
-    GrantConditionOnPrerequisite@upgrade3:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
-    Contrail@1:
-        Offset: -512,500,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -512,-500,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@3:
-        Offset: -256,650,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@4:
-        Offset: -256,-650,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@5:
-        Offset: -128,800,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@6:
-        Offset: -128,-800,0
-        TrailLength: 30
-        TrailWidth: 20
-        Color: FFFFFF
-        UsePlayerColor: False
-    Contrail@7:
-        Offset: -800,0,128
-        TrailLength: 60
-        TrailWidth: 50
-        Color: FFFFFF
-        UsePlayerColor: False
+#    Contrail@1:
+#        Offset: -512,500,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@2:
+#        Offset: -512,-500,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@3:
+#        Offset: -256,650,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@4:
+#        Offset: -256,-650,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@5:
+#        Offset: -128,800,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@6:
+#        Offset: -128,-800,0
+#        TrailLength: 30
+#        TrailWidth: 20
+#        Color: FFFFFF
+#        UsePlayerColor: False
+#    Contrail@7:
+#        Offset: -800,0,128
+#        TrailLength: 60
+#        TrailWidth: 50
+#        Color: FFFFFF
+#        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: VERTIGO.Husk
         Probability: 100
+    RejectsOrders:
+    
+VERTIGO2:
+    Inherits: VERTIGO
+    Armament@primary:
+        Weapon: VertigoBombGas
+    RenderVoxels:
+        Image: vertigo
+    RenderSprites:
+        Image: vertigo
         
 ZODIAC:
     Inherits: ^Helicopter

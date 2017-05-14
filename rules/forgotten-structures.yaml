@@ -19,14 +19,14 @@ FACNST:
     ProductionQueue@Building:
         Type: Building
         Group: Building
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
         Type: Defense
         Group: Defense
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
@@ -34,7 +34,6 @@ FACNST:
         Cost: 3000
     Tooltip:
         Name: Forgotten Construction Yard
-#    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: fmcv
@@ -63,6 +62,16 @@ FACNST:
         Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
+    ProvidesAIPrerequisite@AImoney:
+        Prerequisite: AImoney
+    GrantConditionOnPrerequisite@AImoney:
+        Condition: money
+        Prerequisites: AImoney
+    CashTrickler@AImoney:
+        Interval: 1000
+        Amount: 10000
+        ShowTicks: False
+        RequiresCondition: money
 
 FAPOWR:
     Inherits: ^Building
@@ -166,6 +175,9 @@ FPROC:
         Value: 500
     Power:
         Amount: -50
+    Explodes:
+        Weapon: TiberiumExplosionForgRef
+        EmptyWeapon: TiberiumExplosionForgRef
     ProvidesPrerequisite@buildingname:
 
 FABAR:
@@ -205,7 +217,7 @@ FABAR:
     ProductionQueue@Infantry:
         Type: Infantry.Forg
         Group: Infantry
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -253,7 +265,7 @@ FAWEAP:
     ProductionQueue@Vehicle:
         Type: Vehicle.Forg
         Group: Vehicle
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
@@ -281,7 +293,7 @@ FAWEAP:
     WithIdleOverlay@BIB:
         Sequence: bib
     Power:
-        Amount: -50
+        Amount: -75
     ProvidesPrerequisite@buildingname:
 
 FARADR:
@@ -368,7 +380,7 @@ FHOVEL:
         Group: Tech
         QueuedAudio: BuildTech
         ReadyAudio: TechComplete
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     Exit:
     ExitsDebugOverlay:
@@ -385,7 +397,7 @@ FHOVEL:
 FAHPAD:
     Inherits: ^Building
     Valued:
-        Cost: 750
+        Cost: 1000
     Tooltip:
         Name: Forgotten Helipad
     Buildable:
@@ -410,7 +422,7 @@ FAHPAD:
     ProductionQueue@Air:
         Type: Air.Forg
         Group: Air
-        BuildDurationModifier: 73
+        BuildDurationModifier: 60
         LowPowerSlowdown: 3
     CanPowerDown:
         IndicatorPalette: mouse
