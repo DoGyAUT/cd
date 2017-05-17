@@ -1,0 +1,144 @@
+DOGGIE:
+    Inherits: ^MutantFearless
+    Tooltip:
+        Name: Tiberian Fiend
+        Description: Dogs transmorgifies into this, when dieing on Tiberium fields.
+    Health:
+        Radius: 213
+        HP: 400
+	Valued: 
+ 		Cost: 1
+    RevealsShroud:
+        Range: 6c0
+    Mobile:
+        Speed: 90
+    Selectable:
+    Voiced:
+        VoiceSet: Fiend
+    Targetable:
+        TargetTypes: Ground
+    Armament:
+        Weapon: FiendShardGreen
+    AttackFrontal:
+    AttackWander:
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 100
+        MaxMoveDelayInDelay: 180
+
+JFISH:
+    Inherits: ^Visceroid
+    Inherits@CRATESTATS: ^CrateStatModifiers
+    Tooltip:
+        Name: Tiberium Floater
+    Health:
+        HP: 4000
+        Shape: Circle
+            Radius: 363
+            VerticalTopOffset: 768
+    Valued:
+        Cost: 1000
+    RevealsShroud:
+        Range: 5c0
+    Mobile:
+        Speed: 72
+        Crushes: crate
+        TerrainSpeeds:
+            Clear: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Water: 100
+    Armament:
+        Weapon: Tentacle
+        FireDelay: 10
+    AutoTarget:
+        ScanRadius: 5
+    AttackFrontal:
+    AttackWander:
+        WanderMoveRadius: 6
+        MinMoveDelay: 50
+        MaxMoveDelay: 300
+    WithAttackAnimation:
+        AttackSequence: attack
+    RenderSprites:
+        Image: floater
+    Selectable:
+        Bounds: 32,32,0,-5
+    AmbientSound:
+        SoundFiles: floatmov.aud, flotmov2.aud, flotmov3.aud, flotmov4.aud
+        Delay: 150, 450
+        Interval: 300, 800
+    LeavesTrails@water:
+        Image: wake
+        Palette: effect
+        TerrainTypes: Water
+        TrailWhileStationary: True
+        StationaryInterval: 18
+        MovingInterval: 6
+        
+VISC_SML:
+    Inherits: ^Visceroid
+    Tooltip:
+        Name: Baby Visceroid
+        Description: Infantry transmorgifies into this, when killed by Adult Visceroids.
+    Health:
+        HP: 300
+    Valued:
+        Cost: 250
+    Armament:
+        Weapon: SmallSlimeAttack
+    AutoTarget:
+    AttackFrontal:
+        Voice: Attack
+    AttackWander:
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 25
+        MaxMoveDelayInDelay: 45
+    Mobile:
+        Crushes: crate
+        SharesCell: yes
+    RenderSprites:
+        Image: vissml
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 20
+        HealIfBelow: 100
+        DamageCooldown: 80
+
+VISC_LRG:
+    Inherits: ^Visceroid
+    Tooltip:
+        Name: Adult Visceroid
+        Description: Infantry transmorgifies into this, when dieing on Tiberium fields.
+    Health:
+        HP: 450
+    Valued:
+        Cost: 500
+    Armament:
+        Weapon: SlimeAttack
+    AutoTarget:
+    AttackFrontal:
+        Voice: Attack
+    AttackWander:
+        WanderMoveRadius: 4
+        MinMoveDelayInDelay: 25
+        MaxMoveDelayInDelay: 45
+    Mobile:
+        Crushes: crate
+    RenderSprites:
+        Image: vislrg
+    SelfHealing:
+        Step: 0
+        PercentageStep: 1
+        Delay: 10
+        HealIfBelow: 100
+        DamageCooldown: 60
+    GrantPeriodicCondition@evolve:
+        Condition: evolve
+#        StartsCharged: true
+        CooldownDuration: 2000
+        ActiveDuration: 1000
+    TransformOnCondition:
+        RequiresCondition: evolve
+        IntoActor: jfish

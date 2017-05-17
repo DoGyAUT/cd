@@ -51,7 +51,7 @@ UnitExplodeEpic:
 PyradonExplosion:
     Warhead@1Dam: SpreadDamage
         Spread: 512
-        Damage: 250
+        Damage: 500
         Versus:
             Infantry: 100
             Cyborg: 50
@@ -60,7 +60,7 @@ PyradonExplosion:
             Building: 100
         DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
     Warhead@2Eff: CreateEffect
-        Explosions: medium_brnl, small_twlt, tiny_twlt
+        Explosions: napalm1, napalm2
         ExplosionPalette: apolra50alpha
         ImpactSounds: expnew09.aud
     Warhead@3Smu: LeaveSmudge
@@ -647,6 +647,7 @@ FiendShardPurple:
         Explosions: small_watersplash
         ImpactSounds: ssplash3.aud
         ValidImpactTypes: Water
+
 SlimeAttack:
     Inherits@wh: ^TiberiumWH
     ReloadDelay: 60
@@ -654,6 +655,7 @@ SlimeAttack:
     Report: vicer1.aud
     Projectile: BulletAS
         Speed: 426
+        DamageTypes: TriggerProne
     Warhead@1Dam: SpreadDamage
         Damage: 100
 
@@ -664,8 +666,27 @@ SmallSlimeAttack:
     Report: vicer1.aud
     Projectile: BulletAS
         Speed: 426
+        DamageTypes: TriggerProne
     Warhead@1Dam: SpreadDamage
         Damage: 50
+        
+Tentacle:
+    Inherits@wh: ^TiberiumWH
+    ReloadDelay: 80
+    Range: 1c384
+    Report: floatk1.aud
+    Projectile: BulletAS
+        Speed: 426
+    InvalidTargets: Wall, Bridge
+    Warhead@1Dam: SpreadDamage
+        Damage: 160
+        InvalidTargets: Wall, Bridge
+        DamageTypes: TriggerProne, TriggerSmallVisceroid
+    Warhead@emp1: GrantExternalCondition
+        Range: 1c512
+        Duration: 50
+        Condition: empdisable
+        ValidTargets: Vehicle, Cyborg, Building
         
 # JumpCannon:
     # Inherits: ^Bullet    

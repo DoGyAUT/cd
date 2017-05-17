@@ -73,7 +73,8 @@ KACNST:
         RequiresCondition: money
 
 KPR:
-    Inherits: ^BuildingInfiltrate
+    Inherits@1: ^BuildingInfiltrate
+    Inherits@2: ^PowerBoostUpgrades
     Buildable:
         Queue: Building
         BuildPaletteOrder: 301
@@ -108,54 +109,6 @@ KPR:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
     DisabledOverlay:
-
-NKPR:
-    Inherits: KPR
-    Buildable:
-        Queue: Building
-        BuildPaletteOrder: 308
-        Prerequisites: ~structures.cabal, karadr
-        Description: Provides power for other structures.
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Fusion Core
-    -Sellable:        
-    Health:
-        HP: 3000
-    Power:
-        Amount: 2000
-    Explodes:
-        Weapon: ClusterMissile
-        EmptyWeapon: ClusterMissile
-    RenderSprites:
-        Scale: 1.5
-        Image: kpr
-    SelfHealing@kys:
-        Step: 1
-        PercentageStep: -110
-        Delay: 1
-        HealIfBelow: 101
-        DamageCooldown: 0
-        RequiresCondition: kys
-#    GrantExternalConditionPower@kys:
-#        Description: Boom
-#        LongDesc: Makes your power plant go boom
-#        OrderName: KillYourselfOrder
-#        ActivationSequence:
-#        Icon: kys
-#        SelectTargetSpeechNotification: SelectTarget
-#        InsufficientPowerSpeechNotification: InsufficientPower
-#        Condition: kys
-#        Sequence: idle
-#        ChargeTime: 1
-#        ArrowSequence: arrow
-#        CircleSequence: circles
-#        ClockSequence: clock
-#       Range: 1
-#        Duration: 450
-    ExternalCondition@kys:
-        Condition: kys
 
 KPROC:
     Inherits: ^BuildingInfiltrate
@@ -368,7 +321,23 @@ KARADR:
     RenderDetectionCircle:
     DetectCloaked:
         Range: 20c0
-        CloakTypes: Underground
+        CloakTypes: Underground        
+    GrantExternalConditionPower@powerboost:
+        OrderName: GrantPowerBoostPowerInfoOrder
+        Icon: powerbuff
+        SelectTargetSpeechNotification: SelectTarget
+        InsufficientPowerSpeechNotification: InsufficientPower
+        EndChargeSpeechNotification: SupportPowerReady
+        Description: Power Core Boost
+        LongDesc: Improves the power output by 200%.
+        Condition: powerboost
+        OnFireSound: fortificate.wav
+        Sequence: idle
+        ChargeTime: 240
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        Range: 2
 
 KAHPAD:
     Inherits: ^Building

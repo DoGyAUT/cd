@@ -906,6 +906,17 @@ NapalmShrapnel:
     Warhead@6Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light2
+    WarheadAS: SpawnActor
+        Range: 3
+        Actors: Fire1, Fire1, Fire1
+        Owner: Creeps
+        
+NapalmShrapnelSmudge:
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
         
 TiberiumProtonShrapnel:
     Inherits@wh: ^TiberiumWH
@@ -1843,6 +1854,7 @@ HavocMissiles:
 HavocMissilesTibGas:
     Inherits: HavocMissiles
     Inherits@wh: ^TiberiumWH
+    ReloadDelay: 150
     Projectile: Missile
         # TrailImage: blueflametrailer
         # TrailPalette: effect50alpha

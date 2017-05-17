@@ -378,7 +378,7 @@ NAWEAP:
         CircleSequence: circles
         ClockSequence: clock
         Range: 8
-        Duration: 450
+        Duration: 250
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -604,11 +604,11 @@ NAPYRA:
     ProvidesPrerequisite@buildingname:
     AirstrikePower@VertigoNapalmAirstrikePower:
         OrderName: VertigoNapalmAirstrikePowerInfoOrder
-        Prerequisites: naradr, ~technology
+        Prerequisites: naradr, ~propaganda
         Icon: vertigo
         ChargeTime: 300
         QuantizedFacings: 8
-        Description: Vertigo Napalm Strike
+        Description: Napalm Strike
         LongDesc: Deploy a devastating Napalm bomb.
         SelectTargetSound:  vertigo_s2.aud
         EndChargeSound: vertigo_st1.aud
@@ -628,7 +628,7 @@ NAPYRA:
         Icon: vertigo
         ChargeTime: 300
         QuantizedFacings: 8
-        Description: Vertigo Tiberium Strike
+        Description: Tiberium Splitter Bomb
         LongDesc: Deploy a devastating Tiberium bomb.
         SelectTargetSound:  vertigo_s2.aud
         EndChargeSound: vertigo_st1.aud

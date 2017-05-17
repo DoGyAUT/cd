@@ -108,6 +108,32 @@ Cloud1:
 
 Cloud2:
     Inherits@1: ^Clouds
+    
+Fire1:
+    Inherits@1: ^FireActor
+    RenderSprites:
+        Image: largefire
+    SpawnActorOnDeath:
+        Actor: fire2
+    
+Fire2:
+    Inherits@1: ^FireActor
+    RenderSprites:
+        Image: mediumfire
+    SpawnActorOnDeath:
+        Actor: fire3
+    
+Fire3:
+    Inherits@1: ^FireActor
+    RenderSprites:
+        Image: smallfire
+    SpawnActorOnDeath:
+        Actor: fire4
+    
+Fire4:
+    Inherits@1: ^FireActor
+    RenderSprites:
+        Image: tinyfire
 
 SROCK01:
     Inherits: ^Rock

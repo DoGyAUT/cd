@@ -309,3 +309,21 @@ Player:
                 Attractiveness: 1
                 TargetMetric: Value
                 CheckRadius: 8c0
+        SupportPowerDecision@GrantPowerBoostPower:
+            OrderName: GrantPowerBoostPowerInfoOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Ally
+                Types: Building
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 8c0
+        SupportPowerDecision@CrapjetAirstrikePower:
+            OrderName: CrapjetAirstrikePowerInfoOrder
+            MinimumAttractiveness: 1
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: Value
+                CheckRadius: 5c0

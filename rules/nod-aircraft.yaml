@@ -235,13 +235,13 @@ HAVOC:
         Condition: upgrade.tiblaser
         Prerequisites: upgrade.tiblaser
     AmmoPool@rockets:
-        Name:rockets
+        Name: rockets
         Ammo: 8
         PipCount: 8
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
         SelfReloads: True
-        SelfReloadDelay: 40
+        SelfReloadDelay: 5
     DetectCloaked:
         Range: 7c0
     AutoTarget:
@@ -279,8 +279,8 @@ NODCARRY:
         Speed: 110
         InitialFacing: 0
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
+#        TakeoffSound: dropup1.aud
+#        LandingSound: dropdwn1.aud
     Health:
         HP: 700
     RevealsShroud:
@@ -318,8 +318,8 @@ NODCARRY.SUPPORT:
         Speed: 180
         InitialFacing: 0
         LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
+#        TakeoffSound: dropup1.aud
+#        LandingSound: dropdwn1.aud
     Health:
         HP: 700
     RevealsShroud:
@@ -412,8 +412,8 @@ RAVEN:
     Aircraft:
         TurnSpeed: 4
         Speed: 210
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
+#        TakeoffSound: dropup1.aud
+#        LandingSound: dropdwn1.aud
     Health:
         HP: 500
     RevealsShroud:
@@ -522,8 +522,8 @@ SCRINB:
     Aircraft:
         TurnSpeed: 4
         Speed: 200
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
+#        TakeoffSound: dropup1.aud
+#        LandingSound: dropdwn1.aud
     Health:
         HP: 1800
     RevealsShroud:
@@ -726,9 +726,9 @@ ZODIAC:
     SpawnActorOnDeath:
         Actor: ZODIAC.Husk
         Probability: 100
-    AmbientSound:
-        SoundFile: propaganda.aud
-        Delay: 25,100
+#    AmbientSound:
+#        SoundFiles: propaganda.aud
+#        Delay: 25,100
     ProximityExternalCondition:
         Condition: zepdebuff
         Range: 10c0

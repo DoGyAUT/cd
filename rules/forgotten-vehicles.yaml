@@ -18,6 +18,8 @@ FMCV:
         HP: 2000
     Mobile:
         Speed: 50
+        TerrainSpeeds:
+            Water: 80
     RevealsShroud:
         Range: 6c0
     -ProducibleWithLevel:
@@ -34,6 +36,10 @@ FMCV:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
+        RequiresCondition: !inwater
+    WithVoxelBody@water:
+        Sequence: water
+        RequiresCondition: inwater
     ActorLostNotification:
         Notification: CriticalUnitLost
     
@@ -79,6 +85,8 @@ FHARV:
     RenderVoxels:
     -WithVoxelBody:
     WithVoxelUnloadBody:
+        UnloadSequence: unload2
+        IdleSequence: idle2
     Explodes:
         Weapon: LargeTiberiumExplosion
         EmptyWeapon: SmallTiberiumExplosion
