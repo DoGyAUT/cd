@@ -393,6 +393,39 @@ SpecterGunInferno:
         SmudgeType: MediumScorch
     Warhead@4Smu: LeaveSmudge
         SmudgeType: LargeCrater
+#    WarheadAS: FireShrapnel
+#        Weapon: InfernoShrapnel
+#        Amount: 4
+#        AimChance: 0
+        
+InfernoShrapnel:
+    Inherits@wh: ^FireWH
+    Range: 5c512
+    Projectile: BulletAS
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: blueflametrailer
+        TrailImage: blueflametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ImpactSounds: flamtnk1.aud
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+    WarheadAS: SpawnActor
+        Range: 1
+        Actors: BFire1, BFire1, BFire1
+        Owner: Creeps
       
 SpecterGunNapalm:
     Inherits: SpecterGun
@@ -910,7 +943,7 @@ NapalmShrapnel:
         Range: 3
         Actors: Fire1, Fire1, Fire1
         Owner: Creeps
-        
+
 NapalmShrapnelSmudge:
     Warhead@3Smu: LeaveSmudge
         SmudgeType: MediumScorch
