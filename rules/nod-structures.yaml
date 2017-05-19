@@ -359,14 +359,14 @@ NAWEAP:
         EffectSequence: idle
         ChargeTime: 180
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
     GrantExternalConditionPower@emergencyrepairNod:
         OrderName: EmergancyRepairs2PowerInfoOrder
         Prerequisites: ~industry
         Icon: emergencyrepairs2
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         Description: Emergency Repairs
         LongDesc: Repairs vehicles and buildings in a specific radius.
@@ -435,7 +435,7 @@ NARADR:
         Description: Shadow Trooper Drop
         LongDesc: Drops a special infantry taskforce on the field.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -451,7 +451,7 @@ NARADR:
         ActivationSequence:
         Icon: fenzy
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         EndChargeSound: nod1_s8.aud
         Condition: fenzy
         OnFireSound: nod1_s5.aud
@@ -529,7 +529,7 @@ NAHPAD:
         LongDesc: Calls in a heavy ace class Havoc attack chopper.
         SelectTargetSpeechNotification: SelectTarget
         EndChargeSpeechNotification: Reinforce
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         ChargeTime: 240
         DisplayBeacon: false
         DisplayRadarPing: false
@@ -551,7 +551,7 @@ NAHPAD:
         Description: Propaganda Infantry Drop
         LongDesc: Drops an infantry battalion on the field.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -604,11 +604,11 @@ NAPYRA:
     ProvidesPrerequisite@buildingname:
     AirstrikePower@VertigoNapalmAirstrikePower:
         OrderName: VertigoNapalmAirstrikePowerInfoOrder
-        Prerequisites: naradr, ~technology
+        Prerequisites: naradr, ~propaganda
         Icon: vertigo
         ChargeTime: 300
         QuantizedFacings: 8
-        Description: Vertigo Napalm Strike
+        Description: Napalm Strike
         LongDesc: Deploy a devastating Napalm bomb.
         SelectTargetSound:  vertigo_s2.aud
         EndChargeSound: vertigo_st1.aud
@@ -628,7 +628,7 @@ NAPYRA:
         Icon: vertigo
         ChargeTime: 300
         QuantizedFacings: 8
-        Description: Vertigo Tiberium Strike
+        Description: Tiberium Splitter Bomb
         LongDesc: Deploy a devastating Tiberium bomb.
         SelectTargetSound:  vertigo_s2.aud
         EndChargeSound: vertigo_st1.aud

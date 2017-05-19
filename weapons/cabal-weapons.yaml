@@ -847,6 +847,39 @@ DreadfireLauncher:
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
         Damage: 60
+#    WarheadAS: FireShrapnel
+#        Weapon: DreadfireShrapnel
+#        Amount: 1
+#        AimChance: 0
+
+DreadfireShrapnel:
+    Inherits@wh: ^FireWH
+    Range: 5c512
+    Projectile: BulletAS
+        Speed: 0c128
+        LaunchAngle: 90
+        Image: flametrailer
+        TrailImage: flametrailer
+        TrailPalette: effect50alpha
+        Inaccuracy: 1c0
+    Warhead@1Dam: SpreadDamage
+        Spread: 1c512
+        Damage: 10
+    Warhead@2Eff: CreateEffect
+        Explosions: fire01a, fire02a, fire03a
+        ImpactSounds: flamtnk1.aud
+        ExplosionPalette: apolra50alpha
+    Warhead@3Smu: LeaveSmudge
+        SmudgeType: MediumScorch
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallScorch
+    Warhead@6Eff: CreateEffect
+        Explosions: medium_flash
+        ExplosionPalette: light2
+    WarheadAS: SpawnActor
+        Range: 1
+        Actors: Fire1, Fire1, Fire1
+        Owner: Creeps
 
 JaguarClaw:
     ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon

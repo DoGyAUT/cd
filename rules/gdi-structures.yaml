@@ -399,7 +399,7 @@ GAARMORY:
         OrderName: GrantFortificationPowerInfoOrder
         Icon: fortification
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         Description: Fortification
         LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction.
@@ -423,7 +423,7 @@ GAARMORY:
         Description: Artillery Strike
         LongDesc: Deploy an artillery strike to the destinated position.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         UnitType: artillery_beacon
         SquadSize: 3
@@ -461,9 +461,9 @@ GAARMORY:
         #BeaconPosterPalette: iconclock
     AirstrikePower@oxbomber:
         OrderName: OXBomberAirstrikePowerInfoOrder
-        Prerequisites: garadr, upgrade.st
+        Prerequisites: garadr, upgrade.zc
         Icon: orcaoxbomber
-        ChargeTime: 300
+        ChargeTime: 210
         QuantizedFacings: 8
         Description: OX-Sonic Bombing run
         LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
@@ -594,7 +594,7 @@ GADEPT:
         OrderName: EmergancyRepairsPowerInfoOrder
         Icon: emergencyrepairs
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         Description: Emergency Repairs
         LongDesc: Repairs vehicles and buildings in a specific radius.
@@ -647,7 +647,7 @@ GATECH:
         Description: Zone Commander drop
         LongDesc: Drops a Zone Commander with a squad of 2 Troopers and 2 Raiders.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -716,7 +716,7 @@ GADROP:
         Description: Poseidon tank drop
         LongDesc: Drops a Steel Talon tank battalion on the field.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True
@@ -734,7 +734,7 @@ GADROP:
         Description: Titan mech drop
         LongDesc: Drops a Steel Talon mech battalion on the field.
         SelectTargetSpeechNotification: SelectTarget
-        InsufficientPowerSpeechNotification: InsufficientPower
+        LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
         DisplayBeacon: true
         DisplayRadarPing: True

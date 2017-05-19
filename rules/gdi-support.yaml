@@ -4,7 +4,7 @@ GAWALL:
         Queue: Defense
         BuildPaletteOrder: 100
         Prerequisites: ~structures.gdi
-        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+        Description: Stops infantry and blocks enemy fire.
     SoundOnDamageTransition:
     Valued:
         Cost: 100
@@ -47,7 +47,7 @@ GASILO:
         Queue: Defense
         BuildPaletteOrder: 103
         Prerequisites: gproc, ~structures.gdi
-        Description: Stores excess Tiberium.\n\nStores 1000$.
+        Description: Stores excess Tiberium.\n\nStores 1500$.
     Valued:
         Cost: 200
     Tooltip:
@@ -349,10 +349,10 @@ GAMIS:
     Power:
         Amount: -50
     ProvidesPrerequisite@buildingname:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+#    RenderDetectionCircle:
+#    DetectCloaked:
+#        Range: 6c0
+#        CloakTypes: Cloak, Underground
     ProvidesPrerequisite@buildingname:
     
 GACAN:
