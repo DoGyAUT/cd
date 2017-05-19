@@ -31,7 +31,7 @@ SACNST:
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     Valued:
-        Cost: 2500
+        Cost: 3000
     Tooltip:
         Name: Master Hive
     -Sellable:
@@ -57,6 +57,16 @@ SACNST:
         Range: 16c0
     ActorLostNotification:
         Notification: CriticalStructureLost
+    ProvidesAIPrerequisite@AImoney:
+        Prerequisite: AImoney
+    GrantConditionOnPrerequisite@AImoney:
+        Condition: money
+        Prerequisites: AImoney
+    CashTrickler@AImoney:
+        Interval: 1000
+        Amount: 10000
+        ShowTicks: False
+        RequiresCondition: money
 
 SAPOWR:
     Inherits: ^Building
@@ -136,12 +146,9 @@ SPROC:
 #        Palette: effect
     Power:
         Amount: -50
-    Explodes:
-        Weapon: TiberiumExplosionRef
-        EmptyWeapon: TiberiumExplosionRef
     ProvidesPrerequisite@buildingname:
     CustomSellValue:
-        Value: 0
+        Value: 500
 
 SAPORTAL:
     Inherits: ^Building
