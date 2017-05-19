@@ -159,22 +159,16 @@ FBOMBER:
         Cost: 2500
     Tooltip:
         Name: Crapjet
-#    Buildable:
-#        Queue: Air.Forg
-#        BuildPaletteOrder: 401
-#        Prerequisites: ~fahpad, fatrade, ~!t1, ~!t2
-#        Description: Plane converted into a heavy bomber.\nLoaded with a massive amount of explosives,\nresulting in a devastating explosion when the plane crashes.\n  Strong vs Slow Targets\n  Weak vs Fast Targets\n  Useless vs Aircraft
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Selectable:
-        Bounds: 60,48,0,-10
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
     Aircraft:
         CruiseAltitude: 8192
-        TurnSpeed: 4
-        Speed: 130
+        TurnSpeed: 3
+        Speed: 200
     Health:
-        HP: 1200
+        HP: 2000
     RevealsShroud:
         Range: 15c0
         Type: GroundPosition
@@ -187,10 +181,8 @@ FBOMBER:
         ReloadDelay: 50
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-	Turreted: 
-        TurnSpeed: 360
-	AttackTurreted:
-    AutoTarget:
+    AttackBomber:
+        FacingTolerance: 20
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
@@ -206,18 +198,18 @@ FBOMBER:
 #        TrailWidth: 30
 #        Color: FFFFFF
 #        UsePlayerColor: False
-#    SmokeTrailWhenDamaged@0:
-#        Sprite: durasmoke
-#        Palette: apolra50alpha
-#        Offset: -200,628,480
-#        Interval: 2
-#        MinDamage: Undamaged
-#    SmokeTrailWhenDamaged@1:
-#        Sprite: durasmoke
-#        Palette: apolra50alpha
-#        Offset: -200,-628,480
-#        Interval: 2
-#        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@0:
+        Sprite: durasmoke
+        Palette: apolra50alpha
+        Offset: -200,628,480
+        Interval: 2
+        MinDamage: Undamaged
+    SmokeTrailWhenDamaged@1:
+        Sprite: durasmoke
+        Palette: apolra50alpha
+        Offset: -200,-628,480
+        Interval: 2
+        MinDamage: Undamaged
 #    Contrail@11:
 #        Offset: -200,1200,480
 #        TrailLength: 30
@@ -233,6 +225,7 @@ FBOMBER:
     SpawnActorOnDeath:
         Actor: FBOMBER.Husk
         Probability: 100
+    RejectsOrders:
 
 STRIKER:
     Inherits: ^AttackAdvancedPlane

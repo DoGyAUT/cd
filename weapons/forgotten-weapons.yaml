@@ -57,10 +57,9 @@ HuntressGun:
     ValidTargets: Ground, Air, MidAir, HighAir   
     ReloadDelay: 150
     Range: 7c0
-    MinRange: 2c0
     Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
     Projectile: BulletAS
-        Speed: 1c512
+        Speed: 1c768
         Inaccuracy: 0c64
         ContrailLength: 10
         ContrailColor: FFFFFF
@@ -122,20 +121,24 @@ BrigandShotgun2: #no sound version
     Inherits: BrigandShotgun
     Report:
     
-CrapjetBomb: #unused
+CrapjetBomb:
     Inherits: ^Bomb
+    Inherits@wh: ^HEAPWH
     ReloadDelay: 10
     Burst: 10
-    BurstDelay: 4
-    Range: 1c768
-    Projectile: GravityBomb
-        Speed: 200
+    BurstDelay: 2
+    Range: 2c768
+    Projectile: BulletAS
+        Speed: 0c256
         Image: shell01
         Shadow: true
         Palette: effect
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 325
+        Damage: 500
+        Versus:
+            Buildings: 30
+            Vehicles: 40
         
 BisonLauncher: #145mm + mg + LAUNCHER
     Inherits: ^ShellAP
@@ -273,11 +276,11 @@ WatchTowerMG:
 	Inherits@wh: ^BulletWH
     ReloadDelay: 70
     Range: 7c0
-    Report:
-    Burst: 7
-    BurstDelay: 1
+    Burst: 30
+    BurstDelay: 2
+    Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
     Projectile: BulletAS
-        Speed: 0c512
+        Speed: 1c0
         Inaccuracy: 0c256
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
@@ -285,22 +288,6 @@ WatchTowerMG:
     Warhead@2Eff: CreateEffect
         Explosions: gatpiff
         InvalidImpactTypes: Water
-        
-WatchTowerMGsound:
-    Inherits: ^Bullet 
-	Inherits@wh: ^BulletWH
-    ReloadDelay: 70
-    Range: 7c0
-    Report: cancerousmg.wav
-    Projectile: BulletAS
-        -Image: 
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-    -Warhead@2Eff: CreateEffect
-    -Warhead@3EffWater: CreateEffect
-    -Warhead@5Eff: CreateEffect
     
 ForgHECannon: # Gremlin / Taurus HE
     Inherits: ^ShellHE 
@@ -483,7 +470,7 @@ AurochMortar:
 RagnarokCannon:
     Inherits: ^ShellHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 400
+    ReloadDelay: 260
     Range: 14c0
     Report: artyfire2.aud
     Projectile: BulletAS
@@ -500,7 +487,7 @@ RagnarokCannon:
         Spread: 1c512
         Damage: 30
         Versus:
-            Building: 160
+            Building: 200
     Warhead@2Eff: CreateEffect
         Explosions: fireexpl
         ExplosionPalette: effect

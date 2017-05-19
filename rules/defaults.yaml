@@ -382,6 +382,13 @@
         RequiresCondition: gasdamage
     ExternalCondition@gasdamage:
         Condition: gasdamage
+    DamagedByTerrain@firedamage:
+        Damage: 20
+        DamageInterval: 16
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+        RequiresCondition: firedamage
+    ExternalCondition@firedamage:
+        Condition: firedamage
 
 ^Building:
     Inherits@1: ^BasicBuilding
@@ -686,7 +693,7 @@
         RequiresLobbyCreeps: True
     SpawnActorOnDeath@2:
         Actor: visc_sml
-        Probability: 100
+        Probability: 15
         OwnerType: InternalName
         InternalOwner: Creeps
         DeathType: TriggerSmallVisceroid
@@ -768,11 +775,19 @@
     DamagedByTerrain@TibGas:
         Damage: 10
         DamageInterval: 16
-        DamageTypes: TriggerVisceroid
+        DamageTypes: EnergyDeath, TriggerVisceroid
         Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
         RequiresCondition: gasdamage
     ExternalCondition@gasdamage:
         Condition: gasdamage
+    DamagedByTerrain@firedamage:
+        Damage: 10
+        DamageInterval: 8
+        DamageTypes: FireDeath
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+        RequiresCondition: firedamage
+    ExternalCondition@firedamage:
+        Condition: firedamage
 
 ^Soldier:
     Inherits@1: ^Infantry
@@ -1299,6 +1314,21 @@
         Modifier: 75
     ExternalCondition@fortification:
         Condition: fortification
+        
+^PowerBoostUpgrades:
+    WithDecoration@fortification:
+        Image: powerbufficon
+        Sequence: buff
+        ReferencePoint: Bottom, Right
+        Offset: 30, 0
+        ZOffset: 256
+        ValidStances: Ally, Neutral, Enemy
+        RequiresCondition: powerboost
+    PowerMultiplier@powerboost:
+        Modifier: 200
+        RequiresCondition: powerboost
+    ExternalCondition@fortification:
+        Condition: powerboost
  
 ^EmergencyRepairsUpgrades:
     WithDecoration@Erepairs:
@@ -1465,6 +1495,13 @@
         RequiresCondition: gasdamage
     ExternalCondition@gasdamage:
         Condition: gasdamage
+    DamagedByTerrain@firedamage:
+        Damage: 10
+        DamageInterval: 16
+        Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+        RequiresCondition: firedamage
+    ExternalCondition@firedamage:
+        Condition: firedamage
 
 ^LightVehicle
     Crushable:
@@ -1512,7 +1549,7 @@
     GrantConditionOnMovement@tracks:
         Condition: tracks
     AmbientSound@tracks:
-        SoundFile: tankmove1.aud
+        SoundFiles: tankmove1.aud
         Delay: 1
         Interval: 250
         RequiresCondition: tracks || !nottracks
@@ -1596,7 +1633,7 @@
             Bridge: 100
             Rail: 100
             DirtRoad: 90
-            Rough: 70
+            Rough: 90
             Green: 90
             Tiberium: 70
             BlueTiberium: 70
@@ -1960,6 +1997,58 @@
         ValidStances: Ally, Neutral, Enemy
         Range: 3c0
 
+^FireActor:
+    Inherits@1: ^ExistsInWorld
+    Inherits@2: ^SpriteActor
+    Health:
+        HP: 100
+        Shape: Circle
+            Radius: 256
+            VerticalTopOffset: 512
+    Mobile:
+        Speed: 50
+        TurnSpeed: 16
+        SharesCell: yes
+        TerrainSpeeds:
+            Clear: 100
+            Road: 100
+            Bridge: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Green: 100
+            Tiberium: 100
+            BlueTiberium: 100
+            RedTiberium: 100
+            Veins: 100
+            Water: 100
+    RenderSprites:
+        Palette: effect25alpha
+    RevealsShroud:
+        Range: 1c0
+        MaxHeightDelta: 3
+    SelectionDecorations:
+        SelectionBoxColor: 00FF00
+        Palette: pips
+    WithTextControlGroupDecoration:
+    HiddenUnderFog:
+    WithSpriteBody:
+    Selectable:
+    GrantPeriodicCondition@kill:
+        Condition: killfire
+        CooldownDuration: 500
+        ActiveDuration: 200
+    Explodes:
+        Weapon: NapalmShrapnelSmudge
+        EmptyWeapon: NapalmShrapnelSmudge
+    KillsSelf:
+        RequiresCondition: killfire
+        Delay: 0,80
+    ProximityExternalCondition@firedamage:
+        Condition: firedamage
+        ValidStances: Ally, Neutral, Enemy
+        Range: 3c0
+
 ^BlossomTree:
     Inherits@1: ^SpriteActor
     Tooltip:
@@ -1978,22 +2067,10 @@
         ResourceType: Tiberium
         Interval: 110
     WithIdleAnimation:
-    AmbientSound@floater1:
-        SoundFile: floatmov.aud
-        Delay: 250,1000
-        Interval: 250,1000
-    AmbientSound@floater2:
-        SoundFile: floatmov2.aud
-        Delay: 250,1000
-        Interval: 250,1000
-    AmbientSound@floater3:
-        SoundFile: floatmov3.aud
-        Delay: 250,1000
-        Interval: 250,1000
-    AmbientSound@floater4:
-        SoundFile: floatmov4.aud
-        Delay: 250,1000
-        Interval: 250,1000
+#    AmbientSound:
+#        SoundFiles: floatmov.aud, flotmov2.aud, flotmov3.aud, flotmov4.aud
+#        Delay: 150, 450
+#        Interval: 300, 800
 
 ^Tree:
     Inherits@1: ^SpriteActor

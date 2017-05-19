@@ -5,7 +5,7 @@ HUSK:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~cybbar
-        Description: Role : General-purpose infantry\nHP: 250\nArmor: Medium\nSpeed: 50\nViewrange: 8\nGood vs: Infantry\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
+        Description: Cabals standard infantry production type.\n\nGood vs: infantry\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire
     Valued:
         Cost: 200
     Tooltip:
@@ -47,7 +47,7 @@ HHUSK:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 301
         Prerequisites: ~cybbar
-        Description: Role : Basic Anti-Armor infantry\nHP: 200\nArmor: Medium\nSpeed: 50\nViewrange: 9\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
+        Description: Cabals standard infantry production type.\n\nGood vs: vehicles\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire
     Valued:
         Cost: 300
     Tooltip:
@@ -170,7 +170,7 @@ KENGINEER:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 305
         Prerequisites: ~cybbar
-        Description: Role : Engineer\nHP: 300\nArmor: Medium\nSpeed: 50\nViewrange: 6\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Building Catapture
+        Description: Cabals tool cyborg.\n\nGood vs: buildings\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- can capture buildings\n- can repair buildings
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
@@ -251,7 +251,7 @@ OVERSEER:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 306
         Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Role : Advanced Cyborg\nHP: 600\nArmor: Medium\nSpeed: 50\nViewrange: 8\nGood vs: Infantry\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Buffs other infantry units
+        Description: Cabals advanced infantry production type.\n\nGood vs: infantry\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- buffs other cyborgs around him in accuracy and attackspeed\n- stealth detection
     Valued:
         Cost: 500
     Tooltip:
@@ -294,7 +294,7 @@ CYBFLY:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 307
         Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Role : Airborne infantry\nHP: 300\nArmor: Light\nSpeed: 180\nViewrange: 10\nGood vs: Infantry, Vehicles, Vtols\nUseless vs: Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines
+        Description: Cabals infantry production type adjusted with jet packs and lasers.\n\nGood vs: everything except jets\n\nSpecial:\n- flys\n- can attack Vtols\n- stealth detection
     Selectable:
         Bounds: 12,17,0,-14
     Voiced:
@@ -325,6 +325,10 @@ CYBFLY:
         MuzzlePalette: effect50alpha
         LocalOffset: 400,64,600, 400,-64,600
     -DamagedByTerrain@Tiberium:
+    -SpawnActorOnDeath@1:
+    -SpawnActorOnDeath@2:
+    -SpawnActorOnDeath@Corruptor:
+    -SpawnActorOnDeath@Infected:
     AmmoPool:
         Name:primary
         Ammo: 20
@@ -341,6 +345,9 @@ CYBFLY:
         MoveSequence: fly
         DefaultAttackSequence: shoot-air
         IdleSequences: stand-air
+    DetectCloaked:
+        Range: 6c0
+    RenderDetectionCircle:    
     BodyOrientation:
     WithShadow:
     # Contrail@1:
@@ -369,7 +376,7 @@ CYC2:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 308
         Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2
-        Description: Role : Heavy Infantry\nHP: 900\nArmor: Heavy\nSpeed: 50\nViewrange: 10\nGood vs: Infantry, Vehicles, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - SelfHealing
+        Description: Cabals advanced heavy infantry production type.\n\nGood vs: ground units\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- selfhealing
     Selectable:
         Bounds: 24,34,0,-9
         Class: CYC2
@@ -415,7 +422,7 @@ GLAD:
         BuildPaletteOrder: 309
         BuildLimit: 1
         Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3, ~!glad
-        Description: Role : Epic Cyborg\nHP: 2000\nArmor: Heavy\nSpeed: 50\nViewrange: 11\nGood vs: Everything\n\nSpecial:\n - SelfHealing
+        Description: Cabals heroic cyborg that announces his masters presence.\n\nGood vs: everything\n\nSpecial:\n- cannot be crushed by heavy vehicles and below\n- receives only 50% damage from fire\n- stealth detection\n- selfhealing\n- can attack air
     Selectable:
         Bounds: 24,34,0,-9
         Class: GLAD
