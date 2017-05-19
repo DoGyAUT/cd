@@ -4,7 +4,7 @@ FAWALL:
         Queue: Defense
         BuildPaletteOrder: 400
         Prerequisites: ~structures.forgotten
-        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+        Description: Stops infantry and blocks enemy fire.
     SoundOnDamageTransition:
     Valued:
         Cost: 100
@@ -47,7 +47,7 @@ FASILO:
         Queue: Defense
         BuildPaletteOrder: 403
         Prerequisites: fproc, ~structures.forgotten
-        Description: Stores excess Tiberium.\n\nStores 1000$.
+        Description: Stores excess Tiberium.\n\nStores 1500$.
     Valued:
         Cost: 200
     Tooltip:
@@ -157,9 +157,9 @@ FAFLAK:
     WithSpriteTurret:
     WithMuzzleOverlay:
     ProvidesPrerequisite@buildingname:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
+#    RenderDetectionCircle:
+#    DetectCloaked:
+#        Range: 6c0
     ProvidesPrerequisite@buildingname:
 
 FAMISSILE:

@@ -4,7 +4,7 @@ NAWALL:
         Queue: Defense
         BuildPaletteOrder: 200
         Prerequisites: ~structures.nod, ~ideology
-        Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+        Description: Stops infantry and blocks enemy fire.
     SoundOnDamageTransition:
     Valued:
         Cost: 100
@@ -47,7 +47,7 @@ NASILO:
         Queue: Defense
         BuildPaletteOrder: 203
         Prerequisites: nproc, ~structures.nod, ~ideology
-        Description: Stores excess Tiberium.\n\nStores 1000$.
+        Description: Stores excess Tiberium.\n\nStores 1500$.
     Valued:
         Cost: 200
     Tooltip:
@@ -312,10 +312,10 @@ NASAM:
     Cloak:
         RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
     WithMuzzleOverlay:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+#    RenderDetectionCircle:
+#    DetectCloaked:
+#        Range: 6c0
+#        CloakTypes: Cloak, Underground
     ProvidesPrerequisite@buildingname:
 
 NABUNKER:
@@ -474,7 +474,7 @@ NAPULS:
         ArmamentName: superweapon
         Cursor: emp
         Icon: emp
-        ChargeTime: 60
+        ChargeTime: 150
         Description: E.M. Pulse
         LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
         EndChargeSpeechNotification: EmPulseCannonReady

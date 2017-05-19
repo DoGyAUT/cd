@@ -4,7 +4,7 @@ KMCV:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~kaweap, karadr
-        Description: The heart of any base.\nProvides a build radius for structures.\n\nRole : MCV\nHP: 1000\nArmor: Heavy\nSpeed: 85\nViewrange: 6
+        Description: The heart of any Cabal base.\n\nSpecial:\n- provides a build radius for structures\n- crushes infantry\n- crushes light vehicles
     Valued:
         Cost: 3000
     Tooltip:
@@ -50,7 +50,7 @@ KHARV:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 301
         Prerequisites: kproc, ~kaweap
-        Description: Collects Tiberium for processing.\nFast hovering harvester with small storage.\n\n  Role: Harvester\n  HP: 700\n  Armor: Medium\n  Speed: 80\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (10 Capacity)\n - Immune to Veins\n - Hovers
+        Description: Supplys Cabals refineries with Tiberium.\n\nSpecial:\n- harvests tiberium\n- crushes infantry\n- crushes light vehicles\n- can hover
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -121,7 +121,7 @@ DREADFIRE:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 303
         Prerequisites: ~kaweap, karadr
-        Description: Heavy walker equipped with double flamethrowers.\n\nRole : Anti-infantry Walker\nHP: 1200\nArmor: Medium\nSpeed: 60\nViewrange: 6\nGood vs: Infantry, Buildings\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Huge AoE damage
+        Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: infantry, buildings\n\nSpecial:\n- crushes infantry\n- crushes light vehicles
     Mobile:
         TurnSpeed: 5
         Speed: 50
@@ -175,7 +175,7 @@ REAPER:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 304
         Prerequisites: ~kaweap
-        Description: Fast infantry hunting cybernetic spider-human hybrid.\nEquipped with a netthrower and multipurpose missiles.\n\nRole : Assault Walker\nHP: 1000\nArmor: Light\nSpeed: 85\nViewrange: 11\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial: \n - Net attack
+        Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: vehicles, air\n\nSpecial:\n- can attack air\n- can net infantry (stunning them)\n- stealth detection
     Mobile:
         TurnSpeed: 8
         Speed: 75
@@ -236,7 +236,7 @@ GOLEM:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 305
         Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Heavy walker equipped with repairing tools.\n\nRole : Repair Walker\nHP: 400\nArmor: Heavy\nSpeed: 50\nViewrange: 6\n\nSpecial: \n - Repairs nearby units
+        Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- repairs vehicles and cyborgs with an aoe effect\n- can directly repair vehicles
     Mobile:
         TurnSpeed: 3
         Speed: 55
@@ -288,7 +288,7 @@ TARANTULA:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 306
         Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Anti-Air mechanized walker armed with lasers.\n\nRole : Anti Air Walker\nHP: 800\nArmor: Medium\nSpeed: 70\nViewrange: 13\nGood vs: Vtols, Jets\nUseless vs: Bomber
+        Description: Anti-Air mechanized walker armed with lasers.\n\nGood vs: air\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- can attack air
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -348,7 +348,7 @@ SILVER:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 307
         Prerequisites: ~kaweap, kabtech
-        Description: Hovering artillery armed with\nlong range twin plasma bomb launchers.\n\nRole : Hovering Artillery\nHP: 500\nArmor: Light\nSpeed: 80\nViewrange: 10\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Hovers
+        Description: Hovering transport.\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- hovers\n- can transport infantry\n- infantry can shoot out of it
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -363,7 +363,7 @@ SILVER:
             DirtRoad: 100
             Rough: 100
             Green: 100
-            Water: 100
+            Water: 80
             Tiberium: 100
             BlueTiberium: 100
             RedTiberium: 100
@@ -400,7 +400,7 @@ KRONOS:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 308
         Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
-        Description: Super heavy battle tank, capable of crossing water.\nEquipped with a anti armor railgun.\n\nRole : Hovering Heavy Tank\nHP: 1600\nArmor: Heavy\nSpeed: 50\nViewrange: 10\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Amphibious
+        Description: Super heavy battle tank capable of crossing water.\n\nGood vs: ground units\n\nSpecial:\n- crushes infantry\n- crushes cyborgs\n- crushes medium vehicles and lower\n- hovers
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -408,7 +408,7 @@ KRONOS:
         Speed: 40
         TurnSpeed: 3
         TerrainSpeeds:
-            Water: 80
+            Water: 50
     Health:
         HP: 2080
     RevealsShroud:
