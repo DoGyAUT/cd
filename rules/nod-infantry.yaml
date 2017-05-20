@@ -7,7 +7,7 @@ NASOL:
         Queue: Infantry.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~nahand, ~!upgrade.mass, ~!technology
-        Description: Nod's basic combat infantry.\n\n Role: Infantry\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 8c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Elite weapon on veterancy rank 5\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Costs get halved with Mass Recruitment (Propaganda)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Description: Nod's basic combat infantry.\n\nGood vs: Infantry\n\nSpecial:\n- Tiberium Infusion (Industry)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Infantry
     Valued:
         Cost: 60
     Tooltip:
@@ -56,7 +56,7 @@ E3:
         Queue: Infantry.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~nahand, ~!upgrade.mass
-        Description: Nod Soldiers armed with a Rocket Launcher.\n\n Role: Anti Tank/Air\n HP: 125\n Armor: Light\n Speed: 60\n Viewrange: 9c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special: \n - Can attack Air\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Tiberium Gas Missiles increases the damage (Industry)\n - Can be stealthed with Stealth Emitter (Technology Nod)\n - Costs get halved with Mass Recruitment (Propaganda)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Description: Nod Soldiers armed with a Rocket Launcher.\n\nGood vs: Vehicles\n\nSpecial:\n- Can attack Air\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology Nod)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Infantry
     Valued:
         Cost: 250
     Tooltip:
@@ -105,7 +105,7 @@ CHAMSPY:
         Queue: Infantry.Nod
         BuildPaletteOrder: 206
         Prerequisites: ~nahand, napyra, ~technology
-        Description: Technology Nod´s unarmed and invisible agent. Can steal money and sabotage specific buildings.\n\n Role: Infiltrator\n HP: 100\n Armor: Light\n Speed: 80\n Viewrange: 12c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Stealthed\n - Huge Vision Range\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Description: Technology Nod´s unarmed and invisible agent.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Can steal money out of refineries and silos\n- Can sabotage power\n- Huge vision range\n- Crush class: Infantry
     Valued:
         Cost: 1000
     Tooltip:
@@ -197,7 +197,7 @@ NENGINEER:
         Queue: Infantry.Nod
         BuildPaletteOrder: 205
         Prerequisites: ~nahand
-        Description: Nod´s basic engineering unit.\n\n Role: Engineer\n HP: 250\n Armor: Light\n Speed: 60\n Viewrange: 6c0\n\n Good vs Buildings\n Useless vs Everything else\n\n Special:\n - Capture buildings\n - Repairs damaged buildings\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Can be stealthed with Stealth Emitter (Technology Nod)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Description: Nod´s basic engineering unit.\n\nGood vs: Buildings\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology)\n- Nanofiber Armor (Propaganda)\n- Crush class: Infantry
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
@@ -283,7 +283,7 @@ NACAD:
         Queue: Infantry.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~nahand, ~technology
-        Description: Requires Technology Nod Doctrine.\n\n Advanced combat infantry from Technology Nod.\n\n Role: Advanced Infantry\n HP: 360\n Armor: Medium\n Speed: 70\n Viewrange: 10c0\n\n Good vs Infantry, Cyborgs\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Can be stealthed with Stealth Emitter (Technology Nod)
+        Description: Advanced combat infantry from Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth Emitter (Technology Nod)\n- Crush class: Infantry
     Valued:
         Cost: 150
     Tooltip:
@@ -324,7 +324,7 @@ NCONF:
         Queue: Infantry.Nod
         BuildPaletteOrder: 207
         Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
-        Description: Requires Propaganda Nod Doctrine.\n\n Black Hand Soldiers armed with a Combat Rifle, Grenade Launcher and enhance surrounding Nod Soldiers.\n\n Role: Advanced Infantry\n HP: 400\n Armor: Medium\n Speed: 70\n Viewrange: 8c0 \n\n Good vs Infantry, Cyborgs\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Buffs friendly Nod Soldiers in damage and attackspeed\n - Detects Stealth\n\n Upgrades:\n - Gain damage reduction with Nanofiber Armor (Propaganda)
+        Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Nod Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Infantry
     Valued:
         Cost: 850
     Tooltip:
@@ -376,7 +376,7 @@ SHADOW:
         Queue: Infantry.Nod
         BuildPaletteOrder: 208
         Prerequisites: ~nahand, naradr, ~technology
-        Description: Requires Technology Nod Doctrine.\n\n Advanced Infantry for Technology Nod.\n\n Role: Advanced Infantry\n HP: 160\n Armor: Medium\n Speed: 80\n Viewrange: 11c0 \n\n Good vs Infantry, Cyborgs, Vehicles, Vtol´s\n Useless vs Jets, Bombers\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)\n - Can be stealthed with Stealth Emitter (Technology)
+        Description: Advanced sniper for Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Stealth Emitter (Technology)\n- Crush class: Infantry
     Valued:
         Cost: 800
     Tooltip:
@@ -425,7 +425,7 @@ BHAND:
         Queue: Infantry.Nod
         BuildPaletteOrder: 207
         Prerequisites: ~nahand, naradr, ~propaganda
-        Description: Requires Propaganda Nod Doctrine.\n\n Nod´s Heavy Soldiers armed with a Flame Thrower.\n\n Role: Heavy Infantry\n HP: 800\n Armor: Heavy\n Speed: 60\n Viewrange: 9c0\n\n Good vs Infantry, Cyborgs, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Immune to Tiberium radiation\n - Explode on death\n - Cannot be crushed by Medium Tanks and Light Vehicles\n\n Upgrades:\n - Gain damage reduction with Nanofiber Armor (Propaganda)\n - Gain more damage with Bluehell Inferno (Propaganda)
+        Description: Nod´s Heavy Soldiers armed with a Flame Thrower.\n\nGood vs: Infantry, Buildings\n\n Special:\n- Immune to tiberium radiation\n- Nanofiber Armor (Propaganda)\n- Bluehell Inferno (Propaganda)\n- Crush class: Medium Infantry
     Valued:
         Cost: 600
     Tooltip:
@@ -485,7 +485,7 @@ TIBTROOPER:
         Queue: Infantry.Nod
         BuildPaletteOrder: 208
         Prerequisites: ~nahand, napyra, ~industry
-        Description: Requires Industry Nod Doctrine.\n\n Advanced Infantry for Industry Nod armed with a Tiberium infused rifles.\n\n Role: Advanced Infantry\n HP: 500\n Armor: Medium\n Speed: 70\n Viewrange: 9c0\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Immune to Tiberium radiation\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)
+        Description: Advanced infantry for Industry Nod armed with a Tiberium infused rifle.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Immune to tiberium radiation\n- Weapon can create visceroids\n- Tiberium Infusion (Industry)\n- Crush class: Infantry
     Valued:
         Cost: 800
     Tooltip:

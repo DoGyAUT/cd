@@ -8,7 +8,7 @@ VENOM:
         Queue: Air.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~nahpad, ~technology
-        Description: Nod's basic Vtol unit.\n\n Role: Vtol\n HP: 350\n Armor: Light\n Speed: 140\n Viewrange: 10c0\n\n Good vs Infantry, Cyborgs\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)
+        Description: Technology Nod's basic Vtol unit.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -84,7 +84,7 @@ HYDRA:
         Queue: Air.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~nahpad, ~industry
-        Description: Requires Industry Nod Doctrine.\n\n Advanced Vtol unit from Industry Nod.\n\n Role: Vtol\n HP: 500\n Armor: Medium\n Speed: 90\n Viewrange: 11c0\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Upgrades:\n - Receives a Tiberium Laser Weapon with Tiberium Laser Upgrade (Industry)
+        Description: Advanced Vtol unit from Industry Nod.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -269,7 +269,7 @@ NODCARRY:
         Queue: Air.Nod
         BuildPaletteOrder: 203
         Prerequisites: ~nahpad
-        Description: Requires Propaganda Nod Doctrine.\n\n Transport Vtol unit from Technology Nod.\n\n Role: Vtol\n HP: 700\n Armor: Light\n Speed: 90\n Viewrange: 9c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Has 10 slots for soldiers or for 2 vehicles.
+        Description: Transport Vtol unit from Nod.\n\nSpecial:\n- Has slots for 10 soldiers or for 2 vehicles
     Voiced:
         VoiceSet: Venom
         Volume: 2
@@ -403,7 +403,7 @@ RAVEN:
         Queue: Air.Nod
         BuildPaletteOrder: 203
         Prerequisites: ~nahpad, ~!t1, ~!technology
-        Description: Nod´s basic Anti Air Jet.\n\n Role: Jet\n HP: 1000\n Armor: Light\n Speed: 210\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses a MarineGun
+        Description: A Jet equiped with 2 napalm rockets. Available for Industry and Propaganda Nod.\n\nGood vs: Infantry, Buildings, Air\n\nSpecial:\n- Can shoot air and ground\n- Tiberium Weapons Research (Industry)\n- Blue Hell Inferno (Propaganda)
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -513,7 +513,7 @@ SCRINB:
         Queue: Air.Nod
         BuildPaletteOrder: 204
         Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~technology
-        Description: Requires Technology Nod Doctrine.\n\n Advanced Anti Air Jet from Technology Nod.\n\n Role: Jet\n HP: 1300\n Armor: Medium\n Speed: 200\n Viewrange: 14c0\n\n Good vs Vtols, Jets, Bombers\n Useless vs Ground\n\n Special:\n - Uses photon weapons that do AoE damage.
+        Description: Advanced Jet of Technology Nod.\n\nGood vs: Everything\n\nSpecial:\n- Can shoot air and ground\n- Does not need to reload
     Selectable:
         Bounds: 60,48
     Voiced:
@@ -691,7 +691,7 @@ ZODIAC:
         Queue: Air.Nod
         BuildPaletteOrder: 206
         Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~propaganda
-        Description: Requires Propaganda Nod Doctrine.\n\n Zeppelin that enhances nearby Nod Soldiers and is armed with lasers.\n\n Role: Bomber\n HP: 3500\n Armor: Heavy\n Speed: 20\n Viewrange: 14c0\n\n Good vs Ground\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Enhances damage and attackspeed of nearby Nod soldiers
+        Description: Propaganda Nod´s Battleship that weakens enemy forces and is armed with high explosive bombs.\n\nGood vs: Ground\n\nSpecial:\n- Lowers movementspeed and attackspeed of nearby enemy soldiers\n- Crashes with high AOE on the ground upon death 
     Voiced:
         VoiceSet: Venom
         Volume: 2

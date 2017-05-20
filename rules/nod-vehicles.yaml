@@ -4,7 +4,7 @@ NMCV:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~naweap, naradr
-        Description: The heart of any Nod base.\n\n Provides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Crushes Light Vehicles\n - Cannot be sold
+        Description: The heart of any Nod base.\n\nSpecial:\n- Provides a build radius for structures\n- Crush class: Medium vehicle
     Valued:
         Cost: 3000
     Tooltip:
@@ -48,7 +48,7 @@ NIHARV:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 201
         Prerequisites: niproc, ~industry, ~naweap
-        Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
+        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Has a Tiberium weapon\n- Crush class: Medium vehicle\n- Immune to Veins
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -109,7 +109,7 @@ NTHARV:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 201
         Prerequisites: ntproc, ~technology, ~naweap
-        Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
+        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Stealth\n- Crush class: Medium vehicle\n- Immune to Veins
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -163,7 +163,7 @@ NPHARV:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 201
         Prerequisites: npproc, ~propaganda, ~naweap
-        Description: Collects Tiberium for processing.\n\n Average fast harvester with medium storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n Ueless vs Everything\n\n Special:\n - Tiberium Storage 700$\n - Self healing\n - Crushes infantry\n - Crushes light vehicles\n - Immune to Veins\n\n Upgrades:\n - Can be stealthed with Stealth Emitters (Technology)
+        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Special plating (25% more durable)\n- Crush class: Medium vehicle\n- Immune to Veins
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -218,7 +218,7 @@ SAPC:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 202
         Prerequisites: ~naweap, ~!t1, ~industry
-        Description: Requires Industry Nod Doctrine.\n\n Industry Nod´s subterranean transport unit.\n\n Role: Light Vehicle\n HP: 600\n Armor: Light\n Speed: 71\n Viewrange: 6c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Subterranean Movement\n - 8 slots\n - Crushes infantry\n - Crushes light vehicles
+        Description: Industry Nod´s subterranean transport unit.\n\nGood vs: Nothing\n\nSpecial:\n- Subterranean movement\n- 8 slots for infantry\n- Crush class: Light vehicle
     Voiced:
         VoiceSet: SAPC    
         Volume: 5
@@ -295,7 +295,7 @@ BGGY:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 203
         Prerequisites: ~naweap, ~technology
-        Description: Nod´s fast scout and anit infantry vehicles.\n\n Role: Light Vehicle\n HP: 450\n Armor: Light\n Speed: 142\n Viewrange: 8c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers
+        Description: Technology Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
     Voiced:
         VoiceSet: Buggy    
         Volume: 2
@@ -357,7 +357,7 @@ GORRAN:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 203
         Prerequisites: ~naweap, ~industry
-        Description: Fast tank from Industry Nod.\n\n Role: Medium Tank\n HP: 500\n Armor: Medium\n Speed: 90\n Viewrange: 8c0\n\n Good vs Infantry, Cyborgs, buidlings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Crushes infantry\n - Crushes light vehicles
+        Description: Industry Nod´s fast and versatile light tank.\n\nGood vs: Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
@@ -418,7 +418,7 @@ BIKE:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 204
         Prerequisites: ~naweap, ~propaganda
-        Description: Fast motorbike armed with rockets.\n\n Role: Light Vehicle\n HP: 300\n Armor: Light\n Speed: 170\n Viewrange: 10c0\n\n Good vs Vehicles, Vtols, Jets,\n Useless vs Bombers\n\n Special:\n - Can attack Vtols\n - Can attack Jets
+        Description: Fast motorbike armed with rockets available for Propaganda Nod only\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack air\n- Crush class: Light vehicle
     Voiced:
         VoiceSet: Buggy
         Volume: 2
@@ -457,7 +457,7 @@ CHEETAH:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 205
         Prerequisites: ~naweap, naradr, ~technology
-        Description: Requires Technology Nod Doctrine.\n\n A standard frontline Tank for Technology Nod.\n Role: Medium Tank\n HP: 1500\n Armor: Medium\n Speed: 90\n Viewrange: 11c0\n\n Good vs Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Stealthed\n - Can crush infantry\n - Can crush light vehicles
+        Description: A standard frontline Tank for Technology Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
@@ -509,7 +509,7 @@ REPAIR:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 204
         Prerequisites: ~naweap, naradr
-        Description: Requires Industry Nod Doctrine.\n\n The medium tank in the arsenal of Industry Nod.\n\n Role: Medium Tank\n HP: 1400\n Armor: Medium\n Speed: 75\n Viewrange: 11c0\n\n Good vs Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special: \n - Can deploy into an immobile state where it uses a strong cannon with slow rate of fire\n - Gains 400 HP more and heavy armor\n - Can crush infantry\n - Can crush light vehicles
+        Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Crush class: Light vehicle
     Voiced:
         VoiceSet: Cabalbeep
         Volume: 2
@@ -563,7 +563,7 @@ FTNK:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 206
         Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
-        Description: Requires Propaganda Nod Doctrine.\n\n 
+        Description: A flame tank that purifies the enemys of Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Explodes upon death\n- Blue Hell Inferno (Technology)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Devil
         Volume: 2
@@ -645,7 +645,8 @@ RECKONER:
     AutoTarget:
 
 TERMITE: #wip
-    Inherits: ^VoxelVehicle
+    Inherits@1: ^VoxelTank
+    Inherits@2: ^HeavyVehicle
     Valued:
         Cost: 1600
     Tooltip:
@@ -654,7 +655,7 @@ TERMITE: #wip
         Queue: Vehicle.Nod
         BuildPaletteOrder: 207
         Prerequisites: ~naweap, napyra, ~!t1, ~industry
-        Description: Requires Industry Nod Doctrine.\n\n The medium tank in the arsenal of Industry Nod.\n\n Role: Medium Tank\n HP: 1600\n Armor: Medium\n Speed: 75\n Viewrange: 11c0\n\n Good vs Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special: \n - Can deploy into an immobile state where it uses a strong cannon with slow rate of fire\n - Gains heavy armor when deployed.\n - Can crush infantry\n - Can crush light vehicles
+        Description: The siege tank in the arsenal of Industry Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Gains selfheal upon deploying\n- Can deploy into an immobile state\n- Gains more durability when deployed\n- Projectile causes cluster explosions\n- Crush class: Heavy vehicle
     Selectable:
         Bounds: 42,42, 0, -5
     Voiced:
@@ -740,8 +741,7 @@ TERMITE: #wip
         UndeployTicks: 450
 
 HAILSTORM:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^LightVehicle
+    Inherits@: ^VoxelVehicle
     Valued:
         Cost: 2000
     Tooltip:
@@ -752,7 +752,7 @@ HAILSTORM:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 208
         Prerequisites: ~naweap, napyra, ~!t1, ~industry
-        Description: Requires Industry Nod Doctrine.\n\n Fast moving vehicle armed with a long range rocket launcher.\n\n Role: Light Vehicle\n HP: 500\n Armor: Light\n Speed: 100\n Viewrange: 14c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special:\n - Can attack Vtols\n - Can attack Jets\n - Can crush infantry\n\n Upgrades:\n - Tiberium Gas that enhances the damage of Hailstorms (Industry)
+        Description: Industry Nod´s artillery armed with a long range rocket launcher.\n\nGood vs Air (undeployed) or Vehicles, Buildings (deployed)\n\nSpecial:\n- Can attack air when undeployed\n- Can attack ground when deployed\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Cheetah
         Volume: 2
@@ -843,7 +843,7 @@ NHWTZ:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 209
         Prerequisites: ~naweap, napyra, ~!t1, ~!industry
-        Description: The long range artillery of Nod that can be upgraded to a far greater threat. \n\n Role: Artillery\n HP: 500\n Armor: Light\n Speed: 71\n Viewrange: 12c0\n\n Good vs Ground\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - It has to deploy to attack\n - Immobile while being deployed\n - Can crush infantry\n - Can crush Light Vehicles\n\n Upgrades:\n - Tiberium Gas enhances its AoE damage (Industry)\n - Can be stealthed via Stealth Emitter (Technology)\n - Uses EMP shells on EMP Tech (Technology)\n - Damage gets enahanced via Blue Hell Inferno (Propaganda)
+        Description: The long range artillery of Technology and Propaganda Nod that can be upgraded to a far greater threat.\n\nGood vs: Ground\n\nSpecial:\n- It has to deploy to attack\n- Immobile while being deployed\n- Stealth Emitter (Technology)\n- EMP Tech (Technology)\n- Blue Hell Inferno (Propaganda)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Specter
         Volume: 1
@@ -947,7 +947,7 @@ SUBTANK:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 210
         Prerequisites: ~naweap, naradr, ~!t1, ~industry
-        Description: Requires Industry Nod.\n\n Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\n Role: Medium Tank\n HP: 800\n Armor: Medium\n Speed: 71\n Viewrange: 9c0\n\n Good vs Infantry, Cyborgs, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Subterranean movement\n - Can crush infantry\n - Can crush light vehicles
+        Description: Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Subterranean movement\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Devil
         Volume: 2
@@ -1028,7 +1028,7 @@ STNK:
         BuildPaletteOrder: 208
         Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~technology
         Queue: Vehicle.Nod
-        Description: Requires Technology Nod Doctrine.\n\n Stealthed tank used for hit and run tactics and armed with rocket launchers.\n\n Role: Medium Tank\n HP: 700\n Armor: Medium\n Speed: 120\n Viewrange: 13c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special:\n - Stealthed\n - Can attack Vtols\n - Can attack Jets\n - Can crush infantry\n - Can crush light vehicles\n\n Upgrades:\n - Receives a Laser Weapon with Improved Laser Emitter (Technology)
+        Description: Stealthed tank used for hit and run tactics and armed with rocket launchers.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Stealth\n- Can attack air\n- EMP Tech (Technology)\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Stnk
         Volume: 2
@@ -1126,7 +1126,7 @@ AVATAR:
         Queue: Vehicle.Nod
         BuildPaletteOrder: 212
         Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~propaganda
-        Description: Requires Propaganda Nod Doctrine.\n\n Heavy Walker armed with a strong laser and enhances all Nod Soldiers on the battlefield.\n\n Role: Heavy Tank\n HP: 1400\n Armor: Heavy\n Speed: 65\n Viewrange: 15c0\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Enhances the damage of all Nod Soliders by 20%\n - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush Medium Tanks
+        Description: Heavy Walker armed with a strong laser and enhances all Nod Soldiers on the battlefield.\n\nGood vs: Ground\n\nSpecial:\n- Enhances the damage of all Nod Soliders\n- Crush class: Heavy vehicle
     Voiced:
         VoiceSet: Avatar
         Volume: 2

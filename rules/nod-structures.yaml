@@ -9,7 +9,7 @@ NACNST:
         BuildPaletteOrder: 200
         Prerequisites: ~disabled
         Adjacent: 8
-        Description: Builds base structures.
+        Description: Builds base structures.\n\nSpecial:\n- Provides minimap.
     Health:
         HP: 5200
     RevealsShroud:
@@ -113,7 +113,7 @@ NAAPWR:
         Queue: Building
         BuildPaletteOrder: 201
         Prerequisites: ~industry, ~structures.nod, ~ideology
-        Description: Provides twice as much power as the normal Power Plant.\nExclusive to the Industry Ideology.
+        Description: Provides much more power than the normal Power Plant. Exclusive to the Industry Ideology.
     Valued:
         Cost: 800
     Tooltip:
@@ -159,7 +159,7 @@ NIPROC:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
-        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
+        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
@@ -217,7 +217,7 @@ NTPROC:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
-        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
+        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
     FreeActor:
         Actor: NTHARV
         SpawnOffset: 2,1
@@ -235,7 +235,7 @@ NPPROC:
         Queue: Building
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
-        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
+        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
     FreeActor:
         Actor: NPHARV
         SpawnOffset: 2,1
@@ -386,7 +386,7 @@ NARADR:
         Queue: Building
         BuildPaletteOrder: 206
         Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)
     Valued:
         Cost: 1500
     Tooltip:
@@ -446,7 +446,7 @@ NARADR:
         #BeaconPosterPalette: iconclock
     GrantExternalConditionPower@frenzy:
         Description: Frenzy
-        LongDesc: Grants friendly infantry a time limited boost in movement speed.
+        LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
         OrderName: FrenzyPowerInfoOrder
         ActivationSequence:
         Icon: fenzy
@@ -475,7 +475,7 @@ NAHPAD:
         BuildPaletteOrder: 207
         Queue: Building
         Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology
-        Description: Produces, rearms and\nrepairs aircraft.
+        Description: Produces, rearms and repairs aircraft.\n\nSpecial:\n- Call a havoc attack chopper (Industry)\n- Call an infantry drop (Propaganda)
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -567,7 +567,7 @@ NAPYRA:
         Queue: Building
         BuildPaletteOrder: 208
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology
-        Description: Gives access to ideologies.\nPromotes new infantry to veterancy rank 1.
+        Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda) or Tiberium (Technology)
     Valued:
         Cost: 4000
     Tooltip:
