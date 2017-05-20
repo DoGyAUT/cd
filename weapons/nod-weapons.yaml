@@ -597,7 +597,7 @@ EMPulseCannon:
         ImpactSounds: psl.aud
     Warhead@emp: GrantExternalCondition
         Range: 4c0
-        Duration: 300
+        Duration: 200
         Condition: empdisable
         ValidTargets: Vehicle, Cyborg, Building
         
@@ -793,7 +793,7 @@ ShadowTrooperGun:
     Inherits@wh: ^BulletWH
     ValidTargets: Ground 
     ReloadDelay: 100
-    Range: 10c0
+    Range: 9c0
     Report: sniper1.aud, sniper2.aud, sniper3.aud
     Projectile: BulletAS
         Speed: 2c0
@@ -1302,7 +1302,7 @@ ShadowTrooperLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
     ReloadDelay: 130
-    Range: 10c0
+    Range: 9c0
     Report: laserpulse.aud
     ValidTargets: Ground 
     Projectile: LaserZap

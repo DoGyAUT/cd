@@ -378,7 +378,7 @@ NAWEAP:
         CircleSequence: circles
         ClockSequence: clock
         Range: 8
-        Duration: 450
+        Duration: 300
 
 NARADR:
     Inherits: ^BuildingInfiltrate
@@ -534,11 +534,10 @@ NAHPAD:
         DisplayBeacon: false
         DisplayRadarPing: false
         BeaconPoster: havoc
-        Prerequisites: industry, napyra
+        Prerequisites: industry
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
     ParatroopersPower@propcarry:
         UnitType: nodcarry.support
         Prerequisites: ~propaganda

@@ -91,20 +91,6 @@ ScoundrelGun:
         Spread: 128
         Damage: 20
         
-MarauderGun:
-    Inherits: ^Bullet    
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 80
-    Burst: 20
-    BurstDelay: 3
-    Range: 5c0
-    Report: hmg.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c128
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 20
-        
 BrigandShotgun:
     Inherits: ^Bullet    
     Inherits@wh: ^BulletWH
@@ -577,11 +563,26 @@ BuggyFireballLauncher:
     Warhead@6Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light2
-        
+
+BountyMG:
+    Inherits: ^Bullet    
+    Inherits@wh: ^BulletWH
+    ReloadDelay: 30
+    Burst: 3
+    BurstDelay: 3
+    Range: 5c0
+    Report: stormgun1.aud, stormgun2.aud, stormgun3.aud #hmg.aud
+    Projectile: BulletAS
+        Inaccuracy: 0c128
+    Warhead@1Dam: SpreadDamage
+        Spread: 128
+        Damage: 20
+        DamageTypes: Prone100Percent, TriggerProne, BountyKill
+
 BountyHunterBazooka:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APWH
-    ValidTargets: Ground, Air, MidAir, HighAir
+    ValidTargets: Building, Cyborg, Air, MidAir, HighAir
     ReloadDelay: 120
     Range: 8c0
     MinRange: 1c512
