@@ -5,7 +5,7 @@ SACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 500
         Prerequisites: ~disabled
         Adjacent: 8
@@ -15,16 +15,16 @@ SACNST:
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.Scrin,Defense.Scrin
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.Scrin
         Group: Building
         BuildDurationModifier: 60
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.Scrin
         Group: Defense
         BuildDurationModifier: 60
         LowPowerSlowdown: 3
@@ -34,7 +34,6 @@ SACNST:
         Cost: 3000
     Tooltip:
         Name: Master Hive
-    -Sellable:
     BaseBuilding:
     Transforms:
         IntoActor: smcv
@@ -42,9 +41,9 @@ SACNST:
         Facing: 96
         DeployCursor: undeploy
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.Scrin
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.Scrin
 #    WithBuildingPlacedOverlay:
     ProvidesRadar:
     Power:
@@ -71,7 +70,7 @@ SACNST:
 SAPOWR:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Scrin
         BuildPaletteOrder: 501
         Prerequisites: ~structures.scrin
         Description: Provides power for other structures.
@@ -108,7 +107,7 @@ SPROC:
     Tooltip:
         Name: Ichor Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.Scrin
         BuildPaletteOrder: 502
         Prerequisites: anypower, ~structures.scrin
         Description: Processes raw Ichor into useable resources. \n\nStores an infinte amount of Ichor.
@@ -159,7 +158,7 @@ SAPORTAL:
     ProvidesPrerequisite:
         Prerequisite: sproc, ~structures.scrin
     Buildable:
-        Queue: Building
+        Queue: Building.Scrin
         BuildPaletteOrder: 503
         Prerequisites: anypower, sproc, ~structures.scrin
         Description: Produces Scrin units.
@@ -224,7 +223,7 @@ SAPORTAL:
 SANODE:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Scrin
         BuildPaletteOrder: 504
         Prerequisites: sproc, saportal, ~structures.scrin
         Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -260,7 +259,7 @@ SANODE:
 SASEED:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Scrin
         BuildPaletteOrder: 505
         Prerequisites: saportal, sanode, ~structures.scrin
         Description: Tib Stick stops Tripod stuff

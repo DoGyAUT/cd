@@ -5,7 +5,7 @@ FACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 400
         Prerequisites: ~disabled
         Adjacent: 8
@@ -15,16 +15,16 @@ FACNST:
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.Forg,Defense.Forg
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.Forg
         Group: Building
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.Forg
         Group: Defense
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
@@ -43,9 +43,9 @@ FACNST:
         DeployCursor: undeploy
     ProvidesRadar:
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.Forg
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.Forg
     WithIdleOverlay@TOP:
         Sequence: idle-top
     WithIdleOverlay@SIDE:
@@ -77,7 +77,7 @@ FACNST:
 FAPOWR:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 401
         Prerequisites: ~structures.forgotten
         Description: Provides power for other structures.
@@ -116,7 +116,7 @@ FAPOWR:
 FPROC:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 402
         Prerequisites: anypower, ~structures.forgotten
         Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
@@ -181,7 +181,7 @@ FPROC:
 FABAR:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 404
         Prerequisites: anypower, ~structures.forgotten
         Description: Produces infantry.
@@ -236,7 +236,7 @@ FAWEAP:
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 405
         Prerequisites: anypower, fproc, ~structures.forgotten
         Description: Produces vehicles.
@@ -297,7 +297,7 @@ FAWEAP:
 FARADR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 406
         Prerequisites: anypower, fproc, ~structures.forgotten
         Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -351,7 +351,7 @@ FARADR:
 FHOVEL:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 407
         Prerequisites:  anypower, fproc, ~structures.forgotten
         Description: Gives access to the army expander.\nPromotes new infantry to veterancy rank 1.
@@ -400,7 +400,7 @@ FAHPAD:
         Name: Forgotten Helipad
     Buildable:
         BuildPaletteOrder: 408
-        Queue: Building
+        Queue: Building.Forg
         Prerequisites: anypower, faradr, ~structures.forgotten
         Description: Produces, rearms and\nrepairs aircraft.
     Building:
@@ -443,7 +443,7 @@ FAHPAD:
 FATRADE:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Forg
         BuildPaletteOrder: 409
         Prerequisites:  anypower, faradr, fhovel, ~structures.forgotten
         Description: Gives access to the Forgotten advanced tech.

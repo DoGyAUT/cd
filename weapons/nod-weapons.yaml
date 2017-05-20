@@ -1574,20 +1574,22 @@ HydraLaserFire:
 HavocLaserFire:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
+    Burst: 3
+    BurstDelay: 3
     ReloadDelay: 25
-    Range: 6c0
-	MinRange: 1c0
+    Range: 7c0
+    MinRange: 1c0
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground
     Projectile: LaserZap
         Width: 30
         BeamDuration: 5
         ZOffset: 2047
-        Color: aa0606
+        Color: AA0606
         SecondaryBeam: true
         SecondaryBeamWidth: 15
         SecondaryBeamZOffset: 2047
-        SecondaryBeamColor: FF0000
+        SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
         ValidTargets: Ground
         Spread: 42
@@ -1888,6 +1890,7 @@ HavocMissilesTibGas:
     Inherits: HavocMissiles
     Inherits@wh: ^TiberiumWH
     ReloadDelay: 150
+    Burst: 8
     Projectile: Missile
         # TrailImage: blueflametrailer
         # TrailPalette: effect50alpha
@@ -2018,27 +2021,54 @@ BlackHandFlamerBlue:
         Explosions: medium_flash
         ExplosionPalette: light
         
-TermiteGun: #termitegun
+TermiteGun:
     Inherits: ^ShellAP 
-	Inherits@wh: ^APWH
+    Inherits@wh: ^APWH
     ReloadDelay: 130
     Range: 7c0
     Report: shot01.aud, shot02.aud, shot03.aud
     Projectile: BulletAS
-        Inaccuracy: 0c512
+        Speed: 1c0
+        ContrailWidth: 20
     Warhead@1Dam: SpreadDamage
         Spread: 0c128
-        Damage: 350
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: medium_clsn
         ExplosionPalette: apolra2
         ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
         InvalidImpactTypes: Water
+    WarheadAS: FireShrapnel
+        Weapon: TermiteGunShrapnel
+        Amount: 4
+        AimChance: 0
         
-TermiteGunDeployed:        
-     Inherits: TermiteGun
-     ReloadDelay: 121
-     Burst: 3
-     BurstDelay: 3
-     Warhead@1Dam: SpreadDamage
-        Damage: 250
+TermiteGunShrapnel:
+    Inherits: ^ShellAP        
+    Inherits@wh: ^HEAPWH
+    Range: 1c512
+    Projectile: BulletAS
+        Speed: 1c0
+        LaunchAngle: 90
+        Inaccuracy: 0c256
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 10
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 50
+    Warhead@2Eff: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light2

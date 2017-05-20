@@ -5,7 +5,7 @@ GACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 100
         Prerequisites: ~disabled
         Adjacent: 8
@@ -15,16 +15,16 @@ GACNST:
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.GDI,Defense.GDI
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.GDI
         Group: Building
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.GDI
         Group: Defense
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
@@ -41,9 +41,9 @@ GACNST:
         Facing: 96
         DeployCursor: undeploy
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.GDI
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.GDI
     ProvidesRadar:
     Power:
         Amount: 0
@@ -69,7 +69,7 @@ GACNST:
 GAPOWR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~structures.gdi
         Description: Provides power for other structures.
@@ -132,7 +132,7 @@ GPROC:
     Tooltip:
         Name: GDI Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 102
         Prerequisites: anypower, ~structures.gdi
         Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
@@ -181,7 +181,7 @@ GPROC:
 GAPILE:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 104
         Prerequisites: anypower, ~structures.gdi
         Description: Produces infantry.
@@ -240,7 +240,7 @@ GAWEAP:
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 105
         Prerequisites: anypower, gproc, ~structures.gdi
         Description: Produces vehicles.
@@ -292,7 +292,7 @@ GAWEAP:
 GARADR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 106
         Prerequisites: anypower, gproc, ~structures.gdi
         Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -357,7 +357,7 @@ GARADR:
 GAARMORY:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 107
         Prerequisites: anypower, garadr, ~structures.gdi
         Description: Gives access to research projects and subfactions.\nPromotes new infantry to veterancy rank 1.
@@ -491,7 +491,7 @@ GAHPAD:
         Name: GDI Helipad
     Buildable:
         BuildPaletteOrder: 108
-        Queue: Building
+        Queue: Building.GDI
         Prerequisites: anypower, garadr, ~structures.gdi
         Description: Produces, rearms and\nrepairs aircraft.
     Building:
@@ -549,7 +549,7 @@ GADEPT:
     Buildable:
         BuildPaletteOrder: 109
         Prerequisites: anypower, gaweap, ~structures.gdi
-        Queue: Building
+        Queue: Building.GDI
         Description: Repairs vehicles.
     Building:
         Footprint: =x= xxx =x=
@@ -612,7 +612,7 @@ GADEPT:
 GATECH:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 110
         Prerequisites: anypower, garadr, gaarmory, ~structures.gdi
         Description: Provides access to advanced GDI technologies.
@@ -659,7 +659,7 @@ GATECH:
 GADROP:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 111
         Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.st
 		BuildLimit: 1
