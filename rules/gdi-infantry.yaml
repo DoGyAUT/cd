@@ -135,11 +135,11 @@ E2:
 
 SCOUT:
     Inherits: ^Soldier
-#    Buildable:
-#        Queue: Infantry.GDI
-#        BuildPaletteOrder: 107
-#        Prerequisites: ~gapile
-#        Description: Stealthed infiltrator unit.\n\n  Role: Scouting\n  HP: 150\n  Armor: Light\n  Speed: 80\n  Viewrange: 10\n\n Good vs Nothing\n\n Special:\n\n - Stealth
+    Buildable:
+        Queue: Infantry.GDI
+        BuildPaletteOrder: 107
+        Prerequisites: ~gapile
+        Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range
     Valued:
         Cost: 300
     Tooltip:
@@ -153,7 +153,7 @@ SCOUT:
     Health:
         HP: 150
     Mobile:
-        Speed: 60
+        Speed: 50
     RevealsShroud:
         Range: 12c0
     AttackFrontal:
