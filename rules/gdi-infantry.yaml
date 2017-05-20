@@ -4,7 +4,7 @@ GASOL:
         Queue: Infantry.GDI
         BuildPaletteOrder: 100
         Prerequisites: ~gapile, ~!upgrade.zc
-        Description: GDI's basic combat infantry.\nThey are armed with an assault rifle with good accuracy and have good balanced stats.\n\n  Role: Basic Infantry\n  HP: 200\n  Armor: Light\n  Speed: 70\n  Viewrange: 8\n\n Good vs Light infantry \n\n Special:\n\n - Elite weapon on veterancy rank 5
+        Description: GDI's basic combat infantry.\n\nGood vs: Light infantry\n\nSpecial:\n- Crush class: Infantry
     Valued:
         Cost: 100
     Tooltip:
@@ -53,7 +53,7 @@ GMISINF:
         Queue: Infantry.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gapile
-        Description: Airborne soldier.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+        Description: GDI's basic anti armor infantry.\n\nGood vs: Vehicles, Aircraft\n- Crush class: Infantry
     Valued:
         Cost: 250
     Tooltip:
@@ -85,7 +85,7 @@ E2:
         Queue: Infantry.GDI
         BuildPaletteOrder: 102
         Prerequisites: ~gapile, garadr, ~upgrade.st
-        Description: GDI's basic anti-vehicle infantry.\nArmed with throwable explosive discuses.\n\n  Role: Anti Armor\n  HP: 150\n  Armor: Light\n  Speed: 56\n  Viewrange: 8\n\n Good vs Buildings, Infantry Mobs, Cyborgs, Medium Armor\n\n Special:\n\n - EMP DiscThrowerGuns on veterancy rank 5
+        Description: GDI's basic anti-vehicle infantry.\n\nGood vs: Buildings, Infantry Blobs, Cyborgs, Medium Armor\n\nSpecial:\n- Bouncing shot\n- EMP effect on veterancy rank 5\n- Crush class: Infantry
     Valued:
         Cost: 300
     Tooltip:
@@ -224,7 +224,7 @@ ENGINEER:
         Queue: Infantry.GDI
         BuildPaletteOrder: 105
         Prerequisites: ~gapile
-        Description: GDI's basic engineering unit.\nArmed with toolkit for repairs and structural takeovers.\n\n  Role: Engineer\n  HP: 250\n  Armor: Light\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing \n\n Special:\n\n - Capture buildings
+        Description: GDI's engineering unit.\n\nGood vs: Nothing\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Crush class: Infantry
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
@@ -258,7 +258,7 @@ MEDIC:
         Queue: Infantry.GDI
         BuildPaletteOrder: 106
         Prerequisites: ~gapile, garadr
-        Description: GDI's medical support infantry.\nCan heal infantry directly and in a radius.\n\n  Role: Medic\n  HP: 225\n  Armor: Light\n  Speed: 60\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Direct heal\n - Area of effect heal (3 Range)
+        Description: GDI's medical support infantry.\n\nSpecial:\n- Direct heal\n- Area of effect heal\n- Crush class: Infantry
     Selectable:
         Bounds: 12,17,0,-6
     Voiced:
@@ -306,7 +306,7 @@ ZMARINE:
         Queue: Infantry.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gapile, ~!t1, ~upgrade.zc
-        Description: Advanced General-purpose infantry.\nZOCOM's variant of the Marine.\n\n  Role: Basic Infantry\n  HP: 500\n  Armor: Light\n  Speed: 60\n  Viewrange: 9\n\n Good vs Infantry\n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal dogs
+        Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Cannot be taken down by dogs\n- Crush class: Infantry
     Valued:
         Cost: 350
     Tooltip:
@@ -355,7 +355,7 @@ ZTROOPER:
         Queue: Infantry.GDI
         BuildPaletteOrder: 108
         Prerequisites: ~gapile, garadr, ~!t1, ~upgrade.zc
-        Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\n  Role: Anti Armor\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Armored Targets\n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
+        Description: This ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\nGood vs: Armored Targets\n\nSpecial:\n- Immune to Tiberium radiation\n- Cannot be taken down by dogs\n- Crush class: Medium infantry
     Valued:
         Cost: 800
     Tooltip:
@@ -401,7 +401,7 @@ ZRAIDER:
         Queue: Infantry.GDI
         BuildPaletteOrder: 109
         Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
-        Description: Advanced infantry in combat suit.\nThis ZOCOM only infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area\nIt also uses shoulder mounted missile launchers vs incoming VTOLs.\n\n  Role: Anti Infantry/Building/VTOL\n  HP: 300\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Soft Targets, Buildings, VTOL's \n\n Special:\n\n - Immune to Tiberium radiation\n - Cannot be taken down by normal, mutated or cybernetic dogs\n - Cannot be crushed\n - Occupies one cell\n - Requires two seats in transports
+        Description: This ZOCOM infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area and shoot down incoming Vtol's with it's shoulder mounted missile launcher.\n\nGood vs: Soft Targets, Buildings, Vtol's\n\nSpecial:\n- Immune to Tiberium radiation\n- Cannot be taken down dogs\n- Crush class: Medium infantry
     Valued:
         Cost: 1000
     Tooltip:
@@ -502,3 +502,4 @@ ZCOMMANDO:
     RenderDetectionCircle:
     SoundOnDamageTransition:
         DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
+

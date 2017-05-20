@@ -47,7 +47,7 @@ GASILO:
         Queue: Defense
         BuildPaletteOrder: 103
         Prerequisites: gproc, ~structures.gdi
-        Description: Stores excess Tiberium.\n\nStores 1500$.
+        Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
     Valued:
         Cost: 200
     Tooltip:
@@ -96,7 +96,7 @@ GAMG:
         Queue: Defense
         BuildPaletteOrder: 103
         Prerequisites: anypower, gapile, ~structures.gdi, ~!upgrade.gdf
-        Description: Basic base defense.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery
+        Description: Basic base defense.\n\nGood vs: Infantry, Light armor\n\nSpecial:\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -160,7 +160,7 @@ GAMG2:
         Queue: Defense
         BuildPaletteOrder: 104
         Prerequisites: anypower, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Improved basic base defense, with more armor and weapons.\nSteel Talon exclusive defense.\n\n  Strong vs Infantry, Light armor, Medium armor\n  Weak vs Aircraft, Artillery
+        Description: Improved basic base defense, with more armor and weapons.\n\nGood vs: Infantry, Light armor and Medium armor\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -252,7 +252,7 @@ GASENTUR:
         Queue: Defense
         BuildPaletteOrder: 105
         Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
-        Description: Sensor base defense.\nDetects cloaked units.\n\n  Strong vs Infantry, Light Armor\n  Weak vs Aircraft, Artillery
+        Description: This base defense focused on stealth detection\n\nGood vs Infantry, Light Armor\n\nSpecial:\n- Provides improved stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -310,7 +310,7 @@ GAMIS:
         Queue: Defense
         BuildPaletteOrder: 106
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Air base defense.\nCan attack ground units.\n\n  Strong vs Aircraft, Light armor, Medium armor \n  Weak vs Infantry, Artillery
+        Description: Anti-Air base defense.\n\nGood vs: Aircraft, Light armor and Medium armor\n\nSpecial\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -368,7 +368,7 @@ GACAN:
         Queue: Defense
         BuildPaletteOrder: 107
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Armor base defense.\nArmed with a railgun and HE grenades.\n\n  Strong vs Armor \n  Weak vs Aircraft, Artillery
+        Description: Anti-Armor base defense with a railgun and HE grenades.\n\nGood vs: Armor\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -433,7 +433,7 @@ GAMORTAR:
         Queue: Defense
         BuildPaletteOrder: 109
         Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.gdf
-        Description: Artillery base defense.\nExclusive to GDF.\n\n  Strong vs Infantry, Light armor, Artillery \n  Weak vs Aircraft, Armor
+        Description: Artillery base defense.\n\nGood vs: Infantry, Light armor and Artillery\n\nSpecial: Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -568,7 +568,7 @@ GAFORT:
         Queue: Defense
         BuildPaletteOrder: 108
         Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+        Description: Huge garrisonable defense.\n\nGood vs: Infantry, Light armor\n\nSpecial:\n- Provides stealth detection\n- Can operate without power\n
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
@@ -674,7 +674,7 @@ GAPLUG:
         WeaponDelay: 0
         ChargeTime: 180
         Description: Ion Cannon
-        LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+        LongDesc: Initiate an Ion Cannon strike which applies instant damage to a small area.
         EndChargeSpeechNotification: IonCannonReady
         SelectTargetSpeechNotification: SelectTarget
         DisplayRadarPing: True

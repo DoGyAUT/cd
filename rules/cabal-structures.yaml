@@ -9,7 +9,7 @@ KACNST:
         BuildPaletteOrder: 300
         Prerequisites: ~disabled
         Adjacent: 8
-        Description: Builds base structures.\n Provides minimap radar.
+        Description: Builds base structures.\n\nSpecial:\n- Provides minimap radar.
     Health:
         HP: 5200
     RevealsShroud:
@@ -79,7 +79,7 @@ KPR:
         Queue: Building
         BuildPaletteOrder: 301
         Prerequisites: ~structures.cabal
-        Description: Provides power for other structures.
+        Description: Provides power for other structures.\n\nSpecial:\n- Can be improved a lot by a support power.
     Valued:
         Cost: 500
     Tooltip:
@@ -120,7 +120,7 @@ KPROC:
         Queue: Building
         BuildPaletteOrder: 302
         Prerequisites: anypower, ~structures.cabal
-        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
+        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
@@ -169,7 +169,7 @@ CYBBAR:
         Queue: Building
         BuildPaletteOrder: 304
         Prerequisites: anypower, ~structures.cabal
-        Description: Produces infantry.
+        Description: Produces cyborgs.
     Valued:
         Cost: 500
     Tooltip:
@@ -281,7 +281,7 @@ KARADR:
         Queue: Building
         BuildPaletteOrder: 306
         Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Provides an overview of the battlefield.\nRequires power to operate.
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants
     Valued:
         Cost: 1500
     Tooltip:
@@ -329,7 +329,7 @@ KARADR:
         LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         Description: Power Core Boost
-        LongDesc: Improves the power output by 200%.
+        LongDesc: Doubles the power output.
         Condition: powerboost
         OnFireSound: fortificate.wav
         Sequence: idle
@@ -401,7 +401,7 @@ KABTECH:
         Queue: Building
         BuildPaletteOrder: 308
         Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Gives access to improved technology.
+        Description: Gives access to superior technology.
     Valued:
         Cost: 4000
     Tooltip:

@@ -8,7 +8,7 @@ upgrade.gdf:
         Queue: Tech.GDI
         BuildLimit: 1
         IconPalette: gdf
-        Description: Choose GDF as subfaction.\n\nSpecialized in heavy defense and artillery. \n\n Grants access to the following buildings:\n\n -Howitzer Component Tower\n -Fortress Garrison Bunker\n\n Grants access to the following vehicles:\n\n -Airblast\n -Mammoth Tank \n -Nemesis MK.I
+        Description: Choose GDF as subfaction.\n\nThe Global Defense Force is concerned with fortifications and reconstruction of the Blue Zones and rely on static structures and heavily armored vehicles.
     Valued:
         Cost: 500
     RenderSprites:
@@ -25,7 +25,7 @@ upgrade.st:
         Queue: Tech.GDI
         BuildLimit: 1
         IconPalette: st
-        Description: Choose Steel Talons as subfaction.\n\nSpecialized in heavy vehicles and frontline units. \n\n Grants access to the following buildings:\n\n -Talon Component Tower\n\n Grants access to the following vehicles:\n\n -Ares (Archon replacement) \n -Vulture (Wolverine replacement) \n -Triton\n -Titan \n -Mammoth MK.II
+        Description: Choose Steel Talons as subfaction.\n\nThe Steel Talons have focused on assaults and the elimination of the remaining Nod strongholds and choose strong mechs for that task.
     Valued:
         Cost: 500
     RenderSprites:
@@ -42,7 +42,7 @@ upgrade.zc:
         Queue: Tech.GDI
         BuildLimit: 1
         IconPalette: zc
-        Description: Choose ZOCOM as subfaction.\n\nSpecialized in heavy infantry, aircraft and mobile units. \n\n Grants access to the following infantry:\n\n -Zone Marine (Marine replacement) \n -Zone Trooper \n\n Grants access to the following aircraft:\n\n -Orca F-2 (Orca F-1 replacement) \n -Hornet (Firehawk replacement)\n\n Grants access to the following vehicles:\n\n -Hermes (Archon replacement)\n -Hover MLRS\n -Leviathan
+        Description: Choose ZOCOM as subfaction.\n\nThe ZOCOM use advanced aircrafts and highly trained infantry for their operations in the Red Zones.
     Valued:
         Cost: 500
     RenderSprites:
@@ -59,7 +59,7 @@ upgrade.gapowerup1:
         Prerequisites: ~gaarmory, gapowr, ~!t1, ~!upgrade.gapowerup1
         Queue: Tech.GDI
         BuildLimit: 1
-        Description: Upgrades all power plants with one additional turbine, which grants each one 75 more power output.
+        Description: Upgrade all current and future power plants with an additional turbine which grants additional 75 power output.
     Valued:
         Cost: 2000
     RenderSprites:
@@ -76,9 +76,9 @@ upgrade.gapowerup2:
         Prerequisites: ~gaarmory, gapowr, ~!t1, upgrade.gapowerup1, ~!upgrade.gapowerup2, gatech
         Queue: Tech.GDI
         BuildLimit: 1
-        Description: Upgrades all power plants with one additional turbine, which grants each one 75 more power output.
+        Description: Upgrade all current and future power plants with one additional turbine which grants additional 75 power output.
     Valued:
         Cost: 2000
     RenderSprites:
         Image: gapowrup2
-    ProvidesPrerequisite@upgradename:
+    
