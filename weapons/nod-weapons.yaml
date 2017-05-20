@@ -1657,33 +1657,32 @@ FlamerTurretFireballLauncher:
         ExplosionPalette: light2   
         
 FanticBoom:
-    Inherits@wh: ^FireWH
-    ReloadDelay: 1000
-    Range: 1c0
+    Inherits@wh: ^HEAPWH
+    ReloadDelay: 10
+    Range: 1c512
     Projectile: BulletAS
         Speed: 1c512
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 0
-        Falloff: 100, 75, 50, 25, 0
+        Damage: 500
         AffectsParent: True
-        Versus:
-            Vehicle: 100
         DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
     Warhead@kill: GrantExternalCondition
         AffectsParent: True
         Range: 2c512
         Condition: Boom
+    WarheadAS: FireShrapnel
+        Weapon: FanaticShrapnel
+        Amount: 4
+        AimChance: 0
         
 FanticBoomExplosion:
-    Inherits@wh: ^FireWH
+    Inherits@wh: ^HEAPWH
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 100
+        Damage: 0
         Falloff: 100, 75, 50, 25, 0
         AffectsParent: True
-        Versus:
-            Vehicle: 100
     Warhead@2Eff: CreateEffect
         Explosions: large_twlt
         ExplosionPalette: apolra50alpha
@@ -1693,11 +1692,39 @@ FanticBoomExplosion:
     Warhead@5Eff: CreateEffect
         Explosions: large_flash
         ExplosionPalette: light
-        
+
+FanaticShrapnel: 
+    Inherits@wh: ^HEAPWH
+    Range: 1c512
+    Projectile: BulletAS
+        Speed: 1c0
+        LaunchAngle: 90
+        Inaccuracy: 0c256
+        ContrailLength: 10
+        ContrailColor: FFFFFF
+        ContrailWidth: 10
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c256
+        Damage: 250
+    Warhead@2Eff: CreateEffect
+        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+        ExplosionPalette: apolra2
+        ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
+        InvalidImpactTypes: Water
+    Warhead@3EffWater: CreateEffect
+        Explosions: small_watersplash
+        ExplosionPalette: player
+        ImpactSounds: ssplash3.aud
+        ValidImpactTypes: Water
+    Warhead@4Smu: LeaveSmudge
+        SmudgeType: SmallCrater
+    Warhead@5Eff: CreateEffect
+        Explosions: small_flash
+        ExplosionPalette: light2        
 
 BikeMissile:
     Inherits: ^MissileAPHE 
-	Inherits@wh: ^APWH
+    Inherits@wh: ^APWH
     ReloadDelay: 100
     Burst: 2
     BurstDelay: 20

@@ -558,7 +558,25 @@ NAHPAD:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
+    ParatroopersPower@fanatic:
+        UnitType: valkyrie.support
+        Prerequisites: ~propaganda, naradr
+        DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
+        Icon: fanatic
+        OrderName: FanaticDropOrder
+        SquadSize: 1
+        ChargeTime: 240
+        Description: Fanatic Drop
+        LongDesc: Drops a group of fanatics on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        LowPowerSpeechNotification: LowPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: fanatic
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
  
 NAPYRA:
     Inherits: ^Building
