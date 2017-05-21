@@ -5,7 +5,7 @@ KACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 300
         Prerequisites: ~disabled
         Adjacent: 8
@@ -15,16 +15,16 @@ KACNST:
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.Cabal,Defense.Cabal
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.Cabal
         Group: Building
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.Cabal
         Group: Defense
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
@@ -42,9 +42,9 @@ KACNST:
         DeployCursor: undeploy
     ProvidesRadar:
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.Cabal
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.Cabal
     WithIdleOverlay@cabal:
         Sequence: idle-cabal
     WithIdleOverlay@lights:
@@ -76,7 +76,7 @@ KPR:
     Inherits@1: ^BuildingInfiltrate
     Inherits@2: ^PowerBoostUpgrades
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 301
         Prerequisites: ~structures.cabal
         Description: Provides power for other structures.\n\nSpecial:\n- Can be improved a lot by a support power.
@@ -117,7 +117,7 @@ KPROC:
     Tooltip:
         Name: Cabal Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 302
         Prerequisites: anypower, ~structures.cabal
         Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
@@ -166,7 +166,7 @@ KPROC:
 CYBBAR:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 304
         Prerequisites: anypower, ~structures.cabal
         Description: Produces cyborgs.
@@ -225,7 +225,7 @@ KAWEAP:
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 305
         Prerequisites: anypower, kproc, ~structures.cabal
         Description: Produces vehicles.
@@ -278,7 +278,7 @@ KAWEAP:
 KARADR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 306
         Prerequisites: anypower, kproc, ~structures.cabal
         Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants
@@ -347,7 +347,7 @@ KAHPAD:
         Name: Cabal Helipad
 #    Buildable:
 #        BuildPaletteOrder: 307
-#        Queue: Building
+#        Queue: Building.Cabal
 #        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
 #        Description: Produces, rearms and\nrepairs aircraft.
     Building:
@@ -398,7 +398,7 @@ KAHPAD:
 KABTECH:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Cabal
         BuildPaletteOrder: 308
         Prerequisites: anypower, karadr, ~structures.cabal
         Description: Gives access to superior technology.

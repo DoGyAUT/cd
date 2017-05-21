@@ -21,7 +21,6 @@ KMCV:
         Speed: 50
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     MustBeDestroyed:
         RequiredForShortGame: True
     BaseBuilding:
@@ -95,7 +94,6 @@ KHARV:
 #        DamageCooldown: 200
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
@@ -128,7 +126,7 @@ DREADFIRE:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp6.aud
+        SoundFiles: stomp6a.aud, stomp6b.aud, stomp6c.aud
         Delay: 3
         Interval: 18
         RequiresCondition: walker
@@ -298,7 +296,7 @@ TARANTULA:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp5.aud
+        SoundFiles: stomp5a.aud, stomp5b.aud, stomp5c.aud
         Delay: 4
         Interval: 31
         RequiresCondition: walker

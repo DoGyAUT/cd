@@ -85,13 +85,12 @@ NIHARV:
         Offset: 220,0,0
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     WithVoxelTurret:
     -WithVoxelBody:
     WithVoxelUnloadBody:
-    WithMuzzleOverlay
+    WithMuzzleOverlay:
     Explodes:
         Weapon: LargeTiberiumExplosion
         EmptyWeapon: SmallTiberiumExplosion
@@ -644,7 +643,7 @@ RECKONER:
     WithVoxelBody:
     AutoTarget:
 
-TERMITE: #wip
+TERMITE:
     Inherits@1: ^VoxelTank
     Inherits@2: ^HeavyVehicle
     Valued:
@@ -682,8 +681,8 @@ TERMITE: #wip
     Armament@secondary:
         Name: secondary
         Turret: secondary
-        Weapon: TermiteGunDeployed
-        LocalOffset: 1000,0,600
+        Weapon: TermiteGun
+        LocalOffset: 1100,0,660
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 150
@@ -693,12 +692,19 @@ TERMITE: #wip
         Name: primary
         Turret: primary
         Weapon: TermiteGun
-        LocalOffset: 850,0,650
+        LocalOffset: 1050,0,650
         MuzzleSequence: muzzle
         MuzzlePalette: apolra50alpha
         Recoil: 150
         RecoilRecovery: 10   
         RequiresCondition: !deployed
+    SelfHealing:
+        Step: 1
+        PercentageStep: 0
+        Delay: 3
+        HealIfBelow: 100
+        DamageCooldown: 200
+        RequiresCondition: deployed
     WithMuzzleOverlay:
     AutoTarget:
     RenderSprites:
@@ -1136,7 +1142,7 @@ AVATAR:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp2.aud
+        SoundFiles: stomp2a.aud, stomp2b.aud, stomp2c.aud
         Delay: 3
         Interval: 21
         RequiresCondition: walker

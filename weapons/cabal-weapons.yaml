@@ -535,16 +535,19 @@ CyborgCommandoPlasma:
         Blockable: true
         HorizontalRateOfTurn: 2
         Shadow: true
-        Image: torpedo
+        Image: pulsball
+        TrailImage: plasmatrail
+        TrailPalette: effect50alpha
+        Palette: effect
         ContrailLength: 10
-        ContrailColor: 00C800
+        ContrailColor: 0080FF
         ContrailWidth: 25
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 350
         ValidTargets: Ground
     Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_small
+        Explosions: plasmaexp01
         ExplosionPalette: effect50alpha
         ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
         InvalidImpactTypes: Water

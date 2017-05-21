@@ -1,7 +1,7 @@
 NAWALL:
     Inherits: ^Wall
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~structures.nod, ~ideology
         Description: Stops infantry and blocks enemy fire.
@@ -24,7 +24,7 @@ NAWALL:
 NAGATE_A:
     Inherits: ^Gate_A
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~structures.nod, ~ideology
         Description: Automated barrier that opens for allied units.
@@ -34,7 +34,7 @@ NAGATE_A:
 NAGATE_B:
     Inherits: ^Gate_B
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 202
         Prerequisites: ~structures.nod, ~ideology
         Description: Automated barrier that opens for allied units.
@@ -44,7 +44,7 @@ NAGATE_B:
 NASILO:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 203
         Prerequisites: nproc, ~structures.nod, ~ideology
         Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
@@ -93,7 +93,7 @@ NAFLAMER:
     Tooltip:
         Name: Flame Turret
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, nahand, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 203
         Description: Anti-Infantry base defense.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Provides stealth detection\n- Stealth Emitter (Technology)\n- Blue Hell Inferno (Propaganda)\n- Requires power to operate
@@ -156,7 +156,7 @@ NAGAT:
     Tooltip:
         Name: Gattling Cannon
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, nahand, ~structures.nod, ~industry
         BuildPaletteOrder: 203
         Description: Anti-Infantry and Anti-Air base defense for Industry Nod.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot against ground and air\n- Provides stealth detection\n- Requires power to operate
@@ -209,7 +209,7 @@ NALASR:
     Tooltip:
         Name: Laser Turret
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology
         BuildPaletteOrder: 204
         Description: Advanced base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Stealth Emitter (Technology)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
@@ -271,7 +271,7 @@ NASAM:
     Tooltip:
         Name: SAM Site
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 205
         Description: Anti-Air base defense for Technology and Propaganda Nod.\n\nGood vs: Air\n\nSpecial:\n- Can only shoot against air\n- Stealth Emitter (Technology)\n- Requires power to operate
@@ -359,7 +359,7 @@ NAOBEL:
     Tooltip:
         Name: Obelisk of Light
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 206
         Prerequisites: anypower, napyra, ~structures.nod, ~ideology
         Description: High Tech base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
@@ -431,7 +431,7 @@ NAPULS:
     Tooltip:
         Name: E.M. Pulse Cannon
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildLimit: 1
         BuildPaletteOrder: 207
         Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
@@ -487,7 +487,7 @@ NAPULS:
 NAMISL:
     Inherits: ^Building
 #    Buildable:
-#        Queue: Defense
+#        Queue: Defense.Nod
 #        BuildPaletteOrder: 212
 #        Prerequisites: anypower, napyra, ~structures.nod, ~industry, ~ideology
 #        BuildLimit: 1
@@ -553,8 +553,8 @@ NASTLH:
     Buildable:
         BuildPaletteOrder: 210
         Prerequisites: anypower, napyra, ~structures.nod, ~technology, ~ideology
-        Queue: Defense
         Description: Generates a cloaking field to hide your forces from the enemy. Exclusive to the Technology Ideology.
+        Queue: Defense.Nod
     Building:
         Footprint: xxxxx xxxxx
         Dimensions: 5,2
