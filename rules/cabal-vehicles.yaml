@@ -4,7 +4,7 @@ KMCV:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~kaweap, karadr
-        Description: The heart of any Cabal base.\n\nSpecial:\n- provides a build radius for structures\n- crushes infantry\n- crushes light vehicles
+        Description: The heart of any Cabal base.\n\nSpecial:\n- provides a build radius for structures\n- Crush class: Medium vehicle
     Valued:
         Cost: 3000
     Tooltip:
@@ -21,7 +21,6 @@ KMCV:
         Speed: 50
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     MustBeDestroyed:
         RequiredForShortGame: True
     BaseBuilding:
@@ -50,7 +49,7 @@ KHARV:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 301
         Prerequisites: kproc, ~kaweap
-        Description: Supplys Cabals refineries with Tiberium.\n\nSpecial:\n- harvests tiberium\n- crushes infantry\n- crushes light vehicles\n- can hover
+        Description: Supplies Cabals refineries with Tiberium.\n\nSpecial:\n- Harvests Tiberium\n- Crush class: Medium vehicle\n- Hover
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -95,7 +94,6 @@ KHARV:
 #        DamageCooldown: 200
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
@@ -121,14 +119,14 @@ DREADFIRE:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 303
         Prerequisites: ~kaweap, karadr
-        Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: infantry, buildings\n\nSpecial:\n- crushes infantry\n- crushes light vehicles
+        Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
     Mobile:
         TurnSpeed: 5
         Speed: 50
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp6.aud
+        SoundFiles: stomp6a.aud, stomp6b.aud, stomp6c.aud
         Delay: 3
         Interval: 18
         RequiresCondition: walker
@@ -175,7 +173,7 @@ REAPER:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 304
         Prerequisites: ~kaweap
-        Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: vehicles, air\n\nSpecial:\n- can attack air\n- can net infantry (stunning them)\n- stealth detection
+        Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
     Mobile:
         TurnSpeed: 8
         Speed: 75
@@ -236,7 +234,7 @@ GOLEM:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 305
         Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- repairs vehicles and cyborgs with an aoe effect\n- can directly repair vehicles
+        Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- Repairs vehicles and cyborgs with AOE\n- Repair vehicles directly\n- Crush class: Medium vehicle
     Mobile:
         TurnSpeed: 3
         Speed: 55
@@ -288,7 +286,7 @@ TARANTULA:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 306
         Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Anti-Air mechanized walker armed with lasers.\n\nGood vs: air\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- can attack air
+        Description: Anti-Air mechanized walker armed with lasers.\n\nGood vs: Air\n\nSpecial:\n- Can only attack Air\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -298,7 +296,7 @@ TARANTULA:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp5.aud
+        SoundFiles: stomp5a.aud, stomp5b.aud, stomp5c.aud
         Delay: 4
         Interval: 31
         RequiresCondition: walker
@@ -348,7 +346,7 @@ SILVER:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 307
         Prerequisites: ~kaweap, kabtech
-        Description: Hovering transport.\n\nSpecial:\n- crushes infantry\n- crushes light vehicles\n- hovers\n- can transport infantry\n- infantry can shoot out of it
+        Description: Hovering transport.\n\nSpecial:\n- Can transport infantry\n- Infantry can shoot out of it\n- Crush class: Medium vehicle\n- Hover
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -400,7 +398,7 @@ KRONOS:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 308
         Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
-        Description: Super heavy battle tank capable of crossing water.\n\nGood vs: ground units\n\nSpecial:\n- crushes infantry\n- crushes cyborgs\n- crushes medium vehicles and lower\n- hovers
+        Description: Super heavy battle tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can swim on water\n- Crush class: Heavy vehicle
     Voiced:
         VoiceSet: Husk
         Volume: 2

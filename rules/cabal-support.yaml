@@ -1,7 +1,7 @@
 KAWALL:
     Inherits: ^Wall
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~structures.cabal
         Description: Stops infantry and blocks enemy fire.
@@ -24,7 +24,7 @@ KAWALL:
 KAGATE_A:
     Inherits: ^Gate_A
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 301
         Prerequisites: ~structures.cabal
         Description: Automated barrier that opens for allied units.
@@ -34,7 +34,7 @@ KAGATE_A:
 KAGATE_B:
     Inherits: ^Gate_B
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 302
         Prerequisites: ~structures.cabal
         Description: Automated barrier that opens for allied units.
@@ -44,10 +44,10 @@ KAGATE_B:
 KASILO:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 303
         Prerequisites: kproc, ~structures.cabal
-        Description: Stores excess Tiberium.\n\nStores 1500$.
+        Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
     Valued:
         Cost: 200
     Tooltip:
@@ -90,10 +90,10 @@ KABLASR:
     Tooltip:
         Name: Sabercut
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 303
         Prerequisites: anypower, cybbar, ~structures.cabal
-        Description: Cabals low tech defense structure.\n\nGood vs: ground units\n\nSpecial:\n- stealth detection\n- requires power to operate
+        Description: Cabals low tech defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -135,10 +135,10 @@ KABCAN:
     Tooltip:
         Name: Plasma Blaster
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 304
         Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Cabals tech 2 defense structure.\n\nGood vs: ground units\n\nSpecial:\n- stealth detection\n- requires power to operate\n- aoe damage
+        Description: Cabals tech 2 defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
     Building:
         Footprint: x
         Dimensions: 1,1
@@ -182,10 +182,10 @@ KDARK:
     Tooltip:
         Name: Obelisk of Darkness
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 305
         Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Cabals anti air defense structure.\n\nGood vs: air\n\nSpecial:\n- requires power to operate\n- can only shoot air units
+        Description: Cabals anti air defense structure.\n\nGood vs: Aircraft\n\nSpecial:\n- Requires power to operate\n- Can only shoot air units
     Building:
         Footprint: x
         Dimensions: 1,1
@@ -232,10 +232,10 @@ KOBEL:
     Tooltip:
         Name: Core Obelisk
     Buildable:
-        Queue: Defense
+        Queue: Defense.Cabal
         BuildPaletteOrder: 306
         Prerequisites: anypower, kabtech, ~structures.cabal
-        Description: Cabals advanced defense structure.\n\nGood vs: ground units\n\nSpecial:\n- stealth detection\n- requires power to operate
+        Description: Cabals advanced defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
         Footprint: xx xx
         Dimensions: 2,2

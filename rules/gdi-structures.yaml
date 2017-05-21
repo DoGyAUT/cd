@@ -5,26 +5,26 @@ GACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 100
         Prerequisites: ~disabled
         Adjacent: 8
-        Description: Builds base structures.
+        Description: Builds base structures.\n\nSpecial:\n- Provides minimap.
     Health:
         HP: 5200
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.GDI,Defense.GDI
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.GDI
         Group: Building
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.GDI
         Group: Defense
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
@@ -41,9 +41,9 @@ GACNST:
         Facing: 96
         DeployCursor: undeploy
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.GDI
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.GDI
     ProvidesRadar:
     Power:
         Amount: 0
@@ -69,7 +69,7 @@ GACNST:
 GAPOWR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~structures.gdi
         Description: Provides power for other structures.
@@ -132,10 +132,10 @@ GPROC:
     Tooltip:
         Name: GDI Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 102
         Prerequisites: anypower, ~structures.gdi
-        Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
+        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
     Building:
         Footprint: xxx= xx== xxx=
         Dimensions: 4,3
@@ -181,7 +181,7 @@ GPROC:
 GAPILE:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 104
         Prerequisites: anypower, ~structures.gdi
         Description: Produces infantry.
@@ -240,7 +240,7 @@ GAWEAP:
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 105
         Prerequisites: anypower, gproc, ~structures.gdi
         Description: Produces vehicles.
@@ -292,10 +292,10 @@ GAWEAP:
 GARADR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 106
         Prerequisites: anypower, gproc, ~structures.gdi
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Can call scout run if powered
     Valued:
         Cost: 1500
     Tooltip:
@@ -337,7 +337,7 @@ GARADR:
         Icon: orcascout
         ChargeTime: 180
         Description: Orca Scout Run
-        LongDesc: Reveals an area of the map\nand cloaked enemy units.
+        LongDesc: Reveals an area of the map and cloaked enemy units.
         SelectTargetSound: orca_m12.aud
         EndChargeSound: orca_s10.aud
         LaunchSound: orca_a10.aud
@@ -357,10 +357,10 @@ GARADR:
 GAARMORY:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 107
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Gives access to research projects and subfactions.\nPromotes new infantry to veterancy rank 1.
+        Description: Gives access to research projects and subfactions.\n\nSpecial:\n- Allows improving the armor of buildings (GDF)\n- Allows calling an artillery strike (GDF)\n- Allows calling an orca bombing run (Steel Talons)\n- Allows calling an OX bombing run (ZOCOM)
     Valued:
         Cost: 500
     Tooltip:
@@ -402,7 +402,7 @@ GAARMORY:
         LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
         Description: Fortification
-        LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction.
+        LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction which does not stack.
         Condition: fortification
         OnFireSound: fortificate.wav
         Sequence: idle
@@ -421,7 +421,7 @@ GAARMORY:
         ChargeTime: 300
         QuantizedFacings: 8
         Description: Artillery Strike
-        LongDesc: Deploy an artillery strike to the destinated position.
+        LongDesc: Call an artillery strike to the designated position.
         SelectTargetSpeechNotification: SelectTarget
         LowPowerSpeechNotification: LowPower
         EndChargeSpeechNotification: SupportPowerReady
@@ -491,9 +491,9 @@ GAHPAD:
         Name: GDI Helipad
     Buildable:
         BuildPaletteOrder: 108
-        Queue: Building
+        Queue: Building.GDI
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Produces, rearms and\nrepairs aircraft.
+        Description: Produces, rearms and repairs aircrafts.
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -549,8 +549,8 @@ GADEPT:
     Buildable:
         BuildPaletteOrder: 109
         Prerequisites: anypower, gaweap, ~structures.gdi
-        Queue: Building
-        Description: Repairs vehicles.
+        Description: Repairs vehicles.\n\nSpecial:\n- Provides emergency repairs
+        Queue: Building.GDI
     Building:
         Footprint: =x= xxx =x=
         Dimensions: 3,3
@@ -607,15 +607,15 @@ GADEPT:
         ClockSequence: clock
         #BeaconPosterPalette: iconclock
         Range: 8
-        Duration: 450
+        Duration: 300
 
 GATECH:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 110
         Prerequisites: anypower, garadr, gaarmory, ~structures.gdi
-        Description: Provides access to advanced GDI technologies.
+        Description: Provides access to advanced GDI technologies.\n\nSpecial:\n- Allows calling a Zone Commander squad (ZOCOM)
     Valued:
         Cost: 4000
     Tooltip:
@@ -659,11 +659,11 @@ GATECH:
 GADROP:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.GDI
         BuildPaletteOrder: 111
         Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.st
-		BuildLimit: 1
-        Description: Provides access to GDI strongest arsenal.
+        BuildLimit: 1
+        Description: Provides access to GDI's strongest arsenal.\n\nSpecial:\n- Allows calling a Poseidon drop (Steel Talons)\n- Allows calling a Titan drop (Steel Talons)
     Valued:
         Cost: 3000
     Tooltip:
@@ -742,3 +742,4 @@ GADROP:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
+

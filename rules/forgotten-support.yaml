@@ -1,7 +1,7 @@
 FAWALL:
     Inherits: ^Wall
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 400
         Prerequisites: ~structures.forgotten
         Description: Stops infantry and blocks enemy fire.
@@ -24,7 +24,7 @@ FAWALL:
 FAGATE_A:
     Inherits: ^Gate_A
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 401
         Prerequisites: ~structures.forgotten
         Description: Automated barrier that opens for allied units.
@@ -34,7 +34,7 @@ FAGATE_A:
 FAGATE_B:
     Inherits: ^Gate_B
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 402
         Prerequisites: ~structures.forgotten
         Description: Automated barrier that opens for allied units.
@@ -44,7 +44,7 @@ FAGATE_B:
 FASILO:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 403
         Prerequisites: fproc, ~structures.forgotten
         Description: Stores excess Tiberium.\n\nStores 1500$.
@@ -86,7 +86,7 @@ FASILO:
 FATOWER:
     Inherits: ^Defense
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 403
         Prerequisites: anypower, fabar, ~structures.forgotten
         Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery, Armor
@@ -121,7 +121,7 @@ FATOWER:
 FAFLAK:
     Inherits: ^Defense
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 404
         Prerequisites: anypower, faradr, ~structures.forgotten
         Description: Anti-Air base defense.\nRequires no power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
@@ -165,7 +165,7 @@ FAFLAK:
 FAMISSILE:
     Inherits: ^Defense
     Buildable:
-        Queue: Defense
+        Queue: Defense.Forg
         BuildPaletteOrder: 405
         Prerequisites: anypower, faradr, ~structures.forgotten
         Description: Anti-Armor base defense.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft

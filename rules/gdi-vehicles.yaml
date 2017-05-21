@@ -4,7 +4,7 @@ GMCV:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 100
         Prerequisites: ~gaweap, garadr
-        Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
+        Description: The heart of any GDI base.\n\nSpecial:\n- Provides a build radius for structures\n- Crush class: Medium vehicle
     Valued:
         Cost: 3000
     Tooltip:
@@ -47,7 +47,7 @@ GHARV:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 101
         Prerequisites: gproc, ~gaweap
-        Description: Collects Tiberium for processing.\nSlow harvester with big storage.\n\n  Role: Harvester\n  HP: 1200\n  Armor: Medium\n  Speed: 50\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (20 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
+        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Has more HP than the other harvesters\n- Crush class: Medium vehicle\n- Immune to Veins
     Selectable:
         Priority: 7
         Bounds: 36,36
@@ -81,7 +81,6 @@ GHARV:
 #        DamageCooldown: 200
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
@@ -106,7 +105,7 @@ APC:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 103
         Prerequisites: ~gaweap
-        Description: Armored infantry transport.\n\n  Role: Support/Transport/Anti-Air\n  HP: 400\n  Armor: Heavy\n  Speed: 113\n  Viewrange: 6\n\n Good vs Light Armor, Infantry, Air\n\n Special:\n\n - Cargo (5 Infantry)\n - Amphibious\n - Granted a Anti Air/Ground MG when garrisoned with Marines\n - Granted a Disc launcher when garrisoned with Disc Throwers\n - Crushes infantry
+        Description: Armored infantry transport.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can transport infantry\n- Can attack air\n- Can swim on water\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Predator
         Volume: 2
@@ -213,7 +212,7 @@ VULTURE:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 104
         Prerequisites: ~gaweap, ~!t1, ~upgrade.st
-        Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\n  Role: Anti Infantry/VTOLs\n  HP: 800\n  Armor: Medium\n  Speed: 60\n  Viewrange: 11\n\n Good vs Infantry, VTOLs\n\n Special:\n\n - Crushes infantry
+        Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can attack Air\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Vulture
         Volume: 2
@@ -223,7 +222,7 @@ VULTURE:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp3.aud
+        SoundFiles: stomp3a.aud, stomp3b.aud, stomp3c.aud
         Delay: 3
         Interval: 13
         RequiresCondition: walker
@@ -243,7 +242,7 @@ VULTURE:
     RenderDetectionCircle:
     AutoTarget:
     Armament@primary:
-        Weapon: VultureGat #22mmAPHE
+        Weapon: VultureGat
         LocalOffset: 150,280,850, 150,-280,850
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -273,13 +272,15 @@ GTMTNK:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 105
         Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc
-        Description: Well balanced main battle tank.\nArmed with a 90mm cannon and a coaxial MG.\n\n  Role: MBT\n  HP: 1000\n  Armor: Medium\n  Speed: 70\n  Viewrange: 10\n\n Good vs Ground Targets\n\n Special:\n\n - Crushes infantry
+        Description: Well balanced main battle tank armed with a 90mm cannon and a coaxial MG.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Archon
         Volume: 2
     Mobile:
         Speed: 60
         TurnSpeed: 4
+    GrantConditionOnMovement@engine:
+        Condition: tracks
     Health:
         HP: 1200
     RevealsShroud:
@@ -316,7 +317,7 @@ GTHTNK:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 105
         Prerequisites: ~gaweap, ~upgrade.st
-        Description: Steel Talon's main battle tank.\nArmed with a 122mm cannon and a coaxial MG.\n\n  Role: MBT\n  HP: 1400\n  Armor: Heavy\n  Speed: 60\n  Viewrange: 10\n\n Good vs Ground Targets\n\n Special:\n\n - Crushes infantry
+        Description: Steel Talon's main battle tank armed.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Predator
         Volume: 2
@@ -359,7 +360,7 @@ HVR:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 106
         Prerequisites: ~gaweap, ~upgrade.zc
-        Description: Hovering vehicle, armed with long range missiles.\n\n  Role: Support/Artillery/Anti VTOL\n  HP: 400\n  Armor: Medium\n  Speed: 80\n  Viewrange: 13\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Hovers\n - Full burst lock on VTOLs\n - Crushes infantry 
+        Description: Hovering vehicle, armed with long range missiles.\n\nGood vs: Vehicle and Air\n\nSpecial:\n- Can attack Air\n- Crush class: Medium vehicle\n- Hover
     Voiced:
         VoiceSet: Slingshot
         Volume: 2
@@ -418,7 +419,7 @@ AIRBLAST:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 106
         Prerequisites: ~gaweap, garadr, ~!t1, ~upgrade.gdf
-        Description: Light armored MLRS.\n\n  Role: Support\n  HP: 600\n  Armor: Medium\n  Speed: 80\n  Viewrange: 12\n\n Good vs Soft Targets, VTOLs\n\n Special:\n\n - Full burst lock on VTOLs\n - Crushes infantry
+        Description: Deployable front base.\n\nGood vs: Nothing (undeployed), Ground Targets (deployed)\n\n Special:\n- Provides building radius after deployment\n- Can gain veterancy\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Gmcv
         Volume: 2
@@ -500,7 +501,7 @@ TRITON:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
-        Description: GDF's assault tank.\n\n  Role: Assault/Frontline\n  HP: 1400\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 12\n\n Good vs Everything\n\n Special:\n\n - Initial burst attack\n - Self Healing\n - Crushes infantry
+        Description: GDF's assault tank.\n\nGood vs: Everything\n\nSpecial:\n- Self Healing\n- Crush class: Heavy vehicle
     Selectable:
         Bounds: 42,42, 0, -5
     Voiced:
@@ -569,7 +570,7 @@ MMCH:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
-        Description: Steel Talon's assault mechs.\n\n  Role: Assault/Ranged\n  HP: 1200\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Armor\n\n Special:\n\n - Crushes infantry
+        Description: Steel Talon's assault mech.\n\nGood vs: Ground Targets\n\nSpecial:\n- Crush class: Heavy vehicle
     Voiced:
         VoiceSet: Titan
         Volume: 2
@@ -579,7 +580,7 @@ MMCH:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp1.aud
+        SoundFiles: stomp1a.aud, stomp1b.aud, stomp1c.aud
         Delay: 3
         Interval: 16
         RequiresCondition: walker
@@ -686,7 +687,7 @@ MMCH2:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp4.aud
+        SoundFiles: stomp4a.aud, stomp4b.aud, stomp4c.aud
         Delay: 3
         Interval: 19
         RequiresCondition: walker
@@ -740,7 +741,7 @@ SONIC:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 107
         Prerequisites: ~gaweap, gatech, ~upgrade.st
-        Description: Armored high-tech vehicle with range and sonic armament.\n\n  Role: Assault/Line\n  HP: 1100\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 9\n\n Good vs Ground Targets\n\n Special:\n\n - Deals damage over time to any unit in line of fire (Colossus excluded) \n - Crushes infantry
+        Description: Armored high-tech vehicle with range and sonic armament.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals damage over time to any unit in line of fire\n- Crush class: Heavy vehicle
     Selectable:
         Bounds: 42,42, 0, -5
     Targetable:
@@ -778,7 +779,7 @@ BEHEMOTH:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 108
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
-        Description: GDF's heavy artillery, armed with an mobile ion cannon.\n\n  Role: Heavy Artillery\n  HP: 700\n  Armor: Medium\n  Speed: 56\n  Viewrange: 11\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Minimum attack distance (Range 5)\n - Crushes infantry
+        Description: GDF's heavy artillery armed with a mobile ion cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance\n- Crush class: Medium vehicle
     Selectable:
         Bounds: 42,42, 0, -5
     Voiced:
@@ -821,7 +822,7 @@ JUGG:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 108
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
-        Description: Steel Talon's heavy mechanized artillery walker.\n\n  Role: Heavy Artillery\n  HP: 600\n  Armor: Heavy\n  Speed: 56\n  Viewrange: 12\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Minimum attack distance (Range 5)\n - Initial burst attack\n - Crushes infantry
+        Description: Steel Talon's heavy mechanized artillery walker.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance\n- Needs to deploy before shooting\n- Crush class: Heavy vehicle
     Voiced:
         VoiceSet: Marv
         Volume: 2
@@ -832,7 +833,7 @@ JUGG:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp4.aud
+        SoundFiles: stomp4a.aud, stomp4b.aud, stomp4c.aud
         Delay: 4
         Interval: 15
         RequiresCondition: walker
@@ -901,7 +902,7 @@ CYCLOPS:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 108
         Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.zc
-        Description: ZOCOM's fast hover artillery, armed with a rapid sonic blaster cannon.\n\n  Role: Heavy Artillery\n  HP: 500\n  Armor: Medium\n  Speed: 80\n  Viewrange: 13\n\n Good vs Ground Targets\n\n Special:\n\n - Deals area of effect damage\n - Hovers\n - Crushes infantry
+        Description: ZOCOM's fast hover artillery, armed with a rapid sonic blaster cannon.\n\nGood vs: Ground Targets\n\nSpecial:\n- Deals AOE damage\n- Minimum attack distance\n- Crush class: Medium vehicle\n- Hover
     Voiced:
         VoiceSet: Predator
         Volume: 2
