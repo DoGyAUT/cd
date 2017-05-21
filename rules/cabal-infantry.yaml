@@ -5,7 +5,7 @@ HUSK:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 300
         Prerequisites: ~cybbar
-        Description: Cabals standard infantry production type.\n\nGood vs: infantry\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire
+        Description: Cabals standard infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
     Valued:
         Cost: 200
     Tooltip:
@@ -47,7 +47,7 @@ HHUSK:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 301
         Prerequisites: ~cybbar
-        Description: Cabals standard infantry production type.\n\nGood vs: vehicles\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire
+        Description: Cabals standard infantry production type.\n\nGood vs: Vehicles\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
     Valued:
         Cost: 300
     Tooltip:
@@ -170,7 +170,7 @@ KENGINEER:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 305
         Prerequisites: ~cybbar
-        Description: Cabals tool cyborg.\n\nGood vs: buildings\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- can capture buildings\n- can repair buildings
+        Description: Cabals tool cyborg.\n\nGood vs: Nothing\n\nSpecial:\n- Receives only 50% damage from fire\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Gets stunned by EMP\n- Crush class: Medium infantry
     Selectable:
         Priority: 5
         Bounds: 12,17,0,-6
@@ -251,7 +251,7 @@ OVERSEER:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 306
         Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Cabals advanced infantry production type.\n\nGood vs: infantry\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- buffs other cyborgs around him in accuracy and attackspeed\n- stealth detection
+        Description: Cabals advanced infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Buffs other cyborgs around him in accuracy and attackspeed\n- Provides stealth detection\n- Gets stunned by EMP\n- Crush class: Medium Infantry
     Valued:
         Cost: 500
     Tooltip:
@@ -294,7 +294,7 @@ CYBFLY:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 307
         Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Cabals infantry production type adjusted with jet packs and lasers.\n\nGood vs: everything except jets\n\nSpecial:\n- flys\n- can attack Vtols\n- stealth detection
+        Description: Cabals infantry production type adjusted with jet packs and lasers.\n\nGood vs: Everything except jets\n\nSpecial:\n- Provides stealth detection\n- Flying
     Selectable:
         Bounds: 12,17,0,-14
     Voiced:
@@ -376,7 +376,7 @@ CYC2:
         Queue: Infantry.Cabal
         BuildPaletteOrder: 308
         Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2
-        Description: Cabals advanced heavy infantry production type.\n\nGood vs: ground units\n\nSpecial:\n- cannot be crushed by medium vehicles and below\n- receives only 50% damage from fire\n- selfhealing
+        Description: Cabals advanced heavy infantry production type.\n\nGood vs: Ground Units\n\nSpecial:\n- Receives only 50% damage from fire\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Medium infantry
     Selectable:
         Bounds: 24,34,0,-9
         Class: CYC2
@@ -422,7 +422,7 @@ GLAD:
         BuildPaletteOrder: 309
         BuildLimit: 1
         Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3, ~!glad
-        Description: Cabals heroic cyborg that announces his masters presence.\n\nGood vs: everything\n\nSpecial:\n- cannot be crushed by heavy vehicles and below\n- receives only 50% damage from fire\n- stealth detection\n- selfhealing\n- can attack air
+        Description: Cabals heroic cyborg that announces his masters presence.\n\nGood vs: Everything\n\nSpecial:\n- Receives only 50% damage from fire\n- Provides stealth detection\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Heavy infantry
     Selectable:
         Bounds: 24,34,0,-9
         Class: GLAD
