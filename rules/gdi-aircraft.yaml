@@ -8,7 +8,7 @@ ORCA_F1:
         Queue: Air.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gahpad, ~!upgrade.zc
-        Description: Fast assault gunship with hellfire rocket launchers and a machinegun.\n\nGood vs: Ground targets, Vtol's\n\nSpecial:\n- Stealth detection
+        Description: Fast assault gunship with hellfire rocket launchers and a machinegun.\n\nGood vs: Vehicles\n\nSpecial:\n- Stealth detection
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -72,7 +72,7 @@ ORCA_F2:
         Queue: Air.GDI
         BuildPaletteOrder: 101
         Prerequisites: ~gahpad, ~upgrade.zc
-        Description: ZOCOMs improved version of the F-1.\n\nGood vs: Ground targets, Vtol's\n\nSpecial:\n- Stealth detection
+        Description: ZOCOMs improved version of the F-1.\n\nGood vs: Vehicles and Buildings\n\nSpecial:\n- Stealth detection
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -144,7 +144,7 @@ ORCA_TRAN:
         Queue: Air.GDI
         BuildPaletteOrder: 102
         Prerequisites: ~gahpad, ~upgrade.zc, ~!t1
-        Description: ZOCOMs aircraft transport.\n\nGood vs: Ground targets, Vtol's\n\nSpecial:\n- Garrisoned infantry can attack other units
+        Description: ZOCOMs aircraft transport.\n\nGood vs: Everyhing depending on payload\n\nSpecial:\n- Can transport infantry\n- Garrisoned infantry can attack other units\n- Unarmed without payload
     Voiced:
         VoiceSet: Orca
         Volume: 2
@@ -939,6 +939,7 @@ DSHP:
         Queue: Air.GDI
         BuildPaletteOrder: 102
         Prerequisites: ~gahpad
+        Description: If you need to move a big tank army over the ocean, this dropship is the right thing for the task.\n\nGood vs: Nothing\n\nSpecial:\n- Unarmed\- Can transport 4 vehicles or 20 infantry
     Aircraft:
         LandWhenIdle: True
         TurnSpeed: 2

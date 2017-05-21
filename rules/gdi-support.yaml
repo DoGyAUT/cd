@@ -96,7 +96,7 @@ GAMG:
         Queue: Defense
         BuildPaletteOrder: 103
         Prerequisites: anypower, gapile, ~structures.gdi, ~!upgrade.gdf
-        Description: Basic base defense.\n\nGood vs: Infantry, Light armor\n\nSpecial:\n- Requires power to operate
+        Description: Basic base defense.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -160,7 +160,7 @@ GAMG2:
         Queue: Defense
         BuildPaletteOrder: 104
         Prerequisites: anypower, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Improved basic base defense, with more armor and weapons.\n\nGood vs: Infantry, Light armor and Medium armor\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+        Description: Improved basic base defense, with more armor and weapons.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -252,7 +252,7 @@ GASENTUR:
         Queue: Defense
         BuildPaletteOrder: 105
         Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
-        Description: This base defense focused on stealth detection\n\nGood vs Infantry, Light Armor\n\nSpecial:\n- Provides improved stealth detection\n- Requires power to operate
+        Description: This base defense focused on stealth detection\n\nGood vs Infantry\n\nSpecial:\n- Provides improved stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -310,7 +310,7 @@ GAMIS:
         Queue: Defense
         BuildPaletteOrder: 106
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Air base defense.\n\nGood vs: Aircraft, Light armor and Medium armor\n\nSpecial\n- Requires power to operate
+        Description: Anti-Air base defense.\n\nGood vs: Aircraft\n\nSpecial\n- Can attack Air\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -368,7 +368,7 @@ GACAN:
         Queue: Defense
         BuildPaletteOrder: 107
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Armor base defense with a railgun and HE grenades.\n\nGood vs: Armor\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+        Description: Anti-Armor base defense with a railgun and HE grenades.\n\nGood vs: Vehicles\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -433,7 +433,7 @@ GAMORTAR:
         Queue: Defense
         BuildPaletteOrder: 109
         Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.gdf
-        Description: Artillery base defense.\n\nGood vs: Infantry, Light armor and Artillery\n\nSpecial: Provides stealth detection\n- Requires power to operate
+        Description: Artillery base defense.\n\nGood vs: Ground Targets\n\nSpecial:\n- Can gain veterancy\n- Provides stealth detection\n- Requires power to operate
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
@@ -568,7 +568,7 @@ GAFORT:
         Queue: Defense
         BuildPaletteOrder: 108
         Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Huge garrisonable defense.\n\nGood vs: Infantry, Light armor\n\nSpecial:\n- Provides stealth detection\n- Can operate without power\n
+        Description: Huge garrisonable defense.\n\nGood vs: Everything depending on garrisoned infantry\n\nSpecial:\n- Can garrison 12 infantry\n- Unarmed if empty\n- Provides stealth detection\n- Can operate without power\n
     Building:
         Footprint: xxxx xxxx xxxx xxxx
         Dimensions: 4,4
