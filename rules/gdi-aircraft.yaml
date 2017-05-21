@@ -546,8 +546,10 @@ PHOENIX:
     Voiced:
         VoiceSet: Orca
         Volume: 2
-    Selectable:
-        Bounds: 100,100
+    -Voiced:
+    -Selectable:
+    SelectionDecorations:
+        RenderSelectionBars: False
     Aircraft:
         TurnSpeed: 1
         Speed: 120
@@ -555,7 +557,7 @@ PHOENIX:
 #        TakeoffSound: dropup1.aud
 #        LandingSound: dropdwn1.aud
     Health:
-        HP: 2040
+        HP: 2500
     RevealsShroud:
         Range: 10c0
         Type: GroundPosition
@@ -564,13 +566,12 @@ PHOENIX:
     AttackPlane:
         FacingTolerance: 20
     AmmoPool:
-        Ammo: 10
-        PipCount: 10
-        ReloadCount: 5
+        Ammo: 1
+        PipCount: 1
+        ReloadCount: 1
         ReloadDelay: 50
         PipType: Ammo
         PipTypeEmpty: AmmoEmpty
-    AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
@@ -588,7 +589,8 @@ PHOENIX:
 #        UsePlayerColor: False
     SpawnActorOnDeath:
         Actor: PHOENIX.Husk
-        Probability: 100
+        Probability: 100100
+    RejectsOrders:
 
 FHAWK:
     Inherits: ^AttackAdvancedPlane
