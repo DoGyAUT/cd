@@ -140,7 +140,7 @@ RavenMissile:
             
 RavenMissileAA:
     Inherits: ^MissileAPHE 
-	Inherits@wh: ^FireWH
+    Inherits@wh: ^FireWH
     ReloadDelay: 200
     Range: 8c0
     Burst: 2
@@ -1194,10 +1194,10 @@ GattlingCannonVisual:
         
 VenomCannon:
     Inherits: ^APBullet 
-	Inherits@wh: ^BulletWH
+    Inherits@wh: ^BulletWH
     ReloadDelay: 75
     Range: 6c0
-	MinRange: 1c0
+    MinRange: 1c0
     ValidTargets: Ground
     Report: cygun1.aud
     Burst: 20
@@ -1215,10 +1215,10 @@ VenomCannon:
         
 HydraCannon:
     Inherits: ^Bullet 
-	Inherits@wh: ^BulletWH
+    Inherits@wh: ^BulletWH
     ReloadDelay: 200
     Range: 6c0
-	MinRange: 1c0
+    MinRange: 1c0
     ValidTargets: Ground
     Report: tsgun4.aud
     Burst: 50
@@ -1547,7 +1547,7 @@ HydraLaserFire:
     Inherits@wh: ^TiberiumWH
     ReloadDelay: 90
     Range: 6c0
-	MinRange: 1c0
+    MinRange: 1c0
     Burst: 4
     BurstDelay: 10
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
@@ -1948,6 +1948,7 @@ HydraMissiles:
 	Inherits@wh: ^APWH
     ReloadDelay: 160
     Range: 6c0
+    MinRange: 1c0
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
     Burst: 6
     BurstDelay: 6

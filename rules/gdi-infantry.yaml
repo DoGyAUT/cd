@@ -154,12 +154,11 @@ SCOUT:
     RevealsShroud:
         Range: 12c0
     AttackFrontal:
-    -ProducibleWithLevel:
 #    Infiltrates:
 #        Types: SpyInfiltrate
     Cloak:
-        Condition: crate-cloak || cloakgenerator
-        CloakSound:
+        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+        CloakSound: cloak5.aud
         UncloakSound: cloak5.aud
     AnnounceOnSeen:
         PingRadar: True

@@ -1137,10 +1137,10 @@ MammothWalkerTusk:
         
 OrcaF1Missiles:
     Inherits: ^MissileAPHE 
-	Inherits@wh: ^APWH
+    Inherits@wh: ^APWH
     ReloadDelay: 120
     Range: 6c0
-	MinRange: 1c0
+    MinRange: 1c0
     Report: orcamis1.aud
     Burst: 2
     BurstDelay: 6
@@ -1176,7 +1176,7 @@ OrcaF2Missiles:
     ReloadDelay: 160
     ValidTargets: Ground
     Range: 6c0
-	MinRange: 1c0
+    MinRange: 1c0
     Burst: 4
     BurstDelay: 6
     Warhead@1Dam: SpreadDamage
@@ -1387,4 +1387,34 @@ JavelinGun:
         
 JavelinGunGarrison:
     Inherits: JavelinGun
-    Range: 8c0 
+    Range: 8c0
+    
+HellfireMissile:
+    Inherits: ^MissileAPHE 
+	Inherits@wh: ^APWH
+    ReloadDelay: 200
+    Burst: 1
+    Range: 10c0
+    MinRange: 2c0
+    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+    ValidTargets: Ground
+    Projectile: Missile
+        MaximumLaunchSpeed: 0c512
+        MinimumLaunchSpeed: 0c512
+        Speed : 0c768
+        Inaccuracy: 0c128
+        Image: patriot
+        HorizontalRateOfTurn: 30
+        RangeLimit: 20c0
+        ContrailLength: 20
+        ContrailWidth: 15
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 550
+        ValidTargets: Ground
+    Warhead@2Eff: CreateEffect
+        Explosions: coreexplo1, coreexplo2
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+    Warhead@2Smu: LeaveSmudge
+        SmudgeType: MediumCrater
