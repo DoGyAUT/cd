@@ -5,7 +5,7 @@ NACNST:
         BuildSounds: facbld1.aud
         Dimensions: 3,3
     Buildable:
-        Queue: Building
+        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
         BuildPaletteOrder: 200
         Prerequisites: ~disabled
         Adjacent: 8
@@ -15,19 +15,19 @@ NACNST:
     RevealsShroud:
         Range: 10c0
     Production:
-        Produces: Building,Defense
+        Produces: Building.Nod,Defense.Nod
         MoveIntoWorld: False
     Exit:
     ExitsDebugOverlay:
     ProductionQueue@Building:
-        Type: Building
+        Type: Building.Nod
         Group: Building
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
         QueuedAudio: Building
         ReadyAudio: ConstructionComplete
     ProductionQueue@Defense:
-        Type: Defense
+        Type: Defense.Nod
         Group: Defense
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
@@ -45,9 +45,9 @@ NACNST:
         Facing: 96
         DeployCursor: undeploy
     ProductionBar@Building:
-        ProductionType: Building
+        ProductionType: Building.Nod
     ProductionBar@Defense:
-        ProductionType: Defense
+        ProductionType: Defense.Nod
     ProvidesRadar:
 #    WithBuildingPlacedOverlay:
     Power:
@@ -74,7 +74,7 @@ NACNST:
 NAPOWR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~structures.nod, ~!industry, ~ideology
         Description: Provides power for other structures.
@@ -110,7 +110,7 @@ NAPOWR:
 NAAPWR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~industry, ~structures.nod, ~ideology
         Description: Provides twice as much power as the normal Power Plant.\nExclusive to the Industry Ideology.
@@ -156,7 +156,7 @@ NIPROC:
     Tooltip:
         Name: Nod Industry Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
         Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
@@ -214,7 +214,7 @@ NTPROC:
     Tooltip:
         Name: Nod Technology Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
         Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
@@ -232,7 +232,7 @@ NPPROC:
     Tooltip:
         Name: Nod Propaganda Tiberium Refinery
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 202
         Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
         Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
@@ -248,7 +248,7 @@ NPPROC:
 NAHAND:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 204
         Prerequisites: anypower, ~structures.nod, ~ideology
         Description: Produces infantry.
@@ -302,7 +302,7 @@ NAWEAP:
     ProvidesPrerequisite:
         Prerequisite: factory
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 205
         Prerequisites: anypower, nproc, ~structures.nod, ~ideology
         Description: Produces vehicles.
@@ -378,12 +378,12 @@ NAWEAP:
         CircleSequence: circles
         ClockSequence: clock
         Range: 8
-        Duration: 450
+        Duration: 300
 
 NARADR:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 206
         Prerequisites: anypower, nproc, ~structures.nod, ~ideology
         Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -473,7 +473,7 @@ NAHPAD:
         Name: Nod Helipad
     Buildable:
         BuildPaletteOrder: 207
-        Queue: Building
+        Queue: Building.Nod
         Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology
         Description: Produces, rearms and\nrepairs aircraft.
     Building:
@@ -534,11 +534,10 @@ NAHPAD:
         DisplayBeacon: false
         DisplayRadarPing: false
         BeaconPoster: havoc
-        Prerequisites: industry, napyra
+        Prerequisites: industry
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
     ParatroopersPower@propcarry:
         UnitType: nodcarry.support
         Prerequisites: ~propaganda
@@ -559,12 +558,30 @@ NAHPAD:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
-        #BeaconPosterPalette: iconclock
+    ParatroopersPower@fanatic:
+        UnitType: valkyrie.support
+        Prerequisites: ~propaganda, naradr
+        DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
+        Icon: fanatic
+        OrderName: FanaticDropOrder
+        SquadSize: 1
+        ChargeTime: 240
+        Description: Fanatic Drop
+        LongDesc: Drops a group of fanatics on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        LowPowerSpeechNotification: LowPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: fanatic
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
  
 NAPYRA:
     Inherits: ^Building
     Buildable:
-        Queue: Building
+        Queue: Building.Nod
         BuildPaletteOrder: 208
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology
         Description: Gives access to ideologies.\nPromotes new infantry to veterancy rank 1.
@@ -669,7 +686,7 @@ NATECH:
 NATMPL:
     Inherits: ^Building
 #    Buildable:
-#        Queue: Building
+#        Queue: Building.Nod
 #        BuildPaletteOrder: 211
 #        Prerequisites: anypower, napyra, ~structures.nod, ~ideology, ~propaganda
 #        BuildLimit: 1
@@ -703,7 +720,7 @@ NAWAST:
 #    Buildable:
 #        BuildPaletteOrder: 213
 #        Prerequisites: namisl, ~structures.nod, ~!t1, ~!t2, ~!t3, ~industry, ~ideology
-#        Queue: Building
+#        Queue: Building.Nod
 #        BuildLimit: 1
 #        Description: Processes Veins into useable resources.\nExclusive to the Industry Ideology.
     Building:

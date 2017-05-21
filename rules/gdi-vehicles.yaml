@@ -81,7 +81,6 @@ GHARV:
 #        DamageCooldown: 200
     RevealsShroud:
         Range: 6c0
-    -ProducibleWithLevel:
     RenderSprites:
     RenderVoxels:
     -WithVoxelBody:
@@ -223,7 +222,7 @@ VULTURE:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp3.aud
+        SoundFiles: stomp3a.aud, stomp3b.aud, stomp3c.aud
         Delay: 3
         Interval: 13
         RequiresCondition: walker
@@ -243,7 +242,7 @@ VULTURE:
     RenderDetectionCircle:
     AutoTarget:
     Armament@primary:
-        Weapon: VultureGat #22mmAPHE
+        Weapon: VultureGat
         LocalOffset: 150,280,850, 150,-280,850
         MuzzleSequence: muzzle
         MuzzleSplitFacings: 8
@@ -280,6 +279,8 @@ GTMTNK:
     Mobile:
         Speed: 60
         TurnSpeed: 4
+    GrantConditionOnMovement@engine:
+        Condition: tracks
     Health:
         HP: 1200
     RevealsShroud:
@@ -579,7 +580,7 @@ MMCH:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp1.aud
+        SoundFiles: stomp1a.aud, stomp1b.aud, stomp1c.aud
         Delay: 3
         Interval: 16
         RequiresCondition: walker
@@ -686,7 +687,7 @@ MMCH2:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp4.aud
+        SoundFiles: stomp4a.aud, stomp4b.aud, stomp4c.aud
         Delay: 3
         Interval: 19
         RequiresCondition: walker
@@ -832,7 +833,7 @@ JUGG:
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:
-        SoundFiles: stomp4.aud
+        SoundFiles: stomp4a.aud, stomp4b.aud, stomp4c.aud
         Delay: 4
         Interval: 15
         RequiresCondition: walker

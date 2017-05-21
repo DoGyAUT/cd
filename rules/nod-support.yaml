@@ -1,7 +1,7 @@
 NAWALL:
     Inherits: ^Wall
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 200
         Prerequisites: ~structures.nod, ~ideology
         Description: Stops infantry and blocks enemy fire.
@@ -24,7 +24,7 @@ NAWALL:
 NAGATE_A:
     Inherits: ^Gate_A
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 201
         Prerequisites: ~structures.nod, ~ideology
         Description: Automated barrier that opens for allied units.
@@ -34,7 +34,7 @@ NAGATE_A:
 NAGATE_B:
     Inherits: ^Gate_B
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 202
         Prerequisites: ~structures.nod, ~ideology
         Description: Automated barrier that opens for allied units.
@@ -44,7 +44,7 @@ NAGATE_B:
 NASILO:
     Inherits: ^BuildingInfiltrate
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 203
         Prerequisites: nproc, ~structures.nod, ~ideology
         Description: Stores excess Tiberium.\n\nStores 1500$.
@@ -92,7 +92,7 @@ NAFLAMER:
     Tooltip:
         Name: Flame Turret
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, nahand, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 203
         Description: Anti-Infantry base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased fire burst amount (Industry)\n\n  Strong vs Infantry\n  Weak vs Aircraft, Armor, Artillery
@@ -155,7 +155,7 @@ NAGAT:
     Tooltip:
         Name: Gattling Cannon
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, nahand, ~structures.nod, ~industry
         BuildPaletteOrder: 203
         Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
@@ -208,7 +208,7 @@ NALASR:
     Tooltip:
         Name: Laser Turret
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology
         BuildPaletteOrder: 204
         Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Improved laser range (Technology)\n Improved laser damage (Technology)\n\n  Strong vs Armor\n  Weak vs Aircraft, Artillery
@@ -270,7 +270,7 @@ NASAM:
     Tooltip:
         Name: SAM Site
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         Prerequisites: anypower, naradr, ~structures.nod, ~ideology, ~!industry
         BuildPaletteOrder: 205
         Description: Anti-Air base defense.\nRequires no power to operate.\n\nPossible upgrades\n Stealth (Technology)\n Increased missile burst amount (Industry)\n\n  Strong vs Aircraft\n  Weak vs Ground units
@@ -358,7 +358,7 @@ NAOBEL:
     Tooltip:
         Name: Obelisk of Light
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildPaletteOrder: 206
         Prerequisites: anypower, napyra, ~structures.nod, ~ideology
         Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft, Artillery
@@ -430,7 +430,7 @@ NAPULS:
     Tooltip:
         Name: E.M. Pulse Cannon
     Buildable:
-        Queue: Defense
+        Queue: Defense.Nod
         BuildLimit: 1
         BuildPaletteOrder: 207
         Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
@@ -486,7 +486,7 @@ NAPULS:
 NAMISL:
     Inherits: ^Building
 #    Buildable:
-#        Queue: Defense
+#        Queue: Defense.Nod
 #        BuildPaletteOrder: 212
 #        Prerequisites: anypower, napyra, ~structures.nod, ~industry, ~ideology
 #        BuildLimit: 1
@@ -552,7 +552,7 @@ NASTLH:
     Buildable:
         BuildPaletteOrder: 210
         Prerequisites: anypower, napyra, ~structures.nod, ~technology, ~ideology
-        Queue: Defense
+        Queue: Defense.Nod
         Description: Generates a cloaking field to hide your forces from the enemy.\nExclusive to the Technology Ideology.
     Building:
         Footprint: xxxxx xxxxx

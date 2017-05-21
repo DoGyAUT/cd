@@ -383,7 +383,7 @@
     ExternalCondition@gasdamage:
         Condition: gasdamage
     DamagedByTerrain@firedamage:
-        Damage: 20
+        Damage: 40
         DamageInterval: 16
         Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
         RequiresCondition: firedamage
@@ -781,7 +781,7 @@
     ExternalCondition@gasdamage:
         Condition: gasdamage
     DamagedByTerrain@firedamage:
-        Damage: 10
+        Damage: 20
         DamageInterval: 8
         DamageTypes: FireDeath
         Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
@@ -1496,7 +1496,7 @@
     ExternalCondition@gasdamage:
         Condition: gasdamage
     DamagedByTerrain@firedamage:
-        Damage: 10
+        Damage: 20
         DamageInterval: 16
         Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
         RequiresCondition: firedamage
@@ -1948,7 +1948,7 @@
             Radius: 256
             VerticalTopOffset: 512
     Mobile:
-        Speed: 50
+        Speed: 20
         TurnSpeed: 16
         SharesCell: yes
         TerrainSpeeds:
@@ -1984,7 +1984,6 @@
         DeathSequence: die
         UseDeathTypeSuffix: False
     Hovers:
-    Selectable:
     GrantPeriodicCondition@kill:
         Condition: killcloud
         CooldownDuration: 500
@@ -2033,7 +2032,6 @@
     WithTextControlGroupDecoration:
     HiddenUnderFog:
     WithSpriteBody:
-    Selectable:
     GrantPeriodicCondition@kill:
         Condition: killfire
         CooldownDuration: 500
@@ -2043,7 +2041,7 @@
         EmptyWeapon: NapalmShrapnelSmudge
     KillsSelf:
         RequiresCondition: killfire
-        Delay: 0,80
+        Delay: 0,40
     ProximityExternalCondition@firedamage:
         Condition: firedamage
         ValidStances: Ally, Neutral, Enemy

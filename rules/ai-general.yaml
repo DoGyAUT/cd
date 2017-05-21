@@ -1,9 +1,9 @@
 Player:
     HackyAI@NormalAI:
-        Name: Normal AI
+        Name: Test AI
         MinimumExcessPower: 10
-        BuildingQueues: Building, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
-        DefenseQueues: Defense
+        BuildingQueues: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
+        DefenseQueues: Defense.GDI, Defense.Nod, Defense.Cabal, Defense.Forg, Defense.Scrin
         UnitQueues: Infantry.GDI, Infantry.Nod, Infantry.Cabal, Infantry.Forg, Infantry.Scrin, Vehicle.GDI, Vehicle.Nod, Vehicle.Cabal, Vehicle.Forg, Vehicle.Scrin, Air.GDI, Air.Nod, Air.Cabal, Air.Forg, Air.Scrin, Vehicle.GDI.Ace
         SquadSize: 5
         SquadSizeRandomBonus : 5    
@@ -24,7 +24,7 @@ Player:
         RestrictMCVDeploymentFallbackToBase: False
         ShouldRepairBuildings: True 
         CapturingActorTypes: engineer, nengineer, kengineer, fengineer
-#        CapturableActorTypes: #tibtech, cahosp, caarmr, caaray
+        CapturableActorTypes: tibtech, cahosp, caarmr, caaray
         CheckCaptureTargetsForVisibility: false
         MaximumCaptureTargetOptions: 15
         BuildingCommonNames:
@@ -209,6 +209,21 @@ Player:
                 CheckRadius: 8c0
         SupportPowerDecision@PropagandaInfantry:
             OrderName: PropagandaInfantryDropOrder                
+            MinimumAttractiveness: 5
+            Consideration@1:
+                Against: Enemy
+                Types: Building, Infantry, Vehicle
+                Attractiveness: 1
+                TargetMetric: None
+                CheckRadius: 8c0
+            Consideration@2:
+                Against: Enemy
+                Types: Water
+                Attractiveness: -5
+                TargetMetric: None
+                CheckRadius: 8c0
+        SupportPowerDecision@FanaticDropOrder:
+            OrderName: FanaticDropOrder                
             MinimumAttractiveness: 5
             Consideration@1:
                 Against: Enemy
