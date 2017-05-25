@@ -281,7 +281,7 @@ KARADR:
         Queue: Building.Cabal
         BuildPaletteOrder: 306
         Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants\n- Detects underground units
     Valued:
         Cost: 1500
     Tooltip:
@@ -320,7 +320,7 @@ KARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 20c0
+        Range: 15c0
         CloakTypes: Underground        
     GrantExternalConditionPower@powerboost:
         OrderName: GrantPowerBoostPowerInfoOrder
@@ -401,7 +401,7 @@ KABTECH:
         Queue: Building.Cabal
         BuildPaletteOrder: 308
         Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Gives access to superior technology.
+        Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm
     Valued:
         Cost: 4000
     Tooltip:
@@ -436,3 +436,15 @@ KABTECH:
     # ProductionBar:
     DisabledOverlay:
     ProvidesPrerequisite@buildingname:
+    GrantExternalConditionPower@IRONCURTAIN:
+		Icon: fortification
+		ChargeTime: 240
+		Description: Nanoswarm
+		LongDesc: Makes vehicles, buildings and cyborgs invulnerable for 20 seconds.
+		Duration: 500
+		SelectTargetSpeechNotification: SelectTarget
+        LowPowerSpeechNotification: LowPower
+        EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Condition: invulnerability
+        Range: 2

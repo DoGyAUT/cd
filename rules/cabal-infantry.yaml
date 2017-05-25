@@ -21,7 +21,7 @@ HUSK:
     Mobile:
         Speed: 40
     RevealsShroud:
-        Range: 7c0
+        Range: 6c0
     Armament@PRIMARY:
         Weapon: HuskGun
         LocalOffset: 300,0,600
@@ -83,11 +83,11 @@ HHUSK:
 CYBSPY:
     Inherits@1: ^Cyborg
     Inherits@2: ^HuskUpgrades
-#    Buildable:
-#        Queue: Infantry.Cabal
-#        BuildPaletteOrder: 306
-#        Prerequisites: ~cybbar, karadr
-#        Description: Role : Scout\nHP: 200\nArmor: Medium\nSpeed: 60\nViewrange: 12\nUseless vs: Anything\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Invisibility
+    Buildable:
+        Queue: Infantry.Cabal
+        BuildPaletteOrder: 306
+        Prerequisites: ~cybbar, karadr
+        Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
     Valued:
         Cost: 400
     Tooltip:
@@ -100,7 +100,7 @@ CYBSPY:
         VoiceSet: Ascentor
         Volume: 4
     Health:
-        HP: 240
+        HP: 300
     Mobile:
         Speed: 40
     RevealsShroud:
@@ -111,10 +111,14 @@ CYBSPY:
     -ProducibleWithLevel:
 #    Infiltrates:
 #        Types: SpyInfiltrate
-    Cloak:
-        Condition: crate-cloak || cloakgenerator
-        CloakSound:
+    -Cloak:
+    Cloak@self:
+        InitialDelay: 90
+        CloakDelay: 90
+        CloakSound: cloak5.aud
         UncloakSound: cloak5.aud
+        IsPlayerPalette: true
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
@@ -267,7 +271,7 @@ OVERSEER:
     Mobile:
         Speed: 40
     RevealsShroud:
-        Range: 7c0
+        Range: 6c0
     Armament@PRIMARY:
         Weapon: OverseerGun
         LocalOffset: 300,0,525
@@ -364,6 +368,7 @@ CYBFLY:
         # UsePlayerColor: True
     SoundOnDamageTransition:
         DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+    -Passenger
         
 CYC2:
     Inherits@1: ^HeavyCyborg

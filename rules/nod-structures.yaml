@@ -386,7 +386,7 @@ NARADR:
         Queue: Building.Nod
         BuildPaletteOrder: 206
         Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units
     Valued:
         Cost: 1500
     Tooltip:
@@ -422,7 +422,7 @@ NARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 20c0
+        Range: 15c0
         CloakTypes: Underground
     ParatroopersPower@techcarry:
         UnitType: valkyrie.support

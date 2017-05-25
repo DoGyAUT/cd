@@ -393,6 +393,7 @@
 ^Building:
     Inherits@1: ^BasicBuilding
     Inherits@2: ^EmpDisable
+    Inherits@3: ^IronCurtainable
     Inherits@fortification: ^FortificationUpgrades
     Inherits@Erepairs: ^EmergencyRepairsUpgrades
     GivesBuildableArea:
@@ -1099,6 +1100,7 @@
     Inherits@1: ^Infantry
     Inherits@2: ^EmpDisable
     Inherits@3: ^DamagedByVeins
+    Inherits@8: ^IronCurtainable
     MustBeDestroyed:
     Crushable:
         CrushClasses: cyborg
@@ -1363,7 +1365,16 @@
         CrushedSequence: die-crushed
         CrushedSequencePalette: player
         CrushedPaletteIsPlayerPalette: True
-
+^IronCurtainable:
+	WithColoredOverlay@IRONCURTAIN:
+		RequiresCondition: invulnerability
+	DamageMultiplier@IRONCURTAIN:
+		RequiresCondition: invulnerability
+		Modifier: 0
+	TimedConditionBar:
+		Condition: invulnerability
+	ExternalCondition@INVULNERABILITY:
+		Condition: invulnerability
 ^Vehicle:
     Inherits@1: ^GainsExperience
     Inherits@2: ^ExistsInWorld
@@ -1372,6 +1383,7 @@
     Inherits@5: ^Cloakable
     Inherits@6: ^ZepUpgrades
     Inherits@7: ^DeployBuffUpgrades
+    Inherits@8: ^IronCurtainable
     Inherits@parach: ^Parachutable
     Inherits@Erepairs: ^EmergencyRepairsUpgrades
     DrawLineToTarget:
@@ -2034,8 +2046,8 @@
     WithSpriteBody:
     GrantPeriodicCondition@kill:
         Condition: killfire
-        CooldownDuration: 500
-        ActiveDuration: 200
+        CooldownDuration: 100
+        ActiveDuration: 50
     Explodes:
         Weapon: NapalmShrapnelSmudge
         EmptyWeapon: NapalmShrapnelSmudge

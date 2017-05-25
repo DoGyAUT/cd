@@ -411,14 +411,14 @@ ZoneMarineGun:
     Inherits: ^Bullet
     Inherits@wh: ^BulletWH
     ReloadDelay: 60
-    Range: 6c0
+    Range: 5c0
     Burst: 3
     BurstDelay: 4
     Report: carbine_g1.aud, carbine_g2.aud
     Projectile: BulletAS
-        bullet
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
+        Spread: 128
         Damage: 50
 
 ZoneMarineGunGarrison:
@@ -961,7 +961,7 @@ HowitzerTurretGun:
     MinRange: 4c0
     Warhead@1Dam: SpreadDamage
         Spread: 768
-        Damage: 500
+        Damage: 300
     Warhead@2Eff: CreateEffect
         Explosions: fireexpl
         ExplosionPalette: effect
@@ -1063,7 +1063,7 @@ VultureMissile:
 	Inherits@wh: ^HEWH
     ReloadDelay: 80
     Burst: 2
-    Range: 8c0
+    Range: 9c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Air, MidAir, HighAir
     Projectile: Missile
