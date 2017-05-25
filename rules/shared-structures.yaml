@@ -72,6 +72,7 @@ CAHOSP:
         HP: 2400
     -MustBeDestroyed:
     -Sellable:
+    -GivesBuildableArea:
     RevealsShroud:
         Range: 6c0
     ActorLostNotification:
@@ -79,7 +80,7 @@ CAHOSP:
     AutoTargetIgnore:
     Capturable:
     ExternalCapturable:
-        CaptureCompleteTime: 9
+        CaptureCompleteTime: 7
     ProximityExternalCondition:
         Condition: medic_heal
         Range: 500c0
@@ -95,6 +96,7 @@ CAARMR:
         HP: 2400
     -MustBeDestroyed:
     -Sellable:
+    -GivesBuildableArea:    
     RevealsShroud:
         Range: 3c0
     ActorLostNotification:
@@ -104,7 +106,7 @@ CAARMR:
         Sequence: idle-flag
     Capturable:
     ExternalCapturable:
-        CaptureCompleteTime: 9
+        CaptureCompleteTime: 7
     ProvidesPrerequisite:
         Prerequisite: armory.upgraded
 
@@ -119,6 +121,7 @@ CAARAY:
         HP: 2400
     -MustBeDestroyed:
     -Sellable:
+    -GivesBuildableArea:    
     RevealsShroud:
         Range: 15c0
     ActorLostNotification:
@@ -133,4 +136,4 @@ CAARAY:
         Sequence: idle-light
     Capturable:
     ExternalCapturable:
-        CaptureCompleteTime: 9
+        CaptureCompleteTime: 7

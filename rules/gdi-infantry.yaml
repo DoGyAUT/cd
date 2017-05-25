@@ -156,10 +156,14 @@ SCOUT:
     AttackFrontal:
 #    Infiltrates:
 #        Types: SpyInfiltrate
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+    -Cloak:
+    Cloak@self:
+        InitialDelay: 90
+        CloakDelay: 90
         CloakSound: cloak5.aud
         UncloakSound: cloak5.aud
+        IsPlayerPalette: true
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
     AnnounceOnSeen:
         PingRadar: True
         Notification: StealthUnitDetected
@@ -304,7 +308,7 @@ ZMARINE:
         Prerequisites: ~gapile, ~!t1, ~upgrade.zc
         Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Light Infantry
     Valued:
-        Cost: 350
+        Cost: 200
     Tooltip:
         Name: Zone Marine
     Selectable:
@@ -326,7 +330,7 @@ ZMARINE:
             PurpleTiberium: 70
                 PathingCost: 0
     RevealsShroud:
-        Range: 7c0
+        Range: 6c0
     Armament@PRIMARY:
         Weapon: ZoneMarineGun
         LocalOffset: 300,0,480

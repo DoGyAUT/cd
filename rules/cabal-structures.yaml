@@ -281,7 +281,7 @@ KARADR:
         Queue: Building.Cabal
         BuildPaletteOrder: 306
         Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants\n- Detects underground units
     Valued:
         Cost: 1500
     Tooltip:
@@ -320,7 +320,7 @@ KARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 20c0
+        Range: 15c0
         CloakTypes: Underground        
     GrantExternalConditionPower@powerboost:
         OrderName: GrantPowerBoostPowerInfoOrder

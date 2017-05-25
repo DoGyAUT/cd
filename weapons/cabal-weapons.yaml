@@ -2,7 +2,7 @@ HuskGun:
     Inherits: ^Bullet
     Inherits@wh: ^BulletWH
     ReloadDelay: 45
-    Range: 6c0
+    Range: 5c0
     Burst: 4
     BurstDelay: 2
     Report: rifle_c1.aud, rifle_c2.aud, rifle_c3.aud
@@ -11,7 +11,7 @@ HuskGun:
         Palette: effect
         Inaccuracy: 0c128
     Warhead@1Dam: SpreadDamage
-        Spread: 0c128
+        Spread: 128
         Damage: 25
         
 OverseerGun:
@@ -20,7 +20,7 @@ OverseerGun:
     ReloadDelay: 65
     Burst: 5
     BurstDelay: 2
-    Range: 6c0
+    Range: 5c0
     Report: fg42_01.aud, fg42_02.aud, fg42_03.aud
     Projectile: BulletAS
         Inaccuracy: 0c128
@@ -598,7 +598,7 @@ CabalObeliskLaserAA:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
     ReloadDelay: 120
-    Range: 13c0
+    Range: 12c0
     Report: cablaser01.aud
     ValidTargets: Air, MidAir, HighAir
     Projectile: LaserZap

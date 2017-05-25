@@ -493,14 +493,14 @@ RaiderGunAttack:
         Spread: 0c64
         Damage: 15
         Versus:
-            Air: 50
+            Air: 25
         
 RaiderGunLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^LaserWH
-    ReloadDelay: 40
-    Burst: 3
-    BurstDelay: 3
+    ReloadDelay: 20
+#    Burst: 3
+#    BurstDelay: 3
     Range: 6c0
     Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
     ValidTargets: Ground, Air, MidAir, HighAir   
@@ -515,10 +515,10 @@ RaiderGunLaser:
         SecondaryBeamColor: FFFFFF
     Warhead@1Dam: SpreadDamage
         Spread: 42
-        Damage: 26
+        Damage: 30
         Versus:
             Air: 50
-            Infantry: 350
+            Infantry: 100
         ValidTargets: Ground, Air, MidAir, HighAir   
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexpl2
@@ -855,7 +855,7 @@ VertigoBombGas:
         ContrailColor: 00FF64
     Warhead@1Dam: SpreadDamage
         Spread: 1c512
-        Damage: 3000
+        Damage: 2000
     Warhead@2Eff: CreateEffect
         Explosions: tiberiumbomb
         ExplosionPalette: tiberiumbomb50
@@ -894,7 +894,7 @@ VertigoBombNapalm:
         ContrailWidth: 15
     Warhead@1Dam: SpreadDamage
         Spread: 1c512
-        Damage: 1500
+        Damage: 1000
     Warhead@2Eff: CreateEffect
         Explosions: napalmnuke
         ExplosionPalette: napalmnuke50
@@ -1603,6 +1603,8 @@ HavocLaserFire:
 FlamerTurretBlueFireballLauncher:
     Inherits@wh: ^FireWH
     ReloadDelay: 50
+    Burst: 2
+    BurstDelay: 20    
     Range: 5c256
     Report: firstrm1.aud
     Projectile: BulletAS
@@ -1615,7 +1617,7 @@ FlamerTurretBlueFireballLauncher:
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 100
+        Damage: 50
         Falloff: 100, 90, 80
     Warhead@2Eff: CreateEffect
         Explosions: fire01a, fire02a, fire03a
@@ -1631,6 +1633,8 @@ FlamerTurretBlueFireballLauncher:
 FlamerTurretFireballLauncher:
     Inherits@wh: ^FireWH
     ReloadDelay: 100
+    Burst: 2
+    BurstDelay: 20    
     Range: 5c256
     Report: flamtnk1.aud
     Projectile: BulletAS
@@ -1643,7 +1647,7 @@ FlamerTurretFireballLauncher:
     InvalidTargets: Flameproof
     Warhead@1Dam: SpreadDamage
         Spread: 1c0
-        Damage: 75
+        Damage: 40
         Falloff: 100, 80
     Warhead@2Eff: CreateEffect
         Explosions: fire01a, fire02a, fire03a
@@ -1680,7 +1684,7 @@ FanticBoomExplosion:
     Inherits@wh: ^HEAPWH
     Warhead@1Dam: SpreadDamage
         Spread: 0c512
-        Damage: 0
+        Damage: 500
         Falloff: 100, 75, 50, 25, 0
         AffectsParent: True
     Warhead@2Eff: CreateEffect
@@ -1752,8 +1756,8 @@ StealthTankMissile:
 	Inherits@wh: ^APWH
     ReloadDelay: 175
     Range: 9c0
-    Burst: 2
-    BurstDelay: 0
+    Burst: 6
+    BurstDelay: 10
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
     ValidTargets: Ground
     Projectile: Missile
@@ -1763,7 +1767,7 @@ StealthTankMissile:
         Inaccuracy: 0c512
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 110
+        Damage: 120
         ValidTargets: Ground
 
 StealthTankMissileEMP:
@@ -1771,8 +1775,8 @@ StealthTankMissileEMP:
 	Inherits@wh: ^APWH
     ReloadDelay: 175
     Range: 9c0
-    Burst: 2
-    BurstDelay: 0
+    Burst: 6
+    BurstDelay: 10
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
     ValidTargets: Ground
     Projectile: Missile
@@ -1804,7 +1808,7 @@ StealthTankMissileAA:
     ReloadDelay: 100
     Range: 10c0
     Burst: 6
-    BurstDelay: 5
+    BurstDelay: 10
     Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
     ValidTargets: Air, MidAir
     Projectile: Missile
@@ -1815,7 +1819,7 @@ StealthTankMissileAA:
         RangeLimit: 20c0
     Warhead@1Dam: SpreadDamage
         Spread: 128
-        Damage: 100
+        Damage: 120
         ValidTargets: Air, MidAir
         
 HailstormMissile:

@@ -295,7 +295,7 @@ GARADR:
         Queue: Building.GDI
         BuildPaletteOrder: 106
         Prerequisites: anypower, gproc, ~structures.gdi
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Can call scout run if powered
+        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Detects underground units
     Valued:
         Cost: 1500
     Tooltip:
@@ -329,30 +329,8 @@ GARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 20c0
+        Range: 15c0
         CloakTypes: Underground
-    AirstrikePower@orcascout:
-        OrderName: OrcaScoutRun
-        Prerequisites: garadr
-        Icon: orcascout
-        ChargeTime: 180
-        Description: Orca Scout Run
-        LongDesc: Reveals an area of the map and cloaked enemy units.
-        SelectTargetSound: orca_m12.aud
-        EndChargeSound: orca_s10.aud
-        LaunchSound: orca_a10.aud
-        CameraActor: camera.orcascout
-        CameraRemoveDelay: 300
-        UnitType: orca_g
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        QuantizedFacings: 8
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: orcascout
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
     
 GAARMORY:
     Inherits: ^Building
@@ -493,7 +471,7 @@ GAHPAD:
         BuildPaletteOrder: 108
         Queue: Building.GDI
         Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Produces, rearms and repairs aircrafts.
+        Description: Produces, rearms and repairs aircrafts.\n\nSpecial:\n- Can call scout run
     Building:
         Footprint: xx xx
         Dimensions: 2,2
@@ -539,7 +517,28 @@ GAHPAD:
     ProvidesPrerequisite@buildingname:
     ProvidesAIPrerequisite@OrcatransAI:
         Prerequisite: OrcatransAI
-
+    AirstrikePower@orcascout:
+        OrderName: OrcaScoutRun
+        Prerequisites: gahpad
+        Icon: orcascout
+        ChargeTime: 180
+        Description: Orca Scout Run
+        LongDesc: Reveals an area of the map and cloaked enemy units.
+        SelectTargetSound: orca_m12.aud
+        EndChargeSound: orca_s10.aud
+        LaunchSound: orca_a10.aud
+        CameraActor: camera.orcascout
+        CameraRemoveDelay: 300
+        UnitType: orca_g
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        QuantizedFacings: 8
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: orcascout
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
 GADEPT:
     Inherits: ^Building
     Valued:
