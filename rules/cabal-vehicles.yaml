@@ -336,7 +336,7 @@ SILVER:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^HoverVehicle
     Valued:
-        Cost: 1500
+        Cost: 1000
     Tooltip:
         Name: Helion
     Selectable:
@@ -345,8 +345,8 @@ SILVER:
     Buildable:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, kabtech
-        Description: Hovering transport.\n\nSpecial:\n- Can transport infantry\n- Infantry can shoot out of it\n- Crush class: Medium vehicle\n- Hover
+        Prerequisites: ~kaweap, cybbar, kabradr
+        Description: This prime example of CABALs superior design allows ultimate movement without any compromise on the choice of weapons\n\nSpecial:\n- Can transport infantry\n- Infantry can shoot out of it\n- Can teleport\n- Crush class: Medium vehicle\n- Hover
     Voiced:
         VoiceSet: Husk
         Volume: 2
@@ -368,21 +368,34 @@ SILVER:
             PurpleTiberium: 100
     -DamagedByTerrain@Veins:
     Health:
-        HP: 500
+        HP: 1000
     RevealsShroud:
-        Range: 7c0
-    Armament@primary:
-        Weapon: HelionGun
-        LocalOffset: -256,256,512, -256,-256,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
+        Range: 9c0
+#    Armament@primary:
+#        Weapon: HelionGun
+#        LocalOffset: -256,256,512, -256,-256,512
+#        MuzzleSequence: muzzle
+#        MuzzlePalette: effect50alpha
+#    AttackFrontal:
+#    WithMuzzleOverlay:
     AutoTarget:
     RenderSprites:
     RenderVoxels:
     WithVoxelBody:
-    WithMuzzleOverlay:
     -ThrowsShrapnel@human:
+    PortableChrono:
+        ChargeDelay: 10
+        KillCargo: False
+        TargetCursor: move
+        TargetBlockedCursor: move-blocked
+    Cargo:
+        Types: Infantry
+        MaxWeight: 10
+		PipCount: 10
+    AttackGarrisoned:
+        PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
+        PortYaws: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        PortCones: 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023
 
 KRONOS:
     Inherits@1: ^VoxelTank
