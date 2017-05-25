@@ -300,7 +300,7 @@ FARADR:
         Queue: Building.Forg
         BuildPaletteOrder: 406
         Prerequisites: anypower, fproc, ~structures.forgotten
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.\n- Detects underground units
     Valued:
         Cost: 1500
     Tooltip:
@@ -345,7 +345,7 @@ FARADR:
     ProvidesPrerequisite@buildingname:
     RenderDetectionCircle:
     DetectCloaked:
-        Range: 20c0
+        Range: 15c0
         CloakTypes: Underground
     
 FHOVEL:
