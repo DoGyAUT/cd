@@ -401,7 +401,7 @@ KABTECH:
         Queue: Building.Cabal
         BuildPaletteOrder: 308
         Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Gives access to superior technology.
+        Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm
     Valued:
         Cost: 4000
     Tooltip:
@@ -436,3 +436,15 @@ KABTECH:
     # ProductionBar:
     DisabledOverlay:
     ProvidesPrerequisite@buildingname:
+    GrantExternalConditionPower@IRONCURTAIN:
+		Icon: fortification
+		ChargeTime: 240
+		Description: Nanoswarm
+		LongDesc: Makes vehicles, buildings and cyborgs invulnerable for 20 seconds.
+		Duration: 500
+		SelectTargetSpeechNotification: SelectTarget
+        LowPowerSpeechNotification: LowPower
+        EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Condition: invulnerability
+        Range: 2
