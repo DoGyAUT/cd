@@ -58,7 +58,10 @@ BIGBLUE:
         ResourceType: BlueTiberium
         Interval: 75
     WithIdleOverlay@LIGHTINGBLUE:
-        Sequence: lightb
+        Sequence: lightg
+        Palette: tibglowbluefaded
+    WithIdleOverlay@LIGHTINGBLUE2:
+        Sequence: lightg
         Palette: tibglowbluefaded
         
 BIGRED:
@@ -73,6 +76,9 @@ BIGRED:
     SeedsResource:
         ResourceType: RedTiberium
         Interval: 50
+    WithIdleOverlay@LIGHTINGRED:
+        Sequence: lightg
+        Palette: tibglowredfaded
         
 BIGPURPLE:
     Inherits: ^BlossomTree
@@ -86,6 +92,12 @@ BIGPURPLE:
     SeedsResource:
         ResourceType: PurpleTiberium
         Interval: 100
+    WithIdleOverlay@LIGHTINGRED:
+        Sequence: lightg
+        Palette: tibglowredfaded
+    WithIdleOverlay@LIGHTINGBLUE:
+        Sequence: lightg
+        Palette: tibglowbluefaded
 
 TREE01:
     Inherits: ^Tree

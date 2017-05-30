@@ -290,11 +290,11 @@ RocketeerGunAA:
     
 NodHarvGun:
     Inherits: AcolyteGun
-    ReloadDelay: 15
+    ReloadDelay: 50
     Range: 5c0
-    -Burst:
+    Burst: 2
     Warhead@1Dam: SpreadDamage
-        Damage: 50
+        Damage: 30
 
 SpecterGun:
     Inherits: ^ShellHE 
@@ -1332,7 +1332,7 @@ ShadowTrooperLaser:
 LaserTurretTibLaser:
     Inherits: ^BasicLaser
     Inherits@wh: ^TiberiumWH
-    ReloadDelay: 45
+    ReloadDelay: 55
     Range: 8c512
     Report: bigggun1.aud
     ValidTargets: Ground
@@ -1346,7 +1346,7 @@ LaserTurretTibLaser:
         SecondaryBeamZOffset: 2047
         SecondaryBeamColor: 00FF00
     Warhead@1Dam: SpreadDamage
-        Spread: 42
+        Spread: 128
         Damage: 200
     Warhead@2Eff: CreateEffect
         Explosions: protonexpl_tiny
@@ -1412,7 +1412,7 @@ PhantomLaser:
 LaserTurretLaserUpgraded:
     Inherits: LaserTurretLaser
     Range: 8c512
-    ReloadDelay: 35
+    ReloadDelay: 55
     Projectile: LaserZap
         Color: C80000
         Width: 55
@@ -2008,8 +2008,17 @@ HydraGasMissiles:
         
 SAMSiteMissile:
     Inherits: RedEye
+    ReloadDelay: 75
     Burst: 3
     BurstDelay: 10
+    Warhead@1Dam: SpreadDamage
+        Spread: 0c512
+        Damage: 150
+        ValidTargets: Air, MidAir, HighAir
+    Warhead@2Eff: CreateEffect
+        Explosions: tiny_tumu
+        ExplosionPalette: apolra50alpha
+        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
         
 BlackHandFlamer:
     Inherits: FireballLauncher

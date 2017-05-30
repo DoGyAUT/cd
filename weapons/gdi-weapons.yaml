@@ -91,8 +91,6 @@ DiscThrowerGun:
     Warhead@1Dam: SpreadDamage
         Spread: 0c256
         Damage: 100
-        Versus:
-            Building: 145
     Warhead@2Eff: CreateEffect
         Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
         ExplosionPalette: apolra2
@@ -836,7 +834,7 @@ WolverineGun:
 VultureGat:
     Inherits: ^Bullet 
 	Inherits@wh: ^BulletWH  
-    ReloadDelay: 150
+    ReloadDelay: 85
     Range: 6c0
     Report: mgfire.aud
     Burst: 16
@@ -1301,8 +1299,9 @@ HornetMissileAA:
 SAMMissile:
     Inherits: ^MissileAPHE 
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 68
+    ReloadDelay: 50
     Burst: 2
+    BurstDelay: 10
     Range: 8c0
     Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
     ValidTargets: Air, MidAir, HighAir
