@@ -264,7 +264,7 @@ NAHAND:
     Selectable:
         Bounds: 116, 78, 3, -8
     Health:
-        HP: 940
+        HP: 800
     RevealsShroud:
         Range: 5c0
     Exit:
@@ -357,7 +357,7 @@ NAWEAP:
         EffectImage: dig
         EffectPalette: player
         EffectSequence: idle
-        ChargeTime: 180
+        ChargeTime: 240
         SelectTargetSpeechNotification: SelectTarget
         LowPowerSpeechNotification: LowPower
         LaunchSpeechNotification: Reinforce
@@ -424,26 +424,6 @@ NARADR:
     DetectCloaked:
         Range: 15c0
         CloakTypes: Underground
-    ParatroopersPower@techcarry:
-        UnitType: valkyrie.support
-        Prerequisites: ~technology
-        DropItems: shadow,shadow,shadow,shadow,shadow
-        Icon: valkyrie
-        OrderName: ShadowTrooperInfantryDropOrder
-        SquadSize: 1
-        ChargeTime: 180
-        Description: Shadow Trooper Drop
-        LongDesc: Drops a special infantry taskforce on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        LaunchSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: valkyrie
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        #BeaconPosterPalette: iconclock
     GrantExternalConditionPower@frenzy:
         Description: Frenzy
         LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
@@ -456,7 +436,7 @@ NARADR:
         Condition: fenzy
         OnFireSound: nod1_s5.aud
         Sequence: idle
-        ChargeTime: 180
+        ChargeTime: 210
         Prerequisites: ~propaganda
         ArrowSequence: arrow
         CircleSequence: circles
@@ -464,7 +444,29 @@ NARADR:
         #BeaconPosterPalette: iconclock
         Range: 8
         Duration: 450
-    
+    AirstrikePower@orcascout:
+        OrderName: Radar Vision
+        Prerequisites: naradr
+        Icon: orcascout
+        ChargeTime: 180
+        Description: Radar Vision
+        LongDesc: Reveals an area of the map and cloaked enemy units.
+        SelectTargetSound: orca_m12.aud
+        EndChargeSound: orca_s10.aud
+        LaunchSound: orca_a10.aud
+        CameraActor: camera.orcascout
+        CameraRemoveDelay: 300
+        UnitType: orca_g
+        SquadSize: 3
+        SquadOffset: -3072,3072,0
+        QuantizedFacings: 8
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: orcascout
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        
 NAHPAD:
     Inherits: ^Building
     Valued:
@@ -480,7 +482,7 @@ NAHPAD:
         Footprint: xx xx
         Dimensions: 2,2
     Health:
-        HP: 940
+        HP: 800
     RevealsShroud:
         Range: 5c0
     Exit@1:
@@ -577,7 +579,27 @@ NAHPAD:
         ArrowSequence: arrow
         CircleSequence: circles
         ClockSequence: clock
- 
+    ParatroopersPower@techcarry:
+        UnitType: valkyrie.support
+        Prerequisites: ~technology
+        DropItems: shadow,shadow,shadow,shadow,shadow
+        Icon: valkyrie
+        OrderName: ShadowTrooperInfantryDropOrder
+        SquadSize: 1
+        ChargeTime: 180
+        Description: Shadow Trooper Drop
+        LongDesc: Drops a special infantry taskforce on the field.
+        SelectTargetSpeechNotification: SelectTarget
+        LowPowerSpeechNotification: LowPower
+        LaunchSpeechNotification: Reinforce
+        DisplayBeacon: true
+        DisplayRadarPing: True
+        BeaconPoster: valkyrie
+        ArrowSequence: arrow
+        CircleSequence: circles
+        ClockSequence: clock
+        #BeaconPosterPalette: iconclock
+        
 NAPYRA:
     Inherits: ^Building
     Buildable:

@@ -201,7 +201,8 @@ SMECH:
         DefaultAttackSequence: shoot
 
 VULTURE:
-    Inherits: ^Walker
+    Inherits@1: ^Walker
+    Inherits@2: ^MediumVehicle
     Valued:
         Cost: 600
     Tooltip:
@@ -271,7 +272,7 @@ GTMTNK:
     Buildable:
         Queue: Vehicle.GDI
         BuildPaletteOrder: 105
-        Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.zc
+        Prerequisites: ~gaweap, ~!upgrade.st
         Description: Well balanced main battle tank armed with a 90mm cannon and a coaxial MG.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
     Voiced:
         VoiceSet: Archon
@@ -322,7 +323,7 @@ GTHTNK:
         VoiceSet: Predator
         Volume: 2
     Mobile:
-        Speed: 50
+        Speed: 55
         TurnSpeed: 3
     Health:
         HP: 1600
