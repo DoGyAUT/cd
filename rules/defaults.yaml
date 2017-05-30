@@ -389,7 +389,8 @@
         RequiresCondition: firedamage
     ExternalCondition@firedamage:
         Condition: firedamage
-
+    AutoTargetIgnore:
+        
 ^Building:
     Inherits@1: ^BasicBuilding
     Inherits@2: ^EmpDisable
@@ -1146,6 +1147,15 @@
         RequiresCondition: repair_heal
     ExternalCondition@repair_golem:
         Condition: repair_heal
+    WithDecoration@repair_golem:
+        Image: pips
+        Sequence: medic
+        Palette: pips
+        ReferencePoint: Bottom, Left
+        Offset: 0, 0
+        ZOffset: 256
+        ValidStances: Ally, Neutral
+        RequiresCondition: repair_heal
         
 ^HeavyCyborg:
     Inherits@1: ^Cyborg
@@ -1520,7 +1530,7 @@
         CrushClasses: lightvehicle
         WarnProbability: 0
     Mobile:
-        Crushes: crate, infantry, sandbags, mutant, mutantfearless
+        Crushes: crate
 
 ^MediumVehicle
     Crushable:
@@ -2143,6 +2153,7 @@
     RevealsShroud:
         Range: 6c0
     RevealOnFire:
+    -AutoTargetIgnore:
 
 ^Train:
     Inherits@1: ^EmpDisable
