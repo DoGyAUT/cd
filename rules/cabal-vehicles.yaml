@@ -336,7 +336,7 @@ SILVER:
     Inherits@1: ^VoxelVehicle
     Inherits@2: ^HoverVehicle
     Valued:
-        Cost: 1000
+        Cost: 6000
     Tooltip:
         Name: Helion
     Selectable:
@@ -345,57 +345,58 @@ SILVER:
     Buildable:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, cybbar, karadr
-        Description: This prime example of CABALs superior design allows ultimate movement without any compromise on the choice of weapons\n\nSpecial:\n- Can transport infantry\n- Infantry can shoot out of it\n- Can teleport\n- Crush class: Medium vehicle\n- Hover
+        Prerequisites: ~kaweap, karadr
+        Description: This prime example of CABALs superior design allows strong artillery strikes from unexpected attack angles.\n\nSpecial:\n- Very strong shot after long reload delay while deployed\n- Has big minimum range\n- Has big maximum range\n- Flying while undeployed
     Voiced:
         VoiceSet: Husk
         Volume: 2
-    Mobile:
-        Speed: 60
-        TurnSpeed: 3
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Bridge: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Green: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
     -DamagedByTerrain@Veins:
     Health:
         HP: 1000
-    RevealsShroud:
-        Range: 9c0
-#    Armament@primary:
-#        Weapon: HelionGun
-#        LocalOffset: -256,256,512, -256,-256,512
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: effect50alpha
-#    AttackFrontal:
-#    WithMuzzleOverlay:
-    AutoTarget:
+    RevealsShroud@cruising:
+        Range: 10c0
+        Type: CenterPosition
+        RequiresCondition: cruising
+    RevealsShroud@ground:
+        Range: 3c0
+        Type: CenterPosition
+        RequiresCondition: !cruising
+    Armament@primary:
+        Weapon: HelionGun
+        LocalOffset: -256,256,512, -256,-256,512
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect50alpha
+    AttackFrontal:
+    ForceReload:
+        RequiresCondition: airborne
+    WithMuzzleOverlay:
+        RequiresCondition: !airborne
+    ReloadArmamentsBar:
+        Color: 0000FF
     RenderSprites:
     RenderVoxels:
+    RenderRangeCircle@max:
+    RenderRangeCircle@min:
+        RangeCircleMode: Minimum
+        Color: FF0000
     WithVoxelBody:
     -ThrowsShrapnel@human:
-    PortableChrono:
-        ChargeDelay: 300
-        KillCargo: False
-        TargetCursor: move
-        TargetBlockedCursor: move-blocked
-    Cargo:
-        Types: Infantry
-        MaxWeight: 10
-		PipCount: 10
-    AttackGarrisoned:
-        PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
-        PortYaws: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        PortCones: 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023, 1023
+    GrantConditionOnDeploy:
+        DeployedCondition: shouldLand
+        CanDeployOnRamps: True
+        AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
+    Aircraft:
+        CruiseAltitude: 4c0
+        AltitudeVelocity: 0c128
+        Speed: 100
+        TurnSpeed: 10
+        CanHover: True
+        LandWhenIdle: False
+        LandOnCondition: shouldLand
+        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
+        AirborneCondition: airborne
+        CruisingCondition: cruising
+    -Mobile:
 
 KRONOS:
     Inherits@1: ^VoxelTank

@@ -143,18 +143,17 @@ MantaBombardCannon: #unused for now
         
 HelionGun:
     Inherits@wh: ^PlasmaWH
-    ReloadDelay: 150
-    Range: 12c0
-    MinRange: 5c0
+    ReloadDelay: 750
+    Range: 70c0
+    MinRange: 20c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-#    Burst: 2
-    ValidTargets: Ground
+    ValidTargets: Ground, Water
     Projectile: BulletAS
-        Speed : 0c128
+        Speed : 0c256
         Blockable: true
         HorizontalRateOfTurn: 1
         Shadow: true
-        LaunchAngle: 45
+        LaunchAngle: 150
         Inaccuracy: 0c128
         Image: pulsball
         TrailImage: plasmatrail
@@ -164,8 +163,8 @@ HelionGun:
         ContrailColor: 0080FF
         ContrailWidth: 50
     Warhead@1Dam: SpreadDamage
-        Spread: 0c768
-        Damage: 150
+        Spread: 4c0
+        Damage: 2000
         Versus:
             Building: 200
         ValidTargets: Ground
@@ -188,13 +187,6 @@ HelionGun:
     Warhead@7Eff: CreateEffect
         Explosions: medium_flash
         ExplosionPalette: light
-		
-HelionGunE:
-    Inherits: HelionGun
-    Projectile: Missile
-        Speed : 0c192
-        Blockable: true
-        HorizontalRateOfTurn: 10
         
 KronosCannon: #used x2 for fury
     Inherits@wh: ^PlasmaWH
