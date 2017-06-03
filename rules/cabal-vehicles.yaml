@@ -409,10 +409,9 @@ SILVER:
     Targetable@AIRBORNE:
         TargetTypes: Air
         RequiresCondition: airborne
-    AutoTarget:
-        InitialStance: HoldFire
-        EnableStances: False
-        AllowMovement: False
+    HiddenUnderFog:
+        Type: GroundPosition
+
 
 KRONOS:
     Inherits@1: ^VoxelTank
