@@ -950,7 +950,7 @@ DIGGER_MIS:
     Mobile:
         Speed: 55
         TurnSpeed: 4
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     Turreted:
         TurnSpeed: 3
     Armament@primary:
@@ -1009,7 +1009,7 @@ DIGGER_MORTAR:
     Mobile:
         Speed: 55
         TurnSpeed: 4
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     Health:
         HP: 1400
     RevealsShroud:
@@ -1074,7 +1074,7 @@ DIGGER_122MM:
     Mobile:
         Speed: 55
         TurnSpeed: 4
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     Health:
         HP: 1400
     RevealsShroud:
