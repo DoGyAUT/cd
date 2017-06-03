@@ -224,7 +224,7 @@ SAPC:
     Mobile:
         TurnSpeed: 5
         Speed: 80
-        RequiresCondition: !empdisable && !loading
+        RequiresCondition: !(empdisable && !invulnerability) && !loading
         Subterranean: true
         SubterraneanCondition: submerged
         SubterraneanTransitionTerrainTypes: Clear, Rough, Green
@@ -663,7 +663,7 @@ TERMITE:
     Mobile:
         TurnSpeed: 3
         Speed: 50
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     RevealsShroud:
         Range: 9c0
     Health:
@@ -765,7 +765,7 @@ HAILSTORM:
     Mobile:
         Speed: 50
         TurnSpeed: 5
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     Health:
         HP: 600
     RevealsShroud:
@@ -858,7 +858,7 @@ NHWTZ:
     Mobile:
         Speed: 50
         TurnSpeed: 2
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     RevealsShroud:
         Range: 8c0
     Turreted:

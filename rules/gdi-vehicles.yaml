@@ -830,7 +830,7 @@ JUGG:
     Mobile:
         TurnSpeed: 5
         Speed: 55
-        RequiresCondition: !deployed
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     GrantConditionOnMovement@steps:
         Condition: walker
     AmbientSound@step1:

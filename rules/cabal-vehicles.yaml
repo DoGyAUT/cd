@@ -1,5 +1,6 @@
 KMCV:
     Inherits@1: ^VoxelVehicle
+    Inherits@2: ^HoverVehicle
     Buildable:
         Queue: Vehicle.Cabal
         BuildPaletteOrder: 300
@@ -15,6 +16,23 @@ KMCV:
     Voiced:
         VoiceSet: Cmcv
         Volume: 2
+    Mobile:
+        Speed: 70
+        TurnSpeed: 6
+        TerrainSpeeds:
+            Clear: 100
+            Road: 100
+            Bridge: 100
+            Rail: 100
+            DirtRoad: 100
+            Rough: 100
+            Green: 100
+            Water: 80
+            Tiberium: 100
+            BlueTiberium: 100
+            RedTiberium: 100
+            PurpleTiberium: 100
+            Veins: 100
     Health:
         HP: 2000
     Mobile:
@@ -238,6 +256,7 @@ GOLEM:
     Mobile:
         TurnSpeed: 3
         Speed: 55
+        RequiresCondition: !(empdisable && !invulnerability) && !deployed
     RevealsShroud:
         Range: 6c0
     Health:
@@ -272,6 +291,16 @@ GOLEM:
     WithRangeCircle:
         Color: FFFFFFFF
         Range: 5c0
+    GrantConditionOnDeploy:
+        DeployedCondition: deployed
+    ProximityExternalCondition:
+        Condition: cloakgenerator
+        Range: 5c0
+        EnableSound: stealth01.aud
+        DisableSound: unstealth01.aud
+        AffectsParent: True
+    DisableOnCondition:
+        RequiresCondition: !deployed
 
 TARANTULA:
     Inherits@1: ^Walker

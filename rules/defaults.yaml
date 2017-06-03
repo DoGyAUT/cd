@@ -19,21 +19,21 @@
         
 ^EmpDisable:
     WithColoredOverlay@EMPDISABLE:
-        RequiresCondition: empdisable
+        RequiresCondition: (empdisable && !invulnerability)
         Palette: disabled
     DisableOnCondition@EMPDISABLE:
-        RequiresCondition: empdisable
+        RequiresCondition: (empdisable && !invulnerability)
     TimedConditionBar@EMPDISABLE:
         Condition: empdisable
         Color: FFFFFF
     WithIdleOverlay@EMPDISABLE:
         Sequence: emp-overlay
         Palette: effect
-        RequiresCondition: empdisable
+        RequiresCondition: (empdisable && !invulnerability)
         ShowToEnemies: True
         ZOffset: 512
     PowerMultiplier@EMPDISABLE:
-        RequiresCondition: empdisable
+        RequiresCondition: (empdisable && !invulnerability)
         Modifier: 0
     ExternalCondition@EMPDISABLE:
         Condition: empdisable
@@ -1127,7 +1127,7 @@
     -GrantConditionOnPrerequisite@nanofiber:
     -DamageMultiplier@nanofiber:
     Mobile:
-        RequiresCondition: !empdisable
+        RequiresCondition: !(empdisable && !invulnerability)
         TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
@@ -1413,8 +1413,8 @@
             Veins: 50
         TurnSpeed: 5
         Voice: Move
-        RequiresCondition: !empdisable
-		TunnelCondition: inside-tunnel
+        RequiresCondition: !(empdisable && !invulnerability)
+        TunnelCondition: inside-tunnel
     Crushable:
         CrushClasses: mediumvehicle
         WarnProbability: 0
@@ -2172,7 +2172,7 @@
         TurnSpeed: 5
         Voice: Move
         Speed: 113
-        RequiresCondition: !empdisable
+        RequiresCondition: !(empdisable && !invulnerability)
     Health:
         HP: 100
     Armor@base:
