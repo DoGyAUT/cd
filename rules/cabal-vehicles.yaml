@@ -356,11 +356,11 @@ SILVER:
     RevealsShroud@cruising:
         Range: 10c0
         Type: CenterPosition
-        RequiresCondition: cruising
+        RequiresCondition: airborne
     RevealsShroud@ground:
         Range: 3c0
         Type: CenterPosition
-        RequiresCondition: !cruising
+        RequiresCondition: !airborne
     Armament@primary:
         Weapon: HelionGun
         LocalOffset: -256,256,512, -256,-256,512
@@ -387,7 +387,7 @@ SILVER:
         AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
     Aircraft:
         CruiseAltitude: 4c0
-        AltitudeVelocity: 0c128
+        AltitudeVelocity: 0c256
         Speed: 100
         TurnSpeed: 10
         CanHover: True
@@ -404,6 +404,10 @@ SILVER:
     Targetable@AIRBORNE:
         TargetTypes: Air
         RequiresCondition: airborne
+    AutoTarget:
+        InitialStance: HoldFire
+        EnableStances: False
+        AllowMovement: False
 
 KRONOS:
     Inherits@1: ^VoxelTank

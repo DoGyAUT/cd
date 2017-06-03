@@ -147,7 +147,7 @@ HelionGun:
     Range: 40c0
     MinRange: 20c0
     Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-    ValidTargets: Ground, Water
+    ValidTargets: Ground, Water, Air
     Projectile: BulletAS
         Speed : 0c256
         Blockable: true
@@ -166,9 +166,11 @@ HelionGun:
         Spread: 4c0
         Damage: 2000
         Versus:
-            Building: 200
+            Building: 100
+            Air: 50
         ValidTargets: Ground
         DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
+        Falloff: 100, 67, 25, 15, 0
     Warhead@2Eff: CreateEffect
         Explosions: plasmaexp01
         ExplosionPalette: effect50alpha
