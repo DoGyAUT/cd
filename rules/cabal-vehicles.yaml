@@ -397,6 +397,13 @@ SILVER:
         AirborneCondition: airborne
         CruisingCondition: cruising
     -Mobile:
+    -Targetable:
+    Targetable@GROUND:
+        TargetTypes: Ground, Vehicle, Repair
+        RequiresCondition: !inside-tunnel && !airborne
+    Targetable@AIRBORNE:
+        TargetTypes: Air
+        RequiresCondition: airborne
 
 KRONOS:
     Inherits@1: ^VoxelTank
