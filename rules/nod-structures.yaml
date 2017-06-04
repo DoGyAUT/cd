@@ -404,6 +404,7 @@ NARADR:
 		Range: 20c0
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
+                PauseOnCondition: power-outage
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
@@ -503,6 +504,7 @@ NAHPAD:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+                PauseOnCondition: power-outage
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: False
@@ -691,6 +693,7 @@ NATECH:
 		Range: 4c0
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
+                PauseOnCondition: power-outage
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:

@@ -407,6 +407,7 @@ NAOBEL:
 		RequiresCondition: !charging
 		Image: naobel
 		Sequence: idle-lights
+                PauseOnCondition: power-outage
 	Power:
 		Amount: -150
 	WithMuzzleOverlay:
@@ -557,6 +558,7 @@ NASTLH:
 		Range: 4c0
 	WithIdleOverlay@pulse:
 		Sequence: pulse
+                PauseOnCondition: power-outage
 	WithRangeCircle:
 		Range: 12c0
 		Type: cloakgenerator

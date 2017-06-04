@@ -324,12 +324,16 @@ FARADR:
 		Range: 20c0
 	WithIdleOverlay@DISH1:
 		Sequence: idle-dish1
+                PauseOnCondition: power-outage
 	WithIdleOverlay@DISH2:
 		Sequence: idle-dish2
+                PauseOnCondition: power-outage
 	WithIdleOverlay@DISH3:
 		Sequence: idle-dish3
+                PauseOnCondition: power-outage
 	WithIdleOverlay@LIGHT:
 		Sequence: idle-light
+                PauseOnCondition: power-outage
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
