@@ -77,6 +77,7 @@ KPR:
 	Inherits@1: ^BuildingInfiltrate
 	Inherits@2: ^PowerBoostUpgrades
 	Inherits@DisabledOverlay: ^DisabledOverlay
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 301
@@ -94,7 +95,6 @@ KPR:
 	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
-	AffectedByPowerOutage:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:

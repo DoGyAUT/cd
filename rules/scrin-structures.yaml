@@ -70,6 +70,7 @@ SACNST:
 SAPOWR:
 	Inherits: ^Building
 	Inherits@DisabledOverlay: ^DisabledOverlay
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Scrin
 		BuildPaletteOrder: 501
@@ -87,7 +88,6 @@ SAPOWR:
 	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
-	AffectedByPowerOutage:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:

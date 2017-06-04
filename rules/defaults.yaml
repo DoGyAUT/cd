@@ -2148,6 +2148,7 @@
 
 ^Defense:
 	Inherits@1: ^Building
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
 	AutoTarget:
 	RenderRangeCircle:
@@ -2157,7 +2158,6 @@
 		PowerdownSpeech: DisablePower
 	MustBeDestroyed:
 		RequiredForShortGame: False
-	AffectedByPowerOutage:
 	RevealsShroud:
 		Range: 6c0
 	RevealOnFire:
@@ -2234,8 +2234,16 @@
 		Name: Palette
 
 ^DisabledOverlay:
-	WithColoredOverlay@DisabledOverlay:
+        WithColoredOverlay@DisabledOverlay:
 		RequiresCondition: disabled
 		Palette: disabled
 	GrantConditionOnDisabled@DisabledOverlay:
 		Condition: disabled
+
+^AffectedByPowerOutage:
+        AffectedByPowerOutage:
+                Condition: power-outage
+	DisableOnCondition@PowerOutage:
+		RequiresCondition: power-outage
+	Power:
+		RequiresCondition: !power-outage

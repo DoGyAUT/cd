@@ -70,6 +70,7 @@ GACNST:
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 101
@@ -86,7 +87,6 @@ GAPOWR:
 		Dimensions: 2,2
 	PowerTooltip:
 	InfiltrateForPowerOutage:
-	AffectedByPowerOutage:
 		Duration: 750
 	Health:
 		HP: 1000

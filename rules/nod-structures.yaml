@@ -73,6 +73,7 @@ NACNST:
 NAPOWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -90,7 +91,6 @@ NAPOWR:
 	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
-	AffectedByPowerOutage:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:
@@ -110,6 +110,7 @@ NAPOWR:
 NAAPWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
+        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -127,7 +128,6 @@ NAAPWR:
 	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
-	AffectedByPowerOutage:
 	Selectable:
 		Bounds: 100, 74, 0, -12
 	Health:
