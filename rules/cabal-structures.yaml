@@ -77,7 +77,7 @@ KPR:
 	Inherits@1: ^BuildingInfiltrate
 	Inherits@2: ^PowerBoostUpgrades
 	Inherits@DisabledOverlay: ^DisabledOverlay
-        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 301
@@ -103,10 +103,10 @@ KPR:
 		Range: 4c0
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	WithIdleOverlay@LIGHTS2:
 		Sequence: idle-lights2
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	Power:
 		Amount: 200
 	Targetable:
@@ -209,12 +209,12 @@ CYBBAR:
 	ProductionBar:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	WithProductionOverlay@LIGHTS:
 		Sequence: production-lights
 	WithIdleOverlay@LIGHTS2:
 		Sequence: idle-lights2
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
@@ -314,10 +314,10 @@ KARADR:
 		Range: 20c0
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
@@ -387,7 +387,7 @@ KAHPAD:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: False

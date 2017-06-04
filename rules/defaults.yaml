@@ -2148,7 +2148,7 @@
 
 ^Defense:
 	Inherits@1: ^Building
-        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
 	AutoTarget:
 	RenderRangeCircle:
@@ -2234,15 +2234,15 @@
 		Name: Palette
 
 ^DisabledOverlay:
-        WithColoredOverlay@DisabledOverlay:
+	WithColoredOverlay@DisabledOverlay:
 		RequiresCondition: disabled
 		Palette: disabled
 	GrantConditionOnDisabled@DisabledOverlay:
 		Condition: disabled
 
 ^AffectedByPowerOutage:
-        AffectedByPowerOutage:
-                Condition: power-outage
+	AffectedByPowerOutage:
+		Condition: power-outage
 	DisableOnCondition@PowerOutage:
 		RequiresCondition: power-outage
 	Power:

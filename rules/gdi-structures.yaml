@@ -70,7 +70,7 @@ GACNST:
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
-        Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 101
@@ -322,7 +322,7 @@ GARADR:
 		Range: 20c0
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
-                PauseOnCondition: power-outage
+		PauseOnCondition: power-outage
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
