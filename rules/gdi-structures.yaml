@@ -68,6 +68,7 @@ GACNST:
 
 GAPOWR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.GDI
         BuildPaletteOrder: 101
@@ -104,7 +105,6 @@ GAPOWR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:
     GrantConditionOnPrerequisite@upgrade1:
         Condition: upgrade.gapowerup1
         Prerequisites: upgrade.gapowerup1
@@ -180,6 +180,7 @@ GPROC:
 
 GAPILE:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.GDI
         BuildPaletteOrder: 104
@@ -219,7 +220,6 @@ GAPILE:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     WithProductionOverlay@LIGHTS:
         Sequence: production-lights
@@ -291,6 +291,7 @@ GAWEAP:
 
 GARADR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.GDI
         BuildPaletteOrder: 106
@@ -314,7 +315,6 @@ GARADR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
     RevealsShroud:
@@ -334,6 +334,7 @@ GARADR:
     
 GAARMORY:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.GDI
         BuildPaletteOrder: 107
@@ -371,7 +372,6 @@ GAARMORY:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesPrerequisite@buildingname:
     GrantExternalConditionPower@fortification:
         OrderName: GrantFortificationPowerInfoOrder
@@ -463,6 +463,7 @@ GAARMORY:
 
 GAHPAD:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 750
     Tooltip:
@@ -495,7 +496,6 @@ GAHPAD:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     Reservable:
     RepairsUnits:
         HpPerStep: 10
@@ -541,6 +541,7 @@ GAHPAD:
         ClockSequence: clock
 GADEPT:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 750
     Tooltip:
@@ -569,7 +570,6 @@ GADEPT:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     RallyPoint:
         Palette: mouse
         IsPlayerPalette: False

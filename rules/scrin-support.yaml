@@ -1,5 +1,6 @@
 SACANNON:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1100
     Tooltip:
@@ -15,7 +16,6 @@ SACANNON:
     Selectable:
         Bounds: 40, 70, 0, -22
     RequiresPower:
-    DisabledOverlay:
     BodyOrientation:
         QuantizedFacings: 32
     Health:
@@ -47,6 +47,7 @@ SACANNON:
 
 SASAM:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 800
     Tooltip:
@@ -62,7 +63,6 @@ SASAM:
     Selectable:
         Bounds: 40, 70, 0, -22
     RequiresPower:
-    DisabledOverlay:
     BodyOrientation:
         QuantizedFacings: 32
     Health:

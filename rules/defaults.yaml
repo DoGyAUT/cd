@@ -2222,3 +2222,10 @@
     Inherits: ^Decoration
     Tooltip:
         Name: Palette
+
+^DisabledOverlay:
+    WithColoredOverlay@DisabledOverlay:
+        RequiresCondition: disabled
+        Palette: disabled
+    GrantConditionOnDisabled@DisabledOverlay:
+        Condition: disabled

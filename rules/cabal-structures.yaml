@@ -75,6 +75,7 @@ KACNST:
 KPR:
     Inherits@1: ^BuildingInfiltrate
     Inherits@2: ^PowerBoostUpgrades
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Cabal
         BuildPaletteOrder: 301
@@ -108,7 +109,6 @@ KPR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:
 
 KPROC:
     Inherits: ^BuildingInfiltrate
@@ -165,6 +165,7 @@ KPROC:
  
 CYBBAR:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Cabal
         BuildPaletteOrder: 304
@@ -204,7 +205,6 @@ CYBBAR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     WithIdleOverlay@LIGHTS:
         Sequence: idle-lights
@@ -218,6 +218,7 @@ CYBBAR:
     
 KAWEAP:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 2000
     Tooltip:
@@ -258,7 +259,6 @@ KAWEAP:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     WithIdleOverlay@ROOF:
         Sequence: idle-roof
@@ -277,6 +277,7 @@ KAWEAP:
 
 KARADR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Cabal
         BuildPaletteOrder: 306
@@ -300,7 +301,6 @@ KARADR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
     DetectCloaked:
@@ -341,6 +341,7 @@ KARADR:
 
 KAHPAD:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1000
     Tooltip:
@@ -374,7 +375,6 @@ KAHPAD:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     Reservable:
     RepairsUnits:
         HpPerStep: 10
@@ -397,6 +397,7 @@ KAHPAD:
 
 KABTECH:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Cabal
         BuildPaletteOrder: 308
@@ -435,7 +436,6 @@ KABTECH:
     Exit:
     ExitsDebugOverlay:
     # ProductionBar:
-    DisabledOverlay:
     ProvidesPrerequisite@buildingname:
     GrantExternalConditionPower@IRONCURTAIN:
 		Icon: fortification

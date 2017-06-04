@@ -76,6 +76,7 @@ FACNST:
 
 FAPOWR:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Forg
         BuildPaletteOrder: 401
@@ -111,7 +112,6 @@ FAPOWR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:            
 
 FPROC:
     Inherits: ^BuildingInfiltrate
@@ -180,6 +180,7 @@ FPROC:
 
 FABAR:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Forg
         BuildPaletteOrder: 404
@@ -221,7 +222,6 @@ FABAR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     Power:
         Amount: -25
@@ -229,6 +229,7 @@ FABAR:
         
 FAWEAP:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 2000
     Tooltip:
@@ -269,7 +270,6 @@ FAWEAP:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     WithIdleOverlay@FIRE:
         Sequence: idle-fire
@@ -296,6 +296,7 @@ FAWEAP:
 
 FARADR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Forg
         BuildPaletteOrder: 406
@@ -319,7 +320,6 @@ FARADR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
     DetectCloaked:
@@ -350,6 +350,7 @@ FARADR:
     
 FHOVEL:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Forg
         BuildPaletteOrder: 407
@@ -387,13 +388,13 @@ FHOVEL:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesPrerequisite:
         Prerequisite: barracks.upgraded
     ProvidesPrerequisite@buildingname: 
 
 FAHPAD:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 750
     Tooltip:
@@ -426,7 +427,6 @@ FAHPAD:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     Reservable:
     RepairsUnits:
         HpPerStep: 10

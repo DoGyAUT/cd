@@ -73,6 +73,7 @@ NACNST:
 
 NAPOWR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Nod
         BuildPaletteOrder: 201
@@ -105,10 +106,10 @@ NAPOWR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:
 
 NAAPWR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Nod
         BuildPaletteOrder: 201
@@ -147,7 +148,6 @@ NAAPWR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:
 
 NIPROC:
     Inherits: ^BuildingInfiltrate
@@ -247,6 +247,7 @@ NPPROC:
 
 NAHAND:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Nod
         BuildPaletteOrder: 204
@@ -287,7 +288,6 @@ NAHAND:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProductionBar:
     Power:
         Amount: -25
@@ -295,6 +295,7 @@ NAHAND:
 
 NAWEAP:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 2000
     Tooltip:
@@ -331,7 +332,6 @@ NAWEAP:
         Group: Vehicle
         BuildDurationModifier: 73
         LowPowerSlowdown: 3
-    DisabledOverlay:
     ProductionBar:
     CanPowerDown:
         IndicatorPalette: mouse
@@ -382,6 +382,7 @@ NAWEAP:
 
 NARADR:
     Inherits: ^BuildingInfiltrate
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Nod
         BuildPaletteOrder: 206
@@ -405,7 +406,6 @@ NARADR:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
     DetectCloaked:
@@ -469,6 +469,7 @@ NARADR:
         
 NAHPAD:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 750
     Tooltip:
@@ -502,7 +503,6 @@ NAHPAD:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     Reservable:
     RepairsUnits:
         HpPerStep: 10
@@ -602,6 +602,7 @@ NAHPAD:
         
 NAPYRA:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Nod
         BuildPaletteOrder: 208
@@ -636,7 +637,6 @@ NAPYRA:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     Exit:
     ExitsDebugOverlay:
     ProductionBar@Tech:

@@ -69,6 +69,7 @@ SACNST:
 
 SAPOWR:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Scrin
         BuildPaletteOrder: 501
@@ -98,7 +99,6 @@ SAPOWR:
     Targetable:
         TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
     ScalePowerWithHealth:
-    DisabledOverlay:
 
 SPROC:
     Inherits: ^BuildingInfiltrate
@@ -222,6 +222,7 @@ SAPORTAL:
 
 SANODE:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Scrin
         BuildPaletteOrder: 504
@@ -243,7 +244,6 @@ SANODE:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProvidesRadar:
     InfiltrateForExploration:
     RevealsShroud:
@@ -258,6 +258,7 @@ SANODE:
 
 SASEED:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Building.Scrin
         BuildPaletteOrder: 505
@@ -275,7 +276,6 @@ SASEED:
     Health:
         HP: 2400
     RequiresPower:
-    DisabledOverlay:
     RevealsShroud:
         Range: 5c0
     Power:

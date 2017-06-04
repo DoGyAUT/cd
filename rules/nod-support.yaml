@@ -88,6 +88,7 @@ NASILO:
 
 NAFLAMER:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 800
     Tooltip:
@@ -100,7 +101,6 @@ NAFLAMER:
     Building:
     Selectable:
         Bounds: 40, 36, -3, -8
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1200
@@ -151,6 +151,7 @@ NAFLAMER:
 
 NAGAT:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 800
     Tooltip:
@@ -163,7 +164,6 @@ NAGAT:
     Building:
     Selectable:
         Bounds: 40, 36, -3, -8
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1200
@@ -204,6 +204,7 @@ NAGAT:
     
 NALASR:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1000
     Tooltip:
@@ -216,7 +217,6 @@ NALASR:
     Building:
     Selectable:
         Bounds: 40, 36, -8, -8
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1800
@@ -266,6 +266,7 @@ NALASR:
         
 NASAM:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 800
     Tooltip:
@@ -278,7 +279,6 @@ NASAM:
     Building:
     Selectable:
         Bounds: 40, 36, -3, -8
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1200
@@ -321,6 +321,7 @@ NASAM:
 
 NABUNKER:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 800
     Tooltip:
@@ -328,7 +329,6 @@ NABUNKER:
     Building:
     Selectable:
         Bounds: 40, 36, -3, -8
-    DisabledOverlay:
     Health:
         HP: 1300
     RevealsShroud:
@@ -354,6 +354,7 @@ NABUNKER:
 
 NAOBEL:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1500
     Tooltip:
@@ -369,7 +370,6 @@ NAOBEL:
     Selectable:
         Bounds: 88, 130, 0, -36
     RequiresPower:
-    DisabledOverlay:
     Health:
         HP: 3000
     RevealsShroud:
@@ -426,6 +426,7 @@ NAOBEL:
 
 NAPULS:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1500
     Tooltip:
@@ -442,7 +443,6 @@ NAPULS:
     Selectable:
         Bounds: 78, 54, 0, -12
     RequiresPower:
-    DisabledOverlay:
     Health:
         HP: 2600
     RevealsShroud:
@@ -486,6 +486,7 @@ NAPULS:
         
 NAMISL:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
 #    Buildable:
 #        Queue: Defense.Nod
 #        BuildPaletteOrder: 212
@@ -516,7 +517,6 @@ NAMISL:
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
     RequiresPower:
-    DisabledOverlay:
     ProvidesPrerequisite@buildingname:
     SupportPowerChargeBar:
     NukePower:
@@ -546,6 +546,7 @@ NAMISL:
     
 NASTLH:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 1000
     Tooltip:
@@ -575,7 +576,6 @@ NASTLH:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     ProximityExternalCondition:
         Condition: cloakgenerator
         Range: 12c0

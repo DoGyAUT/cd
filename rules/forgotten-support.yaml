@@ -164,6 +164,7 @@ FAFLAK:
 
 FAMISSILE:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Buildable:
         Queue: Defense.Forg
         BuildPaletteOrder: 405
@@ -197,7 +198,6 @@ FAMISSILE:
         MuzzlePalette: apolra50alpha
         Recoil: 25
         RecoilRecovery: 10
-    DisabledOverlay:
     RequiresPower:
     CanPowerDown:
         IndicatorPalette: mouse

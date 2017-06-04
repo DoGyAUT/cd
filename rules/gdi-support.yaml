@@ -85,6 +85,7 @@ GASILO:
         
 GAMG:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -100,7 +101,6 @@ GAMG:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1400
@@ -149,6 +149,7 @@ GAMG:
     
 GAMG2:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -164,7 +165,6 @@ GAMG2:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1800
@@ -241,6 +241,7 @@ GAMG2:
         
 GASENTUR:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -256,7 +257,6 @@ GASENTUR:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1400
@@ -299,6 +299,7 @@ GASENTUR:
         
 GAMIS:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -314,7 +315,6 @@ GAMIS:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1400
@@ -357,6 +357,7 @@ GAMIS:
     
 GACAN:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -372,7 +373,6 @@ GACAN:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1400
@@ -422,6 +422,7 @@ GACAN:
 GAMORTAR:
     Inherits: ^Defense
     Inherits@2: ^GainsExperience
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
 #    WithWallSpriteBody:
 #        Type: wall
@@ -437,7 +438,6 @@ GAMORTAR:
     Building:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 1000
@@ -480,6 +480,7 @@ GAMORTAR:
 FTWR:
     Inherits: ^Defense
     Inherits@2: ^GainsExperience
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
     Valued:
         Cost: 1000
@@ -492,7 +493,6 @@ FTWR:
     GivesBuildableArea:
     Selectable:
         Bounds: 48, 48, 0, -12
-    DisabledOverlay:
     RequiresPower:
     Health:
         HP: 3000
@@ -559,6 +559,7 @@ FTWR:
         
 GAFORT:
     Inherits: ^Defense
+    Inherits@DisabledOverlay: ^DisabledOverlay
     WithSpriteBody:
     Valued:
         Cost: 800
@@ -575,7 +576,6 @@ GAFORT:
     Selectable:
         Bounds: 120, 90, 0, -12
         Class: gafort
-    DisabledOverlay:
     Health:
         HP: 3000
     RevealsShroud:
@@ -636,6 +636,7 @@ GAPLUG3:
         
 GAPLUG:
     Inherits: ^Building
+    Inherits@DisabledOverlay: ^DisabledOverlay
     Valued:
         Cost: 2000
     Tooltip:
@@ -656,7 +657,6 @@ GAPLUG:
         IndicatorPalette: mouse
         PowerupSpeech: EnablePower
         PowerdownSpeech: DisablePower
-    DisabledOverlay:
     WithIdleOverlay@DISH:
         Sequence: idle-dish
     WithIdleOverlay@LIGHTS:
