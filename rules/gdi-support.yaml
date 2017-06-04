@@ -44,6 +44,7 @@ GAGATE_B:
 
 GASILO:
 	Inherits: ^BuildingInfiltrate
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 103
@@ -149,6 +150,7 @@ GAMG:
 GAMG2:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -240,6 +242,7 @@ GAMG2:
 GASENTUR:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
 	Valued:
 		Cost: 600
@@ -297,6 +300,7 @@ GASENTUR:
 GAMIS:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -609,6 +613,7 @@ GAPLUG3:
 GAPLUG:
 	Inherits: ^Building
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
 	Tooltip:

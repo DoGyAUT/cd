@@ -44,6 +44,7 @@ KAGATE_B:
 
 KASILO:
 	Inherits: ^BuildingInfiltrate
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
@@ -227,6 +228,7 @@ KDARK:
 KOBEL:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
 	Tooltip:

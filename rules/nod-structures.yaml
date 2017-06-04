@@ -373,6 +373,7 @@ NAWEAP:
 NARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
@@ -460,6 +461,7 @@ NARADR:
 NAHPAD:
 	Inherits: ^Building
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -677,6 +679,7 @@ NAPYRA:
 
 NATECH:
 	Inherits: ^Building
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
 	Tooltip:

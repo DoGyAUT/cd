@@ -167,6 +167,7 @@ KPROC:
 CYBBAR:
 	Inherits: ^Building
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 304
@@ -283,6 +284,7 @@ KAWEAP:
 KARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 306
@@ -348,6 +350,7 @@ KARADR:
 KAHPAD:
 	Inherits: ^Building
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 1000
 	Tooltip:
