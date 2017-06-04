@@ -1,283 +1,284 @@
 SACNST:
-    Inherits: ^Building
-    Building:
-        Footprint: xxx xxx xxx
-        BuildSounds: facbld1.aud
-        Dimensions: 3,3
-    Buildable:
-        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
-        BuildPaletteOrder: 500
-        Prerequisites: ~disabled
-        Adjacent: 8
-        Description: Builds base structures.
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 10c0
-    Production:
-        Produces: Building.Scrin,Defense.Scrin
-    ProductionQueue@Building:
-        Type: Building.Scrin
-        Group: Building
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    ProductionQueue@Defense:
-        Type: Defense.Scrin
-        Group: Defense
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Master Hive
-    BaseBuilding:
-    Transforms:
-        IntoActor: smcv
-        Offset: 1,1
-        Facing: 96
-        DeployCursor: undeploy
-    ProductionBar@Building:
-        ProductionType: Building.Scrin
-    ProductionBar@Defense:
-        ProductionType: Defense.Scrin
-#    WithBuildingPlacedOverlay:
-    ProvidesRadar:
-    Power:
-        Amount: 0
-    Selectable:
-        Bounds: 96, 118, 0, -38
-    ProvidesPrerequisite@scrin:
-        Prerequisite: structures.scrin
-    BaseProvider:
-        Range: 16c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    ProvidesAIPrerequisite@AImoney:
-        Prerequisite: AImoney
-    GrantConditionOnPrerequisite@AImoney:
-        Condition: money
-        Prerequisites: AImoney
-    CashTrickler@AImoney:
-        Interval: 1000
-        Amount: 10000
-        ShowTicks: False
-        RequiresCondition: money
+	Inherits: ^Building
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Buildable:
+		Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
+		BuildPaletteOrder: 500
+		Prerequisites: ~disabled
+		Adjacent: 8
+		Description: Builds base structures.
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 10c0
+	Production:
+		Produces: Building.Scrin,Defense.Scrin
+	ProductionQueue@Building:
+		Type: Building.Scrin
+		Group: Building
+		BuildDurationModifier: 60
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@Defense:
+		Type: Defense.Scrin
+		Group: Defense
+		BuildDurationModifier: 60
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Master Hive
+	BaseBuilding:
+	Transforms:
+		IntoActor: smcv
+		Offset: 1,1
+		Facing: 96
+		DeployCursor: undeploy
+	ProductionBar@Building:
+		ProductionType: Building.Scrin
+	ProductionBar@Defense:
+		ProductionType: Defense.Scrin
+	ProvidesRadar:
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 96, 118, 0, -38
+	ProvidesPrerequisite@scrin:
+		Prerequisite: structures.scrin
+	BaseProvider:
+		Range: 16c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	ProvidesAIPrerequisite@AImoney:
+		Prerequisite: AImoney
+	GrantConditionOnPrerequisite@AImoney:
+		Condition: money
+		Prerequisites: AImoney
+	CashTrickler@AImoney:
+		Interval: 1000
+		Amount: 10000
+		ShowTicks: False
+		RequiresCondition: money
+	HitShape:
 
 SAPOWR:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Scrin
-        BuildPaletteOrder: 501
-        Prerequisites: ~structures.scrin
-        Description: Provides power for other structures.
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Dark Matter Generator
-    ProvidesPrerequisite:
-        Prerequisite: anypower
-    Building:
-        Footprint: xxx xxx xxx
-        Dimensions: 3,3
-    PowerTooltip:
-    InfiltrateForPowerOutage:
-        Duration: 750
-    AffectedByPowerOutage:
-    Selectable:
-        Bounds: 88, 80, 2, -12
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 4c0
-    Power:
-        Amount: 200
-    Targetable:
-        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
-    ScalePowerWithHealth:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Scrin
+		BuildPaletteOrder: 501
+		Prerequisites: ~structures.scrin
+		Description: Provides power for other structures.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Dark Matter Generator
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	PowerTooltip:
+	InfiltrateForPowerOutage:
+		Duration: 750
+	AffectedByPowerOutage:
+	Selectable:
+		Bounds: 88, 80, 2, -12
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: 200
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	HitShape:
 
 SPROC:
-    Inherits: ^BuildingInfiltrate
-    Valued:
-        Cost: 2500
-    Tooltip:
-        Name: Ichor Refinery
-    Buildable:
-        Queue: Building.Scrin
-        BuildPaletteOrder: 502
-        Prerequisites: anypower, ~structures.scrin
-        Description: Processes raw Ichor into useable resources. \n\nStores an infinte amount of Ichor.
-    Building:
-        Footprint: xxx= xx== xxx=
-        Dimensions: 4,3
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 134, 122, 0, -18
-    Health:
-        HP: 1500
-    RevealsShroud:
-        Range: 6c0
-    TiberianSunRefinery:
-        DockAngle: 160
-        DockOffset: 3,1
-        DiscardExcessResources: True
-    StoresResources:
-        PipColor: Green
-        PipCount: 0
-        Capacity: 500000
-    FreeActor:
-        Actor: SHARV
-        SpawnOffset: 2,1
-        Facing: 160
-    FreeActor@2:
-        Actor: SHARV
-        SpawnOffset: 2,2
-        Facing: 160
-#    WithDockedOverlay@flame:
-#        Sequence: flame
-#        Palette: effect
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-    CustomSellValue:
-        Value: 500
+	Inherits: ^BuildingInfiltrate
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Ichor Refinery
+	Buildable:
+		Queue: Building.Scrin
+		BuildPaletteOrder: 502
+		Prerequisites: anypower, ~structures.scrin
+		Description: Processes raw Ichor into useable resources. \n\nStores an infinte amount of Ichor.
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 134, 122, 0, -18
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 3,1
+		DiscardExcessResources: True
+	StoresResources:
+		PipColor: Green
+		PipCount: 0
+		Capacity: 500000
+	FreeActor:
+		Actor: SHARV
+		SpawnOffset: 2,1
+		Facing: 160
+	FreeActor@2:
+		Actor: SHARV
+		SpawnOffset: 2,2
+		Facing: 160
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	CustomSellValue:
+		Value: 500
+	HitShape:
 
 SAPORTAL:
-    Inherits: ^Building
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Warp Portal
-    ProvidesPrerequisite:
-        Prerequisite: sproc, ~structures.scrin
-    Buildable:
-        Queue: Building.Scrin
-        BuildPaletteOrder: 503
-        Prerequisites: anypower, sproc, ~structures.scrin
-        Description: Produces Scrin units.
-    Building:
-        Footprint: xxx xxx xxx ===
-        Dimensions: 3,4
-    Selectable:
-        Bounds: 154, 100, -2, -12
-    Health:
-        HP: 2400
-    RevealsShroud:
-        Range: 4c0
-    RallyPoint:
-        Offset: 1,4
-        Palette: mouse
-        IsPlayerPalette: False
-    Exit@1:
-        SpawnOffset: -384,-384,0
-        ExitCell: 0,3
-        ExitDelay: 5
-        Facing: 96
-    ExitsDebugOverlay:
-    Production:
-        Produces: Infantry.Scrin, Vehicle.Scrin, Air.Scrin
-    ProductionQueue@Infantry:
-        Type: Infantry.Scrin
-        Group: Infantry
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    ProductionQueue@Vehicle:
-        Type: Vehicle.Scrin
-        Group: Vehicle
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    ProductionQueue@Air:
-        Type: Air.Scrin
-        Group: Air
-        BuildDurationModifier: 60
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    ProductionBar@Infantry:
-        ProductionType: Infantry.Scrin
-        Group: Infantry
-    ProductionBar@Vehicle:
-        ProductionType: Vehicle.Scrin
-        Group: Vehicle
-    ProductionBar@Air:
-        ProductionType: Air.Scrin
-        Group: Air
-    WithIdleOverlay@warp:
-        Sequence: idle-warp
-#    WithProductionDoorOverlay@door:
-    WithProductionOverlay@portal:
-        Sequence: production-portal
-    Power:
-        Amount: -150
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Warp Portal
+	ProvidesPrerequisite:
+		Prerequisite: sproc, ~structures.scrin
+	Buildable:
+		Queue: Building.Scrin
+		BuildPaletteOrder: 503
+		Prerequisites: anypower, sproc, ~structures.scrin
+		Description: Produces Scrin units.
+	Building:
+		Footprint: xxx xxx xxx ===
+		Dimensions: 3,4
+	Selectable:
+		Bounds: 154, 100, -2, -12
+	Health:
+		HP: 2400
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 1,4
+		Palette: mouse
+		IsPlayerPalette: False
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 0,3
+		ExitDelay: 5
+		Facing: 96
+	ExitsDebugOverlay:
+	Production:
+		Produces: Infantry.Scrin, Vehicle.Scrin, Air.Scrin
+	ProductionQueue@Infantry:
+		Type: Infantry.Scrin
+		Group: Infantry
+		BuildDurationModifier: 60
+		LowPowerSlowdown: 3
+	ProductionQueue@Vehicle:
+		Type: Vehicle.Scrin
+		Group: Vehicle
+		BuildDurationModifier: 60
+		LowPowerSlowdown: 3
+	ProductionQueue@Air:
+		Type: Air.Scrin
+		Group: Air
+		BuildDurationModifier: 60
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProductionBar@Infantry:
+		ProductionType: Infantry.Scrin
+		Group: Infantry
+	ProductionBar@Vehicle:
+		ProductionType: Vehicle.Scrin
+		Group: Vehicle
+	ProductionBar@Air:
+		ProductionType: Air.Scrin
+		Group: Air
+	WithIdleOverlay@warp:
+		Sequence: idle-warp
+	WithProductionOverlay@portal:
+		Sequence: production-portal
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 SANODE:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Scrin
-        BuildPaletteOrder: 504
-        Prerequisites: sproc, saportal, ~structures.scrin
-        Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Telemetry Uplink Node
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 96, 118, 0, -38
-    Health:
-        HP: 1600
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    ProvidesRadar:
-    InfiltrateForExploration:
-    RevealsShroud:
-        Range: 20c0
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 20c0
-        CloakTypes: Underground
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Scrin
+		BuildPaletteOrder: 504
+		Prerequisites: sproc, saportal, ~structures.scrin
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Telemetry Uplink Node
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 118, 0, -38
+	Health:
+		HP: 1600
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	RevealsShroud:
+		Range: 20c0
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 20c0
+		CloakTypes: Underground
+	HitShape:
 
 SASEED:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Scrin
-        BuildPaletteOrder: 505
-        Prerequisites: saportal, sanode, ~structures.scrin
-        Description: Tib Stick stops Tripod stuff
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: TibStick
-    Building:
-        Footprint: x
-        Dimensions: 1,1
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    Health:
-        HP: 2400
-    RequiresPower:
-    RevealsShroud:
-        Range: 5c0
-    Power:
-        Amount: -100
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Scrin
+		BuildPaletteOrder: 505
+		Prerequisites: saportal, sanode, ~structures.scrin
+		Description: Tib Stick stops Tripod stuff
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: TibStick
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	Health:
+		HP: 2400
+	RequiresPower:
+	RevealsShroud:
+		Range: 5c0
+	Power:
+		Amount: -100
+	ProvidesPrerequisite@buildingname:
+	HitShape:

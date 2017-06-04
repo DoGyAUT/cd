@@ -1,308 +1,251 @@
 ^BaseWorld:
-    Inherits: ^Palettes
-    AlwaysVisible:
-    ScreenMap:
-    ActorMap:
-    MusicPlaylist:
-        VictoryMusic: bleaktwilight
-        DefeatMusic: guiltypleasure
-    ShroudRenderer:
-        Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
-        UseExtendedIndex: True
-        ShroudPalette: shroud
-        FogPalette: shroud
-    Faction@0:
-        Name: GDI
-        Side: Factions
-        Description: We save life!
-        InternalName: gdi
-    Faction@1:
-        Name: Nod
-        Side: Factions
-        Description: For the brotherhood!
-        InternalName: nod
-    Faction@2:
-        Name: Cabal
-        Side: Factions
-        Description: Humanity is failure!
-        InternalName: cabal
- #   Faction@3:
- #       Name: Forgotten
-#ä        Side: Factions
-#        Description: Slaughter those pigs!
-#        InternalName: forgotten
-#    Faction@4:
-#        Name: Scrin
-#        Side: WIP Factions
-#        Description: Figura Mortis!
-#        InternalName: scrin
-#    Faction@5:
-#        Name: Seraph
-#        Side: Not Playable
-#        Description: Don't even think about to use this one yet!
-#        InternalName: seraph
-    Faction@Random:
-        Name: Any
-        Side: Random
-        InternalName: Random
-        RandomFactionMembers: gdi, nod, cabal #, forgotten
-    Faction@random_0_1:
-        Name: GDI and Nod
-        Side: Random
-        Description: The classic ones
-        InternalName: Random_0_1
-        RandomFactionMembers: gdi, nod
-    Faction@random_1_2:
-        Name: Nod and CABAL
-        Side: Random
-        Description: Kane and his advisor
-        InternalName: Random_1_2
-        RandomFactionMembers: nod, cabal
-#    Faction@random_2_3:
-#        Name: CABAL and Forgotten
-#        Side: Random
-#        Description: The new ones
-#        InternalName: Random_2_3
-#        RandomFactionMembers: cabal, forgotten
-#    Faction@random_3_0:
-#        Name: Forgotten and GDI
-#        Side: Random
-#        Description: We would like to live in peace
-#        InternalName: Random_3_0
-#        RandomFactionMembers: forgotten, gdi
-    Faction@random_0_2:
-        Name: GDI and CABAL
-        Side: Random
-        Description: The abbreviations
-        InternalName: Random_0_2
-        RandomFactionMembers: gdi, cabal
-#    Faction@random_1_3:
-#        Name: Nod and Forgotten
-#        Side: Random
-#        Description: We love tiberium
-#        InternalName: Random_1_3
-#        RandomFactionMembers: nod, forgotten
-#    Faction@random_0_1_2:
-#        Name: GDI, Nod and CABAL
-#        Side: Random
-#        Description: The known ones
-#        InternalName: Random_0_1_2
-#        RandomFactionMembers: gdi, nod, cabal
-#    Faction@random_1_2_3:
-#        Name: Nod, CABAL and Forgotten
-#        Side: Random
-#        Description: Tiberium doesn't hurt us
-#        InternalName: Random_1_2_3
-#        RandomFactionMembers: nod, cabal, forgotten
-#    Faction@random_2_3_0:
-#        Name: CABAL, Forgotten and GDI
-#        Side: Random
-#        Description: Enemies of Kane
-#        InternalName: Random_2_3_0
-#        RandomFactionMembers: cabal, forgotten, gdi
-#    Faction@random_3_0_1:
-#        Name: Forgotten, GDI and Nod
-#        Side: Random
-#        Description: Fuck CABAL
-#        InternalName: Random_3_0_1
-#        RandomFactionMembers: forgotten, gdi, nod
-    ResourceType@Tiberium:
-        Type: Tiberium
-        Name: Riparius
-        PipColor: Green
-        ResourceType: 1
-        Palette: greentiberium
-        EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
-        MaxDensity: 12
-        ValuePerUnit: 50
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
-        AllowUnderActors: True
-        AllowUnderBuildings: True
-        TerrainType: Tiberium
-    ResourceType@BlueTiberium:
-        Type: BlueTiberium
-        Name: Vinifera
-        PipColor: Blue
-        ResourceType: 2
-        Palette: bluetiberium
-        EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
-        MaxDensity: 12
-        ValuePerUnit: 100
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
-        AllowUnderActors: True
-        AllowUnderBuildings: True
-        TerrainType: BlueTiberium
-    ResourceType@Veins:
-        Type: Veins
-        Name: Veins
-        PipColor: Yellow
-        ResourceType: 3
-        Palette: veins
-        EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Sequences: veins
-        MaxDensity: 6
-        ValuePerUnit: 100
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Rail, Road, Green
-        AllowUnderActors: True
-        AllowUnderBuildings: True
-        TerrainType: Veins
-    ResourceType@RedTiberium:
-        Type: RedTiberium
-        Name: Aboreus
-        PipColor: Red
-        ResourceType: 4
-        Palette: redtiberium
-        EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
-        MaxDensity: 12
-        ValuePerUnit: 10
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
-        AllowUnderActors: True
-        AllowUnderBuildings: True
-        TerrainType: RedTiberium
-    ResourceType@PurpleTiberium:
-        Type: PurpleTiberium
-        Name: Cruentus
-        PipColor: Yellow
-        ResourceType: 5
-        Palette: purpletiberium
-        EditorSprite: waypoint # TODO: editor can't handle the real ones
-        Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
-        MaxDensity: 12
-        ValuePerUnit: 200
-        AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
-        AllowUnderActors: True
-        AllowUnderBuildings: True
-        TerrainType: PurpleTiberium
-    TerrainGeometryOverlay:
-    ExitsDebugOverlayManager:
-    CliffBackImpassabilityLayer:
+	Inherits: ^Palettes
+	AlwaysVisible:
+	ScreenMap:
+	ActorMap:
+	MusicPlaylist:
+		VictoryMusic: bleaktwilight
+		DefeatMusic: guiltypleasure
+	ShroudRenderer:
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: True
+		ShroudPalette: shroud
+		FogPalette: shroud
+	Faction@0:
+		Name: GDI
+		Side: Factions
+		Description: We save life!
+		InternalName: gdi
+	Faction@1:
+		Name: Nod
+		Side: Factions
+		Description: For the brotherhood!
+		InternalName: nod
+	Faction@2:
+		Name: Cabal
+		Side: Factions
+		Description: Humanity is failure!
+		InternalName: cabal
+	Faction@Random:
+		Name: Any
+		Side: Random
+		InternalName: Random
+		RandomFactionMembers: gdi, nod, cabal
+	Faction@random_0_1:
+		Name: GDI and Nod
+		Side: Random
+		Description: The classic ones
+		InternalName: Random_0_1
+		RandomFactionMembers: gdi, nod
+	Faction@random_1_2:
+		Name: Nod and CABAL
+		Side: Random
+		Description: Kane and his advisor
+		InternalName: Random_1_2
+		RandomFactionMembers: nod, cabal
+	Faction@random_0_2:
+		Name: GDI and CABAL
+		Side: Random
+		Description: The abbreviations
+		InternalName: Random_0_2
+		RandomFactionMembers: gdi, cabal
+	ResourceType@Tiberium:
+		Type: Tiberium
+		Name: Riparius
+		PipColor: Green
+		ResourceType: 1
+		Palette: greentiberium
+		EditorSprite: waypoint
+		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+		MaxDensity: 12
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+		AllowUnderActors: True
+		AllowUnderBuildings: True
+		TerrainType: Tiberium
+	ResourceType@BlueTiberium:
+		Type: BlueTiberium
+		Name: Vinifera
+		PipColor: Blue
+		ResourceType: 2
+		Palette: bluetiberium
+		EditorSprite: waypoint
+		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+		MaxDensity: 12
+		ValuePerUnit: 100
+		AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+		AllowUnderActors: True
+		AllowUnderBuildings: True
+		TerrainType: BlueTiberium
+	ResourceType@Veins:
+		Type: Veins
+		Name: Veins
+		PipColor: Yellow
+		ResourceType: 3
+		Palette: veins
+		EditorSprite: waypoint
+		Sequences: veins
+		MaxDensity: 6
+		ValuePerUnit: 100
+		AllowedTerrainTypes: Clear, Rough, DirtRoad, Rail, Road, Green
+		AllowUnderActors: True
+		AllowUnderBuildings: True
+		TerrainType: Veins
+	ResourceType@RedTiberium:
+		Type: RedTiberium
+		Name: Aboreus
+		PipColor: Red
+		ResourceType: 4
+		Palette: redtiberium
+		EditorSprite: waypoint
+		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+		MaxDensity: 12
+		ValuePerUnit: 10
+		AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+		AllowUnderActors: True
+		AllowUnderBuildings: True
+		TerrainType: RedTiberium
+	ResourceType@PurpleTiberium:
+		Type: PurpleTiberium
+		Name: Cruentus
+		PipColor: Yellow
+		ResourceType: 5
+		Palette: purpletiberium
+		EditorSprite: waypoint
+		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
+		MaxDensity: 12
+		ValuePerUnit: 200
+		AllowedTerrainTypes: Clear, Rough, DirtRoad, Green
+		AllowUnderActors: True
+		AllowUnderBuildings: True
+		TerrainType: PurpleTiberium
+	TerrainGeometryOverlay:
+	ExitsDebugOverlayManager:
+	CliffBackImpassabilityLayer:
 	SubterraneanActorLayer:
 	JumpjetActorLayer:
-    GlobalLightingPaletteEffect:
-        Red: 1.55
-        Blue: 0.95
-        Green: 1.25
-        Ambient: 0.565
-    WeatherOverlay:
-        ParticleDensityFactor: 1 #0.0002625
-        ChangingWindLevel: True
-        WindLevels: -1, 0, 1
-        WindTick: 150, 550
-        ParticleColors: 006400, 646464, 00FF00
-        ParticleSize: 0, 1
+	GlobalLightingPaletteEffect:
+		Red: 1.55
+		Blue: 0.95
+		Green: 1.25
+		Ambient: 0.565
+	WeatherOverlay:
+		ParticleDensityFactor: 1
+		ChangingWindLevel: True
+		WindLevels: -1, 0, 1
+		WindTick: 150, 550
+		ParticleColors: 006400, 646464, 00FF00
+		ParticleSize: 0, 1
 
 World:
-    Inherits: ^BaseWorld
-    ChatCommands:
-    DevCommands:
-    PlayerCommands:
-    HelpCommand:
-    BuildingInfluence:
-    ProductionQueueFromSelection:
-        ProductionPaletteWidget: PRODUCTION_PALETTE
-    DomainIndex:
-    SmudgeLayer@SMALLSCORCH:
-        Type: SmallScorch
-        Sequence: smallscorches
-        SmokeType: smallfire
-        SmokePercentage: 0
-    SmudgeLayer@MEDIUMSCORCH:
-        Type: MediumScorch
-        Sequence: mediumscorches
-        SmokeType: mediumfire
-        SmokePercentage: 0
-    SmudgeLayer@LARGESCORCH:
-        Type: LargeScorch
-        Sequence: largescorches
-        SmokeType: largefire
-        SmokePercentage: 0
-    SmudgeLayer@SMALLCRATER:
-        Type: SmallCrater
-        SmokeType: smoke_m
-        Sequence: smallcraters
-        SmokePercentage: 0
-        SmokePalette: player
-    SmudgeLayer@MEDIUMCRATER:
-        Type: MediumCrater
-        SmokeType: smoke_m
-        Sequence: mediumcraters
-        SmokePercentage: 0
-        SmokePalette: player
-    SmudgeLayer@LARGECRATER:
-        Type: LargeCrater
-        SmokeType: smoke_m
-        Sequence: largecraters
-        SmokePercentage: 0
-    ResourceLayer:
-    BridgeLayer:
-    CustomTerrainDebugOverlay:
-    ResourceClaimLayer:
-    WarheadDebugOverlay:
-    MapCreeps:
-    SpawnMapActors:
-    MapBuildRadius:
-    MapOptions:
-        TechLevel: t5
-    CreateMPPlayers:
-    MPStartUnits@GMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: gdi
-        BaseActor: gmcv
-    MPStartUnits@NMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: nod
-        BaseActor: nmcv
-    MPStartUnits@KMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: cabal
-        BaseActor: kmcv        
-    MPStartUnits@FMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: forgotten
-        BaseActor: fmcv
-    MPStartUnits@SMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: scrin
-        BaseActor: smcv
-    MPStartUnits@PMCV:
-        Class: none
-        ClassName: MCV Only
-        Factions: seraph
-        BaseActor: smcv 
-    MPStartLocations:
-    SpawnMPUnits:
-        StartingUnitsClass: none
-    CrateSpawner:
-        Enabled: False
-        Minimum: 1
-        Maximum: 6
-        SpawnInterval: 3000
-        WaterChance: 0
-        ValidGround: Clear, Rough, Road, DirtRoad, Tiberium, BlueTiberium
-        InitialSpawnDelay: 1500
-    PathFinder:
-    ValidateOrder:
-    DebugPauseState:
-    ScreenShaker:
-    RadarPings:
-    StartGameNotification:
-    ObjectivesPanel:
-        PanelName: SKIRMISH_STATS
-    LoadWidgetAtGameStart:
-        ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	PlayerCommands:
+	HelpCommand:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionPaletteWidget: PRODUCTION_PALETTE
+	DomainIndex:
+	SmudgeLayer@SMALLSCORCH:
+		Type: SmallScorch
+		Sequence: smallscorches
+		SmokeType: smallfire
+		SmokePercentage: 0
+	SmudgeLayer@MEDIUMSCORCH:
+		Type: MediumScorch
+		Sequence: mediumscorches
+		SmokeType: mediumfire
+		SmokePercentage: 0
+	SmudgeLayer@LARGESCORCH:
+		Type: LargeScorch
+		Sequence: largescorches
+		SmokeType: largefire
+		SmokePercentage: 0
+	SmudgeLayer@SMALLCRATER:
+		Type: SmallCrater
+		SmokeType: smoke_m
+		Sequence: smallcraters
+		SmokePercentage: 0
+		SmokePalette: player
+	SmudgeLayer@MEDIUMCRATER:
+		Type: MediumCrater
+		SmokeType: smoke_m
+		Sequence: mediumcraters
+		SmokePercentage: 0
+		SmokePalette: player
+	SmudgeLayer@LARGECRATER:
+		Type: LargeCrater
+		SmokeType: smoke_m
+		Sequence: largecraters
+		SmokePercentage: 0
+	ResourceLayer:
+	BridgeLayer:
+	CustomTerrainDebugOverlay:
+	ResourceClaimLayer:
+	WarheadDebugOverlay:
+	MapCreeps:
+	SpawnMapActors:
+	MapBuildRadius:
+	MapOptions:
+		TechLevel: t5
+	CreateMPPlayers:
+	MPStartUnits@GMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: gdi
+		BaseActor: gmcv
+	MPStartUnits@NMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: nod
+		BaseActor: nmcv
+	MPStartUnits@KMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: cabal
+		BaseActor: kmcv
+	MPStartUnits@FMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: forgotten
+		BaseActor: fmcv
+	MPStartUnits@SMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: scrin
+		BaseActor: smcv
+	MPStartUnits@PMCV:
+		Class: none
+		ClassName: MCV Only
+		Factions: seraph
+		BaseActor: smcv
+	MPStartLocations:
+	SpawnMPUnits:
+		StartingUnitsClass: none
+	CrateSpawner:
+		Enabled: False
+		Minimum: 1
+		Maximum: 6
+		SpawnInterval: 3000
+		WaterChance: 0
+		ValidGround: Clear, Rough, Road, DirtRoad, Tiberium, BlueTiberium
+		InitialSpawnDelay: 1500
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	ScreenShaker:
+	RadarPings:
+	StartGameNotification:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 
 EditorWorld:
-    Inherits: ^BaseWorld
-    EditorActorLayer:
-    EditorResourceLayer:
-    EditorSelectionLayer:
-        Palette: placebuilding
-    LoadWidgetAtGameStart:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorResourceLayer:
+	EditorSelectionLayer:
+		Palette: placebuilding
+	LoadWidgetAtGameStart:

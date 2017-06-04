@@ -1,798 +1,793 @@
 ScoundrelGrenade:
-    Inherits: ^ShellHE 
-    Inherits@wh: ^APWH
-    ReloadDelay: 110
-    Range: 5c0
-    MinRange: 1c512
-    Projectile: BulletAS
-        Speed: 150
-        Blockable: false
-        Shadow: true
-        LaunchAngle: 100
-        Inaccuracy: 1c0
-        Image: DISCUS
-        # ContrailLength: 10
-        # ContrailColor: FF7F27
-        # ContrailWidth: 15
-        # TrailImage: small_smoke_trail
-        # TrailPalette: apolra50alpha
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 120
-    Warhead@2Eff: CreateEffect
-        Explosions: medium_brnl, small_brnl
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water 
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@4Eff: CreateEffect
-        Explosions: fire01a, fire02a, fire03a
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: flamtnk1.aud
-        SmudgeType: LargeScorch
-        
+	Inherits: ^ShellHE
+	Inherits@wh: ^APWH
+	ReloadDelay: 110
+	Range: 5c0
+	MinRange: 1c512
+	Projectile: BulletAS
+		Speed: 150
+		Blockable: false
+		Shadow: true
+		LaunchAngle: 100
+		Inaccuracy: 1c0
+		Image: DISCUS
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 120
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_brnl, small_brnl
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Eff: CreateEffect
+		Explosions: fire01a, fire02a, fire03a
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: flamtnk1.aud
+		SmudgeType: LargeScorch
+
 GruntGun:
-    Inherits: ^Bullet
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 40
-    Range: 4c0
-    Report: smg_f1.aud, smg_f2.aud
-    Burst: 4
-    BurstDelay: 3
-    Projectile: BulletAS
-        Inaccuracy: 0c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 14
-        
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 40
+	Range: 4c0
+	Report: smg_f1.aud, smg_f2.aud
+	Burst: 4
+	BurstDelay: 3
+	Projectile: BulletAS
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 14
+
 HuntressGun:
-    Inherits: ^Bullet
-    Inherits@wh: ^BulletWH
-    ValidTargets: Ground, Air, MidAir, HighAir   
-    ReloadDelay: 150
-    Range: 7c0
-    Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
-    Projectile: BulletAS
-        Speed: 1c768
-        Inaccuracy: 0c64
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, MidAir, HighAir   
-        Spread: 0c64
-        Damage: 150
-        Versus:
-            Air: 25
-    Warhead@2prone: SpreadDamage
-        Spread: 0c256
-        Damage: 1
-    Warhead@2Eff: CreateEffect
-        Explosions: gatpiff
-        InvalidImpactTypes: Water
-        
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ValidTargets: Ground, Air, MidAir, HighAir
+	ReloadDelay: 150
+	Range: 7c0
+	Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
+	Projectile: BulletAS
+		Speed: 1c768
+		Inaccuracy: 0c64
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 15
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Air, MidAir, HighAir
+		Spread: 0c64
+		Damage: 150
+		Versus:
+			Air: 25
+	Warhead@2prone: SpreadDamage
+		Spread: 0c256
+		Damage: 1
+	Warhead@2Eff: CreateEffect
+		Explosions: gatpiff
+		InvalidImpactTypes: Water
+
 ScoundrelGun:
-    Inherits: ^Bullet
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 80
-    Range: 5c0
-    Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
-    Burst: 5
-    BurstDelay: 3
-    Projectile: BulletAS
-        Inaccuracy: 0c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 20
-        
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 80
+	Range: 5c0
+	Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
+	Burst: 5
+	BurstDelay: 3
+	Projectile: BulletAS
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+
 BrigandShotgun:
-    Inherits: ^Bullet    
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 50
-    Range: 4c0
-    Report: shotgun3.aud
-    Projectile: BulletAS
-        Inaccuracy: 1c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 35
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 50
+	Range: 4c0
+	Report: shotgun3.aud
+	Projectile: BulletAS
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 35
 
-BrigandShotgun2: #no sound version
-    Inherits: BrigandShotgun
-    Report:
-    
+BrigandShotgun2:
+	Inherits: BrigandShotgun
+	Report:
+
 CrapjetBomb:
-    Inherits: ^Bomb
-    Inherits@wh: ^HEAPWH
-    ReloadDelay: 10
-    Burst: 10
-    BurstDelay: 2
-    Range: 2c768
-    Projectile: BulletAS
-        Speed: 0c256
-        Image: shell01
-        Shadow: true
-        Palette: effect
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 500
-        Versus:
-            Buildings: 30
-            Vehicles: 40
-        
-BisonLauncher: #145mm + mg + LAUNCHER
-    Inherits: ^ShellAP
-    Inherits@wh: ^HEWH
-    ReloadDelay: 200
-    Range: 6c768
-    Burst: 6
-    BurstDelay: 10
-    Report: m203.aud, gp25.aud
-    Projectile: BulletAS
-        Speed: 0c256
-        Image: canister #120mm
-        LaunchAngle: 62
-        Palette: ra
-        Inaccuracy: 1c0
-        ContrailLength: 10
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 50
-    Warhead@2Eff: CreateEffect
-        Explosions: grenexplo01, grenexplo02
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew14.aud
-        InvalidImpactTypes: Water
-        
-GriffinMG:
-    Inherits: ^APBullet
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 50
-    Burst: 3
-    Range: 4c0
-    Report: tsgun4.aud
-    Projectile: BulletAS
-        Speed: 1c682
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 50
-    Warhead@2Eff: CreateEffect
-        Explosions: piff
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-        
-AssaultTruckMG:
-    Inherits: ^Bullet 
-	Inherits@wh: ^BulletWH
-    ReloadDelay: 60
-    Range: 4c0
-    Burst: 20
-    BurstDelay: 2
-    Report: chaingn1.aud
-    Projectile: BulletAS
-        Speed: 0c682
-        Inaccuracy: 0c512
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c64
-        Damage: 40
-    Warhead@2Eff: CreateEffect
-        Explosions: gatpiff
-        InvalidImpactTypes: Water
-        
-BuzzardGattlingCannonAttack:
-    Inherits: GattlingCannonAttack
-    -Burst:
-    Range: 5c0
-    ReloadDelay: 2
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 20
-        Versus:
-            Aircraft: 25   
-    
-BuzzardGattlingCannonVisual:
-    Inherits: GattlingCannonVisual
-    -Burst:
-    Range: 5c0
-    ReloadDelay: 2
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0  
+	Inherits: ^Bomb
+	Inherits@wh: ^HEAPWH
+	ReloadDelay: 10
+	Burst: 10
+	BurstDelay: 2
+	Range: 2c768
+	Projectile: BulletAS
+		Speed: 0c256
+		Image: shell01
+		Shadow: true
+		Palette: effect
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 500
+		Versus:
+			Buildings: 30
+			Vehicles: 40
 
-BuzzardGattlingCannonVisual2: #upgraded one
-    Inherits: BuzzardGattlingCannonVisual
-    ReloadDelay:1
-        
+BisonLauncher:
+	Inherits: ^ShellAP
+	Inherits@wh: ^HEWH
+	ReloadDelay: 200
+	Range: 6c768
+	Burst: 6
+	BurstDelay: 10
+	Report: m203.aud, gp25.aud
+	Projectile: BulletAS
+		Speed: 0c256
+		Image: canister
+		LaunchAngle: 62
+		Palette: ra
+		Inaccuracy: 1c0
+		ContrailLength: 10
+		ContrailWidth: 15
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 50
+	Warhead@2Eff: CreateEffect
+		Explosions: grenexplo01, grenexplo02
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew14.aud
+		InvalidImpactTypes: Water
+
+GriffinMG:
+	Inherits: ^APBullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 50
+	Burst: 3
+	Range: 4c0
+	Report: tsgun4.aud
+	Projectile: BulletAS
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+
+AssaultTruckMG:
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 60
+	Range: 4c0
+	Burst: 20
+	BurstDelay: 2
+	Report: chaingn1.aud
+	Projectile: BulletAS
+		Speed: 0c682
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 40
+	Warhead@2Eff: CreateEffect
+		Explosions: gatpiff
+		InvalidImpactTypes: Water
+
+BuzzardGattlingCannonAttack:
+	Inherits: GattlingCannonAttack
+	-Burst:
+	Range: 5c0
+	ReloadDelay: 2
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 20
+		Versus:
+			Aircraft: 25
+
+BuzzardGattlingCannonVisual:
+	Inherits: GattlingCannonVisual
+	-Burst:
+	Range: 5c0
+	ReloadDelay: 2
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 0
+
+BuzzardGattlingCannonVisual2:
+	Inherits: BuzzardGattlingCannonVisual
+	ReloadDelay: 1
+
 BuzzardGattlingCannonAttack2:
-    Inherits: BuzzardGattlingCannonAttack
-    ReloadDelay:1
-    
+	Inherits: BuzzardGattlingCannonAttack
+	ReloadDelay: 1
+
 BisonMG:
-    Inherits: ^Bullet 
+	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 200
-    Range: 6c768
-    Burst: 50
-    BurstDelay: 4
-    Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
-    Projectile: BulletAS
-        Speed: 0c682
-        Inaccuracy: 1c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 7
-    Warhead@2Eff: CreateEffect
-        Explosions: gatpiff
-        InvalidImpactTypes: Water
-        
+	ReloadDelay: 200
+	Range: 6c768
+	Burst: 50
+	BurstDelay: 4
+	Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
+	Projectile: BulletAS
+		Speed: 0c682
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 7
+	Warhead@2Eff: CreateEffect
+		Explosions: gatpiff
+		InvalidImpactTypes: Water
+
 TaurusMG:
-    Inherits: ^Bullet 
+	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 80
-    Range: 8c0
-    Burst: 12
-    BurstDelay: 2
-    Report: m3.aud
-    ValidTargets: Ground, Air, MidAir, HighAir
-    Projectile: BulletAS
-        Speed: 2c0
-        Inaccuracy: 0c512
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 50
-        Versus:
-            Aircraft: 33
-        ValidTargets: Ground, Air, MidAir, HighAir
-    Warhead@2Eff: CreateEffect
-        Explosions: gatpiff
-        InvalidImpactTypes: Water
-        
+	ReloadDelay: 80
+	Range: 8c0
+	Burst: 12
+	BurstDelay: 2
+	Report: m3.aud
+	ValidTargets: Ground, Air, MidAir, HighAir
+	Projectile: BulletAS
+		Speed: 2c0
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		Versus:
+			Aircraft: 33
+		ValidTargets: Ground, Air, MidAir, HighAir
+	Warhead@2Eff: CreateEffect
+		Explosions: gatpiff
+		InvalidImpactTypes: Water
+
 WatchTowerMG:
-    Inherits: ^Bullet 
+	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-    ReloadDelay: 70
-    Range: 7c0
-    Burst: 30
-    BurstDelay: 2
-    Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
-    Projectile: BulletAS
-        Speed: 1c0
-        Inaccuracy: 0c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 30
-    Warhead@2Eff: CreateEffect
-        Explosions: gatpiff
-        InvalidImpactTypes: Water
-    
-ForgHECannon: # Gremlin / Taurus HE
-    Inherits: ^ShellHE 
-    Inherits@wh: ^APHEWH
-    ReloadDelay: 100
-    Burst: 10
-    Range: 5c0
-    Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
-    Projectile: BulletAS
-        Image: shell02
-        Speed: 1c0
-        Inaccuracy: 0c768
-        Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 35
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_clsn, tiny_bang
-        ExplosionPalette: apolra2
-        ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piffs
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallCrater
-        InvalidImpactTypes: Water, Air, AirHit
-        
+	ReloadDelay: 70
+	Range: 7c0
+	Burst: 30
+	BurstDelay: 2
+	Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
+	Projectile: BulletAS
+		Speed: 1c0
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 30
+	Warhead@2Eff: CreateEffect
+		Explosions: gatpiff
+		InvalidImpactTypes: Water
+
+ForgHECannon:
+	Inherits: ^ShellHE
+	Inherits@wh: ^APHEWH
+	ReloadDelay: 100
+	Burst: 10
+	Range: 5c0
+	Report: Cannon01_22mm.aud, Cannon02_22mm.aud, Cannon03_22mm.aud, Cannon04_22mm.aud, Cannon05_22mm.aud
+	Projectile: BulletAS
+		Image: shell02
+		Speed: 1c0
+		Inaccuracy: 0c768
+		Palette: effect
+		ContrailLength: 10
+		ContrailWidth: 15
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 35
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_clsn, tiny_bang
+		ExplosionPalette: apolra2
+		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidImpactTypes: Water, Air, AirHit
+
 GriffinAutocannon:
-    Inherits:ForgHECannon
-    -Burst
-    ReloadDelay: 15
-    Projectile:Bullet
-        Inaccuracy:0c512
-        
+	Inherits: ForgHECannon
+	-Burst:
+	ReloadDelay: 15
+	Projectile: Bullet
+		Inaccuracy: 0c512
+
 BuggyFlak:
-    Inherits: ^ShellHE 
+	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-    ReloadDelay: 100
-    Burst: 10
-    BurstDelay: 4
-    ValidTargets: MidAir, Air
-    Range: 9c0
-    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
-    Projectile: BulletAS
-        Image: shell02
-        Speed: 1c512
-        Inaccuracy: 0c512
-        Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 20
-        Versus:
-            Building: 50
-            Vehicle: 40
-        ValidTargets: MidAir, Air
-        DamageTypes: SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew13.aud
-        InvalidImpactTypes: Water 
-    Warhead@4EffAir: CreateEffect
-        Explosions: tiny_clsn, tiny_bang
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud
-        ValidImpactTypes: Air, AirHit
-        
+	ReloadDelay: 100
+	Burst: 10
+	BurstDelay: 4
+	ValidTargets: MidAir, Air
+	Range: 9c0
+	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
+	Projectile: BulletAS
+		Image: shell02
+		Speed: 1c512
+		Inaccuracy: 0c512
+		Palette: effect
+		ContrailLength: 10
+		ContrailWidth: 25
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 20
+		Versus:
+			Building: 50
+			Vehicle: 40
+		ValidTargets: MidAir, Air
+		DamageTypes: SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew13.aud
+		InvalidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: tiny_clsn, tiny_bang
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew12.aud
+		ValidImpactTypes: Air, AirHit
+
 FlakCannon:
-    Inherits: ^ShellHE 
+	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-    ReloadDelay: 100
-    Burst: 20
-    BurstDelay: 4
-    ValidTargets: Air, MidAir, HighAir
-    Range: 8c0
-    Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud #shotgun1.aud,shotgun2.aud
-    Projectile: BulletAS
-        Image: shell02
-        Speed: 1c512
-        Inaccuracy: 0c512
-        Palette: effect
-        ContrailLength: 10
-        ContrailWidth: 25
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c512
-        Damage: 30
-        ValidTargets: Air, MidAir, HighAir
-        DamageTypes: SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_clsn, tiny_bang
-        ExplosionPalette: apolra2
-        ImpactSounds: explo04.aud
-        InvalidImpactTypes: Water
-    Warhead@4EffAir: CreateEffect
-        Explosions: tiny_clsn, tiny_bang
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud
-        ValidImpactTypes: Air, AirHit
-        
+	ReloadDelay: 100
+	Burst: 20
+	BurstDelay: 4
+	ValidTargets: Air, MidAir, HighAir
+	Range: 8c0
+	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
+	Projectile: BulletAS
+		Image: shell02
+		Speed: 1c512
+		Inaccuracy: 0c512
+		Palette: effect
+		ContrailLength: 10
+		ContrailWidth: 25
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c512
+		Damage: 30
+		ValidTargets: Air, MidAir, HighAir
+		DamageTypes: SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_clsn, tiny_bang
+		ExplosionPalette: apolra2
+		ImpactSounds: explo04.aud
+		InvalidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: tiny_clsn, tiny_bang
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew12.aud
+		ValidImpactTypes: Air, AirHit
+
 BuggyMortar:
-    Inherits: ^ShellHE 
+	Inherits: ^ShellHE
 	Inherits@wh: ^TiberiumWH
-    ReloadDelay: 80
-    Range: 9c0
-    Report: 120mmf.aud
-    Projectile: BulletAS
-        Speed: 400
-        Inaccuracy: 0c512
-        Image: shell02
-        LaunchAngle: 165
-        ContrailLength: 20
-        ContrailColor: FFFFFF
-        ContrailWidth: 20
-        Blockable: false
-    MinRange: 4c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 80
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_lrg2
-        ExplosionPalette: effect50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
+	ReloadDelay: 80
+	Range: 9c0
+	Report: 120mmf.aud
+	Projectile: BulletAS
+		Speed: 400
+		Inaccuracy: 0c512
+		Image: shell02
+		LaunchAngle: 165
+		ContrailLength: 20
+		ContrailColor: FFFFFF
+		ContrailWidth: 20
+		Blockable: false
+	MinRange: 4c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c256
+		Damage: 80
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_lrg2
+		ExplosionPalette: effect50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
 
 GremlinMortar:
-    Inherits: ^ShellHE 
+	Inherits: ^ShellHE
 	Inherits@wh: ^TiberiumWH
-    ReloadDelay: 120
-    Range: 10c0
-    Report: 120mmf.aud
-    Projectile: BulletAS
-        Speed: 350
-        Inaccuracy: 1c0
-        Image: shell02
-        LaunchAngle: 165
-        ContrailLength: 20
-        ContrailColor: FFFFFF
-        ContrailWidth: 20
-        Blockable: false
-    MinRange: 4c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 180
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_lrg2
-        ExplosionPalette: effect50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
+	ReloadDelay: 120
+	Range: 10c0
+	Report: 120mmf.aud
+	Projectile: BulletAS
+		Speed: 350
+		Inaccuracy: 1c0
+		Image: shell02
+		LaunchAngle: 165
+		ContrailLength: 20
+		ContrailColor: FFFFFF
+		ContrailWidth: 20
+		Blockable: false
+	MinRange: 4c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 180
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_lrg2
+		ExplosionPalette: effect50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
 
 AurochMortar:
-    Inherits: ^ShellHE 
+	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-    ReloadDelay: 160
-    Range: 10c0
-    Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
-    Projectile: BulletAS
-        Speed: 350
-        Inaccuracy: 1c0
-        Image: shell02
-        LaunchAngle: 140
-        ContrailLength: 20
-        ContrailColor: FFFFFF
-        ContrailWidth: 20
-        Blockable: false
-    MinRange: 4c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 350
-        
-RagnarokCannon:
-    Inherits: ^ShellHE 
-	Inherits@wh: ^APHEWH
-    ReloadDelay: 260
-    Range: 14c0
-    Report: artyfire2.aud
-    Projectile: BulletAS
-        Speed: 0c256
-        Inaccuracy: 5c0
-        Image: shell02
-        LaunchAngle: 90
-        ContrailLength: 30
-        ContrailColor: FFFFFF
-        ContrailWidth: 30
-        Blockable: false
-    MinRange: 5c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c512
-        Damage: 30
-        Versus:
-            Building: 200
-    Warhead@2Eff: CreateEffect
-        Explosions: fireexpl
-        ExplosionPalette: effect
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumCrater 
-        
-GoonHammer:
-    ReloadDelay: 40
-    Range: 1c512
-	ValidTargets: Infantry, Mutant, Goon
-    Report: splatter01.aud, splatter02.aud
-    Projectile: BulletAS
-        Speed: 426
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c64
-        Damage: 200		
-        DamageTypes: Prone350Percent, TriggerProne, BulletDeath
-    Warhead@21Dam: SpreadDamage
-        DebugOverlayColor: 00FF00
-        AffectsParent: True
-        ValidTargets: Goon
-        ValidStances: Ally
-        Spread: 0c256
-        Damage: -100
+	ReloadDelay: 160
+	Range: 10c0
+	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
+	Projectile: BulletAS
+		Speed: 350
+		Inaccuracy: 1c0
+		Image: shell02
+		LaunchAngle: 140
+		ContrailLength: 20
+		ContrailColor: FFFFFF
+		ContrailWidth: 20
+		Blockable: false
+	MinRange: 4c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c256
+		Damage: 350
 
-GoonHammer2:    
-    ReloadDelay: 40
-    Range: 1c512
+RagnarokCannon:
+	Inherits: ^ShellHE
+	Inherits@wh: ^APHEWH
+	ReloadDelay: 260
+	Range: 14c0
+	Report: artyfire2.aud
+	Projectile: BulletAS
+		Speed: 0c256
+		Inaccuracy: 5c0
+		Image: shell02
+		LaunchAngle: 90
+		ContrailLength: 30
+		ContrailColor: FFFFFF
+		ContrailWidth: 30
+		Blockable: false
+	MinRange: 5c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c512
+		Damage: 30
+		Versus:
+			Building: 200
+	Warhead@2Eff: CreateEffect
+		Explosions: fireexpl
+		ExplosionPalette: effect
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+GoonHammer:
+	ReloadDelay: 40
+	Range: 1c512
+	ValidTargets: Infantry, Mutant, Goon
+	Report: splatter01.aud, splatter02.aud
+	Projectile: BulletAS
+		Speed: 426
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 200
+		DamageTypes: Prone350Percent, TriggerProne, BulletDeath
+	Warhead@21Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		AffectsParent: True
+		ValidTargets: Goon
+		ValidStances: Ally
+		Spread: 0c256
+		Damage: -100
+
+GoonHammer2:
+	ReloadDelay: 40
+	Range: 1c512
 	InvalidTargets: Infantry, Mutant
-    Report: metal01.aud, metal02.aud, metal03.aud, metal04.aud, metal05.aud, metal06.aud, metal07.aud, metal08.aud
-    Projectile: BulletAS
-        Speed: 426
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c64
-        Damage: 100		
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 50
-            Aircraft: 50
-            Building: 80
-            Light: 100
-            Medium: 80
-            Heavy: 70
-        DamageTypes: BulletDeath
+	Report: metal01.aud, metal02.aud, metal03.aud, metal04.aud, metal05.aud, metal06.aud, metal07.aud, metal08.aud
+	Projectile: BulletAS
+		Speed: 426
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 100
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 50
+			Aircraft: 50
+			Building: 80
+			Light: 100
+			Medium: 80
+			Heavy: 70
+		DamageTypes: BulletDeath
 
 HellHoundBite:
-    ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-    InvalidTargets: Vehicle, Buildings
-    ReloadDelay: 20
-    Range: 1c0
-    Report: mdog_a1.aud, mdog_m1.aud, mdog_s1.aud
-    Projectile: BulletAS
-        Speed: 3c768
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c64
-        Damage: 225
-        DamageTypes: Prone100Percent, TriggerProne, BulletDeath
-        
+	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
+	InvalidTargets: Vehicle, Buildings
+	ReloadDelay: 20
+	Range: 1c0
+	Report: mdog_a1.aud, mdog_m1.aud, mdog_s1.aud
+	Projectile: BulletAS
+		Speed: 3c768
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 225
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+
 BuggyFireballLauncher:
-    Inherits@wh: ^FireWH
-    ReloadDelay: 100
-    Range: 5c256
-    Report: flamtnk1.aud
-    Projectile: BulletAS
-        Speed: 0c128
-        LaunchAngle: 90
-        Image: flametrailer
-        TrailImage: flametrailer
-        TrailPalette: effect50alpha
-        Inaccuracy: 1c0
-    InvalidTargets: Flameproof
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 75
-        Falloff: 100, 80
-    Warhead@2Eff: CreateEffect
-        Explosions: fire01a, fire02a, fire03a
-        ExplosionPalette: apolra50alpha
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light2
+	Inherits@wh: ^FireWH
+	ReloadDelay: 100
+	Range: 5c256
+	Report: flamtnk1.aud
+	Projectile: BulletAS
+		Speed: 0c128
+		LaunchAngle: 90
+		Image: flametrailer
+		TrailImage: flametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c0
+	InvalidTargets: Flameproof
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 75
+		Falloff: 100, 80
+	Warhead@2Eff: CreateEffect
+		Explosions: fire01a, fire02a, fire03a
+		ExplosionPalette: apolra50alpha
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
 
 BountyMG:
-    Inherits: ^Bullet    
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 30
-    Burst: 3
-    BurstDelay: 3
-    Range: 5c0
-    Report: stormgun1.aud, stormgun2.aud, stormgun3.aud #hmg.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c128
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 20
-        DamageTypes: Prone100Percent, TriggerProne, BountyKill
+	Inherits: ^Bullet
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 30
+	Burst: 3
+	BurstDelay: 3
+	Range: 5c0
+	Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c128
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		DamageTypes: Prone100Percent, TriggerProne, BountyKill
 
 BountyHunterBazooka:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-    ValidTargets: Building, Cyborg, Air, MidAir, HighAir
-    ReloadDelay: 120
-    Range: 8c0
-    MinRange: 1c512
-    Report: smaw.aud
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 300
-        ValidTargets: Ground, Air, MidAir, HighAir
-        Versus:
-            Aircraft: 50
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_tumu
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
-        
+	ValidTargets: Building, Cyborg, Air, MidAir, HighAir
+	ReloadDelay: 120
+	Range: 8c0
+	MinRange: 1c512
+	Report: smaw.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 300
+		ValidTargets: Ground, Air, MidAir, HighAir
+		Versus:
+			Aircraft: 50
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_tumu
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
+
 GeckoLauncherBarrage:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-    ValidTargets: Ground
-    ReloadDelay: 220
-    Burst: 6
-    BurstDelay: 0
-    Range: 10c0
-    MinRange: 4c0
-    Projectile: Missile
-        MaximumLaunchSpeed: 171
-        Blockable: false
-        Inaccuracy: 1c512
-        RangeLimit: 20c0
-        Speed: 0c768
-    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 110
-        ValidTargets: Ground
-    Warhead@2Eff: CreateEffect
-        Explosions: small_tumu, medium_tumu, large_tumu
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@5Smu: LeaveSmudge
-        SmudgeType: MediumCrater
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@6Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light
-        
-ForgottenT3Missile: #dosomethingaboutit
-    Inherits: ^MissileAPHE 
+	ValidTargets: Ground
+	ReloadDelay: 220
+	Burst: 6
+	BurstDelay: 0
+	Range: 10c0
+	MinRange: 4c0
+	Projectile: Missile
+		MaximumLaunchSpeed: 171
+		Blockable: false
+		Inaccuracy: 1c512
+		RangeLimit: 20c0
+		Speed: 0c768
+	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 110
+		ValidTargets: Ground
+	Warhead@2Eff: CreateEffect
+		Explosions: small_tumu, medium_tumu, large_tumu
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+
+ForgottenT3Missile:
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-    ValidTargets: Ground, Air, MidAir
-    ReloadDelay: 220
-    Range: 8c0
-    MinRange: 2c0
-    Projectile: Missile
-        MaximumLaunchSpeed: 171
-        Blockable: false
-        Inaccuracy: 0c512
-        RangeLimit: 20c0
-        Speed: 1c768
-    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 300
-        ValidTargets: Ground
-    Warhead@2Eff: CreateEffect
-        Explosions: small_tumu, medium_tumu, large_tumu
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@5Smu: LeaveSmudge
-        SmudgeType: MediumCrater
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@6Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light
+	ValidTargets: Ground, Air, MidAir
+	ReloadDelay: 220
+	Range: 8c0
+	MinRange: 2c0
+	Projectile: Missile
+		MaximumLaunchSpeed: 171
+		Blockable: false
+		Inaccuracy: 0c512
+		RangeLimit: 20c0
+		Speed: 1c768
+	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 300
+		ValidTargets: Ground
+	Warhead@2Eff: CreateEffect
+		Explosions: small_tumu, medium_tumu, large_tumu
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
 
 ForgottenT2Missile:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-    ReloadDelay: 150
-    Burst: 6
-    BurstDelay: 8
-    Range: 8c0
-    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    ValidTargets: Ground, Air, MidAir, HighAir
-    Projectile: Missile
-        Inaccuracy: 0c256
-        MaximumLaunchSpeed: 0c256
-        MinimumLaunchSpeed: 0c64
-        Speed : 0c512
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 75
-        ValidTargets: Ground, Air, MidAir, HighAir
-        
+	ReloadDelay: 150
+	Burst: 6
+	BurstDelay: 8
+	Range: 8c0
+	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	ValidTargets: Ground, Air, MidAir, HighAir
+	Projectile: Missile
+		Inaccuracy: 0c256
+		MaximumLaunchSpeed: 0c256
+		MinimumLaunchSpeed: 0c64
+		Speed: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 75
+		ValidTargets: Ground, Air, MidAir, HighAir
+
 BuggyMissile:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-    ReloadDelay: 180
-    Burst: 4
-    BurstDelay: 3
-    Range: 6c0
-    Report: misl1.aud
-    ValidTargets: Ground, Air, MidAir
-    Projectile: Missile
-        Arm: 2
-        Shadow: true
-        Inaccuracy: 0c512
-        Blockable: true
-        Image: missile01
-        HorizontalRateOfTurn: 8
-        MaximumLaunchSpeed: 350
-        MinimumLaunchSpeed: 350
-        Speed : 350
-        Palette: effect
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 60
-        ValidTargets: Ground, Air, MidAir
-        
+	ReloadDelay: 180
+	Burst: 4
+	BurstDelay: 3
+	Range: 6c0
+	Report: misl1.aud
+	ValidTargets: Ground, Air, MidAir
+	Projectile: Missile
+		Arm: 2
+		Shadow: true
+		Inaccuracy: 0c512
+		Blockable: true
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		MaximumLaunchSpeed: 350
+		MinimumLaunchSpeed: 350
+		Speed: 350
+		Palette: effect
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 60
+		ValidTargets: Ground, Air, MidAir
+
 BuzzardMissiles:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-    ReloadDelay: 200
+	ReloadDelay: 200
 	MinRange: 1c0
-    Range: 5c0
-    Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-    Burst: 4
-    ValidTargets: Ground
-    Projectile: Missile
-        MaximumLaunchSpeed: 0c512
-        MinimumLaunchSpeed: 0c512
-        Speed : 0c512
-        Inaccuracy: 0c256
-        Image: missile01
-        HorizontalRateOfTurn: 7
-        RangeLimit: 20c0
-        ContrailLength: 10
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        Spread: 85
-        Damage: 140
-        ValidTargets: Ground
-    Warhead@2Eff: CreateEffect
-        Explosions: small_bang
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4EffAir: CreateEffect
-        Explosions: small_twlt
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        ValidImpactTypes: Air, AirHit
+	Range: 5c0
+	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	Burst: 4
+	ValidTargets: Ground
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c512
+		MinimumLaunchSpeed: 0c512
+		Speed: 0c512
+		Inaccuracy: 0c256
+		Image: missile01
+		HorizontalRateOfTurn: 7
+		RangeLimit: 20c0
+		ContrailLength: 10
+		ContrailWidth: 15
+	Warhead@1Dam: SpreadDamage
+		Spread: 85
+		Damage: 140
+		ValidTargets: Ground
+	Warhead@2Eff: CreateEffect
+		Explosions: small_bang
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		ValidImpactTypes: Air, AirHit
 
 BuzzardHErocket:
-    Inherits: ^RocketHE 
+	Inherits: ^RocketHE
 	Inherits@wh: ^HEWH
-    Range: 7c0
-    ReloadDelay: 1
-    Projectile: BulletAS
-        Inaccuracy: 0c0
-    Warhead@1Dam: SpreadDamage
-        Damage: 225
-        
+	Range: 7c0
+	ReloadDelay: 1
+	Projectile: BulletAS
+		Inaccuracy: 0c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 225
+
 StrikerMissiles:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 50
-    Range: 18c0
-    MinRange: 4c0
-    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-    Burst: 2
-    ValidTargets: Air, MidAir, HighAir
-    Projectile: Missile
-        MaximumLaunchSpeed: 0c768
-        MinimumLaunchSpeed: 0c768
-        Speed : 0c768
-        Inaccuracy: 0c64
-        HorizontalRateOfTurn: 30
-        RangeLimit: 30c0
-        ContrailLength: 10
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 300
-        ValidStances: Neutral, Enemy
-        ValidTargets: Air, MidAir, HighAir
-    Warhead@2Eff: CreateEffect
-        Explosions: small_bang
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4EffAir: CreateEffect
-        Explosions: small_twlt
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        ValidImpactTypes: Air, AirHit
-    Warhead@5Smu: LeaveSmudge
-        SmudgeType: SmallCrater
-        InvalidImpactTypes: Water, Air, AirHit
+	ReloadDelay: 50
+	Range: 18c0
+	MinRange: 4c0
+	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+	Burst: 2
+	ValidTargets: Air, MidAir, HighAir
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c768
+		MinimumLaunchSpeed: 0c768
+		Speed: 0c768
+		Inaccuracy: 0c64
+		HorizontalRateOfTurn: 30
+		RangeLimit: 30c0
+		ContrailLength: 10
+		ContrailWidth: 15
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 300
+		ValidStances: Neutral, Enemy
+		ValidTargets: Air, MidAir, HighAir
+	Warhead@2Eff: CreateEffect
+		Explosions: small_bang
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		ValidImpactTypes: Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidImpactTypes: Water, Air, AirHit

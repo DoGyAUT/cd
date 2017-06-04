@@ -1,722 +1,682 @@
 GAWALL:
-    Inherits: ^Wall
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 100
-        Prerequisites: ~structures.gdi
-        Description: Stops infantry and blocks enemy fire.
-    SoundOnDamageTransition:
-    Valued:
-        Cost: 100
-    CustomSellValue:
-        Value: 0
-    Tooltip:
-        Name: Concrete Wall
-    Health:
-        HP: 400
-    BlocksProjectiles:
-        Height: 640
-    Crushable:
-        CrushClasses: heavywall
-    LineBuild:
-        NodeTypes: wall, turret
-        
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.gdi
+		Description: Stops infantry and blocks enemy fire.
+	SoundOnDamageTransition:
+	Valued:
+		Cost: 100
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	Health:
+		HP: 400
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+	HitShape:
+
 GAGATE_A:
-    Inherits: ^Gate_A
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 101
-        Prerequisites: ~structures.gdi
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: GDI Gate
+	Inherits: ^Gate_A
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 101
+		Prerequisites: ~structures.gdi
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: GDI Gate
 
 GAGATE_B:
-    Inherits: ^Gate_B
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 102
-        Prerequisites: ~structures.gdi
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: GDI Gate
+	Inherits: ^Gate_B
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 102
+		Prerequisites: ~structures.gdi
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: GDI Gate
 
 GASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 103
-        Prerequisites: gproc, ~structures.gdi
-        Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: GDI Silo
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-    WithSiloAnimation:
-    WithIdleOverlay@UNDERLAY:
-        Sequence: idle-underlay
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    StoresResources:
-        PipColor: Green
-        PipCount: 5
-        Capacity: 1500
-    Power:
-        Amount: -10  
-    # Explodes:
-        # Weapon: TiberiumExplosionSilo
-        # EmptyWeapon: TiberiumExplosionSilo
-        
+	Inherits: ^BuildingInfiltrate
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 103
+		Prerequisites: gproc, ~structures.gdi
+		Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: GDI Silo
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 4c0
+	RenderSprites:
+	WithSpriteBody:
+	WithSiloAnimation:
+	WithIdleOverlay@UNDERLAY:
+		Sequence: idle-underlay
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	StoresResources:
+		PipColor: Green
+		PipCount: 5
+		Capacity: 1500
+	Power:
+		Amount: -10
+	HitShape:
+
 GAMG:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Vulcan Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 103
-        Prerequisites: anypower, gapile, ~structures.gdi, ~!upgrade.gdf
-        Description: Basic base defense.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1400
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 150,0,-100
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-vulcan
-    Armament@VULCPRIMARY:
-        Weapon: VulcanTower
-        LocalOffset: 570,-64,1024
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@VULCSECONDARY:
-        Weapon: VulcanTower
-        LocalOffset: 570,64,1024
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-    
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Vulcan Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 103
+		Prerequisites: anypower, gapile, ~structures.gdi, ~!upgrade.gdf
+		Description: Basic base defense.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 8c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 150,0,-100
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-vulcan
+	Armament@VULCPRIMARY:
+		Weapon: VulcanTower
+		LocalOffset: 806,-91,1448
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@VULCSECONDARY:
+		Weapon: VulcanTower
+		LocalOffset: 806,91,1448
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GAMG2:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Falcon Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 104
-        Prerequisites: anypower, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Improved basic base defense, with more armor and weapons.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1800
-    RevealsShroud:
-        Range: 9c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 150,0,-100
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-vulcan
-    Armament@VULCPRIMARY:
-        Weapon: VulcanTower1
-        LocalOffset: 620,-64,1024
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@VULCSECONDARY:
-        Weapon: VulcanTower1
-        LocalOffset: 620,64,1024
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    Armament@VULCPRIMARY2:
-        Weapon: VulcanTower2
-        LocalOffset: 380,380,1080
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@VULCSECONDARY2:
-        Weapon: VulcanTower3
-        LocalOffset: 380,-380,1080
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    Armament@VULCPRIMARY3:
-        Weapon: VulcanTower2
-        LocalOffset: 380,380,928
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@VULCSECONDARY3:
-        Weapon: VulcanTower3
-        LocalOffset: 380,-380,928
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-        
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Falcon Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 104
+		Prerequisites: anypower, gapile, ~structures.gdi, ~upgrade.gdf
+		Description: Improved basic base defense, with more armor and weapons.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1800
+	RevealsShroud:
+		Range: 9c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 150,0,-100
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-vulcan
+	Armament@VULCPRIMARY:
+		Weapon: VulcanTower1
+		LocalOffset: 877,-91,1448
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@VULCSECONDARY:
+		Weapon: VulcanTower1
+		LocalOffset: 877,91,1448
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	Armament@VULCPRIMARY2:
+		Weapon: VulcanTower2
+		LocalOffset: 537,537,1527
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@VULCSECONDARY2:
+		Weapon: VulcanTower3
+		LocalOffset: 537,-537,1527
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	Armament@VULCPRIMARY3:
+		Weapon: VulcanTower2
+		LocalOffset: 537,537,1312
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@VULCSECONDARY3:
+		Weapon: VulcanTower3
+		LocalOffset: 537,-537,1312
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GASENTUR:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Sniper-Sensor Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 105
-        Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
-        Description: This base defense focused on stealth detection\n\nGood vs Infantry\n\nSpecial:\n- Provides improved stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1400
-    RevealsShroud:
-        Range: 11c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 9c0
-        CloakTypes: Cloak, Underground
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 170,0,-100
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-vulcan
-    Armament@primary:
-        Weapon: WatchSniper
-        LocalOffset: 600,0,1024
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-        
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Sniper-Sensor Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 105
+		Prerequisites: anypower, garadr, ~structures.gdi, ~!t1
+		Description: This base defense focused on stealth detection\n\nGood vs Infantry\n\nSpecial:\n- Provides improved stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 11c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 9c0
+		CloakTypes: Cloak, Underground
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 170,0,-100
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-vulcan
+	Armament@primary:
+		Weapon: WatchSniper
+		LocalOffset: 849,0,1448
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GAMIS:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: SAM Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 106
-        Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Air base defense.\n\nGood vs: Aircraft\n\nSpecial\n- Can attack Air\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1400
-    RevealsShroud:
-        Range: 9c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 150,0,-100
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-sam
-    Armament@SAM:
-        Weapon: SAMMissile
-        LocalOffset: 350,240,1224, 350,-240,1224
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-#    RenderDetectionCircle:
-#    DetectCloaked:
-#        Range: 6c0
-#        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-    
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: SAM Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 106
+		Prerequisites: anypower, garadr, ~structures.gdi
+		Description: Anti-Air base defense.\n\nGood vs: Aircraft\n\nSpecial\n- Can attack Air\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 9c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 150,0,-100
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-sam
+	Armament@SAM:
+		Weapon: SAMMissile
+		LocalOffset: 495,339,1731, 495,-339,1731
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GACAN:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Guardian Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 107
-        Prerequisites: anypower, garadr, ~structures.gdi
-        Description: Anti-Armor base defense with a railgun and HE grenades.\n\nGood vs: Vehicles\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1400
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 150,0,-100
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-rpg
-    Armament@cannon:
-        Weapon: 122mmAP
-        LocalOffset: 900,220,1000
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    # Armament@RPG:
-        # Weapon: GuardianTowerMissile
-        # LocalOffset: 200,-210,1000
-        # MuzzleSequence: muzzle
-        # MuzzlePalette: apolra50alpha
-        # Recoil: 50
-        # RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-    
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Guardian Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 107
+		Prerequisites: anypower, garadr, ~structures.gdi
+		Description: Anti-Armor base defense with a railgun and HE grenades.\n\nGood vs: Vehicles\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 8c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 150,0,-100
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-rpg
+	Armament@cannon:
+		Weapon: 122mmAP
+		LocalOffset: 1273,311,1414
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 50
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GAMORTAR:
-    Inherits: ^Defense
-    Inherits@2: ^GainsExperience
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-#    WithWallSpriteBody:
-#        Type: wall
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Howitzer Tower
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 109
-        Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.gdf
-        Description: Artillery base defense.\n\nGood vs: Ground Targets\n\nSpecial:\n- Can gain veterancy\n- Provides stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 1000
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: -100,0,200 # +| 
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret:
-        Recoils: True
-        Sequence: turret-mortar
-    Armament:
-        Weapon: HowitzerTurretGun
-        LocalOffset: 750,0,2000
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    WithMuzzleOverlay:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -50
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Defense
+	Inherits@2: ^GainsExperience
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Howitzer Tower
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 109
+		Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.gdf
+		Description: Artillery base defense.\n\nGood vs: Ground Targets\n\nSpecial:\n- Can gain veterancy\n- Provides stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: -100,0,200
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret:
+		Recoils: True
+		Sequence: turret-mortar
+	Armament:
+		Weapon: HowitzerTurretGun
+		LocalOffset: 1061,0,2828
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 50
+		RecoilRecovery: 10
+	WithMuzzleOverlay:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -50
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 FTWR:
-    Inherits: ^Defense
-    Inherits@2: ^GainsExperience
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Fortress Outpost
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-        Adjacent: 8
-    GivesBuildableArea:
-    Selectable:
-        Bounds: 48, 48, 0, -12
-    RequiresPower:
-    Health:
-        HP: 3000
-    RevealsShroud:
-        Range: 10c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    AutoTarget:
-    Turreted@cannon:
-        TurnSpeed: 6
-        Offset: 150,0,-100
-        InitialFacing: 85
-    Turreted@sensor:
-        Turret: secondary
-        TurnSpeed: 10
-        Offset: 170,0,200
-        InitialFacing: 85
-    AttackTurreted:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    WithSpriteTurret@cannon:
-        Recoils: True
-        Sequence: turret-cnnd
-    WithSpriteTurret@sensor:
-        Recoils: True
-        Sequence: turret-sensor
-        Turret: secondary
-    Armament@sensor:
-        Turret: secondary
-        Weapon: WatchSniper
-        LocalOffset: 600,0,1500
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    Armament@cannon1:
-        Weapon: FortressCannon
-        LocalOffset: 1200,240,1300
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@canno2:
-        Weapon: FortressCannon
-        LocalOffset: 1200,-240,1300
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-        FireDelay: 10
-    WithMuzzleOverlay:
-    LineBuildNode:
-        Types: turret
-    Power:
-        Amount: -100
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 8c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-    BaseProvider:
-        Range: 8c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-        
+	Inherits: ^Defense
+	Inherits@2: ^GainsExperience
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Fortress Outpost
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		Adjacent: 8
+	GivesBuildableArea:
+	Selectable:
+		Bounds: 48, 48, 0, -12
+	RequiresPower:
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 10c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+	Turreted@cannon:
+		TurnSpeed: 6
+		Offset: 150,0,-100
+		InitialFacing: 85
+	Turreted@sensor:
+		Turret: secondary
+		TurnSpeed: 10
+		Offset: 170,0,200
+		InitialFacing: 85
+	AttackTurreted:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	WithSpriteTurret@cannon:
+		Recoils: True
+		Sequence: turret-cnnd
+	WithSpriteTurret@sensor:
+		Recoils: True
+		Sequence: turret-sensor
+		Turret: secondary
+	Armament@sensor:
+		Turret: secondary
+		Weapon: WatchSniper
+		LocalOffset: 849,0,2121
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	Armament@cannon1:
+		Weapon: FortressCannon
+		LocalOffset: 1697,339,1838
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@canno2:
+		Weapon: FortressCannon
+		LocalOffset: 1697,-339,1838
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+		FireDelay: 10
+	WithMuzzleOverlay:
+	LineBuildNode:
+		Types: turret
+	Power:
+		Amount: -100
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	BaseProvider:
+		Range: 8c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	HitShape:
+
 GAFORT:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    WithSpriteBody:
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Fortress Garrison Bunker
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 108
-        Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
-        Description: Huge garrisonable defense.\n\nGood vs: Everything depending on garrisoned infantry\n\nSpecial:\n- Can garrison 12 infantry\n- Unarmed if empty\n- Provides stealth detection\n- Can operate without power\n
-    Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4,4
-    Selectable:
-        Bounds: 120, 90, 0, -12
-        Class: gafort
-    Health:
-        HP: 3000
-    RevealsShroud:
-        Range: 10c0
-#    RenderDetectionCircle:
-#    DetectCloaked:
-#        Range: 6c0
-    Turreted:
-        TurnSpeed: 255
-    -QuantizeFacingsFromSequence:
-    BodyOrientation:
-        QuantizedFacings: 8
-    Cargo:
-        MaxWeight: 12
-        PipCount: 12
-        Types: Infantry
-    AutoTarget:
-    AttackGarrisoned:
-        Armaments: garrisoned
-        PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
-        PortYaws: 0, 176, 341, 512, 682, 853
-        PortCones: 86, 86, 86, 86, 86, 86
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-    
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	WithSpriteBody:
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Fortress Garrison Bunker
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 108
+		Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf
+		Description: Huge garrisonable defense.\n\nGood vs: Everything depending on garrisoned infantry\n\nSpecial:\n- Can garrison 12 infantry\n- Unarmed if empty\n- Provides stealth detection\n- Can operate without power\n
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+	Selectable:
+		Bounds: 120, 90, 0, -12
+		Class: gafort
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		TurnSpeed: 255
+	-QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	Cargo:
+		MaxWeight: 12
+		PipCount: 12
+		Types: Infantry
+	AutoTarget:
+	AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 GAPLUG2:
-    Inherits: ^BuildingPlug
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Supply Node
-#    Buildable:
-#        Queue: Defense.GDI
-#        BuildPaletteOrder: 111
-#        Prerequisites: anypower, gaplug, ~structures.gdi
-#        Description: Enables use of the hunter-seeker droid.
-    Plug:
-        Type: plug.hunterseeker
-    Power:
-        Amount: -100
-    
+	Inherits: ^BuildingPlug
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Supply Node
+	Plug:
+		Type: plug.hunterseeker
+	Power:
+		Amount: -100
+
 GAPLUG3:
-    Inherits: ^BuildingPlug
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Ion Cannon Uplink
-#    Buildable:
-#        Queue: Defense.GDI
-#        BuildPaletteOrder: 112
-#        Description: Enables use of the Ion Cannon.
-#        Prerequisites: anypower, gaplug, ~structures.gdi, ~!upgrade.gdf
-    Plug:
-        Type: plug.ioncannon
-    Power:
-        Amount: -200
-        
+	Inherits: ^BuildingPlug
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Ion Cannon Uplink
+	Plug:
+		Type: plug.ioncannon
+	Power:
+		Amount: -200
+
 GAPLUG:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: GDI Upgrade Center
-    Selectable:
-        Bounds: 115,104,0,-24
-#    Buildable:
-#        BuildPaletteOrder: 112
-#        Prerequisites: anypower, gatech, ~structures.gdi, ~!upgrade.gdf
-#        Queue: Defense.GDI
-#		BuildLimit: 1
-#        Description: Can be upgraded for additional technology and superweapons.
-    Building:
-        Footprint: xxx xxx
-        Dimensions: 2,3
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    WithIdleOverlay@DISH:
-        Sequence: idle-dish
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithIdleOverlay@STRIP:
-        Sequence: idle-strip
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 2c0
-    IonCannonPower:
-        RequiresCondition: plug.ioncannona || plug.ioncannonb
-        Icon: ioncannon
-        Effect: ionring
-        WeaponDelay: 0
-        ChargeTime: 180
-        Description: Ion Cannon
-        LongDesc: Initiate an Ion Cannon strike which applies instant damage to a small area.
-        EndChargeSpeechNotification: IonCannonReady
-        SelectTargetSpeechNotification: SelectTarget
-        DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    Exit@1:
-    ExitsDebugOverlay:
-    SupportPowerChargeBar:
-    Power:
-        Amount: -100
-    Power@ioncannon:
-        RequiresCondition: plug.ioncannona || plug.ioncannonb
-        Amount: -100
-    Power@hunterseeker:
-        RequiresCondition: plug.hunterseekera || plug.hunterseekerb
-        Amount: -50
-    Pluggable@pluga:
-        Offset: 0,2
-        Conditions:
-            plug.ioncannon: plug.ioncannona
-            plug.hunterseeker: plug.hunterseekera
-    WithIdleOverlay@ioncannona:
-        RequiresCondition: plug.ioncannona
-        Sequence: idle-ioncannona
-    WithIdleOverlay@hunterseekera:
-        RequiresCondition: plug.hunterseekera
-        Sequence: idle-hunterseekera
-    Pluggable@plugb:
-        Offset: 1,2
-        Conditions:
-            plug.ioncannon: plug.ioncannonb
-            plug.hunterseeker: plug.hunterseekerb
-    WithIdleOverlay@ioncannonb:
-        RequiresCondition: plug.ioncannonb
-        Sequence: idle-ioncannonb
-    WithIdleOverlay@hunterseekerb:
-        RequiresCondition: plug.hunterseekerb
-        Sequence: idle-hunterseekerb
-    ProvidesPrerequisite@buildingname:
-    SelectionDecorations:
-        VisualBounds: 115,104,0,-24
-    -FrozenUnderFog:
-    AlwaysVisible:	
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: GDI Upgrade Center
+	Selectable:
+		Bounds: 115,104,0,-24
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@STRIP:
+		Sequence: idle-strip
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 2c0
+	IonCannonPower:
+		RequiresCondition: plug.ioncannona || plug.ioncannonb
+		Icon: ioncannon
+		Effect: ionring
+		WeaponDelay: 0
+		ChargeTime: 180
+		Description: Ion Cannon
+		LongDesc: Initiate an Ion Cannon strike which applies instant damage to a small area.
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	Exit@1:
+	ExitsDebugOverlay:
+	SupportPowerChargeBar:
+	Power:
+		Amount: -100
+	Power@ioncannon:
+		RequiresCondition: plug.ioncannona || plug.ioncannonb
+		Amount: -100
+	Power@hunterseeker:
+		RequiresCondition: plug.hunterseekera || plug.hunterseekerb
+		Amount: -50
+	Pluggable@pluga:
+		Offset: 0,2
+		Conditions:
+			plug.ioncannon: plug.ioncannona
+			plug.hunterseeker: plug.hunterseekera
+	WithIdleOverlay@ioncannona:
+		RequiresCondition: plug.ioncannona
+		Sequence: idle-ioncannona
+	WithIdleOverlay@hunterseekera:
+		RequiresCondition: plug.hunterseekera
+		Sequence: idle-hunterseekera
+	Pluggable@plugb:
+		Offset: 1,2
+		Conditions:
+			plug.ioncannon: plug.ioncannonb
+			plug.hunterseeker: plug.hunterseekerb
+	WithIdleOverlay@ioncannonb:
+		RequiresCondition: plug.ioncannonb
+		Sequence: idle-ioncannonb
+	WithIdleOverlay@hunterseekerb:
+		RequiresCondition: plug.hunterseekerb
+		Sequence: idle-hunterseekerb
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 115,104,0,-24
+	-FrozenUnderFog:
+	AlwaysVisible:
+	HitShape:

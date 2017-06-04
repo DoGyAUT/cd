@@ -1,523 +1,509 @@
 HUSK:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 300
-        Prerequisites: ~cybbar
-        Description: Cabals standard infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Husk
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: Husk
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Health:
-        HP: 400
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 6c0
-    Armament@PRIMARY:
-        Weapon: HuskGun
-        LocalOffset: 300,0,600
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: HuskGun
-        LocalOffset: 300,0,600
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 300
+		Prerequisites: ~cybbar
+		Description: Cabals standard infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Husk
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: Husk
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	Health:
+		HP: 400
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 6c0
+	Armament@PRIMARY:
+		Weapon: HuskGun
+		LocalOffset: 424,0,849
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: HuskGun
+		LocalOffset: 424,0,849
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
+	HitShape:
 
 HHUSK:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 301
-        Prerequisites: ~cybbar
-        Description: Cabals standard infantry production type.\n\nGood vs: Ground Targets\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
-    Valued:
-        Cost: 300
-    Tooltip:
-        Name: Cannon Husk
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: HHusk
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Health:
-        HP: 180
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 7c0
-    Armament@PRIMARY:
-        Weapon: CannonHuskGun
-        LocalOffset: 300,140,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: CannonHuskGun
-        LocalOffset: 300,140,768
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 301
+		Prerequisites: ~cybbar
+		Description: Cabals standard infantry production type.\n\nGood vs: Ground Targets\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Cannon Husk
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: HHusk
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	Health:
+		HP: 180
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 7c0
+	Armament@PRIMARY:
+		Weapon: CannonHuskGun
+		LocalOffset: 424,198,1086
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: CannonHuskGun
+		LocalOffset: 424,198,1086
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: husk_f1.aud, husk_f2.aud, husk_f3.aud, husk_f4.aud, husk_f5.aud
+	HitShape:
 
 CYBSPY:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 306
-        Prerequisites: ~cybbar, karadr
-        Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Informer
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-9
-        Class: Informer
-    Voiced:
-        VoiceSet: Ascentor
-        Volume: 4
-    Health:
-        HP: 300
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 10c0
-    WithInfantryBody:
-        IdleSequences: idle1,idle2,idle3
-    AttackFrontal:
-    -ProducibleWithLevel:
-#    Infiltrates:
-#        Types: SpyInfiltrate
-    -Cloak:
-    Cloak@self:
-        InitialDelay: 90
-        CloakDelay: 90
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-        IsPlayerPalette: true
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
-    SoundOnDamageTransition:
-        DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
-    
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 306
+		Prerequisites: ~cybbar, karadr
+		Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Informer
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-9
+		Class: Informer
+	Voiced:
+		VoiceSet: Ascentor
+		Volume: 4
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 10c0
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	AttackFrontal:
+	-ProducibleWithLevel:
+	-Cloak:
+	Cloak@self:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: StealthUnitDetected
+	SoundOnDamageTransition:
+		DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
+	HitShape:
+
 JAGUAR:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-#    Buildable:
-#        Queue: Infantry.Cabal
-#        BuildPaletteOrder: 304
-#        Prerequisites: ~cybbar
-#        Description: Role : Dog\nHP: 350\nArmor: Medium\nSpeed: 70\nViewrange: 10\nGood vs: Infantry\nUseless vs: Vehicles, Vtols, Jets, Bombers\n\nUpgrades: Reinforced Chassis, Alloyed Chassis, Nanomachines\nSpecial:\n - Stealth Detection
-    Valued:
-        Cost: 300
-    Tooltip:
-        Name: Devourer
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: 12,17,0,-9
-    Voiced:
-        VoiceSet: Jaguar
-    Health:
-        HP: 420
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 10c0
-    Armament@primary:
-        Name: Bite
-        Weapon: JaguarClaw
-    AttackFrontal:
-        Armaments: Bite
-    AttackFrontal:
-    IgnoresDisguise:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5c0
-    AutoTarget:
-        ScanRadius: 5
-    SoundOnDamageTransition:
-        DamagedSounds: jaguar_s1.aud, jaguar_s2.aud
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Devourer
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: 12,17,0,-9
+	Voiced:
+		VoiceSet: Jaguar
+	Health:
+		HP: 420
+	Mobile:
+		Speed: 50
+	RevealsShroud:
+		Range: 10c0
+	Armament@primary:
+		Name: Bite
+		Weapon: JaguarClaw
+	AttackFrontal:
+		Armaments: Bite
+	AttackFrontal:
+	IgnoresDisguise:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5c0
+	AutoTarget:
+		ScanRadius: 5
+	SoundOnDamageTransition:
+		DamagedSounds: jaguar_s1.aud, jaguar_s2.aud
+	HitShape:
 
 KENGINEER:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Ascentor
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 305
-        Prerequisites: ~cybbar
-        Description: Cabals tool cyborg.\n\nGood vs: Nothing\n\nSpecial:\n- Receives only 50% damage from fire\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Gets stunned by EMP\n- Crush class: Medium infantry
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Ascentor
-        Volume: 2
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 6c0
-    Health:
-        HP: 360
-    Passenger:
-        PipType: Yellow
-    EngineerRepair:
-    RepairsBridges:
-        RepairNotification: BridgeRepaired
-    ExternalCaptures:
-        Type: building
-        ConsumeActor: true
-        PlayerExperience: 50
-    -AutoTarget:
-    -ProducibleWithLevel:
-    SoundOnDamageTransition:
-        DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Ascentor
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 305
+		Prerequisites: ~cybbar
+		Description: Cabals tool cyborg.\n\nGood vs: Nothing\n\nSpecial:\n- Receives only 50% damage from fire\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Ascentor
+		Volume: 2
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 360
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+		RepairNotification: BridgeRepaired
+	ExternalCaptures:
+		Type: building
+		ConsumeActor: true
+		PlayerExperience: 50
+	-AutoTarget:
+	-ProducibleWithLevel:
+	SoundOnDamageTransition:
+		DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
+	HitShape:
 
 VANGUARD:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Vanguard
-    Selectable:
-        Bounds: 14,30,0,-7
-        Class: Vanguard
-    Voiced:
-        VoiceSet: CyborgL
-        Volume: 2
-    Mobile:
-        Speed: 40
-    Health:
-        HP: 390
-    RevealsShroud:
-        Range: 7c0
-    Armament@primary:
-        Weapon: VanguardGun
-        LocalOffset: 300,64,800
-    Armament@extrabullet1:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800
-    Armament@extrabullet2:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800
-    Armament@extrabullet3:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800        
-    Armament@extrabullet4:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800
-    Armament@extrabullet5:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800
-    Armament@extrabullet6:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800
-    Armament@extrabullet7:
-        Weapon: VanguardGun2
-        LocalOffset: 300,64,800    
-    AttackFrontal:
-    SoundOnDamageTransition:
-        DamagedSounds: cabal_f1.aud, cabal_f2.aud, cabal_f3.aud, cabal_f4.aud
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Vanguard
+	Selectable:
+		Bounds: 14,30,0,-7
+		Class: Vanguard
+	Voiced:
+		VoiceSet: CyborgL
+		Volume: 2
+	Mobile:
+		Speed: 40
+	Health:
+		HP: 390
+	RevealsShroud:
+		Range: 7c0
+	Armament@primary:
+		Weapon: VanguardGun
+		LocalOffset: 424,91,1131
+	Armament@extrabullet1:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet2:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet3:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet4:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet5:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet6:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	Armament@extrabullet7:
+		Weapon: VanguardGun2
+		LocalOffset: 424,91,1131
+	AttackFrontal:
+	SoundOnDamageTransition:
+		DamagedSounds: cabal_f1.aud, cabal_f2.aud, cabal_f3.aud, cabal_f4.aud
+	HitShape:
 
 OVERSEER:
-    Inherits@1: ^HeavyCyborg
-    Inherits@2: ^HuskUpgrades
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 306
-        Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Cabals advanced infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Buffs other cyborgs around him in accuracy and attackspeed\n- Provides stealth detection\n- Gets stunned by EMP\n- Crush class: Medium Infantry
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Overseer
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: Overseer
-    Voiced:
-        VoiceSet: Overseer
-        Volume: 2
-    Health:
-        HP: 720
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 6c0
-    Armament@PRIMARY:
-        Weapon: OverseerGun
-        LocalOffset: 300,0,525
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2,idle3
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    ProximityExternalCondition:
-        Condition: overseerboost
-        Range: 6c0
-    SoundOnDamageTransition:
-        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	Inherits@1: ^HeavyCyborg
+	Inherits@2: ^HuskUpgrades
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 306
+		Prerequisites: ~cybbar, karadr, ~!t1
+		Description: Cabals advanced infantry production type.\n\nGood vs: Infantry\n\nSpecial:\n- Receives only 50% damage from fire\n- Buffs other cyborgs around him in accuracy and attackspeed\n- Provides stealth detection\n- Gets stunned by EMP\n- Crush class: Medium Infantry
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Overseer
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: Overseer
+	Voiced:
+		VoiceSet: Overseer
+		Volume: 2
+	Health:
+		HP: 720
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 6c0
+	Armament@PRIMARY:
+		Weapon: OverseerGun
+		LocalOffset: 424,0,742
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	DetectCloaked:
+		Range: 6c0
+	RenderDetectionCircle:
+	ProximityExternalCondition:
+		Condition: overseerboost
+		Range: 6c0
+	SoundOnDamageTransition:
+		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	HitShape:
 
 CYBFLY:
-    Inherits@1: ^SoldierJumpjet
-    Inherits@2: ^HuskUpgrades
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Skirmisher
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 307
-        Prerequisites: ~cybbar, karadr, ~!t1
-        Description: Cabals infantry production type adjusted with jet packs and lasers.\n\nGood vs: Everything except jets\n\nSpecial:\n- Provides stealth detection\n- Flying
-    Selectable:
-        Bounds: 12,17,0,-14
-    Voiced:
-        VoiceSet: CyborgA
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 10
-        Speed: 170
-        AirborneCondition: airborne
-        CruisingCondition: cruising
-        LandWhenIdle: no
-        CruiseAltitude: 3072
-        CanHover: True
-        IdealSeparation: 512
-        AltitudeVelocity: 230
-    Hovers@CRUISING:
-        RequiresCondition: cruising
-    Health:
-        HP: 200
-    Armor@base:
-        Type: Aircraft
-    RevealsShroud:
-        Range: 10c0
-        Type: GroundPosition
-    Armament@primary:
-        Weapon: SkirmishLaserFire
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        LocalOffset: 400,64,600, 400,-64,600
-    -DamagedByTerrain@Tiberium:
-    -SpawnActorOnDeath@1:
-    -SpawnActorOnDeath@2:
-    -SpawnActorOnDeath@Corruptor:
-    -SpawnActorOnDeath@Infected:
-    AmmoPool:
-        Name:primary
-        Ammo: 20
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AttackHeli:
-        FacingTolerance: 20
-    WithInfantryBody:
-#        IdleSequences: idle1,idle2
-        StandSequence: stand-air
-        MoveSequence: fly
-        DefaultAttackSequence: shoot-air
-        IdleSequences: stand-air
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:    
-    BodyOrientation:
-    WithShadow:
-    # Contrail@1:
-        # Offset: -256,64,800
-        # TrailLength: 25
-        # TrailWidth: 25
-        # Color: 0080FF
-        # UsePlayerColor: True
-    # Contrail@2:
-        # Offset: -256,-64,800
-        # TrailLength: 25
-        # TrailWidth: 25
-        # Color: 0080FF
-        # UsePlayerColor: True
-    SoundOnDamageTransition:
-        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
-    -Passenger
-        
+	Inherits@1: ^SoldierJumpjet
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Skirmisher
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 307
+		Prerequisites: ~cybbar, karadr, ~!t1
+		Description: Cabals infantry production type adjusted with jet packs and lasers.\n\nGood vs: Everything except jets\n\nSpecial:\n- Provides stealth detection\n- Flying
+	Selectable:
+		Bounds: 12,17,0,-14
+	Voiced:
+		VoiceSet: CyborgA
+		Volume: 2
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 170
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+		LandWhenIdle: no
+		CruiseAltitude: 3072
+		CanHover: True
+		IdealSeparation: 512
+		AltitudeVelocity: 230
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	Health:
+		HP: 200
+	Armor@base:
+		Type: Aircraft
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Armament@primary:
+		Weapon: SkirmishLaserFire
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 566,91,849, 566,-91,849
+	-DamagedByTerrain@Tiberium:
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@Corruptor:
+	-SpawnActorOnDeath@Infected:
+	AmmoPool:
+		Name: primary
+		Ammo: 20
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 5
+	AttackHeli:
+		FacingTolerance: 20
+	WithInfantryBody:
+		StandSequence: stand-air
+		MoveSequence: fly
+		DefaultAttackSequence: shoot-air
+		IdleSequences: stand-air
+	DetectCloaked:
+		Range: 6c0
+	RenderDetectionCircle:
+	BodyOrientation:
+	WithShadow:
+	SoundOnDamageTransition:
+		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	-Passenger:
+	HitShape:
+
 CYC2:
-    Inherits@1: ^HeavyCyborg
-    Inherits@2: ^HuskUpgrades
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Cabal Commando
-    Buildable:
-        Queue: Infantry.Cabal
-        BuildPaletteOrder: 308
-        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2
-        Description: Cabals advanced heavy infantry production type.\n\nGood vs: Ground Units\n\nSpecial:\n- Receives only 50% damage from fire\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Medium infantry
-    Selectable:
-        Bounds: 24,34,0,-9
-        Class: CYC2
-    Voiced:
-        VoiceSet: CyborgA
-        Volume: 2
-    Mobile:
-        Speed: 40
-        SharesCell: False
-    Health:
-        HP: 1040
-    RevealsShroud:
-        Range: 8c0
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 3
-        HealIfBelow: 100
-        DamageCooldown: 200
-#    Armament@Laser1:
-#        Weapon: CommandoLaserFire
-#        LocalOffset: 180,100,640
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: effect50alpha
-    Armament@Laser2:
-        Weapon: CyborgCommandoPlasma
-        LocalOffset: 180,100,640
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	Inherits@1: ^HeavyCyborg
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Cabal Commando
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 308
+		Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2
+		Description: Cabals advanced heavy infantry production type.\n\nGood vs: Ground Units\n\nSpecial:\n- Receives only 50% damage from fire\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	Selectable:
+		Bounds: 24,34,0,-9
+		Class: CYC2
+	Voiced:
+		VoiceSet: CyborgA
+		Volume: 2
+	Mobile:
+		Speed: 40
+		SharesCell: False
+	Health:
+		HP: 1040
+	RevealsShroud:
+		Range: 8c0
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 100
+		DamageCooldown: 200
+	Armament@Laser2:
+		Weapon: CyborgCommandoPlasma
+		LocalOffset: 255,141,905
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	HitShape:
 
 GLAD:
-    Inherits@1: ^HeavyCyborg
-    Valued:
-        Cost: 6000
-    Tooltip:
-        Name: Harbinger
-    Buildable:
-        Queue: Infantry.Cabal 
-        BuildPaletteOrder: 309
-        BuildLimit: 1
-        Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3, ~!glad
-        Description: Cabals heroic cyborg that announces his masters presence.\n\nGood vs: Everything\n\nSpecial:\n- Receives only 50% damage from fire\n- Provides stealth detection\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Heavy infantry
-    Selectable:
-        Bounds: 24,34,0,-9
-        Class: GLAD
-    Voiced:
-        VoiceSet: CyborgA
-        Volume: 2
-    Mobile:
-        Speed: 40
-        SharesCell: False
-    Health:
-        HP: 5000
-    RevealsShroud:
-        Range: 11c0
-    Armament@Plasma1:
-        Weapon: HarbringerGun
-        LocalOffset: 170,200,683
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@Plasma2:
-        Weapon: HarbringerGun
-        LocalOffset: 170,-200,683
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@AutoPlasma:
-        Weapon: HarbingerMachal
-        LocalOffset: 170,200,683, 170,-200,683
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-     Armament@laserA:
-        Weapon: HarbingerLaserFire
-        LocalOffset: 0,-64,1024
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-    WithMuzzleOverlay:
-    SelfHealing:
-        Step: 2
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 100
-        DamageCooldown: 200
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-    SoundOnDamageTransition:
-        DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
-    -Crushable:
+	Inherits@1: ^HeavyCyborg
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: Harbinger
+	Buildable:
+		Queue: Infantry.Cabal
+		BuildPaletteOrder: 309
+		BuildLimit: 1
+		Prerequisites: ~cybbar, kabtech, ~!t1, ~!t2, ~!t3, ~!glad
+		Description: Cabals heroic cyborg that announces his masters presence.\n\nGood vs: Everything\n\nSpecial:\n- Receives only 50% damage from fire\n- Provides stealth detection\n- Selfhealing\n- Gets stunned by EMP\n- Crush class: Heavy infantry
+	Selectable:
+		Bounds: 24,34,0,-9
+		Class: GLAD
+	Voiced:
+		VoiceSet: CyborgA
+		Volume: 2
+	Mobile:
+		Speed: 40
+		SharesCell: False
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 11c0
+	Armament@Plasma1:
+		Weapon: HarbringerGun
+		LocalOffset: 240,283,966
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@Plasma2:
+		Weapon: HarbringerGun
+		LocalOffset: 240,-283,966
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@AutoPlasma:
+		Weapon: HarbingerMachal
+		LocalOffset: 240,283,966, 240,-283,966
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@laserA:
+		Weapon: HarbingerLaserFire
+		LocalOffset: 0,-91,1448
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+	WithMuzzleOverlay:
+	SelfHealing:
+		Step: 2
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	SoundOnDamageTransition:
+		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
+	-Crushable:
+	HitShape:
 
 KAMIKAZE:
-    Inherits@1: ^Cyborg
-    Inherits@2: ^HuskUpgrades
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Headless Kamikaze
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Husk
-        Volume: 1
-    Health:
-        HP: 100
-    Mobile:
-        Speed: 40
-    RevealsShroud:
-        Range: 10c0
-    Armament@primary:
-        Weapon: FanticBoom
-    AttackFrontal:
-    Explodes:
-        Weapon: FanticBoomExplosion
-    WithDeathAnimation@normal:
-        DeathSequencePalette: effect
-        DeathPaletteIsPlayerPalette: False
-        DeathTypes:
-            BulletDeath: 1
-            SmallExplosionDeath: 2
-            HeadshotDeath: 3 #not used by any warhead; TODO: check what should use this type and add it!
-            FireDeath: 5
-    WithDeathAnimation@explosion:
-        DeathSequencePalette: effect
-        DeathPaletteIsPlayerPalette: False
-        DeathTypes:
-            ExplosionDeath: 4
-    WithDeathAnimation@energy:
-        DeathSequencePalette: ra
-        DeathPaletteIsPlayerPalette: False
-        DeathTypes:
-            EnergyDeath: 6
-    RenderSprites:
-        Scale: 0.8      
+	Inherits@1: ^Cyborg
+	Inherits@2: ^HuskUpgrades
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Headless Kamikaze
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Husk
+		Volume: 1
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 40
+	RevealsShroud:
+		Range: 10c0
+	Armament@primary:
+		Weapon: FanticBoom
+	AttackFrontal:
+	Explodes:
+		Weapon: FanticBoomExplosion
+	WithDeathAnimation@normal:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 2
+			HeadshotDeath: 3
+			FireDeath: 5
+	WithDeathAnimation@explosion:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			ExplosionDeath: 4
+	WithDeathAnimation@energy:
+		DeathSequencePalette: ra
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			EnergyDeath: 6
+	RenderSprites:
+		Scale: 0.8
+	HitShape:

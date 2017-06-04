@@ -1,71 +1,72 @@
 GADPSA:
-    Inherits: ^Building
-    Valued:
-        Cost: 950
-    Tooltip:
-        Name: Deployed Sensor Array
-    -GivesBuildableArea:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 8c0
-    Transforms:
-        IntoActor: lpst
-        Facing: 159
-        TransformSounds: place2.aud
-        NoTransformSounds:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6
-    -WithDeathAnimation:
-    
+	Inherits: ^Building
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Deployed Sensor Array
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: lpst
+		Facing: 159
+		TransformSounds: place2.aud
+		NoTransformSounds:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6
+	-WithDeathAnimation:
+	HitShape:
+
 GAFORT1:
-    Inherits: GAFORT
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: GAFORT
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 108
-        Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
-        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
-    Cargo:
-        MaxWeight: 12
-        PipCount: 12
-        Types: Infantry
-        InitialUnits: gasol, gasol, gasol, gasol, gasol, gasol, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf
-    
+	Inherits: GAFORT
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: GAFORT
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 108
+		Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
+		Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+	Cargo:
+		MaxWeight: 12
+		PipCount: 12
+		Types: Infantry
+		InitialUnits: gasol, gasol, gasol, gasol, gasol, gasol, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf
+
 GAFORT2:
-    Inherits: GAFORT
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: GAFORT
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 108
-        Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
-        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
-    Cargo:
-        MaxWeight: 12
-        PipCount: 12
-        Types: Infantry
-        InitialUnits: gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol
-    
+	Inherits: GAFORT
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: GAFORT
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 108
+		Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
+		Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+	Cargo:
+		MaxWeight: 12
+		PipCount: 12
+		Types: Infantry
+		InitialUnits: gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol, gasol
+
 GAFORT3:
-    Inherits: GAFORT
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: GAFORT
-    Buildable:
-        Queue: Defense.GDI
-        BuildPaletteOrder: 108
-        Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
-        Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
-    Cargo:
-        MaxWeight: 12
-        PipCount: 12
-        Types: Infantry
-        InitialUnits: gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf
+	Inherits: GAFORT
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: GAFORT
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 108
+		Prerequisites: anypower, gaarmory, gapile, ~structures.gdi, ~upgrade.gdf, ~gafortAI
+		Description: Huge garrisonable defense.\nGDF exclusive defense.\nAlready premounted with five Marines and fife Disc Throwers.\nRequires no power to operate.\nDetects cloaked units.\n\n  Strong vs Infantry, Light armor \n  Weak vs Aircraft, Artillery
+	Cargo:
+		MaxWeight: 12
+		PipCount: 12
+		Types: Infantry
+		InitialUnits: gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf, gmisinf

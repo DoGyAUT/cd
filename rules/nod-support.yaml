@@ -1,586 +1,578 @@
 NAWALL:
-    Inherits: ^Wall
-    Buildable:
-        Queue: Defense.Nod
-        BuildPaletteOrder: 200
-        Prerequisites: ~structures.nod, ~ideology
-        Description: Stops infantry and blocks enemy fire.
-    SoundOnDamageTransition:
-    Valued:
-        Cost: 100
-    CustomSellValue:
-        Value: 0
-    Tooltip:
-        Name: Concrete Wall
-    Health:
-        HP: 400
-    BlocksProjectiles:
-        Height: 640
-    Crushable:
-        CrushClasses: heavywall
-    LineBuild:
-        NodeTypes: wall, turret
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense.Nod
+		BuildPaletteOrder: 200
+		Prerequisites: ~structures.nod, ~ideology
+		Description: Stops infantry and blocks enemy fire.
+	SoundOnDamageTransition:
+	Valued:
+		Cost: 100
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	Health:
+		HP: 400
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+	HitShape:
 
 NAGATE_A:
-    Inherits: ^Gate_A
-    Buildable:
-        Queue: Defense.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ~structures.nod, ~ideology
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Nod Gate
+	Inherits: ^Gate_A
+	Buildable:
+		Queue: Defense.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ~structures.nod, ~ideology
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Nod Gate
 
 NAGATE_B:
-    Inherits: ^Gate_B
-    Buildable:
-        Queue: Defense.Nod
-        BuildPaletteOrder: 202
-        Prerequisites: ~structures.nod, ~ideology
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Nod Gate
+	Inherits: ^Gate_B
+	Buildable:
+		Queue: Defense.Nod
+		BuildPaletteOrder: 202
+		Prerequisites: ~structures.nod, ~ideology
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Nod Gate
 
 NASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Defense.Nod
-        BuildPaletteOrder: 203
-        Prerequisites: nproc, ~structures.nod, ~ideology
-        Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
-
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Nod Silo
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-#    WithSiloAnimation:
-    WithIdleOverlay@lights:
-        Sequence: idle-lights
-    WithIdleOverlay@claw:
-        Sequence: idle-claw
-    WithIdleOverlay@glas:
-        Sequence: idle-glas
-    StoresResources:
-        PipColor: Green
-        PipCount: 10
-        Capacity: 1500
-    Power:
-        Amount: -10
-    # Explodes:
-        # Weapon: TiberiumExplosionSilo
-        # EmptyWeapon: TiberiumExplosionSilo
+	Inherits: ^BuildingInfiltrate
+	Buildable:
+		Queue: Defense.Nod
+		BuildPaletteOrder: 203
+		Prerequisites: nproc, ~structures.nod, ~ideology
+		Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Nod Silo
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 4c0
+	RenderSprites:
+	WithSpriteBody:
+	WithIdleOverlay@lights:
+		Sequence: idle-lights
+	WithIdleOverlay@claw:
+		Sequence: idle-claw
+	WithIdleOverlay@glas:
+		Sequence: idle-glas
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 1500
+	Power:
+		Amount: -10
+	HitShape:
 
 NAFLAMER:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Flame Turret
-    Buildable:
-        Queue: Defense.Nod
-        Prerequisites: anypower, nahand, ~structures.nod, ~ideology, ~!industry
-        BuildPaletteOrder: 203
-        Description: Anti-Infantry base defense.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Provides stealth detection\n- Stealth Emitter (Technology)\n- Blue Hell Inferno (Propaganda)\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 40, 36, -3, -8
-    RequiresPower:
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 6c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    RenderRangeCircle:
-    Turreted:
-        TurnSpeed: 10
-        InitialFacing: 85
-    AttackTurreted:
-    Armament@right: 
-        Weapon: FlamerTurretFireballLauncher
-        LocalOffset: 700,180,650
-        RequiresCondition: !upgrade.bluehell
-    Armament@left: 
-        Weapon: FlamerTurretFireballLauncher
-        LocalOffset: 700,-180,650
-        RequiresCondition: !upgrade.bluehell
-    Armament@upgrade1: 
-        Weapon: FlamerTurretBlueFireballLauncher
-        LocalOffset: 700,180,650
-        RequiresCondition: upgrade.bluehell
-    Armament@upgrade2: 
-        Weapon: FlamerTurretBlueFireballLauncher
-        LocalOffset: 700,-180,650
-        RequiresCondition: upgrade.bluehell
-    Targetable:
-        TargetTypes: Ground, Building, C4
-    AutoTarget:
-    Power:
-        Amount: -50    
-    WithSpriteTurret:
-        Recoils: False
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth    
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.bluehell
-        Prerequisites: upgrade.bluehell    
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Flame Turret
+	Buildable:
+		Queue: Defense.Nod
+		Prerequisites: anypower, nahand, ~structures.nod, ~ideology, ~!industry
+		BuildPaletteOrder: 203
+		Description: Anti-Infantry base defense.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Provides stealth detection\n- Stealth Emitter (Technology)\n- Blue Hell Inferno (Propaganda)\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 40, 36, -3, -8
+	RequiresPower:
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 6c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 85
+	AttackTurreted:
+	Armament@right:
+		Weapon: FlamerTurretFireballLauncher
+		LocalOffset: 990,255,919
+		RequiresCondition: !upgrade.bluehell
+	Armament@left:
+		Weapon: FlamerTurretFireballLauncher
+		LocalOffset: 990,-255,919
+		RequiresCondition: !upgrade.bluehell
+	Armament@upgrade1:
+		Weapon: FlamerTurretBlueFireballLauncher
+		LocalOffset: 990,255,919
+		RequiresCondition: upgrade.bluehell
+	Armament@upgrade2:
+		Weapon: FlamerTurretBlueFireballLauncher
+		LocalOffset: 990,-255,919
+		RequiresCondition: upgrade.bluehell
+	Targetable:
+		TargetTypes: Ground, Building, C4
+	AutoTarget:
+	Power:
+		Amount: -50
+	WithSpriteTurret:
+		Recoils: False
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.bluehell
+		Prerequisites: upgrade.bluehell
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	HitShape:
 
 NAGAT:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Gattling Cannon
-    Buildable:
-        Queue: Defense.Nod
-        Prerequisites: anypower, nahand, ~structures.nod, ~industry
-        BuildPaletteOrder: 203
-        Description: Anti-Infantry and Anti-Air base defense for Industry Nod.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot against ground and air\n- Provides stealth detection\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 40, 36, -3, -8
-    RequiresPower:
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    RenderRangeCircle:
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        InitialFacing: 85
-    AttackTurreted:
-    WithSpriteTurret:
-        Recoils: True
-    Armament@1: 
-        Weapon: GattlingCannonAttack
-        LocalOffset: 700,180,650, 700,-180,650
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 5
-    Armament@2: 
-        Weapon: GattlingCannonVisual
-        LocalOffset: 700,180,650, 700,-180,650
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 50
-        RecoilRecovery: 5
-    Power:
-        Amount: -50
-    WithMuzzleOverlay:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
-    
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Gattling Cannon
+	Buildable:
+		Queue: Defense.Nod
+		Prerequisites: anypower, nahand, ~structures.nod, ~industry
+		BuildPaletteOrder: 203
+		Description: Anti-Infantry and Anti-Air base defense for Industry Nod.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot against ground and air\n- Provides stealth detection\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 40, 36, -3, -8
+	RequiresPower:
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 8c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 85
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: True
+	Armament@1:
+		Weapon: GattlingCannonAttack
+		LocalOffset: 990,255,919, 990,-255,919
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 50
+		RecoilRecovery: 5
+	Armament@2:
+		Weapon: GattlingCannonVisual
+		LocalOffset: 990,255,919, 990,-255,919
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 50
+		RecoilRecovery: 5
+	Power:
+		Amount: -50
+	WithMuzzleOverlay:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 NALASR:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Laser Turret
-    Buildable:
-        Queue: Defense.Nod
-        Prerequisites: anypower, naradr, ~structures.nod, ~ideology
-        BuildPaletteOrder: 204
-        Description: Advanced base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Stealth Emitter (Technology)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 40, 36, -8, -8
-    RequiresPower:
-    Health:
-        HP: 1800
-    RevealsShroud:
-        Range: 9c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    RenderRangeCircle:
-    RenderDetectionCircle:
-        DrawUpdateLine: True
-    Turreted:
-        TurnSpeed: 6
-        InitialFacing: 85
-    AttackTurreted:
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
-    GrantConditionOnPrerequisite@upgrade3:
-        Condition: upgrade.tiblaser
-        Prerequisites: upgrade.tiblaser 
-    Armament@default: 
-        Weapon: LaserTurretLaser
-        LocalOffset: 900,0,625
-        RequiresCondition: upgrade.laser || !upgrade.tiblaser
-    Armament@laser:
-        Weapon: LaserTurretLaserUpgraded
-        LocalOffset: 900,0,625
-        RequiresCondition: upgrade.laser && !upgrade.tiblaser
-    Armament@tiblaser: 
-        Weapon: LaserTurretTibLaser
-        LocalOffset: 900,0,625
-        RequiresCondition: upgrade.tiblaser && !upgrade.laser
-    WithSpriteTurret:
-        Recoils: False
-    AutoTarget:
-    Power:
-        Amount: -100
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-        
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Laser Turret
+	Buildable:
+		Queue: Defense.Nod
+		Prerequisites: anypower, naradr, ~structures.nod, ~ideology
+		BuildPaletteOrder: 204
+		Description: Advanced base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Stealth Emitter (Technology)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 40, 36, -8, -8
+	RequiresPower:
+	Health:
+		HP: 1800
+	RevealsShroud:
+		Range: 9c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+	RenderDetectionCircle:
+		DrawUpdateLine: True
+	Turreted:
+		TurnSpeed: 6
+		InitialFacing: 85
+	AttackTurreted:
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.laser
+		Prerequisites: upgrade.laser
+	GrantConditionOnPrerequisite@upgrade3:
+		Condition: upgrade.tiblaser
+		Prerequisites: upgrade.tiblaser
+	Armament@default:
+		Weapon: LaserTurretLaser
+		LocalOffset: 1273,0,884
+		RequiresCondition: upgrade.laser || !upgrade.tiblaser
+	Armament@laser:
+		Weapon: LaserTurretLaserUpgraded
+		LocalOffset: 1273,0,884
+		RequiresCondition: upgrade.laser && !upgrade.tiblaser
+	Armament@tiblaser:
+		Weapon: LaserTurretTibLaser
+		LocalOffset: 1273,0,884
+		RequiresCondition: upgrade.tiblaser && !upgrade.laser
+	WithSpriteTurret:
+		Recoils: False
+	AutoTarget:
+	Power:
+		Amount: -100
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	HitShape:
+
 NASAM:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: SAM Site
-    Buildable:
-        Queue: Defense.Nod
-        Prerequisites: anypower, naradr, ~structures.nod, ~ideology, ~!industry
-        BuildPaletteOrder: 205
-        Description: Anti-Air base defense for Technology and Propaganda Nod.\n\nGood vs: Air\n\nSpecial:\n- Can only shoot against air\n- Stealth Emitter (Technology)\n- Requires power to operate
-    Building:
-    Selectable:
-        Bounds: 40, 36, -3, -8
-    RequiresPower:
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 9c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    RenderRangeCircle:
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        InitialFacing: 85
-    AttackTurreted:
-    WithSpriteTurret:
-        Recoils: True
-    Armament@normal:
-        Weapon: SAMSiteMissile
-        LocalOffset: 400,0,900
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-        RequiresCondition: !industry
-    Power:
-        Amount: -50
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth    
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: industry
-        Prerequisites: industry   
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-    WithMuzzleOverlay:
-#    RenderDetectionCircle:
-#    DetectCloaked:
-#        Range: 6c0
-#        CloakTypes: Cloak, Underground
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		Queue: Defense.Nod
+		Prerequisites: anypower, naradr, ~structures.nod, ~ideology, ~!industry
+		BuildPaletteOrder: 205
+		Description: Anti-Air base defense for Technology and Propaganda Nod.\n\nGood vs: Air\n\nSpecial:\n- Can only shoot against air\n- Stealth Emitter (Technology)\n- Requires power to operate
+	Building:
+	Selectable:
+		Bounds: 40, 36, -3, -8
+	RequiresPower:
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 9c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 85
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: True
+	Armament@normal:
+		Weapon: SAMSiteMissile
+		LocalOffset: 566,0,1273
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+		RequiresCondition: !industry
+	Power:
+		Amount: -50
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: industry
+		Prerequisites: industry
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+	WithMuzzleOverlay:
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 NABUNKER:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Nod Bunker
-    Building:
-    Selectable:
-        Bounds: 40, 36, -3, -8
-    Health:
-        HP: 1300
-    RevealsShroud:
-        Range: 10c0
-    RenderRangeCircle:
-    Cargo:
-        Types: Infantry
-        MaxWeight: 6
-        EjectOnDeath: True
-    AttackGarrisoned:
-        PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
-        PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
-        PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
-    Targetable:
-        TargetTypes: Ground, Building, C4, Flameproof
-    AutoTarget:
-    Power:
-        Amount: 0
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Nod Bunker
+	Building:
+	Selectable:
+		Bounds: 40, 36, -3, -8
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 10c0
+	RenderRangeCircle:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		EjectOnDeath: True
+	AttackGarrisoned:
+		PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+		PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
+	Targetable:
+		TargetTypes: Ground, Building, C4, Flameproof
+	AutoTarget:
+	Power:
+		Amount: 0
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	HitShape:
 
 NAOBEL:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Obelisk of Light
-    Buildable:
-        Queue: Defense.Nod
-        BuildPaletteOrder: 206
-        Prerequisites: anypower, napyra, ~structures.nod, ~ideology
-        Description: High Tech base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 88, 130, 0, -36
-    RequiresPower:
-    Health:
-        HP: 3000
-    RevealsShroud:
-        Range: 10c0
-    Armament@normalA:
-        Weapon: ObeliskLaser
-        LocalOffset: 3150,-450,800
-        RequiresCondition: !upgrade.tiblaser || !upgrade.laser
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@tibA:
-        Weapon: ObeliskLaserTib
-        LocalOffset: 3150,-450,800
-        RequiresCondition: upgrade.tiblaser && !upgrade.laser
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@upgradeA:
-        Weapon: ObeliskLaserUpgraded
-        LocalOffset: 3150,-450,800
-        RequiresCondition: upgrade.laser && !upgrade.tiblaser
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackCharges:
-        ChargeLevel: 70
-        ChargingCondition: charging
-    AmbientSound:
-        RequiresCondition: charging
-        SoundFiles: obelcharge01.aud
-        Interval: 70
-    WithChargeOverlay:
-        Sequence: active
-        Palette: player
-        IsPlayerPalette: True
-    AutoTarget:
-    RenderRangeCircle:
-    WithIdleOverlayAS@LIGHTS:
-        RequiresCondition: !charging
-        PauseOnLowPower: True
-        Image: naobel
-        Sequence: idle-lights
-    Power:
-        Amount: -150
-    WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@tiblaser:
-        Condition: upgrade.tiblaser
-        Prerequisites: upgrade.tiblaser
-    GrantConditionOnPrerequisite@laser:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Obelisk of Light
+	Buildable:
+		Queue: Defense.Nod
+		BuildPaletteOrder: 206
+		Prerequisites: anypower, napyra, ~structures.nod, ~ideology
+		Description: High Tech base defense.\n\nGood vs: Ground\n\nSpecial:\n- Provides stealth detection\n- Tiberium Weapons Research (Industry)\n- Improved Laser Emitter (Technology)\n- Requires power to operate
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 130, 0, -36
+	RequiresPower:
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 10c0
+	Armament@normalA:
+		Weapon: ObeliskLaser
+		LocalOffset: 4455,-636,1131
+		RequiresCondition: !upgrade.tiblaser || !upgrade.laser
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@tibA:
+		Weapon: ObeliskLaserTib
+		LocalOffset: 4455,-636,1131
+		RequiresCondition: upgrade.tiblaser && !upgrade.laser
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@upgradeA:
+		Weapon: ObeliskLaserUpgraded
+		LocalOffset: 4455,-636,1131
+		RequiresCondition: upgrade.laser && !upgrade.tiblaser
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	AttackCharges:
+		ChargeLevel: 70
+		ChargingCondition: charging
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: obelcharge01.aud
+		Interval: 70
+	WithChargeOverlay:
+		Sequence: active
+		Palette: player
+		IsPlayerPalette: True
+	AutoTarget:
+	RenderRangeCircle:
+	WithIdleOverlayAS@LIGHTS:
+		RequiresCondition: !charging
+		Image: naobel
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	WithMuzzleOverlay:
+	GrantConditionOnPrerequisite@tiblaser:
+		Condition: upgrade.tiblaser
+		Prerequisites: upgrade.tiblaser
+	GrantConditionOnPrerequisite@laser:
+		Condition: upgrade.laser
+		Prerequisites: upgrade.laser
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+		CloakTypes: Cloak, Underground
+	HitShape:
 
 NAPULS:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: E.M. Pulse Cannon
-    Buildable:
-        Queue: Defense.Nod
-        BuildLimit: 1
-        BuildPaletteOrder: 207
-        Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
-        Description: Technology Nod´s building to unlock the EMP Barrage ability.\n\nSpecial:\n- Fires a pulse blast which disables all mechanical units in the area\n- Requires power to operate
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 78, 54, 0, -12
-    RequiresPower:
-    Health:
-        HP: 2600
-    RevealsShroud:
-        Range: 4c0
-    Turreted:
-        TurnSpeed: 10
-        InitialFacing: 300
-    AttackTurreted:
-    AttackSounds:
-        Sounds: hunter2.aud
-    Armament:
-        Name: superweapon
-        Weapon: EMPulseCannon
-        LocalOffset: 150,0,1250
-        LocalYaw: 0,100
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    -AutoTarget:
-    RenderRangeCircle:
-    WithSpriteTurret:
-        Sequence: turret
-    Power:
-        Amount: -150
-    WithMuzzleOverlay:
-    ProvidesPrerequisite@buildingname:
-    RejectsOrders:
-        Except: Stop, Sell
-    FireArmamentPower@NodempPower:
-        OrderName: NodempPowerInfoOrder 
-        ArmamentName: superweapon
-        Cursor: emp
-        Icon: emp
-        ChargeTime: 150
-        Description: E.M. Pulse
-        LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
-        EndChargeSpeechNotification: EmPulseCannonReady
-        SelectTargetSpeechNotification: SelectTarget
-        AllowMultiple: false
-#        MaximumFiringInstances: 2
-#        BeaconPosterPalette: iconclock
-        
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: E.M. Pulse Cannon
+	Buildable:
+		Queue: Defense.Nod
+		BuildLimit: 1
+		BuildPaletteOrder: 207
+		Prerequisites: anypower, naradr, ~technology, ~ideology, ~structures.nod
+		Description: Technology Nod´s building to unlock the EMP Barrage ability.\n\nSpecial:\n- Fires a pulse blast which disables all mechanical units in the area\n- Requires power to operate
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 78, 54, 0, -12
+	RequiresPower:
+	Health:
+		HP: 2600
+	RevealsShroud:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 300
+	AttackTurreted:
+	AttackSounds:
+		Sounds: hunter2.aud
+	Armament:
+		Name: superweapon
+		Weapon: EMPulseCannon
+		LocalOffset: 212,0,1768
+		LocalYaw: 0,100
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	-AutoTarget:
+	RenderRangeCircle:
+	WithSpriteTurret:
+		Sequence: turret
+	Power:
+		Amount: -150
+	WithMuzzleOverlay:
+	ProvidesPrerequisite@buildingname:
+	RejectsOrders:
+		Except: Stop, Sell
+	FireArmamentPower@NodempPower:
+		OrderName: NodempPowerInfoOrder
+		ArmamentName: superweapon
+		Cursor: emp
+		Icon: emp
+		ChargeTime: 150
+		Description: E.M. Pulse
+		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSpeechNotification: EmPulseCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		AllowMultiple: false
+	HitShape:
+
 NAMISL:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-#    Buildable:
-#        Queue: Defense.Nod
-#        BuildPaletteOrder: 212
-#        Prerequisites: anypower, napyra, ~structures.nod, ~industry, ~ideology
-#        BuildLimit: 1
-#        Description: Launches a devastating missile at a target location.\nRequires power to operate.
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: Nod Missile Silo
-    ProvidesPrerequisite:
-        Prerequisite: tech
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 75,48
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 2c0
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    Power:
-        Amount: -150
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    RequiresPower:
-    ProvidesPrerequisite@buildingname:
-    SupportPowerChargeBar:
-    NukePower:
-        Icon: clustermissile
-        OrderName: NukePowerInfoOrder
-        ChargeTime: 360
-        Description: Cluster Missile
-        LongDesc: Launches a conventional warhead\nat a target location.
-        MissilePalette: player
-        IsPlayerPalette: True
-        EndChargeSpeechNotification: ClusterMissileReady
-        SelectTargetSpeechNotification: SelectTarget
-        IncomingSpeechNotification: MissileLaunchDetected
-        LaunchSound: icbm1.aud
-        MissileWeapon: ClusterMissile
-        SpawnOffset: 0,427,0
-        DisplayTimerStances: None
-        DisplayBeacon: True
-        DisplayRadarPing: True
-        BeaconPoster:
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    -FrozenUnderFog:
-    AlwaysVisible:
-    
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Nod Missile Silo
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 75,48
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 2c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	RequiresPower:
+	ProvidesPrerequisite@buildingname:
+	SupportPowerChargeBar:
+	NukePower:
+		Icon: clustermissile
+		OrderName: NukePowerInfoOrder
+		ChargeTime: 360
+		Description: Cluster Missile
+		LongDesc: Launches a conventional warhead\nat a target location.
+		MissilePalette: player
+		IsPlayerPalette: True
+		EndChargeSpeechNotification: ClusterMissileReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		LaunchSound: icbm1.aud
+		MissileWeapon: ClusterMissile
+		SpawnOffset: 0,427,0
+		DisplayTimerStances: None
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster:
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	-FrozenUnderFog:
+	AlwaysVisible:
+	HitShape:
+
 NASTLH:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Stealth Generator
-    Buildable:
-        BuildPaletteOrder: 210
-        Prerequisites: anypower, napyra, ~structures.nod, ~technology, ~ideology
-        Description: Generates a cloaking field to hide your forces from the enemy. Exclusive to the Technology Ideology.
-        Queue: Defense.Nod
-    Building:
-        Footprint: xxxxx xxxxx
-        Dimensions: 5,2
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 4c0
-    WithIdleOverlay@pulse:
-        Sequence: pulse
-        PauseOnLowPower: True
-    WithRangeCircle:
-        Range: 12c0
-        Type: cloakgenerator
-    Power:
-        Amount: -150
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    ProximityExternalCondition:
-        Condition: cloakgenerator
-        Range: 12c0
-        EnableSound: stealth01.aud
-        DisableSound: unstealth01.aud
-        AffectsParent: True
-    Selectable:
-        Bounds: 106, 60, 8, -15
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stealth Generator
+	Buildable:
+		BuildPaletteOrder: 210
+		Prerequisites: anypower, napyra, ~structures.nod, ~technology, ~ideology
+		Description: Generates a cloaking field to hide your forces from the enemy. Exclusive to the Technology Ideology.
+		Queue: Defense.Nod
+	Building:
+		Footprint: xxxxx xxxxx
+		Dimensions: 5,2
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@pulse:
+		Sequence: pulse
+	WithRangeCircle:
+		Range: 12c0
+		Type: cloakgenerator
+	Power:
+		Amount: -150
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProximityExternalCondition:
+		Condition: cloakgenerator
+		Range: 12c0
+		EnableSound: stealth01.aud
+		DisableSound: unstealth01.aud
+		AffectsParent: True
+	Selectable:
+		Bounds: 106, 60, 8, -15
+	HitShape:

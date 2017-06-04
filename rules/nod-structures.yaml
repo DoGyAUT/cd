@@ -1,777 +1,758 @@
 NACNST:
-    Inherits: ^Building
-    Building:
-        Footprint: xxx xxx xxx
-        BuildSounds: facbld1.aud
-        Dimensions: 3,3
-    Buildable:
-        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
-        BuildPaletteOrder: 200
-        Prerequisites: ~disabled
-        Adjacent: 8
-        Description: Builds base structures.\n\nSpecial:\n- Provides minimap.
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 10c0
-    Production:
-        Produces: Building.Nod,Defense.Nod
-        MoveIntoWorld: False
-    Exit:
-    ExitsDebugOverlay:
-    ProductionQueue@Building:
-        Type: Building.Nod
-        Group: Building
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    ProductionQueue@Defense:
-        Type: Defense.Nod
-        Group: Defense
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Nod Construction Yard
-#    -Sellable:
-    BaseBuilding:
-    Transforms:
-        IntoActor: nmcv
-        Offset: 1,1
-        Facing: 96
-        DeployCursor: undeploy
-    ProductionBar@Building:
-        ProductionType: Building.Nod
-    ProductionBar@Defense:
-        ProductionType: Defense.Nod
-    ProvidesRadar:
-#    WithBuildingPlacedOverlay:
-    Power:
-        Amount: 0
-    Selectable:
-        Bounds: 144, 80, 0, -12
-    ProvidesPrerequisite@nod:
-        Prerequisite: structures.nod
-    BaseProvider:
-        Range: 16c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    ProvidesAIPrerequisite@AImoney:
-        Prerequisite: AImoney
-    GrantConditionOnPrerequisite@AImoney:
-        Condition: money
-        Prerequisites: AImoney
-    CashTrickler@AImoney:
-        Interval: 1000
-        Amount: 10000
-        ShowTicks: False
-        RequiresCondition: money
+	Inherits: ^Building
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Buildable:
+		Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
+		BuildPaletteOrder: 200
+		Prerequisites: ~disabled
+		Adjacent: 8
+		Description: Builds base structures.\n\nSpecial:\n- Provides minimap.
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 10c0
+	Production:
+		Produces: Building.Nod,Defense.Nod
+		MoveIntoWorld: False
+	Exit:
+	ExitsDebugOverlay:
+	ProductionQueue@Building:
+		Type: Building.Nod
+		Group: Building
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@Defense:
+		Type: Defense.Nod
+		Group: Defense
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Nod Construction Yard
+	BaseBuilding:
+	Transforms:
+		IntoActor: nmcv
+		Offset: 1,1
+		Facing: 96
+		DeployCursor: undeploy
+	ProductionBar@Building:
+		ProductionType: Building.Nod
+	ProductionBar@Defense:
+		ProductionType: Defense.Nod
+	ProvidesRadar:
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 144, 80, 0, -12
+	ProvidesPrerequisite@nod:
+		Prerequisite: structures.nod
+	BaseProvider:
+		Range: 16c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	ProvidesAIPrerequisite@AImoney:
+		Prerequisite: AImoney
+	GrantConditionOnPrerequisite@AImoney:
+		Condition: money
+		Prerequisites: AImoney
+	CashTrickler@AImoney:
+		Interval: 1000
+		Amount: 10000
+		ShowTicks: False
+		RequiresCondition: money
+	HitShape:
 
 NAPOWR:
-    Inherits: ^BuildingInfiltrate
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ~structures.nod, ~!industry, ~ideology
-        Description: Provides power for other structures.
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Nod Power Plant
-    ProvidesPrerequisite:
-        Prerequisite: anypower
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    PowerTooltip:
-    InfiltrateForPowerOutage:
-        Duration: 750
-    AffectedByPowerOutage:
-    Selectable:
-        Bounds: 88, 80, 2, -12
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 4c0
-    WithIdleOverlay@SMOKE:
-        Sequence: idle-smoke
-        Palette: player50alpha
-    Power:
-        Amount: 200
-    Targetable:
-        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
-    ScalePowerWithHealth:
+	Inherits: ^BuildingInfiltrate
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ~structures.nod, ~!industry, ~ideology
+		Description: Provides power for other structures.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Nod Power Plant
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	PowerTooltip:
+	InfiltrateForPowerOutage:
+		Duration: 750
+	AffectedByPowerOutage:
+	Selectable:
+		Bounds: 88, 80, 2, -12
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@SMOKE:
+		Sequence: idle-smoke
+		Palette: player50alpha
+	Power:
+		Amount: 200
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	HitShape:
 
 NAAPWR:
-    Inherits: ^BuildingInfiltrate
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ~industry, ~structures.nod, ~ideology
-        Description: Provides much more power than the normal Power Plant. Exclusive to the Industry Ideology.
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Advanced Power Plant
-    ProvidesPrerequisite:
-        Prerequisite: anypower
-    Building:
-        Footprint: xxx xxx
-        Dimensions: 2,3
-    PowerTooltip:
-    InfiltrateForPowerOutage:
-        Duration: 750
-    AffectedByPowerOutage:
-    Selectable:
-        Bounds: 100, 74, 0, -12
-    Health:
-        HP: 1400
-    RevealsShroud:
-        Range: 4c0
-    WithIdleOverlay@SMOKE:
-        Sequence: idle-smoke
-        Palette: player50alpha
-    WithIdleOverlay@SMOKE2:
-        Sequence: idle-smoke2
-        Palette: player50alpha
-    WithIdleOverlay@SMOKE3:
-        Sequence: idle-smoke3
-        Palette: player50alpha
-    Power:
-        Amount: 300
-    Targetable:
-        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
-    ScalePowerWithHealth:
+	Inherits: ^BuildingInfiltrate
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ~industry, ~structures.nod, ~ideology
+		Description: Provides much more power than the normal Power Plant. Exclusive to the Industry Ideology.
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Advanced Power Plant
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	PowerTooltip:
+	InfiltrateForPowerOutage:
+		Duration: 750
+	AffectedByPowerOutage:
+	Selectable:
+		Bounds: 100, 74, 0, -12
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@SMOKE:
+		Sequence: idle-smoke
+		Palette: player50alpha
+	WithIdleOverlay@SMOKE2:
+		Sequence: idle-smoke2
+		Palette: player50alpha
+	WithIdleOverlay@SMOKE3:
+		Sequence: idle-smoke3
+		Palette: player50alpha
+	Power:
+		Amount: 300
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	HitShape:
 
 NIPROC:
-    Inherits: ^BuildingInfiltrate
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Nod Industry Tiberium Refinery
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 202
-        Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
-        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
-    Building:
-        Footprint: xxx= xx== xxx=
-        Dimensions: 4,3
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 134, 122, 0, -18
-    Health:
-        HP: 1500
-    RevealsShroud:
-        Range: 6c0
-    TiberianSunRefinery:
-        DockAngle: 160
-        DockOffset: 3,1
-        DiscardExcessResources: True
-    StoresResources:
-        PipColor: Green
-        PipCount: 10
-        Capacity: 700
-    FreeActor:
-        Actor: NIHARV
-        SpawnOffset: 2,1
-        Facing: 160
-#    FreeActor@2:
-#        Actor: NIHARV
-#        SpawnOffset: 2,2
-#        Facing: 160
-#    WithIdleOverlay@REDLIGHTS:
-#        Sequence: idle-redlights
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    WithDockedOverlay@flame:
-        Sequence: flame
-        Palette: effect
-    WithDockedOverlay@flame2:
-        Sequence: flame2
-        Palette: effect
-    Power:
-        Amount: -50
-    RenderSprites:
-        Image: NPROC
-    ProvidesPrerequisite@buildingname:   
-    ProvidesPrerequisite@nodref:   
-        Prerequisite: nproc
-    CustomSellValue:
-        Value: 500
+	Inherits: ^BuildingInfiltrate
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Nod Industry Tiberium Refinery
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 202
+		Prerequisites: anypower, ~structures.nod, ~ideology, ~industry
+		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 134, 122, 0, -18
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 3,1
+		DiscardExcessResources: True
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 700
+	FreeActor:
+		Actor: NIHARV
+		SpawnOffset: 2,1
+		Facing: 160
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	WithDockedOverlay@flame:
+		Sequence: flame
+		Palette: effect
+	WithDockedOverlay@flame2:
+		Sequence: flame2
+		Palette: effect
+	Power:
+		Amount: -50
+	RenderSprites:
+		Image: NPROC
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@nodref:
+		Prerequisite: nproc
+	CustomSellValue:
+		Value: 500
+	HitShape:
 
 NTPROC:
-    Inherits: NIPROC
-    Tooltip:
-        Name: Nod Technology Tiberium Refinery
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 202
-        Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
-        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
-    FreeActor:
-        Actor: NTHARV
-        SpawnOffset: 2,1
-        Facing: 160
-#    FreeActor@2:
-#        Actor: NTHARV
-#        SpawnOffset: 2,2
-#        Facing: 160
+	Inherits: NIPROC
+	Tooltip:
+		Name: Nod Technology Tiberium Refinery
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 202
+		Prerequisites: anypower, ~structures.nod, ~ideology, ~technology
+		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
+	FreeActor:
+		Actor: NTHARV
+		SpawnOffset: 2,1
+		Facing: 160
 
 NPPROC:
-    Inherits: NIPROC
-    Tooltip:
-        Name: Nod Propaganda Tiberium Refinery
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 202
-        Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
-        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
-    FreeActor:
-        Actor: NPHARV
-        SpawnOffset: 2,1
-        Facing: 160
-#    FreeActor@2:
-#        Actor: NPHARV
-#        SpawnOffset: 2,2
-#        Facing: 160
+	Inherits: NIPROC
+	Tooltip:
+		Name: Nod Propaganda Tiberium Refinery
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 202
+		Prerequisites: anypower, ~structures.nod, ~ideology, ~propaganda
+		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
+	FreeActor:
+		Actor: NPHARV
+		SpawnOffset: 2,1
+		Facing: 160
 
 NAHAND:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 204
-        Prerequisites: anypower, ~structures.nod, ~ideology
-        Description: Produces infantry.
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Hand of Nod
-    ProvidesPrerequisite:
-        Prerequisite: barracks
-    Building:
-        Footprint: xxxx xxxx
-        Dimensions: 4,2
-    Selectable:
-        Bounds: 116, 78, 3, -8
-    Health:
-        HP: 800
-    RevealsShroud:
-        Range: 5c0
-    Exit:
-        SpawnOffset: 384,768,0
-        ExitCell: 3,1
-        Facing: 128
-    ExitsDebugOverlay:
-    RallyPoint:
-        Offset: 5,1
-        Palette: mouse
-        IsPlayerPalette: False
-    Production:
-        Produces: Infantry.Nod
-    ProductionQueue@Infantry:
-        Type: Infantry.Nod
-        Group: Infantry
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    ProductionBar:
-    Power:
-        Amount: -25
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 204
+		Prerequisites: anypower, ~structures.nod, ~ideology
+		Description: Produces infantry.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Hand of Nod
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4,2
+	Selectable:
+		Bounds: 116, 78, 3, -8
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 5c0
+	Exit:
+		SpawnOffset: 384,768,0
+		ExitCell: 3,1
+		Facing: 128
+	ExitsDebugOverlay:
+	RallyPoint:
+		Offset: 5,1
+		Palette: mouse
+		IsPlayerPalette: False
+	Production:
+		Produces: Infantry.Nod
+	ProductionQueue@Infantry:
+		Type: Infantry.Nod
+		Group: Infantry
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProductionBar:
+	Power:
+		Amount: -25
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 NAWEAP:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Nod War Factory
-    ProvidesPrerequisite:
-        Prerequisite: factory
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 205
-        Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-        Description: Produces vehicles.
-    Building:
-        Footprint: xxx= xxx= xxx=
-        Dimensions: 4,3
-    Selectable:
-        Bounds: 149, 116, -3, -20
-    Health:
-        HP: 2000
-    RevealsShroud:
-        Range: 4c0
-    RallyPoint:
-        Offset: 4,1
-        Palette: mouse
-        IsPlayerPalette: False
-    Exit@1:
-        SpawnOffset: -384,-384,0
-        ExitCell: 3,1
-        ExitDelay: 5
-    ExitsDebugOverlay:
-    Production:
-        Produces: Vehicle.Nod
-    ProductionQueue@Vehicle:
-        Type: Vehicle.Nod
-        Group: Vehicle
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    ProductionBar:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    WithIdleOverlay@ROOF:
-        Sequence: idle-roof
-    WithProductionDoorOverlay@DOOR:
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-    SpawnActorPower@subambush:
-        OrderName: SubAmbushPowerInfoOrder
-        Prerequisites: nahand, ~industry
-        Description: Subterranean APC Ambush
-        LongDesc: Spawns a fully loaded Subterranean APC.
-        Actor: sapc1
-        Icon: subapcambush
-        LifeTime: -1
-        DeploySound: drillup.aud
-        EffectImage: dig
-        EffectPalette: player
-        EffectSequence: idle
-        ChargeTime: 240
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        LaunchSpeechNotification: Reinforce
-    GrantExternalConditionPower@emergencyrepairNod:
-        OrderName: EmergancyRepairs2PowerInfoOrder
-        Prerequisites: ~industry
-        Icon: emergencyrepairs2
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        EndChargeSpeechNotification: SupportPowerReady
-        Description: Emergency Repairs
-        LongDesc: Repairs vehicles and buildings in a specific radius.
-        Condition: emergencyrepairs
-        OnFireSound: fixit1.aud
-        Sequence: idle
-        ChargeTime: 180
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        Range: 8
-        Duration: 300
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Nod War Factory
+	ProvidesPrerequisite:
+		Prerequisite: factory
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 205
+		Prerequisites: anypower, nproc, ~structures.nod, ~ideology
+		Description: Produces vehicles.
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 149, 116, -3, -20
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: False
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	ExitsDebugOverlay:
+	Production:
+		Produces: Vehicle.Nod
+	ProductionQueue@Vehicle:
+		Type: Vehicle.Nod
+		Group: Vehicle
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	ProductionBar:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionDoorOverlay@DOOR:
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	SpawnActorPower@subambush:
+		OrderName: SubAmbushPowerInfoOrder
+		Prerequisites: nahand, ~industry
+		Description: Subterranean APC Ambush
+		LongDesc: Spawns a fully loaded Subterranean APC.
+		Actor: sapc1
+		Icon: subapcambush
+		LifeTime: -1
+		DeploySound: drillup.aud
+		EffectImage: dig
+		EffectPalette: player
+		EffectSequence: idle
+		ChargeTime: 240
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+	GrantExternalConditionPower@emergencyrepairNod:
+		OrderName: EmergancyRepairs2PowerInfoOrder
+		Prerequisites: ~industry
+		Icon: emergencyrepairs2
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Emergency Repairs
+		LongDesc: Repairs vehicles and buildings in a specific radius.
+		Condition: emergencyrepairs
+		OnFireSound: fixit1.aud
+		Sequence: idle
+		ChargeTime: 180
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 8
+		Duration: 300
+	HitShape:
 
 NARADR:
-    Inherits: ^BuildingInfiltrate
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 206
-        Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Nod Radar
-    ProvidesPrerequisite:
-        Prerequisite: radar
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 96, 82, 0, -17
-    Health:
-        HP: 1200
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    ProvidesRadar:
-    InfiltrateForExploration:
-    DetectCloaked:
-        Range: 10
-    RevealsShroud:
-        Range: 20c0
-    WithIdleOverlay@DISH:
-        Sequence: idle-dish
-        PauseOnLowPower: True
-    Targetable:
-        TargetTypes: Ground, C4, SpyInfiltrate
-    Power:
-        Amount: -100
-    ProvidesPrerequisite@buildingname:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 15c0
-        CloakTypes: Underground
-    GrantExternalConditionPower@frenzy:
-        Description: Frenzy
-        LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
-        OrderName: FrenzyPowerInfoOrder
-        ActivationSequence:
-        Icon: fenzy
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        EndChargeSound: nod1_s8.aud
-        Condition: fenzy
-        OnFireSound: nod1_s5.aud
-        Sequence: idle
-        ChargeTime: 210
-        Prerequisites: ~propaganda
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        #BeaconPosterPalette: iconclock
-        Range: 8
-        Duration: 450
-    AirstrikePower@orcascout:
-        OrderName: Radar Vision
-        Prerequisites: naradr
-        Icon: orcascout
-        ChargeTime: 180
-        Description: Radar Vision
-        LongDesc: Reveals an area of the map and cloaked enemy units.
-        SelectTargetSound: orca_m12.aud
-        EndChargeSound: orca_s10.aud
-        LaunchSound: orca_a10.aud
-        CameraActor: camera.orcascout
-        CameraRemoveDelay: 300
-        UnitType: orca_g
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        QuantizedFacings: 8
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: orcascout
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        
+	Inherits: ^BuildingInfiltrate
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 206
+		Prerequisites: anypower, nproc, ~structures.nod, ~ideology
+		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Nod Radar
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 82, 0, -17
+	Health:
+		HP: 1200
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10
+	RevealsShroud:
+		Range: 20c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -100
+	ProvidesPrerequisite@buildingname:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 15c0
+		CloakTypes: Underground
+	GrantExternalConditionPower@frenzy:
+		Description: Frenzy
+		LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
+		OrderName: FrenzyPowerInfoOrder
+		ActivationSequence:
+		Icon: fenzy
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSound: nod1_s8.aud
+		Condition: fenzy
+		OnFireSound: nod1_s5.aud
+		Sequence: idle
+		ChargeTime: 210
+		Prerequisites: ~propaganda
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 8
+		Duration: 450
+	AirstrikePower@orcascout:
+		OrderName: Radar Vision
+		Prerequisites: naradr
+		Icon: orcascout
+		ChargeTime: 180
+		Description: Radar Vision
+		LongDesc: Reveals an area of the map and cloaked enemy units.
+		SelectTargetSound: orca_m12.aud
+		EndChargeSound: orca_s10.aud
+		LaunchSound: orca_a10.aud
+		CameraActor: camera.orcascout
+		CameraRemoveDelay: 300
+		UnitType: orca_g
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: orcascout
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	HitShape:
+
 NAHPAD:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Valued:
-        Cost: 750
-    Tooltip:
-        Name: Nod Helipad
-    Buildable:
-        BuildPaletteOrder: 207
-        Queue: Building.Nod
-        Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology
-        Description: Produces, rearms and repairs aircraft.\n\nSpecial:\n- Call a havoc attack chopper (Industry)\n- Call an infantry drop (Propaganda)
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Health:
-        HP: 800
-    RevealsShroud:
-        Range: 5c0
-    Exit@1:
-        SpawnOffset: 0,-256,0
-    ExitsDebugOverlay:
-    RallyPoint:
-        Palette: mouse
-        IsPlayerPalette: False
-    ProductionFromMapEdge:
-        Produces: Air.Nod
-    ProductionQueue@Air:
-        Type: Air.Nod
-        Group: Air
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    Reservable:
-    RepairsUnits:
-        HpPerStep: 10
-        Interval: 10
-        FinishRepairingNotification: UnitRepaired
-        PlayerExperience: 15
-    ProductionBar:
-    WithIdleOverlay@PLATFORM:
-        Sequence: idle-platform
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithDeathAnimation@BIB:
-        DeathSequence: dead-platform
-        UseDeathTypeSuffix: False
-    Power:
-        Amount: -50
-    Selectable:
-        Bounds: 78, 54, 0, -8
-    ProvidesPrerequisite@buildingname:
-    ProduceActorPower@Havoc:
-        OrderName: ProduceHavocPowerInfoOrder
-        Actors: havoc
-        Type: Air.Nod
-        Icon: havoc
-        Description: Havoc Ace call
-        LongDesc: Calls in a heavy ace class Havoc attack chopper.
-        SelectTargetSpeechNotification: SelectTarget
-        EndChargeSpeechNotification: Reinforce
-        LowPowerSpeechNotification: LowPower
-        ChargeTime: 240
-        DisplayBeacon: false
-        DisplayRadarPing: false
-        BeaconPoster: havoc
-        Prerequisites: industry
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    ParatroopersPower@propcarry:
-        UnitType: nodcarry.support
-        Prerequisites: ~propaganda
-        DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
-        Icon: nodcarry
-        OrderName: PropagandaInfantryDropOrder
-        SquadSize: 3
-        SquadOffset: -3072,3072,0
-        ChargeTime: 300
-        Description: Propaganda Infantry Drop
-        LongDesc: Drops an infantry battalion on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        LaunchSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: nodcarry
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    ParatroopersPower@fanatic:
-        UnitType: valkyrie.support
-        Prerequisites: ~propaganda, naradr
-        DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
-        Icon: fanatic
-        OrderName: FanaticDropOrder
-        SquadSize: 1
-        ChargeTime: 240
-        Description: Fanatic Drop
-        LongDesc: Drops a group of fanatics on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        LaunchSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: fanatic
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    ParatroopersPower@techcarry:
-        UnitType: valkyrie.support
-        Prerequisites: ~technology
-        DropItems: shadow,shadow,shadow,shadow,shadow
-        Icon: valkyrie
-        OrderName: ShadowTrooperInfantryDropOrder
-        SquadSize: 1
-        ChargeTime: 180
-        Description: Shadow Trooper Drop
-        LongDesc: Drops a special infantry taskforce on the field.
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        LaunchSpeechNotification: Reinforce
-        DisplayBeacon: true
-        DisplayRadarPing: True
-        BeaconPoster: valkyrie
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        #BeaconPosterPalette: iconclock
-        
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Nod Helipad
+	Buildable:
+		BuildPaletteOrder: 207
+		Queue: Building.Nod
+		Prerequisites: anypower, naradr, ~structures.nod, ~!t1, ~ideology
+		Description: Produces, rearms and repairs aircraft.\n\nSpecial:\n- Call a havoc attack chopper (Industry)\n- Call an infantry drop (Propaganda)
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	ExitsDebugOverlay:
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: False
+	ProductionFromMapEdge:
+		Produces: Air.Nod
+	ProductionQueue@Air:
+		Type: Air.Nod
+		Group: Air
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	Reservable:
+	RepairsUnits:
+		HpPerStep: 10
+		Interval: 10
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-platform
+		UseDeathTypeSuffix: False
+	Power:
+		Amount: -50
+	Selectable:
+		Bounds: 78, 54, 0, -8
+	ProvidesPrerequisite@buildingname:
+	ProduceActorPower@Havoc:
+		OrderName: ProduceHavocPowerInfoOrder
+		Actors: havoc
+		Type: Air.Nod
+		Icon: havoc
+		Description: Havoc Ace call
+		LongDesc: Calls in a heavy ace class Havoc attack chopper.
+		SelectTargetSpeechNotification: SelectTarget
+		EndChargeSpeechNotification: Reinforce
+		LowPowerSpeechNotification: LowPower
+		ChargeTime: 240
+		DisplayBeacon: false
+		DisplayRadarPing: false
+		BeaconPoster: havoc
+		Prerequisites: industry
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	ParatroopersPower@propcarry:
+		UnitType: nodcarry.support
+		Prerequisites: ~propaganda
+		DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
+		Icon: nodcarry
+		OrderName: PropagandaInfantryDropOrder
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		ChargeTime: 300
+		Description: Propaganda Infantry Drop
+		LongDesc: Drops an infantry battalion on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: nodcarry
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	ParatroopersPower@fanatic:
+		UnitType: valkyrie.support
+		Prerequisites: ~propaganda, naradr
+		DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
+		Icon: fanatic
+		OrderName: FanaticDropOrder
+		SquadSize: 1
+		ChargeTime: 240
+		Description: Fanatic Drop
+		LongDesc: Drops a group of fanatics on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: fanatic
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	ParatroopersPower@techcarry:
+		UnitType: valkyrie.support
+		Prerequisites: ~technology
+		DropItems: shadow,shadow,shadow,shadow,shadow
+		Icon: valkyrie
+		OrderName: ShadowTrooperInfantryDropOrder
+		SquadSize: 1
+		ChargeTime: 180
+		Description: Shadow Trooper Drop
+		LongDesc: Drops a special infantry taskforce on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: valkyrie
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	HitShape:
+
 NAPYRA:
-    Inherits: ^Building
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Building.Nod
-        BuildPaletteOrder: 208
-        Prerequisites: anypower, naradr, ~structures.nod, ~ideology
-        Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda) or Tiberium (Technology)
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: Nod Pyramid
-    Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4,4
-    Selectable:
-        Bounds: 88, 80, 2, -12
-    Health:
-        HP: 2400
-    RevealsShroud:
-        Range: 5c0
-    Power:
-        Amount: -150
-    Production:
-        Produces: Tech.Nod
-        MoveIntoWorld: False
-    ProductionQueue@Tech:
-        Type: Tech.Nod
-        Group: Tech
-        QueuedAudio: BuildTech
-        ReadyAudio: TechComplete
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    Exit:
-    ExitsDebugOverlay:
-    ProductionBar@Tech:
-    ProvidesPrerequisite@buildingname:
-    AirstrikePower@VertigoNapalmAirstrikePower:
-        OrderName: VertigoNapalmAirstrikePowerInfoOrder
-        Prerequisites: naradr, ~propaganda
-        Icon: vertigo
-        ChargeTime: 300
-        QuantizedFacings: 8
-        Description: Napalm Strike
-        LongDesc: Deploy a devastating Napalm bomb.
-        SelectTargetSound:  vertigo_s2.aud
-        EndChargeSound: vertigo_st1.aud
-        LaunchSound: vertigo_a1.aud
-        UnitType: vertigo
-        SquadSize: 1
-        DisplayBeacon: True
-        BeaconPoster: vertigo
-        DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-    AirstrikePower@VertigoTiberiumAirstrikePower:
-        OrderName: VertigoTiberiumAirstrikePowerInfoOrder
-        Prerequisites: naradr, ~industry
-        Icon: vertigo
-        ChargeTime: 300
-        QuantizedFacings: 8
-        Description: Tiberium Splitter Bomb
-        LongDesc: Deploy a devastating Tiberium bomb.
-        SelectTargetSound:  vertigo_s2.aud
-        EndChargeSound: vertigo_st1.aud
-        LaunchSound: vertigo_a1.aud
-        UnitType: vertigo2
-        SquadSize: 1
-        DisplayBeacon: True
-        BeaconPoster: vertigo
-        DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock        
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Nod
+		BuildPaletteOrder: 208
+		Prerequisites: anypower, naradr, ~structures.nod, ~ideology
+		Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda) or Tiberium (Technology)
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Nod Pyramid
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+	Selectable:
+		Bounds: 88, 80, 2, -12
+	Health:
+		HP: 2400
+	RevealsShroud:
+		Range: 5c0
+	Power:
+		Amount: -150
+	Production:
+		Produces: Tech.Nod
+		MoveIntoWorld: False
+	ProductionQueue@Tech:
+		Type: Tech.Nod
+		Group: Tech
+		QueuedAudio: BuildTech
+		ReadyAudio: TechComplete
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	Exit:
+	ExitsDebugOverlay:
+	ProductionBar@Tech:
+	ProvidesPrerequisite@buildingname:
+	AirstrikePower@VertigoNapalmAirstrikePower:
+		OrderName: VertigoNapalmAirstrikePowerInfoOrder
+		Prerequisites: naradr, ~propaganda
+		Icon: vertigo
+		ChargeTime: 300
+		QuantizedFacings: 8
+		Description: Napalm Strike
+		LongDesc: Deploy a devastating Napalm bomb.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	AirstrikePower@VertigoTiberiumAirstrikePower:
+		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
+		Prerequisites: naradr, ~industry
+		Icon: vertigo
+		ChargeTime: 300
+		QuantizedFacings: 8
+		Description: Tiberium Splitter Bomb
+		LongDesc: Deploy a devastating Tiberium bomb.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo2
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	HitShape:
 
 NATECH:
-    Inherits: ^Building
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Nod Tech Center
-    ProvidesPrerequisite:
-        Prerequisite: tech
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 86, 58, 0, -4
-    Health:
-        HP: 2160
-    RevealsShroud:
-        Range: 4c0
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    Power:
-        Amount: -150
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Nod Tech Center
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 86, 58, 0, -4
+	Health:
+		HP: 2160
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 NATMPL:
-    Inherits: ^Building
-#    Buildable:
-#        Queue: Building.Nod
-#        BuildPaletteOrder: 211
-#        Prerequisites: anypower, napyra, ~structures.nod, ~ideology, ~propaganda
-#        BuildLimit: 1
-#        Description: Provides access to NOD's strongest arsenal.
-    ProvidesPrerequisite@buildingname:
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Temple of Nod
-    Building:
-        Adjacent: 3
-        Footprint: xxxx xxxx xxxx
-        Dimensions: 4,3
-    Selectable:
-        Bounds: 134, 120, 12, -12
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 6c0
-    Power:
-        Amount: -200
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
+	Inherits: ^Building
+	ProvidesPrerequisite@buildingname:
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Temple of Nod
+	Building:
+		Adjacent: 3
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 120, 12, -12
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 6c0
+	Power:
+		Amount: -200
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	HitShape:
 
 NAWAST:
-    Inherits: ^Building
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Waste Refinery
-#    Buildable:
-#        BuildPaletteOrder: 213
-#        Prerequisites: namisl, ~structures.nod, ~!t1, ~!t2, ~!t3, ~industry, ~ideology
-#        Queue: Building.Nod
-#        BuildLimit: 1
-#        Description: Processes Veins into useable resources.\nExclusive to the Industry Ideology.
-    Building:
-        Footprint: =x= xx= =x=
-        Dimensions: 3,3
-    Selectable:
-        Bounds: 100, 60, 5, -5
-    Health:
-        HP: 2400
-    RevealsShroud:
-        Range: 6c0
-    TiberianSunRefinery:
-        DockAngle: 160
-        DockOffset: 2,1
-    StoresResources:
-        PipColor: Yellow
-        PipCount: 15
-        Capacity: 10000
-    FreeActor:
-        Actor: WEED
-        SpawnOffset: 3,1
-        Facing: 160
-    WithIdleOverlay@GLOW:
-        Sequence: idle-glow
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    ProvidesPrerequisite@buildingname:
-    SelectionDecorations:
-        VisualBounds: 100, 60, 5, -5
-    RenderSprites:
+	Inherits: ^Building
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Waste Refinery
+	Building:
+		Footprint: =x= xx= =x=
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 100, 60, 5, -5
+	Health:
+		HP: 2400
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 15
+		Capacity: 10000
+	FreeActor:
+		Actor: WEED
+		SpawnOffset: 3,1
+		Facing: 160
+	WithIdleOverlay@GLOW:
+		Sequence: idle-glow
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 100, 60, 5, -5
+	RenderSprites:
+	HitShape:

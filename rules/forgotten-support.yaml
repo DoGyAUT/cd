@@ -1,213 +1,212 @@
 FAWALL:
-    Inherits: ^Wall
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 400
-        Prerequisites: ~structures.forgotten
-        Description: Stops infantry and blocks enemy fire.
-    SoundOnDamageTransition:
-    Valued:
-        Cost: 100
-    CustomSellValue:
-        Value: 0
-    Tooltip:
-        Name: Concrete Wall
-    Health:
-        HP: 400
-    BlocksProjectiles:
-        Height: 640
-    Crushable:
-        CrushClasses: heavywall
-    LineBuild:
-        NodeTypes: wall, turret
-        
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 400
+		Prerequisites: ~structures.forgotten
+		Description: Stops infantry and blocks enemy fire.
+	SoundOnDamageTransition:
+	Valued:
+		Cost: 100
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	Health:
+		HP: 400
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+	HitShape:
+
 FAGATE_A:
-    Inherits: ^Gate_A
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 401
-        Prerequisites: ~structures.forgotten
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Forgotten Gate
+	Inherits: ^Gate_A
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 401
+		Prerequisites: ~structures.forgotten
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Forgotten Gate
 
 FAGATE_B:
-    Inherits: ^Gate_B
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 402
-        Prerequisites: ~structures.forgotten
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Forgotten Gate
-        
+	Inherits: ^Gate_B
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 402
+		Prerequisites: ~structures.forgotten
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Forgotten Gate
+
 FASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 403
-        Prerequisites: fproc, ~structures.forgotten
-        Description: Stores excess Tiberium.\n\nStores 1500$.
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Forgotten Silo
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-    WithSiloAnimation:
-    WithIdleOverlay@UNDERLAY:
-        Sequence: idle-underlay
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    StoresResources:
-        PipColor: Green
-        PipCount: 5
-        Capacity: 1500
-    Power:
-        Amount: -10   
-    # Explodes:
-        # Weapon: TiberiumExplosionSilo
-        # EmptyWeapon: TiberiumExplosionSilo
+	Inherits: ^BuildingInfiltrate
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 403
+		Prerequisites: fproc, ~structures.forgotten
+		Description: Stores excess Tiberium.\n\nStores 1500$.
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Forgotten Silo
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 4c0
+	RenderSprites:
+	WithSpriteBody:
+	WithSiloAnimation:
+	WithIdleOverlay@UNDERLAY:
+		Sequence: idle-underlay
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	StoresResources:
+		PipColor: Green
+		PipCount: 5
+		Capacity: 1500
+	Power:
+		Amount: -10
+	HitShape:
 
 FATOWER:
-    Inherits: ^Defense
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 403
-        Prerequisites: anypower, fabar, ~structures.forgotten
-        Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery, Armor
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Watch Tower
-    Building:
-        Footprint: x
-        Dimensions: 1, 1
-    Selectable:
-        Bounds: 48, 62, 0, -25
-    Power:
-        Amount: -25
-    Health:
-        HP: 940
-    RevealsShroud:
-        Range: 10c0
-    Armament@attack:
-        Weapon: WatchTowerMG
-        LocalOffset: 0,0,1000
-    AttackOmni:
-    AutoTarget:
-    RenderRangeCircle:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-    WithIdleOverlay@flag:
-        Sequence: idle-flag
-    ProvidesPrerequisite@buildingname:
- 
+	Inherits: ^Defense
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 403
+		Prerequisites: anypower, fabar, ~structures.forgotten
+		Description: Basic base defense.\nDetects cloaked units.\nRequires no power to operate.\n\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft, Artillery, Armor
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Watch Tower
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Selectable:
+		Bounds: 48, 62, 0, -25
+	Power:
+		Amount: -25
+	Health:
+		HP: 940
+	RevealsShroud:
+		Range: 10c0
+	Armament@attack:
+		Weapon: WatchTowerMG
+		LocalOffset: 0,0,1414
+	AttackOmni:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+	WithIdleOverlay@flag:
+		Sequence: idle-flag
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 FAFLAK:
-    Inherits: ^Defense
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 404
-        Prerequisites: anypower, faradr, ~structures.forgotten
-        Description: Anti-Air base defense.\nRequires no power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Flak Cannon
-    Building:
-        Footprint: x
-        Dimensions: 1, 1
-    Selectable:
-        Bounds: 48, 40, 0, 8
-    Power:
-        Amount: -25
-    Health:
-        HP: 940
-    RevealsShroud:
-        Range: 13c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    Turreted:
-        TurnSpeed: 12
-        InitialFacing: 0
-        Offset: 0,0,0
-    Armament:
-        Weapon: FlakCannon
-        LocalOffset: 350,96,600, 350,-96,600, 300,96,700, 300,-96,700
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackTurreted:
-    AutoTarget:
-    RenderRangeCircle:
-    WithSpriteTurret:
-    WithMuzzleOverlay:
-    ProvidesPrerequisite@buildingname:
-#    RenderDetectionCircle:
-#    DetectCloaked:
-#        Range: 6c0
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Defense
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 404
+		Prerequisites: anypower, faradr, ~structures.forgotten
+		Description: Anti-Air base defense.\nRequires no power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Flak Cannon
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Selectable:
+		Bounds: 48, 40, 0, 8
+	Power:
+		Amount: -25
+	Health:
+		HP: 940
+	RevealsShroud:
+		Range: 13c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 0
+		Offset: 0,0,0
+	Armament:
+		Weapon: FlakCannon
+		LocalOffset: 495,136,849, 495,-136,849, 424,136,990, 424,-136,990
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	AttackTurreted:
+	AutoTarget:
+	RenderRangeCircle:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 FAMISSILE:
-    Inherits: ^Defense
-    Inherits@DisabledOverlay: ^DisabledOverlay
-    Buildable:
-        Queue: Defense.Forg
-        BuildPaletteOrder: 405
-        Prerequisites: anypower, faradr, ~structures.forgotten
-        Description: Anti-Armor base defense.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Gecko Launcher
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    Selectable:
-        Bounds: 60, 48, -5, 0
-    Power:
-        Amount: -50
-    Health:
-        HP: 1800
-    RevealsShroud:
-        Range: 13c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    Turreted:
-        TurnSpeed: 8
-        InitialFacing: 90
-        Offset: 0,0,0
-    Armament:
-        Weapon: GeckoLauncherBarrage
-        LocalOffset: 350,200,700, 350,0,700, 350,-200,700, 200,200,1000, 200,0,1000, 200,-200,1000
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 25
-        RecoilRecovery: 10
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-    AttackTurreted:
-    AutoTarget:
-    RenderRangeCircle:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-    WithSpriteTurret:
-        Recoils: True
-    WithMuzzleOverlay:
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Defense.Forg
+		BuildPaletteOrder: 405
+		Prerequisites: anypower, faradr, ~structures.forgotten
+		Description: Anti-Armor base defense.\nRequires power to operate.\n\n  Strong vs Armor\n  Weak vs Aircraft
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Gecko Launcher
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Selectable:
+		Bounds: 60, 48, -5, 0
+	Power:
+		Amount: -50
+	Health:
+		HP: 1800
+	RevealsShroud:
+		Range: 13c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Turreted:
+		TurnSpeed: 8
+		InitialFacing: 90
+		Offset: 0,0,0
+	Armament:
+		Weapon: GeckoLauncherBarrage
+		LocalOffset: 495,283,990, 495,0,990, 495,-283,990, 283,283,1414, 283,0,1414, 283,-283,1414
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 25
+		RecoilRecovery: 10
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	AttackTurreted:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6c0
+	WithSpriteTurret:
+		Recoils: True
+	WithMuzzleOverlay:
+	ProvidesPrerequisite@buildingname:
+	HitShape:

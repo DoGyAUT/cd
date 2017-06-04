@@ -1,139 +1,143 @@
 ANYPOWER:
-    AlwaysVisible:
-    Tooltip:
-        Name: Power Plant
-        Description: Power Plant
+	AlwaysVisible:
+	Tooltip:
+		Name: Power Plant
+		Description: Power Plant
 
 BARRACKS:
-    AlwaysVisible:
-    Tooltip:
-        Name: Infantry Production
-        Description: Infantry Production
+	AlwaysVisible:
+	Tooltip:
+		Name: Infantry Production
+		Description: Infantry Production
 
 FACTORY:
-    AlwaysVisible:
-    Tooltip:
-        Name: Vehicle Production
-        Description: Vehicle Production
+	AlwaysVisible:
+	Tooltip:
+		Name: Vehicle Production
+		Description: Vehicle Production
 
 RADAR:
-    AlwaysVisible:
-    Tooltip:
-        Name: Radar
-        Description: Radar
+	AlwaysVisible:
+	Tooltip:
+		Name: Radar
+		Description: Radar
 
 TECH:
-    AlwaysVisible:
-    Tooltip:
-        Name: Tech Center
-        Description: Tech Center
-        
+	AlwaysVisible:
+	Tooltip:
+		Name: Tech Center
+		Description: Tech Center
+
 TIBTECH:
-    Inherits: ^Building
-    Tooltip:
-        Name: Drill Station
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    Health:
-        HP: 1800
-    -MustBeDestroyed:
-    -Sellable:
-    -GivesBuildableArea:
-    Selectable:
-        Bounds: 78, 54, 0, -8
-    RevealsShroud:
-        Range: 5c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    AutoTargetIgnore:
-    RenderSprites:
-        Image: CGOILD
-    WithIdleOverlay@flag:
-        Sequence: idle-flag
-    WithIdleOverlay@drill:
-        Sequence: idle-drill
-    CashTrickler:
-        Interval: 250
-        Amount: 150
-        CaptureAmount: 0
-    Explodes:
-        Weapon: TiberiumExplosionDrill
-        EmptyWeapon: TiberiumExplosionDrill
+	Inherits: ^Building
+	Tooltip:
+		Name: Drill Station
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Health:
+		HP: 1800
+	-MustBeDestroyed:
+	-Sellable:
+	-GivesBuildableArea:
+	Selectable:
+		Bounds: 78, 54, 0, -8
+	RevealsShroud:
+		Range: 5c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	AutoTargetIgnore:
+	RenderSprites:
+		Image: CGOILD
+	WithIdleOverlay@flag:
+		Sequence: idle-flag
+	WithIdleOverlay@drill:
+		Sequence: idle-drill
+	CashTrickler:
+		Interval: 250
+		Amount: 150
+		CaptureAmount: 0
+	Explodes:
+		Weapon: TiberiumExplosionDrill
+		EmptyWeapon: TiberiumExplosionDrill
+	HitShape:
 
 CAHOSP:
-    Inherits: ^Building
-    Tooltip:
-        Name: Civilian Hospital
-    Building:
-        Footprint: xxx xxx xxx xxx
-        Dimensions: 3, 4
-    Health:
-        HP: 2400
-    -MustBeDestroyed:
-    -Sellable:
-    -GivesBuildableArea:
-    RevealsShroud:
-        Range: 6c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    AutoTargetIgnore:
-    Capturable:
-    ExternalCapturable:
-        CaptureCompleteTime: 7
-    ProximityExternalCondition:
-        Condition: medic_heal
-        Range: 500c0
-        
+	Inherits: ^Building
+	Tooltip:
+		Name: Civilian Hospital
+	Building:
+		Footprint: xxx xxx xxx xxx
+		Dimensions: 3, 4
+	Health:
+		HP: 2400
+	-MustBeDestroyed:
+	-Sellable:
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 6c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	AutoTargetIgnore:
+	Capturable:
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	ProximityExternalCondition:
+		Condition: medic_heal
+		Range: 500c0
+	HitShape:
+
 CAARMR:
-    Inherits: ^Building
-    Tooltip:
-        Name: Civilian Armory
-    Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4, 4
-    Health:
-        HP: 2400
-    -MustBeDestroyed:
-    -Sellable:
-    -GivesBuildableArea:    
-    RevealsShroud:
-        Range: 3c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    AutoTargetIgnore:
-    WithIdleOverlay@flag:
-        Sequence: idle-flag
-    Capturable:
-    ExternalCapturable:
-        CaptureCompleteTime: 7
-    ProvidesPrerequisite:
-        Prerequisite: armory.upgraded
+	Inherits: ^Building
+	Tooltip:
+		Name: Civilian Armory
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Health:
+		HP: 2400
+	-MustBeDestroyed:
+	-Sellable:
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 3c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	AutoTargetIgnore:
+	WithIdleOverlay@flag:
+		Sequence: idle-flag
+	Capturable:
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	ProvidesPrerequisite:
+		Prerequisite: armory.upgraded
+	HitShape:
 
 CAARAY:
-    Inherits: ^Building
-    Tooltip:
-        Name: Civilian Array
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    Health:
-        HP: 2400
-    -MustBeDestroyed:
-    -Sellable:
-    -GivesBuildableArea:    
-    RevealsShroud:
-        Range: 15c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    WithIdleOverlay@dish1:
-        Sequence: idle-dish1
-    WithIdleOverlay@dish1:
-        Sequence: idle-dish2
-    WithIdleOverlay@dish1:
-        Sequence: idle-dish3
-    WithIdleOverlay@light:
-        Sequence: idle-light
-    Capturable:
-    ExternalCapturable:
-        CaptureCompleteTime: 7
+	Inherits: ^Building
+	Tooltip:
+		Name: Civilian Array
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Health:
+		HP: 2400
+	-MustBeDestroyed:
+	-Sellable:
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 15c0
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	WithIdleOverlay@dish1:
+		Sequence: idle-dish1
+	WithIdleOverlay@dish1:
+		Sequence: idle-dish2
+	WithIdleOverlay@dish1:
+		Sequence: idle-dish3
+	WithIdleOverlay@light:
+		Sequence: idle-light
+	Capturable:
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	HitShape:

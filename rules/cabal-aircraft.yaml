@@ -1,223 +1,169 @@
 PTEROIS:
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Pterois
-#    Buildable:
-#        Queue: Air.Cabal
-#        BuildPaletteOrder: 300
-#        Prerequisites: ~kahpad, ~!t1
-#        Description: Fast assault gunship with dual Plasma cannons\nand advanced sensors for stealth detection.\n\nRole : Assault Gunship\nHP: 400\nArmor: Light\nSpeed: 80\nViewrange: 13\nGood vs: Infantry, Vehicles\nUseless vs: Vtols, Jets, Bombers
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Selectable:
-        Bounds: 60,48,0,-10
-    Aircraft:
-        TurnSpeed: 3
-        Speed: 110
-        IdealSeparation: 1500
-    Health:
-        HP: 400
-    RevealsShroud:
-        Range: 13c0
-        Type: GroundPosition
-    Armament:
-        Weapon: PteroisMachal
-        LocalOffset: 450,220,200, 450,-220,200
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackHeli:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name:primary
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    DetectCloaked:
-        Range: 7c0
-    RenderDetectionCircle:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:    
-    WithVoxelBody:
-    WithMuzzleOverlay:
-#    Contrail@1:
-#        Offset: -128,180,160
-#        TrailLength: 25
-#        TrailWidth: 50
-#        Color: FFFFFF
-#        Width: 50
-#        UsePlayerColor: True
-#    Contrail@2:
-#        Offset: -128,-180,160
-#        TrailLength: 25
-#        TrailWidth: 50
-#        Color: FFFFFF
-#        UsePlayerColor: False
-    SpawnActorOnDeath:
-        Actor: PTEROIS.Husk
-        Probability: 100
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Pterois
+	Voiced:
+		VoiceSet: Cabalbeep
+		Volume: 2
+	Selectable:
+		Bounds: 60,48,0,-10
+	Aircraft:
+		TurnSpeed: 3
+		Speed: 110
+		IdealSeparation: 1500
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 13c0
+		Type: GroundPosition
+	Armament:
+		Weapon: PteroisMachal
+		LocalOffset: 636,311,283, 636,-311,283
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool@1:
+		Name: primary
+		Ammo: 40
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 5
+	DetectCloaked:
+		Range: 7c0
+	RenderDetectionCircle:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: PTEROIS.Husk
+		Probability: 100
+	HitShape:
 
 KDRONE:
-    Inherits: ^AttackAdvancedPlane
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Piranha
-#    Buildable:
-#        Queue: Air.Cabal
-#        BuildPaletteOrder: 301
-#        Prerequisites: ~kahpad, kabtech, ~!t1, ~!t2
-#        Description: Advanced fighter craft with twin plasma cannons.\n\nRole : Advanced fighter\nHP: 650\nArmor: Light\nSpeed: 240\nViewrange: 14\nGood vs: Vtols, Jets, Bombers\nUseless vs: Ground Units
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Aircraft:
-        MaximumPitch: 90
-        TurnSpeed: 4
-        Speed: 240
-        TakeoffSound: dropup1.aud
-        LandingSound: dropdwn1.aud
-    Health:
-        HP: 650
-    RevealsShroud:
-        Range: 14c0
-        Type: GroundPosition
-    Armament:
-        Weapon: DroneMachal
-        LocalOffset: 128,0,0
-    # AttackPlane:
-        # FacingTolerance: 20
-    Turreted:
-        TurnSpeed: 360
-    AttackTurreted:
-        FacingTolerance: 20
-    AmmoPool:
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-#    Contrail@1:
-#        Offset: -370,64,180
-#        TrailLength: 30
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@2:
-#        Offset: -370,-64,180
-#        TrailLength: 30
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@3:
-#        Offset: -370,512,180
-#        TrailLength: 15
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@4:
-#        Offset: -370,-512,180
-#        TrailLength: 15
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-    SpawnActorOnDeath:
-        Actor: KDRONE.Husk
-        Probability: 100
+	Inherits: ^AttackAdvancedPlane
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Piranha
+	Selectable:
+		Bounds: 60,48,0,-10
+	Voiced:
+		VoiceSet: Cabalbeep
+		Volume: 2
+	Aircraft:
+		MaximumPitch: 90
+		TurnSpeed: 4
+		Speed: 240
+		TakeoffSound: dropup1.aud
+		LandingSound: dropdwn1.aud
+	Health:
+		HP: 650
+	RevealsShroud:
+		Range: 14c0
+		Type: GroundPosition
+	Armament:
+		Weapon: DroneMachal
+		LocalOffset: 181,0,0
+	Turreted:
+		TurnSpeed: 360
+	AttackTurreted:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 40
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 5
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	SpawnActorOnDeath:
+		Actor: KDRONE.Husk
+		Probability: 100
+	HitShape:
 
 MANTA:
-    Inherits: ^AttackAdvancedPlane
-    Valued:
-        Cost: 2200
-    Tooltip:
-        Name: Manta
-#    Buildable:
-#        Queue: Air.Cabal
-#        BuildPaletteOrder: 302
-#        Prerequisites: ~kahpad, kabtech, ~!t1, ~!t2
-#        Description: Heavy siege gunship\nwith twin plasma cannons and twin plasma bomb launchers gunship.\n\nRole : Advanced Bomber\nHP: 1000\nArmor: Heavy\nSpeed: 80\nViewrange: 13\nGood vs: Buildings, Vehicles\nUseless vs: Vtols, Jets, Bombers
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 1
-        Speed: 80
-        IdealSeparation: 2048
-        CruiseAltitude: 8192
-    Health:
-        HP: 2600
-    RevealsShroud:
-        Range: 13c0
-        Type: GroundPosition
-    Armament@1:
-        Weapon: MantaMachal
-        LocalOffset: 800,96,900, 800,0,900, 800,-96,900
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-#    Armament@2:
-#        Weapon: MantaBombardCannon
-#        LocalOffset: 200,0,-128
-    Targetable@AIRBORNE:
-        TargetTypes: HighAir
-        RequiresCondition: airborne
-    AttackTurreted:
-        FacingTolerance: 20
-    AmmoPool:
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    Turreted:
-        TurnSpeed: 2
-        Offset: 400,0,128
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-    WithVoxelBarrel:
-    Contrail@1:
-        Offset: -2000,256,300 
-        TrailLength: 100
-        TrailWidth: 50
-        Color: 0080FF
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: -2000,-256,300 
-        TrailLength: 100
-        TrailWidth: 50
-        Color: 0080FF
-        UsePlayerColor: False
-    SmokeTrailWhenDamaged@0:
-        Sprite: plasmatrail
-        Palette: effect50alpha
-        Offset: -1900,256,300
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: plasmatrail
-        Palette: effect50alpha
-        Offset: -1900,-256,300 
-        Interval: 2
-        MinDamage: Undamaged
-    WithMuzzleOverlay:
-    SpawnActorOnDeath:
-        Actor: MANTA.Husk
-        Probability: 100
+	Inherits: ^AttackAdvancedPlane
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: Manta
+	Selectable:
+		Bounds: 60,48,0,-10
+	Voiced:
+		VoiceSet: Cabalbeep
+		Volume: 2
+	Aircraft:
+		TurnSpeed: 1
+		Speed: 80
+		IdealSeparation: 2048
+		CruiseAltitude: 8192
+	Health:
+		HP: 2600
+	RevealsShroud:
+		Range: 13c0
+		Type: GroundPosition
+	Armament@1:
+		Weapon: MantaMachal
+		LocalOffset: 1131,136,1273, 1131,0,1273, 1131,-136,1273
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Targetable@AIRBORNE:
+		TargetTypes: HighAir
+		RequiresCondition: airborne
+	AttackTurreted:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 40
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 5
+	Turreted:
+		TurnSpeed: 2
+		Offset: 400,0,128
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+	WithVoxelBarrel:
+	Contrail@1:
+		Offset: -2000,256,300
+		TrailLength: 100
+		TrailWidth: 50
+		Color: 0080FF
+		UsePlayerColor: False
+	Contrail@2:
+		Offset: -2000,-256,300
+		TrailLength: 100
+		TrailWidth: 50
+		Color: 0080FF
+		UsePlayerColor: False
+	SmokeTrailWhenDamaged@0:
+		Sprite: plasmatrail
+		Palette: effect50alpha
+		Offset: -1900,256,300
+		Interval: 2
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@1:
+		Sprite: plasmatrail
+		Palette: effect50alpha
+		Offset: -1900,-256,300
+		Interval: 2
+		MinDamage: Undamaged
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: MANTA.Husk
+		Probability: 100
+	HitShape:
