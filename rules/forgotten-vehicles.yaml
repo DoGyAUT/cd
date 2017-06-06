@@ -17,11 +17,11 @@ FMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Water: 50
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	MustBeDestroyed:
 		RequiredForShortGame: True
 	BaseBuilding:
@@ -72,14 +72,14 @@ FHARV:
 		DeliverVoice: Move
 		PipCount: 7
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Tiberium: 100
 	-DamagedByTerrain@Veins:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	RenderSprites:
 	RenderVoxels:
 	-WithVoxelBody:
@@ -131,9 +131,9 @@ ATRUCK:
 		PipCount: 10
 		UnloadVoice: Select
 	Mobile:
-		Speed: 80
+		Speed: 113
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -145,10 +145,10 @@ ATRUCK:
 		DamageCooldown: 200
 	ProximityExternalCondition:
 		Condition: repair_healboost
-		Range: 5c0
+		Range: 7c73
 	WithRangeCircle:
 		Color: FFFFFFFF
-		Range: 5c0
+		Range: 7c73
 	HitShape:
 
 FBUGGY_MG:
@@ -170,12 +170,12 @@ FBUGGY_MG:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 9
-		Speed: 90
+		Speed: 127
 		Crushes: crate
 	Health:
 		HP: 400
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Armament@primary:
 		Weapon: BuggyFireballLauncher
 		LocalOffset: 495,0,636
@@ -196,7 +196,7 @@ FBUGGY_MG:
 		Sequence: turret-mg
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -219,12 +219,12 @@ FBUGGY_MIS:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 8
-		Speed: 90
+		Speed: 127
 		Crushes: crate
 	Health:
 		HP: 400
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Armament@primary:
 		Weapon: BuggyMissile
 		LocalOffset: 212,181,636, 212,-181,636
@@ -245,7 +245,7 @@ FBUGGY_MIS:
 		Sequence: turret-mis
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -268,7 +268,7 @@ FBUGGY_MORTAR:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 7
-		Speed: 90
+		Speed: 127
 		Crushes: crate
 	Health:
 		HP: 400
@@ -292,7 +292,7 @@ FBUGGY_MORTAR:
 		Sequence: turret-mortar
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -314,11 +314,11 @@ FTRUCK_FLAMER:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 70
+		Speed: 99
 	Health:
 		HP: 550
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 	Armament@primary:
 		Weapon: AssaultTruckMG
 		MuzzleSequence: muzzle
@@ -327,7 +327,7 @@ FTRUCK_FLAMER:
 		LocalOffset: 636,0,1344
 	Turreted:
 		TurnSpeed: 4
-		Offset: -256,0,0
+		Offset: -362,0,0
 	AttackTurreted:
 	AutoTarget:
 	RenderSprites:
@@ -341,7 +341,7 @@ FTRUCK_FLAMER:
 		Sequence: turret-flamer
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -363,11 +363,11 @@ FTRUCK_MORTAR:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 70
+		Speed: 99
 	Health:
 		HP: 550
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Armament@primary:
 		Weapon: BuggyMortar
 		LocalOffset: 495,0,1980
@@ -376,7 +376,7 @@ FTRUCK_MORTAR:
 		MuzzlePalette: apolra50alpha
 	Turreted:
 		TurnSpeed: 4
-		Offset: -256,0,0
+		Offset: -362,0,0
 	AttackTurreted:
 	AutoTarget:
 	RenderSprites:
@@ -390,7 +390,7 @@ FTRUCK_MORTAR:
 		Sequence: turret-mortar
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -412,11 +412,11 @@ FTRUCK_FLAK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 70
+		Speed: 99
 	Health:
 		HP: 550
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Armament@primary:
 		Weapon: BuggyFlak
 		LocalOffset: 495,181,1344, 495,-181,1344
@@ -427,7 +427,7 @@ FTRUCK_FLAK:
 		RecoilRecovery: 10
 	Turreted:
 		TurnSpeed: 4
-		Offset: -256,0,0
+		Offset: -362,0,0
 	AttackTurreted:
 	AutoTarget:
 	RenderSprites:
@@ -443,7 +443,7 @@ FTRUCK_FLAK:
 		Sequence: barrel-flak
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -464,12 +464,12 @@ GREMLIN_HCAN:
 		VoiceSet: Gremlin
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 5
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Turreted:
 		TurnSpeed: 4
 	Armament@primary:
@@ -512,12 +512,12 @@ GREMLIN_MORTAR:
 		VoiceSet: Gremlin
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 4
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -560,12 +560,12 @@ GREMLIN_90MM:
 		VoiceSet: Gremlin
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 5
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 4
 	Armament@primary:
@@ -608,12 +608,12 @@ TAURUS_MG:
 		VoiceSet: Taurus
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Water: 50
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Health:
 		HP: 780
 	Cargo:
@@ -623,7 +623,7 @@ TAURUS_MG:
 		UnloadVoice: Unload
 	Turreted:
 		TurnSpeed: 5
-		Offset: -64,0,0
+		Offset: -91,0,0
 	Armament@primary:
 		Weapon: TaurusMG
 		LocalOffset: 778,181,1202, 778,-181,1202
@@ -679,12 +679,12 @@ TAURUS_HCAN:
 		VoiceSet: Taurus
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Water: 50
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Health:
 		HP: 780
 	Cargo:
@@ -694,7 +694,7 @@ TAURUS_HCAN:
 		UnloadVoice: Unload
 	Turreted:
 		TurnSpeed: 5
-		Offset: -64,0,0
+		Offset: -91,0,0
 	Armament@primary:
 		Weapon: ForgHECannon
 		LocalOffset: 1131,311,919, 1131,-311,919
@@ -749,12 +749,12 @@ TAURUS_MIS:
 		VoiceSet: Taurus
 		Volume: 4
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Water: 50
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	Health:
 		HP: 780
 	Cargo:
@@ -764,7 +764,7 @@ TAURUS_MIS:
 		UnloadVoice: Unload
 	Turreted:
 		TurnSpeed: 5
-		Offset: -64,0,0
+		Offset: -91,0,0
 	Armament@primary:
 		Weapon: ForgottenT2Missile
 		LocalOffset: 362,255,1086, 362,-255,1086
@@ -817,12 +817,12 @@ LIZARD_MG:
 		VoiceSet: Grunt
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	Health:
 		HP: 850
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -866,12 +866,12 @@ LIZARD_90MM:
 		VoiceSet: Grunt
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	Health:
 		HP: 850
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -914,12 +914,12 @@ LIZARD_122MM:
 		VoiceSet: Grunt
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	Health:
 		HP: 850
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -964,9 +964,9 @@ DIGGER_MIS:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	Mobile:
-		Speed: 55
+		Speed: 78
 		TurnSpeed: 4
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Turreted:
@@ -1026,13 +1026,13 @@ DIGGER_MORTAR:
 		VoiceSet: Digger
 		Volume: 2
 	Mobile:
-		Speed: 55
+		Speed: 78
 		TurnSpeed: 4
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -1092,13 +1092,13 @@ DIGGER_122MM:
 		VoiceSet: Digger
 		Volume: 2
 	Mobile:
-		Speed: 55
+		Speed: 78
 		TurnSpeed: 4
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -1159,12 +1159,12 @@ BISON_130MM:
 		VoiceSet: Marauder
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 4
 	Health:
 		HP: 1430
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
@@ -1223,12 +1223,12 @@ BISON_145MM:
 		VoiceSet: Marauder
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 3
 	Health:
 		HP: 1430
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 2
 	Armament@primary:
@@ -1288,12 +1288,12 @@ BISON_180MM:
 		VoiceSet: Marauder
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 3
 	Health:
 		HP: 1430
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Turreted:
 		TurnSpeed: 2
 	Armament@primary:
@@ -1337,12 +1337,12 @@ AUROCH_130MM:
 		VoiceSet: MammothApocalypse
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 2
 	Armament@primary:
@@ -1399,15 +1399,15 @@ AUROCH_120MMT:
 		VoiceSet: MammothApocalypse
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 2
-		Offset: 128,0,0
+		Offset: 181,0,0
 	Armament@primary:
 		Name: primary
 		Weapon: auroch120mmx
@@ -1484,12 +1484,12 @@ AUROCH_180MM:
 		VoiceSet: MammothApocalypse
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Turreted:
 		TurnSpeed: 2
 	Armament@primary:
@@ -1541,10 +1541,10 @@ RAGNAROK:
 	Health:
 		HP: 900
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 1
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Armament@primary:
 		Weapon: RagnarokCannon
 		LocalOffset: 1202,0,2121
@@ -1607,7 +1607,7 @@ AVALANCHE:
 		VoiceSet: MammothApocalypse
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 2
 	Health:
 		HP: 8000
@@ -1618,7 +1618,7 @@ AVALANCHE:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 	Turreted:
 		TurnSpeed: 1
 	Armament@primary1:

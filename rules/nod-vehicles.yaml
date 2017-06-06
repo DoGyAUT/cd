@@ -19,9 +19,9 @@ NMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 50
+		Speed: 71
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	MustBeDestroyed:
 		RequiredForShortGame: True
 	BaseBuilding:
@@ -69,7 +69,7 @@ NIHARV:
 		PipCount: 7
 	-DamagedByTerrain@Veins:
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Tiberium: 100
 	Health:
@@ -83,9 +83,9 @@ NIHARV:
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 220,0,0
+		Offset: 311,0,0
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelTurret:
@@ -130,7 +130,7 @@ NTHARV:
 		PipCount: 7
 	-DamagedByTerrain@Veins:
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Tiberium: 100
 	Health:
@@ -141,7 +141,7 @@ NTHARV:
 	Cloak:
 		RequiresCondition: crate-cloak || cloakgenerator || technology
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	-ProducibleWithLevel:
 	RenderSprites:
 	RenderVoxels:
@@ -187,13 +187,13 @@ NPHARV:
 		Modifier: 75
 	-DamagedByTerrain@Veins:
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Tiberium: 100
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	-ProducibleWithLevel:
 	RenderSprites:
 	RenderVoxels:
@@ -227,7 +227,7 @@ SAPC:
 		Volume: 5
 	Mobile:
 		TurnSpeed: 5
-		Speed: 80
+		Speed: 113
 		RequiresCondition: !(empdisable && !invulnerability) && !loading
 		Subterranean: true
 		SubterraneanCondition: submerged
@@ -245,7 +245,7 @@ SAPC:
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 		RequiresCondition: !submerged
 	Cargo:
 		Types: Infantry
@@ -305,12 +305,12 @@ BGGY:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 8
-		Speed: 100
+		Speed: 141
 		Crushes: crate
 	Health:
 		HP: 450
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Armament@primary:
 		Weapon: RaiderGunAttack
 		LocalOffset: 283,0,849
@@ -334,9 +334,9 @@ BGGY:
 		RequiresCondition: upgrade.laser
 	Turreted:
 		TurnSpeed: 7
-		Offset: -96,0,0
+		Offset: -136,0,0
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	AttackTurreted:
 	AutoTarget:
@@ -367,16 +367,16 @@ GORRAN:
 		VoiceSet: Cheetah
 		Volume: 2
 	Mobile:
-		Speed: 80
+		Speed: 113
 		TurnSpeed: 4
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Turreted:
 		TurnSpeed: 3
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: GorranCannon
@@ -430,14 +430,14 @@ BIKE:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 17
-		Speed: 120
+		Speed: 170
 		Crushes: crate
 	Health:
 		HP: 350
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: BikeMissile
@@ -469,15 +469,15 @@ CHEETAH:
 		VoiceSet: Cheetah
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	Health:
 		HP: 1500
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
-		Offset: 160, 0, 0
+		Offset: 226,0,0
 	Armament@PRIMARY:
 		Weapon: PhantomCannon
 		LocalOffset: 1273,141,849
@@ -530,10 +530,10 @@ REPAIR:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	Mobile:
-		Speed: 70
+		Speed: 99
 		TurnSpeed: 5
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Armament:
 		Weapon: Repair
 		Cursor: repair
@@ -549,10 +549,10 @@ REPAIR:
 	RenderVoxels:
 	ProximityExternalCondition:
 		Condition: repair_heal
-		Range: 5c0
+		Range: 7c73
 	WithRangeCircle:
 		Color: FFFFFFFF
-		Range: 5c0
+		Range: 7c73
 	WithVoxelBody:
 	WithVoxelTurret:
 		Recoils: False
@@ -575,15 +575,15 @@ FTNK:
 		VoiceSet: Devil
 		Volume: 2
 	Mobile:
-		Speed: 75
+		Speed: 106
 		TurnSpeed: 4
 	Health:
 		HP: 650
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Turreted:
 		TurnSpeed: 3
-		Offset: 160, 0, 0
+		Offset: 226,0,0
 	Armament@primary1:
 		Weapon: PyradonGun
 		LocalOffset: 1344,141,990
@@ -629,13 +629,13 @@ RECKONER:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 60
+		Speed: 85
 	Health:
 		HP: 1080
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	AttackGarrisoned:
-		PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
+		PortOffsets: 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86
 	Cargo:
@@ -667,16 +667,16 @@ TERMITE:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 3
-		Speed: 50
+		Speed: 71
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	Health:
 		HP: 2600
 	Turreted:
 		Turret: primary
 		TurnSpeed: 2
-		Offset: 200,0,0
+		Offset: 283,0,0
 	Turreted@deployed:
 		Turret: secondary
 		TurnSpeed: 6
@@ -769,13 +769,13 @@ HAILSTORM:
 		VoiceSet: Cheetah
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 5
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Armament@primary:
 		Name: Primary
 		Weapon: HailstormMissile
@@ -809,7 +809,7 @@ HAILSTORM:
 		Prerequisites: upgrade.tibgas
 	Turreted:
 		TurnSpeed: 4
-		Offset: -128,0,85
+		Offset: -181,0,120
 	AttackTurreted:
 		Armaments: Primary
 	AutoTarget:
@@ -863,15 +863,15 @@ NHWTZ:
 	Health:
 		HP: 500
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 2
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 4
 		RealignDelay: -1
-		Offset: -256,0,0
+		Offset: -362,0,0
 	Armament@primary:
 		Name: Primary
 		Weapon: SpecterGun
@@ -967,7 +967,7 @@ SUBTANK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 4
-		Speed: 70
+		Speed: 99
 		Subterranean: true
 		SubterraneanCondition: submerged
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
@@ -984,7 +984,7 @@ SUBTANK:
 	Health:
 		HP: 650
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 		RequiresCondition: !submerged
 	Armament@primary:
 		Weapon: DevilsTongueGun
@@ -1049,11 +1049,11 @@ STNK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 10
-		Speed: 90
+		Speed: 127
 	Health:
 		HP: 820
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Cloak@self:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -1120,7 +1120,7 @@ AVATAR:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -1137,7 +1137,7 @@ AVATAR:
 		HealIfBelow: 1
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 8
 	AttackFrontal:
@@ -1159,9 +1159,9 @@ AVATAR:
 	WithMuzzleOverlay:
 	ProximityExternalCondition:
 		Condition: avatarboost
-		Range: 6c0
+		Range: 8c497
 	WithRangeCircle:
-		Range: 6c0
+		Range: 8c497
 		Type: avatarboost
 	HitShape:
 
@@ -1179,7 +1179,7 @@ MONTAUK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 2
-		Speed: 71
+		Speed: 100
 	Health:
 		HP: 6500
 	SelfHealing:
@@ -1189,7 +1189,7 @@ MONTAUK:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 	Armament@nose:
 		Weapon: BansheeCannon
 		LocalOffset: 1188,0,1202
@@ -1260,7 +1260,7 @@ WEED:
 		PipCount: 4
 	-DamagedByTerrain@Veins:
 	Mobile:
-		Speed: 71
+		Speed: 100
 		TurnSpeed: 5
 	Health:
 		HP: 780
@@ -1271,7 +1271,7 @@ WEED:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	-ProducibleWithLevel:
 	RenderSprites:
 	RenderVoxels:

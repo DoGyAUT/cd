@@ -1,6 +1,6 @@
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 0c602
 		Damage: 50
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -22,7 +22,7 @@ UnitExplode:
 
 UnitExplodeEpic:
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c424
 		Damage: 300
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -49,7 +49,7 @@ UnitExplodeEpic:
 
 PyradonExplosion:
 	Warhead@1Dam: SpreadDamage
-		Spread: 768
+		Spread: 1c62
 		Damage: 500
 		Versus:
 			Infantry: 100
@@ -70,7 +70,7 @@ PyradonExplosion:
 
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 0c602
 		Damage: 120
 		Versus:
 			Infantry: 100
@@ -91,7 +91,7 @@ UnitExplodeSmall:
 
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 0c602
 		Damage: 75
 		Versus:
 			Infantry: 100
@@ -112,7 +112,7 @@ UnitExplodeSmaller:
 
 UnitExplodeHeli:
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 0c602
 		Damage: 300
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -134,7 +134,7 @@ UnitExplodeHeli:
 
 UnitExplodePlane:
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 0c724
 		Damage: 700
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -156,7 +156,7 @@ UnitExplodePlane:
 
 UnitExplodeCrapJet:
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 0c724
 		Damage: 900
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -177,7 +177,7 @@ UnitExplodeCrapJet:
 
 UnitExplodeCyborg:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c724
 		Damage: 100
 		Versus:
 			Infantry: 100
@@ -225,7 +225,7 @@ TiberiumExplosionSilo:
 
 SmallTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c724
 		Damage: 100
 		Versus:
 			Infantry: 100
@@ -247,7 +247,7 @@ SmallTiberiumExplosion:
 
 LargeTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c424
 		Damage: 150
 		Versus:
 			Infantry: 100
@@ -269,7 +269,7 @@ LargeTiberiumExplosion:
 
 LargeVeinExplosion:
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 2c848
 		Damage: 200
 		Versus:
 			Infantry: 100
@@ -288,10 +288,10 @@ LargeVeinExplosion:
 
 SmallDebris:
 	ReloadDelay: 60
-	Range: 4c0
+	Range: 5c673
 	Report:
 	Projectile: BulletAS
-		Speed: 50, 125
+		Speed: 0c71, 0c177
 		LaunchAngle: 45, 135
 		Image: dbrissm
 		TrailImage: small_smoke_trail
@@ -301,10 +301,10 @@ SmallDebris:
 
 LargeDebris:
 	ReloadDelay: 60
-	Range: 4c0
+	Range: 5c673
 	Report:
 	Projectile: BulletAS
-		Speed: 50, 125
+		Speed: 0c71, 0c177
 		LaunchAngle: 45, 135
 		Image: dbrislg
 		TrailImage: durasmoke
@@ -314,10 +314,10 @@ LargeDebris:
 
 Sparky:
 	ReloadDelay: 10
-	Range: 4c0
+	Range: 5c673
 	Report:
 	Projectile: BulletAS
-		Speed: 32, 64, 96, 32, 64, 96, 32, 64, 96, 32, 64, 96
+		Speed: 0c45, 0c91, 0c136, 0c45, 0c91, 0c136, 0c45, 0c91, 0c136, 0c45, 0c91, 0c136
 		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
 		Image: spark
 		Sequences: 1
@@ -325,10 +325,10 @@ Sparky:
 
 Bloody:
 	ReloadDelay: 10
-	Range: 1c0
+	Range: 1c424
 	Report:
 	Projectile: BulletAS
-		Speed: 64, 96, 128
+		Speed: 0c91, 0c136, 0c181
 		LaunchAngle: 45, 90, 135
 		Image: blood
 		Palette: player
@@ -337,10 +337,10 @@ Bloody:
 
 Flyman:
 	ReloadDelay: 10
-	Range: 4c0
+	Range: 5c673
 	Report: dedman1.aud, dedman2.aud, dedman3.aud, dedman4.aud, dedman5.aud, dedman6.aud
 	Projectile: BulletAS
-		Speed: 32, 125
+		Speed: 0c45, 0c177
 		LaunchAngle: 90, 135
 		Image: flyman
 		Palette: player
@@ -367,28 +367,28 @@ Demolish:
 
 Heal:
 	ReloadDelay: 80
-	Range: 2c849
+	Range: 4c1
 	Report: healer1.aud
 	ValidTargets: Infantry
 	Projectile: BulletAS
-		Speed: 1c682
+		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		ValidTargets: Infantry
 		ValidStances: Ally
-		Spread: 213
+		Spread: 0c301
 		Damage: -50
 
 Repair:
 	ReloadDelay: 80
-	Range: 1c819
+	Range: 2c558
 	Report: repair11.aud
 	ValidTargets: Repair
 	Projectile: BulletAS
-		Speed: 1c682
+		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
-		Spread: 213
+		Spread: 0c301
 		Damage: -50
 		ValidTargets: Repair
 	Warhead@1Eff: CreateEffect
@@ -397,35 +397,35 @@ Repair:
 
 MechanicRepair:
 	ReloadDelay: 80
-	Range: 1c819
+	Range: 2c558
 	Report: fixit1.aud
 	ValidTargets: Repair
 	Projectile: BulletAS
-		Speed: 1c682
+		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
-		Spread: 213
+		Spread: 0c301
 		Damage: -50
 		ValidTargets: Repair
 
 TiberiumHeal:
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 0c59
 		Damage: -10
 
 Vulcan:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 35
-	Range: 5c0
+	Range: 7c73
 	Report: mgfire.aud
 	Burst: 2
 	Projectile: BulletAS
 		bullet:
-		Inaccuracy: 0c128
+		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 40
 
 WatchSniper:
@@ -433,17 +433,17 @@ WatchSniper:
 	Inherits@wh: ^BulletWH
 	ValidTargets: Ground
 	ReloadDelay: 60
-	Range: 10c0
+	Range: 14c146
 	Report: sniper1.aud, sniper2.aud, sniper3.aud
 	Projectile: BulletAS
-		Speed: 2c512
-		Inaccuracy: 0c64
+		Speed: 3c548
+		Inaccuracy: 0c91
 		ContrailLength: 10
 		ContrailColor: FFFFFF
-		ContrailWidth: 15
+		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
-		Spread: 0c64
+		Spread: 0c91
 		Damage: 250
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
@@ -453,31 +453,31 @@ CivilianPistol:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 20
-	Range: 4c0
+	Range: 5c673
 	Report: pistol.aud
 	Projectile: BulletAS
 		Image: bullet
-		Speed: 1c682
+		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 0c181
 		Damage: 20
 
 RPGTower:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 80
-	Range: 8c0
+	Range: 11c321
 	Report: glnch4.aud
 	Projectile: BulletAS
-		Speed: 384
+		Speed: 0c543
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 62
 		Image: canister
-		Inaccuracy: 1c0
+		Inaccuracy: 1c424
 		Palette: player
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 200
 	Warhead@2Eff: CreateEffect
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
@@ -489,25 +489,25 @@ UmagonSniper:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 60
-	Range: 6c768
+	Range: 9c559
 	Report: silencer.aud
 	Projectile: BulletAS
-		Speed: 1c682
+		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 0c59
 		Damage: 150
 
 DogBite:
 	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
 	InvalidTargets: Vehicle, Buildings
 	ReloadDelay: 20
-	Range: 1c512
+	Range: 2c124
 	Report: dog_a1.aud, dog_m1.aud, dog_s1.aud
 	Projectile: BulletAS
-		Speed: 3c768
+		Speed: 5c311
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c64
+		Spread: 0c91
 		Damage: 100
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 		Versus:
@@ -518,12 +518,12 @@ FiendShard:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 30
 	Burst: 3
-	Range: 5c0
+	Range: 7c73
 	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 213
+		Speed: 0c301
 		Image: CRYSTAL4
-		Inaccuracy: 512
+		Inaccuracy: 0c724
 		Shadow: true
 		LaunchAngle: 60
 		Palette: greentiberium
@@ -540,18 +540,18 @@ FiendShardGreen:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 30
 	Burst: 3
-	Range: 5c0
+	Range: 7c73
 	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 0c256
+		Speed: 0c362
 		Image: CRYSTAL4
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 		Shadow: true
 		LaunchAngle: 60
 		Palette: greentiberium
 		ContrailLength: 10
 		ContrailColor: 7EFF01
-		ContrailWidth: 20
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Damage: 35
 		Versus:
@@ -569,18 +569,18 @@ FiendShardBlue:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 30
 	Burst: 3
-	Range: 6c0
+	Range: 8c497
 	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 0c512
+		Speed: 0c724
 		Image: CRYSTAL4
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 		Shadow: true
 		LaunchAngle: 60
 		Palette: bluetiberium
 		ContrailLength: 10
 		ContrailColor: 5980FF
-		ContrailWidth: 20
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Damage: 45
 	Warhead@2Eff: CreateEffect
@@ -597,18 +597,18 @@ FiendShardRed:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 30
 	Burst: 4
-	Range: 6c0
+	Range: 8c497
 	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 0c768
+		Speed: 1c62
 		Image: CRYSTAL4
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 		Shadow: true
 		LaunchAngle: 60
 		Palette: redtiberium
 		ContrailLength: 10
 		ContrailColor: FF0101
-		ContrailWidth: 20
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Damage: 55
 	Warhead@2Eff: CreateEffect
@@ -624,18 +624,18 @@ FiendShardPurple:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 30
 	Burst: 4
-	Range: 7c0
+	Range: 9c921
 	Report: fiend2.aud
 	Projectile: BulletAS
-		Speed: 0c768
+		Speed: 1c62
 		Image: CRYSTAL4
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 		Shadow: true
 		LaunchAngle: 60
 		Palette: purpletiberium
 		ContrailLength: 10
 		ContrailColor: C864FF
-		ContrailWidth: 20
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Damage: 55
 	Warhead@2Eff: CreateEffect
@@ -651,10 +651,10 @@ FiendShardPurple:
 SlimeAttack:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 60
-	Range: 2c0
+	Range: 2c848
 	Report: vicer1.aud
 	Projectile: BulletAS
-		Speed: 426
+		Speed: 0c602
 		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 100
@@ -662,10 +662,10 @@ SlimeAttack:
 SmallSlimeAttack:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 60
-	Range: 2c0
+	Range: 2c848
 	Report: vicer1.aud
 	Projectile: BulletAS
-		Speed: 426
+		Speed: 0c602
 		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 50
@@ -673,17 +673,17 @@ SmallSlimeAttack:
 Tentacle:
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 80
-	Range: 1c384
+	Range: 1c967
 	Report: floatk1.aud
 	Projectile: BulletAS
-		Speed: 426
+		Speed: 0c602
 	InvalidTargets: Wall, Bridge
 	Warhead@1Dam: SpreadDamage
 		Damage: 160
 		InvalidTargets: Wall, Bridge
 		DamageTypes: TriggerProne, TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
-		Range: 1c512
+		Range: 2c124
 		Duration: 50
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Building

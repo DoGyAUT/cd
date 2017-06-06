@@ -15,7 +15,7 @@ GAWALL:
 	Health:
 		HP: 400
 	BlocksProjectiles:
-		Height: 640
+		Height: 0c905
 	Crushable:
 		CrushClasses: heavywall
 	LineBuild:
@@ -67,7 +67,7 @@ GASILO:
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	RenderSprites:
 	WithSpriteBody:
 	WithSiloAnimation:
@@ -104,13 +104,13 @@ GAMG:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 150,0,-100
+		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -142,7 +142,7 @@ GAMG:
 		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
@@ -168,13 +168,13 @@ GAMG2:
 	Health:
 		HP: 1800
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 150,0,-100
+		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -234,7 +234,7 @@ GAMG2:
 		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
@@ -260,17 +260,17 @@ GASENTUR:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 9c0
+		Range: 12c745
 		CloakTypes: Cloak, Underground
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 170,0,-100
+		Offset: 240,0,-141
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -318,13 +318,13 @@ GAMIS:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 150,0,-100
+		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -371,13 +371,13 @@ GACAN:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: 150,0,-100
+		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -402,7 +402,7 @@ GACAN:
 		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
@@ -428,13 +428,13 @@ GAMORTAR:
 	Health:
 		HP: 1000
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
-		Offset: -100,0,200
+		Offset: -141,0,283
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
@@ -447,8 +447,8 @@ GAMORTAR:
 		LocalOffset: 1061,0,2828
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
-		Recoil: 50
-		RecoilRecovery: 10
+		Recoil: 0c71
+		RecoilRecovery: 0c14
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
@@ -459,7 +459,7 @@ GAMORTAR:
 		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
@@ -484,7 +484,7 @@ FTWR:
 	Health:
 		HP: 3000
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	BodyOrientation:
 		QuantizedFacings: 32
 	AutoTarget:
@@ -536,11 +536,11 @@ FTWR:
 		Amount: -100
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 8c0
+		Range: 11c321
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	BaseProvider:
-		Range: 8c0
+		Range: 11c321
 	ActorLostNotification:
 		Notification: CriticalStructureLost
 	HitShape:
@@ -567,7 +567,7 @@ GAFORT:
 	Health:
 		HP: 3000
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Turreted:
 		TurnSpeed: 255
 	-QuantizeFacingsFromSequence:
@@ -580,7 +580,7 @@ GAFORT:
 	AutoTarget:
 	AttackGarrisoned:
 		Armaments: garrisoned
-		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortOffsets: 543,0,181, 317,-482,181, -317,-482,181, -543,0,181, -317,482,181, 317,482,181
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86
 	Power:
@@ -638,7 +638,7 @@ GAPLUG:
 	Health:
 		HP: 5200
 	RevealsShroud:
-		Range: 2c0
+		Range: 2c848
 	IonCannonPower:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Icon: ioncannon

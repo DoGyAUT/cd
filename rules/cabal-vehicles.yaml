@@ -17,7 +17,7 @@ KMCV:
 		VoiceSet: Cmcv
 		Volume: 2
 	Mobile:
-		Speed: 70
+		Speed: 99
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Clear: 100
@@ -36,9 +36,9 @@ KMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 50
+		Speed: 71
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	MustBeDestroyed:
 		RequiredForShortGame: True
 	BaseBuilding:
@@ -87,7 +87,7 @@ KHARV:
 		DeliverVoice: Move
 		PipCount: 7
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Clear: 100
 			Road: 100
@@ -106,7 +106,7 @@ KHARV:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	RenderSprites:
 	RenderVoxels:
 	-WithVoxelBody:
@@ -136,7 +136,7 @@ DREADFIRE:
 		Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 5
-		Speed: 50
+		Speed: 71
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -145,7 +145,7 @@ DREADFIRE:
 		Interval: 18
 		RequiresCondition: walker
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 	Health:
 		HP: 1850
 	AttackFrontal:
@@ -191,18 +191,18 @@ REAPER:
 		Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 8
-		Speed: 75
+		Speed: 106
 		Crushes: crate
 	Health:
 		HP: 1000
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	AttackFrontal:
 	AutoTarget:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	Armament@primary:
 		Weapon: ReaperCannon
@@ -253,10 +253,10 @@ GOLEM:
 		Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- Repairs vehicles and cyborgs with AOE\n- Cloakes everyting in the repair range if deployed\n- Repairs vehicles directly\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 3
-		Speed: 55
+		Speed: 78
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Health:
 		HP: 520
 	SelfHealing:
@@ -283,15 +283,15 @@ GOLEM:
 	-ThrowsShrapnel@human:
 	ProximityExternalCondition:
 		Condition: repair_heal
-		Range: 5c0
+		Range: 7c73
 	WithRangeCircle:
 		Color: FFFFFFFF
-		Range: 5c0
+		Range: 7c73
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 	ProximityExternalCondition:
 		Condition: cloakgenerator
-		Range: 5c0
+		Range: 7c73
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
 		AffectsParent: True
@@ -317,7 +317,7 @@ TARANTULA:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 6
-		Speed: 55
+		Speed: 78
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -328,7 +328,7 @@ TARANTULA:
 	Health:
 		HP: 960
 	RevealsShroud:
-		Range: 13c0
+		Range: 18c394
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -406,9 +406,9 @@ SILVER:
 		CanDeployOnRamps: True
 		AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
 	Aircraft:
-		CruiseAltitude: 4c0
-		AltitudeVelocity: 0c256
-		Speed: 100
+		CruiseAltitude: 5c673
+		AltitudeVelocity: 0c362
+		Speed: 141
 		TurnSpeed: 10
 		CanHover: True
 		LandWhenIdle: False
@@ -452,17 +452,17 @@ KRONOS:
 		VoiceSet: Husk
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 		TerrainSpeeds:
 			Water: 50
 	Health:
 		HP: 2080
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 2
-		Offset: -256,0,32
+		Offset: -362,0,45
 	Armament@PRIMARY:
 		Weapon: KronosCannon
 		LocalOffset: 1980,0,1273
@@ -516,14 +516,14 @@ FURY:
 		VoiceSet: Husk
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 2
 		TerrainSpeeds:
 			Water: 80
 	Health:
 		HP: 10400
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Turreted@main:
 		Turret: primary
 		TurnSpeed: 1
@@ -607,7 +607,7 @@ GARGANTUA:
 		Class: Gargantua
 	Mobile:
 		TurnSpeed: 5
-		Speed: 50
+		Speed: 71
 	Health:
 		HP: 13000
 	SelfHealing:
@@ -617,7 +617,7 @@ GARGANTUA:
 		HealIfBelow: 50
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 	AttackFrontal:
 	AutoTarget:
 	BodyOrientation:

@@ -18,9 +18,9 @@ GMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 50
+		Speed: 71
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	MustBeDestroyed:
 		RequiredForShortGame: True
 	BaseBuilding:
@@ -67,14 +67,14 @@ GHARV:
 		DeliverVoice: Move
 		PipCount: 7
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TerrainSpeeds:
 			Tiberium: 100
 	-DamagedByTerrain@Veins:
 	Health:
 		HP: 1500
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	RenderSprites:
 	RenderVoxels:
 	-WithVoxelBody:
@@ -105,13 +105,13 @@ APC:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 75
+		Speed: 106
 		TerrainSpeeds:
 			Water: 50
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -128,7 +128,7 @@ APC:
 		MuzzlePalette: apolra50alpha
 	Turreted:
 		TurnSpeed: 4
-		Offset: -128,0,0
+		Offset: -181,0,0
 	AttackTurreted:
 	AutoTarget:
 	GrantConditionOnTerrain:
@@ -150,7 +150,7 @@ APC:
 		StationaryInterval: 18
 		MovingInterval: 6
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	HitShape:
 
@@ -167,11 +167,11 @@ SMECH:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 	Health:
 		HP: 840
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
 	AttackFrontal:
@@ -210,7 +210,7 @@ VULTURE:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 4
-		Speed: 55
+		Speed: 78
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -221,7 +221,7 @@ VULTURE:
 	Health:
 		HP: 950
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -230,7 +230,7 @@ VULTURE:
 	WithSpriteTurret:
 		Recoils: True
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	AutoTarget:
 	Armament@primary:
@@ -270,17 +270,17 @@ GTMTNK:
 		VoiceSet: Archon
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	GrantConditionOnMovement@engine:
 		Condition: tracks
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 3
-		Offset: 96,0,0
+		Offset: 136,0,0
 	Armament@PRIMARY:
 		Weapon: 90mm
 		LocalOffset: 1626,0,849
@@ -316,12 +316,12 @@ GTHTNK:
 		VoiceSet: Predator
 		Volume: 2
 	Mobile:
-		Speed: 55
+		Speed: 78
 		TurnSpeed: 3
 	Health:
 		HP: 1600
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 2
 	Armament@PRIMARY:
@@ -360,7 +360,7 @@ HVR:
 		VoiceSet: Slingshot
 		Volume: 2
 	Mobile:
-		Speed: 70
+		Speed: 99
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Clear: 100
@@ -380,7 +380,7 @@ HVR:
 	Health:
 		HP: 500
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Armament@primary:
 		Weapon: HoverMRLSMissile
 		LocalOffset: 141,181,543, 141,-181,543
@@ -393,7 +393,7 @@ HVR:
 		MuzzlePalette: apolra50alpha
 	Turreted:
 		TurnSpeed: 5
-		Offset: -256,0,85
+		Offset: -362,0,120
 	AttackTurreted:
 	AutoTarget:
 	RenderSprites:
@@ -420,12 +420,12 @@ AIRBLAST:
 		VoiceSet: Gmcv
 		Volume: 2
 	Mobile:
-		Speed: 60
+		Speed: 85
 		TurnSpeed: 4
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Transforms:
 		IntoActor: ftwr
 		Offset: -1,-1
@@ -453,11 +453,11 @@ TRITON:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 	Health:
 		HP: 720
 	RevealsShroud:
-		Range: 12c0
+		Range: 16c994
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -506,15 +506,15 @@ TRITON:
 		VoiceSet: Mammoth
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 	Health:
 		HP: 2400
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	Turreted:
 		TurnSpeed: 2
-		Offset: 64,0,0
+		Offset: 91,0,0
 	Armament@primary:
 		Name: primary
 		Weapon: 120mm
@@ -575,7 +575,7 @@ MMCH:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -586,7 +586,7 @@ MMCH:
 	Health:
 		HP: 1440
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -600,8 +600,8 @@ MMCH:
 		LocalOffset: 1188,458,1485
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
-		Recoil: 100
-		RecoilRecovery: 10
+		Recoil: 0c141
+		RecoilRecovery: 0c14
 	AutoTarget:
 	AttackMove:
 	Selectable:
@@ -623,15 +623,15 @@ POSEIDON:
 		VoiceSet: Mammoth
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		TurnSpeed: 3
 	Health:
 		HP: 3900
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Turreted:
 		TurnSpeed: 2
-		Offset: 128,0,0
+		Offset: 181,0,0
 	Armament@primary:
 		Weapon: PoseidonCannon
 		LocalOffset: 1768,0,820
@@ -672,7 +672,7 @@ MMCH2:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -683,7 +683,7 @@ MMCH2:
 	Health:
 		HP: 3900
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -712,7 +712,7 @@ MMCH2:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	HitShape:
 
@@ -737,18 +737,18 @@ SONIC:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 3
-		Speed: 40
+		Speed: 57
 	Health:
 		HP: 2200
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Armament@Color1:
 		Weapon: ColossusGun
 		LocalOffset: 362,0,1146
 	AttackTurreted:
 	Turreted:
 		TurnSpeed: 2
-		Offset: 64,0,0
+		Offset: 91,0,0
 	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
@@ -773,15 +773,15 @@ BEHEMOTH:
 		VoiceSet: Atlas
 		Volume: 2
 	Mobile:
-		Speed: 50
+		Speed: 71
 		TurnSpeed: 3
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Turreted:
 		TurnSpeed: 2
-		Offset: -180,0,0
+		Offset: -255,0,0
 	Armament@PRIMARY:
 		Weapon: AtlasGun
 		LocalOffset: 2263,0,1414
@@ -816,7 +816,7 @@ JUGG:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 55
+		Speed: 78
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	GrantConditionOnMovement@steps:
 		Condition: walker
@@ -830,11 +830,11 @@ JUGG:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	Turreted:
 		TurnSpeed: 4
 		RealignDelay: -1
-		Offset: 0,0,512
+		Offset: 0,0,724
 		InitialFacing: 96
 	AttackTurreted:
 		RequiresCondition: deployed
@@ -896,7 +896,7 @@ CYCLOPS:
 		VoiceSet: Predator
 		Volume: 2
 	Mobile:
-		Speed: 65
+		Speed: 92
 		TurnSpeed: 4
 		TerrainSpeeds:
 			Clear: 100
@@ -915,17 +915,17 @@ CYCLOPS:
 	Health:
 		HP: 500
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Armament:
 		Weapon: CyclopsCannon
 		LocalOffset: 1838,0,778
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
-		Recoil: 100
-		RecoilRecovery: 10
+		Recoil: 0c141
+		RecoilRecovery: 0c14
 	Turreted:
 		TurnSpeed: 3
-		Offset: -256,0,0
+		Offset: -362,0,0
 	AttackTurreted:
 	AutoTarget:
 	RenderSprites:
@@ -948,7 +948,7 @@ HMEC:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 2
-		Speed: 38
+		Speed: 54
 	Health:
 		HP: 6500
 	SelfHealing:
@@ -958,7 +958,7 @@ HMEC:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 	RenderSprites:
 	AttackFrontal:
 		FacingTolerance: 90
@@ -1021,7 +1021,7 @@ IONTANK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 2
-		Speed: 38
+		Speed: 54
 	Health:
 		HP: 5200
 	SelfHealing:
@@ -1033,7 +1033,7 @@ IONTANK:
 	Armor@Base:
 		Type: Vehicle
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Armament:
 		Weapon: LeviathanGun
 		LocalOffset: 919,0,1485

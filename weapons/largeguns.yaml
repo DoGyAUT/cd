@@ -2,32 +2,32 @@
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 120
-	Range: 6c768
+	Range: 9c559
 	Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 200
 
 PhantomCannon:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 130
-	Range: 6c768
+	Range: 9c559
 	Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 200
 
 122mmAP:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 140
-	Range: 6c768
+	Range: 9c559
 	Report: 90mm1.aud, 90mm2.aud, 90mm3.aud, 90mm4.aud
 	Projectile: BulletAS
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 350
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -39,12 +39,12 @@ PhantomCannon:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 200
-	Range: 6c768
+	Range: 9c559
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -56,12 +56,12 @@ PhantomCannon:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 220
-	Range: 6c768
+	Range: 9c559
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
-		Inaccuracy: 0c512
+		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 550
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -75,13 +75,13 @@ PhantomCannon:
 	ReloadDelay: 170
 	Burst: 1
 	BurstDelay: 10
-	Range: 6c768
+	Range: 9c559
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
-		Speed: 0c512
-		ContrailWidth: 20
+		Speed: 0c724
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 270
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -100,14 +100,14 @@ auroch120mmx:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
 	ReloadDelay: 220
-	Range: 10c0
+	Range: 14c146
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
-		Speed: 1c0
-		Inaccuracy: 0c512
-		ContrailWidth: 20
+		Speed: 1c424
+		Inaccuracy: 0c724
+		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 700
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -119,16 +119,16 @@ auroch120mmx:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 70
-	Range: 7c768
+	Range: 10c983
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
-		Speed: 0c512
-		Inaccuracy: 1c0
+		Speed: 0c724
+		Inaccuracy: 1c424
 		LaunchAngle: 62
 		ContrailLength: 10
-		ContrailWidth: 30
+		ContrailWidth: 0c42
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 400
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn

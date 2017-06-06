@@ -16,12 +16,12 @@ ORCA_F1:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 130
-		IdealSeparation: 768
+		Speed: 184
+		IdealSeparation: 1c62
 	Health:
 		HP: 500
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: OrcaF1Missiles
@@ -44,7 +44,7 @@ ORCA_F1:
 	WithVoxelBody:
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	SpawnActorOnDeath:
 		Actor: ORCA_F1.Husk
@@ -69,11 +69,11 @@ ORCA_F2:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 120
+		Speed: 170
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: OrcaF2Missiles
@@ -96,7 +96,7 @@ ORCA_F2:
 	WithVoxelBody:
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	SpawnActorOnDeath:
 		Actor: ORCA_F2.Husk
@@ -123,13 +123,13 @@ ORCA_TRAN:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 3
-		Speed: 90
+		Speed: 127
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 		Type: GroundPosition
 	AttackGarrisoned:
 		PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
@@ -144,7 +144,7 @@ ORCA_TRAN:
 	RenderVoxels:
 	WithVoxelBody:
 	ParaDrop:
-		DropRange: 4c0
+		DropRange: 5c673
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: ORCA_TRAN.Husk
@@ -160,7 +160,7 @@ ORCA_TROOP:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 5
-		Speed: 150
+		Speed: 212
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 		TakeoffSound: dropup1.aud
@@ -168,7 +168,7 @@ ORCA_TROOP:
 	Health:
 		HP: 940
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry
@@ -179,7 +179,7 @@ ORCA_TROOP:
 	RenderVoxels:
 	WithVoxelBody:
 	ParaDrop:
-		DropRange: 4c0
+		DropRange: 5c673
 	SpawnActorOnDeath:
 		Actor: ORCA_TROOP.Husk
 		Probability: 100
@@ -194,13 +194,13 @@ TRNSPORT:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 5
-		Speed: 180
+		Speed: 255
 		InitialFacing: 0
 		LandableTerrainTypes: Clear
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 		Type: GroundPosition
 	RenderSprites:
 	RenderVoxels:
@@ -218,13 +218,13 @@ ORCA_OXTRAN:
 		Name: OX-Transport
 	Aircraft:
 		CruisingCondition: cruising
-		CruiseAltitude: 4096
+		CruiseAltitude: 5c673
 		TurnSpeed: 1
-		Speed: 220
+		Speed: 311
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry
@@ -235,7 +235,7 @@ ORCA_OXTRAN:
 	RenderVoxels:
 	WithVoxelBody:
 	ParaDrop:
-		DropRange: 4c0
+		DropRange: 5c673
 	SpawnActorOnDeath:
 		Actor: ORCA_OXTRAN.Husk
 		Probability: 100
@@ -254,9 +254,9 @@ GUNNER:
 		Volume: 2
 	Aircraft:
 		CruisingCondition: cruising
-		CruiseAltitude: 8192
+		CruiseAltitude: 11c321
 		TurnSpeed: 2
-		Speed: 200
+		Speed: 283
 	Armament@small:
 		Weapon: GuardianTowerRailgun
 		LocalOffset: 0,0,0
@@ -269,7 +269,7 @@ GUNNER:
 	Health:
 		HP: 5000
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Turreted:
 		TurnSpeed: 360
@@ -279,7 +279,7 @@ GUNNER:
 	RenderVoxels:
 	WithVoxelBody:
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	HitShape:
 
@@ -296,11 +296,11 @@ ORCA_G:
 	Aircraft:
 		CruisingCondition: cruising
 		TurnSpeed: 5
-		Speed: 200
+		Speed: 283
 	Health:
 		HP: 500
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	RejectsOrders:
 	AttackBomber:
@@ -325,7 +325,7 @@ OXBOMBER:
 		Name: OX-Bomber
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 300
+		Speed: 424
 	-Voiced:
 	-Selectable:
 	SelectionDecorations:
@@ -333,7 +333,7 @@ OXBOMBER:
 	Health:
 		HP: 2500
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament:
 		Weapon: SonicBomb
@@ -367,11 +367,11 @@ ORCA_B:
 		RenderSelectionBars: False
 	Aircraft:
 		TurnSpeed: 3
-		Speed: 200
+		Speed: 283
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament:
 		Weapon: OrcaBombingRun
@@ -405,14 +405,14 @@ ARTILLERY_BEACON:
 	SelectionDecorations:
 		RenderSelectionBars: False
 	Aircraft:
-		CruiseAltitude: 20480
-		IdealSeparation: 1024
+		CruiseAltitude: 28c291
+		IdealSeparation: 1c424
 		TurnSpeed: 3
-		Speed: 300
+		Speed: 424
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 		Type: GroundPosition
 	Armament:
 		Weapon: ArtilleryStrikeGun
@@ -446,12 +446,12 @@ PHOENIX:
 		RenderSelectionBars: False
 	Aircraft:
 		TurnSpeed: 1
-		Speed: 120
-		CruiseAltitude: 8192
+		Speed: 170
+		CruiseAltitude: 11c321
 	Health:
 		HP: 2500
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament:
 		Weapon: ^Bomb
@@ -491,11 +491,11 @@ FHAWK:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 200
+		Speed: 283
 	Health:
 		HP: 650
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primary:
 		AmmoPoolName: Missiles
@@ -548,11 +548,11 @@ HORNET:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 220
+		Speed: 311
 	Health:
 		HP: 800
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primary:
 		AmmoPoolName: Missiles
@@ -606,12 +606,12 @@ CONDOR:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 250
-		CruiseAltitude: 8192
+		Speed: 354
+		CruiseAltitude: 11c321
 	Health:
 		HP: 1100
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: CondorBomb
@@ -655,7 +655,7 @@ DSHP.SUPPORT:
 	Aircraft:
 		LandWhenIdle: False
 		TurnSpeed: 8
-		Speed: 180
+		Speed: 255
 		InitialFacing: 0
 		Repulsable: False
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
@@ -680,7 +680,7 @@ DSHP.SUPPORT:
 	-MustBeDestroyed:
 	FlyAwayOnIdle:
 	ParaDrop:
-		DropRange: 3c512
+		DropRange: 4c973
 	SpawnActorOnDeath:
 		Actor: DSHP.Husk
 		Probability: 100
@@ -705,14 +705,14 @@ DSHP:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 2
-		Speed: 120
+		Speed: 170
 		InitialFacing: 0
 		Repulsable: False
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 	Health:
 		HP: 1300
 	RevealsShroud:
-		Range: 2c0
+		Range: 2c848
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry, Vehicle, Epic
@@ -723,7 +723,7 @@ DSHP:
 	RenderVoxels:
 	WithVoxelBody:
 	ParaDrop:
-		DropRange: 4c0
+		DropRange: 5c673
 	SpawnActorOnDeath:
 		Actor: DSHP.Husk
 		Probability: 100
@@ -742,13 +742,13 @@ KODIAK:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 1
-		Speed: 45
-		IdealSeparation: 2048
-		CruiseAltitude: 8192
+		Speed: 64
+		IdealSeparation: 2c848
+		CruiseAltitude: 11c321
 	Health:
 		HP: 9100
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 		Type: GroundPosition
 	Armament@MG1:
 		Weapon: MammothMG

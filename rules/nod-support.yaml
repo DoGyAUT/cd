@@ -15,7 +15,7 @@ NAWALL:
 	Health:
 		HP: 400
 	BlocksProjectiles:
-		Height: 640
+		Height: 0c905
 	Crushable:
 		CrushClasses: heavywall
 	LineBuild:
@@ -66,7 +66,7 @@ NASILO:
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	RenderSprites:
 	WithSpriteBody:
 	WithIdleOverlay@lights:
@@ -102,7 +102,7 @@ NAFLAMER:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -143,7 +143,7 @@ NAFLAMER:
 		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
 
@@ -166,7 +166,7 @@ NAGAT:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -196,7 +196,7 @@ NAGAT:
 	WithMuzzleOverlay:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
@@ -220,7 +220,7 @@ NALASR:
 	Health:
 		HP: 1800
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -260,7 +260,7 @@ NALASR:
 		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
 
@@ -283,7 +283,7 @@ NASAM:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -329,7 +329,7 @@ NABUNKER:
 	Health:
 		HP: 1300
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	RenderRangeCircle:
 	Cargo:
 		Types: Infantry
@@ -346,7 +346,7 @@ NABUNKER:
 		Amount: 0
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
 
@@ -372,7 +372,7 @@ NAOBEL:
 	Health:
 		HP: 3000
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Armament@normalA:
 		Weapon: ObeliskLaser
 		LocalOffset: 4455,-636,1131
@@ -420,7 +420,7 @@ NAOBEL:
 		Prerequisites: upgrade.laser
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
 
@@ -446,7 +446,7 @@ NAPULS:
 	Health:
 		HP: 2600
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
@@ -501,7 +501,7 @@ NAMISL:
 	Health:
 		HP: 5200
 	RevealsShroud:
-		Range: 2c0
+		Range: 2c848
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
@@ -526,7 +526,7 @@ NAMISL:
 		IncomingSpeechNotification: MissileLaunchDetected
 		LaunchSound: icbm1.aud
 		MissileWeapon: ClusterMissile
-		SpawnOffset: 0,427,0
+		SpawnOffset: 0,604,0
 		DisplayTimerStances: None
 		DisplayBeacon: True
 		DisplayRadarPing: True
@@ -559,12 +559,12 @@ NASTLH:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	WithIdleOverlay@pulse:
 		Sequence: pulse
 		PauseOnCondition: power-outage
 	WithRangeCircle:
-		Range: 12c0
+		Range: 16c994
 		Type: cloakgenerator
 	Power:
 		Amount: -150
@@ -575,7 +575,7 @@ NASTLH:
 		PowerdownSpeech: DisablePower
 	ProximityExternalCondition:
 		Condition: cloakgenerator
-		Range: 12c0
+		Range: 16c994
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
 		AffectsParent: True

@@ -19,9 +19,9 @@ HUSK:
 	Health:
 		HP: 400
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Armament@PRIMARY:
 		Weapon: HuskGun
 		LocalOffset: 424,0,849
@@ -62,9 +62,9 @@ HHUSK:
 	Health:
 		HP: 180
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Armament@PRIMARY:
 		Weapon: CannonHuskGun
 		LocalOffset: 424,198,1086
@@ -104,9 +104,9 @@ CYBSPY:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	WithInfantryBody:
 		IdleSequences: idle1,idle2,idle3
 	AttackFrontal:
@@ -141,9 +141,9 @@ JAGUAR:
 	Health:
 		HP: 420
 	Mobile:
-		Speed: 50
+		Speed: 71
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Armament@primary:
 		Name: Bite
 		Weapon: JaguarClaw
@@ -153,7 +153,7 @@ JAGUAR:
 	IgnoresDisguise:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 5c0
+		Range: 7c73
 	AutoTarget:
 		ScanRadius: 5
 	SoundOnDamageTransition:
@@ -179,9 +179,9 @@ KENGINEER:
 		VoiceSet: Ascentor
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Health:
 		HP: 360
 	Passenger:
@@ -213,11 +213,11 @@ VANGUARD:
 		VoiceSet: CyborgL
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 	Health:
 		HP: 390
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c921
 	Armament@primary:
 		Weapon: VanguardGun
 		LocalOffset: 424,91,1131
@@ -268,9 +268,9 @@ OVERSEER:
 	Health:
 		HP: 720
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Armament@PRIMARY:
 		Weapon: OverseerGun
 		LocalOffset: 424,0,742
@@ -278,11 +278,11 @@ OVERSEER:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2,idle3
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	ProximityExternalCondition:
 		Condition: overseerboost
-		Range: 6c0
+		Range: 8c497
 	SoundOnDamageTransition:
 		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
 	HitShape:
@@ -306,14 +306,14 @@ CYBFLY:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 10
-		Speed: 170
+		Speed: 240
 		AirborneCondition: airborne
 		CruisingCondition: cruising
 		LandWhenIdle: no
-		CruiseAltitude: 3072
+		CruiseAltitude: 4c248
 		CanHover: True
-		IdealSeparation: 512
-		AltitudeVelocity: 230
+		IdealSeparation: 0c724
+		AltitudeVelocity: 0c325
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Health:
@@ -321,7 +321,7 @@ CYBFLY:
 	Armor@base:
 		Type: Aircraft
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: SkirmishLaserFire
@@ -349,7 +349,7 @@ CYBFLY:
 		DefaultAttackSequence: shoot-air
 		IdleSequences: stand-air
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	RenderDetectionCircle:
 	BodyOrientation:
 	WithShadow:
@@ -377,12 +377,12 @@ CYC2:
 		VoiceSet: CyborgA
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		SharesCell: False
 	Health:
 		HP: 1040
 	RevealsShroud:
-		Range: 8c0
+		Range: 11c321
 	SelfHealing:
 		Step: 1
 		PercentageStep: 0
@@ -419,12 +419,12 @@ GLAD:
 		VoiceSet: CyborgA
 		Volume: 2
 	Mobile:
-		Speed: 40
+		Speed: 57
 		SharesCell: False
 	Health:
 		HP: 5000
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 	Armament@Plasma1:
 		Weapon: HarbringerGun
 		LocalOffset: 240,283,966
@@ -448,7 +448,7 @@ GLAD:
 	AttackFrontal:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 8c497
 	WithMuzzleOverlay:
 	SelfHealing:
 		Step: 2
@@ -478,9 +478,9 @@ KAMIKAZE:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 40
+		Speed: 57
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Armament@primary:
 		Weapon: FanticBoom
 	AttackFrontal:

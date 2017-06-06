@@ -1,14 +1,14 @@
 Tiberium:
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 0c59
 		Damage: 10
 		DamageTypes: TriggerVisceroid, BulletDeath
 
 Veins:
 	ReloadDelay: 16
 	Warhead@Damage: SpreadDamage
-		Spread: 42
+		Spread: 0c59
 		Damage: 50
 		DamageTypes: EnergyDeath
 	Warhead@Effect: CreateEffect
@@ -18,18 +18,18 @@ Veins:
 FireballLauncher:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 100
-	Range: 5c256
+	Range: 7c435
 	Report: flamtnk1.aud
 	Projectile: BulletAS
-		Speed: 0c128
+		Speed: 0c181
 		LaunchAngle: 90
 		Image: flametrailer
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
-		Inaccuracy: 1c0
+		Inaccuracy: 1c424
 	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c424
 		Damage: 75
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
@@ -46,18 +46,18 @@ FireballLauncher:
 BlueFireballLauncher:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 50
-	Range: 5c256
+	Range: 7c435
 	Report: firstrm1.aud
 	Projectile: BulletAS
-		Speed: 0c128
+		Speed: 0c181
 		LaunchAngle: 90
 		Image: blueflametrailer
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
-		Inaccuracy: 1c0
+		Inaccuracy: 1c424
 	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c424
 		Damage: 100
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
@@ -76,11 +76,11 @@ BlueFireballLauncher:
 		Image: bullet
 		LaunchAngle: 45
 		Palette: effect
-		Speed: 0c712
-		Inaccuracy: 0c256
+		Speed: 0c1007
+		Inaccuracy: 0c362
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -99,11 +99,11 @@ BlueFireballLauncher:
 		Image: bullet
 		LaunchAngle: 45
 		Palette: effect
-		Speed: 0c768
-		Inaccuracy: 0c128
+		Speed: 1c62
+		Inaccuracy: 0c181
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -120,19 +120,19 @@ BlueFireballLauncher:
 ^MissileAPHE:
 	ValidTargets: Ground, Air, MidAir, HighAir
 	Projectile: Missile
-		MaximumLaunchSpeed: 213
+		MaximumLaunchSpeed: 0c301
 		Blockable: true
 		Shadow: true
-		Inaccuracy: 0c128
+		Inaccuracy: 0c181
 		Image: missile01
 		HorizontalRateOfTurn: 8
-		RangeLimit: 20c0
+		RangeLimit: 28c291
 		Palette: effect
 		AllowSnapping: true
 		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 0c362
 		Damage: 0
 		ValidTargets: Ground, Air, MidAir, HighAir
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
@@ -161,17 +161,17 @@ BlueFireballLauncher:
 ^RocketHE:
 	ValidTargets: Ground
 	Projectile: BulletAS
-		Speed: 0c256
+		Speed: 0c362
 		LaunchAngle: 125
 		Blockable: true
 		Shadow: true
-		Inaccuracy: 3c0
+		Inaccuracy: 4c248
 		Image: missile01
 		Palette: effect
 		TrailImage: durasmoke
 		TrailPalette: apolra50alpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c724
 		Damage: 0
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -194,18 +194,18 @@ BlueFireballLauncher:
 
 ^ShellAP:
 	Projectile: BulletAS
-		Speed: 0c768
-		Inaccuracy: 0c512
+		Speed: 1c62
+		Inaccuracy: 0c724
 		Image: shell02
 		Shadow: true
 		LaunchAngle: 62
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
-		ContrailWidth: 15
+		ContrailWidth: 0c21
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -226,18 +226,18 @@ BlueFireballLauncher:
 
 ^ShellHE:
 	Projectile: BulletAS
-		Speed: 0c512
-		Inaccuracy: 1c0
+		Speed: 0c724
+		Inaccuracy: 1c424
 		Image: shell01
 		Shadow: true
 		LaunchAngle: 62
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
-		ContrailWidth: 15
+		ContrailWidth: 0c21
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 0
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -262,20 +262,20 @@ BlueFireballLauncher:
 	ReloadDelay: 60
 	Burst: 5
 	BurstDelay: 5
-	Range: 5c0
+	Range: 7c73
 	Report: bombdrop.aud
 	Projectile: BulletAS
-		Speed: 0c512
-		Inaccuracy: 1c0
+		Speed: 0c724
+		Inaccuracy: 1c424
 		Image: shell01
 		Shadow: true
 		LaunchAngle: 60
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
-		ContrailWidth: 15
+		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c724
 		Damage: 200
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -296,13 +296,13 @@ BlueFireballLauncher:
 ^BasicLaser:
 	Inherits: ^LaserWH
 	Projectile: LaserZap
-		Width: 50
+		Width: 0c71
 	Warhead@1Dam: SpreadDamage
 		Damage: 0
 
 ^LaserWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -313,7 +313,7 @@ BlueFireballLauncher:
 
 ^BulletWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		Versus:
 			Infantry: 100
@@ -325,7 +325,7 @@ BlueFireballLauncher:
 
 ^APWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		Versus:
 			Infantry: 10
@@ -337,7 +337,7 @@ BlueFireballLauncher:
 
 ^HEWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 0
 		Versus:
 			Infantry: 100
@@ -349,7 +349,7 @@ BlueFireballLauncher:
 
 ^APHEWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 0
 		Versus:
 			Infantry: 30
@@ -361,7 +361,7 @@ BlueFireballLauncher:
 
 ^HEAPWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 0
 		Versus:
 			Infantry: 70
@@ -373,7 +373,7 @@ BlueFireballLauncher:
 
 ^SonicWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c256
+		Spread: 0c362
 		Damage: 0
 		Versus:
 			Infantry: 100
@@ -385,7 +385,7 @@ BlueFireballLauncher:
 
 ^PlasmaWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		Versus:
 			Infantry: 100
@@ -397,7 +397,7 @@ BlueFireballLauncher:
 
 ^RailgunWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		Versus:
 			Infantry: 30
@@ -409,7 +409,7 @@ BlueFireballLauncher:
 
 ^FireWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 1c424
 		Damage: 0
 		Falloff: 100, 80
 		Versus:
@@ -422,7 +422,7 @@ BlueFireballLauncher:
 
 ^TiberiumWH:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
+		Spread: 0c181
 		Damage: 0
 		Versus:
 			Infantry: 100
@@ -435,7 +435,7 @@ BlueFireballLauncher:
 ^ShellAPElite:
 	Inherits: ^ShellAP
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c384
+		Spread: 0c543
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
 		ExplosionPalette: apolra2
@@ -446,22 +446,22 @@ RedEye:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 55
-	Range: 8c0
+	Range: 11c321
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c512
-		MinimumLaunchSpeed: 0c512
-		Speed: 0c768
+		MaximumLaunchSpeed: 0c724
+		MinimumLaunchSpeed: 0c724
+		Speed: 1c62
 		Arm: 2
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 0c128
+		Inaccuracy: 0c181
 		Image: missile01
 		HorizontalRateOfTurn: 8
-		RangeLimit: 30c0
+		RangeLimit: 42c437
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c724
 		Damage: 200
 		ValidTargets: Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect

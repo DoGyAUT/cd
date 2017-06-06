@@ -13,7 +13,7 @@ NACNST:
 	Health:
 		HP: 5200
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 	Production:
 		Produces: Building.Nod,Defense.Nod
 		MoveIntoWorld: False
@@ -55,7 +55,7 @@ NACNST:
 	ProvidesPrerequisite@nod:
 		Prerequisite: structures.nod
 	BaseProvider:
-		Range: 16c0
+		Range: 22c642
 	ActorLostNotification:
 		Notification: CriticalStructureLost
 	ProvidesAIPrerequisite@AImoney:
@@ -96,7 +96,7 @@ NAPOWR:
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	WithIdleOverlay@SMOKE:
 		Sequence: idle-smoke
 		Palette: player50alpha
@@ -133,7 +133,7 @@ NAAPWR:
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	WithIdleOverlay@SMOKE:
 		Sequence: idle-smoke
 		Palette: player50alpha
@@ -173,7 +173,7 @@ NIPROC:
 	Health:
 		HP: 1500
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	TiberianSunRefinery:
 		DockAngle: 160
 		DockOffset: 3,1
@@ -255,9 +255,9 @@ NAHAND:
 	Health:
 		HP: 800
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 	Exit:
-		SpawnOffset: 384,768,0
+		SpawnOffset: 543,1086,0
 		ExitCell: 3,1
 		Facing: 128
 	ExitsDebugOverlay:
@@ -304,7 +304,7 @@ NAWEAP:
 	Health:
 		HP: 2000
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -400,9 +400,9 @@ NARADR:
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
-		Range: 10
+		Range: 0c14
 	RevealsShroud:
-		Range: 20c0
+		Range: 28c291
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: power-outage
@@ -413,7 +413,7 @@ NARADR:
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 15c0
+		Range: 21c218
 		CloakTypes: Underground
 	GrantExternalConditionPower@frenzy:
 		Description: Frenzy
@@ -477,7 +477,7 @@ NAHPAD:
 	Health:
 		HP: 800
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	ExitsDebugOverlay:
@@ -614,7 +614,7 @@ NAPYRA:
 	Health:
 		HP: 2400
 	RevealsShroud:
-		Range: 5c0
+		Range: 7c73
 	Power:
 		Amount: -150
 	Production:
@@ -694,7 +694,7 @@ NATECH:
 	Health:
 		HP: 2160
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c673
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 		PauseOnCondition: power-outage
@@ -719,7 +719,7 @@ NATMPL:
 	Health:
 		HP: 5200
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	Power:
 		Amount: -200
 	WithIdleOverlay@LIGHTS:
@@ -740,7 +740,7 @@ NAWAST:
 	Health:
 		HP: 2400
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c497
 	TiberianSunRefinery:
 		DockAngle: 160
 		DockOffset: 2,1

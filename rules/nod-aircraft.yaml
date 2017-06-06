@@ -16,12 +16,12 @@ VENOM:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 140
-		IdealSeparation: 768
+		Speed: 198
+		IdealSeparation: 1c62
 	Health:
 		HP: 350
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament@primary:
 		Name: primary
@@ -48,7 +48,7 @@ VENOM:
 		SelfReloads: True
 		SelfReloadDelay: 5
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	AutoTarget:
 	RenderSprites:
@@ -81,11 +81,11 @@ HYDRA:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 90
+		Speed: 127
 	Health:
 		HP: 600
 	RevealsShroud:
-		Range: 11c0
+		Range: 15c570
 		Type: GroundPosition
 	Armament@primaryA:
 		Weapon: HydraCannon
@@ -153,7 +153,7 @@ HYDRA:
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	RenderDetectionCircle:
 	SpawnActorOnDeath:
 		Actor: HYDRA.Husk
@@ -173,11 +173,11 @@ HAVOC:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 80
+		Speed: 113
 	Health:
 		HP: 1400
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c146
 		Type: GroundPosition
 	Armament@laserA:
 		Weapon: HavocLaserFire
@@ -221,7 +221,7 @@ HAVOC:
 		SelfReloads: True
 		SelfReloadDelay: 5
 	DetectCloaked:
-		Range: 7c0
+		Range: 9c921
 	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
@@ -252,13 +252,13 @@ NODCARRY:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 3
-		Speed: 110
+		Speed: 156
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 2c0
+		Range: 2c848
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry, Vehicle
@@ -269,7 +269,7 @@ NODCARRY:
 	RenderVoxels:
 	WithVoxelBody:
 	ParaDrop:
-		DropRange: 4c0
+		DropRange: 5c673
 	SpawnActorOnDeath:
 		Actor: NODCARRY.Husk
 		Probability: 100
@@ -290,13 +290,13 @@ NODCARRY.SUPPORT:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 3
-		Speed: 180
+		Speed: 255
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry
@@ -329,7 +329,7 @@ VALKYRIE.SUPPORT:
 	Aircraft:
 		LandWhenIdle: True
 		TurnSpeed: 3
-		Speed: 180
+		Speed: 255
 		InitialFacing: 0
 		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
 		TakeoffSound: dropup1.aud
@@ -337,7 +337,7 @@ VALKYRIE.SUPPORT:
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 9c0
+		Range: 12c745
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry
@@ -374,11 +374,11 @@ RAVEN:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 210
+		Speed: 297
 	Health:
 		HP: 500
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primaryAA:
 		Weapon: RavenMissileAA
@@ -468,11 +468,11 @@ SCRINB:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 200
+		Speed: 283
 	Health:
 		HP: 1800
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: BansheeCannon
@@ -515,11 +515,11 @@ VERTIGO:
 		RenderSelectionBars: False
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 220
+		Speed: 311
 	Health:
 		HP: 1200
 	RevealsShroud:
-		Range: 15c0
+		Range: 21c218
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: VertigoBombNapalm
@@ -575,14 +575,14 @@ ZODIAC:
 		Bounds: 60,48,0,-10
 	Aircraft:
 		TurnSpeed: 2
-		CruiseAltitude: 8192
-		Speed: 25
-		IdealSeparation: 2048
-		AltitudeVelocity: 40
+		CruiseAltitude: 11c321
+		Speed: 35
+		IdealSeparation: 2c848
+		AltitudeVelocity: 0c57
 	Health:
 		HP: 4550
 	RevealsShroud:
-		Range: 14c0
+		Range: 19c818
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: ZodiacBomb
@@ -596,7 +596,7 @@ ZODIAC:
 	WithFacingSpriteBody:
 	-WithVoxelBody:
 	DetectCloaked:
-		Range: 10c0
+		Range: 14c146
 	WithShadow:
 	RenderDetectionCircle:
 	SpawnActorOnDeath:
@@ -604,6 +604,6 @@ ZODIAC:
 		Probability: 100
 	ProximityExternalCondition:
 		Condition: zepdebuff
-		Range: 10c0
+		Range: 14c146
 		ValidStances: Enemy, Neutral
 	HitShape:
