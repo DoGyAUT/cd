@@ -1,478 +1,470 @@
 Tiberium:
-    ReloadDelay: 30
-    Warhead@1Dam: SpreadDamage
-        Spread: 42
-        Damage: 10
-        DamageTypes: TriggerVisceroid, BulletDeath
-        
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c59
+		Damage: 10
+		DamageTypes: TriggerVisceroid, BulletDeath
+
 Veins:
-    ReloadDelay: 16
-    Warhead@Damage: SpreadDamage
-        Spread: 42
-        Damage: 50
-        DamageTypes: EnergyDeath # TODO: FIX ME!
-    Warhead@Effect: CreateEffect
-        Explosions: veins
-        ExplosionPalette: player       
+	ReloadDelay: 16
+	Warhead@Damage: SpreadDamage
+		Spread: 0c59
+		Damage: 50
+		DamageTypes: EnergyDeath
+	Warhead@Effect: CreateEffect
+		Explosions: veins
+		ExplosionPalette: player
 
 FireballLauncher:
-    Inherits@wh: ^FireWH
-    ReloadDelay: 100
-    Range: 5c256
-    Report: flamtnk1.aud
-    Projectile: BulletAS
-        Speed: 0c128
-        LaunchAngle: 90
-        Image: flametrailer
-        TrailImage: flametrailer
-        TrailPalette: effect50alpha
-        Inaccuracy: 1c0
-    InvalidTargets: Flameproof
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 75
-        Falloff: 100, 80
-    Warhead@2Eff: CreateEffect
-        Explosions: fire01a, fire02a, fire03a
-        ExplosionPalette: apolra50alpha
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light2
-        
+	Inherits@wh: ^FireWH
+	ReloadDelay: 100
+	Range: 7c435
+	Report: flamtnk1.aud
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: flametrailer
+		TrailImage: flametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 75
+		Falloff: 100, 80
+	Warhead@2Eff: CreateEffect
+		Explosions: fire01a, fire02a, fire03a
+		ExplosionPalette: apolra50alpha
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+
 BlueFireballLauncher:
-    Inherits@wh: ^FireWH
-    ReloadDelay: 50
-    Range: 5c256
-    Report: firstrm1.aud
-    Projectile: BulletAS
-        Speed: 0c128
-        LaunchAngle: 90
-        Image: blueflametrailer
-        TrailImage: blueflametrailer
-        TrailPalette: effect50alpha
-        Inaccuracy: 1c0
-    InvalidTargets: Flameproof
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 100
-        Falloff: 100, 90, 80
-    Warhead@2Eff: CreateEffect
-        Explosions: fire01a, fire02a, fire03a
-        ExplosionPalette: apolra50alpha
-    Warhead@3Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: SmallScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light
-        
+	Inherits@wh: ^FireWH
+	ReloadDelay: 50
+	Range: 7c435
+	Report: firstrm1.aud
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: blueflametrailer
+		TrailImage: blueflametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 100
+		Falloff: 100, 90, 80
+	Warhead@2Eff: CreateEffect
+		Explosions: fire01a, fire02a, fire03a
+		ExplosionPalette: apolra50alpha
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+
 ^Bullet:
-    Projectile: BulletAS
-        Image: bullet
-        LaunchAngle: 45
-        Palette: effect
-        Speed: 0c712
-        Inaccuracy: 0c256
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 0
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: piff
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@5Eff: CreateEffect
-        Explosions: tiny_flash
-        ExplosionPalette: light2
-       
+	Projectile: BulletAS
+		Image: bullet
+		LaunchAngle: 45
+		Palette: effect
+		Speed: 0c1007
+		Inaccuracy: 0c362
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: tiny_flash
+		ExplosionPalette: light2
+
 ^APBullet:
-    Projectile: BulletAS
-        Image: bullet
-        LaunchAngle: 45
-        Palette: effect
-        Speed: 0c768
-        Inaccuracy: 0c128
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 128
-        Damage: 0
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: piff
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@5Eff: CreateEffect
-        Explosions: tiny_flash
-        ExplosionPalette: light2
+	Projectile: BulletAS
+		Image: bullet
+		LaunchAngle: 45
+		Palette: effect
+		Speed: 1c62
+		Inaccuracy: 0c181
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: tiny_flash
+		ExplosionPalette: light2
 
 ^MissileAPHE:
-    ValidTargets: Ground, Air, MidAir, HighAir
-    Projectile: Missile
-        MaximumLaunchSpeed: 213
-        Blockable: true
-        Shadow: true
-        Inaccuracy: 0c128
-        Image: missile01
-        HorizontalRateOfTurn: 8
-        RangeLimit: 20c0
-        Palette: effect
-#        MaximumLaunchAngle: 192
-#        VerticalRateOfTurn: 16
-#        CruiseAltitude: 1c512
-        AllowSnapping: true
-        TrailImage: durasmoke
-        TrailPalette: apolra25alpha
-#        ContrailLength: 10
-#        ContrailWidth: 25
-    Warhead@1Dam: SpreadDamage
-        Spread: 256
-        Damage: 0
-        ValidTargets: Ground, Air, MidAir, HighAir
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: small_tumu
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4EffAir: CreateEffect
-        Explosions: small_twlt
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud
-        ValidImpactTypes: Air, AirHit
-    Warhead@5Smu: LeaveSmudge
-        SmudgeType: SmallCrater
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@6Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
-        
+	ValidTargets: Ground, Air, MidAir, HighAir
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c301
+		Blockable: true
+		Shadow: true
+		Inaccuracy: 0c181
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		RangeLimit: 28c291
+		Palette: effect
+		AllowSnapping: true
+		TrailImage: durasmoke
+		TrailPalette: apolra25alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		ValidTargets: Ground, Air, MidAir, HighAir
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_tumu
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud
+		ValidImpactTypes: Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light
+
 ^RocketHE:
-    ValidTargets: Ground
-    Projectile: BulletAS
-        Speed: 0c256
-        LaunchAngle: 125
-        Blockable: true
-        Shadow: true
-        Inaccuracy: 3c0
-        Image: missile01
-        Palette: effect
-        TrailImage: durasmoke
-        TrailPalette: apolra50alpha
-#        ContrailLength: 10
-#        ContrailWidth: 25
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 0
-        ValidTargets: Ground
-        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: small_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4: LeaveSmudge
-        SmudgeType: SmallCrater  
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@6Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light2
-        
+	ValidTargets: Ground
+	Projectile: BulletAS
+		Speed: 0c362
+		LaunchAngle: 125
+		Blockable: true
+		Shadow: true
+		Inaccuracy: 4c248
+		Image: missile01
+		Palette: effect
+		TrailImage: durasmoke
+		TrailPalette: apolra50alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 0
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ExplosionPalette: apolra2
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light2
+
 ^ShellAP:
-    Projectile: BulletAS
-        Speed: 0c768
-        Inaccuracy: 0c512
-        Image: shell02
-        Shadow: true
-        LaunchAngle: 62
-        Palette: effect
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 15
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: small_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumCrater
-    Warhead@5Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light
+	Projectile: BulletAS
+		Speed: 1c62
+		Inaccuracy: 0c724
+		Image: shell02
+		Shadow: true
+		LaunchAngle: 62
+		Palette: effect
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ExplosionPalette: apolra2
+		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
 
 ^ShellHE:
-    Projectile: BulletAS
-        Speed: 0c512
-        Inaccuracy: 1c0
-        Image: shell01
-        Shadow: true
-        LaunchAngle: 62
-        Palette: effect
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 15
-        Blockable: true
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 0
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-    Warhead@2Eff: CreateEffect
-        Explosions: small_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumCrater
-    Warhead@5Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light2
-        
-^Bomb: #also used for phoenix
-    Inherits: ^ShellHE 
+	Projectile: BulletAS
+		Speed: 0c724
+		Inaccuracy: 1c424
+		Image: shell01
+		Shadow: true
+		LaunchAngle: 62
+		Palette: effect
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ExplosionPalette: apolra2
+		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+
+^Bomb:
+	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-    ReloadDelay: 60
-    Burst: 5
-    BurstDelay: 5
-    Range: 5c0
-    Report: bombdrop.aud
-    Projectile: BulletAS
-        Speed: 0c512
-        Inaccuracy: 1c0
-        Image: shell01
-        Shadow: true
-        LaunchAngle: 60
-        Palette: effect
-        ContrailLength: 10
-        ContrailColor: FFFFFF
-        ContrailWidth: 15
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 200
-    Warhead@2Eff: CreateEffect
-        Explosions: artexplo01, artexplo02, artexplo03, artexplo04
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ExplosionPalette: player
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: LargeCrater
-    Warhead@5Eff: CreateEffect
-        Explosions: large_flash
-        ExplosionPalette: light2
-        
+	ReloadDelay: 60
+	Burst: 5
+	BurstDelay: 5
+	Range: 7c73
+	Report: bombdrop.aud
+	Projectile: BulletAS
+		Speed: 0c724
+		Inaccuracy: 1c424
+		Image: shell01
+		Shadow: true
+		LaunchAngle: 60
+		Palette: effect
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 200
+	Warhead@2Eff: CreateEffect
+		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+
 ^BasicLaser:
-    Inherits: ^LaserWH
-    Projectile: LaserZap
-        Width: 50
-    Warhead@1Dam: SpreadDamage
-        Damage: 0
-        
+	Inherits: ^LaserWH
+	Projectile: LaserZap
+		Width: 0c71
+	Warhead@1Dam: SpreadDamage
+		Damage: 0
+
 ^LaserWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 70
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 70
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
 ^BulletWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 10
-            Aircraft: 100
-            Building: 10
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 10
+			Aircraft: 100
+			Building: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
 ^APWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        Versus:
-            Infantry: 10
-            Cyborg: 10
-            Vehicle: 100
-            Aircraft: 100
-            Building: 60
-        DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 10
+			Cyborg: 10
+			Vehicle: 100
+			Aircraft: 100
+			Building: 60
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
 ^HEWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 0
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 10
-            Aircraft: 100
-            Building: 100
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 10
+			Aircraft: 100
+			Building: 100
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+
 ^APHEWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 0
-        Versus:
-            Infantry: 30
-            Cyborg: 30
-            Vehicle: 70
-            Aircraft: 100
-            Building: 80
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		Versus:
+			Infantry: 30
+			Cyborg: 30
+			Vehicle: 70
+			Aircraft: 100
+			Building: 80
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
 ^HEAPWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 0
-        Versus:
-            Infantry: 70
-            Cyborg: 70
-            Vehicle: 50
-            Aircraft: 100
-            Building: 80
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		Versus:
+			Infantry: 70
+			Cyborg: 70
+			Vehicle: 50
+			Aircraft: 100
+			Building: 80
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+
 ^SonicWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 0
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 70
-            Aircraft: 100
-            Building: 100
-        DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 70
+			Aircraft: 100
+			Building: 100
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+
 ^PlasmaWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 100
-            Aircraft: 100
-            Building: 100
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-        
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 100
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
 ^RailgunWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        Versus:
-            Infantry: 30
-            Cyborg: 30
-            Vehicle: 100
-            Aircraft: 100
-            Building: 60
-        DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-                
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 30
+			Cyborg: 30
+			Vehicle: 100
+			Aircraft: 100
+			Building: 60
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
 ^FireWH:
-    Warhead@1Dam: SpreadDamage
-        Spread: 1c0
-        Damage: 0
-        Falloff: 100, 80
-        Versus:
-            Infantry: 100
-            Cyborg: 50
-            Vehicle: 25
-            Aircraft: 100
-            Building: 100
-        DamageTypes: Prone100Percent, TriggerProne, FireDeath
-        
-^TiberiumWH:        
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 0
-        Versus:
-            Infantry: 100
-            Cyborg: 100
-            Vehicle: 50
-            Aircraft: 100
-            Building: 50
-        DamageTypes: Prone100Percent, TriggerProne, EnergyDeath, TriggerVisceroid        
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 0
+		Falloff: 100, 80
+		Versus:
+			Infantry: 100
+			Cyborg: 50
+			Vehicle: 25
+			Aircraft: 100
+			Building: 100
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+
+^TiberiumWH:
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 50
+			Aircraft: 100
+			Building: 50
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath, TriggerVisceroid
 
 ^ShellAPElite:
-    Inherits: ^ShellAP
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c384
-    Warhead@2Eff: CreateEffect
-        Explosions: large_clsn
-        ExplosionPalette: apolra2
-        ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-        InvalidImpactTypes: Water
-        
+	Inherits: ^ShellAP
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c543
+	Warhead@2Eff: CreateEffect
+		Explosions: large_clsn
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+
 RedEye:
-    Inherits: ^MissileAPHE 
+	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-    ReloadDelay: 55
-    Range: 8c0
-    Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-    ValidTargets: Air, MidAir, HighAir
-    Projectile: Missile
-        MaximumLaunchSpeed: 0c512
-        MinimumLaunchSpeed: 0c512
-        Speed : 0c768
-        Arm: 2
-        Blockable: false
-        Shadow: true
-        Inaccuracy: 0c128
-        Image: missile01
-        HorizontalRateOfTurn: 8
-        RangeLimit: 30c0
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 200
-        ValidTargets: Air, MidAir, HighAir
-    Warhead@2Eff: CreateEffect
-        Explosions: tiny_tumu
-        ExplosionPalette: apolra50alpha
-        ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-        
+	ReloadDelay: 55
+	Range: 11c321
+	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+	ValidTargets: Air, MidAir, HighAir
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c724
+		MinimumLaunchSpeed: 0c724
+		Speed: 1c62
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 0c181
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		RangeLimit: 42c437
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 200
+		ValidTargets: Air, MidAir, HighAir
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_tumu
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud

@@ -1,1117 +1,1114 @@
 ^VehicleOverlays:
-    emp-overlay: emp_fx01
-        Offset: 0, 0, 24
-        Length: *
-        BlendMode: Additive
-    veins: veinatac
-        Length: 12
-        UseTilesetExtension: true
-        ZOffset: 1023
-        Offset: 0, -12
+	emp-overlay: emp_fx01
+		Offset: 0, 0, 24
+		Length: *
+		BlendMode: Additive
+	veins: veinatac
+		Length: 12
+		UseTilesetExtension: true
+		ZOffset: 1023
+		Offset: 0, -12
 
 gmcv:
-    Inherits: ^VehicleOverlays
-    icon: gmcvicon
+	Inherits: ^VehicleOverlays
+	icon: gmcvicon
 
 nmcv:
-    Inherits: ^VehicleOverlays
-    icon: nmcvicon
+	Inherits: ^VehicleOverlays
+	icon: nmcvicon
 
 kmcv:
-    Inherits: ^VehicleOverlays
-    icon: kmcvicon
+	Inherits: ^VehicleOverlays
+	icon: kmcvicon
 
 fmcv:
-    Inherits: ^VehicleOverlays
-    icon: fmcvicon
+	Inherits: ^VehicleOverlays
+	icon: fmcvicon
 
 smcv:
-    Inherits: ^VehicleOverlays
-    icon: kmcvicon
-    
+	Inherits: ^VehicleOverlays
+	icon: kmcvicon
+
 apc:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: apcicon
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: apcicon
 
 gtmtnk:
-    Defaults:
-        Length: *
-    muzzle: gunfire #muzzle: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    icon: archonicon    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: archonicon
 
 gthtnk:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    icon: grizzlyicon    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: grizzlyicon
 
 cheetah:
-    muzzle: gunfire
-        Length: *
-    laser: lasershot1
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: cheetahicon
+	muzzle: gunfire
+		Length: *
+	laser: lasershot1
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: cheetahicon
 
 gorran:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    icon: gorranicon
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: gorranicon
 
 hailstorm:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    muzzle: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: hailstormicon
- 
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	muzzle: apmuzzle
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: hailstormicon
+
 ragnarok:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: ragnaricon   
- 
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: ragnaricon
 
 avalanche:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: avalancheicon    
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: avalancheicon
 
 silver:
-    muzzle: plassabogsml
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: helionicon    
-    
+	muzzle: plassabogsml
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: helionicon
+
 kronos:
-    muzzle: plassabogsml
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: kronosicon
-    
+	muzzle: plassabogsml
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: kronosicon
+
 fury:
-    muzzle: plassabogsml
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: furyicon
-    
+	muzzle: plassabogsml
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: furyicon
+
 sict:
-    muzzle: plasmaexpl1
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: sicticon    
-    
+	muzzle: plasmaexpl1
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: sicticon
+
 taurus:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: taurusicon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: taurusicon
+
 gharv:
-    Inherits: ^VehicleOverlays
-    icon: gharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	icon: gharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 niharv:
-    Inherits: ^VehicleOverlays
-    muzzle: tibpart
-        Length: *
-    icon: niharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	muzzle: tibpart
+		Length: *
+	icon: niharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 ntharv:
-    Inherits: ^VehicleOverlays
-    icon: ntharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	icon: ntharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 npharv:
-    Inherits: ^VehicleOverlays
-    icon: npharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	icon: npharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 kharv:
-    Inherits: ^VehicleOverlays
-    icon: kharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	icon: kharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 fharv:
-    Inherits: ^VehicleOverlays
-    icon: fharv2icon
-    icon2: fharvicon
-    harvest: harvestr
-        Length: *
-        ZRamp: 1
+	Inherits: ^VehicleOverlays
+	icon: fharv2icon
+	icon2: fharvicon
+	harvest: harvestr
+		Length: *
+		ZRamp: 1
 
 sharv:
-    Inherits: ^VehicleOverlays
-    icon: sharvicon
-    harvest: harvestr
-        Length: *
+	Inherits: ^VehicleOverlays
+	icon: sharvicon
+	harvest: harvestr
+		Length: *
 
 hvr:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: hovricon
-        
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: hovricon
+
 airblast:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: airblasticon
-        
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: airblasticon
+
 cyclops:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    icon: cyclopsicon
-        
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: cyclopsicon
+
 behemoth:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: behemothicon
-        
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: behemothicon
+
 4tnk:
-    muzzle: gunfire
-        Length: *
-    muzzle2: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: 4tnkicon
-    
+	muzzle: gunfire
+		Length: *
+	muzzle2: apmuzzle
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: 4tnkicon
+
 poseidon:
-    muzzle: gunfire
-        Length: *
-    muzzle2: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: poseidonicon
-    
+	muzzle: gunfire
+		Length: *
+	muzzle2: apmuzzle
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: poseidonicon
+
 defdtank:
-    Inherits: ^VehicleOverlays
-    icon: scaricon    
-    
+	Inherits: ^VehicleOverlays
+	icon: scaricon
+
 lpst:
-    Inherits: ^VehicleOverlays
-    icon: lpsticon
+	Inherits: ^VehicleOverlays
+	icon: lpsticon
 
 repair:
-    Inherits: ^VehicleOverlays
-    icon: rboticon
+	Inherits: ^VehicleOverlays
+	icon: rboticon
 
 art2:
-    Inherits: ^VehicleOverlays
-    icon: artyicon
+	Inherits: ^VehicleOverlays
+	icon: artyicon
 
 nhwtz:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: artyicon
-    
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: artyicon
+
 weed:
-    Inherits: ^VehicleOverlays
-    harvest: harvestr
-    icon: weedicon
-    
+	Inherits: ^VehicleOverlays
+	harvest: harvestr
+	icon: weedicon
+
 reckoner:
-    Inherits: ^VehicleOverlays
-    icon: reckonericon
-    
+	Inherits: ^VehicleOverlays
+	icon: reckonericon
+
 hmec:
-    Defaults:
-        Length: *
-    muzzle: apmuzzle
-    muzzle_mis: lgrysmk1
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: hmecicon
+	Defaults:
+		Length: *
+	muzzle: apmuzzle
+	muzzle_mis: lgrysmk1
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: hmecicon
 
 bike:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: cyclicon
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: cyclicon
 
 bggy:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: bggyicon
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: bggyicon
 
 fbuggy:
-    Defaults:
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: fbuggyicon
-    
+	Defaults:
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: fbuggyicon
+
 fbuggy_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: fbuggy_mgicon
-    
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: fbuggy_mgicon
+
 fbuggy_mortar:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: fbuggy_mortaricon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: fbuggy_mortaricon
+
 fbuggy_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: fbuggy_misicon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: fbuggy_misicon
+
 ftruck:
-    Defaults:
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: fbuggyicon
-    
+	Defaults:
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: fbuggyicon
+
 ftruck_flak:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: ftruck_flakicon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: ftruck_flakicon
+
 ftruck_flamer:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: ftruck_flamericon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: ftruck_flamericon
+
 ftruck_mortar:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: ftruck_mortaricon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: ftruck_mortaricon
+
 gremlin_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: gremlin_90mmicon
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: gremlin_90mmicon
+
 gremlin_mortar:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: gremlin_mortaricon
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: gremlin_mortaricon
 
 gremlin_hcan:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: gremlin_hcanicon  
-    
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: gremlin_hcanicon
+
 taurus_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: taurus_mgicon
-    
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: taurus_mgicon
+
 taurus_mis:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: taurus_misicon
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: taurus_misicon
 
 taurus_hcan:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: taurus_hcanicon
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: taurus_hcanicon
+
 lizard_mg:
-    Defaults:
-        Length: *
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: lizard_mgicon
- 
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: lizard_mgicon
+
 lizard_90mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: lizard_90mmicon  
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: lizard_90mmicon
+
 lizard_122mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    Inherits: ^VehicleOverlays
-    icon: lizard_122mmicon
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	Inherits: ^VehicleOverlays
+	icon: lizard_122mmicon
+
 digger_mis:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    muzzle: gunfire
-        Length: *
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    Inherits: ^VehicleOverlays
-    icon: digger_misicon  
- 
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	muzzle: gunfire
+		Length: *
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	Inherits: ^VehicleOverlays
+	icon: digger_misicon
+
 digger_mortar:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    muzzle: gunfire
-        Length: *
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512    
-    Inherits: ^VehicleOverlays
-    icon: digger_mortaricon  
- 
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	muzzle: gunfire
+		Length: *
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	Inherits: ^VehicleOverlays
+	icon: digger_mortaricon
+
 digger_122mm:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    muzzle: gunfire
-        Length: *
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512    
-    Inherits: ^VehicleOverlays
-    icon: digger_122mmicon 
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	muzzle: gunfire
+		Length: *
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	Inherits: ^VehicleOverlays
+	icon: digger_122mmicon
 
 bison_130mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: bison_130mmicon   
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: bison_130mmicon
+
 bison_145mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: bison_145mmicon 
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: bison_145mmicon
+
 bison_180mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    Inherits: ^VehicleOverlays
-    icon: bison_180mmicon
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	Inherits: ^VehicleOverlays
+	icon: bison_180mmicon
+
 auroch_130mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    muzzle0: mgun-n
-    muzzle1: mgun-nw
-    muzzle2: mgun-w
-    muzzle3: mgun-sw
-    muzzle4: mgun-s
-    muzzle5: mgun-se
-    muzzle6: mgun-e
-    muzzle7: mgun-ne
-    Inherits: ^VehicleOverlays
-    icon: auroch_130mmicon   
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	Inherits: ^VehicleOverlays
+	icon: auroch_130mmicon
+
 auroch_120mmt:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    Inherits: ^VehicleOverlays
-    icon: auroch_120mmticon 
- 
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	Inherits: ^VehicleOverlays
+	icon: auroch_120mmticon
+
 auroch_180mm:
-    Defaults:
-        Length: *
-    muzzle: gunfire
-    Inherits: ^VehicleOverlays
-    icon: auroch_180mmicon
+	Defaults:
+		Length: *
+	muzzle: gunfire
+	Inherits: ^VehicleOverlays
+	icon: auroch_180mmicon
 
 sapc:
-    Inherits: ^VehicleOverlays
-    icon: sapcicon
+	Inherits: ^VehicleOverlays
+	icon: sapcicon
 
 subtank:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    Inherits: ^VehicleOverlays
-    make: dig
-        Length: 37
-    icon: subticon
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	Inherits: ^VehicleOverlays
+	make: dig
+		Length: 37
+	icon: subticon
 
 atruck:
-    Inherits: ^VehicleOverlays
-    icon: atruckicon
+	Inherits: ^VehicleOverlays
+	icon: atruckicon
 
 sonic:
-    Inherits: ^VehicleOverlays
-    icon: soniicon
+	Inherits: ^VehicleOverlays
+	icon: soniicon
 
 iontank:
-    Inherits: ^VehicleOverlays
-    icon: iontankicon
-    
+	Inherits: ^VehicleOverlays
+	icon: iontankicon
+
 ttnk:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: ticktankicon
-       
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: ticktankicon
+
 termite:
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: tickicon
-    
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: tickicon
+
 ftnk:
-    idle:
-    Inherits: ^VehicleOverlays
-    icon: ftnkicon
+	idle:
+	Inherits: ^VehicleOverlays
+	icon: ftnkicon
 
 stnk:
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: stnkicon
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: stnkicon
 
 nfist:
-    Inherits: ^VehicleOverlays
-    muzzle: gunfire
-        Length: *
-    icon: nfisticon
-    
-montauk:
-    Inherits: ^VehicleOverlays
-    idle: faflak
-        ShadowStart: 3
-        Offset: 0, -12
-    damaged-idle: faflak
-        Start: 1
-        ShadowStart: 4
-        Offset: 0, -12
-    make: dig
-        Length: 24
-        Offset: 0, 0
-        ZOffset: 512
-    make: dig
-        Length: 37
-    icon: montaukicon
+	Inherits: ^VehicleOverlays
+	muzzle: gunfire
+		Length: *
+	icon: nfisticon
 
-avatar: 
-    stand:
-        ShadowStart: 152
-        Facings: -8
-    run:
-        Start: 8
-        Length: 15
-        ShadowStart: 160
-        Facings: -8
-        Tick: 120   
-    shoot:
-        Start: 128
-        Length: 3
-        ShadowStart: 280
-        Facings: -8
-        Tick: 320
-    muzzle: laserburst
-        Length: *
-        Offset: 0, 0
-        BlendMode: Additive
-    Inherits: ^VehicleOverlays
-    icon: avataricon
+montauk:
+	Inherits: ^VehicleOverlays
+	idle: faflak
+		ShadowStart: 3
+		Offset: 0, -12
+	damaged-idle: faflak
+		Start: 1
+		ShadowStart: 4
+		Offset: 0, -12
+	make: dig
+		Length: 24
+		Offset: 0, 0
+		ZOffset: 512
+	make: dig
+		Length: 37
+	icon: montaukicon
+
+avatar:
+	stand:
+		ShadowStart: 152
+		Facings: -8
+	run:
+		Start: 8
+		Length: 15
+		ShadowStart: 160
+		Facings: -8
+		Tick: 120
+	shoot:
+		Start: 128
+		Length: 3
+		ShadowStart: 280
+		Facings: -8
+		Tick: 320
+	muzzle: laserburst
+		Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+	Inherits: ^VehicleOverlays
+	icon: avataricon
 
 mantis:
-    muzzle: tibpart
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: mantisicon
+	muzzle: tibpart
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: mantisicon
 
 chimera:
-    muzzle: tibpart
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: chimeraicon
+	muzzle: tibpart
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: chimeraicon
 
 corruptor:
-    stand:
-        Facings: 8 
-    run:
-        Start: 8
-        Facings: 8
-        Length: 20
-        Tick: 60
-    shoot:
-        Start: 168
-        Facings: 8
-        Length: 10
-        Tick: 120
-    die1:
-        Start: 248
-        Length: 10
-        Tick: 120
-    Inherits: ^VehicleOverlays
-    icon: corruptoricon
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Facings: 8
+		Length: 20
+		Tick: 60
+	shoot:
+		Start: 168
+		Facings: 8
+		Length: 10
+		Tick: 120
+	die1:
+		Start: 248
+		Length: 10
+		Tick: 120
+	Inherits: ^VehicleOverlays
+	icon: corruptoricon
 
-anhltrpd: 
-    stand:
-        Start: 240
-        Length: 1
-        Facings: -8
-    run:
-        Length: 15
-        Facings: -8
-        Tick: 90   
-    shoot:
-        Start: 120
-        Length: 15
-        Facings: -8
-        Tick: 120
-    muzzle: plassabogsml
-        Length: *
-        Offset: 0, 0
-        BlendMode: Additive
-    Inherits: ^VehicleOverlays
-    icon: anhltrpdicon
+anhltrpd:
+	stand:
+		Start: 240
+		Length: 1
+		Facings: -8
+	run:
+		Length: 15
+		Facings: -8
+		Tick: 90
+	shoot:
+		Start: 120
+		Length: 15
+		Facings: -8
+		Tick: 120
+	muzzle: plassabogsml
+		Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+	Inherits: ^VehicleOverlays
+	icon: anhltrpdicon
 
 hexapod:
-    Defaults:
-        Tick: 100
-    stand:
-        Start: 128
-        Length: 1
-        Facings: -8
-    run:
-        Length: 9
-        Facings: -8
-    shoot:
-        Start: 72
-        Length: 7
-        Facings: -8
-    Inherits: ^VehicleOverlays
-    icon: hexapodicon
+	Defaults:
+		Tick: 100
+	stand:
+		Start: 128
+		Length: 1
+		Facings: -8
+	run:
+		Length: 9
+		Facings: -8
+	shoot:
+		Start: 72
+		Length: 7
+		Facings: -8
+	Inherits: ^VehicleOverlays
+	icon: hexapodicon
 
 gargantua:
-    stand:
-        Facings: 8
-        ShadowStart: 309
-    run:
-        Start: 8
-        Length: 25
-        Facings: 8
-        ShadowStart: 317
-        Tick: 80
-    shoot:
-        Start: 208
-        Length: 10
-        Facings: 8
-        ShadowStart: 517
-    die1:
-        Start: 288
-        Length: 21
-        ShadowStart: 597
-        Tick: 80
-    muzzle: plassabogsml
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: gargantuaicon
-    
+	stand:
+		Facings: 8
+		ShadowStart: 309
+	run:
+		Start: 8
+		Length: 25
+		Facings: 8
+		ShadowStart: 317
+		Tick: 80
+	shoot:
+		Start: 208
+		Length: 10
+		Facings: 8
+		ShadowStart: 517
+	die1:
+		Start: 288
+		Length: 21
+		ShadowStart: 597
+		Tick: 80
+	muzzle: plassabogsml
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: gargantuaicon
+
 vulture:
-    stand:
-        Facings: -8
-        Stride: 12
-    run:
-        Length: 12
-        Facings: -8
-        Tick: 90
-    turret:
-        Start: 96
-        Facings: -32
-    muzzle: apmuzzle
-        Length: *
-    muzzle0: mgun-n
-        Length: *
-    muzzle1: mgun-nw
-        Length: *
-    muzzle2: mgun-w
-        Length: *
-    muzzle3: mgun-sw
-        Length: *
-    muzzle4: mgun-s
-        Length: *
-    muzzle5: mgun-se
-        Length: *
-    muzzle6: mgun-e
-        Length: *
-    muzzle7: mgun-ne
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: vulticon    
+	stand:
+		Facings: -8
+		Stride: 12
+	run:
+		Length: 12
+		Facings: -8
+		Tick: 90
+	turret:
+		Start: 96
+		Facings: -32
+	muzzle: apmuzzle
+		Length: *
+	muzzle0: mgun-n
+		Length: *
+	muzzle1: mgun-nw
+		Length: *
+	muzzle2: mgun-w
+		Length: *
+	muzzle3: mgun-sw
+		Length: *
+	muzzle4: mgun-s
+		Length: *
+	muzzle5: mgun-se
+		Length: *
+	muzzle6: mgun-e
+		Length: *
+	muzzle7: mgun-ne
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: vulticon
 
 mmch:
-    stand:
-        Facings: -8
-        Stride: 22
-        Offset: 0, 0, 12
-    run:
-        Length: 22
-        Facings: -8
-        Tick: 65
-        Offset: 0, 0, 12
-    turret:
-        Start: 176
-        Facings: -32
-        Offset: 0, 0, 12
-    muzzle: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: titanicon
-    
+	stand:
+		Facings: -8
+		Stride: 22
+		Offset: 0, 0, 12
+	run:
+		Length: 22
+		Facings: -8
+		Tick: 65
+		Offset: 0, 0, 12
+	turret:
+		Start: 176
+		Facings: -32
+		Offset: 0, 0, 12
+	muzzle: apmuzzle
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: titanicon
+
 mmch2:
-    stand:
-        Facings: -8
-        Stride: 23
-        Offset: 0, 0, 12
-    run:
-        Length: 23
-        Facings: -8
-        Offset: 0, 0, 12
-        Tick: 70 
-    turret:
-        Start: 184
-        Facings: -32
-        Offset: 0, 0, 12
-    muzzle: apmuzzle
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: titan2icon
+	stand:
+		Facings: -8
+		Stride: 23
+		Offset: 0, 0, 12
+	run:
+		Length: 23
+		Facings: -8
+		Offset: 0, 0, 12
+		Tick: 70
+	turret:
+		Start: 184
+		Facings: -32
+		Offset: 0, 0, 12
+	muzzle: apmuzzle
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: titan2icon
 
 jugg:
-    idle:
-        Facings: -8
-        Stride: 14
-    move:
-        Length: 14
-        Facings: -8
-        Tick: 90
-    turret: djugg_a
-        Start: 0
-        Facings: 32
-        ShadowStart: 0
-        ZOffset: 16
-    make: juggmk
-        Length: 44
-        Tick: 70
-#        Offset: 0, -16
-    deployed: djugg
-#        Offset: 0, -16
-        Lenght: 3
-    muzzle: gunfire
-        Length: *
-        ZOffset: 20
-    Inherits: ^VehicleOverlays
-    icon: juggicon
+	idle:
+		Facings: -8
+		Stride: 14
+	move:
+		Length: 14
+		Facings: -8
+		Tick: 90
+	turret: djugg_a
+		Start: 0
+		Facings: 32
+		ShadowStart: 0
+		ZOffset: 16
+	make: juggmk
+		Length: 44
+		Tick: 70
+	deployed: djugg
+		Lenght: 3
+	muzzle: gunfire
+		Length: *
+		ZOffset: 20
+	Inherits: ^VehicleOverlays
+	icon: juggicon
 
 tarantula:
-    stand:
-        Start: 160
-        Facings: -8
-        Stride: 1
-        ShadowStart: 328
-    run:
-        Length: 16
-        Facings: -8
-        ShadowStart: 168
-        Tick: 80
-    turret:
-        Start: 128
-        Facings: -32
-        ShadowStart: 296
-    muzzle: plassabogsml
-        Length: *
-    Inherits: ^VehicleOverlays
-    icon: tarantulaicon
-    
+	stand:
+		Start: 160
+		Facings: -8
+		Stride: 1
+		ShadowStart: 328
+	run:
+		Length: 16
+		Facings: -8
+		ShadowStart: 168
+		Tick: 80
+	turret:
+		Start: 128
+		Facings: -32
+		ShadowStart: 296
+	muzzle: plassabogsml
+		Length: *
+	Inherits: ^VehicleOverlays
+	icon: tarantulaicon
+
 scorpion:
-    stand:
-        Start: 160
-        Facings: -8
-        ShadowStart: 688
-    run:
-        Length: 20
-        Facings: -8
-        ShadowStart: 528
-    shoot:
-        Start: 168
-        Length: 40
-        Facings: -8
-        ShadowStart: 696
-        Tick: 60
-    shoot1: scorpion_a
-        Length: 31
-        Facings: -8
-        ShadowStart: 248
-        Tick: 70
-    die1:
-        Start: 488
-        Length: 40
-        Facings: -8
-        ShadowStart: 736
-    Inherits: ^VehicleOverlays
-    icon: scorpionicon
+	stand:
+		Start: 160
+		Facings: -8
+		ShadowStart: 688
+	run:
+		Length: 20
+		Facings: -8
+		ShadowStart: 528
+	shoot:
+		Start: 168
+		Length: 40
+		Facings: -8
+		ShadowStart: 696
+		Tick: 60
+	shoot1: scorpion_a
+		Length: 31
+		Facings: -8
+		ShadowStart: 248
+		Tick: 70
+	die1:
+		Start: 488
+		Length: 40
+		Facings: -8
+		ShadowStart: 736
+	Inherits: ^VehicleOverlays
+	icon: scorpionicon
 
 gghunt:
-    idle:
-        Facings: 1
-        Length: 8
-        ShadowStart: 8
-    
+	idle:
+		Facings: 1
+		Length: 8
+		ShadowStart: 8
+
 smech:
-    stand:
-        Start: 168
-        Facings: -8 
-        Tick: 50
-    run:
-        Facings: -8
-        Length: 14
-        Tick: 70
-    shoot:
-        Start: 112
-        Length: 7
-        Facings: -8
-        Tick: 100
-    Inherits: ^VehicleOverlays
-    icon: smechicon
+	stand:
+		Start: 168
+		Facings: -8
+		Tick: 50
+	run:
+		Facings: -8
+		Length: 14
+		Tick: 70
+	shoot:
+		Start: 112
+		Length: 7
+		Facings: -8
+		Tick: 100
+	Inherits: ^VehicleOverlays
+	icon: smechicon
 
 dreadfire:
-    stand:
-        Facings: -8 
-        ShadowStart: 224
-    run:
-        Start: 8
-        Facings: -8
-        Length: 12
-        ShadowStart: 232
-        Tick: 130
-    shoot:
-        Start: 104
-        Length: 15
-        Facings: -8
-        ShadowStart: 328
-        Tick: 100
-    Inherits: ^VehicleOverlays
-    icon: dreadfireicon
-    
+	stand:
+		Facings: -8
+		ShadowStart: 224
+	run:
+		Start: 8
+		Facings: -8
+		Length: 12
+		ShadowStart: 232
+		Tick: 130
+	shoot:
+		Start: 104
+		Length: 15
+		Facings: -8
+		ShadowStart: 328
+		Tick: 100
+	Inherits: ^VehicleOverlays
+	icon: dreadfireicon
+
 reaper2:
-    stand:
-        Facings: 8 
-        ShadowStart: 178
-    run:
-        Start: 8
-        Facings: 8
-        Length: 20
-        ShadowStart: 186
-        Tick: 20
-    die1:
-        Start: 168
-        Length: 10
-        ShadowStart: 221
-        Tick: 20
-    muzzle: gunfire
-        Length: *
-    Inherits: ^VehicleOverlays
-    muzzle0: mgun-n
-        Length: *
-    muzzle1: mgun-nw
-        Length: *
-    muzzle2: mgun-w
-        Length: *
-    muzzle3: mgun-sw
-        Length: *
-    muzzle4: mgun-s
-        Length: *
-    muzzle5: mgun-se
-        Length: *
-    muzzle6: mgun-e
-        Length: *
-    muzzle7: mgun-ne
-        Length: *
-    icon: reapicon
+	stand:
+		Facings: 8
+		ShadowStart: 178
+	run:
+		Start: 8
+		Facings: 8
+		Length: 20
+		ShadowStart: 186
+		Tick: 20
+	die1:
+		Start: 168
+		Length: 10
+		ShadowStart: 221
+		Tick: 20
+	muzzle: gunfire
+		Length: *
+	Inherits: ^VehicleOverlays
+	muzzle0: mgun-n
+		Length: *
+	muzzle1: mgun-nw
+		Length: *
+	muzzle2: mgun-w
+		Length: *
+	muzzle3: mgun-sw
+		Length: *
+	muzzle4: mgun-s
+		Length: *
+	muzzle5: mgun-se
+		Length: *
+	muzzle6: mgun-e
+		Length: *
+	muzzle7: mgun-ne
+		Length: *
+	icon: reapicon
 
 golem:
-    stand:
-        Facings: -8
-        Start: 152
-        Length: 1
-        ShadowStart: 464
-    run:
-        Facings: -8
-        Length: 19
-        ShadowStart: 312
-        Tick: 60
-    shoot:
-        Facings: -8
-        Start: 160
-        Length: 19
-        ShadowStart: 472
-        Tick: 60
-    Inherits: ^VehicleOverlays
-    icon: golemicon
+	stand:
+		Facings: -8
+		Start: 152
+		Length: 1
+		ShadowStart: 464
+	run:
+		Facings: -8
+		Length: 19
+		ShadowStart: 312
+		Tick: 60
+	shoot:
+		Facings: -8
+		Start: 160
+		Length: 19
+		ShadowStart: 472
+		Tick: 60
+	Inherits: ^VehicleOverlays
+	icon: golemicon
 
 trucka:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 truckb:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 icbm:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 bus:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 pick:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 car:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 wini:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 locomotive:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 traincar:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays
 
 cargocar:
-    Inherits: ^VehicleOverlays
+	Inherits: ^VehicleOverlays

@@ -1,504 +1,505 @@
 GASOL:
-    Inherits: ^Soldier
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 100
-        Prerequisites: ~gapile, ~!upgrade.zc
-        Description: GDI's basic combat infantry.\n\nGood vs: Light infantry\n\nSpecial:\n- Crush class: Light Infantry
-    Valued:
-        Cost: 100
-    Tooltip:
-        Name: Marine
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Marine
-        Volume: 2        
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0    
-    Armament@PRIMARY:
-        Weapon: MarineGun
-        LocalOffset: 256,0,550
-        RequiresCondition: !rank-heroic
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: MarineGunGarrison
-        LocalOffset: 256,0,550
-        RequiresCondition: !rank-heroic
-    Armament@GARRISONEDELITE:
-        Name: garrisoned
-        Weapon: ZoneMarineGunGarrison
-        LocalOffset: 256,0,550
-        RequiresCondition: rank-heroic
-    Armament@ELITE:
-        Weapon: ZoneMarineGun
-        LocalOffset: 256,0,550
-        RequiresCondition: rank-heroic
-    AttackFrontal:
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-    SoundOnDamageTransition:
-        DamagedSounds: gdi1_f1.aud, gdi1_f2.aud, gdi1_f3.aud, gdi1_f4.aud, gdi1_f5.aud, gdi1_f6.aud, gdi1_f7.aud, gdi1_f8.aud, gdi1_f9.aud, gdi1_f10.aud, gdi1_f11.aud, gdi1_f12.aud, gdi1_f13.aud, gdi1_f14
-#    AnnounceOnBuildAS:
-#        Voice: Build
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 100
+		Prerequisites: ~gapile, ~!upgrade.zc
+		Description: GDI's basic combat infantry.\n\nGood vs: Light infantry\n\nSpecial:\n- Crush class: Light Infantry
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Marine
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Marine
+		Volume: 2
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Armament@PRIMARY:
+		Weapon: MarineGun
+		LocalOffset: 362,0,778
+		RequiresCondition: !rank-heroic
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: MarineGunGarrison
+		LocalOffset: 362,0,778
+		RequiresCondition: !rank-heroic
+	Armament@GARRISONEDELITE:
+		Name: garrisoned
+		Weapon: ZoneMarineGunGarrison
+		LocalOffset: 362,0,778
+		RequiresCondition: rank-heroic
+	Armament@ELITE:
+		Weapon: ZoneMarineGun
+		LocalOffset: 362,0,778
+		RequiresCondition: rank-heroic
+	AttackFrontal:
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+	SoundOnDamageTransition:
+		DamagedSounds: gdi1_f1.aud, gdi1_f2.aud, gdi1_f3.aud, gdi1_f4.aud, gdi1_f5.aud, gdi1_f6.aud, gdi1_f7.aud, gdi1_f8.aud, gdi1_f9.aud, gdi1_f10.aud, gdi1_f11.aud, gdi1_f12.aud, gdi1_f13.aud, gdi1_f14
+	HitShape:
 
 GMISINF:
-    Inherits: ^Soldier
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 101
-        Prerequisites: ~gapile
-        Description: GDI's basic anti armor infantry.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack Air\n- Crush class: Light Infantry
-    Valued:
-        Cost: 250
-    Tooltip:
-        Name: Javelin Trooper
-    Voiced:
-        VoiceSet: Discthrower
-    Mobile:
-        Speed: 50
-    Health:
-        HP: 125
-    RevealsShroud:
-        Range: 7c0
-    Armament@Primary:
-        Weapon: JavelinGun
-        LocalOffset: 280,84,700
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: JavelinGunGarrison
-    AttackFrontal:
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-    SoundOnDamageTransition:
-        DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
- 
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 101
+		Prerequisites: ~gapile
+		Description: GDI's basic anti armor infantry.\n\nGood vs: Vehicles, Aircraft\n\nSpecial:\n- Can attack Air\n- Crush class: Light Infantry
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Javelin Trooper
+	Voiced:
+		VoiceSet: Discthrower
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 9c921
+	Armament@Primary:
+		Weapon: JavelinGun
+		LocalOffset: 396,119,990
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: JavelinGunGarrison
+	AttackFrontal:
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+	SoundOnDamageTransition:
+		DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
+	HitShape:
+
 E2:
-    Inherits: ^Soldier
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 102
-        Prerequisites: ~gapile, garadr, ~upgrade.st
-        Description: Steel Talons advanced infantry.\n\nGood vs: Ground Targets\n\nSpecial:\n- Bouncing shot\n- AOE damage\n- EMP effect on veterancy rank 5\n- Crush class: Light Infantry
-    Valued:
-        Cost: 250
-    Tooltip:
-        Name: Disc Thrower
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Discthrower
-        Volume: 2
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 7c0    
-    Armament@primary:
-        Weapon: DiscThrowerGun
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        RequiresCondition: !rank-heroic
-    Armament@garrisoned:
-        Name: garrisoned
-        Weapon: DiscThrowerGun
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        RequiresCondition: !rank-heroic
-    Armament@ELITE:
-        Weapon: DiscThrowerGunEMP
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        RequiresCondition: rank-heroic
-    Armament@ELITEGARRISONED:
-        Name: garrisoned
-        Weapon: DiscThrowerGunGarrisonEMP
-        LocalOffset: 0,0,555
-        FireDelay: 5
-        RequiresCondition: rank-heroic
-    AttackFrontal:
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-    SoundOnDamageTransition:
-        DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 102
+		Prerequisites: ~gapile, garadr, ~upgrade.st
+		Description: Steel Talons advanced infantry.\n\nGood vs: Ground Targets\n\nSpecial:\n- Bouncing shot\n- AOE damage\n- EMP effect on veterancy rank 5\n- Crush class: Light Infantry
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Disc Thrower
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Discthrower
+		Volume: 2
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 9c921
+	Armament@primary:
+		Weapon: DiscThrowerGun
+		LocalOffset: 0,0,785
+		FireDelay: 5
+		RequiresCondition: !rank-heroic
+	Armament@garrisoned:
+		Name: garrisoned
+		Weapon: DiscThrowerGun
+		LocalOffset: 0,0,785
+		FireDelay: 5
+		RequiresCondition: !rank-heroic
+	Armament@ELITE:
+		Weapon: DiscThrowerGunEMP
+		LocalOffset: 0,0,785
+		FireDelay: 5
+		RequiresCondition: rank-heroic
+	Armament@ELITEGARRISONED:
+		Name: garrisoned
+		Weapon: DiscThrowerGunGarrisonEMP
+		LocalOffset: 0,0,785
+		FireDelay: 5
+		RequiresCondition: rank-heroic
+	AttackFrontal:
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+	SoundOnDamageTransition:
+		DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
+	HitShape:
 
 SCOUT:
-    Inherits: ^Soldier
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 107
-        Prerequisites: ~gapile
-        Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range
-    Valued:
-        Cost: 300
-    Tooltip:
-        Name: Scout
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Scout
-        Volume: 2
-    Health:
-        HP: 150
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 10c0
-    AttackFrontal:
-#    Infiltrates:
-#        Types: SpyInfiltrate
-    -Cloak:
-    Cloak@self:
-        InitialDelay: 90
-        CloakDelay: 90
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-        IsPlayerPalette: true
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
-    SoundOnDamageTransition:
-        DamagedSounds: spotter_f1.aud, spotter_f2.aud, spotter_f3.aud
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 107
+		Prerequisites: ~gapile
+		Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Scout
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Scout
+		Volume: 2
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 14c146
+	AttackFrontal:
+	-Cloak:
+	Cloak@self:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: StealthUnitDetected
+	SoundOnDamageTransition:
+		DamagedSounds: spotter_f1.aud, spotter_f2.aud, spotter_f3.aud
+	HitShape:
 
 GDOG:
-    Inherits: ^SoldierFearless
-#    Buildable:
-#        Queue: Infantry.GDI
-#        BuildPaletteOrder: 104
-#        Prerequisites: ~gapile
-#        Description: Anti-Infantry combat dog.\n\n  Role: Stealth Detection / Anti-Infantry\n  HP: 150\n  Armor: Light\n  Speed: 85 (Charge 90)\n  Viewrange: 10\n\n Good vs Infantry \n\n Special:\n\n - Stealth detection (5 Range)\n - Can not attack cyborgs or suit powered infantry
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Watch Dog
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Dog
-    Health:
-        HP: 250
-    Mobile:
-        Speed: 60
-    RevealsShroud:
-        Range: 10c0
-    Armament@primary:
-        Name: Bite
-        Weapon: DogBite
-    AttackFrontal:
-        Armaments: Bite
-    WithInfantryBody:
-        IdleSequences: idle1,idle2,idle3
-    IgnoresDisguise:
-    DetectCloaked:
-        Range: 5c0
-    RenderDetectionCircle:
-    AutoTarget:
-        ScanRadius: 6
-    SpawnActorOnDeath@1:
-        Actor: doggie
-        Probability: 50
-        OwnerType: InternalName
-        InternalOwner: Creeps
-        DeathType: TriggerVisceroid
-        RequiresLobbyCreeps: True
-    SoundOnDamageTransition:
-        DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
-        
+	Inherits: ^SoldierFearless
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Watch Dog
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Dog
+	Health:
+		HP: 250
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 14c146
+	Armament@primary:
+		Name: Bite
+		Weapon: DogBite
+	AttackFrontal:
+		Armaments: Bite
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	IgnoresDisguise:
+	DetectCloaked:
+		Range: 7c73
+	RenderDetectionCircle:
+	AutoTarget:
+		ScanRadius: 6
+	SpawnActorOnDeath@1:
+		Actor: doggie
+		Probability: 50
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TriggerVisceroid
+		RequiresLobbyCreeps: True
+	SoundOnDamageTransition:
+		DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
+	HitShape:
+
 ENGINEER:
-    Inherits: ^Soldier
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Engineer
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 105
-        Prerequisites: ~gapile
-        Description: GDI's engineering unit.\n\nGood vs: Nothing\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Crush class: Light Infantry
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Engineer
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0    
-    Health:
-        HP: 250
-    Passenger:
-        PipType: Yellow
-    EngineerRepair:
-    RepairsBridges:
-        RepairNotification: BridgeRepaired
-    ExternalCaptures:
-        Type: building
-        ConsumeActor: true
-        PlayerExperience: 50
-    -AutoTarget:
-    -ProducibleWithLevel:
-        
+	Inherits: ^Soldier
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 105
+		Prerequisites: ~gapile
+		Description: GDI's engineering unit.\n\nGood vs: Nothing\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Crush class: Light Infantry
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Health:
+		HP: 250
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+		RepairNotification: BridgeRepaired
+	ExternalCaptures:
+		Type: building
+		ConsumeActor: true
+		PlayerExperience: 50
+	-AutoTarget:
+	-ProducibleWithLevel:
+	HitShape:
+
 MEDIC:
-    Inherits: ^Soldier
-    Valued:
-        Cost: 300
-    Tooltip:
-        Name: Medic
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 106
-        Prerequisites: ~gapile, garadr
-        Description: GDI's medical support infantry.\n\nSpecial:\n- Direct heal\n- Area of effect heal\n- Crush class: Light Infantry
-    Selectable:
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Medic
-        Volume: 2
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    Health:
-        HP: 225
-    Crushable:
-        CrushSound: squishy2.aud
-    Armament:
-        Weapon: Heal
-        TargetStances: Ally
-        ForceTargetStances: None
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-        DefaultAttackSequence: heal
-    SelfHealing:
-        Delay: 10
-    AutoTarget:
-        ScanRadius: 5
-    Passenger:
-        PipType: Red
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-    ProximityExternalCondition:
-        Condition: medic_heal
-        Range: 3c0
-    WithRangeCircle:
-        Color: FFFFFFFF
-        Range: 3c0
-    -DamagedByTerrain@Tiberium:
-    -ProducibleWithLevel:
-    SoundOnDamageTransition:
-        DamagedSounds: medic_f1.aud, medic_f2.aud, medic_f3.aud, medic_f4.aud
+	Inherits: ^Soldier
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Medic
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 106
+		Prerequisites: ~gapile, garadr
+		Description: GDI's medical support infantry.\n\nSpecial:\n- Direct heal\n- Area of effect heal\n- Crush class: Light Infantry
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Medic
+		Volume: 2
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Health:
+		HP: 225
+	Crushable:
+		CrushSound: squishy2.aud
+	Armament:
+		Weapon: Heal
+		TargetStances: Ally
+		ForceTargetStances: None
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		DefaultAttackSequence: heal
+	SelfHealing:
+		Delay: 10
+	AutoTarget:
+		ScanRadius: 5
+	Passenger:
+		PipType: Red
+		CargoType: Infantry
+		Voice: Move
+	ProximityExternalCondition:
+		Condition: medic_heal
+		Range: 4c248
+	WithRangeCircle:
+		Color: FFFFFFFF
+		Range: 4c248
+	-DamagedByTerrain@Tiberium:
+	-ProducibleWithLevel:
+	SoundOnDamageTransition:
+		DamagedSounds: medic_f1.aud, medic_f2.aud, medic_f3.aud, medic_f4.aud
+	HitShape:
 
 ZMARINE:
-    Inherits: ^SoldierFearless
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 101
-        Prerequisites: ~gapile, ~!t1, ~upgrade.zc
-        Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Light Infantry
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Zone Marine
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: ZoneMarine
-        Volume: 2
-    Health:
-        HP: 500
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
+	Inherits: ^SoldierFearless
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 101
+		Prerequisites: ~gapile, ~!t1, ~upgrade.zc
+		Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Light Infantry
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Zone Marine
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: ZoneMarine
+		Volume: 2
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0
-    RevealsShroud:
-        Range: 6c0
-    Armament@PRIMARY:
-        Weapon: ZoneMarineGun
-        LocalOffset: 300,0,480
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@GARRISONED:
-        Name: garrisoned
-        Weapon: ZoneMarineGunGarrison
-        LocalOffset: 300,0,480
-    AttackFrontal:
-    -DamagedByTerrain@Tiberium:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: zmarine_f1.aud, zmarine_f2.aud, zmarine_f3.aud, zmarine_f4.aud, zmarine_f5.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 8c497
+	Armament@PRIMARY:
+		Weapon: ZoneMarineGun
+		LocalOffset: 424,0,679
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: ZoneMarineGunGarrison
+		LocalOffset: 424,0,679
+	AttackFrontal:
+	-DamagedByTerrain@Tiberium:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: zmarine_f1.aud, zmarine_f2.aud, zmarine_f3.aud, zmarine_f4.aud, zmarine_f5.aud
+	HitShape:
 
 ZTROOPER:
-    Inherits: ^SoldierFearlessHeavy
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 108
-        Prerequisites: ~gapile, garadr, ~!t1, ~upgrade.zc
-        Description: This ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\nGood vs: Vehicles\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Medium infantry
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Zone Trooper
-    Selectable:
-        Bounds: 24,34,0,-9
-    Voiced:
-        VoiceSet: Trooper
-        Volume: 2        
-    Health:
-        HP: 780
-    Mobile:
-        Speed: 50
-        SharesCell: False
-        TerrainSpeeds:
+	Inherits: ^SoldierFearlessHeavy
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 108
+		Prerequisites: ~gapile, garadr, ~!t1, ~upgrade.zc
+		Description: This ZOCOM only infantry armed with Railguns can deal serious damage to any type of armor.\n\nGood vs: Vehicles\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Medium infantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Zone Trooper
+	Selectable:
+		Bounds: 24,34,0,-9
+	Voiced:
+		VoiceSet: Trooper
+		Volume: 2
+	Health:
+		HP: 780
+	Mobile:
+		Speed: 71
+		SharesCell: False
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
-    RevealsShroud:
-        Range: 7c0
-    Armament@primary:
-        Weapon: ZoneTrooperGun
-        LocalOffset: 512,64,800
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    -DamagedByTerrain@Tiberium:
-    WithMuzzleOverlay:
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    SoundOnDamageTransition:
-        DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 9c921
+	Armament@primary:
+		Weapon: ZoneTrooperGun
+		LocalOffset: 724,91,1131
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	-DamagedByTerrain@Tiberium:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	SoundOnDamageTransition:
+		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
+	HitShape:
 
 ZRAIDER:
-    Inherits: ^SoldierFearlessHeavy
-    Buildable:
-        Queue: Infantry.GDI
-        BuildPaletteOrder: 109
-        Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
-        Description: This ZOCOM infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area\nand can shoot down incoming Aircrafts with it's shoulder mounted missile launcher.\n\nGood vs: Infantry, Buildings, Air\n\nSpecial:\n- Can attack Air\n- Immune to Tiberium radiation\n- Crush class: Medium infantry
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Zone Raider
-    Selectable:
-        Bounds: 24,34,0,-9
-    Voiced:
-        VoiceSet: Raider
-        Volume: 2        
-    Health:
-        HP: 780
-    Mobile:
-        Speed: 50
-        SharesCell: False
-        TerrainSpeeds:
+	Inherits: ^SoldierFearlessHeavy
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 109
+		Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
+		Description: This ZOCOM infantry armed with Sonic Disc launchers can deal serious damage to buildings and infantry in a large area\nand can shoot down incoming Aircrafts with it's shoulder mounted missile launcher.\n\nGood vs: Infantry, Buildings, Air\n\nSpecial:\n- Can attack Air\n- Immune to Tiberium radiation\n- Crush class: Medium infantry
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Zone Raider
+	Selectable:
+		Bounds: 24,34,0,-9
+	Voiced:
+		VoiceSet: Raider
+		Volume: 2
+	Health:
+		HP: 780
+	Mobile:
+		Speed: 71
+		SharesCell: False
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
-    RevealsShroud:
-        Range: 9c0
-    Armament@primary:
-        Weapon: ZoneRaiderGun
-        LocalOffset: 512,64,800
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@Missiles:
-        Weapon: ZoneRaiderBazooka
-        LocalOffset: 0,90,900, 0,-90,900
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    -DamagedByTerrain@Tiberium:
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 12c745
+	Armament@primary:
+		Weapon: ZoneRaiderGun
+		LocalOffset: 724,91,1131
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@Missiles:
+		Weapon: ZoneRaiderBazooka
+		LocalOffset: 0,127,1273, 0,-127,1273
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	-DamagedByTerrain@Tiberium:
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud
+	HitShape:
 
 ZCOMMANDO:
-    Inherits: ^SoldierFearlessHeavy
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Zone Commander
-    Selectable:
-        Bounds: 24,34,0,-9
-    Voiced:
-        VoiceSet: Trooper
-        Volume: 2        
-    Health:
-        HP: 4000
-    Mobile:
-        Speed: 50
-        SharesCell: False
-        TerrainSpeeds:
+	Inherits: ^SoldierFearlessHeavy
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Zone Commander
+	Selectable:
+		Bounds: 24,34,0,-9
+	Voiced:
+		VoiceSet: Trooper
+		Volume: 2
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 71
+		SharesCell: False
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
-    RevealsShroud:
-        Range: 7c0
-    Armament@primary1:
-        Weapon: ZoneCommandoGun
-        LocalOffset: 512,64,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@primary2:
-        Weapon: ZoneCommandoGun2
-        LocalOffset: 512,64,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@primary3:
-        Weapon: ZoneCommandoGun2
-        LocalOffset: 512,64,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@primary4:
-        Weapon: ZoneCommandoGun2
-        LocalOffset: 512,64,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    Armament@primary5:
-        Weapon: ZoneCommandoGun2
-        LocalOffset: 512,64,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    -DamagedByTerrain@Tiberium:
-    WithMuzzleOverlay:
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    SoundOnDamageTransition:
-        DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 9c921
+	Armament@primary1:
+		Weapon: ZoneCommandoGun
+		LocalOffset: 724,91,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@primary2:
+		Weapon: ZoneCommandoGun2
+		LocalOffset: 724,91,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@primary3:
+		Weapon: ZoneCommandoGun2
+		LocalOffset: 724,91,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@primary4:
+		Weapon: ZoneCommandoGun2
+		LocalOffset: 724,91,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	Armament@primary5:
+		Weapon: ZoneCommandoGun2
+		LocalOffset: 724,91,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	-DamagedByTerrain@Tiberium:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	SoundOnDamageTransition:
+		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
+	HitShape:

@@ -1,288 +1,295 @@
 WEEDGUY:
-    Inherits: ^Soldier
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Chem Spray Infantry
-    Selectable:
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Weed
-    Mobile:
-        Speed: 42
-    Health:
-        HP: 130
-    Armament:
-        Weapon: FireballLauncher
-        LocalOffset: 85,0,384
-    AttackFrontal:
-    WithInfantryBody:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
+	Inherits: ^Soldier
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Chem Spray Infantry
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Weed
+	Mobile:
+		Speed: 59
+	Health:
+		HP: 130
+	Armament:
+		Weapon: FireballLauncher
+		LocalOffset: 120,0,543
+	AttackFrontal:
+	WithInfantryBody:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	HitShape:
 
 UMAGON:
-    Inherits: ^Mutant
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Umagon
-    Selectable:
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Umagon
-    Mobile:
-        Speed: 71
-    Health:
-        HP: 150
-    Passenger:
-    RevealsShroud:
-        Range: 7c0
-    Armament:
-        Weapon: UmagonSniper
-    AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Mutant
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Umagon
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Umagon
+	Mobile:
+		Speed: 100
+	Health:
+		HP: 150
+	Passenger:
+	RevealsShroud:
+		Range: 9c921
+	Armament:
+		Weapon: UmagonSniper
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 MUTANT:
-    Inherits: ^Mutant
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Mutant
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Mutant
-    Health:
-        HP: 50
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 4c0
-    Armament:
-        Weapon: Vulcan
-    AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Mutant
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Mutant
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 5c673
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 MWMN:
-    Inherits: ^Mutant
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Mutant Soldier
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: CivilianFemale
-    Health:
-        HP: 50
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 4c0
-    Armament:
-        Weapon: Vulcan
-    AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Mutant
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Mutant Soldier
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: CivilianFemale
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 5c673
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 MUTANT3:
-    Inherits: ^Mutant
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Mutant Sergeant
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Mutant
-    Health:
-        HP: 50
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 4c0
-    Armament:
-        Weapon: Vulcan
-    AttackFrontal:
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Mutant
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Mutant Sergeant
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 5c673
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 TRATOS:
-    Inherits: ^Mutant
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Tratos
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Tratos
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 71
-    RevealsShroud:
-        Range: 4c0
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    -AutoTarget:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Mutant
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Tratos
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Tratos
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 100
+	RevealsShroud:
+		Range: 5c673
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 OXANNA:
-    Inherits: ^Soldier
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Oxanna
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Oxanna
-    Health:
-        HP: 50
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 4c0
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    -AutoTarget:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Soldier
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Oxanna
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Oxanna
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 5c673
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 SLAV:
-    Inherits: ^Soldier
-	Valued: 
- 		Cost: 1
-    Tooltip:
-        Name: Slavick
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Slavick
-    Health:
-        HP: 300
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 4c0
-    TakeCover:
-        DamageModifiers:
-            Prone50Percent: 50
-            Prone60Percent: 60
-            Prone70Percent: 70
-            Prone100Percent: 100
-            Prone350Percent: 350
-        DamageTriggers: TriggerProne
-    -AutoTarget:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
+	Inherits: ^Soldier
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Slavick
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Slavick
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 5c673
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	HitShape:
 
 CIV1:
-    Inherits: ^CivilianInfantry
-    Armament:
-        Weapon: CivilianPistol
-    AttackFrontal:
+	Inherits: ^CivilianInfantry
+	Armament:
+		Weapon: CivilianPistol
+	AttackFrontal:
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-    Mobile:
-        TerrainSpeeds:
+	Mobile:
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 300
 			BlueTiberium: 70
 				PathingCost: 300
-            RedTiberium: 70
-                PathingCost: 300
-            PurpleTiberium: 70
-                PathingCost: 300       
-                
+			RedTiberium: 70
+				PathingCost: 300
+			PurpleTiberium: 70
+				PathingCost: 300
+
 CIV2:
-    Inherits: ^CivilianInfantry
-    -AutoTarget:
+	Inherits: ^CivilianInfantry
+	-AutoTarget:
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-    Mobile:
-        TerrainSpeeds:
+	Mobile:
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 300
 			BlueTiberium: 70
 				PathingCost: 300
-            RedTiberium: 70
-                PathingCost: 300
-            PurpleTiberium: 70
-                PathingCost: 300  
-                
+			RedTiberium: 70
+				PathingCost: 300
+			PurpleTiberium: 70
+				PathingCost: 300
+
 CIV3:
-    Inherits: ^CivilianInfantry
-    Armament:
-        Weapon: CivilianPistol
-    AttackFrontal:
+	Inherits: ^CivilianInfantry
+	Armament:
+		Weapon: CivilianPistol
+	AttackFrontal:
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-    Mobile:
-        TerrainSpeeds:
+	Mobile:
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 300
 			BlueTiberium: 70
 				PathingCost: 300
-            RedTiberium: 70
-                PathingCost: 300
-            PurpleTiberium: 70
-                PathingCost: 300  
-                
+			RedTiberium: 70
+				PathingCost: 300
+			PurpleTiberium: 70
+				PathingCost: 300

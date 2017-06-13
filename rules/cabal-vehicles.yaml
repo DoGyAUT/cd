@@ -1,670 +1,651 @@
 KMCV:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 300
-        Prerequisites: ~kaweap, karadr
-        Description: The heart of any Cabal base.\n\nSpecial:\n- provides a build radius for structures\n- Crush class: Medium vehicle\n- Hover
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Cabal Mobile Construction Vehicle
-    Selectable:
-        Priority: 3
-        Bounds: 42,42
-    Voiced:
-        VoiceSet: Cmcv
-        Volume: 2
-    Mobile:
-        Speed: 70
-        TurnSpeed: 6
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Bridge: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Green: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    Health:
-        HP: 2000
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    MustBeDestroyed:
-        RequiredForShortGame: True
-    BaseBuilding:
-    Transforms:
-        IntoActor: kacnst
-        Offset: -1,-1
-        Facing: 96
-        TransformSounds: buildupsound.aud
-        NoTransformNotification: BuildingCannotPlaceAudio
-        Voice: Move
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-    -ThrowsShrapnel@human:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 300
+		Prerequisites: ~kaweap, karadr
+		Description: The heart of any Cabal base.\n\nSpecial:\n- provides a build radius for structures\n- Crush class: Medium vehicle\n- Hover
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Cabal Mobile Construction Vehicle
+	Selectable:
+		Priority: 3
+		Bounds: 42,42
+	Voiced:
+		VoiceSet: Cmcv
+		Volume: 2
+	Mobile:
+		Speed: 99
+		TurnSpeed: 6
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
+			Water: 80
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	MustBeDestroyed:
+		RequiredForShortGame: True
+	BaseBuilding:
+	Transforms:
+		IntoActor: kacnst
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: buildupsound.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+		Voice: Move
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	-ThrowsShrapnel@human:
+	HitShape:
 
 KHARV:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Cabal Harvester
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 301
-        Prerequisites: kproc, ~kaweap
-        Description: Supplies Cabals refineries with Tiberium.\n\nSpecial:\n- Harvests Tiberium\n- Crush class: Medium vehicle\n- Hover
-    Selectable:
-        Priority: 7
-        Bounds: 36,36
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Harvester:
-        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 14
-        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-        BaleLoadDelay: 12
-        BaleUnloadDelay: 6
-        SearchFromProcRadius: 36
-        SearchFromOrderRadius: 18
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 7
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Bridge: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Green: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    -DamagedByTerrain@Veins:
-    Health:
-        HP: 1200
-#    SelfHealing:
-#        Step: 0
-#        PercentageStep: 1
-#        Delay: 10
-#        HealIfBelow: 100
-#        DamageCooldown: 200
-    RevealsShroud:
-        Range: 6c0
-    RenderSprites:
-    RenderVoxels:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    Explodes:
-        Weapon: LargeTiberiumExplosion
-        EmptyWeapon: SmallTiberiumExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
-    -ThrowsShrapnel@human:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Cabal Harvester
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 301
+		Prerequisites: kproc, ~kaweap
+		Description: Supplies Cabals refineries with Tiberium.\n\nSpecial:\n- Harvests Tiberium\n- Crush class: Medium vehicle\n- Hover
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Cabalbeep
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+		Capacity: 14
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 12
+		BaleUnloadDelay: 6
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 7
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
+			Water: 80
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	-DamagedByTerrain@Veins:
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 8c497
+	RenderSprites:
+	RenderVoxels:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: LargeTiberiumExplosion
+		EmptyWeapon: SmallTiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	-ThrowsShrapnel@human:
+	HitShape:
 
 DREADFIRE:
-    Inherits@1: ^Walker
-    Valued:
-        Cost: 1100
-    Tooltip:
-        Name: Dreadfire
-    Selectable:
-        Bounds: 42, 60, 0, -25
-        Class: Dreadfire
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 303
-        Prerequisites: ~kaweap, karadr
-        Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
-    Mobile:
-        TurnSpeed: 5
-        Speed: 50
-    GrantConditionOnMovement@steps:
-        Condition: walker
-    AmbientSound@step1:
-        SoundFiles: stomp6a.aud, stomp6b.aud, stomp6c.aud
-        Delay: 3
-        Interval: 18
-        RequiresCondition: walker
-    RevealsShroud:
-        Range: 5c0
-    Health:
-        HP: 1850
-    AttackFrontal:
-    AutoTarget:
-    Targetable:
-        TargetTypes: Ground, Vehicle, Repair, Flameproof
-    BodyOrientation:
-        QuantizedFacings: 8
-    Armament@primary:
-        Weapon: DreadfireLauncher
-        LocalOffset: 700,300,1400
-        FireDelay: 5
-    Armament@secondary:
-        Weapon: DreadfireLauncher
-        LocalOffset: 700,-300,1400
-        FireDelay: 5
-    RenderSprites:
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    Voiced:
-        VoiceSet: Dreadfire
-        Volume: 2
-    -ThrowsShrapnel@human:
-    -ExternalCondition@firedamage:
-    Explodes:
-        Weapon: UnitExplodeSmall
-        Chance: 100
+	Inherits@1: ^Walker
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Dreadfire
+	Selectable:
+		Bounds: 42, 60, 0, -25
+		Class: Dreadfire
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 303
+		Prerequisites: ~kaweap, karadr
+		Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
+	Mobile:
+		TurnSpeed: 5
+		Speed: 71
+	GrantConditionOnMovement@steps:
+		Condition: walker
+	AmbientSound@step1:
+		SoundFiles: stomp6a.aud, stomp6b.aud, stomp6c.aud
+		Delay: 3
+		Interval: 18
+		RequiresCondition: walker
+	RevealsShroud:
+		Range: 7c73
+	Health:
+		HP: 1850
+	AttackFrontal:
+	AutoTarget:
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, Flameproof
+	BodyOrientation:
+		QuantizedFacings: 8
+	Armament@primary:
+		Weapon: DreadfireLauncher
+		LocalOffset: 990,424,1980
+		FireDelay: 5
+	Armament@secondary:
+		Weapon: DreadfireLauncher
+		LocalOffset: 990,-424,1980
+		FireDelay: 5
+	RenderSprites:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Voiced:
+		VoiceSet: Dreadfire
+		Volume: 2
+	-ThrowsShrapnel@human:
+	-ExternalCondition@firedamage:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		Chance: 100
+	HitShape:
 
 REAPER:
-    Inherits@1: ^Walker
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Reaper
-    Selectable:
-        Bounds: 42,42, 0, -10
-        Class: Reaper
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 304
-        Prerequisites: ~kaweap
-        Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
-    Mobile:
-        TurnSpeed: 8
-        Speed: 75
-        Crushes: crate
-    Health:
-        HP: 1000
-    RevealsShroud:
-        Range: 9c0
-    AttackFrontal:
-    AutoTarget:
-    BodyOrientation:
-        QuantizedFacings: 8
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    Armament@primary:
-        Weapon: ReaperCannon
-        LocalOffset: 256,-128,500, 256,128,500
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-    Armament@missiles:
-        Weapon: ReaperMissile
-        LocalOffset: 0,32,1100
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    Armament@web:
-        Weapon: WebLauncher
-        LocalOffset: 0,32,1100     
-        MuzzlePalette: apolra50alpha
-    RenderSprites:
-    WithInfantryBody:
-    Voiced:
-        VoiceSet: Reaper
-        Volume: 1
-    WithDeathAnimation:
-        DeathTypes:
-            BulletDeath: 1
-            SmallExplosionDeath: 1
-            ExplosionDeath: 1
-            FireDeath: 1
-            EnergyDeath: 1
-    WithMuzzleOverlay:
-    RenderSprites:
-        Image: reaper2
-        Scale: 0.8
-    -ThrowsShrapnel@human:
+	Inherits@1: ^Walker
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Reaper
+	Selectable:
+		Bounds: 42,42, 0, -10
+		Class: Reaper
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 304
+		Prerequisites: ~kaweap
+		Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
+	Mobile:
+		TurnSpeed: 8
+		Speed: 106
+		Crushes: crate
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 12c745
+	AttackFrontal:
+	AutoTarget:
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	Armament@primary:
+		Weapon: ReaperCannon
+		LocalOffset: 362,-181,707, 362,181,707
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+	Armament@missiles:
+		Weapon: ReaperMissile
+		LocalOffset: 0,45,1556
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@web:
+		Weapon: WebLauncher
+		LocalOffset: 0,45,1556
+		MuzzlePalette: apolra50alpha
+	RenderSprites:
+	WithInfantryBody:
+	Voiced:
+		VoiceSet: Reaper
+		Volume: 1
+	WithDeathAnimation:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			EnergyDeath: 1
+	WithMuzzleOverlay:
+	RenderSprites:
+		Image: reaper2
+		Scale: 0.8
+	-ThrowsShrapnel@human:
+	HitShape:
 
 GOLEM:
-    Inherits: ^Walker
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Golem
-    Selectable:
-        Bounds: 42, 60, 0, -25
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 305
-        Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- Repairs vehicles and cyborgs with AOE\n- Cloakes everyting in the repair range if deployed\n- Repairs vehicles directly\n- Crush class: Medium vehicle
-    Mobile:
-        TurnSpeed: 3
-        Speed: 55
-        RequiresCondition: !(empdisable && !invulnerability) && !deployed
-    RevealsShroud:
-        Range: 6c0
-    Health:
-        HP: 520
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 100
-        DamageCooldown: 200
-    AttackFrontal:
-#    AutoTarget:
-#        ScanRadius: 5
-    BodyOrientation:
-        QuantizedFacings: 8
-    Armament:
-        Weapon: Repair
-        Cursor: repair
-        OutsideRangeCursor: repair
-        TargetStances: Ally
-        ForceTargetStances: None
-    RenderSprites:
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    Voiced:
-        VoiceSet: CyborgH
-        Volume: 2
-    -ThrowsShrapnel@human:
-    ProximityExternalCondition:
-        Condition: repair_heal
-        Range: 5c0
-    WithRangeCircle:
-        Color: FFFFFFFF
-        Range: 5c0
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-    ProximityExternalCondition:
-        Condition: cloakgenerator
-        Range: 5c0
-        EnableSound: stealth01.aud
-        DisableSound: unstealth01.aud
-        AffectsParent: True
-    DisableOnCondition:
-        RequiresCondition: !deployed
+	Inherits: ^Walker
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Golem
+	Selectable:
+		Bounds: 42, 60, 0, -25
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 305
+		Prerequisites: ~kaweap, karadr, ~!t1
+		Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- Repairs vehicles and cyborgs with AOE\n- Cloakes everyting in the repair range if deployed\n- Repairs vehicles directly\n- Crush class: Medium vehicle
+	Mobile:
+		TurnSpeed: 3
+		Speed: 78
+		RequiresCondition: !(empdisable && !invulnerability) && !deployed
+	RevealsShroud:
+		Range: 8c497
+	Health:
+		HP: 520
+	SelfHealing:
+		Step: 0
+		PercentageStep: 1
+		Delay: 10
+		HealIfBelow: 100
+		DamageCooldown: 200
+	AttackFrontal:
+	BodyOrientation:
+		QuantizedFacings: 8
+	Armament:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	RenderSprites:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Voiced:
+		VoiceSet: CyborgH
+		Volume: 2
+	-ThrowsShrapnel@human:
+	ProximityExternalCondition:
+		Condition: repair_heal
+		Range: 7c73
+	WithRangeCircle:
+		Color: FFFFFFFF
+		Range: 7c73
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	ProximityExternalCondition:
+		Condition: cloakgenerator
+		Range: 7c73
+		EnableSound: stealth01.aud
+		DisableSound: unstealth01.aud
+		AffectsParent: True
+		RequiresCondition: deployed
+	HitShape:
 
 TARANTULA:
-    Inherits@1: ^Walker
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Tarantula
-    Selectable:
-        Bounds: 42,42
-        Class: Tarantula
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 306
-        Prerequisites: ~kaweap, karadr, ~!t1
-        Description: Anti-Air mechanized walker armed with lasers.\n\nGood vs: Air\n\nSpecial:\n- Can only attack Air\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Mobile:
-        TurnSpeed: 6
-        Speed: 55
-    GrantConditionOnMovement@steps:
-        Condition: walker
-    AmbientSound@step1:
-        SoundFiles: stomp5a.aud, stomp5b.aud, stomp5c.aud
-        Delay: 4
-        Interval: 31
-        RequiresCondition: walker
-    Health:
-        HP: 960
-    RevealsShroud:
-        Range: 13c0
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithInfantryBody:
-    Turreted:
-        TurnSpeed: 5
-    AttackTurreted:
-    WithSpriteTurret:
-        Recoils: True
-#    Armament@primary:
-#        Weapon: TarantulaLaser
-#        LocalOffset: 300,90,650, 300,-90,650
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: effect50alpha
-#        Recoil: 50
-#        RecoilRecovery: 10
-    Armament@AA:
-        Weapon: TarantulaLaserAA
-        LocalOffset: 300,90,650, 300,-90,650
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    AutoTarget:
-    AttackMove:
-    WithMuzzleOverlay:
-    RenderSprites:
-    -ThrowsShrapnel@human:
+	Inherits@1: ^Walker
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Tarantula
+	Selectable:
+		Bounds: 42,42
+		Class: Tarantula
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 306
+		Prerequisites: ~kaweap, karadr, ~!t1
+		Description: Anti-Air mechanized walker armed with lasers.\n\nGood vs: Air\n\nSpecial:\n- Can only attack Air\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	Mobile:
+		TurnSpeed: 6
+		Speed: 78
+	GrantConditionOnMovement@steps:
+		Condition: walker
+	AmbientSound@step1:
+		SoundFiles: stomp5a.aud, stomp5b.aud, stomp5c.aud
+		Delay: 4
+		Interval: 31
+		RequiresCondition: walker
+	Health:
+		HP: 960
+	RevealsShroud:
+		Range: 18c394
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithInfantryBody:
+	Turreted:
+		TurnSpeed: 5
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: True
+	Armament@AA:
+		Weapon: TarantulaLaserAA
+		LocalOffset: 424,127,919, 424,-127,919
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 50
+		RecoilRecovery: 10
+	AutoTarget:
+	AttackMove:
+	WithMuzzleOverlay:
+	RenderSprites:
+	-ThrowsShrapnel@human:
+	HitShape:
 
 SILVER:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Helion
-    Selectable:
-        Bounds: 42,42, 0, -5
-        Class: Helion
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 307
-        Prerequisites: ~kaweap, karadr
-        Description: This prime example of CABALs superior design allows strong artillery strikes from unexpected attack angles.\n\nSpecial:\n- Very strong shot after long reload delay while deployed\n- Has big minimum range\n- Has big maximum range\n- Flying while undeployed
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    -DamagedByTerrain@Veins:
-    Health:
-        HP: 300
-    RevealsShroud@cruising:
-        Range: 10c0
-        Type: CenterPosition
-        RequiresCondition: airborne
-    RevealsShroud@ground:
-        Range: 3c0
-        Type: CenterPosition
-        RequiresCondition: !airborne
-    Armament@primary:
-        Weapon: HelionGun
-        LocalOffset: -256,256,512, -256,-256,512
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        RequiresCondition: !empdisable
-    AttackFrontal:
-    ForceReload:
-        RequiresCondition: airborne
-    WithMuzzleOverlay:
-        RequiresCondition: !airborne
-    ReloadArmamentsBar:
-        Color: 0000FF
-    RenderSprites:
-    RenderVoxels:
-    RenderRangeCircle@max:
-    RenderRangeCircle@min:
-        RangeCircleMode: Minimum
-        Color: FF0000
-    WithVoxelBody:
-    -ThrowsShrapnel@human:
-    GrantConditionOnDeploy:
-        DeployedCondition: shouldLand
-        CanDeployOnRamps: True
-        AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-    Aircraft:
-        CruiseAltitude: 4c0
-        AltitudeVelocity: 0c256
-        Speed: 100
-        TurnSpeed: 10
-        CanHover: True
-        LandWhenIdle: False
-        LandOnCondition: shouldLand
-        LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-        AirborneCondition: airborne
-        CruisingCondition: cruising
-    -Mobile:
-    -LeavesTrails@ground:
-    -LeavesTrails@water:
-    -GrantConditionOnTerrain@Veins:
-    -DamagedByTerrain@TibGas:
-    -DamagedByTerrain@firedamage:
-    -Targetable:
-    Targetable@GROUND:
-        TargetTypes: Ground, Vehicle, Repair
-        RequiresCondition: !inside-tunnel && !airborne
-    Targetable@AIRBORNE:
-        TargetTypes: Air
-        RequiresCondition: airborne
-    HiddenUnderFog:
-        Type: GroundPosition
-
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Helion
+	Selectable:
+		Bounds: 42,42, 0, -5
+		Class: Helion
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 307
+		Prerequisites: ~kaweap, karadr
+		Description: This prime example of CABALs superior design allows strong artillery strikes from unexpected attack angles.\n\nSpecial:\n- Very strong shot after long reload delay while deployed\n- Has big minimum range\n- Has big maximum range\n- Flying while undeployed
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	-DamagedByTerrain@Veins:
+	Health:
+		HP: 300
+	RevealsShroud@cruising:
+		Range: 10c0
+		Type: CenterPosition
+		RequiresCondition: airborne
+	RevealsShroud@ground:
+		Range: 3c0
+		Type: CenterPosition
+		RequiresCondition: !airborne
+	Armament@primary:
+		Weapon: HelionGun
+		LocalOffset: -362,362,724, -362,-362,724
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		RequiresCondition: !empdisable
+	AttackFrontal:
+	ForceReload:
+		RequiresCondition: airborne
+	WithMuzzleOverlay:
+		RequiresCondition: !airborne
+	ReloadArmamentsBar:
+		Color: 0000FF
+	RenderSprites:
+	RenderVoxels:
+	RenderRangeCircle@max:
+	RenderRangeCircle@min:
+		RangeCircleMode: Minimum
+		Color: FF000080
+	WithVoxelBody:
+	-ThrowsShrapnel@human:
+	GrantConditionOnDeploy:
+		DeployedCondition: shouldLand
+		CanDeployOnRamps: True
+		AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
+	Aircraft:
+		CruiseAltitude: 5c673
+		AltitudeVelocity: 0c362
+		Speed: 141
+		TurnSpeed: 10
+		CanHover: True
+		LandWhenIdle: False
+		LandOnCondition: shouldLand
+		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+	-Mobile:
+	-LeavesTrails@ground:
+	-LeavesTrails@water:
+	-GrantConditionOnTerrain@Veins:
+	-DamagedByTerrain@TibGas:
+	-DamagedByTerrain@firedamage:
+	-Targetable:
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle, Repair
+		RequiresCondition: !inside-tunnel && !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	HiddenUnderFog:
+		Type: GroundPosition
+	HitShape:
 
 KRONOS:
-    Inherits@1: ^VoxelTank
-    Inherits@2: ^HeavyVehicle
-    Valued:
-        Cost: 2200
-    Tooltip:
-        Name: Kronos
-    Selectable:
-        Bounds: 42,42, 0, -5
-        Class: Kronos
-    Buildable:
-        Queue: Vehicle.Cabal
-        BuildPaletteOrder: 308
-        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
-        Description: Super heavy battle tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can swim on water\n- Crush class: Heavy vehicle
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Mobile:
-        Speed: 40
-        TurnSpeed: 3
-        TerrainSpeeds:
-            Water: 50
-    Health:
-        HP: 2080
-    RevealsShroud:
-        Range: 8c0
-    Turreted:
-        TurnSpeed: 2
-        Offset: -256,0,32
-    Armament@PRIMARY:
-        Weapon: KronosCannon
-        LocalOffset: 1400,0,900
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 3
-        HealIfBelow: 100
-        DamageCooldown: 200
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelTurret:
-        Recoils: False
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    GrantConditionOnTerrain:
-        Condition: inwater
-        TerrainTypes: Water
-    WithVoxelBody:
-        RequiresCondition: !inwater
-    WithVoxelBody@water:
-        Sequence: water
-        RequiresCondition: inwater
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        MovingInterval: 6
-    -ThrowsShrapnel@human:
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^HeavyVehicle
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: Kronos
+	Selectable:
+		Bounds: 42,42, 0, -5
+		Class: Kronos
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 308
+		Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+		Description: Super heavy battle tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can swim on water\n- Crush class: Heavy vehicle
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	Mobile:
+		Speed: 57
+		TurnSpeed: 3
+		TerrainSpeeds:
+			Water: 50
+	Health:
+		HP: 2080
+	RevealsShroud:
+		Range: 11c321
+	Turreted:
+		TurnSpeed: 2
+		Offset: -362,0,45
+	Armament@PRIMARY:
+		Weapon: KronosCannon
+		LocalOffset: 1980,0,1273
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 200
+		RecoilRecovery: 10
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 100
+		DamageCooldown: 200
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelTurret:
+		Recoils: False
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+	GrantConditionOnTerrain:
+		Condition: inwater
+		TerrainTypes: Water
+	WithVoxelBody:
+		RequiresCondition: !inwater
+	WithVoxelBody@water:
+		Sequence: water
+		RequiresCondition: inwater
+	LeavesTrails@water:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		TrailWhileStationary: True
+		StationaryInterval: 18
+		MovingInterval: 6
+	-ThrowsShrapnel@human:
+	HitShape:
 
 FURY:
-    Inherits@1: ^VoxelTank
-    Inherits@2: ^SuperHeavyVehicle
-    Valued:
-        Cost: 5000
-    Tooltip:
-        Name: Fury
-    Selectable:
-        Bounds: 42,42, 0, -5
-        Class: Fury
-#    Buildable:
-#        Queue: Vehicle.Cabal
-#        BuildPaletteOrder: 308
-#        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2, ~!t3
-#		BuildLimit: 1
-#        Description: Super heavy factory cruiser, capable of crossing water and building cyborgs.\nEquipped with a anti armor railgun.\n\nRole : Epic Vehicle\nHP: 8000\nArmor: Light\nSpeed: 50\nViewrange: 10\nGood vs: Vehicles\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Amphibous\n - Builds Cyborgs\n - Moves faster on water\n - Selfheal
-    Voiced:
-        VoiceSet: Husk
-        Volume: 2
-    Mobile:
-        Speed: 50
-        TurnSpeed: 2
-        TerrainSpeeds:
-            Water: 80
-    Health:
-        HP: 10400
-    RevealsShroud:
-        Range: 10c0
-    Turreted@main:
-        Turret: primary
-        TurnSpeed: 1
-        Offset: -180,0,0
-    Armament@primary:
-        Name: primary
-        Weapon: KronosCannon
-        LocalOffset: 1000,64,1500
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 300
-        RecoilRecovery: 10
-    Armament@secondary:
-        Name: secondary
-        Weapon: KronosCannon
-        LocalOffset: 1000,-64,1500
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 300
-        RecoilRecovery: 10
-        FireDelay: 30
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 50
-        DamageCooldown: 200
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelTurret:
-        Recoils: False
-    WithVoxelBarrel@1:
-        Armament: primary
-        LocalOffset: -180,64,0
-    WithVoxelBarrel@2:
-        Armament: secondary
-        LocalOffset: -180,-64,0
-    WithMuzzleOverlay:
-    WithVoxelBody:
-    -ThrowsShrapnel@human:
-    Production:
-        Produces: Infantry.Cabal
-    ProductionQueue@Infantry:
-        Type: Infantry.Cabal
-        Group: Infantry
-        BuildSpeed: 40
-        LowPowerSlowdown: 3
-    ProductionBar:
-    Exit:
-        ExitCell: -1,0
-    ProvidesPrerequisite:
-        Prerequisite: cybbar
-    GrantConditionOnTerrain:
-        Condition: inwater
-        TerrainTypes: Water
-    WithVoxelBody:
-        RequiresCondition: !inwater
-    WithVoxelBody@water:
-        Sequence: water
-        RequiresCondition: inwater
-    LeavesTrails@water:
-        Image: wake
-        Palette: effect
-        TerrainTypes: Water
-        TrailWhileStationary: True
-        StationaryInterval: 18
-        MovingInterval: 6
-    
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^SuperHeavyVehicle
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Fury
+	Selectable:
+		Bounds: 42,42, 0, -5
+		Class: Fury
+	Voiced:
+		VoiceSet: Husk
+		Volume: 2
+	Mobile:
+		Speed: 71
+		TurnSpeed: 2
+		TerrainSpeeds:
+			Water: 80
+	Health:
+		HP: 10400
+	RevealsShroud:
+		Range: 14c146
+	Turreted@main:
+		Turret: primary
+		TurnSpeed: 1
+		Offset: -180,0,0
+	Armament@primary:
+		Name: primary
+		Weapon: KronosCannon
+		LocalOffset: 1414,91,2121
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 300
+		RecoilRecovery: 10
+	Armament@secondary:
+		Name: secondary
+		Weapon: KronosCannon
+		LocalOffset: 1414,-91,2121
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 300
+		RecoilRecovery: 10
+		FireDelay: 30
+	SelfHealing:
+		Step: 0
+		PercentageStep: 1
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelTurret:
+		Recoils: False
+	WithVoxelBarrel@1:
+		Armament: primary
+		LocalOffset: -255,91,0
+	WithVoxelBarrel@2:
+		Armament: secondary
+		LocalOffset: -255,-91,0
+	WithMuzzleOverlay:
+	WithVoxelBody:
+	-ThrowsShrapnel@human:
+	Production:
+		Produces: Infantry.Cabal
+	ProductionQueue@Infantry:
+		Type: Infantry.Cabal
+		Group: Infantry
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	ProductionBar:
+	Exit:
+		ExitCell: -1,0
+	ProvidesPrerequisite:
+		Prerequisite: cybbar
+	GrantConditionOnTerrain:
+		Condition: inwater
+		TerrainTypes: Water
+	WithVoxelBody:
+		RequiresCondition: !inwater
+	WithVoxelBody@water:
+		Sequence: water
+		RequiresCondition: inwater
+	LeavesTrails@water:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		TrailWhileStationary: True
+		StationaryInterval: 18
+		MovingInterval: 6
+	HitShape:
+
 GARGANTUA:
-    Inherits@1: ^Walker
-    Inherits@2: ^SuperHeavyVehicle
-    Valued:
-        Cost: 5000
-    Tooltip:
-        Name: Gargantua
-    Selectable:
-        Bounds: 42,42, 0, -10
-        Class: Gargantua
-#    Buildable:
-#        Queue: Vehicle.Cabal
-#        BuildPaletteOrder: 309
-#        Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2, ~!t3
-#		BuildLimit: 1
-#        Description: Epic sized walker equipped with four heavy twin lasers\n\nRole : Epic Walker\nHP: 10000\nArmor: Light\nSpeed: 50\nViewrange: 15\nGood vs: Ground Units\nUseless vs: Vtols, Jets, Bombers\n\nSpecial:\n - Selfheal
-    Mobile:
-        TurnSpeed: 5
-        Speed: 50
-    Health:
-        HP: 13000
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 50
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 15c0
-    AttackFrontal:
-    AutoTarget: 
-    BodyOrientation:
-        QuantizedFacings: 8
-    Armament@primary:
-        Weapon: GargantuaLaser
-        LocalOffset: 700,620,1150, 700,-620,1150, 700,620,1500, 700,-620,1500
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    RenderSprites:
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    WithDeathAnimation:
-        DeathTypes:
-            BulletDeath: 1
-            SmallExplosionDeath: 1
-            ExplosionDeath: 1
-            FireDeath: 1
-            EnergyDeath: 1
-    WithMuzzleOverlay:
-    Voiced:
-        VoiceSet: CyborgH
-        Volume: 2
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-    -ThrowsShrapnel@human:
-    Passenger:
-        CargoType: Epic
-        Voice: Move
-        Weight: 20
+	Inherits@1: ^Walker
+	Inherits@2: ^SuperHeavyVehicle
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Gargantua
+	Selectable:
+		Bounds: 42,42, 0, -10
+		Class: Gargantua
+	Mobile:
+		TurnSpeed: 5
+		Speed: 71
+	Health:
+		HP: 13000
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 50
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 21c218
+	AttackFrontal:
+	AutoTarget:
+	BodyOrientation:
+		QuantizedFacings: 8
+	Armament@primary:
+		Weapon: GargantuaLaser
+		LocalOffset: 990,877,1626, 990,-877,1626, 990,877,2121, 990,-877,2121
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	RenderSprites:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	WithDeathAnimation:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			EnergyDeath: 1
+	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: CyborgH
+		Volume: 2
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	-ThrowsShrapnel@human:
+	Passenger:
+		CargoType: Epic
+		Voice: Move
+		Weight: 20
+	HitShape:

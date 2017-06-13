@@ -1,291 +1,291 @@
 mpspawn:
-    EditorOnlyTooltip:
-        Name: (multiplayer player starting point)
-    AlwaysVisible:
-    Immobile:
-        OccupiesSpace: False
-    RenderSpritesEditorOnly:
-    WithSpriteBody:
-    BodyOrientation:
-        QuantizedFacings: 1
+	EditorOnlyTooltip:
+		Name: (multiplayer player starting point)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: False
+	RenderSpritesEditorOnly:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
 
 waypoint:
-    EditorOnlyTooltip:
-        Name: (multiplayer player starting point)
-    AlwaysVisible:
-    Immobile:
-        OccupiesSpace: False
-    RenderSpritesEditorOnly:
-    WithSpriteBody:
-    BodyOrientation:
-        QuantizedFacings: 1
+	EditorOnlyTooltip:
+		Name: (multiplayer player starting point)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: False
+	RenderSpritesEditorOnly:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
 
 ^mmch.colorpicker:
-    Inherits: MMCH
-    Mobile:
-        InitialFacing: 160
-    Turreted:
-        InitialFacing: 160
-    WithInfantryBody:
-        StandSequences: run
-    RenderSprites:
-        Image: mmch
-        Scale: 0.8
-        Palette: colorpicker
+	Inherits: MMCH
+	Mobile:
+		InitialFacing: 160
+	Turreted:
+		InitialFacing: 160
+	WithInfantryBody:
+		StandSequences: run
+	RenderSprites:
+		Image: mmch
+		Scale: 0.8
+		Palette: colorpicker
 
 CAMERA:
-    EditorOnlyTooltip:
-        Name: (multiplayer player starting point)
-    AlwaysVisible:
-    RenderSpritesEditorOnly:
-    WithSpriteBody:
-    BodyOrientation:
-        QuantizedFacings: 1
-    Immobile:
-        OccupiesSpace: False
-    RevealsShroud:
-        Range: 10c0
-        Type: GroundPosition
-    DetectCloaked:
-        Range: 10
-        
+	EditorOnlyTooltip:
+		Name: (multiplayer player starting point)
+	AlwaysVisible:
+	RenderSpritesEditorOnly:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	Immobile:
+		OccupiesSpace: False
+	RevealsShroud:
+		Range: 14c146
+		Type: GroundPosition
+	DetectCloaked:
+		Range: 0c14
+
 camera.paradrop:
-    Inherits: CAMERA
-    RevealsShroud:
-        Range: 6c0
-        
+	Inherits: CAMERA
+	RevealsShroud:
+		Range: 8c497
+
 camera.orcascout:
-    Inherits: CAMERA 
-    RenderSpritesEditorOnly:
-        Image: camera
-    EditorOnlyTooltip:
-        Name: (support power proxy camera)
-    DetectCloaked:
-        Range: 10c0
-        CloakTypes: Cloak
-        
+	Inherits: CAMERA
+	RenderSpritesEditorOnly:
+		Image: camera
+	EditorOnlyTooltip:
+		Name: (support power proxy camera)
+	DetectCloaked:
+		Range: 14c146
+		CloakTypes: Cloak
+
 CRATE:
-    Inherits: ^Crate
-    GiveCashCrateAction:
-        Amount: 2500
-        SelectionShares: 50
-        Effect: dollar
-        UseCashTick: True
-    LevelUpCrateAction:
-        SelectionShares: 40
-        Effect: levelup
-    HideMapCrateAction:
-        SelectionShares: 5
-        Effect: hide-map
-    HealUnitsCrateAction:
-        SelectionShares: 2
-        Effect: heal
-    RevealMapCrateAction:
-        SelectionShares: 1
-        Effect: reveal-map
-    GrantExternalConditionCrateAction@cloak:
-        SelectionShares: 5
-        Effect: stealth
-        Condition: crate-cloak
-        Notification: cloak5.aud
-    GrantExternalConditionCrateAction@firepower:
-        SelectionShares: 5
-        Effect: firepower
-        Condition: crate-firepower
-        Notification: 00-i070.aud
-    GrantExternalConditionCrateAction@armor:
-        SelectionShares: 5
-        Effect: armor
-        Condition: crate-damage
-        Notification: 00-i068.aud
-    GrantExternalConditionCrateAction@speed:
-        SelectionShares: 5
-        Condition: crate-speed
-        Notification: 00-i080.aud
-        
+	Inherits: ^Crate
+	GiveCashCrateAction:
+		Amount: 2500
+		SelectionShares: 50
+		Effect: dollar
+		UseCashTick: True
+	LevelUpCrateAction:
+		SelectionShares: 40
+		Effect: levelup
+	HideMapCrateAction:
+		SelectionShares: 5
+		Effect: hide-map
+	HealUnitsCrateAction:
+		SelectionShares: 2
+		Effect: heal
+	RevealMapCrateAction:
+		SelectionShares: 1
+		Effect: reveal-map
+	GrantExternalConditionCrateAction@cloak:
+		SelectionShares: 5
+		Effect: stealth
+		Condition: crate-cloak
+		Notification: cloak5.aud
+	GrantExternalConditionCrateAction@firepower:
+		SelectionShares: 5
+		Effect: firepower
+		Condition: crate-firepower
+		Notification: 00-i070.aud
+	GrantExternalConditionCrateAction@armor:
+		SelectionShares: 5
+		Effect: armor
+		Condition: crate-damage
+		Notification: 00-i068.aud
+	GrantExternalConditionCrateAction@speed:
+		SelectionShares: 5
+		Condition: crate-speed
+		Notification: 00-i080.aud
+
 Cloud1:
-    Inherits@1: ^Clouds
+	Inherits@1: ^Clouds
 
 Cloud2:
-    Inherits@1: ^Clouds
-    
+	Inherits@1: ^Clouds
+
 BFire1:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: blargefire
-    SpawnActorOnDeath:
-        Actor: bfire2
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: blargefire
+	SpawnActorOnDeath:
+		Actor: bfire2
+
 BFire2:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: bmediumfire
-    SpawnActorOnDeath:
-        Actor: bfire3
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: bmediumfire
+	SpawnActorOnDeath:
+		Actor: bfire3
+
 BFire3:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: bsmallfire
-    SpawnActorOnDeath:
-        Actor: bfire4
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: bsmallfire
+	SpawnActorOnDeath:
+		Actor: bfire4
+
 BFire4:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: btinyfire
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: btinyfire
+
 Fire1:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: largefire
-    SpawnActorOnDeath:
-        Actor: fire2
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: largefire
+	SpawnActorOnDeath:
+		Actor: fire2
+
 Fire2:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: mediumfire
-    SpawnActorOnDeath:
-        Actor: fire3
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: mediumfire
+	SpawnActorOnDeath:
+		Actor: fire3
+
 Fire3:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: smallfire
-    SpawnActorOnDeath:
-        Actor: fire4
-    
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: smallfire
+	SpawnActorOnDeath:
+		Actor: fire4
+
 Fire4:
-    Inherits@1: ^FireActor
-    RenderSprites:
-        Image: tinyfire
+	Inherits@1: ^FireActor
+	RenderSprites:
+		Image: tinyfire
 
 SROCK01:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 SROCK02:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 SROCK03:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 SROCK04:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 SROCK05:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 TROCK01:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 TROCK02:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 TROCK03:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 TROCK04:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 TROCK05:
-    Inherits: ^Rock
+	Inherits: ^Rock
 
 CRAT01:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT02:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT03:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT04:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT0A:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT0B:
-    Inherits: ^Box
+	Inherits: ^Box
 
 CRAT0C:
-    Inherits: ^Box
+	Inherits: ^Box
 
 DRUM01:
-    Inherits: ^Drum
+	Inherits: ^Drum
 
 DRUM02:
-    Inherits: ^Drum
+	Inherits: ^Drum
 
 PALET01:
-    Inherits: ^Palette
+	Inherits: ^Palette
 
 PALET02:
-    Inherits: ^Palette
+	Inherits: ^Palette
 
 PALET03:
-    Inherits: ^Palette
+	Inherits: ^Palette
 
 PALET04:
-    Inherits: ^Palette
-    
+	Inherits: ^Palette
+
 TRACKS01:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS02:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS03:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS04:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS05:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS06:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS07:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS08:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS09:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS10:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS11:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS12:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS13:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS14:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS15:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TRACKS16:
-    Inherits: ^Railway
+	Inherits: ^Railway
 
 TUNTOP01:
-    Inherits: ^Tunnel
+	Inherits: ^Tunnel
 
 TUNTOP02:
-    Inherits: ^Tunnel
+	Inherits: ^Tunnel
 
 TUNTOP03:
-    Inherits: ^Tunnel
+	Inherits: ^Tunnel
 
 TUNTOP04:
-    Inherits: ^Tunnel    
+	Inherits: ^Tunnel

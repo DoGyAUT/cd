@@ -1,426 +1,425 @@
-#SCRIN GUNS
 LocustNail:
-    Inherits@wh: ^RailgunWH
-    ReloadDelay: 100
-    Range: 7c0
-    Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-    ValidTargets: Ground, Air, MidAir
-    Projectile: BulletAS
-        Speed: 2c512
-        Inaccuracy: 0c64
-        Shadow: true
-        LaunchAngle: 45
-        Blockable: true
-        ContrailColor: 00FF64
-        ContrailLength: 30
-        ContrailWidth: 25
-        TrailImage: tiberiumtrail
-        TrailPalette: effect50alpha
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 200
-        ValidTargets: Ground
-    Warhead@2Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 100
-        ValidTargets: Air, MidAir
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_tiny
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
-        
+	Inherits@wh: ^RailgunWH
+	ReloadDelay: 100
+	Range: 9c921
+	Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
+	ValidTargets: Ground, Air, MidAir
+	Projectile: BulletAS
+		Speed: 3c548
+		Inaccuracy: 0c91
+		Shadow: true
+		LaunchAngle: 45
+		Blockable: true
+		ContrailColor: 00FF64
+		ContrailLength: 30
+		ContrailWidth: 0c35
+		TrailImage: tiberiumtrail
+		TrailPalette: effect50alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 200
+		ValidTargets: Ground
+	Warhead@2Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 100
+		ValidTargets: Air, MidAir
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_tiny
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light
+
 ChimeraZap:
-    Inherits@wh: ^SonicWH
-    ReloadDelay: 80
-    Range: 7c0
-    Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-    Projectile: AreaBeam
-        Speed: 0c768
-        Duration: 10
-        DamageInterval: 5 # Roughly 18 impacts.
-        Width: 32
-        Shape: Flat
-        BeyondTargetRange: 1c256
-        Blockable: true
-        Color: 00C800
-        ZOffset: 2047
-    Warhead@1Dam: SpreadDamage
-        Range: 0, 32
-        Falloff: 100, 100
-        Damage: 40
-        AffectsParent: false
-        ValidStances: Neutral, Enemy
-        Versus:
-            Vehicle: 200
+	Inherits@wh: ^SonicWH
+	ReloadDelay: 80
+	Range: 9c921
+	Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
+	Projectile: AreaBeam
+		Speed: 1c62
+		Duration: 10
+		DamageInterval: 5
+		Width: 0c45
+		Shape: Flat
+		BeyondTargetRange: 1c786
+		Blockable: true
+		Color: 00C800
+		ZOffset: 2047
+	Warhead@1Dam: SpreadDamage
+		Range: 0c0, 0c45
+		Falloff: 100, 100
+		Damage: 40
+		AffectsParent: false
+		ValidStances: Neutral, Enemy
+		Versus:
+			Vehicle: 200
 
 MantisZap:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 150
-    Range: 8c0
-    Burst: 6
-    BurstDelay: 10
-    Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-    Projectile: AreaBeam
-        Speed: 0c768
-        Duration: 5
-        DamageInterval: 5 # Roughly 18 impacts.
-        Width: 32
-        Shape: Flat
-        BeyondTargetRange: 1c512
-        Blockable: true
-        Color: 00C800
-        ZOffset: 2047
-    Warhead@1Dam: SpreadDamage
-        Range: 0, 32
-        Falloff: 100, 100
-        Damage: 20
-        AffectsParent: false
-        ValidStances: Neutral, Enemy
-        
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 150
+	Range: 11c321
+	Burst: 6
+	BurstDelay: 10
+	Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
+	Projectile: AreaBeam
+		Speed: 1c62
+		Duration: 5
+		DamageInterval: 5
+		Width: 0c45
+		Shape: Flat
+		BeyondTargetRange: 2c124
+		Blockable: true
+		Color: 00C800
+		ZOffset: 2047
+	Warhead@1Dam: SpreadDamage
+		Range: 0c0, 0c45
+		Falloff: 100, 100
+		Damage: 20
+		AffectsParent: false
+		ValidStances: Neutral, Enemy
+
 WarAntGun:
-    Inherits@wh: ^BulletWH
-    ReloadDelay: 30
-    Range: 5c0
-    Burst: 2
-    BurstDelay: 5
-    Report: bursterhit01.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c64
-        LaunchAngle: 45
-        Speed: 2c0
-        ContrailLength: 10
-        ContrailColor: 0080FF
-        ContrailWidth: 20
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 15
-    Warhead@2Eff: CreateEffect
-        Explosions: epiff
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: tiny_flash
-        ExplosionPalette: light
+	Inherits@wh: ^BulletWH
+	ReloadDelay: 30
+	Range: 7c73
+	Burst: 2
+	BurstDelay: 5
+	Report: bursterhit01.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c91
+		LaunchAngle: 45
+		Speed: 2c848
+		ContrailLength: 10
+		ContrailColor: 0080FF
+		ContrailWidth: 0c28
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 15
+	Warhead@2Eff: CreateEffect
+		Explosions: epiff
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: tiny_flash
+		ExplosionPalette: light
 
 SlasherDisc:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 100
-    Range: 6c0
-    Burst: 3
-    BurstDelay: 10
-    Report: plasmashot01.aud, plasmashot02.aud, plasmashot03.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c256
-        Image: energyblast1
-        Shadow: true
-        LaunchAngle: 45
-        Speed: 1c256
-        TrailImage: plasmatrail
-        TrailPalette: effect50alpha
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 30
-    Warhead@2Eff: CreateEffect
-        Explosions: plasmaexpl1
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 100
+	Range: 8c497
+	Burst: 3
+	BurstDelay: 10
+	Report: plasmashot01.aud, plasmashot02.aud, plasmashot03.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c362
+		Image: energyblast1
+		Shadow: true
+		LaunchAngle: 45
+		Speed: 1c786
+		TrailImage: plasmatrail
+		TrailPalette: effect50alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 30
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl1
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light
 
 AntiMatterCannonGun:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 40
-    Range: 7c0
-    Burst: 2
-    BurstDelay: 10
-    Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c256
-        Image: energyblast1
-        Shadow: true
-        LaunchAngle: 45
-        Speed: 1c256
-        TrailImage: plasmatrail
-        TrailPalette: effect50alpha
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 150
-    Warhead@2Eff: CreateEffect
-        Explosions: plasmaexpl1
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
-        
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 40
+	Range: 9c921
+	Burst: 2
+	BurstDelay: 10
+	Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c362
+		Image: energyblast1
+		Shadow: true
+		LaunchAngle: 45
+		Speed: 1c786
+		TrailImage: plasmatrail
+		TrailPalette: effect50alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 150
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl1
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light
+
 MantisShockerDisc:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 220
-    Range: 8c0
-    Burst: 3
-    BurstDelay: 20
-    Report: rail1.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c512
-        Image: energyblast2
-        Shadow: true
-        LaunchAngle: 45
-        Speed: 0c512
-        TrailImage: tiberiumtrail
-        TrailPalette: effect50alpha
-        ContrailLength: 15
-        ContrailWidth: 30
-        ContrailColor: 00FF64
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 225
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_small
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: large_flash
-        ExplosionPalette: light
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 220
+	Range: 11c321
+	Burst: 3
+	BurstDelay: 20
+	Report: rail1.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c724
+		Image: energyblast2
+		Shadow: true
+		LaunchAngle: 45
+		Speed: 0c724
+		TrailImage: tiberiumtrail
+		TrailPalette: effect50alpha
+		ContrailLength: 15
+		ContrailWidth: 0c42
+		ContrailColor: 00FF64
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 225
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_small
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light
 
 HexapodShockerDisc:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 170
-    Range: 8c0
-    Burst: 3
-    BurstDelay: 10
-    Report: rail1.aud
-    Projectile: BulletAS
-        Inaccuracy: 0c512
-        Image: energyblast2
-        Shadow: true
-        LaunchAngle: 45
-        Speed: 0c512
-        TrailImage: tiberiumtrail
-        TrailPalette: effect50alpha
-        ContrailLength: 15
-        ContrailWidth: 30
-        ContrailColor: 00FF64
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 300
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_small
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: large_flash
-        ExplosionPalette: light
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 170
+	Range: 11c321
+	Burst: 3
+	BurstDelay: 10
+	Report: rail1.aud
+	Projectile: BulletAS
+		Inaccuracy: 0c724
+		Image: energyblast2
+		Shadow: true
+		LaunchAngle: 45
+		Speed: 0c724
+		TrailImage: tiberiumtrail
+		TrailPalette: effect50alpha
+		ContrailLength: 15
+		ContrailWidth: 0c42
+		ContrailColor: 00FF64
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 300
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_small
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light
 
 ShardLauncherGun:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 80
-    Range: 8c0
-    Burst: 4
-    BurstDelay: 10
-    Report: rail1.aud
-    ValidTargets: Air, MidAir, HighAir
-    Projectile: BulletAS
-        Inaccuracy: 0c256
-        Image: CRYSTAL4
-        Shadow: true
-        LaunchAngle: 60
-        Speed: 2c0
-        Palette: greentiberium
-        TrailImage: tiberiumtrail
-        TrailPalette: effect50alpha
-        ContrailLength: 10
-        ContrailColor: 7EFF01
-        ContrailWidth: 20
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 100
-        ValidTargets: Air, MidAir, HighAir
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_small
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water
-    Warhead@4Eff: CreateEffect
-        Explosions: large_flash
-        ExplosionPalette: light
-        
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 80
+	Range: 11c321
+	Burst: 4
+	BurstDelay: 10
+	Report: rail1.aud
+	ValidTargets: Air, MidAir, HighAir
+	Projectile: BulletAS
+		Inaccuracy: 0c362
+		Image: CRYSTAL4
+		Shadow: true
+		LaunchAngle: 60
+		Speed: 2c848
+		Palette: greentiberium
+		TrailImage: tiberiumtrail
+		TrailPalette: effect50alpha
+		ContrailLength: 10
+		ContrailColor: 7EFF01
+		ContrailWidth: 0c28
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 100
+		ValidTargets: Air, MidAir, HighAir
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_small
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light
+
 TripodLaser:
-    Inherits: ^BasicLaser
-    Inherits@wh: ^LaserWH
-    ReloadDelay: 40
-    Burst: 3
-    BurstDelay: 30
-    Range: 7c0
-    Report: tripodlaser1.aud, tripodlaser2.aud, tripodlaser3.aud, tripodlaser4.aud, tripodlaser5.aud, tripodlaser6.aud, tripodlaser7.aud, tripodlaser8.aud
-    Projectile: LaserZap
-        Color: 9370ff
-        Width: 50
-        BeamDuration: 50
-        ZOffset: 2047
-        UsePlayerColor: false
-        SecondaryBeam: true
-        SecondaryBeamWidth: 20
-        SecondaryBeamZOffset: 2047
-        SecondaryBeamColor: 00FF00
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c128
-        Damage: 150
-    Warhead@2Eff: CreateEffect
-        Explosions: plasmaexpl1
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-        ImpactSounds: bursterhit01.aud
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@5Eff: CreateEffect
-        Explosions: medium_flash
-        ExplosionPalette: light
-        
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 40
+	Burst: 3
+	BurstDelay: 30
+	Range: 9c921
+	Report: tripodlaser1.aud, tripodlaser2.aud, tripodlaser3.aud, tripodlaser4.aud, tripodlaser5.aud, tripodlaser6.aud, tripodlaser7.aud, tripodlaser8.aud
+	Projectile: LaserZap
+		Color: 9370ff
+		Width: 0c71
+		BeamDuration: 50
+		ZOffset: 2047
+		UsePlayerColor: false
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c28
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 00FF00
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 150
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl1
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+		ImpactSounds: bursterhit01.aud
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+
 CorruptSlimeAttack:
-    Inherits@wh: ^TiberiumWH
-    ReloadDelay: 60
-    Range: 2c0
-    Report: vicer1.aud
-    Projectile: BulletAS
-        Speed: 426
-    Warhead@1Dam: SpreadDamage
-        Damage: 100
-        
+	Inherits@wh: ^TiberiumWH
+	ReloadDelay: 60
+	Range: 2c848
+	Report: vicer1.aud
+	Projectile: BulletAS
+		Speed: 0c602
+	Warhead@1Dam: SpreadDamage
+		Damage: 100
+
 CorruptorBlast:
-    Inherits@wh: ^TiberiumWH
-    ReloadDelay: 100
-    Range: 7c0
-    Burst: 5
-    BurstDelay: 10
-    Report: tripod_f1.aud, tripod_f2.aud, tripod_f3.aud
-    Projectile: BulletAS
-        Speed: 0c256
-        Image: CRYSTAL4
-        Inaccuracy: 1c0
-        Shadow: true
-        LaunchAngle: 60
-        Palette: greentiberium
-        ContrailLength: 40
-        ContrailColor: 7EFF01
-        ContrailWidth: 80
-        TrailImage: tiberiumtrail
-        TrailPalette: effect50alpha
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 120
-        Versus:
-            Vehicle: 50
-        DamageTypes: Prone200Percent, TriggerProne, BulletDeath, TriggerCorruptorVisceroid
-        ValidStances: Neutral, Enemy
-    Warhead@2Dam: SpreadDamage
-        Spread: 0c512
-        Damage: -50
-        AffectsParent: false
-        ValidTargets: Scrin
-        ValidStances: Ally
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_lrg
-        ExplosionPalette: effect50alpha
-        ImpactSounds: expnew12.aud
-        InvalidImpactTypes: Water, Air, AirHit
-    Warhead@3EffWater: CreateEffect
-        Explosions: small_watersplash
-        ImpactSounds: ssplash3.aud
-        ValidImpactTypes: Water
-        
+	Inherits@wh: ^TiberiumWH
+	ReloadDelay: 100
+	Range: 9c921
+	Burst: 5
+	BurstDelay: 10
+	Report: tripod_f1.aud, tripod_f2.aud, tripod_f3.aud
+	Projectile: BulletAS
+		Speed: 0c362
+		Image: CRYSTAL4
+		Inaccuracy: 1c424
+		Shadow: true
+		LaunchAngle: 60
+		Palette: greentiberium
+		ContrailLength: 40
+		ContrailColor: 7EFF01
+		ContrailWidth: 0c113
+		TrailImage: tiberiumtrail
+		TrailPalette: effect50alpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 120
+		Versus:
+			Vehicle: 50
+		DamageTypes: Prone200Percent, TriggerProne, BulletDeath, TriggerCorruptorVisceroid
+		ValidStances: Neutral, Enemy
+	Warhead@2Dam: SpreadDamage
+		Spread: 0c724
+		Damage: -50
+		AffectsParent: false
+		ValidTargets: Scrin
+		ValidStances: Ally
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_lrg
+		ExplosionPalette: effect50alpha
+		ImpactSounds: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+
 StormRaiderCannon:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 150
-    Range: 7c0
-    Report: scrin5b.aud
-    Burst: 10
-    BurstDelay: 5
-    Projectile: BulletAS
-        Image: dualproton
-        Speed: 2c0
-        Inaccuracy: 0c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c256
-        Damage: 40
-        Versus:
-            Infantry: 50
-            Cyborg: 50
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_tiny
-        ExplosionPalette: effect50alpha
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water    
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 150
+	Range: 9c921
+	Report: scrin5b.aud
+	Burst: 10
+	BurstDelay: 5
+	Projectile: BulletAS
+		Image: dualproton
+		Speed: 2c848
+		Inaccuracy: 0c362
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 40
+		Versus:
+			Infantry: 50
+			Cyborg: 50
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_tiny
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light
 
 StormRaiderCannonAA:
-    Inherits@wh: ^PlasmaWH
-    ReloadDelay: 150
-    Range: 8c0
-    ValidTargets: Air, MidAir, HighAir
-    Report: scrin5b.aud
-    Burst: 10
-    BurstDelay: 8
-    Projectile: BulletAS
-        Image: dualproton
-        Speed: 1c512
-        Inaccuracy: 0c256
-    Warhead@1Dam: SpreadDamage
-        Spread: 0c512
-        Damage: 50
-        ValidTargets: Air, MidAir, HighAir
-        ValidStances: Neutral, Enemy
-    Warhead@2Eff: CreateEffect
-        Explosions: protonexpl_tiny
-        ExplosionPalette: effect50alpha
-        ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-        InvalidImpactTypes: Water
-    Warhead@3EffWater: CreateEffect
-        Explosions: water_piff
-        ExplosionPalette: ra
-        ValidImpactTypes: Water    
-    Warhead@4Smu: LeaveSmudge
-        SmudgeType: MediumScorch
-    Warhead@6Eff: CreateEffect
-        Explosions: small_flash
-        ExplosionPalette: light
+	Inherits@wh: ^PlasmaWH
+	ReloadDelay: 150
+	Range: 11c321
+	ValidTargets: Air, MidAir, HighAir
+	Report: scrin5b.aud
+	Burst: 10
+	BurstDelay: 8
+	Projectile: BulletAS
+		Image: dualproton
+		Speed: 2c124
+		Inaccuracy: 0c362
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 50
+		ValidTargets: Air, MidAir, HighAir
+		ValidStances: Neutral, Enemy
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_tiny
+		ExplosionPalette: effect50alpha
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light

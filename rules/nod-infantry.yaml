@@ -1,527 +1,524 @@
 NASOL:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 200
-        Prerequisites: ~nahand, ~!upgrade.mass, ~!technology
-        Description: Nod's basic combat infantry.\n\nGood vs: Infantry\n\nSpecial:\n- Tiberium Infusion (Industry)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 60
-    Tooltip:
-        Name: Rookie
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: Rookie
-    Voiced:
-        VoiceSet: Rookie
-        Volume: 2
-    Health:
-        HP: 100
-    Mobile:
-        Speed: 55
-    RevealsShroud:
-        Range: 5c0
-    Armament@PRIMARY:
-        Weapon: RookieGun
-        LocalOffset: 256,0,550
-        RequiresCondition: !rank-heroic
-    Armament@ELITE:
-        Weapon: EliteCadreGun
-        LocalOffset: 256,0,550
-        RequiresCondition: rank-heroic
-    AttackFrontal:
-    SoundOnDamageTransition:
-        DamagedSounds: nod1_f1.aud, nod1_f2.aud, nod1_f3.aud, nod1_f4.aud, nod1_f5.aud, nod1_f6.aud, nod1_f7.aud
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 200
+		Prerequisites: ~nahand, ~!upgrade.mass, ~!technology
+		Description: Nod's basic combat infantry.\n\nGood vs: Infantry\n\nSpecial:\n- Tiberium Infusion (Industry)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 60
+	Tooltip:
+		Name: Rookie
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: Rookie
+	Voiced:
+		VoiceSet: Rookie
+		Volume: 2
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 78
+	RevealsShroud:
+		Range: 7c73
+	Armament@PRIMARY:
+		Weapon: RookieGun
+		LocalOffset: 362,0,778
+		RequiresCondition: !rank-heroic
+	Armament@ELITE:
+		Weapon: EliteCadreGun
+		LocalOffset: 362,0,778
+		RequiresCondition: rank-heroic
+	AttackFrontal:
+	SoundOnDamageTransition:
+		DamagedSounds: nod1_f1.aud, nod1_f2.aud, nod1_f3.aud, nod1_f4.aud, nod1_f5.aud, nod1_f6.aud, nod1_f7.aud
+	HitShape:
 
 NASOL2:
-    Inherits: NASOL
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 200
-        Prerequisites: ~nahand, ~upgrade.mass
-    RenderSprites:
-        Image: NASOL
-    Valued:
-        Cost: 30
+	Inherits: NASOL
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 200
+		Prerequisites: ~nahand, ~upgrade.mass
+	RenderSprites:
+		Image: NASOL
+	Valued:
+		Cost: 30
 
 E3:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ~nahand, ~!upgrade.mass
-        Description: Nod Soldiers armed with a Rocket Launcher.\n\nGood vs: Vehicles\n\nSpecial:\n- Can attack Air\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology Nod)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 250
-    Tooltip:
-        Name: Rocketeer
-    Selectable:
-        Bounds: 12,17,0,-9
-        Class: Rocketeer
-    Voiced:
-        VoiceSet: Rocketeer
-        Volume: 2
-    Health:
-        HP: 125
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 7c0
-    Armament@primary:
-        Weapon: RocketeerGun
-        LocalOffset: 280,84,700
-    AttackFrontal:
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-    SoundOnDamageTransition:
-        DamagedSounds: nod2_f1.aud, nod2_f2.aud, nod2_f3.aud, nod2_f4.aud, nod2_f5.aud, nod2_f6.aud, nod2_f7.aud
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ~nahand, ~!upgrade.mass
+		Description: Nod Soldiers armed with a Rocket Launcher.\n\nGood vs: Vehicles\n\nSpecial:\n- Can attack Air\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology Nod)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Rocketeer
+	Selectable:
+		Bounds: 12,17,0,-9
+		Class: Rocketeer
+	Voiced:
+		VoiceSet: Rocketeer
+		Volume: 2
+	Health:
+		HP: 125
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 9c921
+	Armament@primary:
+		Weapon: RocketeerGun
+		LocalOffset: 396,119,990
+	AttackFrontal:
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+	SoundOnDamageTransition:
+		DamagedSounds: nod2_f1.aud, nod2_f2.aud, nod2_f3.aud, nod2_f4.aud, nod2_f5.aud, nod2_f6.aud, nod2_f7.aud
+	HitShape:
 
 E32:
-    Inherits: E3
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ~nahand, ~upgrade.mass
-    RenderSprites:
-        Image: E3
-    Valued:
-        Cost: 125
+	Inherits: E3
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ~nahand, ~upgrade.mass
+	RenderSprites:
+		Image: E3
+	Valued:
+		Cost: 125
 
 CHAMSPY:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InfusionUpgrade
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 206
-        Prerequisites: ~nahand, napyra, ~technology
-        Description: Technology Nod´s unarmed and invisible agent.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Can steal money out of refineries and silos\n- Can sabotage power\n- Huge vision range\n- Crush class: Light Infantry
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Chameleon Spy
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Spy
-        Volume: 2
-    Health:
-        HP: 100
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 10c0
-    AttackFrontal:
-    -ProducibleWithLevel:
-    Infiltrates:
-        Types: SpyInfiltrate
-    -Cloak:
-    Cloak@self:
-        InitialDelay: 90
-        CloakDelay: 90
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-        IsPlayerPalette: true
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    Turreted:
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
-    SoundOnDamageTransition:
-        DamagedSounds: spy_f1.aud, spy_f2.aud, spy_f3.aud, spy_f4.aud, spy_f5.aud
+	Inherits@1: ^Soldier
+	Inherits@2: ^InfusionUpgrade
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 206
+		Prerequisites: ~nahand, napyra, ~technology
+		Description: Technology Nod´s unarmed and invisible agent.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Can steal money out of refineries and silos\n- Can sabotage power\n- Huge vision range\n- Crush class: Light Infantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Chameleon Spy
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Spy
+		Volume: 2
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 14c146
+	AttackFrontal:
+	-ProducibleWithLevel:
+	Infiltrates:
+		Types: SpyInfiltrate
+	-Cloak:
+	Cloak@self:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	Turreted:
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: StealthUnitDetected
+	SoundOnDamageTransition:
+		DamagedSounds: spy_f1.aud, spy_f2.aud, spy_f3.aud, spy_f4.aud, spy_f5.aud
+	HitShape:
 
 NDOG:
-    Inherits@1: ^SoldierFearless
-    Inherits@1: ^InfusionUpgrade
-#    Buildable:
-#        Queue: Infantry.Nod
-#        BuildPaletteOrder: 204
-#        Prerequisites: ~nahand
-#        Description: A special trained combat Dog.\n\n Role: Dog\n HP: 300\n Armor: Light\n Speed: 90\n Viewrange: 10c0\n\n Good vs Infantry, Cyborgs\n Useless vs Everything else\n\n Special:\n - Stealth Detection\n\n Upgrades:\n - Movementspeed gets increased with Tiberium Infusion (Industry)\n - Tiberium Immunity through Tiberium Infusion (Industry)\n - Gain damage reduction with Nanofiber Armor (Propaganda)
-    Valued:
-        Cost: 225
-    Tooltip:
-        Name: Attack Dog
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Dog
-    Health:
-        HP: 300
-    Mobile:
-        Speed: 60
-    RevealsShroud:
-        Range: 10c0
-    Armament@primary:
-        Name: Bite
-        Weapon: DogBite
-    AttackFrontal:
-        Armaments: Bite
-    WithInfantryBody:
-        IdleSequences: idle1,idle2,idle3
-    IgnoresDisguise:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5c0
-    AutoTarget:
-        ScanRadius: 5
-    SpawnActorOnDeath@1:
-        Actor: doggie
-        Probability: 25
-        OwnerType: InternalName
-        InternalOwner: Creeps
-        DeathType: TriggerVisceroid
-        RequiresLobbyCreeps: True
-    SoundOnDamageTransition:
-        DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
-        
+	Inherits@1: ^SoldierFearless
+	Inherits@1: ^InfusionUpgrade
+	Valued:
+		Cost: 225
+	Tooltip:
+		Name: Attack Dog
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Dog
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 14c146
+	Armament@primary:
+		Name: Bite
+		Weapon: DogBite
+	AttackFrontal:
+		Armaments: Bite
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	IgnoresDisguise:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 7c73
+	AutoTarget:
+		ScanRadius: 5
+	SpawnActorOnDeath@1:
+		Actor: doggie
+		Probability: 25
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TriggerVisceroid
+		RequiresLobbyCreeps: True
+	SoundOnDamageTransition:
+		DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
+	HitShape:
+
 NENGINEER:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InfusionUpgrade
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Saboteur
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 205
-        Prerequisites: ~nahand
-        Description: Nod´s basic engineering unit.\n\nGood vs: Buildings\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
-    Selectable:
-        Priority: 5
-        Bounds: 12,17,0,-6
-    Voiced:
-        VoiceSet: Saboteur
-        Volume: 2
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    Health:
-        HP: 250
-    Passenger:
-        PipType: Yellow
-    EngineerRepair:
-    RepairsBridges:
-        RepairNotification: BridgeRepaired
-    ExternalCaptures:
-        Type: building
-        ConsumeActor: true
-        PlayerExperience: 50
-    -AutoTarget:
-    -ProducibleWithLevel:
-    SoundOnDamageTransition:
-        DamagedSounds: nodeng_f1.aud, nodeng_f2.aud, nodeng_f3.aud, nodeng_f4.aud, nodeng_f5.aud
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        InitialDelay: 90
-        CloakDelay: 250
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-        
+	Inherits@1: ^Soldier
+	Inherits@2: ^InfusionUpgrade
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Saboteur
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 205
+		Prerequisites: ~nahand
+		Description: Nod´s basic engineering unit.\n\nGood vs: Buildings\n\nSpecial:\n- Can capture neutral and enemy buildings\n- Can repair buildings\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
+	Selectable:
+		Priority: 5
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Saboteur
+		Volume: 2
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Health:
+		HP: 250
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+		RepairNotification: BridgeRepaired
+	ExternalCaptures:
+		Type: building
+		ConsumeActor: true
+		PlayerExperience: 50
+	-AutoTarget:
+	-ProducibleWithLevel:
+	SoundOnDamageTransition:
+		DamagedSounds: nodeng_f1.aud, nodeng_f2.aud, nodeng_f3.aud, nodeng_f4.aud, nodeng_f5.aud
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		InitialDelay: 90
+		CloakDelay: 250
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	HitShape:
+
 FANATIC:
-    Inherits@1: ^SoldierFearless
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-#    Buildable:
-#        Queue: Infantry.Nod
-#        BuildPaletteOrder: 206
-#        Prerequisites: ~nahand, naradr, ~!t1, ~propaganda
-#        Description: Requires Propaganda Nod Doctrine.\n\n Fearless Soldiers of Nod fighting in the name of Kane.\n\n Role: Suicide Infantry\n HP: 200\n Armor: Light\n Speed: 90\n Viewrange: 6c0\n\n Good vs Ground Targets\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Explode on death\n - AoE damage\n\n Upgrades:\n - Gain damage reduction with Nanofiber Armor (Propaganda)
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Fanatic
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Fanatic
-        Volume: 2
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    Armament@primary:
-        Name: Suicide
-        Weapon: FanticBoom
-    AttackFrontal:
-        Armaments: Suicide
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    Explodes:
-        EmptyWeapon: FanticBoomExplosion
-        Weapon: FanticBoomExplosion
-    AutoTarget:
-        ScanRadius: 5
-    KillsSelf:
-        RequiresCondition: Boom
-    ExternalCondition@kill:
-        Condition: Boom
-    SoundOnDamageTransition:
-        DamagedSounds: fanatic_f1.aud, fanatic_f2.aud, fanatic_f3.aud, fanatic_f4.aud, fanatic_f5.aud, fanatic_f6.aud, fanatic_f7.aud
-        
+	Inherits@1: ^SoldierFearless
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Fanatic
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Fanatic
+		Volume: 2
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Armament@primary:
+		Name: Suicide
+		Weapon: FanticBoom
+	AttackFrontal:
+		Armaments: Suicide
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Explodes:
+		EmptyWeapon: FanticBoomExplosion
+		Weapon: FanticBoomExplosion
+	AutoTarget:
+		ScanRadius: 5
+	KillsSelf:
+		RequiresCondition: Boom
+	ExternalCondition@kill:
+		Condition: Boom
+	SoundOnDamageTransition:
+		DamagedSounds: fanatic_f1.aud, fanatic_f2.aud, fanatic_f3.aud, fanatic_f4.aud, fanatic_f5.aud, fanatic_f6.aud, fanatic_f7.aud
+	HitShape:
+
 NACAD:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 200
-        Prerequisites: ~nahand, ~technology
-        Description: Advanced combat infantry from Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth Emitter (Technology Nod)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 150
-    Tooltip:
-        Name: Elite Cadre
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Bhand
-        Volume: 2
-    Health:
-        HP: 250
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    Armament@PRIMARY:
-        Weapon: EliteCadreGun
-        LocalOffset: 256,0,550
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-    SoundOnDamageTransition:
-        DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud
-       
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 200
+		Prerequisites: ~nahand, ~technology
+		Description: Advanced combat infantry from Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Stealth Emitter (Technology Nod)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Elite Cadre
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Bhand
+		Volume: 2
+	Health:
+		HP: 250
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Armament@PRIMARY:
+		Weapon: EliteCadreGun
+		LocalOffset: 362,0,778
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+	SoundOnDamageTransition:
+		DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud
+	HitShape:
+
 NCONF:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 207
-        Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
-        Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Nod Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 850
-    Tooltip:
-        Name: Confessor
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Confessor
-        Volume: 2
-    Health:
-        HP: 480
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 8c0
-    Armament@PRIMARY:
-        Weapon: ConfessorGun
-        LocalOffset: 256,0,550
-    Armament@secondary:
-        Weapon: ConfessorGrenade
-        LocalOffset: 256,0,550
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    ProximityExternalCondition:
-        Condition: confessorboost
-        Range: 6c0
-    ExternalCondition@conf:
-        Condition: confessorboost
-    SoundOnDamageTransition:
-        DamagedSounds: confessor_f1.aud, confessor_f2.aud, confessor_f3.aud, confessor_f4.aud, confessor_f5.aud
-        
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 207
+		Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
+		Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Nod Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Confessor
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Confessor
+		Volume: 2
+	Health:
+		HP: 480
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 11c321
+	Armament@PRIMARY:
+		Weapon: ConfessorGun
+		LocalOffset: 362,0,778
+	Armament@secondary:
+		Weapon: ConfessorGrenade
+		LocalOffset: 362,0,778
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	ProximityExternalCondition:
+		Condition: confessorboost
+		Range: 8c497
+	ExternalCondition@conf:
+		Condition: confessorboost
+	SoundOnDamageTransition:
+		DamagedSounds: confessor_f1.aud, confessor_f2.aud, confessor_f3.aud, confessor_f4.aud, confessor_f5.aud
+	HitShape:
+
 SHADOW:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 208
-        Prerequisites: ~nahand, naradr, ~technology
-        Description: Advanced sniper for Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Stealth Emitter (Technology)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 900
-    Tooltip:
-        Name: Shadow Trooper
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Shadow
-        Volume: 2
-    Health:
-        HP: 200
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    Armament@PRIMARY:
-        Weapon: ShadowTrooperGun
-        LocalOffset: 256,0,550
-        RequiresCondition: !upgrade.laser
-    Armament@LaserA:
-        Weapon: ShadowTrooperLaser
-        LocalOffset: 256,0,550
-        RequiresCondition: upgrade.laser
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        CloakSound: cloak5.aud
-        UncloakSound: cloak5.aud
-    SoundOnDamageTransition:
-        DamagedSounds: shadow_f1.aud, shadow_f2.aud, shadow_f3.aud, shadow_f4.aud, shadow_f5.aud
-        
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 208
+		Prerequisites: ~nahand, naradr, ~technology
+		Description: Advanced sniper for Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Stealth Emitter (Technology)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Shadow Trooper
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Shadow
+		Volume: 2
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	Armament@PRIMARY:
+		Weapon: ShadowTrooperGun
+		LocalOffset: 362,0,778
+		RequiresCondition: !upgrade.laser
+	Armament@LaserA:
+		Weapon: ShadowTrooperLaser
+		LocalOffset: 362,0,778
+		RequiresCondition: upgrade.laser
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.laser
+		Prerequisites: upgrade.laser
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+	SoundOnDamageTransition:
+		DamagedSounds: shadow_f1.aud, shadow_f2.aud, shadow_f3.aud, shadow_f4.aud, shadow_f5.aud
+	HitShape:
+
 BHAND:
-    Inherits@1: ^SoldierFearlessVeryHeavy
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 207
-        Prerequisites: ~nahand, naradr, ~propaganda
-        Description: Nod´s Heavy Soldiers armed with a Flame Thrower.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Immune to tiberium radiation\n- Nanofiber Armor (Propaganda)\n- Bluehell Inferno (Propaganda)\n- Crush class: Medium Infantry
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Black Hand Flamer
-    Selectable:
-        Bounds: 24,34,0,-2
-    Voiced:
-        VoiceSet: Bhand
-        Volume: 2
-    Health:
-        HP: 1040
-    Passenger:
-        CargoType: Infantry
-        Voice: Move
-    Mobile:
-        Speed: 50
-        SharesCell: False
-        TerrainSpeeds:
+	Inherits@1: ^SoldierFearlessVeryHeavy
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 207
+		Prerequisites: ~nahand, naradr, ~propaganda
+		Description: Nod´s Heavy Soldiers armed with a Flame Thrower.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Immune to tiberium radiation\n- Nanofiber Armor (Propaganda)\n- Bluehell Inferno (Propaganda)\n- Crush class: Medium Infantry
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Black Hand Flamer
+	Selectable:
+		Bounds: 24,34,0,-2
+	Voiced:
+		VoiceSet: Bhand
+		Volume: 2
+	Health:
+		HP: 1040
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+	Mobile:
+		Speed: 71
+		SharesCell: False
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
-    RevealsShroud:
-        Range: 6c0
-    Armament@primary:
-        Weapon: BlackHandFlamer
-        LocalOffset: 400,0,450
-        RequiresCondition: !upgrade.bluehell
-    Armament@upgrade:
-        Weapon: BlackHandFlamerBlue
-        LocalOffset: 400,0,450
-        RequiresCondition: upgrade.bluehell
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    -DamagedByTerrain@Tiberium:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.bluehell
-        Prerequisites: upgrade.bluehell
-#    Explodes:
-#        Weapon: UnitExplodeSmall
-#        Chance: 100
-#        TargetTypes: Ground, VeryHeavyInfantry, Flameproof
-    SoundOnDamageTransition:
-        DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 8c497
+	Armament@primary:
+		Weapon: BlackHandFlamer
+		LocalOffset: 566,0,636
+		RequiresCondition: !upgrade.bluehell
+	Armament@upgrade:
+		Weapon: BlackHandFlamerBlue
+		LocalOffset: 566,0,636
+		RequiresCondition: upgrade.bluehell
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	-DamagedByTerrain@Tiberium:
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.bluehell
+		Prerequisites: upgrade.bluehell
+	SoundOnDamageTransition:
+		DamagedSounds: bhand_f1.aud, bhand_f2.aud, bhand_f3.aud, bhand_f4.aud
+	HitShape:
 
 TIBTROOPER:
-    Inherits@1: ^Soldier
-    Inherits@2: ^InitiateUpgrades
-    Inherits@3: ^InfusionUpgrade
-    Inherits@4: ^AvatarUpgrades
-    Buildable:
-        Queue: Infantry.Nod
-        BuildPaletteOrder: 208
-        Prerequisites: ~nahand, napyra, ~industry
-        Description: Advanced infantry for Industry Nod armed with a Tiberium infused rifle.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Immune to tiberium radiation\n- Weapon can create visceroids\n- Tiberium Infusion (Industry)\n- Crush class: Light Infantry
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Acolyte
-    Selectable:
-        Bounds: 12,17,0,-9
-    Voiced:
-        VoiceSet: Acolyte
-        Volume: 2
-    Health:
-        HP: 500
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
+	Inherits@1: ^Soldier
+	Inherits@2: ^InitiateUpgrades
+	Inherits@3: ^InfusionUpgrade
+	Inherits@4: ^AvatarUpgrades
+	Buildable:
+		Queue: Infantry.Nod
+		BuildPaletteOrder: 208
+		Prerequisites: ~nahand, napyra, ~industry
+		Description: Advanced infantry for Industry Nod armed with a Tiberium infused rifle.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Immune to tiberium radiation\n- Weapon can create visceroids\n- Tiberium Infusion (Industry)\n- Crush class: Light Infantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Acolyte
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Acolyte
+		Volume: 2
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0
 			BlueTiberium: 70
 				PathingCost: 0
-            RedTiberium: 70
-                PathingCost: 0
-            PurpleTiberium: 70
-                PathingCost: 0        
-    RevealsShroud:
-        Range: 7c0
-    Armament@PRIMARY:
-        Weapon: AcolyteGun
-        LocalOffset: 256,0,550
-        RequiresCondition: !rank-elite
-    Armament@PRIMARYE:
-        Weapon: AcolyteGunE
-        LocalOffset: 256,0,550
-        RequiresCondition: rank-elite
-    -DamagedByTerrain@Tiberium:
-    AttackFrontal:
-    WithInfantryBody:
-        IdleSequences: idle1,idle2
-    SoundOnDamageTransition:
-        DamagedSounds: medusa_f1.aud, medusa_f2.aud, medusa_f3.aud, medusa_f4.aud
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	RevealsShroud:
+		Range: 9c921
+	Armament@PRIMARY:
+		Weapon: AcolyteGun
+		LocalOffset: 362,0,778
+		RequiresCondition: !rank-elite
+	Armament@PRIMARYE:
+		Weapon: AcolyteGunE
+		LocalOffset: 362,0,778
+		RequiresCondition: rank-elite
+	-DamagedByTerrain@Tiberium:
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	SoundOnDamageTransition:
+		DamagedSounds: medusa_f1.aud, medusa_f2.aud, medusa_f3.aud, medusa_f4.aud
+	HitShape:
