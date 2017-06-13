@@ -1,33 +1,33 @@
 upgrade.hc:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Reinforced Chassis
-    Buildable:
-        BuildPaletteOrder: 300
-        Prerequisites: ~kabtech, ~!upgrade.lc
-        Queue: Tech.Cabal
-        BuildLimit: 1
-        Description: Research reinforced chassis for all basic cyborgs which provides a 25% damage reduction.
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: cab_hc
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.hc
+	Inherits: ^Tech
+	Tooltip:
+		Name: Reinforced Chassis
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: ~kabtech, ~!upgrade.lc
+		Queue: Tech.Cabal
+		BuildLimit: 1
+		Description: Research reinforced chassis for all basic cyborgs which provides a 25% damage reduction.
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: cab_hc
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.hc
 
 upgrade.lc:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Alloyed Chassis
-    Buildable:
-        BuildPaletteOrder: 301
-        Prerequisites: ~kabtech, ~!upgrade.hc
-        Queue: Tech.Cabal
-        BuildLimit: 1
-        Description: Research alloyed chassis for all basic cyborgs which provides a 30% speed increase.
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: cab_lc
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.lc
+	Inherits: ^Tech
+	Tooltip:
+		Name: Alloyed Chassis
+	Buildable:
+		BuildPaletteOrder: 301
+		Prerequisites: ~kabtech, ~!upgrade.hc
+		Queue: Tech.Cabal
+		BuildLimit: 1
+		Description: Research alloyed chassis for all basic cyborgs which provides a 30% speed increase.
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: cab_lc
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.lc

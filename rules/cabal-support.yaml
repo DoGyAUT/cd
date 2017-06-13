@@ -1,276 +1,279 @@
 KAWALL:
-    Inherits: ^Wall
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 300
-        Prerequisites: ~structures.cabal
-        Description: Stops infantry and blocks enemy fire.
-    SoundOnDamageTransition:
-    Valued:
-        Cost: 100
-    CustomSellValue:
-        Value: 0
-    Tooltip:
-        Name: Concrete Wall
-    Health:
-        HP: 400
-    BlocksProjectiles:
-        Height: 640
-    Crushable:
-        CrushClasses: heavywall
-    LineBuild:
-        NodeTypes: wall, turret
- 
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 300
+		Prerequisites: ~structures.cabal
+		Description: Stops infantry and blocks enemy fire.
+	SoundOnDamageTransition:
+	Valued:
+		Cost: 100
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+	Health:
+		HP: 400
+	BlocksProjectiles:
+		Height: 0c905
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+	HitShape:
+
 KAGATE_A:
-    Inherits: ^Gate_A
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 301
-        Prerequisites: ~structures.cabal
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Cabal Gate
+	Inherits: ^Gate_A
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 301
+		Prerequisites: ~structures.cabal
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Cabal Gate
 
 KAGATE_B:
-    Inherits: ^Gate_B
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 302
-        Prerequisites: ~structures.cabal
-        Description: Automated barrier that opens for allied units.
-    Tooltip:
-        Name: Cabal Gate
+	Inherits: ^Gate_B
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 302
+		Prerequisites: ~structures.cabal
+		Description: Automated barrier that opens for allied units.
+	Tooltip:
+		Name: Cabal Gate
 
 KASILO:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 303
-        Prerequisites: kproc, ~structures.cabal
-        Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
-    Valued:
-        Cost: 200
-    Tooltip:
-        Name: Cabal Silo
-    Building:
-        Footprint: xx xx
-        Dimensions: 2, 2
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 80, 48, -5, 0
-    -GivesBuildableArea:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 4c0
-    RenderSprites:
-    WithSpriteBody:
-    WithSiloAnimation:
-    WithIdleOverlay@UNDERLAY:
-        Sequence: idle-underlay
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    StoresResources:
-        PipColor: Green
-        PipCount: 5
-        Capacity: 1500
-    Power:
-        Amount: -10 
-    # Explodes:
-        # Weapon: TiberiumExplosionSilo
-        # EmptyWeapon: TiberiumExplosionSilo
-        
+	Inherits: ^BuildingInfiltrate
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 303
+		Prerequisites: kproc, ~structures.cabal
+		Description: Stores excess Tiberium.\n\nSpecial:\n- Stores 1500$.
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Cabal Silo
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c673
+	RenderSprites:
+	WithSpriteBody:
+	WithSiloAnimation:
+	WithIdleOverlay@UNDERLAY:
+		Sequence: idle-underlay
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	StoresResources:
+		PipColor: Green
+		PipCount: 5
+		Capacity: 1500
+	Power:
+		Amount: -10
+	HitShape:
+
 KABLASR:
-    Inherits: ^Defense
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Sabercut
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 303
-        Prerequisites: anypower, cybbar, ~structures.cabal
-        Description: Cabals low tech defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 60, 60, 0, -12
-    RequiresPower:
-    DisabledOverlay:
-    BodyOrientation:
-        QuantizedFacings: 32
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 9c0
-    Turreted:
-        TurnSpeed: 5
-        InitialFacing: 222
-    AttackTurreted:
-    Armament:
-        Weapon: SabercutLaser
-        LocalOffset: 725,0,1700
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-    AutoTarget:
-    RenderRangeCircle:
-    WithSpriteTurret:
-        Sequence: turret
-    Power:
-        Amount: -100
-    WithMuzzleOverlay:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
-      
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Sabercut
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 303
+		Prerequisites: anypower, cybbar, ~structures.cabal
+		Description: Cabals low tech defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 60, 60, 0, -12
+	RequiresPower:
+	BodyOrientation:
+		QuantizedFacings: 32
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 12c745
+	Turreted:
+		TurnSpeed: 5
+		InitialFacing: 222
+	AttackTurreted:
+	Armament:
+		Weapon: SabercutLaser
+		LocalOffset: 1025,0,2404
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	AutoTarget:
+	RenderRangeCircle:
+	WithSpriteTurret:
+		Sequence: turret
+	Power:
+		Amount: -100
+	WithMuzzleOverlay:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8c497
+		CloakTypes: Cloak, Underground
+	HitShape:
+
 KABCAN:
-    Inherits: ^Defense
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Plasma Blaster
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 304
-        Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Cabals tech 2 defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
-    Building:
-        Footprint: x
-        Dimensions: 1,1
-    Selectable:
-        Bounds: 60, 60, 0, -12
-    RequiresPower:
-    DisabledOverlay:
-    BodyOrientation:
-        QuantizedFacings: 32
-    Health:
-        HP: 1440
-    RevealsShroud:
-        Range: 10c0
-    Turreted:
-        TurnSpeed: 5
-        InitialFacing: 0
-    AttackTurreted:
-    Armament:
-        Weapon: PlasmaBlasterGun
-        LocalOffset: 888,0,168
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 50
-        RecoilRecovery: 10
-    AutoTarget:
-    RenderRangeCircle:
-    WithSpriteTurret:
-        Sequence: turret
-    Power:
-        Amount: -100
-    WithMuzzleOverlay:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Plasma Blaster
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 304
+		Prerequisites: anypower, karadr, ~structures.cabal
+		Description: Cabals tech 2 defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 60, 60, 0, -12
+	RequiresPower:
+	BodyOrientation:
+		QuantizedFacings: 32
+	Health:
+		HP: 1440
+	RevealsShroud:
+		Range: 14c146
+	Turreted:
+		TurnSpeed: 5
+		InitialFacing: 0
+	AttackTurreted:
+	Armament:
+		Weapon: PlasmaBlasterGun
+		LocalOffset: 1256,0,238
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 0c71
+		RecoilRecovery: 0c14
+	AutoTarget:
+	RenderRangeCircle:
+	WithSpriteTurret:
+		Sequence: turret
+	Power:
+		Amount: -100
+	WithMuzzleOverlay:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8c497
+		CloakTypes: Cloak, Underground
+	HitShape:
 
 KDARK:
-    Inherits: ^Defense
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Obelisk of Darkness
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 305
-        Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Cabals anti air defense structure.\n\nGood vs: Aircraft\n\nSpecial:\n- Requires power to operate\n- Can only shoot air units
-    Building:
-        Footprint: x
-        Dimensions: 1,1
-    Selectable:
-        Bounds: 48, 100, 0, -40
-    RequiresPower:
-    DisabledOverlay:
-    Health:
-        HP: 2400
-    RevealsShroud:
-        Range: 13c0
-    Armament:
-        Weapon: CabalObeliskLaserAA
-        LocalOffset: 1600,0,2000
-    AttackCharges:
-        ChargeLevel: 40
-        ChargingCondition: charging
-    AmbientSound:
-        RequiresCondition: charging
-        SoundFiles: charge01.aud
-        Interval: 30, 40
-    WithChargeOverlay:
-        Sequence: active
-        Palette: player
-        IsPlayerPalette: True
-    AutoTarget:
-    RenderRangeCircle:
-    WithIdleOverlayAS@LIGHTS:
-        RequiresCondition: !charging
-        PauseOnLowPower: True
-        Image: kdark
-        Sequence: idle-lights
-    Power:
-        Amount: -150
-#    RenderDetectionCircle:
-#    DetectCloaked:
-#        Range: 6c0
-    ProvidesPrerequisite@buildingname:
-        
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Obelisk of Darkness
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 305
+		Prerequisites: anypower, karadr, ~structures.cabal
+		Description: Cabals anti air defense structure.\n\nGood vs: Aircraft\n\nSpecial:\n- Requires power to operate\n- Can only shoot air units
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 48, 100, 0, -40
+	RequiresPower:
+	Health:
+		HP: 2400
+	RevealsShroud:
+		Range: 18c394
+	Armament:
+		Weapon: CabalObeliskLaserAA
+		LocalOffset: 2263,0,2828
+	AttackCharges:
+		ChargeLevel: 40
+		ChargingCondition: charging
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: charge01.aud
+		Interval: 30, 40
+	WithChargeOverlay:
+		Sequence: active
+		Palette: player
+		IsPlayerPalette: True
+	AutoTarget:
+	RenderRangeCircle:
+	WithIdleOverlayAS@LIGHTS:
+		RequiresCondition: !charging
+		Image: kdark
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 KOBEL:
-    Inherits: ^Defense
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Core Obelisk
-    Buildable:
-        Queue: Defense.Cabal
-        BuildPaletteOrder: 306
-        Prerequisites: anypower, kabtech, ~structures.cabal
-        Description: Cabals advanced defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 88, 74, 0, -14
-    RequiresPower:
-    DisabledOverlay:
-    Health:
-        HP: 3750
-    RevealsShroud:
-        Range: 10c0
-    Armament:
-        Weapon: CabalObeliskLaser
-        LocalOffset: 1600,0,800
-    AttackCharges:
-        ChargeLevel: 40
-        ChargingCondition: charging
-    AmbientSound:
-        RequiresCondition: charging
-        SoundFiles: charge01.aud
-        Interval: 30, 40
-    WithChargeOverlay:
-        Sequence: active
-        Palette: player
-        IsPlayerPalette: True
-    AutoTarget:
-    RenderRangeCircle:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    Power:
-        Amount: -200
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 6c0
-        CloakTypes: Cloak, Underground
+	Inherits: ^Defense
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Core Obelisk
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 306
+		Prerequisites: anypower, kabtech, ~structures.cabal
+		Description: Cabals advanced defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 74, 0, -14
+	RequiresPower:
+	Health:
+		HP: 3750
+	RevealsShroud:
+		Range: 14c146
+	Armament:
+		Weapon: CabalObeliskLaser
+		LocalOffset: 2263,0,1131
+	AttackCharges:
+		ChargeLevel: 40
+		ChargingCondition: charging
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: charge01.aud
+		Interval: 30, 40
+	WithChargeOverlay:
+		Sequence: active
+		Palette: player
+		IsPlayerPalette: True
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 0c7
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	Power:
+		Amount: -200
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8c497
+		CloakTypes: Cloak, Underground
+	HitShape:

@@ -1,84 +1,81 @@
 upgrade.gdf:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Global Defense Force
-    Buildable:
-        BuildPaletteOrder: 100
-        Prerequisites: ~gaarmory, ~!t1, ~!upgrade.st, ~!upgrade.zc
-        Queue: Tech.GDI
-        BuildLimit: 1
-        IconPalette: gdf
-        Description: Choose GDF as subfaction.\n\nThe Global Defense Force is concerned with fortifications and reconstruction of the Blue Zones and rely on static structures and heavily armored vehicles.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: gdf
-    ProvidesPrerequisite@upgradename:
+	Inherits: ^Tech
+	Tooltip:
+		Name: Global Defense Force
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~gaarmory, ~!t1, ~!upgrade.st, ~!upgrade.zc
+		Queue: Tech.GDI
+		BuildLimit: 1
+		IconPalette: gdf
+		Description: Choose GDF as subfaction.\n\nThe Global Defense Force is concerned with fortifications and reconstruction of the Blue Zones and rely on static structures and heavily armored vehicles.
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: gdf
+	ProvidesPrerequisite@upgradename:
 
 upgrade.st:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Steel Talons
-    Buildable:
-        BuildPaletteOrder: 101
-        Prerequisites: ~gaarmory, ~!t1, ~!upgrade.gdf, ~!upgrade.zc
-        Queue: Tech.GDI
-        BuildLimit: 1
-        IconPalette: st
-        Description: Choose Steel Talons as subfaction.\n\nThe Steel Talons have focused on assaults and the elimination of the remaining Nod strongholds and choose strong mechs for that task.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: st
-    ProvidesPrerequisite@upgradename:
+	Inherits: ^Tech
+	Tooltip:
+		Name: Steel Talons
+	Buildable:
+		BuildPaletteOrder: 101
+		Prerequisites: ~gaarmory, ~!t1, ~!upgrade.gdf, ~!upgrade.zc
+		Queue: Tech.GDI
+		BuildLimit: 1
+		IconPalette: st
+		Description: Choose Steel Talons as subfaction.\n\nThe Steel Talons have focused on assaults and the elimination of the remaining Nod strongholds and choose strong mechs for that task.
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: st
+	ProvidesPrerequisite@upgradename:
 
 upgrade.zc:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Zone Command 
-    Buildable:
-        BuildPaletteOrder: 102
-        Prerequisites: ~gaarmory, ~!t1,~!upgrade.gdf, ~!upgrade.st
-        Queue: Tech.GDI
-        BuildLimit: 1
-        IconPalette: zc
-        Description: Choose ZOCOM as subfaction.\n\nThe ZOCOM use advanced aircrafts and highly trained infantry for their operations in the Red Zones.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: zc
-    ProvidesPrerequisite@upgradename:
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Zone Command
+	Buildable:
+		BuildPaletteOrder: 102
+		Prerequisites: ~gaarmory, ~!t1,~!upgrade.gdf, ~!upgrade.st
+		Queue: Tech.GDI
+		BuildLimit: 1
+		IconPalette: zc
+		Description: Choose ZOCOM as subfaction.\n\nThe ZOCOM use advanced aircrafts and highly trained infantry for their operations in the Red Zones.
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: zc
+	ProvidesPrerequisite@upgradename:
+
 upgrade.gapowerup1:
-    Inherits: ^Tech
-#    AlwaysVisible:
-    Tooltip:
-        Name: Power Turbine Upgrade Phase I
-    Buildable:
-        BuildPaletteOrder: 103
-        Prerequisites: ~gaarmory, gapowr, ~!t1, ~!upgrade.gapowerup1
-        Queue: Tech.GDI
-        BuildLimit: 1
-        Description: Upgrade all current and future power plants with an additional turbine which grants additional 75 power output.
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: gapowrup1
-    ProvidesPrerequisite@upgradename:
-            
+	Inherits: ^Tech
+	Tooltip:
+		Name: Power Turbine Upgrade Phase I
+	Buildable:
+		BuildPaletteOrder: 103
+		Prerequisites: ~gaarmory, gapowr, ~!t1, ~!upgrade.gapowerup1
+		Queue: Tech.GDI
+		BuildLimit: 1
+		Description: Upgrade all current and future power plants with an additional turbine which grants additional 75 power output.
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: gapowrup1
+	ProvidesPrerequisite@upgradename:
+
 upgrade.gapowerup2:
-    Inherits: ^Tech
-#    AlwaysVisible:
-    Tooltip:
-        Name: Power Turbine Upgrade Phase II
-    Buildable:
-        BuildPaletteOrder: 104
-        Prerequisites: ~gaarmory, gapowr, ~!t1, upgrade.gapowerup1, ~!upgrade.gapowerup2, gatech
-        Queue: Tech.GDI
-        BuildLimit: 1
-        Description: Upgrade all current and future power plants with one additional turbine which grants additional 75 power output.
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: gapowrup2
-    
+	Inherits: ^Tech
+	Tooltip:
+		Name: Power Turbine Upgrade Phase II
+	Buildable:
+		BuildPaletteOrder: 104
+		Prerequisites: ~gaarmory, gapowr, ~!t1, upgrade.gapowerup1, ~!upgrade.gapowerup2, gatech
+		Queue: Tech.GDI
+		BuildLimit: 1
+		Description: Upgrade all current and future power plants with one additional turbine which grants additional 75 power output.
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: gapowrup2

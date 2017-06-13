@@ -1,965 +1,234 @@
 NMCV:
-    Inherits: ^VoxelVehicle
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 200
-        Prerequisites: ~naweap, naradr
-        Description: The heart of any Nod base.\n\nSpecial:\n- Provides a build radius for structures\n- Crush class: Medium vehicle
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Nod Mobile Construction Vehicle
-    Selectable:
-        Priority: 3
-        Bounds: 42,42
-        Class: NMCV
-    Voiced:
-        VoiceSet: Nmcv        
-        Volume: 2
-    Health:
-        HP: 2000
-    Mobile:
-        Speed: 50
-    RevealsShroud:
-        Range: 6c0
-    MustBeDestroyed:
-        RequiredForShortGame: True
-    BaseBuilding:
-    Transforms:
-        IntoActor: nacnst
-        Offset: -1,-1
-        Facing: 96
-        TransformSounds: place2.aud
-        NoTransformSounds:
-        Voice: Move
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    ActorLostNotification:
-        Notification: CriticalUnitLost
+	Inherits: ^VoxelVehicle
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 200
+		Prerequisites: ~naweap, naradr
+		Description: The heart of any Nod base.\n\nSpecial:\n- Provides a build radius for structures\n- Crush class: Medium vehicle
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Nod Mobile Construction Vehicle
+	Selectable:
+		Priority: 3
+		Bounds: 42,42
+		Class: NMCV
+	Voiced:
+		VoiceSet: Nmcv
+		Volume: 2
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 8c497
+	MustBeDestroyed:
+		RequiredForShortGame: True
+	BaseBuilding:
+	Transforms:
+		IntoActor: nacnst
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	HitShape:
 
 NIHARV:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Nod Industry Harvester
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: niproc, ~industry, ~naweap
-        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Has a Tiberium weapon\n- Crush class: Medium vehicle\n- Immune to Veins
-    Selectable:
-        Priority: 7
-        Bounds: 36,36
-    Voiced:
-        VoiceSet: Nharv
-        Volume: 2        
-    Harvester:
-        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 14
-        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-        BaleLoadDelay: 12
-        BaleUnloadDelay: 6
-        SearchFromProcRadius: 36
-        SearchFromOrderRadius: 18
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 7
-    -DamagedByTerrain@Veins:
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
-            Tiberium: 100
-    Health:
-        HP: 1200
-    Armament@primary:
-        Weapon: NodHarvGun
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        LocalOffset: 256,0,750
-    AttackTurreted:
-    AutoTarget:
-    Turreted:
-        TurnSpeed: 10
-        Offset: 220,0,0
-    RevealsShroud:
-        Range: 6c0
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelTurret:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    WithMuzzleOverlay:
-    Explodes:
-        Weapon: LargeTiberiumExplosion
-        EmptyWeapon: SmallTiberiumExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Nod Industry Harvester
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: niproc, ~industry, ~naweap
+		Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Has a Tiberium weapon\n- Crush class: Medium vehicle\n- Immune to Veins
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Nharv
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+		Capacity: 14
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 12
+		BaleUnloadDelay: 6
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 7
+	-DamagedByTerrain@Veins:
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
+			Tiberium: 100
+	Health:
+		HP: 1200
+	Armament@primary:
+		Weapon: NodHarvGun
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 362,0,1061
+	AttackTurreted:
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 311,0,0
+	RevealsShroud:
+		Range: 8c497
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelTurret:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: LargeTiberiumExplosion
+		EmptyWeapon: SmallTiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	HitShape:
 
 NTHARV:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Nod Technology Harvester
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: ntproc, ~technology, ~naweap
-        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Stealth\n- Crush class: Medium vehicle\n- Immune to Veins
-    Selectable:
-        Priority: 7
-        Bounds: 36,36
-    Voiced:
-        VoiceSet: Nharv
-        Volume: 2        
-    Harvester:
-        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 14
-        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-        BaleLoadDelay: 12
-        BaleUnloadDelay: 6
-        SearchFromProcRadius: 36
-        SearchFromOrderRadius: 18
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 7
-    -DamagedByTerrain@Veins:
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
-            Tiberium: 100
-    Health:
-        HP: 1200
-    GrantConditionOnPrerequisite@cloak:
-        Condition: technology
-        Prerequisites: technology
-    Cloak:
-        RequiresCondition: crate-cloak || cloakgenerator || technology
-    RevealsShroud:
-        Range: 6c0
-    -ProducibleWithLevel:
-    RenderSprites:
-    RenderVoxels:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    Explodes:
-        Weapon: LargeTiberiumExplosion
-        EmptyWeapon: SmallTiberiumExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Nod Technology Harvester
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: ntproc, ~technology, ~naweap
+		Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Stealth\n- Crush class: Medium vehicle\n- Immune to Veins
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Nharv
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+		Capacity: 14
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 12
+		BaleUnloadDelay: 6
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 7
+	-DamagedByTerrain@Veins:
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
+			Tiberium: 100
+	Health:
+		HP: 1200
+	GrantConditionOnPrerequisite@cloak:
+		Condition: technology
+		Prerequisites: technology
+	Cloak:
+		RequiresCondition: crate-cloak || cloakgenerator || technology
+	RevealsShroud:
+		Range: 8c497
+	-ProducibleWithLevel:
+	RenderSprites:
+	RenderVoxels:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: LargeTiberiumExplosion
+		EmptyWeapon: SmallTiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	HitShape:
 
 NPHARV:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Nod Propaganda Harvester
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 201
-        Prerequisites: npproc, ~propaganda, ~naweap
-        Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Special plating (25% more durable)\n- Crush class: Medium vehicle\n- Immune to Veins
-    Selectable:
-        Priority: 7
-        Bounds: 36,36
-    Voiced:
-        VoiceSet: Nharv
-        Volume: 2        
-    Harvester:
-        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 14
-        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-        BaleLoadDelay: 12
-        BaleUnloadDelay: 6
-        SearchFromProcRadius: 36
-        SearchFromOrderRadius: 18
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 7
-    DamageMultiplier@prop:         
-        Modifier: 75
-    -DamagedByTerrain@Veins:
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
-            Tiberium: 100
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 6c0
-    -ProducibleWithLevel:
-    RenderSprites:
-    RenderVoxels:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    Explodes:
-        Weapon: LargeTiberiumExplosion
-        EmptyWeapon: SmallTiberiumExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
-        
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Nod Propaganda Harvester
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 201
+		Prerequisites: npproc, ~propaganda, ~naweap
+		Description: Collects Tiberium for processing.\n\nSpecial:\n- Harvests Tiberium\n- Special plating (25% more durable)\n- Crush class: Medium vehicle\n- Immune to Veins
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Nharv
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+		Capacity: 14
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 12
+		BaleUnloadDelay: 6
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 7
+	DamageMultiplier@prop:
+		Modifier: 75
+	-DamagedByTerrain@Veins:
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
+			Tiberium: 100
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 8c497
+	-ProducibleWithLevel:
+	RenderSprites:
+	RenderVoxels:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: LargeTiberiumExplosion
+		EmptyWeapon: SmallTiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	HitShape:
+
 SAPC:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Subterranean APC
-    Selectable:
-        Bounds: 42,42, 0, -5
-        Class: SAPC
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 202
-        Prerequisites: ~naweap, ~!t1, ~industry
-        Description: Industry Nod´s subterranean transport unit.\n\nGood vs: Nothing\n\nSpecial:\n- Subterranean movement\n- 8 slots for infantry\n- Crush class: Light vehicle
-    Voiced:
-        VoiceSet: SAPC    
-        Volume: 5
-    Mobile:
-        TurnSpeed: 5
-        Speed: 80
-        RequiresCondition: !(empdisable && !invulnerability) && !loading
-        Subterranean: true
-        SubterraneanCondition: submerged
-        SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-        SubterraneanTransitionCost: 1
-        SubterraneanTransitionSound: drillup.aud
-        SubterraneanTransitionImage: dig
-        SubterraneanTransitionSequence: idle
-        SubterraneanTransitionPalette : player
-        TerrainSpeeds:
-            Subterranean: 110
-    RejectsOrders:
-        RequiresCondition: submerged
-        Except: Attack, AttackMove, Guard, Move
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 6c0
-        RequiresCondition: !submerged
-    Cargo:
-        Types: Infantry
-        MaxWeight: 8
-        PipCount: 8
-        EjectOnDeath: False
-        LoadingCondition: loading
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-        RequiresCondition: !submerged
-    Targetable:
-        RequiresCondition: !inside-tunnel && !submerged
-    LeavesTrails@ground:
-        Image: dust
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, Green, DirtRoad
-        RequiresCondition: !submerged
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: SubterraneanUnitDetected
-
-SAPC1:
-    Inherits: SAPC
-    -Buildable:
-    RenderSprites:
-        Image: sapc
-    RenderVoxels:
-        Image: sapc
-    Valued:
-        Cost: 500
-    Cargo:
-        Types: Infantry
-        MaxWeight: 8
-        PipCount: 8
-        InitialUnits: NASOL,NASOL,NASOL,NASOL,E3,E3,E3,E3
-        EjectOnDeath: False
-        LoadingCondition: loading
-
-BGGY:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Raider
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 203
-        Prerequisites: ~naweap, ~technology
-        Description: Technology Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
-    Voiced:
-        VoiceSet: Buggy    
-        Volume: 2
-    Mobile:
-        TurnSpeed: 8
-        Speed: 100
-        Crushes: crate
-    Health:
-        HP: 450
-    RevealsShroud:
-        Range: 6c0
-    Armament@primary:
-        Weapon: RaiderGunAttack
-        LocalOffset: 200,0,600
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.laser
-    Armament@visual:
-        Weapon: RaiderGunVisual
-        LocalOffset: 200,0,600
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.laser
-    Armament@laser:
-        Weapon: RaiderGunLaser
-        LocalOffset: 200,0,600
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.laser
-    Turreted:
-        TurnSpeed: 7
-        Offset: -96,0,0
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-    WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
-
-GORRAN:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Gorran
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 203
-        Prerequisites: ~naweap, ~industry
-        Description: Industry Nod´s fast and versatile light tank.\n\nGood vs: Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Cheetah
-        Volume: 2
-    Mobile:
-        Speed: 80
-        TurnSpeed: 4
-    Health:
-        HP: 700
-    RevealsShroud:
-        Range: 6c0
-    Turreted:
-        TurnSpeed: 3
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    Armament@PRIMARY:
-        Weapon: GorranCannon
-        LocalOffset: 700,0,630
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: GorranMissile
-        LocalOffset: 50,-256,775
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.tibgas
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret@normal:
-        RequiresCondition: !upgrade.tibgas
-        Recoils: False
-    WithVoxelTurret@upgrade:
-        RequiresCondition: upgrade.tibgas
-        Sequence: turret2
-        Recoils: False
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
-    
-BIKE:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 650
-    Tooltip:
-        Name: Attack Bike
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 204
-        Prerequisites: ~naweap, ~propaganda
-        Description: Fast motorbike armed with rockets available for Propaganda Nod only\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack air\n- Crush class: Light vehicle
-    Voiced:
-        VoiceSet: Buggy
-        Volume: 2
-    Mobile:
-        TurnSpeed: 17
-        Speed: 120
-        Crushes: crate
-    Health:
-        HP: 350 
-    RevealsShroud:
-        Range: 7c0
-    DetectCloaked:
-        Range: 6c0
-    RenderDetectionCircle:
-    Armament@PRIMARY:
-        Weapon: BikeMissile
-        LocalOffset: 0,-164,440, 0,165,440
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackFrontal:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithMuzzleOverlay:
-
-CHEETAH:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 1150
-    Tooltip:
-        Name: Phantom
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 205
-        Prerequisites: ~naweap, naradr, ~technology
-        Description: A standard frontline Tank for Technology Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Cheetah
-        Volume: 2
-    Mobile:
-        Speed: 60
-        TurnSpeed: 4
-    Health:
-        HP: 1500
-    RevealsShroud:
-        Range: 8c0
-    Turreted:
-        TurnSpeed: 3
-        Offset: 160, 0, 0
-    Armament@PRIMARY:
-        Weapon: PhantomCannon
-        LocalOffset: 900,100,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-        RequiresCondition: !upgrade.laser
-    Armament@upgrade:
-        Weapon: PhantomLaser
-        LocalOffset: 850,100,600
-        RequiresCondition: upgrade.laser
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.laser
-        Prerequisites: upgrade.laser
-
-REPAIR:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: MRD
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 204
-        Prerequisites: ~naweap, naradr
-        Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Crush class: Light vehicle
-    Voiced:
-        VoiceSet: Cabalbeep
-        Volume: 2
-    Health:
-        HP: 400
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 100
-        DamageCooldown: 200
-    Mobile:
-        Speed: 70
-        TurnSpeed: 5
-    RevealsShroud:
-        Range: 6c0
-    Armament:
-        Weapon: Repair
-        Cursor: repair
-        OutsideRangeCursor: repair
-        TargetStances: Ally
-        ForceTargetStances: None
-    Turreted:
-        TurnSpeed: 25
-        Offset: 0,0,0
-    AttackTurreted:
-        Voice: Action
-    RenderSprites:
-    RenderVoxels:
-    ProximityExternalCondition:
-        Condition: repair_heal
-        Range: 5c0
-    WithRangeCircle:
-        Color: FFFFFFFF
-        Range: 5c0
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-#    AutoTarget:
-#        ScanRadius: 5
-
-FTNK:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 850
-    Tooltip:
-        Name: Pyradon Tank
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 206
-        Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
-        Description: A flame tank that purifies the enemys of Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Explodes upon death\n- Blue Hell Inferno (Technology)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Devil
-        Volume: 2
-    Mobile:
-        Speed: 75
-        TurnSpeed: 4
-    Health:
-        HP: 650
-    RevealsShroud:
-        Range: 7c0
-    Turreted:
-        TurnSpeed: 3
-        Offset: 160, 0, 0
-    Armament@primary1:
-        Weapon: PyradonGun
-        LocalOffset: 950,100,700
-        RequiresCondition: !upgrade.bluehell
-    Armament@primary2:
-        Weapon: PyradonGun
-        LocalOffset: 950,-100,700
-        RequiresCondition: !upgrade.bluehell
-    Armament@upgrade1:
-        Weapon: PyradonGunBlue
-        LocalOffset: 950,100,700
-        RequiresCondition: upgrade.bluehell
-    Armament@upgrade2:
-        Weapon: PyradonGunBlue
-        LocalOffset: 950,-100,700
-        RequiresCondition: upgrade.bluehell
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.bluehell
-        Prerequisites: upgrade.bluehell
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-    Explodes:
-        Weapon: PyradonExplosion
-        EmptyWeapon: PyradonExplosion
-        Chance: 100
-
-RECKONER:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 800
-    Tooltip:
-        Name: Reckoner
-#    Buildable:
-#        Queue: Vehicle.Nod
-#        BuildPaletteOrder: 206
-#        Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
-#        Description: Requires Propaganda Nod Doctrine.\n\n A fast moving trooptransport that can be deployed to a bunker.\n\n Role: Medium Tank\n HP: 1000\n Armor: Medium\n Speed: 105\n Viewrange: 6c0\n\n Good vs Nothing\n Useless vs Everything\n\n Special:\n - Can deploy into a bunker\n - Can only deploy one time into a bunker\n - When deployed into a bunker gains heavy armor and has 10 slots for infantry to garrision\n - Can crush infantry\n - Can crush Light Vehicles
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Voiced:
-        VoiceSet: Cheetah
-        Volume: 2
-    Mobile:
-        TurnSpeed: 5
-        Speed: 60
-    Health:
-        HP: 1080
-    RevealsShroud:
-        Range: 10c0
-    AttackGarrisoned:
-        PortOffsets: 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256, 0,0,256
-        PortYaws: 0, 176, 341, 512, 682, 853
-        PortCones: 86, 86, 86, 86, 86, 86
-    Cargo:
-        Types: Infantry
-        MaxWeight: 6
-        PipCount: 6
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    AutoTarget:
-
-TERMITE:
-    Inherits@1: ^VoxelTank
-    Inherits@2: ^HeavyVehicle
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Termite
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 207
-        Prerequisites: ~naweap, napyra, ~!t1, ~industry
-        Description: The siege tank in the arsenal of Industry Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Gains selfheal upon deploying\n- Can deploy into an immobile state\n- Gains more durability when deployed\n- Projectile causes cluster explosions\n- Crush class: Heavy vehicle
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Voiced:
-        VoiceSet: Cheetah
-        Volume: 2
-    Mobile:
-        TurnSpeed: 3
-        Speed: 50
-        RequiresCondition: !(empdisable && !invulnerability) && !deployed
-    RevealsShroud:
-        Range: 9c0
-    Health:
-        HP: 2600
-    Turreted:
-        Turret: primary
-        TurnSpeed: 2
-        Offset: 200,0,0
-    Turreted@deployed:
-        Turret: secondary
-        TurnSpeed: 6
-        Offset: -200,0,0
-        RealignDelay: -1
-    AttackTurreted:    
-    Armament@secondary:
-        Name: secondary
-        Turret: secondary
-        Weapon: TermiteGun
-        LocalOffset: 1100,0,660
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 150
-        RecoilRecovery: 10   
-        RequiresCondition: deployed
-    Armament@primary:
-        Name: primary
-        Turret: primary
-        Weapon: TermiteGun
-        LocalOffset: 1050,0,650
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 150
-        RecoilRecovery: 10   
-        RequiresCondition: !deployed
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 3
-        HealIfBelow: 100
-        DamageCooldown: 200
-        RequiresCondition: deployed
-    WithMuzzleOverlay:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-        RequiresCondition: !deployed
-    WithVoxelBody@deployed:
-        Sequence: idle2
-        RequiresCondition: deployed
-    WithSpriteBody@deployed:
-    WithVoxelTurret:
-        Turret: primary
-        Sequence: turret
-        Recoils: False
-        RequiresCondition: !deployed
-    WithVoxelTurret@deployed:
-        Turret: secondary
-        Sequence: turretb
-        Recoils: False
-        RequiresCondition: deployed  
-    WithVoxelBarrel@long:
-        Armament: primary
-        RequiresCondition: !deployed
-    WithVoxelBarrel@deployed:
-        Sequence: barrelb
-        Armament: secondary
-        RequiresCondition: deployed
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-        DeployAnimation: make
-        Facing: -1
-        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
-        DeploySound: drillup.aud
-        UndeploySound: drillup.aud
-        CanDeployOnRamps: True
-    RenderRangeCircle:
-    AIDeployHelper:
-        DeployChance: 50
-        DeployTicks: 2500
-        UndeployTicks: 450
-
-HAILSTORM:
-    Inherits@: ^VoxelVehicle
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Hailstorm
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 208
-        Prerequisites: ~naweap, napyra, ~!t1, ~industry
-        Description: Industry Nod´s artillery armed with a long range rocket launcher.\n\nGood vs Air (undeployed) or Vehicles, Buildings (deployed)\n\nSpecial:\n- Can attack air when undeployed\n- Can attack ground when deployed\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Cheetah
-        Volume: 2
-    Mobile:
-        Speed: 50
-        TurnSpeed: 5
-        RequiresCondition: !(empdisable && !invulnerability) && !deployed
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 8c0
-    Armament@primary:
-        Name: Primary
-        Weapon: HailstormMissile
-        LocalOffset: 220,154,720, 220,-154,720, 220,77,720, 220,-77,720, 220,154,600, 220,-154,600, 220,77,600, 220,-77,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.tibgas && deployed
-    Armament@primaryAA:
-        Name: Primary
-        Weapon: HailstormMissileAA
-        LocalOffset: 220,154,720, 220,-154,720, 220,77,720, 220,-77,720, 220,154,600, 220,-154,600, 220,77,600, 220,-77,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.tibgas && !deployed
-    Armament@primarygas:
-        Name: Primary
-        Weapon: HailstormMissileGas
-        LocalOffset: 220,154,720, 220,-154,720, 220,77,720, 220,-77,720, 220,154,600, 220,-154,600, 220,77,600, 220,-77,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.tibgas && deployed
-    Armament@primarygasAA:
-        Name: Primary
-        Weapon: HailstormMissileGasAA
-        LocalOffset: 220,154,720, 220,-154,720, 220,77,720, 220,-77,720, 220,154,600, 220,-154,600, 220,77,600, 220,-77,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.tibgas && !deployed
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
-    Turreted:
-        TurnSpeed: 4
-        Offset: -128,0,85
-    AttackTurreted:
-        Armaments: Primary
-    AutoTarget:
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-        DeployAnimation: make
-        Facing: -1
-        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
-        DeploySound: nhwtzdeploy1.wav
-        UndeploySound: nhwtzundeploy1.wav
-        CanDeployOnRamps: True
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-        RequiresCondition: !deployed
-    WithVoxelBody@deployed:
-        Sequence: idle2
-        RequiresCondition: deployed
-    WithSpriteBody@deployed:
-    WithVoxelTurret:
-        Recoils: False
-        RequiresCondition: !deployed
-    WithVoxelTurret@deployed:
-        Sequence: turret2
-        Recoils: True
-        RequiresCondition: deployed
-    WithMuzzleOverlay:   
-    RenderRangeCircle:
-    AIDeployHelper:
-        DeployChance: 50
-        DeployTicks: 2500
-        UndeployTicks: 450
-
-NHWTZ:
-    Inherits: ^VoxelVehicle
-    Valued:
-        Cost: 1250
-    Tooltip:
-        Name: Specter
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 209
-        Prerequisites: ~naweap, napyra, ~!t1, ~!industry
-        Description: The long range artillery of Technology and Propaganda Nod that can be upgraded to a far greater threat.\n\nGood vs: Ground\n\nSpecial:\n- It has to deploy to attack\n- Immobile while being deployed\n- Stealth Emitter (Technology)\n- EMP Tech (Technology)\n- Blue Hell Inferno (Propaganda)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Specter
-        Volume: 1
-    Health:
-        HP: 500
-    Mobile:
-        Speed: 50
-        TurnSpeed: 2
-        RequiresCondition: !(empdisable && !invulnerability) && !deployed
-    RevealsShroud:
-        Range: 8c0
-    Turreted:
-        TurnSpeed: 4
-        RealignDelay: -1
-        Offset: -256,0,0
-    Armament@primary:
-        Name: Primary
-        Weapon: SpecterGun
-        LocalOffset: 1024,0,1600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 5
-        RequiresCondition: !upgrade.emp && !upgrade.bluehell
-    Armament@EMP:
-        Name: Primary
-        Weapon: SpecterGunEMP
-        LocalOffset: 1024,0,1600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 5
-        RequiresCondition: upgrade.emp
-    Armament@inferno:
-        Name: Primary
-        Weapon: SpecterGunInferno
-        LocalOffset: 1024,0,1600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        Recoil: 100
-        RecoilRecovery: 5
-        RequiresCondition: upgrade.bluehell && !upgrade.emp
-    AttackTurreted:
-        Armaments: Primary
-        RequiresCondition: deployed
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-        RequiresCondition: !deployed
-    WithVoxelBody@deployed:
-        Sequence: idle2
-        RequiresCondition: deployed
-    WithSpriteBody@deployed:
-    WithVoxelTurret:
-        Recoils: False
-        RequiresCondition: deployed
-    WithVoxelBarrel:
-        Armament: Primary
-        RequiresCondition: deployed
-    WithMuzzleOverlay:
-    Cloak:
-        RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
-        InitialDelay: 90
-        CloakDelay: 250
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-        DeployAnimation: make
-        Facing: -1
-        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
-        DeploySound: nhwtzdeploy1.wav
-        UndeploySound: nhwtzundeploy1.wav
-        CanDeployOnRamps: True
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.stealth
-        Prerequisites: upgrade.stealth
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.emp
-        Prerequisites: upgrade.emp
-    GrantConditionOnPrerequisite@upgrade3:
-        Condition: upgrade.bluehell
-        Prerequisites: upgrade.bluehell
-    GrantConditionOnPrerequisite@upgrade4:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
-    RenderRangeCircle:
-    AIDeployHelper:
-        DeployChance: 50
-        DeployTicks: 2500
-        UndeployTicks: 450
-    
-SUBTANK:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Devil's Tongue
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 210
-        Prerequisites: ~naweap, naradr, ~!t1, ~industry
-        Description: Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Subterranean movement\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Devil
-        Volume: 2
-    Mobile:
-        TurnSpeed: 4
-        Speed: 70
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Subterranean APC
+	Selectable:
+		Bounds: 42,42, 0, -5
+		Class: SAPC
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 202
+		Prerequisites: ~naweap, ~!t1, ~industry
+		Description: Industry Nod´s subterranean transport unit.\n\nGood vs: Nothing\n\nSpecial:\n- Subterranean movement\n- 8 slots for infantry\n- Crush class: Light vehicle
+	Voiced:
+		VoiceSet: SAPC
+		Volume: 5
+	Mobile:
+		TurnSpeed: 5
+		Speed: 113
+		RequiresCondition: !(empdisable && !invulnerability) && !loading
 		Subterranean: true
 		SubterraneanCondition: submerged
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
@@ -967,345 +236,1050 @@ SUBTANK:
 		SubterraneanTransitionSound: drillup.aud
 		SubterraneanTransitionImage: dig
 		SubterraneanTransitionSequence: idle
-		SubterraneanTransitionPalette : player
+		SubterraneanTransitionPalette: player
 		TerrainSpeeds:
-            Subterranean: 110
-    RejectsOrders:
-        RequiresCondition: submerged
-        Except: Attack, AttackMove, Guard, Move
-    Health:
-        HP: 650
-    RevealsShroud:
-        Range: 7c0
-        RequiresCondition: !submerged
-    Armament@primary:
-        Weapon: DevilsTongueGun
-        LocalOffset: 840,0,512
-        RequiresCondition: !submerged && !upgrade.tibgas
-    Armament@secondary:
-        Weapon: DevilsTongueGun
-        LocalOffset: 840,-360,300
-        RequiresCondition: !submerged && !upgrade.tibgas
-    Armament@secondary2:
-        Weapon: DevilsTongueGun
-        LocalOffset: 840,360,300
-        RequiresCondition: !submerged && !upgrade.tibgas
-    Armament@primaryB:
-        Weapon: DevilsTongueGunTiberium
-        LocalOffset: 840,0,512
-        RequiresCondition: !submerged && upgrade.tibgas
-    Armament@secondaryB:
-        Weapon: DevilsTongueGunTiberium
-        LocalOffset: 840,-360,300
-        RequiresCondition: !submerged && upgrade.tibgas
-    Armament@secondary2B:
-        Weapon: DevilsTongueGunTiberium
-        LocalOffset: 840,360,300
-        RequiresCondition: !submerged && upgrade.tibgas
-    AttackFrontal:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-        RequiresCondition: !submerged
-    Targetable:
-        RequiresCondition: !inside-tunnel && !submerged
-    LeavesTrails@ground:
-        Image: dust
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, Green, DirtRoad
-        RequiresCondition: !submerged
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: SubterraneanUnitDetected
-    GrantConditionOnPrerequisite@upgrade3:
-        Condition: upgrade.tibgas
-        Prerequisites: upgrade.tibgas
-   
+			Subterranean: 110
+	RejectsOrders:
+		RequiresCondition: submerged
+		Except: Attack, AttackMove, Guard, Move
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c497
+		RequiresCondition: !submerged
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+		EjectOnDeath: False
+		LoadingCondition: loading
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !submerged
+	Targetable:
+		RequiresCondition: !inside-tunnel && !submerged
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad
+		RequiresCondition: !submerged
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: SubterraneanUnitDetected
+	HitShape:
+
+SAPC1:
+	Inherits: SAPC
+	-Buildable:
+	RenderSprites:
+		Image: sapc
+	RenderVoxels:
+		Image: sapc
+	Valued:
+		Cost: 500
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+		InitialUnits: NASOL,NASOL,NASOL,NASOL,E3,E3,E3,E3
+		EjectOnDeath: False
+		LoadingCondition: loading
+
+BGGY:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Raider
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 203
+		Prerequisites: ~naweap, ~technology
+		Description: Technology Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
+	Voiced:
+		VoiceSet: Buggy
+		Volume: 2
+	Mobile:
+		TurnSpeed: 8
+		Speed: 141
+		Crushes: crate
+	Health:
+		HP: 450
+	RevealsShroud:
+		Range: 8c497
+	Armament@primary:
+		Weapon: RaiderGunAttack
+		LocalOffset: 283,0,849
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !upgrade.laser
+	Armament@visual:
+		Weapon: RaiderGunVisual
+		LocalOffset: 283,0,849
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !upgrade.laser
+	Armament@laser:
+		Weapon: RaiderGunLaser
+		LocalOffset: 283,0,849
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: upgrade.laser
+	Turreted:
+		TurnSpeed: 7
+		Offset: -136,0,0
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+	WithMuzzleOverlay:
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.laser
+		Prerequisites: upgrade.laser
+	HitShape:
+
+GORRAN:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Gorran
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 203
+		Prerequisites: ~naweap, ~industry
+		Description: Industry Nod´s fast and versatile light tank.\n\nGood vs: Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		Speed: 113
+		TurnSpeed: 4
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 8c497
+	Turreted:
+		TurnSpeed: 3
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	Armament@PRIMARY:
+		Weapon: GorranCannon
+		LocalOffset: 990,0,891
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 200
+		RecoilRecovery: 10
+	Armament@secondary:
+		Weapon: GorranMissile
+		LocalOffset: 71,-362,1096
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: upgrade.tibgas
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret@normal:
+		RequiresCondition: !upgrade.tibgas
+		Recoils: False
+	WithVoxelTurret@upgrade:
+		RequiresCondition: upgrade.tibgas
+		Sequence: turret2
+		Recoils: False
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
+	HitShape:
+
+BIKE:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Attack Bike
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 204
+		Prerequisites: ~naweap, ~propaganda
+		Description: Fast motorbike armed with rockets available for Propaganda Nod only\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack air\n- Crush class: Light vehicle
+	Voiced:
+		VoiceSet: Buggy
+		Volume: 2
+	Mobile:
+		TurnSpeed: 17
+		Speed: 170
+		Crushes: crate
+	Health:
+		HP: 350
+	RevealsShroud:
+		Range: 9c921
+	DetectCloaked:
+		Range: 8c497
+	RenderDetectionCircle:
+	Armament@PRIMARY:
+		Weapon: BikeMissile
+		LocalOffset: 0,-232,622, 0,233,622
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	AttackFrontal:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithMuzzleOverlay:
+	HitShape:
+
+CHEETAH:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 1150
+	Tooltip:
+		Name: Phantom
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 205
+		Prerequisites: ~naweap, naradr, ~technology
+		Description: A standard frontline Tank for Technology Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		Speed: 85
+		TurnSpeed: 4
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 11c321
+	Turreted:
+		TurnSpeed: 3
+		Offset: 226,0,0
+	Armament@PRIMARY:
+		Weapon: PhantomCannon
+		LocalOffset: 1273,141,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 200
+		RecoilRecovery: 10
+		RequiresCondition: !upgrade.laser
+	Armament@upgrade:
+		Weapon: PhantomLaser
+		LocalOffset: 1202,141,849
+		RequiresCondition: upgrade.laser
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.laser
+		Prerequisites: upgrade.laser
+	HitShape:
+
+REPAIR:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: MRD
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 204
+		Prerequisites: ~naweap, naradr
+		Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Crush class: Light vehicle
+	Voiced:
+		VoiceSet: Cabalbeep
+		Volume: 2
+	Health:
+		HP: 400
+	SelfHealing:
+		Step: 0
+		PercentageStep: 1
+		Delay: 10
+		HealIfBelow: 100
+		DamageCooldown: 200
+	Mobile:
+		Speed: 99
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 8c497
+	Armament:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	Turreted:
+		TurnSpeed: 25
+		Offset: 0,0,0
+	AttackTurreted:
+		Voice: Action
+	RenderSprites:
+	RenderVoxels:
+	ProximityExternalCondition:
+		Condition: repair_heal
+		Range: 7c73
+	WithRangeCircle:
+		Color: FFFFFFFF
+		Range: 7c73
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	HitShape:
+
+FTNK:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Pyradon Tank
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 206
+		Prerequisites: ~naweap, naradr, ~!t1, ~propaganda
+		Description: A flame tank that purifies the enemys of Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Explodes upon death\n- Blue Hell Inferno (Technology)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Devil
+		Volume: 2
+	Mobile:
+		Speed: 106
+		TurnSpeed: 4
+	Health:
+		HP: 650
+	RevealsShroud:
+		Range: 9c921
+	Turreted:
+		TurnSpeed: 3
+		Offset: 226,0,0
+	Armament@primary1:
+		Weapon: PyradonGun
+		LocalOffset: 1344,141,990
+		RequiresCondition: !upgrade.bluehell
+	Armament@primary2:
+		Weapon: PyradonGun
+		LocalOffset: 1344,-141,990
+		RequiresCondition: !upgrade.bluehell
+	Armament@upgrade1:
+		Weapon: PyradonGunBlue
+		LocalOffset: 1344,141,990
+		RequiresCondition: upgrade.bluehell
+	Armament@upgrade2:
+		Weapon: PyradonGunBlue
+		LocalOffset: 1344,-141,990
+		RequiresCondition: upgrade.bluehell
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.bluehell
+		Prerequisites: upgrade.bluehell
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	Explodes:
+		Weapon: PyradonExplosion
+		EmptyWeapon: PyradonExplosion
+		Chance: 100
+	HitShape:
+
+RECKONER:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Reckoner
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		TurnSpeed: 5
+		Speed: 85
+	Health:
+		HP: 1080
+	RevealsShroud:
+		Range: 14c146
+	AttackGarrisoned:
+		PortOffsets: 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		PipCount: 6
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	AutoTarget:
+	HitShape:
+
+TERMITE:
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^HeavyVehicle
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Termite
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 207
+		Prerequisites: ~naweap, napyra, ~!t1, ~industry
+		Description: The siege tank in the arsenal of Industry Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Gains selfheal upon deploying\n- Can deploy into an immobile state\n- Gains more durability when deployed\n- Projectile causes cluster explosions\n- Crush class: Heavy vehicle
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		TurnSpeed: 3
+		Speed: 71
+		RequiresCondition: !(empdisable && !invulnerability) && !deployed
+	RevealsShroud:
+		Range: 12c745
+	Health:
+		HP: 2600
+	Turreted:
+		Turret: primary
+		TurnSpeed: 2
+		Offset: 283,0,0
+	Turreted@deployed:
+		Turret: secondary
+		TurnSpeed: 6
+		Offset: -200,0,0
+		RealignDelay: -1
+	AttackTurreted:
+	Armament@secondary:
+		Name: secondary
+		Turret: secondary
+		Weapon: TermiteGun
+		LocalOffset: 1556,0,933
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 150
+		RecoilRecovery: 10
+		RequiresCondition: deployed
+	Armament@primary:
+		Name: primary
+		Turret: primary
+		Weapon: TermiteGun
+		LocalOffset: 1485,0,919
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 150
+		RecoilRecovery: 10
+		RequiresCondition: !deployed
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 100
+		DamageCooldown: 200
+		RequiresCondition: deployed
+	WithMuzzleOverlay:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !deployed
+	WithVoxelBody@deployed:
+		Sequence: idle2
+		RequiresCondition: deployed
+	WithSpriteBody@deployed:
+	WithVoxelTurret:
+		Turret: primary
+		Sequence: turret
+		Recoils: False
+		RequiresCondition: !deployed
+	WithVoxelTurret@deployed:
+		Turret: secondary
+		Sequence: turretb
+		Recoils: False
+		RequiresCondition: deployed
+	WithVoxelBarrel@long:
+		Armament: primary
+		RequiresCondition: !deployed
+	WithVoxelBarrel@deployed:
+		Sequence: barrelb
+		Armament: secondary
+		RequiresCondition: deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		Facing: -1
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
+		DeploySound: drillup.aud
+		UndeploySound: drillup.aud
+		CanDeployOnRamps: True
+	WithMakeAnimation:
+	RenderRangeCircle:
+	AIDeployHelper:
+		DeployChance: 50
+		DeployTicks: 2500
+		UndeployTicks: 450
+	HitShape:
+
+HAILSTORM:
+	Inherits@: ^VoxelVehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Hailstorm
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 208
+		Prerequisites: ~naweap, napyra, ~!t1, ~industry
+		Description: Industry Nod´s artillery armed with a long range rocket launcher.\n\nGood vs Air (undeployed) or Vehicles, Buildings (deployed)\n\nSpecial:\n- Can attack air when undeployed\n- Can attack ground when deployed\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		Speed: 71
+		TurnSpeed: 5
+		RequiresCondition: !(empdisable && !invulnerability) && !deployed
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 11c321
+	Armament@primary:
+		Name: Primary
+		Weapon: HailstormMissile
+		LocalOffset: 311,218,1018, 311,-218,1018, 311,109,1018, 311,-109,1018, 311,218,849, 311,-218,849, 311,109,849, 311,-109,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !upgrade.tibgas && deployed
+	Armament@primaryAA:
+		Name: Primary
+		Weapon: HailstormMissileAA
+		LocalOffset: 311,218,1018, 311,-218,1018, 311,109,1018, 311,-109,1018, 311,218,849, 311,-218,849, 311,109,849, 311,-109,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !upgrade.tibgas && !deployed
+	Armament@primarygas:
+		Name: Primary
+		Weapon: HailstormMissileGas
+		LocalOffset: 311,218,1018, 311,-218,1018, 311,109,1018, 311,-109,1018, 311,218,849, 311,-218,849, 311,109,849, 311,-109,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: upgrade.tibgas && deployed
+	Armament@primarygasAA:
+		Name: Primary
+		Weapon: HailstormMissileGasAA
+		LocalOffset: 311,218,1018, 311,-218,1018, 311,109,1018, 311,-109,1018, 311,218,849, 311,-218,849, 311,109,849, 311,-109,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: upgrade.tibgas && !deployed
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
+	Turreted:
+		TurnSpeed: 4
+		Offset: -181,0,120
+	AttackTurreted:
+		Armaments: Primary
+	AutoTarget:
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		Facing: -1
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
+		DeploySound: nhwtzdeploy1.wav
+		UndeploySound: nhwtzundeploy1.wav
+		CanDeployOnRamps: True
+	WithMakeAnimation:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !deployed
+	WithVoxelBody@deployed:
+		Sequence: idle2
+		RequiresCondition: deployed
+	WithSpriteBody@deployed:
+	WithVoxelTurret:
+		Recoils: False
+		RequiresCondition: !deployed
+	WithVoxelTurret@deployed:
+		Sequence: turret2
+		Recoils: True
+		RequiresCondition: deployed
+	WithMuzzleOverlay:
+	RenderRangeCircle:
+	AIDeployHelper:
+		DeployChance: 50
+		DeployTicks: 2500
+		UndeployTicks: 450
+	HitShape:
+
+NHWTZ:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: Specter
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 209
+		Prerequisites: ~naweap, napyra, ~!t1, ~!industry
+		Description: The long range artillery of Technology and Propaganda Nod that can be upgraded to a far greater threat.\n\nGood vs: Ground\n\nSpecial:\n- It has to deploy to attack\n- Immobile while being deployed\n- Stealth Emitter (Technology)\n- EMP Tech (Technology)\n- Blue Hell Inferno (Propaganda)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Specter
+		Volume: 1
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+		TurnSpeed: 2
+		RequiresCondition: !(empdisable && !invulnerability) && !deployed
+	RevealsShroud:
+		Range: 11c321
+	Turreted:
+		TurnSpeed: 4
+		RealignDelay: -1
+		Offset: -362,0,0
+	Armament@primary:
+		Name: Primary
+		Weapon: SpecterGun
+		LocalOffset: 1448,0,2263
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 100
+		RecoilRecovery: 5
+		RequiresCondition: !upgrade.emp && !upgrade.bluehell
+	Armament@EMP:
+		Name: Primary
+		Weapon: SpecterGunEMP
+		LocalOffset: 1448,0,2263
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 100
+		RecoilRecovery: 5
+		RequiresCondition: upgrade.emp
+	Armament@inferno:
+		Name: Primary
+		Weapon: SpecterGunInferno
+		LocalOffset: 1448,0,2263
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 100
+		RecoilRecovery: 5
+		RequiresCondition: upgrade.bluehell && !upgrade.emp
+	AttackTurreted:
+		Armaments: Primary
+		RequiresCondition: deployed
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !deployed
+	WithVoxelBody@deployed:
+		Sequence: idle2
+		RequiresCondition: deployed
+	WithSpriteBody@deployed:
+	WithVoxelTurret:
+		Recoils: False
+		RequiresCondition: deployed
+	WithVoxelBarrel:
+		Armament: Primary
+		RequiresCondition: deployed
+	WithMuzzleOverlay:
+	Cloak:
+		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		InitialDelay: 90
+		CloakDelay: 250
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		Facing: -1
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green
+		DeploySound: nhwtzdeploy1.wav
+		UndeploySound: nhwtzundeploy1.wav
+		CanDeployOnRamps: True
+	WithMakeAnimation:
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.emp
+		Prerequisites: upgrade.emp
+	GrantConditionOnPrerequisite@upgrade3:
+		Condition: upgrade.bluehell
+		Prerequisites: upgrade.bluehell
+	GrantConditionOnPrerequisite@upgrade4:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
+	RenderRangeCircle:
+	AIDeployHelper:
+		DeployChance: 50
+		DeployTicks: 2500
+		UndeployTicks: 450
+	HitShape:
+
+SUBTANK:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Devil's Tongue
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 210
+		Prerequisites: ~naweap, naradr, ~!t1, ~industry
+		Description: Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Subterranean movement\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Devil
+		Volume: 2
+	Mobile:
+		TurnSpeed: 4
+		Speed: 99
+		Subterranean: true
+		SubterraneanCondition: submerged
+		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
+		SubterraneanTransitionCost: 1
+		SubterraneanTransitionSound: drillup.aud
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionPalette: player
+		TerrainSpeeds:
+			Subterranean: 110
+	RejectsOrders:
+		RequiresCondition: submerged
+		Except: Attack, AttackMove, Guard, Move
+	Health:
+		HP: 650
+	RevealsShroud:
+		Range: 9c921
+		RequiresCondition: !submerged
+	Armament@primary:
+		Weapon: DevilsTongueGun
+		LocalOffset: 1188,0,724
+		RequiresCondition: !submerged && !upgrade.tibgas
+	Armament@secondary:
+		Weapon: DevilsTongueGun
+		LocalOffset: 1188,-509,424
+		RequiresCondition: !submerged && !upgrade.tibgas
+	Armament@secondary2:
+		Weapon: DevilsTongueGun
+		LocalOffset: 1188,509,424
+		RequiresCondition: !submerged && !upgrade.tibgas
+	Armament@primaryB:
+		Weapon: DevilsTongueGunTiberium
+		LocalOffset: 1188,0,724
+		RequiresCondition: !submerged && upgrade.tibgas
+	Armament@secondaryB:
+		Weapon: DevilsTongueGunTiberium
+		LocalOffset: 1188,-509,424
+		RequiresCondition: !submerged && upgrade.tibgas
+	Armament@secondary2B:
+		Weapon: DevilsTongueGunTiberium
+		LocalOffset: 1188,509,424
+		RequiresCondition: !submerged && upgrade.tibgas
+	AttackFrontal:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !submerged
+	Targetable:
+		RequiresCondition: !inside-tunnel && !submerged
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad
+		RequiresCondition: !submerged
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: SubterraneanUnitDetected
+	GrantConditionOnPrerequisite@upgrade3:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
+	HitShape:
+
 STNK:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Stealth Tank
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        BuildPaletteOrder: 208
-        Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~technology
-        Queue: Vehicle.Nod
-        Description: Stealthed tank used for hit and run tactics and armed with rocket launchers.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Stealth\n- Can attack air\n- EMP Tech (Technology)\n- Crush class: Medium vehicle
-    Voiced:
-        VoiceSet: Stnk
-        Volume: 2
-    Mobile:
-        TurnSpeed: 10
-        Speed: 90
-    Health:
-        HP: 820
-    RevealsShroud:
-        Range: 10c0
-    Cloak@self:
-        InitialDelay: 90
-        CloakDelay: 90
-        CloakSound: stealth01.aud
-        UncloakSound: unstealth01.aud
-        IsPlayerPalette: true
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-    Turreted:
-        TurnSpeed: 5
-        Offset: 0,0,0
-    Armament@1:
-        Weapon: StealthTankMissile
-        LocalOffset: 128,164,600, 128,-164,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !upgrade.emp
-#    Armament@2:
-#        Weapon: StealthTankMissile
-#        LocalOffset: 128,164,600, 128,-164,600
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: apolra50alpha
-#        FireDelay: 10
-#        RequiresCondition: !upgrade.emp
-#    Armament@3:
-#        Weapon: StealthTankMissile
-#        LocalOffset: 128,164,600, 0,-164,600
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: apolra50alpha
-#        FireDelay: 20
-#        RequiresCondition: !upgrade.emp
-    Armament@1upgrade:
-        Weapon: StealthTankMissileEMP
-        LocalOffset: 128,164,600, 128,-164,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: upgrade.emp
-#    Armament@2upgrade:
-#        Weapon: StealthTankMissileEMP
-#        LocalOffset: 128,164,600, 128,-164,600
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: apolra50alpha
-#        FireDelay: 10
-#        RequiresCondition: upgrade.emp
-#    Armament@3upgrade:
-#        Weapon: StealthTankMissileEMP
-#        LocalOffset: 128,164,600, 0,-164,600
-#        MuzzleSequence: muzzle
-#        MuzzlePalette: apolra50alpha
-#        FireDelay: 20
-#        RequiresCondition: upgrade.emp
-    Armament@antiair:
-        Weapon: StealthTankMissileAA
-        LocalOffset: 128,164,600, 128,-164,600
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    AttackTurreted:
-    AutoTarget:
-        InitialStance: HoldFire
-        InitialStanceAI: ReturnFire
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-    -MustBeDestroyed:
-    WithMuzzleOverlay:
-    GrantConditionOnPrerequisite@upgrade:
-        Condition: upgrade.emp
-        Prerequisites: upgrade.emp
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: StealthUnitDetected
-    -LeavesTrails@ground:
-        
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Stealth Tank
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		BuildPaletteOrder: 208
+		Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~technology
+		Queue: Vehicle.Nod
+		Description: Stealthed tank used for hit and run tactics and armed with rocket launchers.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Stealth\n- Can attack air\n- EMP Tech (Technology)\n- Crush class: Medium vehicle
+	Voiced:
+		VoiceSet: Stnk
+		Volume: 2
+	Mobile:
+		TurnSpeed: 10
+		Speed: 127
+	Health:
+		HP: 820
+	RevealsShroud:
+		Range: 14c146
+	Cloak@self:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: stealth01.aud
+		UncloakSound: unstealth01.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	Turreted:
+		TurnSpeed: 5
+		Offset: 0,0,0
+	Armament@1:
+		Weapon: StealthTankMissile
+		LocalOffset: 181,232,849, 181,-232,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !upgrade.emp
+	Armament@1upgrade:
+		Weapon: StealthTankMissileEMP
+		LocalOffset: 181,232,849, 181,-232,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: upgrade.emp
+	Armament@antiair:
+		Weapon: StealthTankMissileAA
+		LocalOffset: 181,232,849, 181,-232,849
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	AttackTurreted:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	-MustBeDestroyed:
+	WithMuzzleOverlay:
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.emp
+		Prerequisites: upgrade.emp
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: StealthUnitDetected
+	-LeavesTrails@ground:
+	HitShape:
+
 AVATAR:
-    Inherits@1: ^Walker
-    Inherits@2: ^HeavyVehicle
-    Valued:
-        Cost: 1600
-    Tooltip:
-        Name: Avatar
-    Selectable:
-        Bounds: 42,82, 0, -20
-    Buildable:
-        Queue: Vehicle.Nod
-        BuildPaletteOrder: 212
-        Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~propaganda
-        Description: Heavy Walker armed with a strong laser and enhances all Nod Soldiers on the battlefield.\n\nGood vs: Ground\n\nSpecial:\n- Enhances the damage of all Nod Soliders\n- Crush class: Heavy vehicle
-    Voiced:
-        VoiceSet: Avatar
-        Volume: 2
-    Mobile:
-        TurnSpeed: 5
-        Speed: 55
-    GrantConditionOnMovement@steps:
-        Condition: walker
-    AmbientSound@step1:
-        SoundFiles: stomp2a.aud, stomp2b.aud, stomp2c.aud
-        Delay: 3
-        Interval: 21
-        RequiresCondition: walker
-    Health:
-        HP: 1820
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 3
-        HealIfBelow: 1
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 9c0
-    BodyOrientation:
-        QuantizedFacings: 8
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: AvatarLaser
-        LocalOffset: 700,360,1500 #850,450,1800
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: !rank-heroic
-    Armament@elite:
-        Weapon: AvatarLaserE
-        LocalOffset: 700,360,1500 #850,450,1800
-        MuzzlePalette: apolra50alpha
-        RequiresCondition: rank-heroic
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    RenderSprites:
-        Scale: 0.8
-    WithMuzzleOverlay:
-    ProximityExternalCondition:
-        Condition: avatarboost
-        Range: 6c0
-    WithRangeCircle:
-        Range: 6c0
-        Type: avatarboost
-    
+	Inherits@1: ^Walker
+	Inherits@2: ^HeavyVehicle
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Avatar
+	Selectable:
+		Bounds: 42,82, 0, -20
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 212
+		Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~propaganda
+		Description: Heavy Walker armed with a strong laser and enhances all Nod Soldiers on the battlefield.\n\nGood vs: Ground\n\nSpecial:\n- Enhances the damage of all Nod Soliders\n- Crush class: Heavy vehicle
+	Voiced:
+		VoiceSet: Avatar
+		Volume: 2
+	Mobile:
+		TurnSpeed: 5
+		Speed: 78
+	GrantConditionOnMovement@steps:
+		Condition: walker
+	AmbientSound@step1:
+		SoundFiles: stomp2a.aud, stomp2b.aud, stomp2c.aud
+		Delay: 3
+		Interval: 21
+		RequiresCondition: walker
+	Health:
+		HP: 1820
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 1
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 12c745
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: AvatarLaser
+		LocalOffset: 990,509,2121
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !rank-heroic
+	Armament@elite:
+		Weapon: AvatarLaserE
+		LocalOffset: 990,509,2121
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: rank-heroic
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RenderSprites:
+		Scale: 0.8
+	WithMuzzleOverlay:
+	ProximityExternalCondition:
+		Condition: avatarboost
+		Range: 8c497
+	WithRangeCircle:
+		Range: 8c497
+		Type: avatarboost
+	HitShape:
+
 MONTAUK:
-    Inherits@1: ^VoxelTank
-    Inherits@2: ^SuperHeavyVehicle
-    Valued:
-        Cost: 8000
-    Tooltip:
-        Name: Montauk
-    Selectable:
-        Bounds: 42,42, 0, -5
-#    Buildable:
-#        Queue: Vehicle.Nod
-#        BuildPaletteOrder: 214
-#        BuildLimit: 1
-#        Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~!t3
-#        Description: The epic of Nod that has unique abilities depending of which Decotrine you have choosen.\n\n Role: Super Heavy Tank\n HP: 5000\n Armor: Heavy\n Speed: 71\n Viewrange: 15c0 \n\n Good vs Ground\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Industry: Montauk can deploy and produce tanks and provides small building radius\n - Technology: Montauk receives a mobile stealth generator and strong lasers\n - Propaganda: Montauk can deploy and produce infantry and provides a healing aura for every unit\n - Can crush everything on the ground except buildings and other epics
-    Voiced:
-        VoiceSet: Sting
-        Volume: 2
-    Mobile:
-        TurnSpeed: 2
-        Speed: 71
-    Health:
-        HP: 6500
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 100
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 15c0
-    Armament@nose:
-        Weapon: BansheeCannon
-        LocalOffset: 840,0,850
-        RequiresCondition: !deployed
-    Armament@eyes:
-        Weapon: MontaukProton
-        LocalOffset: 650,200,512, 650,-200,512
-        RequiresCondition: !deployed
-    AttackFrontal:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    Explodes:
-        Weapon: UnitExplodeEpic
-        EmptyWeapon: UnitExplodeEpic
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-    Passenger:
-        CargoType: Epic
-        Voice: Move
-        Weight: 20
-    Cloak@underground:
-        RequiresCondition: deployed
-        InitialDelay: 0
-        CloakDelay: 0
-        IsPlayerPalette: True
-        CloakTypes: Underground
-    WithSpriteBody@deployed:
-        RequiresCondition: !deployed
-    GrantConditionOnDeploy:
-        DeployedCondition: deployed
-        DeployAnimation: make
-        Facing: 160
-        AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-        DeploySound: drilldwn.aud
-        UndeploySound: drillup.aud
-        CanDeployOnRamps: True
-    LeavesTrails@ground:
-        Image: dust
-        Palette: player50alpha
-        TerrainTypes: Clear, Rough, Green, DirtRoad
-        RequiresCondition: !deployed
-    AnnounceOnSeen:
-        PingRadar: True
-        Notification: SubterraneanUnitDetected
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^SuperHeavyVehicle
+	Valued:
+		Cost: 8000
+	Tooltip:
+		Name: Montauk
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Sting
+		Volume: 2
+	Mobile:
+		TurnSpeed: 2
+		Speed: 100
+	Health:
+		HP: 6500
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 21c218
+	Armament@nose:
+		Weapon: BansheeCannon
+		LocalOffset: 1188,0,1202
+		RequiresCondition: !deployed
+	Armament@eyes:
+		Weapon: MontaukProton
+		LocalOffset: 919,283,724, 919,-283,724
+		RequiresCondition: !deployed
+	AttackFrontal:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	Passenger:
+		CargoType: Epic
+		Voice: Move
+		Weight: 20
+	Cloak@underground:
+		RequiresCondition: deployed
+		InitialDelay: 0
+		CloakDelay: 0
+		IsPlayerPalette: True
+		CloakTypes: Underground
+	WithSpriteBody@deployed:
+		RequiresCondition: !deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: drilldwn.aud
+		UndeploySound: drillup.aud
+		CanDeployOnRamps: True
+	WithMakeAnimation:
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad
+		RequiresCondition: !deployed
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: SubterraneanUnitDetected
+	HitShape:
 
 WEED:
-    Inherits: ^VoxelTank
-    Valued:
-        Cost: 1400
-    Tooltip:
-        Name: Weed Eater
-#    Buildable:
-#        Queue: Vehicle.Nod
-#        Prerequisites: ~naweap, ~nawast
-#        BuildPaletteOrder: 216
-#        Description: Collects veins for processing.\n\n  Unarmed
-    Voiced:
-        VoiceSet: Nharv
-        Volume: 2    
-    Harvester:
-        DeliveryBuildings: nawast
-        Capacity: 7
-        Resources: Veins
-        BaleUnloadDelay: 20
-        BaleLoadDelay: 40
-        SearchFromProcRadius: 72
-        SearchFromOrderRadius: 36
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 4        
-    -DamagedByTerrain@Veins:
-    Mobile:
-        Speed: 71
-        TurnSpeed: 5
-    Health:
-        HP: 780
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 3
-        HealIfBelow: 100
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 4c0
-    -ProducibleWithLevel:
-    RenderSprites:
-    RenderVoxels:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    Explodes:
-        Weapon: LargeVeinExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect 
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Weed Eater
+	Voiced:
+		VoiceSet: Nharv
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: nawast
+		Capacity: 7
+		Resources: Veins
+		BaleUnloadDelay: 20
+		BaleLoadDelay: 40
+		SearchFromProcRadius: 72
+		SearchFromOrderRadius: 36
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 4
+	-DamagedByTerrain@Veins:
+	Mobile:
+		Speed: 100
+		TurnSpeed: 5
+	Health:
+		HP: 780
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 5c673
+	-ProducibleWithLevel:
+	RenderSprites:
+	RenderVoxels:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: LargeVeinExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	HitShape:
