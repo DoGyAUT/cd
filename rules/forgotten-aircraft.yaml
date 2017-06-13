@@ -1,319 +1,262 @@
-BUZZARD: #adv gattling/ "mortar"
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Buzzard
-    Buildable:
-        Queue: Air.Forg
-        BuildPaletteOrder: 400
-        Prerequisites: upgrade.buzzard, ~!upgrade.griffin
-        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 6
-        Speed: 120
-    Health:
-        HP: 350
-    RevealsShroud:
-        Range: 15c0
-        Type: GroundPosition
-    Armament@gattling:
-        Weapon: BuzzardGattlingCannonAttack
-        LocalOffset: 800,0,160
-        RequiresCondition: !upgrade.buzzard_gattling
-    Armament@gattlingvis:
-        Weapon: BuzzardGattlingCannonVisual
-        LocalOffset: 800,0,160
-        RequiresCondition: !upgrade.buzzard_gattling
-    #adv gattling instead of flamer
-    Armament@gattling2: 
-        Weapon: BuzzardGattlingCannonAttack2
-        LocalOffset: 800,0,160
-        RequiresCondition: upgrade.buzzard_gattling
-    Armament@gattling2vis: 
-        Weapon: BuzzardGattlingCannonVisual2
-        LocalOffset: 800,0,160
-        RequiresCondition: upgrade.buzzard_gattling
-    Armament@missiles: #placeholder for "artyweapon"
-        AmmoPoolName: HEMissile
-        Weapon: BuzzardHErocket
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 0,256,160, 0,-256,160
-        RequiresCondition: upgrade.buzzard_missiles
-    Turreted:
-        TurnSpeed: 5
-        Offset: 400,0,0
-    AmmoPool@1:
-        Name: HEMissile
-        Ammo: 1
-        PipCount: 1
-        ReloadCount: 1
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 300
-    AttackTurreted:
-        FacingTolerance: 20
-    AutoTarget:
-    WithIdleOverlay@ROTORAIR:
-        Offset: 0,0,800
-        Sequence: rotor
-        RequiresCondition: airborne
-    WithIdleOverlay@ROTORGROUND:
-        Offset: 0,0,800
-        Sequence: slow-rotor
-        RequiresCondition: !airborne
-    RenderSprites:
-    WithVoxelTurret:
-    WithMuzzleOverlay:
-    DetectCloaked:
-        Range: 7c0
-    RenderDetectionCircle:
-    SpawnActorOnDeath:
-        Actor: BUZZARD.Husk
-        Probability: 100
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.buzzard_missiles
-        Prerequisites: upgrade.buzzard_missiles
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.buzzard_gattling
-        Prerequisites: upgrade.buzzard_gattling
-        
-GRIFFIN: #missile / autocannon
-    Inherits: ^Helicopter
-    Valued:
-        Cost: 1200
-    Tooltip:
-        Name: Griffin
-    Buildable:
-        Queue: Air.Forg
-        BuildPaletteOrder: 400
-        Prerequisites: upgrade.griffin, ~!upgrade.buzzard
-        Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 5
-        Speed: 100
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 15c0
-        Type: GroundPosition
-    Armament@mg:
-        Weapon: GriffinMG
-        LocalOffset: 700,0,80
-    Armament@missiles:
-        Weapon: BuzzardMissiles
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 0,256,160, 0,-256,160
-        RequiresCondition: upgrade.griffin_missiles
-    Armament@autocannnon:
-        Weapon: GriffinAutocannon
-        MuzzleSequence: muzzle
-        MuzzleSplitFacings: 8
-        MuzzlePalette: apolra50alpha
-        LocalOffset: 800,0,140
-        RequiresCondition: upgrade.griffin_autocannon
-    AttackHeli:
-        FacingTolerance: 20
-    AutoTarget:
-    WithIdleOverlay@ROTORAIR:
-        Offset: 0,0,800
-        Sequence: rotor
-        RequiresCondition: airborne
-    WithIdleOverlay@ROTORGROUND:
-        Offset: 0,0,800
-        Sequence: slow-rotor
-        RequiresCondition: !airborne
-    RenderSprites:
-    WithMuzzleOverlay:
-    DetectCloaked:
-        Range: 7c0
-    RenderDetectionCircle:
-    SpawnActorOnDeath:
-        Actor: GRIFFIN.Husk
-        Probability: 100
-    GrantConditionOnPrerequisite@upgrade1:
-        Condition: upgrade.griffin_missiles
-        Prerequisites: upgrade.griffin_missiles
-    GrantConditionOnPrerequisite@upgrade2:
-        Condition: upgrade.griffin_autocannon
-        Prerequisites: upgrade.griffin_autocannon
-    
+BUZZARD:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Buzzard
+	Buildable:
+		Queue: Air.Forg
+		BuildPaletteOrder: 400
+		Prerequisites: upgrade.buzzard, ~!upgrade.griffin
+		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
+	Selectable:
+		Bounds: 60,48,0,-10
+	Voiced:
+		VoiceSet: Grunt
+		Volume: 2
+	Aircraft:
+		TurnSpeed: 6
+		Speed: 170
+	Health:
+		HP: 350
+	RevealsShroud:
+		Range: 21c218
+		Type: GroundPosition
+	Armament@gattling:
+		Weapon: BuzzardGattlingCannonAttack
+		LocalOffset: 1131,0,226
+		RequiresCondition: !upgrade.buzzard_gattling
+	Armament@gattlingvis:
+		Weapon: BuzzardGattlingCannonVisual
+		LocalOffset: 1131,0,226
+		RequiresCondition: !upgrade.buzzard_gattling
+	Armament@gattling2:
+		Weapon: BuzzardGattlingCannonAttack2
+		LocalOffset: 1131,0,226
+		RequiresCondition: upgrade.buzzard_gattling
+	Armament@gattling2vis:
+		Weapon: BuzzardGattlingCannonVisual2
+		LocalOffset: 1131,0,226
+		RequiresCondition: upgrade.buzzard_gattling
+	Armament@missiles:
+		AmmoPoolName: HEMissile
+		Weapon: BuzzardHErocket
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		LocalOffset: 0,362,226, 0,-362,226
+		RequiresCondition: upgrade.buzzard_missiles
+	Turreted:
+		TurnSpeed: 5
+		Offset: 566,0,0
+	AmmoPool@1:
+		Name: HEMissile
+		Ammo: 1
+		PipCount: 1
+		ReloadCount: 1
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 300
+	AttackTurreted:
+		FacingTolerance: 20
+	AutoTarget:
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,800
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,800
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	RenderSprites:
+	WithVoxelTurret:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 9c921
+	RenderDetectionCircle:
+	SpawnActorOnDeath:
+		Actor: BUZZARD.Husk
+		Probability: 100
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.buzzard_missiles
+		Prerequisites: upgrade.buzzard_missiles
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.buzzard_gattling
+		Prerequisites: upgrade.buzzard_gattling
+	HitShape:
+
+GRIFFIN:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Griffin
+	Buildable:
+		Queue: Air.Forg
+		BuildPaletteOrder: 400
+		Prerequisites: upgrade.griffin, ~!upgrade.buzzard
+		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
+	Selectable:
+		Bounds: 60,48,0,-10
+	Voiced:
+		VoiceSet: Grunt
+		Volume: 2
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 141
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 21c218
+		Type: GroundPosition
+	Armament@mg:
+		Weapon: GriffinMG
+		LocalOffset: 990,0,113
+	Armament@missiles:
+		Weapon: BuzzardMissiles
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		LocalOffset: 0,362,226, 0,-362,226
+		RequiresCondition: upgrade.griffin_missiles
+	Armament@autocannnon:
+		Weapon: GriffinAutocannon
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: apolra50alpha
+		LocalOffset: 1131,0,198
+		RequiresCondition: upgrade.griffin_autocannon
+	AttackHeli:
+		FacingTolerance: 20
+	AutoTarget:
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,800
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,800
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	RenderSprites:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 9c921
+	RenderDetectionCircle:
+	SpawnActorOnDeath:
+		Actor: GRIFFIN.Husk
+		Probability: 100
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.griffin_missiles
+		Prerequisites: upgrade.griffin_missiles
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.griffin_autocannon
+		Prerequisites: upgrade.griffin_autocannon
+	HitShape:
+
 FBOMBER:
-    Inherits: ^AttackPlane
-    Valued:
-        Cost: 2500
-    Tooltip:
-        Name: Crapjet
-    -Voiced:
-    -Selectable:
-    SelectionDecorations:
-        RenderSelectionBars: False
-    Aircraft:
-        CruiseAltitude: 8192
-        TurnSpeed: 3
-        Speed: 200
-    Health:
-        HP: 2000
-    RevealsShroud:
-        Range: 15c0
-        Type: GroundPosition
-    Armament:
-        Weapon: CrapjetBomb
-    AmmoPool:
-        Ammo: 10
-        PipCount: 10
-        ReloadCount: 5
-        ReloadDelay: 50
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-    AttackBomber:
-        FacingTolerance: 20
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-#    Contrail@1:
-#        Offset: -200,628,480
-#        TrailLength: 100
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@2:
-#        Offset: -200,-628,480
-#        TrailLength: 100
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-    SmokeTrailWhenDamaged@0:
-        Sprite: durasmoke
-        Palette: apolra50alpha
-        Offset: -200,628,480
-        Interval: 2
-        MinDamage: Undamaged
-    SmokeTrailWhenDamaged@1:
-        Sprite: durasmoke
-        Palette: apolra50alpha
-        Offset: -200,-628,480
-        Interval: 2
-        MinDamage: Undamaged
-#    Contrail@11:
-#        Offset: -200,1200,480
-#        TrailLength: 30
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@21:
-#        Offset: -200,-1200,480
-#        TrailLength: 30
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-    SpawnActorOnDeath:
-        Actor: FBOMBER.Husk
-        Probability: 100
-    RejectsOrders:
+	Inherits: ^AttackPlane
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Crapjet
+	-Voiced:
+	-Selectable:
+	SelectionDecorations:
+		RenderSelectionBars: False
+	Aircraft:
+		CruiseAltitude: 11c321
+		TurnSpeed: 3
+		Speed: 283
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 21c218
+		Type: GroundPosition
+	Armament:
+		Weapon: CrapjetBomb
+	AmmoPool:
+		Ammo: 10
+		PipCount: 10
+		ReloadCount: 5
+		ReloadDelay: 50
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AttackBomber:
+		FacingTolerance: 20
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	SmokeTrailWhenDamaged@0:
+		Sprite: durasmoke
+		Palette: apolra50alpha
+		Offset: -200,628,480
+		Interval: 2
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@1:
+		Sprite: durasmoke
+		Palette: apolra50alpha
+		Offset: -200,-628,480
+		Interval: 2
+		MinDamage: Undamaged
+	SpawnActorOnDeath:
+		Actor: FBOMBER.Husk
+		Probability: 100
+	RejectsOrders:
+	HitShape:
 
 STRIKER:
-    Inherits: ^AttackAdvancedPlane
-    Valued:
-        Cost: 1700
-    Tooltip:
-        Name: Striker
-#    Buildable:
-#        Queue: Air.Forg
-#        BuildPaletteOrder: 402
-#        Prerequisites: ~fahpad, fatrade, ~!t1, ~!t2
-#        Description: Advanced fighter with missile launchers and a machinegun.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
-    Selectable:
-        Bounds: 60,48,0,-10
-    Voiced:
-        VoiceSet: Grunt
-        Volume: 2
-    Aircraft:
-        TurnSpeed: 4
-        Speed: 230
-    Health:
-        HP: 911 # pun intended
-    RevealsShroud:
-        Range: 14c0
-        Type: GroundPosition
-    Armament:
-        AmmoPoolName: Missiles
-        Weapon: StrikerMissiles
-        LocalOffset: -512,512,128, -512,-512,128
-        MuzzleSequence: muzzle
-        MuzzlePalette: apolra50alpha
-    # Armament@secondary:
-        # AmmoPoolName: Bullets
-        # Weapon: StrikerCannon
-        # MuzzleSequence: muzzle
-        # MuzzleSplitFacings: 8
-        # MuzzlePalette: apolra50alpha
-        # LocalOffset: 1000,0,128
+	Inherits: ^AttackAdvancedPlane
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Striker
+	Selectable:
+		Bounds: 60,48,0,-10
+	Voiced:
+		VoiceSet: Grunt
+		Volume: 2
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 325
+	Health:
+		HP: 911
+	RevealsShroud:
+		Range: 19c818
+		Type: GroundPosition
+	Armament:
+		AmmoPoolName: Missiles
+		Weapon: StrikerMissiles
+		LocalOffset: -724,724,181, -724,-724,181
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
 	Turreted:
-        TurnSpeed: 360
+		TurnSpeed: 360
 	AttackTurreted:
-        FacingTolerance: 20
-    AmmoPool@1:
-        Name: Missiles
-        Ammo: 2
-        PipCount: 2
-        ReloadCount: 1
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 200
-    AmmoPool@2:
-        Name: Bullets
-        Ammo: 40
-        PipCount: 0
-        PipType: Ammo
-        PipTypeEmpty: AmmoEmpty
-        SelfReloads: True
-        SelfReloadDelay: 5
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-#    Contrail@1:
-#        Offset: -768,64,256
-#        TrailLength: 30
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@2:
-#        Offset: -768,-64,256
-#        TrailLength: 30
-#        TrailWidth: 30
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@11:
-#        Offset: -1024,700,400
-#        TrailLength: 15
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-#    Contrail@21:
-#        Offset: -1024,-700,400
-#        TrailLength: 15
-#        TrailWidth: 20
-#        Color: FFFFFF
-#        UsePlayerColor: False
-    WithMuzzleOverlay:
-    SpawnActorOnDeath:
-        Actor: STRIKER.Husk
-        Probability: 100        
+		FacingTolerance: 20
+	AmmoPool@1:
+		Name: Missiles
+		Ammo: 2
+		PipCount: 2
+		ReloadCount: 1
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 200
+	AmmoPool@2:
+		Name: Bullets
+		Ammo: 40
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 5
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: STRIKER.Husk
+		Probability: 100
+	HitShape:

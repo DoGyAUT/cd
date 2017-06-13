@@ -1,845 +1,757 @@
 upgrade.grunt:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Grenadier
-    Buildable:
-        BuildPaletteOrder: 400
-        Prerequisites: ~!upgrade.fiend
-        Description: Allows you to train Grenadier \n Disables Fiend
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: forg.warrior
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.grunt
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Grenadier
+	Buildable:
+		BuildPaletteOrder: 400
+		Prerequisites: ~!upgrade.fiend
+		Description: Allows you to train Grenadier \n Disables Fiend
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: forg.warrior
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.grunt
+
 upgrade.huntress:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Huntress
-#    Buildable:
-#        BuildPaletteOrder: 400
-#        Prerequisites: ~!upgrade.brigand
-#        Description: Allows you to train Huntress units
-#        Queue: Tech.Forg
-#        BuildLimit: 1
-#        BuildDuration: 1
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: forg.huntress
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.huntress
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Huntress
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: forg.huntress
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.huntress
 
 upgrade.brigand:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Brigand
-    # Buildable:
-        # BuildPaletteOrder: 401
-        # Prerequisites: ~!upgrade.huntress
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to train Brigand units (replaces Grunt). \n  Disables Scoundrel useage.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: forg.brigand
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.brigand
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Brigand
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: forg.brigand
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.brigand
+
 upgrade.fiend:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Fiend
-    Buildable:
-        BuildPaletteOrder: 402
-        Prerequisites: ~!upgrade.grunt
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Grenadier useage.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: forg.fiend
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.fiend
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Fiend
+	Buildable:
+		BuildPaletteOrder: 402
+		Prerequisites: ~!upgrade.grunt
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to train Fiend units (replaces Hellhound). \n  Disables Grenadier useage.
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: forg.fiend
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.fiend
 
 upgrade.mhijack:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Hijacker
-    # Buildable:
-        # BuildPaletteOrder: 403
-        # Prerequisites: ~faradr, ~!upgrade.fiend
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to train Hijacker units. \n  Disables Fiend useage.
-    Valued:
-        Cost: 500
-    RenderSprites:
-        Image: forg.mhijack
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.mhijack
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Hijacker
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: forg.mhijack
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.mhijack
 
 upgrade.goon:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Goon
-    Buildable:
-        BuildPaletteOrder: 404
-        Prerequisites: ~fatrade, ~!upgrade.ghost
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to train Goon units. \n  Disables Bounty Hunter useage.
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: forg.goon
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.goon
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Goon
+	Buildable:
+		BuildPaletteOrder: 404
+		Prerequisites: ~fatrade, ~!upgrade.ghost
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to train Goon units. \n  Disables Bounty Hunter useage.
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: forg.goon
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.goon
 
 upgrade.ghost:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Bounty Hunter
-    Buildable:
-        BuildPaletteOrder: 404
-        Prerequisites: ~fatrade, ~!upgrade.goon
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to train Bounty Hunter units. \n  Disables Goon useage.
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: forg.ghost
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.ghost
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Bounty Hunter
+	Buildable:
+		BuildPaletteOrder: 404
+		Prerequisites: ~fatrade, ~!upgrade.goon
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to train Bounty Hunter units. \n  Disables Goon useage.
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: forg.ghost
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.ghost
 
 upgrade.fbuggy:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Assault Buggy chassis
-    Buildable:
-        BuildPaletteOrder: 405
-        Prerequisites: ~!upgrade.ftruck, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Unlocks Assault Buggy chassis. Disables Truck usage. \n\n + Very Fast speed \n + Very Cheap \n - Low HP \n - Low Damage \n\n Possible weapon classes: \n\n Small T1
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.fbuggy
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.fbuggy
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Assault Buggy chassis
+	Buildable:
+		BuildPaletteOrder: 405
+		Prerequisites: ~!upgrade.ftruck, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Unlocks Assault Buggy chassis. Disables Truck usage. \n\n + Very Fast speed \n + Very Cheap \n - Low HP \n - Low Damage \n\n Possible weapon classes: \n\n Small T1
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.fbuggy
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.fbuggy
+
 upgrade.fbuggy_mg:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Buggy (Flamer)
-    Buildable:
-        BuildPaletteOrder: 406
-        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount a flamer on Assault Buggy units. A great unit for harassment. \n\n Weapon Class: Small T1 \n Role: Harassment \n Unit Cost: 500
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.fbuggy_mg
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.fbuggy_mg
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Buggy (Flamer)
+	Buildable:
+		BuildPaletteOrder: 406
+		Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mis, ~!upgrade.fbuggy_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Mount a flamer on Assault Buggy units. A great unit for harassment. \n\n Weapon Class: Small T1 \n Role: Harassment \n Unit Cost: 500
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.fbuggy_mg
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.fbuggy_mg
 
 upgrade.fbuggy_mis:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Buggy (Rockets)
-    Buildable:
-        BuildPaletteOrder: 407
-        Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount a multi purpose missile turret on Assault Buggy units. The missiles can attack air and ground, makeing it a nice allrounder. \n Role: Support \n Unit Cost: 500
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.fbuggy_mis
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.fbuggy_mis
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Buggy (Rockets)
+	Buildable:
+		BuildPaletteOrder: 407
+		Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Mount a multi purpose missile turret on Assault Buggy units. The missiles can attack air and ground, makeing it a nice allrounder. \n Role: Support \n Unit Cost: 500
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.fbuggy_mis
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.fbuggy_mis
 
 upgrade.fbuggy_mortar:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Buggy (Mortar)
-    # Buildable:
-        # BuildPaletteOrder: 408
-        # Prerequisites: ~upgrade.fbuggy, ~!upgrade.fbuggy_mg, ~!upgrade.fbuggy_mis
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Mount a high rate of fire mortar on Assault Buggy units. \n\n Weapon Class: Small T1
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.fbuggy_mortar
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.fbuggy_mortar
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Buggy (Mortar)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.fbuggy_mortar
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.fbuggy_mortar
 
 upgrade.ftruck:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Assault Truck chassis
-    Buildable:
-        BuildPaletteOrder: 410
-        Prerequisites: ~!upgrade.fbuggy, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar, ~!upgrade.ftruck_flamer
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Assault Truck chassis. Disables Buggy usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.ftruck
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.ftruck
+	Inherits: ^Tech
+	Tooltip:
+		Name: Assault Truck chassis
+	Buildable:
+		BuildPaletteOrder: 410
+		Prerequisites: ~!upgrade.fbuggy, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar, ~!upgrade.ftruck_flamer
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Assault Truck chassis. Disables Buggy usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.ftruck
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.ftruck
 
 upgrade.ftruck_flamer:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Truck (MG)
-    Buildable:
-        BuildPaletteOrder: 409
-        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount a machinegun on Assault Truck units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.ftruck_flamer
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.ftruck_flamer
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Truck (MG)
+	Buildable:
+		BuildPaletteOrder: 409
+		Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flak, ~!upgrade.ftruck_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Mount a machinegun on Assault Truck units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.ftruck_flamer
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.ftruck_flamer
 
 upgrade.ftruck_flak:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Truck (Flak)
-    Buildable:
-        BuildPaletteOrder: 410
-        Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Mount an AA only flak cannon on Assault Truck units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.ftruck_flak
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.ftruck_flak
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Truck (Flak)
+	Buildable:
+		BuildPaletteOrder: 410
+		Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Mount an AA only flak cannon on Assault Truck units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.ftruck_flak
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.ftruck_flak
 
 upgrade.ftruck_mortar:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Assault Truck (Mortar)
-    # Buildable:
-        # BuildPaletteOrder: 411
-        # Prerequisites: ~upgrade.ftruck, ~!upgrade.ftruck_flamer, ~!upgrade.ftruck_flak
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Mount a high rate of fire mortar on Assault Truck units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.ftruck_mortar
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.ftruck_mortar
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Assault Truck (Mortar)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.ftruck_mortar
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.ftruck_mortar
 
 upgrade.gremlin:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Gremlin chassis
-    Buildable:
-        BuildPaletteOrder: 412
-        Prerequisites: ~!upgrade.lizard, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Gremlin chassis. Disables lizard usage
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.gremlin
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.gremlin
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Gremlin chassis
+	Buildable:
+		BuildPaletteOrder: 412
+		Prerequisites: ~!upgrade.lizard, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Gremlin chassis. Disables lizard usage
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.gremlin
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.gremlin
+
 upgrade.gremlin_mortar:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Gremlin (Howitzer)
-    # Buildable:
-        # BuildPaletteOrder: 413
-        # Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_90mm
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Gremlin units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.gremlin_mortar
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.gremlin_mortar
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Gremlin (Howitzer)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.gremlin_mortar
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.gremlin_mortar
+
 upgrade.gremlin_hcan:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Gremlin (HE-Cannon)
-    Buildable:
-        BuildPaletteOrder: 414
-        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Gremlin units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.gremlin_hcan
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.gremlin_hcan
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Gremlin (HE-Cannon)
+	Buildable:
+		BuildPaletteOrder: 414
+		Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_90mm, ~!upgrade.gremlin_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Gremlin units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.gremlin_hcan
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.gremlin_hcan
 
 upgrade.gremlin_90mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Gremlin (90mm + MG)
-    Buildable:
-        BuildPaletteOrder: 415
-        Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Gremlin units
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.gremlin_90mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.gremlin_90mm
- 
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Gremlin (90mm + MG)
+	Buildable:
+		BuildPaletteOrder: 415
+		Prerequisites: ~upgrade.gremlin, ~!upgrade.gremlin_hcan, ~!upgrade.gremlin_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Gremlin units
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.gremlin_90mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.gremlin_90mm
+
 upgrade.taurus:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Taurus chassis
-    Buildable:
-        BuildPaletteOrder: 416
-        Prerequisites: ~faradr, ~!upgrade.digger, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Taurus chassis. Disables Lizard and Digger usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.taurus
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.taurus
+	Inherits: ^Tech
+	Tooltip:
+		Name: Taurus chassis
+	Buildable:
+		BuildPaletteOrder: 416
+		Prerequisites: ~faradr, ~!upgrade.digger, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Taurus chassis. Disables Lizard and Digger usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.taurus
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.taurus
 
 upgrade.taurus_mg:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Taurus (Autocannon)
-    Buildable:
-        BuildPaletteOrder: 417
-        Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mis
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Taurus units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.taurus_mg
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.taurus_mg
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Taurus (Autocannon)
+	Buildable:
+		BuildPaletteOrder: 417
+		Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_hcan, ~!upgrade.taurus_mis
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Taurus units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.taurus_mg
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.taurus_mg
+
 upgrade.taurus_hcan:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Taurus (HE-Cannon)
-    # Buildable:
-        # BuildPaletteOrder: 418
-        # Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_mis
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Taurus units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.taurus_hcan
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.taurus_hcan
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Taurus (HE-Cannon)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.taurus_hcan
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.taurus_hcan
 
 upgrade.taurus_mis:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Taurus (Missile)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_hcan
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Taurus units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.taurus_mis
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.taurus_mis
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Taurus (Missile)
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~upgrade.taurus, ~!upgrade.taurus_mg, ~!upgrade.taurus_hcan
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Taurus units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.taurus_mis
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.taurus_mis
+
 upgrade.lizard:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Lizard chassis
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~!upgrade.gremlin, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm, ~!upgrade.lizard_mg
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Bison chassis. Disables Taurus and Digger usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.lizard
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.lizard
+	Inherits: ^Tech
+	Tooltip:
+		Name: Lizard chassis
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~!upgrade.gremlin, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm, ~!upgrade.lizard_mg
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Bison chassis. Disables Taurus and Digger usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.lizard
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.lizard
 
 upgrade.lizard_mg:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Lizard (Autocannon)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites:  ~upgrade.lizard, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Lizard units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.lizard_mg
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.lizard_mg
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Lizard (Autocannon)
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_90mm, ~!upgrade.lizard_122mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Lizard units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.lizard_mg
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.lizard_mg
 
 upgrade.lizard_90mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Lizard (90mm)
-    # Buildable:
-        # BuildPaletteOrder: 419
-        # Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_122mm
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Lizard units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.lizard_90mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.lizard_90mm
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Lizard (90mm)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.lizard_90mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.lizard_90mm
 
 upgrade.lizard_122mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Lizard (122mm)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites:  ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_90mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Lizard units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.lizard_122mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.lizard_122mm
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Lizard (122mm)
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~upgrade.lizard, ~!upgrade.lizard_mg, ~!upgrade.lizard_90mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Lizard units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.lizard_122mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.lizard_122mm
+
 upgrade.digger:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Digger chassis
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~faradr, ~!upgrade.taurus, ~!upgrade.digger_122mm, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Bison chassis. Disables Taurus
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.digger
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.digger
+	Inherits: ^Tech
+	Tooltip:
+		Name: Digger chassis
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~faradr, ~!upgrade.taurus, ~!upgrade.digger_122mm, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Bison chassis. Disables Taurus
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.digger
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.digger
 
 upgrade.digger_mis:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Digger (Missile)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mortar, ~!upgrade.digger_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Digger units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.digger_mis
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.digger_mis
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Digger (Missile)
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~upgrade.digger, ~!upgrade.digger_mortar, ~!upgrade.digger_122mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Digger units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.digger_mis
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.digger_mis
 
 upgrade.digger_mortar:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Digger (Howitzer)
-    Buildable:
-        BuildPaletteOrder: 419
-        Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Digger units.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.digger_mortar
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.digger_mortar
-
-# upgrade.digger_122mm:
-    # Inherits: ^Tech
-    # Tooltip:
-        # Name: Choose Digger (122mm)
-    # Buildable:
-        # BuildPaletteOrder: 419
-        # Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_mortar
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Digger units.
-    # Valued:
-        # Cost: 250
-    # RenderSprites:
-        # Image: forg.digger_122mm
-    # ProvidesPrerequisite:
-        # Prerequisite: upgrade.digger_122mm
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Digger (Howitzer)
+	Buildable:
+		BuildPaletteOrder: 419
+		Prerequisites: ~upgrade.digger, ~!upgrade.digger_mis, ~!upgrade.digger_122mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Digger units.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.digger_mortar
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.digger_mortar
 
 upgrade.bison:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Bison chassis
-    Buildable:
-        BuildPaletteOrder: 420
-        Prerequisites:   ~fatrade, ~!upgrade.auroch, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Bison chassis. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.bison
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.bison
+	Inherits: ^Tech
+	Tooltip:
+		Name: Bison chassis
+	Buildable:
+		BuildPaletteOrder: 420
+		Prerequisites: ~fatrade, ~!upgrade.auroch, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Bison chassis. Disables Auroch usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.bison
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.bison
 
 upgrade.bison_130mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Bison (130mm + MG)
-    # Buildable:
-        # BuildPaletteOrder: 421
-        # Prerequisites: ~upgrade.bison, ~!upgrade.bison_145mm, ~!upgrade.bison_180mm
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.bison_130mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.bison_130mm
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Bison (130mm + MG)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.bison_130mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.bison_130mm
 
 upgrade.bison_145mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Bison (145mm + Grenade Launcher + MG)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.bison_145mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.bison_145mm
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Bison (145mm + Grenade Launcher + MG)
+	Buildable:
+		BuildPaletteOrder: 421
+		Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_180mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Bison units. Disables Auroch usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.bison_145mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.bison_145mm
 
 upgrade.bison_180mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Bison (180mm)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.bison_180mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.bison_180mm
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Bison (180mm)
+	Buildable:
+		BuildPaletteOrder: 421
+		Prerequisites: ~upgrade.bison, ~!upgrade.bison_130mm, ~!upgrade.bison_145mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Bison units. Disables Auroch usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.bison_180mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.bison_180mm
+
 upgrade.auroch:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Auroch chassis
-    Buildable:
-        BuildPaletteOrder: 422
-        Prerequisites:   ~fatrade, ~!upgrade.bison, ~!upgrade.auroch_120mmt , ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to use the Bison chassis. Disables Bison usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.auroch
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.auroch
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Auroch chassis
+	Buildable:
+		BuildPaletteOrder: 422
+		Prerequisites: ~fatrade, ~!upgrade.bison, ~!upgrade.auroch_120mmt , ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to use the Bison chassis. Disables Bison usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.auroch
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.auroch
+
 upgrade.auroch_130mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Auroch (130mm + Rocket)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites: ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.auroch_130mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.auroch_130mm
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Auroch (130mm + Rocket)
+	Buildable:
+		BuildPaletteOrder: 421
+		Prerequisites: ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_180mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Bison units. Disables Auroch usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.auroch_130mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.auroch_130mm
+
 upgrade.auroch_120mmt:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Auroch (120mm Twin Cannon)
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.auroch_120mmt
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.auroch_120mmt
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Auroch (120mm Twin Cannon)
+	Buildable:
+		BuildPaletteOrder: 421
+		Prerequisites: ~upgrade.auroch, ~!upgrade.auroch_130mm, ~!upgrade.auroch_180mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Allows you to produce Bison units. Disables Auroch usage.
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.auroch_120mmt
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.auroch_120mmt
+
 upgrade.auroch_180mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Choose Auroch (180mm)
-    # Buildable:
-        # BuildPaletteOrder: 421
-        # Prerequisites:  ~upgrade.auroch, ~!upgrade.auroch_120mmt, ~!upgrade.auroch_130mm
-        # Queue: Tech.Forg
-        # BuildLimit: 1
-        # BuildDuration: 1
-        # Description: Allows you to produce Bison units. Disables Auroch usage.
-    Valued:
-        Cost: 250
-    RenderSprites:
-        Image: forg.auroch_180mm
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.auroch_180mm
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Choose Auroch (180mm)
+	Valued:
+		Cost: 250
+	RenderSprites:
+		Image: forg.auroch_180mm
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.auroch_180mm
+
 upgrade.buzzard:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Light Attack Chopper "Buzzard"
-    Buildable:
-        BuildPaletteOrder: 421
-        Prerequisites: ~fahpad, !upgrade.griffin, ~!upgrade.buzzard_gattling, ~!upgrade.buzzard_missiles
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Unlocks Buzzard Chopper, disables Griffin usage
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: buzzard
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.buzzard
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Light Attack Chopper "Buzzard"
+	Buildable:
+		BuildPaletteOrder: 421
+		Prerequisites: ~fahpad, !upgrade.griffin, ~!upgrade.buzzard_gattling, ~!upgrade.buzzard_missiles
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Unlocks Buzzard Chopper, disables Griffin usage
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: buzzard
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.buzzard
+
 upgrade.buzzard_missiles:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Buzzard HE Rocket Upgrade
-    Buildable:
-        BuildPaletteOrder: 422
-        Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds HE missile to Buzzard attack helicopter
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: buzzard
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.buzzard_missiles
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Buzzard HE Rocket Upgrade
+	Buildable:
+		BuildPaletteOrder: 422
+		Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Adds HE missile to Buzzard attack helicopter
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: buzzard
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.buzzard_missiles
+
 upgrade.buzzard_gattling:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Buzzard Adv. Gattling Upgrade
-    Buildable:
-        BuildPaletteOrder: 423
-        Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Doubles the amount of bullets it shoots and decreases time by half.
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: buzzard
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.buzzard_gattling
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Buzzard Adv. Gattling Upgrade
+	Buildable:
+		BuildPaletteOrder: 423
+		Prerequisites: ~!upgrade.buzzard_missiles, ~upgrade.buzzard, ~!upgrade.buzzard_gattling
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Doubles the amount of bullets it shoots and decreases time by half.
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: buzzard
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.buzzard_gattling
+
 upgrade.griffin:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Heavy Attack Chopper "Griffin"
-    Buildable:
-        BuildPaletteOrder: 424
-        Prerequisites: ~fahpad, ~!upgrade.buzzard, ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Unlocks Griffin Chopper, disables Buzzard usage
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: griffin
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.griffin
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Heavy Attack Chopper "Griffin"
+	Buildable:
+		BuildPaletteOrder: 424
+		Prerequisites: ~fahpad, ~!upgrade.buzzard, ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Unlocks Griffin Chopper, disables Buzzard usage
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: griffin
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.griffin
+
 upgrade.griffin_missiles:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Griffin Missiles Upgrade
-    Buildable:
-        BuildPaletteOrder: 425
-        Prerequisites:  ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds missiles to Griffin attack helicopter
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: griffin
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.griffin_missiles
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Griffin Missiles Upgrade
+	Buildable:
+		BuildPaletteOrder: 425
+		Prerequisites: ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Adds missiles to Griffin attack helicopter
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: griffin
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.griffin_missiles
+
 upgrade.griffin_autocannon:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Griffin Autocannon Upgrade
-    Buildable:
-        BuildPaletteOrder: 426
-        Prerequisites: ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds Autocannon to Griffin attack helicopter
-    Valued:
-        Cost: 750
-    RenderSprites:
-        Image: griffin
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.griffin_autocannon
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Griffin Autocannon Upgrade
+	Buildable:
+		BuildPaletteOrder: 426
+		Prerequisites: ~!upgrade.griffin_missiles, ~!upgrade.griffin_autocannon, ~upgrade.griffin
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Adds Autocannon to Griffin attack helicopter
+	Valued:
+		Cost: 750
+	RenderSprites:
+		Image: griffin
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.griffin_autocannon
+
 upgrade.harvester_122mm:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Harvester Combat Upgrade
-    Buildable:
-        BuildPaletteOrder: 427
-        Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, ~!upgrade.harvester_tanky, !upgrade.harvester_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds 122mm gun to harvester
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: fharv
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.harvester_122mm
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Harvester Combat Upgrade
+	Buildable:
+		BuildPaletteOrder: 427
+		Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, ~!upgrade.harvester_tanky, !upgrade.harvester_122mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Adds 122mm gun to harvester
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: fharv
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.harvester_122mm
+
 upgrade.harvester_tanky:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Harvester Armor Plating
-    Buildable:
-        BuildPaletteOrder: 428
-        Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, !upgrade.harvester_tanky, ~!upgrade.harvester_122mm
-        Queue: Tech.Forg
-        BuildLimit: 1
-        BuildDuration: 1
-        Description: Adds more durability to harvester
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: fharv
-    ProvidesPrerequisite:
-        Prerequisite: upgrade.harvester_tanky
+	Inherits: ^Tech
+	Tooltip:
+		Name: Harvester Armor Plating
+	Buildable:
+		BuildPaletteOrder: 428
+		Prerequisites: ~fatrade , ~!upgrade.harvester_selfheal, !upgrade.harvester_tanky, ~!upgrade.harvester_122mm
+		Queue: Tech.Forg
+		BuildLimit: 1
+		BuildDuration: 1
+		Description: Adds more durability to harvester
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: fharv
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.harvester_tanky

@@ -1,401 +1,396 @@
 SMCV:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Inherits@3: ^HealsOnTiberium
-    Inherits@4: ^CorruptorHeal
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 500
-        Prerequisites: ~saportal
-        Description: The heart of any base.\nProvides a build radius for structures.\n\nRole : MCV\nHP: 1000\nArmor: Heavy\nSpeed: 85\nViewrange: 6
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Scrin Mobile Construction Vehicle
-    Selectable:
-        Priority: 3
-        Bounds: 42,42
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Health:
-        HP: 2000
-    Mobile:
-        Speed: 35
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Water: 100
-            Green: 100
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    RevealsShroud:
-        Range: 6c0
-    MustBeDestroyed:
-        RequiredForShortGame: True
-    BaseBuilding:
-    Transforms:
-        IntoActor: sacnst
-        Offset: -1,-1
-        Facing: 96
-        TransformSounds: place2.aud
-        NoTransformSounds:
-        Voice: Move
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    ActorLostNotification:
-        Notification: CriticalUnitLost
-    -ThrowsShrapnel@human:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Inherits@3: ^HealsOnTiberium
+	Inherits@4: ^CorruptorHeal
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 500
+		Prerequisites: ~saportal
+		Description: The heart of any base.\nProvides a build radius for structures.\n\nRole : MCV\nHP: 1000\nArmor: Heavy\nSpeed: 85\nViewrange: 6
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Scrin Mobile Construction Vehicle
+	Selectable:
+		Priority: 3
+		Bounds: 42,42
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 49
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Green: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	RevealsShroud:
+		Range: 8c497
+	MustBeDestroyed:
+		RequiredForShortGame: True
+	BaseBuilding:
+	Transforms:
+		IntoActor: sacnst
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	-ThrowsShrapnel@human:
+	HitShape:
 
 SHARV:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Inherits@3: ^CorruptorHeal
-    Inherits@4: ^HealsOnTiberium
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Scrin Harvester
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 501
-        Prerequisites: ~saportal
-        Description: Collects Ichor for processing.\nFast hovering harvester with small storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 55\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Ichor Storage (14 Capacity)\n - Immune to Veins\n - Hovers
-    Selectable:
-        Priority: 7
-        Bounds: 36,36
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Harvester:
-        DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
-        Capacity: 14
-        Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-        BaleLoadDelay: 12
-        BaleUnloadDelay: 6
-        SearchFromProcRadius: 36
-        SearchFromOrderRadius: 18
-        HarvestVoice: Action
-        DeliverVoice: Move
-        PipCount: 7
-    Mobile:
-        Speed: 50
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Water: 100
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    Health:
-        HP: 1200
-#    SelfHealing:
-#        Step: 0
-#        PercentageStep: 1
-#        Delay: 10
-#        HealIfBelow: 100
-#        DamageCooldown: 200
-    RevealsShroud:
-        Range: 6c0
-    -ProducibleWithLevel:
-    RenderSprites:
-    RenderVoxels:
-    -WithVoxelBody:
-    WithVoxelUnloadBody:
-    Explodes:
-        Weapon: LargeTiberiumExplosion
-        EmptyWeapon: SmallTiberiumExplosion
-    WithHarvestOverlay:
-        Offset: 384,0,0
-        Palette: effect
-    -ThrowsShrapnel@human:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Inherits@3: ^CorruptorHeal
+	Inherits@4: ^HealsOnTiberium
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Scrin Harvester
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 501
+		Prerequisites: ~saportal
+		Description: Collects Ichor for processing.\nFast hovering harvester with small storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 55\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Ichor Storage (14 Capacity)\n - Immune to Veins\n - Hovers
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Harvester:
+		DeliveryBuildings: gproc, niproc, ntproc, npproc, kproc, fproc
+		Capacity: 14
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 12
+		BaleUnloadDelay: 6
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Action
+		DeliverVoice: Move
+		PipCount: 7
+	Mobile:
+		Speed: 71
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 8c497
+	-ProducibleWithLevel:
+	RenderSprites:
+	RenderVoxels:
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: LargeTiberiumExplosion
+		EmptyWeapon: SmallTiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	-ThrowsShrapnel@human:
+	HitShape:
 
 CHIMERA:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Inherits@3: ^CorruptorHeal
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Chimera
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 503
-        Prerequisites: ~saportal
-        Description: Hovering tank, armed with an armor piercing shard beam.\n\n  Role: Tank\n  HP: 800\n  Armor: Medium\n  Speed: 80\n  Viewrange: 10\n\n Good vs Armor\n\n Special:\n\n - Hovers\n - Can deal line damage \n - Crushes infantry 
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Mobile:
-        Speed: 80
-        TurnSpeed: 5
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Bridge: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Green: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    -DamagedByTerrain@Veins:
-    Health:
-        HP: 600
-    RevealsShroud:
-        Range: 8c0
-    Armament@primary:
-        Weapon: ChimeraZap
-        LocalOffset: 740,0,960
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    Turreted:
-        TurnSpeed: 4
-        Offset: -256,0,0
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 5c0
-   
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Inherits@3: ^CorruptorHeal
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Chimera
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 503
+		Prerequisites: ~saportal
+		Description: Hovering tank, armed with an armor piercing shard beam.\n\n  Role: Tank\n  HP: 800\n  Armor: Medium\n  Speed: 80\n  Viewrange: 10\n\n Good vs Armor\n\n Special:\n\n - Hovers\n - Can deal line damage \n - Crushes infantry
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Mobile:
+		Speed: 113
+		TurnSpeed: 5
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
+			Water: 80
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	-DamagedByTerrain@Veins:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 11c321
+	Armament@primary:
+		Weapon: ChimeraZap
+		LocalOffset: 1047,0,1358
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 200
+		RecoilRecovery: 10
+	Turreted:
+		TurnSpeed: 4
+		Offset: -362,0,0
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 7c73
+	HitShape:
+
 MANTIS:
-    Inherits@1: ^VoxelVehicle
-    Inherits@2: ^HoverVehicle
-    Inherits@3: ^CorruptorHeal
-    Valued:
-        Cost: 1800
-    Tooltip:
-        Name: Mantis
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 504
-        Prerequisites: ~saportal, sanode
-        Description: Hovering tank, armed with an armor piercing shard beam.\n\n  Role: Tank\n  HP: 800\n  Armor: Medium\n  Speed: 80\n  Viewrange: 10\n\n Good vs Armor\n\n Special:\n\n - Hovers\n - Can deal line damage \n - Crushes infantry 
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Mobile:
-        Speed: 70
-        TurnSpeed: 3
-        TerrainSpeeds:
-            Clear: 100
-            Road: 100
-            Bridge: 100
-            Rail: 100
-            DirtRoad: 100
-            Rough: 100
-            Green: 100
-            Water: 80
-            Tiberium: 100
-            BlueTiberium: 100
-            RedTiberium: 100
-            PurpleTiberium: 100
-            Veins: 100
-    -DamagedByTerrain@Veins:
-    Health:
-        HP: 1800
-    RevealsShroud:
-        Range: 9c0
-    Armament@primary:
-        Weapon: MantisShockerDisc
-        LocalOffset: 860,0,1180
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 200
-        RecoilRecovery: 10
-    Armament@secondary:
-        Weapon: MantisZap
-        LocalOffset: 300,128,1300, 300,-128,1300
-        MuzzleSequence: muzzle
-        MuzzlePalette: effect50alpha
-        Recoil: 0
-        RecoilRecovery: 0
-    Turreted:
-        TurnSpeed: 2
-        Offset: -300,0,0
-    AttackTurreted:
-    AutoTarget:
-    RenderSprites:
-    RenderVoxels:
-    WithVoxelBody:
-    WithVoxelTurret:
-        Recoils: False
-    WithVoxelBarrel:
-    WithMuzzleOverlay:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
+	Inherits@3: ^CorruptorHeal
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Mantis
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 504
+		Prerequisites: ~saportal, sanode
+		Description: Hovering tank, armed with an armor piercing shard beam.\n\n  Role: Tank\n  HP: 800\n  Armor: Medium\n  Speed: 80\n  Viewrange: 10\n\n Good vs Armor\n\n Special:\n\n - Hovers\n - Can deal line damage \n - Crushes infantry
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Mobile:
+		Speed: 99
+		TurnSpeed: 3
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
+			Water: 80
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
+	-DamagedByTerrain@Veins:
+	Health:
+		HP: 1800
+	RevealsShroud:
+		Range: 12c745
+	Armament@primary:
+		Weapon: MantisShockerDisc
+		LocalOffset: 1216,0,1669
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 200
+		RecoilRecovery: 10
+	Armament@secondary:
+		Weapon: MantisZap
+		LocalOffset: 424,181,1838, 424,-181,1838
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		Recoil: 0
+		RecoilRecovery: 0
+	Turreted:
+		TurnSpeed: 2
+		Offset: -424,0,0
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: False
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+	HitShape:
 
 CORRUPTOR:
-    Inherits@1: ^Tank
-    Inherits@2: ^HeavyVehicle
-    Inherits@3: ^HealsOnTiberium
-    Inherits@4: ^CorruptorHeal
-    Valued:
-        Cost: 1800
-    Tooltip:
-        Name: Corruptor
-    Selectable:
-        Bounds: 42,42, 0, -5
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 505
-        Prerequisites: ~saportal, saseed
-        Description: Scrin's advanced utility walker.\n\n  Role: Heavy Support\n  HP: 1800\n  Armor: Heavy\n  Speed: 50\n  Viewrange: 8\n\n Good vs Infantry, Cyborgs, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor\n\n - Can heal friendly Scrin units\n - Can transform enemy non Scrin lifeforms into Visceroids   - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush Medium Tanks
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Mobile:
-        TurnSpeed: 3
-        Speed: 55
-    Health:
-        HP: 2340
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 100
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 8
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: CorruptorBlast
-        LocalOffset: 1024,0,256
-        MuzzlePalette: effect50alpha
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    WithDeathAnimation:
-        DeathTypes:
-            BulletDeath: 1
-            SmallExplosionDeath: 1
-            ExplosionDeath: 1
-            FireDeath: 1
-            EnergyDeath: 1
-    RenderSprites:
-    -ThrowsShrapnel@human:
+	Inherits@1: ^Tank
+	Inherits@2: ^HeavyVehicle
+	Inherits@3: ^HealsOnTiberium
+	Inherits@4: ^CorruptorHeal
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Corruptor
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 505
+		Prerequisites: ~saportal, saseed
+		Description: Scrin's advanced utility walker.\n\n  Role: Heavy Support\n  HP: 1800\n  Armor: Heavy\n  Speed: 50\n  Viewrange: 8\n\n Good vs Infantry, Cyborgs, Buildings\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor\n\n - Can heal friendly Scrin units\n - Can transform enemy non Scrin lifeforms into Visceroids   - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush Medium Tanks
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Mobile:
+		TurnSpeed: 3
+		Speed: 78
+	Health:
+		HP: 2340
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 11c321
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: CorruptorBlast
+		LocalOffset: 1448,0,362
+		MuzzlePalette: effect50alpha
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	WithDeathAnimation:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			EnergyDeath: 1
+	RenderSprites:
+	-ThrowsShrapnel@human:
+	HitShape:
 
 ANHLTRPD:
-    Inherits@1: ^Tank
-    Inherits@2: ^HeavyVehicle
-    Inherits@3: ^HealsOnTiberium
-    Inherits@4: ^CorruptorHeal
-    Valued:
-        Cost: 2200
-    Tooltip:
-        Name: Annihilator Tripod
-    Selectable:
-        Bounds: 42,82, 0, -20
-    Buildable:
-        Queue: Vehicle.Scrin
-        BuildPaletteOrder: 506
-        Prerequisites: ~saportal, saseed
-        Description: Scrin's advanced combat walker.\n\n  Role: Heavy Tank\n  HP: 2200\n  Armor: Heavy\n  Speed: 65\n  Viewrange: 10\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor\n - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush Medium Tanks
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Mobile:
-        TurnSpeed: 8
-        Speed: 55
-    Health:
-        HP: 2900
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 100
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 8c0
-    BodyOrientation:
-        QuantizedFacings: 8
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: TripodLaser
-        LocalOffset: 225,0,3500, 700,200,2600, 700,-200,2600
-        MuzzlePalette: effect50alpha
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    RenderSprites:
-    WithMuzzleOverlay:
-    SoundOnDamageTransition:
-        DamagedSounds: tripod_d1, tripod_d2 tripod_d3 tripod_d4
-    -ThrowsShrapnel@human:
-    
+	Inherits@1: ^Tank
+	Inherits@2: ^HeavyVehicle
+	Inherits@3: ^HealsOnTiberium
+	Inherits@4: ^CorruptorHeal
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: Annihilator Tripod
+	Selectable:
+		Bounds: 42,82, 0, -20
+	Buildable:
+		Queue: Vehicle.Scrin
+		BuildPaletteOrder: 506
+		Prerequisites: ~saportal, saseed
+		Description: Scrin's advanced combat walker.\n\n  Role: Heavy Tank\n  HP: 2200\n  Armor: Heavy\n  Speed: 65\n  Viewrange: 10\n\n Good vs Infantry, Cyborgs, Vehicles\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor\n - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush Medium Tanks
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Mobile:
+		TurnSpeed: 8
+		Speed: 78
+	Health:
+		HP: 2900
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 11c321
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: TripodLaser
+		LocalOffset: 318,0,4950, 990,283,3677, 990,-283,3677
+		MuzzlePalette: effect50alpha
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RenderSprites:
+	WithMuzzleOverlay:
+	SoundOnDamageTransition:
+		DamagedSounds: tripod_d1, tripod_d2 tripod_d3 tripod_d4
+	-ThrowsShrapnel@human:
+	HitShape:
+
 HEXAPOD:
-    Inherits@1: ^Tank
-    Inherits@2: ^SuperHeavyVehicle
-    Inherits@3: ^HealsOnTiberium
-    Inherits@4: ^CorruptorHeal
-    Valued:
-        Cost: 6000
-    Tooltip:
-        Name: Eradicator Hexapod
-        Bounds: 75,75, 0, -20
-#    Buildable:
-#        Queue: Vehicle.Scrin
-#        BuildPaletteOrder: 506
-#        Prerequisites: ~saportal, saseed
-#		BuildLimit: 1
-#        Description: A Hexapod. Scrin's epic combat walker.\n\n  Role: Epic Tank\n  HP: 6000\n  Armor: Heavy\n  Speed: 90\n  Viewrange: 10\n\n Good vs Any Ground units\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor\n - Can crush Infantry\n - Can crush Light Vehicles\n - Can crush heavy tanks
-    Selectable:
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Mobile:
-        TurnSpeed: 4
-        Speed: 80
-    Health:
-        HP: 7800
-    SelfHealing:
-        Step: 1
-        PercentageStep: 0
-        Delay: 1
-        HealIfBelow: 100
-        DamageCooldown: 200
-    RevealsShroud:
-        Range: 10c0
-    BodyOrientation:
-        QuantizedFacings: 8
-    AttackFrontal:
-    AutoTarget:
-    Armament@primary:
-        Weapon: HexapodShockerDisc
-        LocalOffset: 750,0,1200
-        MuzzlePalette: effect50alpha
-    WithInfantryBody:
-        DefaultAttackSequence: shoot
-    RenderSprites:
-    SoundOnDamageTransition:
-        DamagedSounds: tripod_d1, tripod_d2 tripod_d3 tripod_d4
-    -ThrowsShrapnel@human:
+	Inherits@1: ^Tank
+	Inherits@2: ^SuperHeavyVehicle
+	Inherits@3: ^HealsOnTiberium
+	Inherits@4: ^CorruptorHeal
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: Eradicator Hexapod
+		Bounds: 75,75, 0, -20
+	Selectable:
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Mobile:
+		TurnSpeed: 4
+		Speed: 113
+	Health:
+		HP: 7800
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 14c146
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: HexapodShockerDisc
+		LocalOffset: 1061,0,1697
+		MuzzlePalette: effect50alpha
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RenderSprites:
+	SoundOnDamageTransition:
+		DamagedSounds: tripod_d1, tripod_d2 tripod_d3 tripod_d4
+	-ThrowsShrapnel@human:
+	HitShape:

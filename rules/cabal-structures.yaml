@@ -1,451 +1,447 @@
 KACNST:
-    Inherits: ^Building
-    Building:
-        Footprint: xxx xxx xxx
-        BuildSounds: facbld1.aud
-        Dimensions: 3,3
-    Buildable:
-        Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
-        BuildPaletteOrder: 300
-        Prerequisites: ~disabled
-        Adjacent: 8
-        Description: Builds base structures.\n\nSpecial:\n- Provides minimap radar.
-    Health:
-        HP: 5200
-    RevealsShroud:
-        Range: 10c0
-    Production:
-        Produces: Building.Cabal,Defense.Cabal
-    ProductionQueue@Building:
-        Type: Building.Cabal
-        Group: Building
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    ProductionQueue@Defense:
-        Type: Defense.Cabal
-        Group: Defense
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-        QueuedAudio: Building
-        ReadyAudio: ConstructionComplete
-    Valued:
-        Cost: 3000
-    Tooltip:
-        Name: Cabal Construction Yard
-    BaseBuilding:
-    Transforms:
-        IntoActor: kmcv
-        Offset: 1,1
-        Facing: 96
-        DeployCursor: undeploy
-    ProvidesRadar:
-    ProductionBar@Building:
-        ProductionType: Building.Cabal
-    ProductionBar@Defense:
-        ProductionType: Defense.Cabal
-    WithIdleOverlay@cabal:
-        Sequence: idle-cabal
-    WithIdleOverlay@lights:
-        Sequence: idle-lights
-    WithIdleOverlay@player:
-        Sequence: idle-player
-    Power:
-        Amount: 0
-    Selectable:
-        Bounds: 144, 80, 0, -12
-    ProvidesPrerequisite@cabal:
-        Prerequisite: structures.cabal
-    BaseProvider:
-        Range: 16c0
-    ActorLostNotification:
-        Notification: CriticalStructureLost
-    ProvidesAIPrerequisite@AImoney:
-        Prerequisite: AImoney
-    GrantConditionOnPrerequisite@AImoney:
-        Condition: money
-        Prerequisites: AImoney
-    CashTrickler@AImoney:
-        Interval: 1000
-        Amount: 10000
-        ShowTicks: False
-        RequiresCondition: money
+	Inherits: ^Building
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Buildable:
+		Queue: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin
+		BuildPaletteOrder: 300
+		Prerequisites: ~disabled
+		Adjacent: 8
+		Description: Builds base structures.\n\nSpecial:\n- Provides minimap radar.
+	Health:
+		HP: 5200
+	RevealsShroud:
+		Range: 14c146
+	Production:
+		Produces: Building.Cabal,Defense.Cabal
+	ProductionQueue@Building:
+		Type: Building.Cabal
+		Group: Building
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@Defense:
+		Type: Defense.Cabal
+		Group: Defense
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Cabal Construction Yard
+	BaseBuilding:
+	Transforms:
+		IntoActor: kmcv
+		Offset: 1,1
+		Facing: 96
+		DeployCursor: undeploy
+	ProvidesRadar:
+	ProductionBar@Building:
+		ProductionType: Building.Cabal
+	ProductionBar@Defense:
+		ProductionType: Defense.Cabal
+	WithIdleOverlay@cabal:
+		Sequence: idle-cabal
+	WithIdleOverlay@lights:
+		Sequence: idle-lights
+	WithIdleOverlay@player:
+		Sequence: idle-player
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 144, 80, 0, -12
+	ProvidesPrerequisite@cabal:
+		Prerequisite: structures.cabal
+	BaseProvider:
+		Range: 22c642
+	ActorLostNotification:
+		Notification: CriticalStructureLost
+	ProvidesAIPrerequisite@AImoney:
+		Prerequisite: AImoney
+	GrantConditionOnPrerequisite@AImoney:
+		Condition: money
+		Prerequisites: AImoney
+	CashTrickler@AImoney:
+		Interval: 1000
+		Amount: 10000
+		ShowTicks: False
+		RequiresCondition: money
+	HitShape:
 
 KPR:
-    Inherits@1: ^BuildingInfiltrate
-    Inherits@2: ^PowerBoostUpgrades
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 301
-        Prerequisites: ~structures.cabal
-        Description: Provides power for other structures.\n\nSpecial:\n- Can be improved a lot by a support power.
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Cabal Power Core
-    ProvidesPrerequisite:
-        Prerequisite: anypower
-    Building:
-        Footprint: xxx xxx xxx
-        Dimensions: 3,3
-    PowerTooltip:
-    InfiltrateForPowerOutage:
-        Duration: 750
-    AffectedByPowerOutage:
-    Selectable:
-        Bounds: 88, 80, 2, -12
-    Health:
-        HP: 1200
-    RevealsShroud:
-        Range: 4c0
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithIdleOverlay@LIGHTS2:
-        Sequence: idle-lights2
-    Power:
-        Amount: 200
-    Targetable:
-        TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
-    ScalePowerWithHealth:
-    DisabledOverlay:
+	Inherits@1: ^BuildingInfiltrate
+	Inherits@2: ^PowerBoostUpgrades
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 301
+		Prerequisites: ~structures.cabal
+		Description: Provides power for other structures.\n\nSpecial:\n- Can be improved a lot by a support power.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Cabal Power Core
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	PowerTooltip:
+	InfiltrateForPowerOutage:
+		Duration: 750
+	Selectable:
+		Bounds: 88, 80, 2, -12
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 5c673
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	WithIdleOverlay@LIGHTS2:
+		Sequence: idle-lights2
+		PauseOnCondition: power-outage
+	Power:
+		Amount: 200
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	HitShape:
 
 KPROC:
-    Inherits: ^BuildingInfiltrate
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Cabal Tiberium Refinery
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 302
-        Prerequisites: anypower, ~structures.cabal
-        Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
-    Building:
-        Footprint: xxx= xx== xxx=
-        Dimensions: 4,3
-    InfiltrateForCash:
-        Percentage: 50
-        Minimum: -1
-        Maximum: 1000
-    Selectable:
-        Bounds: 134, 122, 0, -18
-    Health:
-        HP: 1500
-    RevealsShroud:
-        Range: 6c0
-    TiberianSunRefinery:
-        DockAngle: 160
-        DockOffset: 2,1
-        DiscardExcessResources: True
-    StoresResources:
-        PipColor: Green
-        PipCount: 10
-        Capacity: 700
-    FreeActor:
-        Actor: KHARV
-        SpawnOffset: 2,1
-        Facing: 160
-#    FreeActor@2:
-#        Actor: KHARV
-#        SpawnOffset: 2,2
-#        Facing: 160
-    WithIdleOverlay@REDLIGHTS:
-        Sequence: idle-redlights
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    WithDockedOverlay@flame:
-        Sequence: flame
-        Palette: effect
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
-    CustomSellValue:
-        Value: 500
- 
+	Inherits: ^BuildingInfiltrate
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Cabal Tiberium Refinery
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 302
+		Prerequisites: anypower, ~structures.cabal
+		Description: Processes raw Tiberium into useable resources.\n\nSpecial:\n- Stores 700$.
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: -1
+		Maximum: 1000
+	Selectable:
+		Bounds: 134, 122, 0, -18
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 8c497
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+		DiscardExcessResources: True
+	StoresResources:
+		PipColor: Green
+		PipCount: 10
+		Capacity: 700
+	FreeActor:
+		Actor: KHARV
+		SpawnOffset: 2,1
+		Facing: 160
+	WithIdleOverlay@REDLIGHTS:
+		Sequence: idle-redlights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	WithDockedOverlay@flame:
+		Sequence: flame
+		Palette: effect
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	CustomSellValue:
+		Value: 500
+	HitShape:
+
 CYBBAR:
-    Inherits: ^Building
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 304
-        Prerequisites: anypower, ~structures.cabal
-        Description: Produces cyborgs.
-    Valued:
-        Cost: 500
-    Tooltip:
-        Name: Cyborg Production Plant
-    ProvidesPrerequisite:
-        Prerequisite: barracks
-    Building:
-        Footprint: xxxx xxxx xxxx
-        Dimensions: 4,3
-    Selectable:
-        Bounds: 116, 78, 3, -8
-    Health:
-        HP: 800
-    RevealsShroud:
-        Range: 5c0
-    Exit@1:
-        SpawnOffset: -1300,300,0
-        ExitCell: 2,3
-    ExitsDebugOverlay:
-    RallyPoint:
-        Offset: 3,3
-        Palette: mouse
-        IsPlayerPalette: False
-    Production:
-        Produces: Infantry.Cabal
-    ProductionQueue@Infantry:
-        Type: Infantry.Cabal
-        Group: Infantry
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    ProductionBar:
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithProductionOverlay@LIGHTS:
-        Sequence: production-lights
-    WithIdleOverlay@LIGHTS2:
-        Sequence: idle-lights2
-    Power:
-        Amount: -25
-    ProvidesPrerequisite@buildingname:    
-    
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 304
+		Prerequisites: anypower, ~structures.cabal
+		Description: Produces cyborgs.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Cyborg Production Plant
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 116, 78, 3, -8
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 7c73
+	Exit@1:
+		SpawnOffset: -1300,300,0
+		ExitCell: 2,3
+	ExitsDebugOverlay:
+	RallyPoint:
+		Offset: 3,3
+		Palette: mouse
+		IsPlayerPalette: False
+	Production:
+		Produces: Infantry.Cabal
+	ProductionQueue@Infantry:
+		Type: Infantry.Cabal
+		Group: Infantry
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProductionBar:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@LIGHTS2:
+		Sequence: idle-lights2
+		PauseOnCondition: power-outage
+	Power:
+		Amount: -25
+	ProvidesPrerequisite@buildingname:
+	HitShape:
+
 KAWEAP:
-    Inherits: ^Building
-    Valued:
-        Cost: 2000
-    Tooltip:
-        Name: Cabal War Factory
-    ProvidesPrerequisite:
-        Prerequisite: factory
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 305
-        Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Produces vehicles.
-    Building:
-        Footprint: xxx= xxx= xxx=
-        Dimensions: 4,3
-    Selectable:
-        Bounds: 149, 116, -3, -20
-    Health:
-        HP: 2000
-    RevealsShroud:
-        Range: 4c0
-    RallyPoint:
-        Offset: 4,1
-        Palette: mouse
-        IsPlayerPalette: False
-    Exit@1:
-        SpawnOffset: -384,-384,0
-        ExitCell: 3,1
-        ExitDelay: 5
-    ExitsDebugOverlay:
-    Production:
-        Produces: Vehicle.Cabal
-    ProductionQueue@Vehicle:
-        Type: Vehicle.Cabal
-        Group: Vehicle
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    ProductionBar:
-    WithIdleOverlay@ROOF:
-        Sequence: idle-roof
-    WithIdleOverlay@fan:
-        Sequence: idle-fan
-    WithProductionOverlay@lights2:
-        Sequence: production-lights2
-    WithProductionDoorOverlay@DOOR:
-    WithProductionOverlay@LIGHTS:
-        Sequence: production-lights
-    WithIdleOverlay@BIB:
-        Sequence: bib
-    Power:
-        Amount: -50
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cabal War Factory
+	ProvidesPrerequisite:
+		Prerequisite: factory
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 305
+		Prerequisites: anypower, kproc, ~structures.cabal
+		Description: Produces vehicles.
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 149, 116, -3, -20
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 5c673
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: False
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	ExitsDebugOverlay:
+	Production:
+		Produces: Vehicle.Cabal
+	ProductionQueue@Vehicle:
+		Type: Vehicle.Cabal
+		Group: Vehicle
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithIdleOverlay@fan:
+		Sequence: idle-fan
+	WithProductionOverlay@lights2:
+		Sequence: production-lights2
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 KARADR:
-    Inherits: ^BuildingInfiltrate
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 306
-        Prerequisites: anypower, kproc, ~structures.cabal
-        Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants\n- Detects underground units
-    Valued:
-        Cost: 1500
-    Tooltip:
-        Name: Cabal Radar
-    ProvidesPrerequisite:
-        Prerequisite: radar
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Selectable:
-        Bounds: 96, 82, 0, -17
-    Health:
-        HP: 1200
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    ProvidesRadar:
-    InfiltrateForExploration:
-    DetectCloaked:
-        Range: 10
-    RevealsShroud:
-        Range: 20c0
-    WithIdleOverlay@DISH:
-        Sequence: idle-dish
-        PauseOnLowPower: True
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-        PauseOnLowPower: True
-    Targetable:
-        TargetTypes: Ground, C4, SpyInfiltrate
-    Power:
-        Amount: -100
-    ProvidesPrerequisite@buildingname:
-    RenderDetectionCircle:
-    DetectCloaked:
-        Range: 15c0
-        CloakTypes: Underground        
-    GrantExternalConditionPower@powerboost:
-        OrderName: GrantPowerBoostPowerInfoOrder
-        Icon: powerbuff
-        SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        EndChargeSpeechNotification: SupportPowerReady
-        Description: Power Core Boost
-        LongDesc: Doubles the power output.
-        Condition: powerboost
-        OnFireSound: fortificate.wav
-        Sequence: idle
-        ChargeTime: 240
-        ArrowSequence: arrow
-        CircleSequence: circles
-        ClockSequence: clock
-        Range: 2
+	Inherits: ^BuildingInfiltrate
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 306
+		Prerequisites: anypower, kproc, ~structures.cabal
+		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Allows improving powerplants\n- Detects underground units
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Cabal Radar
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 82, 0, -17
+	Health:
+		HP: 1200
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 0c14
+	RevealsShroud:
+		Range: 28c291
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnCondition: power-outage
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -100
+	ProvidesPrerequisite@buildingname:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 21c218
+		CloakTypes: Underground
+	GrantExternalConditionPower@powerboost:
+		OrderName: GrantPowerBoostPowerInfoOrder
+		Icon: powerbuff
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Power Core Boost
+		LongDesc: Doubles the power output.
+		Condition: powerboost
+		OnFireSound: fortificate.wav
+		Sequence: idle
+		ChargeTime: 240
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 2
+	HitShape:
 
 KAHPAD:
-    Inherits: ^Building
-    Valued:
-        Cost: 1000
-    Tooltip:
-        Name: Cabal Helipad
-#    Buildable:
-#        BuildPaletteOrder: 307
-#        Queue: Building.Cabal
-#        Prerequisites: anypower, karadr, ~structures.cabal, ~!t1
-#        Description: Produces, rearms and\nrepairs aircraft.
-    Building:
-        Footprint: xx xx
-        Dimensions: 2,2
-    Health:
-        HP: 1000
-    RevealsShroud:
-        Range: 5c0
-    Exit@1:
-        SpawnOffset: 0,-256,0
-    ExitsDebugOverlay:
-    RallyPoint:
-        Palette: mouse
-        IsPlayerPalette: False
-    ProductionFromMapEdge:
-        Produces: Air.Cabal
-    ProductionQueue@Air:
-        Type: Air.Cabal
-        Group: Air
-        BuildDurationModifier: 73
-        LowPowerSlowdown: 3
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    DisabledOverlay:
-    Reservable:
-    RepairsUnits:
-        HpPerStep: 10
-        Interval: 10
-        FinishRepairingNotification: UnitRepaired
-        PlayerExperience: 15
-    ProductionBar:
-    WithIdleOverlay@PLATFORM:
-        Sequence: idle-platform
-    WithIdleOverlay@LIGHTS:
-        Sequence: idle-lights
-    WithDeathAnimation@BIB:
-        DeathSequence: dead-platform
-        UseDeathTypeSuffix: False
-    Power:
-        Amount: -75
-    Selectable:
-        Bounds: 78, 54, 0, -8
-    ProvidesPrerequisite@buildingname:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Cabal Helipad
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 7c73
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	ExitsDebugOverlay:
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: False
+	ProductionFromMapEdge:
+		Produces: Air.Cabal
+	ProductionQueue@Air:
+		Type: Air.Cabal
+		Group: Air
+		BuildDurationModifier: 73
+		LowPowerSlowdown: 3
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	Reservable:
+	RepairsUnits:
+		HpPerStep: 10
+		Interval: 10
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnCondition: power-outage
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-platform
+		UseDeathTypeSuffix: False
+	Power:
+		Amount: -75
+	Selectable:
+		Bounds: 78, 54, 0, -8
+	ProvidesPrerequisite@buildingname:
+	HitShape:
 
 KABTECH:
-    Inherits: ^Building
-    Buildable:
-        Queue: Building.Cabal
-        BuildPaletteOrder: 308
-        Prerequisites: anypower, karadr, ~structures.cabal
-        Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm
-    Valued:
-        Cost: 4000
-    Tooltip:
-        Name: Cyborg Enhancement Center
-    Building:
-        Footprint: xxxx xxxx xxxx xxxx
-        Dimensions: 4,4
-    Selectable:
-        Bounds: 118, 118, -6, -38
-    Health:
-        HP: 2400
-    RevealsShroud:
-        Range: 5c0
-    Power:
-        Amount: -300
-    RequiresPower:
-    CanPowerDown:
-        IndicatorPalette: mouse
-        PowerupSpeech: EnablePower
-        PowerdownSpeech: DisablePower
-    # Production@Tech:
-        # Produces: Tech.Cabal
-        # MoveIntoWorld: False
-    # ProductionQueue@Tech:
-        # Type: Tech.Cabal
-        # Group: Tech
-        # QueuedAudio: BuildTech
-        # ReadyAudio: TechComplete
-        # BuildDurationModifier: 60
-        # LowPowerSlowdown: 3
-    Exit:
-    ExitsDebugOverlay:
-    # ProductionBar:
-    DisabledOverlay:
-    ProvidesPrerequisite@buildingname:
-    GrantExternalConditionPower@IRONCURTAIN:
+	Inherits: ^Building
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Buildable:
+		Queue: Building.Cabal
+		BuildPaletteOrder: 308
+		Prerequisites: anypower, karadr, ~structures.cabal
+		Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Cyborg Enhancement Center
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+	Selectable:
+		Bounds: 118, 118, -6, -38
+	Health:
+		HP: 2400
+	RevealsShroud:
+		Range: 7c73
+	Power:
+		Amount: -300
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	Exit:
+	ExitsDebugOverlay:
+	ProvidesPrerequisite@buildingname:
+	GrantExternalConditionPower@IRONCURTAIN:
 		Icon: fortification
 		ChargeTime: 240
 		Description: Nanoswarm
 		LongDesc: Makes vehicles, buildings and cyborgs invulnerable for 20 seconds.
 		Duration: 500
 		SelectTargetSpeechNotification: SelectTarget
-        LowPowerSpeechNotification: LowPower
-        EndChargeSpeechNotification: SupportPowerReady
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
 		DisplayRadarPing: True
 		Condition: invulnerability
-        Range: 2
+		Range: 2
+	HitShape:

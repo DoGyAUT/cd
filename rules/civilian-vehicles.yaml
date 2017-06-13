@@ -1,152 +1,152 @@
 ^TRUCK:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Truck
-    Health:
-        HP: 300
-    Mobile:
-        Speed: 56
-    RevealsShroud:
-        Range: 5c0
-    Cargo:
-        Types: Infantry
-        MaxWeight: 20
-        PipCount: 5
-        UnloadVoice: Action        
-#    Explodes:
-#        Weapon: UnitExplodeEpic
-#    Armament@primary:
-#        Weapon: FanticBoom
-#    AttackSuicides:
-#    AttackFrontal:
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Truck
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 79
+	RevealsShroud:
+		Range: 7c73
+	Cargo:
+		Types: Infantry
+		MaxWeight: 20
+		PipCount: 5
+		UnloadVoice: Action
+	HitShape:
 
 TRUCKA:
-    Inherits: ^TRUCK
+	Inherits: ^TRUCK
 
 TRUCKB:
-    Inherits: ^TRUCK
+	Inherits: ^TRUCK
 
 ICBM:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Ballistic Missile Launcher
-    Health:
-        HP: 500
-    Mobile:
-        Speed: 85
-        TurnSpeed: 5
-    RevealsShroud:
-        Range: 7c0
-    Transforms:
-        IntoActor: gaicbm
-        Offset: -1,-1
-        Facing: 96
-        TransformSounds:
-        NoTransformSounds:
-        Voice: Move
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Ballistic Missile Launcher
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 120
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 9c921
+	Transforms:
+		IntoActor: gaicbm
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds:
+		NoTransformSounds:
+		Voice: Move
+	HitShape:
 
 BUS:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: School Bus
-    Mobile:
-        TurnSpeed: 5
-        Speed: 113
-    Health:
-        HP: 300
-    RevealsShroud:
-        Range: 5c0
-    Cargo:
-        Types: Infantry
-        MaxWeight: 20
-        PipCount: 5
-        UnloadVoice: Action
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: School Bus
+	Mobile:
+		TurnSpeed: 5
+		Speed: 160
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 7c73
+	Cargo:
+		Types: Infantry
+		MaxWeight: 20
+		PipCount: 5
+		UnloadVoice: Action
+	HitShape:
 
 PICK:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Pickup
-    Mobile:
-        TurnSpeed: 5
-        Speed: 113
-    Health:
-        HP: 300
-    RevealsShroud:
-        Range: 5c0
-    Cargo:
-        Types: Infantry
-        MaxWeight: 2
-        PipCount: 5
-        UnloadVoice: Action
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Pickup
+	Mobile:
+		TurnSpeed: 5
+		Speed: 160
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 7c73
+	Cargo:
+		Types: Infantry
+		MaxWeight: 2
+		PipCount: 5
+		UnloadVoice: Action
+	HitShape:
 
 CAR:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Automobile
-    Mobile:
-        TurnSpeed: 5
-        Speed: 113
-    Health:
-        HP: 300
-    RevealsShroud:
-        Range: 5c0
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Automobile
+	Mobile:
+		TurnSpeed: 5
+		Speed: 160
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 7c73
+	HitShape:
 
 WINI:
-    Inherits@1: ^CivilianVoxelVehicle
-    Inherits@2: ^LightVehicle
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Recreational Vehicle
-    Mobile:
-        TurnSpeed: 5
-        Speed: 113
-    Health:
-        HP: 300
-    RevealsShroud:
-        Range: 5c0
+	Inherits@1: ^CivilianVoxelVehicle
+	Inherits@2: ^LightVehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Recreational Vehicle
+	Mobile:
+		TurnSpeed: 5
+		Speed: 160
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 7c73
+	HitShape:
 
 LOCOMOTIVE:
-    Inherits: ^Train
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Train Locomotive
-    Cargo:
-        MaxWeight: 2
-        PipCount: 2
+	Inherits: ^Train
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Train Locomotive
+	Cargo:
+		MaxWeight: 2
+		PipCount: 2
 
 TRAINCAR:
-    Inherits: ^Train
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Passenger Car
-    Cargo:
-        MaxWeight: 10
-        PipCount: 5
+	Inherits: ^Train
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Passenger Car
+	Cargo:
+		MaxWeight: 10
+		PipCount: 5
 
 CARGOCAR:
-    Inherits: ^Train
-    Valued:
-        Cost: 1
-    Tooltip:
-        Name: Cargo Car
-    Cargo:
-        MaxWeight: 10
-        PipCount: 5
+	Inherits: ^Train
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Cargo Car
+	Cargo:
+		MaxWeight: 10
+		PipCount: 5

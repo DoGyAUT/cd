@@ -1,122 +1,101 @@
 Player:
-    HackyAI@NormalAI:
-        BuildingLimits:        
-#Power
-            #gapowr: 10
-#Economy
-            gproc: 3
-            #gasilo: 10
-#Production
-            gapile: 2
-            gaweap: 2
-            gahpad: 2
-#Radar
-            garadr: 1
-#Armory
-            gaarmory: 1
-#Tech
-            gatech: 1
-#Special
-            gadept: 1
-            gadrop: 1
-#Superweapon
-            gaplug: 1
-            gaplug2: 1
-            gaplug3: 1
-#Defense
-            gamg: 2
-            gamg2: 2
-            gasentur: 2
-            gamis: 2
-            gacan: 2
-            gamortar: 2
-            gafort1: 1
-            gafort2: 1
-            gafort3: 1
-
-        BuildingFractions:
-
-            gapowr: 40%
-            gproc: 50%
-            #gasilo: 1%
-            gapile: 60%
-            gaweap: 25%
-            gahpad: 10%
-            garadr: 40%
-            gaarmory: 1%
-            gatech: 1%
-            gadept: 1%
-            gadrop: 1%
-            gaplug: 1%
-            gaplug3: 1%
-            gamg: 40%
-            gamg2: 40%
-            gasentur: 10%
-            gamis: 30%
-            gacan: 35%
-            gamortar: 20%
-            gafort1: 20%
-            gafort2: 20%
-            gafort3: 20%
-
-            upgrade.gapowerup1: 1%
-            upgrade.gapowerup2: 1%
-            upgrade.gdf: 1%
-            upgrade.st: 1%
-            upgrade.zc: 1%
-            upgrade.money: 1%
-
-        UnitsToBuild:
-#GDI
-            gharv: 1%
-
-            gasol: 60%
-            gmisinf: 20%
-            e2: 20%
-            engineer: 1%
-            medic: 1%
-            zmarine: 80%
-            ztrooper: 40%
-            zraider: 25%
-
-            apc: 20%            
-            gtmtnk: 50%            
-            gthtnk: 50%  
-            vulture: 50%
-            hvr: 40%
-            airblast: 10%
-            4tnk: 20%
-            mmch: 20%
-            mmch2: 5%
-            poseidon: 5%
-            sonic: 20%
-            behemoth: 15%
-            jugg: 10%
-            cyclops: 15%
-            hmec: 2%
-            iontank: 2%
-
-            orca_tran_marine: 2%
-            orca_tran_missiles: 2%
-            orca_tran_trooper: 2%
-            orca_tran_raider: 2%
-            orca_f1: 8%
-            orca_f2: 8%
-            fhawk: 4%
-            hornet: 4%
-            condor: 6%
-            kodiak: 1%
-
-        UnitLimits:
-            medic: 1
-            gharv: 6
-            engineer: 1
-            orca_f1: 3
-            orca_f2: 3
-            orca_tran_marine: 2
-            orca_tran_missiles: 2
-            orca_tran_trooper: 2
-            orca_tran_raider: 2
-            fhawk: 2
-            hornet: 2
-            condor: 2
+	HackyAI@NormalAI:
+		BuildingLimits:
+			gproc: 3
+			gapile: 2
+			gaweap: 2
+			gahpad: 2
+			garadr: 1
+			gaarmory: 1
+			gatech: 1
+			gadept: 1
+			gadrop: 1
+			gaplug: 1
+			gaplug2: 1
+			gaplug3: 1
+			gamg: 2
+			gamg2: 2
+			gasentur: 2
+			gamis: 2
+			gacan: 2
+			gamortar: 2
+			gafort1: 1
+			gafort2: 1
+			gafort3: 1
+		BuildingFractions:
+			gapowr: 40%
+			gproc: 50%
+			gapile: 60%
+			gaweap: 25%
+			gahpad: 10%
+			garadr: 40%
+			gaarmory: 1%
+			gatech: 1%
+			gadept: 1%
+			gadrop: 1%
+			gaplug: 1%
+			gaplug3: 1%
+			gamg: 40%
+			gamg2: 40%
+			gasentur: 10%
+			gamis: 30%
+			gacan: 35%
+			gamortar: 20%
+			gafort1: 20%
+			gafort2: 20%
+			gafort3: 20%
+			upgrade.gapowerup1: 1%
+			upgrade.gapowerup2: 1%
+			upgrade.gdf: 1%
+			upgrade.st: 1%
+			upgrade.zc: 1%
+			upgrade.money: 1%
+		UnitsToBuild:
+			gharv: 1%
+			gasol: 60%
+			gmisinf: 20%
+			e2: 20%
+			engineer: 1%
+			medic: 1%
+			zmarine: 80%
+			ztrooper: 40%
+			zraider: 25%
+			apc: 20%
+			gtmtnk: 50%
+			gthtnk: 50%
+			vulture: 50%
+			hvr: 40%
+			airblast: 10%
+			4tnk: 20%
+			mmch: 20%
+			mmch2: 5%
+			poseidon: 5%
+			sonic: 20%
+			behemoth: 15%
+			jugg: 10%
+			cyclops: 15%
+			hmec: 2%
+			iontank: 2%
+			orca_tran_marine: 2%
+			orca_tran_missiles: 2%
+			orca_tran_trooper: 2%
+			orca_tran_raider: 2%
+			orca_f1: 8%
+			orca_f2: 8%
+			fhawk: 4%
+			hornet: 4%
+			condor: 6%
+			kodiak: 1%
+		UnitLimits:
+			medic: 1
+			gharv: 6
+			engineer: 1
+			orca_f1: 3
+			orca_f2: 3
+			orca_tran_marine: 2
+			orca_tran_missiles: 2
+			orca_tran_trooper: 2
+			orca_tran_raider: 2
+			fhawk: 2
+			hornet: 2
+			condor: 2

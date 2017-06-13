@@ -1,160 +1,165 @@
 SHOCKER:
-    Inherits@1: ^Alien
-    Buildable:
-        Queue: Infantry.Scrin
-        BuildPaletteOrder: 500
-        Prerequisites: ~saportal
-        Description: Scrin basic spam infantry.\n\n Role: Meatshield\n HP: 100\n Armor: Light\n Speed: 90\n Viewrange: 6c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor
-    Valued:
-        Cost: 70
-    Tooltip:
-        Name: War Ant
-    Selectable:
-        Bounds: 30,30,0,-9
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Health:
-        HP: 100
-    Mobile:
-        Speed: 90
-    RevealsShroud:
-        Range: 6c0    
-    Armament@PRIMARY:
-        Weapon: WarAntGun
-        LocalOffset: 86,0,512
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    WithDeathAnimation@normal:
-        DeathSequencePalette: apolra50alpha
-        DeathPaletteIsPlayerPalette: false
-        DeathTypes:
-            BulletDeath: 1
-            SmallExplosionDeath: 2
-            HeadshotDeath: 3
-    WithDeathAnimation@explosion:
-        DeathSequencePalette: apolra50alpha
-        DeathPaletteIsPlayerPalette: false
-        DeathTypes:
-            ExplosionDeath: 4
-    WithDeathAnimation:
-        CrushedSequence: die-crushed
-        CrushedSequencePalette: apolra50alpha
-        CrushedPaletteIsPlayerPalette: false
+	Inherits@1: ^Alien
+	Buildable:
+		Queue: Infantry.Scrin
+		BuildPaletteOrder: 500
+		Prerequisites: ~saportal
+		Description: Scrin basic spam infantry.\n\n Role: Meatshield\n HP: 100\n Armor: Light\n Speed: 90\n Viewrange: 6c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor
+	Valued:
+		Cost: 70
+	Tooltip:
+		Name: War Ant
+	Selectable:
+		Bounds: 30,30,0,-9
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 127
+	RevealsShroud:
+		Range: 8c497
+	Armament@PRIMARY:
+		Weapon: WarAntGun
+		LocalOffset: 122,0,724
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	WithDeathAnimation@normal:
+		DeathSequencePalette: apolra50alpha
+		DeathPaletteIsPlayerPalette: false
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 2
+			HeadshotDeath: 3
+	WithDeathAnimation@explosion:
+		DeathSequencePalette: apolra50alpha
+		DeathPaletteIsPlayerPalette: false
+		DeathTypes:
+			ExplosionDeath: 4
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: apolra50alpha
+		CrushedPaletteIsPlayerPalette: false
+	HitShape:
 
 SLASHER:
-    Inherits@1: ^HeavyAlien
-    Buildable:
-        Queue: Infantry.Scrin
-        BuildPaletteOrder: 501
-        Prerequisites: ~saportal
-        Description: Scrin combat infantry.\n\n Role: Infantry\n HP: 200\n Armor: Heavy\n Speed: 80\n Viewrange: 8c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor
-    Valued:
-        Cost: 400
-    Tooltip:
-        Name: Slasher
-    Selectable:
-        Bounds: 30,30,0,-9
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Health:
-        HP: 390
-    Mobile:
-        Speed: 80
-        SharesCell: False
-    RevealsShroud:
-        Range: 7c0    
-    Armament@PRIMARY:
-        Weapon: SlasherDisc
-        LocalOffset: 128,0,750
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    
+	Inherits@1: ^HeavyAlien
+	Buildable:
+		Queue: Infantry.Scrin
+		BuildPaletteOrder: 501
+		Prerequisites: ~saportal
+		Description: Scrin combat infantry.\n\n Role: Infantry\n HP: 200\n Armor: Heavy\n Speed: 80\n Viewrange: 8c0\n\n Good vs Infantry\n Useless vs Vtols, Jets, Bombers\n\n Special:\n - Heals in Ichor
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Slasher
+	Selectable:
+		Bounds: 30,30,0,-9
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Health:
+		HP: 390
+	Mobile:
+		Speed: 113
+		SharesCell: False
+	RevealsShroud:
+		Range: 9c921
+	Armament@PRIMARY:
+		Weapon: SlasherDisc
+		LocalOffset: 181,0,1061
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	HitShape:
+
 LOCUST:
-    Inherits@1: ^HeavyAlien
-    Buildable:
-        Queue: Infantry.Scrin
-        BuildPaletteOrder: 502
-        Prerequisites: ~saportal, saseed
-        Description: Scrin anti-armor infantry.\n\n Role: Anti Tank/Air\n HP: 300\n Armor: Heavy\n Speed: 56\n Viewrange: 8c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special: \n - Can attack Air\n - Heals in Ichor
-    Valued:
-        Cost: 600
-    Tooltip:
-        Name: Locust
-    Selectable:
-        Bounds: 30,30,0,-9
-    Voiced:
-        VoiceSet: Tripod
-        Volume: 2
-    Health:
-        HP: 500
-    Mobile:
-        Speed: 56
-        SharesCell: False
-    RevealsShroud:
-        Range: 8c0
-    Armament@PRIMARY:
-        Weapon: LocustNail
-        LocalOffset: 180,0,700
-        MuzzlePalette: effect50alpha
-    AttackFrontal:
-    WithMuzzleOverlay:
-    
+	Inherits@1: ^HeavyAlien
+	Buildable:
+		Queue: Infantry.Scrin
+		BuildPaletteOrder: 502
+		Prerequisites: ~saportal, saseed
+		Description: Scrin anti-armor infantry.\n\n Role: Anti Tank/Air\n HP: 300\n Armor: Heavy\n Speed: 56\n Viewrange: 8c0\n\n Good vs Cyborgs, Vehicles, Vtols, Jets\n Useless vs Bombers\n\n Special: \n - Can attack Air\n - Heals in Ichor
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Locust
+	Selectable:
+		Bounds: 30,30,0,-9
+	Voiced:
+		VoiceSet: Tripod
+		Volume: 2
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 79
+		SharesCell: False
+	RevealsShroud:
+		Range: 11c321
+	Armament@PRIMARY:
+		Weapon: LocustNail
+		LocalOffset: 255,0,990
+		MuzzlePalette: effect50alpha
+	AttackFrontal:
+	WithMuzzleOverlay:
+	HitShape:
+
 VISC_INFECTED:
-    Inherits@1: ^Visceroid
-    Inherits@2: ^GainsExperienceInf
-    Inherits@3: ^CorruptorHeal
-    Tooltip:
-        Name: Infected Visceroid
-    Health:
-        HP: 150
-    Valued:
-        Cost: 300
-    Armament:
-        Weapon: SmallSlimeAttack
-    AutoTarget:
-        ScanRadius: 6
-    AttackFrontal:
-        Voice: Attack
-    Mobile:
-        Crushes: crate
-        SharesCell: yes
-    RenderSprites:
-        Image: vissml
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 20
-        HealIfBelow: 100
-        DamageCooldown: 80
-        
+	Inherits@1: ^Visceroid
+	Inherits@2: ^GainsExperienceInf
+	Inherits@3: ^CorruptorHeal
+	Tooltip:
+		Name: Infected Visceroid
+	Health:
+		HP: 150
+	Valued:
+		Cost: 300
+	Armament:
+		Weapon: SmallSlimeAttack
+	AutoTarget:
+		ScanRadius: 6
+	AttackFrontal:
+		Voice: Attack
+	Mobile:
+		Crushes: crate
+		SharesCell: yes
+	RenderSprites:
+		Image: vissml
+	SelfHealing:
+		Step: 0
+		PercentageStep: 1
+		Delay: 20
+		HealIfBelow: 100
+		DamageCooldown: 80
+	HitShape:
+
 VISC_CORRUPT:
-    Inherits@1: ^Visceroid
-    Inherits@2: ^GainsExperienceInf
-    Inherits@3: ^CorruptorHeal
-    Tooltip:
-        Name: Corrupt Visceroid
-    Health:
-        HP: 300
-    Valued:
-        Cost: 500
-    Armament:
-        Weapon: CorruptSlimeAttack
-    AutoTarget:
-        ScanRadius: 6
-    AutoTarget:
-    AttackFrontal:
-        Voice: Attack
-    Mobile:
-        Crushes: crate, infantry
-    RenderSprites:
-        Image: vislrg
-    SelfHealing:
-        Step: 0
-        PercentageStep: 1
-        Delay: 10
-        HealIfBelow: 100
-        DamageCooldown: 60
+	Inherits@1: ^Visceroid
+	Inherits@2: ^GainsExperienceInf
+	Inherits@3: ^CorruptorHeal
+	Tooltip:
+		Name: Corrupt Visceroid
+	Health:
+		HP: 300
+	Valued:
+		Cost: 500
+	Armament:
+		Weapon: CorruptSlimeAttack
+	AutoTarget:
+		ScanRadius: 6
+	AutoTarget:
+	AttackFrontal:
+		Voice: Attack
+	Mobile:
+		Crushes: crate, infantry
+	RenderSprites:
+		Image: vislrg
+	SelfHealing:
+		Step: 0
+		PercentageStep: 1
+		Delay: 10
+		HealIfBelow: 100
+		DamageCooldown: 60
+	HitShape:

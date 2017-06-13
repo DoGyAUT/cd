@@ -1,132 +1,119 @@
 Player:
-    HackyAI@NormalAI:
-        BuildingLimits:        
-#Power
-            fapowr: 10
-#Economy
-            fproc: 6
-            fasilo: 10     
-#Production
-            fabar: 4
-            faweap: 2
-            fahpad: 4
-#Radar
-            faradr: 1
-#Armory
-            fhovel: 1
-#Tech
-            fatrade: 1
-#Defense
-            fatower: 6
-            faflak: 4
-            famissile: 3
-
-        BuildingFractions:
-
-            fapowr: 40%
-            fproc: 50%
-            fasilo: 1%
-            fabar: 60%
-            faweap: 25%
-            fahpad: 10%
-            faradr: 40%
-            fhovel: 1%
-            fatrade: 1%
-            fatower: 40%
-            faflak: 20%
-            famissile: 15%
-
-            upgrade.grunt: 1%
-            upgrade.brigand: 1%
-            upgrade.huntress: 1%
-            upgrade.fiend: 1%
-            upgrade.mhijack: 1%
-            upgrade.ghost: 1%
-            upgrade.fbuggy: 1%
-            upgrade.fbuggy_mg: 1%
-            upgrade.fbuggy_mis: 1%
-            upgrade.fbuggy_mortar: 1%
-            upgrade.ftruck: 1%
-            upgrade.ftruck_flamer: 1%
-            upgrade.ftruck_mortar: 1%
-            upgrade.ftruck_flak: 1%
-            upgrade.gremlin: 1%
-            upgrade.gremlin_mortar: 1%
-            upgrade.gremlin_hcan: 1%
-            upgrade.gremlin_90mm: 1%
-            upgrade.taurus: 1%
-            upgrade.taurus_mg: 1%
-            upgrade.taurus_hcan: 1%
-            upgrade.taurus_mis: 1%
-            upgrade.lizard: 1%
-            upgrade.lizard_mg: 1%
-            upgrade.lizard_90mm: 1%
-            upgrade.lizard_122mm: 1%
-            upgrade.digger: 1%
-            upgrade.digger_mis: 1%
-            upgrade.digger_mortar: 1%
-            upgrade.digger_122mm: 1%
-            upgrade.bison: 1%
-            upgrade.bison_130mm: 1%
-            upgrade.bison_145mm: 1%
-            upgrade.bison_180mm: 1%
-            upgrade.auroch: 1%
-            upgrade.auroch_130mm: 1%
-            upgrade.auroch_120mmt: 1%
-            upgrade.auroch_180mm: 1%
-            upgrade.buzzard: 1%
-            upgrade.buzzard_missiles: 1%
-            upgrade.buzzard_gattling: 1%
-            upgrade.griffin: 1%
-            upgrade.griffin_missiles: 1%
-            upgrade.griffin_autocannon: 1%
-
-        UnitsToBuild:
-#Forgotten
-            fharv: 1%
-            grunt: 90%
-            elitegrunt: 90%
-            brigand: 90%
-            huntress: 40%
-            fengineer: 1%
-            fdog: 10%
-            ffiend: 30%
-            mhijack: 1%
-            goon: 30%
-            ghost: 20%
-            fbuggy_mg: 60%
-            fbuggy_mis: 60%
-            fbuggy_mortar: 40%
-            ftruck_flamer: 40%
-            ftruck_mortar: 40%
-            ftruck_flak: 20%
-            gremlin_hcan: 30%
-            gremlin_mortar: 20%
-            gremlin_90mm: 40%
-            taurus_mg: 25%
-            taurus_hcan: 25%
-            taurus_mis: 25%
-            lizard_mg: 20%
-            lizard_90mm: 30%
-            lizard_122mm: 30%
-            digger_mis: 30%
-            digger_mortar: 30%
-            digger_122mm: 30%
-            bison_130mm: 15%
-            bison_145mm: 15%
-            bison_180mm: 15%
-            auroch_130mm: 15%
-            auroch_120mmt: 15%
-            auroch_180mm: 15%
-            ragnarok: 10%
-            avalanche: 1%
-            buzzard: 4%
-            griffin: 4%
-
-        UnitLimits:
-            atruck: 1
-            fharv: 6
-            fengineer: 1
-            mhijack: 1
-            buzzard: 4
-            griffin: 4
+	HackyAI@NormalAI:
+		BuildingLimits:
+			fapowr: 10
+			fproc: 6
+			fasilo: 10
+			fabar: 4
+			faweap: 2
+			fahpad: 4
+			faradr: 1
+			fhovel: 1
+			fatrade: 1
+			fatower: 6
+			faflak: 4
+			famissile: 3
+		BuildingFractions:
+			fapowr: 40%
+			fproc: 50%
+			fasilo: 1%
+			fabar: 60%
+			faweap: 25%
+			fahpad: 10%
+			faradr: 40%
+			fhovel: 1%
+			fatrade: 1%
+			fatower: 40%
+			faflak: 20%
+			famissile: 15%
+			upgrade.grunt: 1%
+			upgrade.brigand: 1%
+			upgrade.huntress: 1%
+			upgrade.fiend: 1%
+			upgrade.mhijack: 1%
+			upgrade.ghost: 1%
+			upgrade.fbuggy: 1%
+			upgrade.fbuggy_mg: 1%
+			upgrade.fbuggy_mis: 1%
+			upgrade.fbuggy_mortar: 1%
+			upgrade.ftruck: 1%
+			upgrade.ftruck_flamer: 1%
+			upgrade.ftruck_mortar: 1%
+			upgrade.ftruck_flak: 1%
+			upgrade.gremlin: 1%
+			upgrade.gremlin_mortar: 1%
+			upgrade.gremlin_hcan: 1%
+			upgrade.gremlin_90mm: 1%
+			upgrade.taurus: 1%
+			upgrade.taurus_mg: 1%
+			upgrade.taurus_hcan: 1%
+			upgrade.taurus_mis: 1%
+			upgrade.lizard: 1%
+			upgrade.lizard_mg: 1%
+			upgrade.lizard_90mm: 1%
+			upgrade.lizard_122mm: 1%
+			upgrade.digger: 1%
+			upgrade.digger_mis: 1%
+			upgrade.digger_mortar: 1%
+			upgrade.digger_122mm: 1%
+			upgrade.bison: 1%
+			upgrade.bison_130mm: 1%
+			upgrade.bison_145mm: 1%
+			upgrade.bison_180mm: 1%
+			upgrade.auroch: 1%
+			upgrade.auroch_130mm: 1%
+			upgrade.auroch_120mmt: 1%
+			upgrade.auroch_180mm: 1%
+			upgrade.buzzard: 1%
+			upgrade.buzzard_missiles: 1%
+			upgrade.buzzard_gattling: 1%
+			upgrade.griffin: 1%
+			upgrade.griffin_missiles: 1%
+			upgrade.griffin_autocannon: 1%
+		UnitsToBuild:
+			fharv: 1%
+			grunt: 90%
+			elitegrunt: 90%
+			brigand: 90%
+			huntress: 40%
+			fengineer: 1%
+			fdog: 10%
+			ffiend: 30%
+			mhijack: 1%
+			goon: 30%
+			ghost: 20%
+			fbuggy_mg: 60%
+			fbuggy_mis: 60%
+			fbuggy_mortar: 40%
+			ftruck_flamer: 40%
+			ftruck_mortar: 40%
+			ftruck_flak: 20%
+			gremlin_hcan: 30%
+			gremlin_mortar: 20%
+			gremlin_90mm: 40%
+			taurus_mg: 25%
+			taurus_hcan: 25%
+			taurus_mis: 25%
+			lizard_mg: 20%
+			lizard_90mm: 30%
+			lizard_122mm: 30%
+			digger_mis: 30%
+			digger_mortar: 30%
+			digger_122mm: 30%
+			bison_130mm: 15%
+			bison_145mm: 15%
+			bison_180mm: 15%
+			auroch_130mm: 15%
+			auroch_120mmt: 15%
+			auroch_180mm: 15%
+			ragnarok: 10%
+			avalanche: 1%
+			buzzard: 4%
+			griffin: 4%
+		UnitLimits:
+			atruck: 1
+			fharv: 6
+			fengineer: 1
+			mhijack: 1
+			buzzard: 4
+			griffin: 4

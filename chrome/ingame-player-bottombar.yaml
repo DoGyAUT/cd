@@ -22,8 +22,8 @@ Container@PLAYER_WIDGETS:
                     Children:
                         Image@ICON_TEMPLATE:
                             Logic: AddFactionSuffixLogic
-                            X: 0-2
-                            Y: 0-2
+                            X: 0 - 2
+                            Y: 0 - 2
                             Width: 64
                             Height: 48
                             IgnoreMouseOver: true
@@ -168,7 +168,7 @@ Container@PLAYER_WIDGETS:
                 Label@GAME_TIMER:
                     Logic: GameTimerLogic
                     X: 10
-                    Y: 0-1
+                    Y: 0 - 1
                     Width: PARENT_RIGHT
                     Height: 22
                     Align: Center
@@ -176,7 +176,7 @@ Container@PLAYER_WIDGETS:
                 LabelWithTooltip@CASH:
                     Logic: IngameCashCounterLogic
                     X: 31
-                    Y: 0-2
+                    Y: 0 - 2
                     Width: 50
                     Height: 22
                     Font: Bold
@@ -186,14 +186,14 @@ Container@PLAYER_WIDGETS:
                     Children:
                         Image@CASH_ICON:
                             Logic: AddFactionSuffixLogic
-                            X: 0-17
+                            X: 0 - 17
                             Y: 5
                             ImageCollection: cash-icons
                             ImageName: cash-normal
                 LabelWithTooltip@POWER:
                     Logic: IngamePowerCounterLogic
                     X: PARENT_RIGHT - WIDTH - 30
-                    Y: 0-2
+                    Y: 0 - 2
                     Width: 50
                     Height: 22
                     Align: Right
@@ -210,8 +210,8 @@ Container@PLAYER_WIDGETS:
                             ImageName: power-normal
         Container@SIDEBAR_PRODUCTION:
             Logic: ClassicProductionLogic
-            X: WINDOW_RIGHT-WIDTH
-            Y: WINDOW_BOTTOM-HEIGHT-38
+            X: WINDOW_RIGHT - WIDTH
+            Y: WINDOW_BOTTOM-HEIGHT - 38
             Width: 235
             Height: 250
             Children:
@@ -259,7 +259,7 @@ Container@PLAYER_WIDGETS:
                             ImageName: production-iconoverlay
                 Container@PRODUCTION_TYPES:
                     X: 0
-                    Y: 0-32
+                    Y: 0 - 32
                     Width: 235
                     Height: 311
                     Children:
@@ -377,13 +377,13 @@ Container@PLAYER_WIDGETS:
             TypesContainer: PRODUCTION_TYPES
             BackgroundContainer: PRODUCTION_BACKGROUND
             X: WINDOW_RIGHT - 214
-            Y: WINDOW_BOTTOM-348
+            Y: WINDOW_BOTTOM - 348
             Width: 204
             Height: 20
         Background@POWERBAR_PANEL:
             Logic: IngamePowerBarLogic
             X: WINDOW_RIGHT - 224
-            Y: WINDOW_BOTTOM-HEIGHT-26
+            Y: WINDOW_BOTTOM-HEIGHT - 26
             Width: 8
             Height: 261
             Background: panel-black
@@ -391,8 +391,8 @@ Container@PLAYER_WIDGETS:
                 ResourceBar@POWERBAR:
                     X: 1
                     Y: 1
-                    Width: PARENT_RIGHT-2
-                    Height: PARENT_BOTTOM-2
+                    Width: PARENT_RIGHT - 2
+                    Height: PARENT_BOTTOM - 2
                     TooltipContainer: TOOLTIP_CONTAINER
                     TooltipTemplate: SIMPLE_TOOLTIP
                     IndicatorImage: indicator-left

@@ -1,197 +1,197 @@
 upgrade.industry:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Industry
-    Buildable:
-        BuildPaletteOrder: 199
-        Prerequisites: ~structures.nod, ~!ideology
-        Queue: Building.Nod
-        IconPalette: ni
-        BuildLimit: 1
-        Description: Choose Industrial doctrine.\n\nIndustry Nod is specialized in tiberium weapons, subterranean units and vehicles.
-    Valued:
-        Cost: 0
-    RenderSprites:
-        Image: ni
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: industry
-    ProvidesPrerequisite@ideology:
-        Prerequisite: ideology
+	Inherits: ^Tech
+	Tooltip:
+		Name: Industry
+	Buildable:
+		BuildPaletteOrder: 199
+		Prerequisites: ~structures.nod, ~!ideology
+		Queue: Building.Nod
+		IconPalette: ni
+		BuildLimit: 1
+		Description: Choose Industrial doctrine.\n\nIndustry Nod is specialized in tiberium weapons, subterranean units and vehicles.
+	Valued:
+		Cost: 0
+	RenderSprites:
+		Image: ni
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: industry
+	ProvidesPrerequisite@ideology:
+		Prerequisite: ideology
 
 upgrade.industry.tibinfusion:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Tiberium Infusion
-    Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~industry, napyra, ~!upgrade.tibinfusion
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Grants Tiberium immunity and 20% more movementspeed for all Nod soldiers.
-    Valued:
-        Cost: 1500
-    RenderSprites:
-        Image: upgrade.tibinfusion
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.tibinfusion
+	Inherits: ^Tech
+	Tooltip:
+		Name: Tiberium Infusion
+	Buildable:
+		BuildPaletteOrder: 201
+		Prerequisites: ~industry, napyra, ~!upgrade.tibinfusion
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Grants Tiberium immunity and 20% more movementspeed for all Nod soldiers.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgrade.tibinfusion
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.tibinfusion
 
 upgrade.industry.tiblaser:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Tiberium Weapons Research
-    Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~industry, napyra, ~!upgrade.tiblaser
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description:  Improves the weapon of following units and buildings and causes them to create visceroids:\n- Hydra (Tiberium Laser + Tiberium AG Rockets)\n- Raven (Tiberium Rockets)\n- Gorran (Tiberium AG Rockets)\n- Hailstorm (Tibeirum Rockets)\n- Laser Turret (Tiberium Laser)\n- Obelisk of Light (Tiberium Laser)
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: upgrade.tiblaser
-    ProvidesPrerequisite@upgrade1:
-        Prerequisite: upgrade.tiblaser
-    ProvidesPrerequisite@upgrade2:
-        Prerequisite: upgrade.tibgas
+	Inherits: ^Tech
+	Tooltip:
+		Name: Tiberium Weapons Research
+	Buildable:
+		BuildPaletteOrder: 202
+		Prerequisites: ~industry, napyra, ~!upgrade.tiblaser
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Improves the weapon of following units and buildings and causes them to create visceroids:\n- Hydra (Tiberium Laser + Tiberium AG Rockets)\n- Raven (Tiberium Rockets)\n- Gorran (Tiberium AG Rockets)\n- Hailstorm (Tibeirum Rockets)\n- Laser Turret (Tiberium Laser)\n- Obelisk of Light (Tiberium Laser)
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: upgrade.tiblaser
+	ProvidesPrerequisite@upgrade1:
+		Prerequisite: upgrade.tiblaser
+	ProvidesPrerequisite@upgrade2:
+		Prerequisite: upgrade.tibgas
 
 upgrade.tech:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Technology
-    Buildable:
-        BuildPaletteOrder: 199
-        Prerequisites: ~structures.nod, ~!ideology
-        Queue: Building.Nod
-        IconPalette: nt
-        BuildLimit: 1
-        Description: Choose Technology doctrine.\n\nTechnology Nod is specialized in advanced weapon prototypes including stealth, laser and EMP.
-    Valued:
-        Cost: 0
-    RenderSprites:
-        Image: nt
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: technology
-    ProvidesPrerequisite@ideology:
-        Prerequisite: ideology
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Technology
+	Buildable:
+		BuildPaletteOrder: 199
+		Prerequisites: ~structures.nod, ~!ideology
+		Queue: Building.Nod
+		IconPalette: nt
+		BuildLimit: 1
+		Description: Choose Technology doctrine.\n\nTechnology Nod is specialized in advanced weapon prototypes including stealth, laser and EMP.
+	Valued:
+		Cost: 0
+	RenderSprites:
+		Image: nt
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: technology
+	ProvidesPrerequisite@ideology:
+		Prerequisite: ideology
+
 upgrade.tech.laser:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Improved Laser Emitter 
-    Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~technology, napyra, ~!upgrade.laser
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Improves the following units and buildings:\n- Venom (receives a laser)\n- Shadow Trooper (receives a laser)\n- Phantom Tank (receives a laser)\n- Laser Turret (increases the damage)\n- Obelisk of Light (increases the damage)
-    Valued:
-        Cost: 2000
-    RenderSprites:
-        Image: upgrade.laser
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.laser
-       
+	Inherits: ^Tech
+	Tooltip:
+		Name: Improved Laser Emitter
+	Buildable:
+		BuildPaletteOrder: 201
+		Prerequisites: ~technology, napyra, ~!upgrade.laser
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Improves the following units and buildings:\n- Venom (receives a laser)\n- Shadow Trooper (receives a laser)\n- Phantom Tank (receives a laser)\n- Laser Turret (increases the damage)\n- Obelisk of Light (increases the damage)
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: upgrade.laser
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.laser
+
 upgrade.tech.stealth:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Stealth Emitters
-    Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~technology, napyra, ~!upgrade.stealth
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Grants invisibilty to following units and structures:\n- Elite Cadre\n- Rocketeer\n- Engineer\n- Shadow Trooper\n- Specter Artillery\n- Flame Turret\n- Laser Turret\n- SAM Site
-    Valued:
-        Cost: 1500
-    RenderSprites:
-        Image: upgrade.stealth
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.stealth
-        
+	Inherits: ^Tech
+	Tooltip:
+		Name: Stealth Emitters
+	Buildable:
+		BuildPaletteOrder: 201
+		Prerequisites: ~technology, napyra, ~!upgrade.stealth
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Grants invisibilty to following units and structures:\n- Elite Cadre\n- Rocketeer\n- Engineer\n- Shadow Trooper\n- Specter Artillery\n- Flame Turret\n- Laser Turret\n- SAM Site
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgrade.stealth
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.stealth
+
 upgrade.tech.emp:
-    Inherits: ^Tech
-    Tooltip:
-        Name: EMP Tech
-    Buildable:
-        BuildPaletteOrder: 201
-        Prerequisites: ~technology, napyra, ~!upgrade.emp
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Grants following units EMP weapons:\n- Specter Artillery\n- Stealth Tank
-    Valued:
-        Cost: 1000
-    RenderSprites:
-        Image: upgrade.emp
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.emp
+	Inherits: ^Tech
+	Tooltip:
+		Name: EMP Tech
+	Buildable:
+		BuildPaletteOrder: 201
+		Prerequisites: ~technology, napyra, ~!upgrade.emp
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Grants following units EMP weapons:\n- Specter Artillery\n- Stealth Tank
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: upgrade.emp
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.emp
 
 upgrade.propaganda:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Propaganda
-    Buildable:
-        BuildPaletteOrder: 199
-        Prerequisites: ~structures.nod, ~!ideology
-        Queue: Building.Nod
-        IconPalette: np
-        BuildLimit: 1
-        Description: Choose Propaganda doctrine.\n\nPropaganda Nod is specialized in infantry, heavy units and flame weapons.
-    Valued:
-        Cost: 0
-    RenderSprites:
-        Image: np
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: propaganda
-    ProvidesPrerequisite@ideology:
-        Prerequisite: ideology
+	Inherits: ^Tech
+	Tooltip:
+		Name: Propaganda
+	Buildable:
+		BuildPaletteOrder: 199
+		Prerequisites: ~structures.nod, ~!ideology
+		Queue: Building.Nod
+		IconPalette: np
+		BuildLimit: 1
+		Description: Choose Propaganda doctrine.\n\nPropaganda Nod is specialized in infantry, heavy units and flame weapons.
+	Valued:
+		Cost: 0
+	RenderSprites:
+		Image: np
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: propaganda
+	ProvidesPrerequisite@ideology:
+		Prerequisite: ideology
 
 upgrade.propaganda.mass:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Mass Recruitment
-    Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~propaganda, napyra
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Cuts the cost of the following units in half:\n- Rookie\n- Rocketeer
-    Valued:
-        Cost: 1500
-    RenderSprites:
-        Image: upgrade.mass
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.mass
+	Inherits: ^Tech
+	Tooltip:
+		Name: Mass Recruitment
+	Buildable:
+		BuildPaletteOrder: 202
+		Prerequisites: ~propaganda, napyra
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Cuts the cost of the following units in half:\n- Rookie\n- Rocketeer
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgrade.mass
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.mass
 
 upgrade.propaganda.nanofiber:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Nanofiber Armor
-    Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~propaganda, napyra
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Improves the durability of all Nod soldiers by 15%.
-    Valued:
-        Cost: 1500
-    RenderSprites:
-        Image: upgrade.nanofiber
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.nanofiber
+	Inherits: ^Tech
+	Tooltip:
+		Name: Nanofiber Armor
+	Buildable:
+		BuildPaletteOrder: 202
+		Prerequisites: ~propaganda, napyra
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Improves the durability of all Nod soldiers by 15%.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgrade.nanofiber
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.nanofiber
 
 upgrade.propaganda.bluehell:
-    Inherits: ^Tech
-    Tooltip:
-        Name: Bluehell Inferno
-    Buildable:
-        BuildPaletteOrder: 202
-        Prerequisites: ~propaganda, napyra, ~!upgrade.bluehell
-        Queue: Tech.Nod
-        BuildLimit: 1
-        Description: Improves the damage the following units and buildings:\n- Raven\n- Black Hand Flamer\n- Pyradon Tank\n- Specter Artillery\n- Flame Turret
-    Valued:
-        Cost: 1500
-    RenderSprites:
-        Image: upgrade.bluehell
-    ProvidesPrerequisite@upgrade:
-        Prerequisite: upgrade.bluehell
+	Inherits: ^Tech
+	Tooltip:
+		Name: Bluehell Inferno
+	Buildable:
+		BuildPaletteOrder: 202
+		Prerequisites: ~propaganda, napyra, ~!upgrade.bluehell
+		Queue: Tech.Nod
+		BuildLimit: 1
+		Description: Improves the damage the following units and buildings:\n- Raven\n- Black Hand Flamer\n- Pyradon Tank\n- Specter Artillery\n- Flame Turret
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgrade.bluehell
+	ProvidesPrerequisite@upgrade:
+		Prerequisite: upgrade.bluehell
