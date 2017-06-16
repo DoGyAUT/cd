@@ -44,6 +44,7 @@ GAGATE_B:
 
 GASILO:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Defense.GDI
@@ -86,6 +87,7 @@ GASILO:
 
 GAMG:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	WithSpriteBody:
 	Valued:
@@ -149,6 +151,7 @@ GAMG:
 
 GAMG2:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
@@ -241,6 +244,7 @@ GAMG2:
 
 GASENTUR:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
@@ -299,6 +303,7 @@ GASENTUR:
 
 GAMIS:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	WithSpriteBody:
@@ -353,6 +358,7 @@ GAMIS:
 
 GACAN:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	WithSpriteBody:
 	Valued:
@@ -410,6 +416,7 @@ GACAN:
 GAMORTAR:
 	Inherits: ^Defense
 	Inherits@2: ^GainsExperience
+    Inherits@3: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	WithSpriteBody:
 	Valued:
@@ -467,6 +474,7 @@ GAMORTAR:
 FTWR:
 	Inherits: ^Defense
 	Inherits@2: ^GainsExperience
+    Inherits@3: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	WithSpriteBody:
 	Valued:
@@ -547,6 +555,7 @@ FTWR:
 
 GAFORT:
 	Inherits: ^Defense
+    Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	WithSpriteBody:
 	Valued:
@@ -612,6 +621,7 @@ GAPLUG3:
 
 GAPLUG:
 	Inherits: ^Building
+    Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:

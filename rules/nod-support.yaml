@@ -44,6 +44,7 @@ NAGATE_B:
 
 NASILO:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Defense.Nod
 		BuildPaletteOrder: 203
@@ -81,10 +82,10 @@ NASILO:
 		Capacity: 1500
 	Power:
 		Amount: -10
-	HitShape:
 
 NAFLAMER:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 800
@@ -145,10 +146,10 @@ NAFLAMER:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:
 
 NAGAT:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 800
@@ -199,10 +200,10 @@ NAGAT:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 NALASR:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 1000
@@ -262,10 +263,10 @@ NALASR:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:
 
 NASAM:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 800
@@ -314,7 +315,6 @@ NASAM:
 		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 NABUNKER:
 	Inherits: ^Defense
@@ -352,6 +352,7 @@ NABUNKER:
 
 NAOBEL:
 	Inherits: ^Defense
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -422,10 +423,10 @@ NAOBEL:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:
 
 NAPULS:
 	Inherits: ^Defense
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 1500
@@ -481,10 +482,10 @@ NAPULS:
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: false
-	HitShape:
 
 NAMISL:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -538,7 +539,6 @@ NAMISL:
 		PauseOnCondition: power-outage
 	-FrozenUnderFog:
 	AlwaysVisible:
-	HitShape:
 
 NASTLH:
 	Inherits: ^Building

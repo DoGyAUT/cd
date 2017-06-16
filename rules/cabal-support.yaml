@@ -44,6 +44,7 @@ KAGATE_B:
 
 KASILO:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Defense.Cabal
@@ -82,10 +83,10 @@ KASILO:
 		Capacity: 1500
 	Power:
 		Amount: -10
-	HitShape:
 
 KABLASR:
 	Inherits: ^Defense
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 1000
@@ -128,10 +129,10 @@ KABLASR:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:
 
 KABCAN:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 1400
@@ -176,10 +177,10 @@ KABCAN:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:
 
 KDARK:
 	Inherits: ^Defense
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 1500
@@ -223,10 +224,10 @@ KDARK:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 KOBEL:
 	Inherits: ^Defense
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -276,4 +277,3 @@ KOBEL:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
-	HitShape:

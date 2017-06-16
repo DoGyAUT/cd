@@ -1,5 +1,6 @@
 NACNST:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -68,10 +69,10 @@ NACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
-	HitShape:
-
+    
 NAPOWR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -105,10 +106,10 @@ NAPOWR:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	HitShape:
 
 NAAPWR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -148,10 +149,10 @@ NAAPWR:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	HitShape:
 
 NIPROC:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -203,7 +204,6 @@ NIPROC:
 		Prerequisite: nproc
 	CustomSellValue:
 		Value: 500
-	HitShape:
 
 NTPROC:
 	Inherits: NIPROC
@@ -235,6 +235,7 @@ NPPROC:
 
 NAHAND:
 	Inherits: ^Building
+    Inherits@2: ^2x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -280,10 +281,10 @@ NAHAND:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 NAWEAP:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -368,10 +369,10 @@ NAWEAP:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
-	HitShape:
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -456,10 +457,10 @@ NARADR:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 NAHPAD:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -592,10 +593,10 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 NAPYRA:
 	Inherits: ^Building
+    Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -675,10 +676,10 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 NATECH:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
@@ -705,6 +706,7 @@ NATECH:
 
 NATMPL:
 	Inherits: ^Building
+    Inherits@2: ^3x4hitshape
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000

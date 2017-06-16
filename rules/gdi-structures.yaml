@@ -1,5 +1,6 @@
 GACNST:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -65,10 +66,11 @@ GACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
-	HitShape:
+
 
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -125,10 +127,10 @@ GAPOWR:
 		RequiresCondition: upgrade.gapowerup2
 		Amount: 75
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 GPROC:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^3x3hitshapewithyoffset 
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -175,10 +177,10 @@ GPROC:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
-	HitShape:
-
+    
 GAPILE:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.GDI
@@ -229,10 +231,10 @@ GAPILE:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 GAWEAP:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -288,10 +290,10 @@ GAWEAP:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 GARADR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -333,10 +335,10 @@ GARADR:
 	DetectCloaked:
 		Range: 21c218
 		CloakTypes: Underground
-	HitShape:
 
 GAARMORY:
 	Inherits: ^Building
+    Inherits@2: ^3x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.GDI
@@ -460,10 +462,10 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 GAHPAD:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 750
@@ -540,10 +542,10 @@ GAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 GADEPT:
 	Inherits: ^Building
+    Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 750
@@ -609,10 +611,10 @@ GADEPT:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
-	HitShape:
 
 GATECH:
 	Inherits: ^Building
+    Inherits@2: ^2x3hitshape
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 110
@@ -657,10 +659,10 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:
 
 GADROP:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshape
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 111
@@ -743,4 +745,3 @@ GADROP:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	HitShape:

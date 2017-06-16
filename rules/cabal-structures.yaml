@@ -1,5 +1,6 @@
 KACNST:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -71,13 +72,13 @@ KACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
-	HitShape:
 
 KPR:
 	Inherits@1: ^BuildingInfiltrate
 	Inherits@2: ^PowerBoostUpgrades
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+    Inherits@3: ^3x3hitshape
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 301
@@ -112,10 +113,10 @@ KPR:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
-	HitShape:
-
+    
 KPROC:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -162,10 +163,10 @@ KPROC:
 	ProvidesPrerequisite@buildingname:
 	CustomSellValue:
 		Value: 500
-	HitShape:
 
 CYBBAR:
 	Inherits: ^Building
+    Inherits@2: ^3x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -219,10 +220,10 @@ CYBBAR:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 KAWEAP:
 	Inherits: ^Building
+    Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -283,6 +284,7 @@ KAWEAP:
 
 KARADR:
 	Inherits: ^BuildingInfiltrate
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -349,6 +351,7 @@ KARADR:
 
 KAHPAD:
 	Inherits: ^Building
+    Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -403,6 +406,7 @@ KAHPAD:
 
 KABTECH:
 	Inherits: ^Building
+    Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Cabal
