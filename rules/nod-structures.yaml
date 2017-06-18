@@ -1,6 +1,6 @@
 NACNST:
 	Inherits: ^Building
-    Inherits@2: ^3x3hitshape
+	Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -69,10 +69,10 @@ NACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
-    
+
 NAPOWR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -109,7 +109,7 @@ NAPOWR:
 
 NAAPWR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x3hitshape
+	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -152,7 +152,7 @@ NAAPWR:
 
 NIPROC:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -235,7 +235,7 @@ NPPROC:
 
 NAHAND:
 	Inherits: ^Building
-    Inherits@2: ^2x4hitshape
+	Inherits@2: ^2x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -284,7 +284,7 @@ NAHAND:
 
 NAWEAP:
 	Inherits: ^Building
-    Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -372,7 +372,7 @@ NAWEAP:
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -460,7 +460,7 @@ NARADR:
 
 NAHPAD:
 	Inherits: ^Building
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -596,7 +596,7 @@ NAHPAD:
 
 NAPYRA:
 	Inherits: ^Building
-    Inherits@2: ^4x4hitshape
+	Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -679,7 +679,7 @@ NAPYRA:
 
 NATECH:
 	Inherits: ^Building
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
@@ -706,7 +706,7 @@ NATECH:
 
 NATMPL:
 	Inherits: ^Building
-    Inherits@2: ^3x4hitshape
+	Inherits@2: ^3x4hitshape
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000
