@@ -64,6 +64,19 @@ camera.orcascout:
 		Range: 14c146
 		CloakTypes: Cloak
 
+camera.nodscan:
+	Inherits: CAMERA
+	RenderSpritesEditorOnly:
+		Image: camera
+	EditorOnlyTooltip:
+		Name: (support power proxy camera)
+	RevealsShroud:
+		Range: 21c0
+		Type: GroundPosition
+	DetectCloaked:
+		Range: 21c0
+		CloakTypes: Cloak
+
 CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:

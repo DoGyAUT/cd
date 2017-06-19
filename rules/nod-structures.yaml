@@ -379,7 +379,7 @@ NARADR:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
 		Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units
+		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units\n- Provides a Radar Scan ability
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -435,28 +435,23 @@ NARADR:
 		ClockSequence: clock
 		Range: 8
 		Duration: 450
-	AirstrikePower@orcascout:
-		OrderName: Radar Vision
+	SpawnActorPower@nodscan:
+		OrderName: RadarScanPower
+		Actor: camera.nodscan
 		Prerequisites: naradr
-		Icon: orcascout
+		Icon: nodscanicon
 		ChargeTime: 180
-		Description: Radar Vision
+		Description: Radar Scan
 		LongDesc: Reveals an area of the map and cloaked enemy units.
-		SelectTargetSound: orca_m12.aud
-		EndChargeSound: orca_s10.aud
-		LaunchSound: orca_a10.aud
-		CameraActor: camera.orcascout
-		CameraRemoveDelay: 300
-		UnitType: orca_g
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		QuantizedFacings: 8
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: orcascout
+		LifeTime: 350
+		#DeploySound: soundhere
+		#EffectImage: image
+		#EffectPalette: palhere
+		#EffectSequence: sequence
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		Sequence: idle
 
 NAHPAD:
 	Inherits: ^Building
