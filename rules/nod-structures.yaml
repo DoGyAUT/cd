@@ -1,6 +1,6 @@
 NACNST:
 	Inherits: ^Building
-    Inherits@2: ^3x3hitshape
+	Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -69,10 +69,10 @@ NACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
-    
+
 NAPOWR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -109,7 +109,7 @@ NAPOWR:
 
 NAAPWR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x3hitshape
+	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -152,7 +152,7 @@ NAAPWR:
 
 NIPROC:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -235,7 +235,7 @@ NPPROC:
 
 NAHAND:
 	Inherits: ^Building
-    Inherits@2: ^2x4hitshape
+	Inherits@2: ^2x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -284,7 +284,7 @@ NAHAND:
 
 NAWEAP:
 	Inherits: ^Building
-    Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -372,14 +372,14 @@ NAWEAP:
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
 		Prerequisites: anypower, nproc, ~structures.nod, ~ideology
-		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units
+		Description: Provides an overview of the battlefield.\n\nSpecial:\n- Provides minimap\n- Provides special infantry taskforce drop (Technology)\n- Provides a special buff ability to increase attack and movement speed of infantry (Propaganda)\n- Detects underground units\n- Provides a Radar Scan ability
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -435,32 +435,27 @@ NARADR:
 		ClockSequence: clock
 		Range: 8
 		Duration: 450
-	AirstrikePower@orcascout:
-		OrderName: Radar Vision
+	SpawnActorPower@nodscan:
+		OrderName: RadarScanPower
+		Actor: camera.nodscan
 		Prerequisites: naradr
-		Icon: orcascout
+		Icon: nodscanicon
 		ChargeTime: 180
-		Description: Radar Vision
+		Description: Radar Scan
 		LongDesc: Reveals an area of the map and cloaked enemy units.
-		SelectTargetSound: orca_m12.aud
-		EndChargeSound: orca_s10.aud
-		LaunchSound: orca_a10.aud
-		CameraActor: camera.orcascout
-		CameraRemoveDelay: 300
-		UnitType: orca_g
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		QuantizedFacings: 8
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: orcascout
+		LifeTime: 350
+		#DeploySound: soundhere
+		#EffectImage: image
+		#EffectPalette: palhere
+		#EffectSequence: sequence
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		Sequence: idle
 
 NAHPAD:
 	Inherits: ^Building
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -596,7 +591,7 @@ NAHPAD:
 
 NAPYRA:
 	Inherits: ^Building
-    Inherits@2: ^4x4hitshape
+	Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -679,7 +674,7 @@ NAPYRA:
 
 NATECH:
 	Inherits: ^Building
-    Inherits@2: ^2x2hitshape
+	Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
@@ -706,7 +701,7 @@ NATECH:
 
 NATMPL:
 	Inherits: ^Building
-    Inherits@2: ^3x4hitshape
+	Inherits@2: ^3x4hitshape
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000

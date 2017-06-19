@@ -167,6 +167,7 @@ DREADFIRE:
 		VoiceSet: Dreadfire
 		Volume: 2
 	-ThrowsShrapnel@human:
+	-DamagedByTerrain@firedamage:
 	-ExternalCondition@firedamage:
 	Explodes:
 		Weapon: UnitExplodeSmall
@@ -418,12 +419,15 @@ SILVER:
 	-LeavesTrails@ground:
 	-LeavesTrails@water:
 	-GrantConditionOnTerrain@Veins:
+	-WithIdleOverlay@Veins:
 	-DamagedByTerrain@TibGas:
+	-ExternalCondition@gasdamage:
 	-DamagedByTerrain@firedamage:
+	-ExternalCondition@firedamage:
 	-Targetable:
 	Targetable@GROUND:
 		TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !inside-tunnel && !airborne
+		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
 		TargetTypes: Air
 		RequiresCondition: airborne
