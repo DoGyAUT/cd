@@ -28,16 +28,11 @@ nacnst:
 		Offset: 0, -36
 		UseTilesetCode: false
 	idle:
-		ShadowStart: 3
 	damaged-idle:
-		Start: 1
-		ShadowStart: 4
 	dead:
-		Start: 2
-		ShadowStart: 5
 		Tick: 400
 	make: nacnstmk
-		Length: 26
+		Length: 25
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0, 25
@@ -609,30 +604,23 @@ gaweap:
 
 kpr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -36
 		UseTilesetCode: false
 	idle:
-		ShadowStart: 3
 	damaged-idle:
-		Start: 1
-		ShadowStart: 4
 	dead:
-		Start: 2
-		ShadowStart: 5
 		Tick: 400
 	idle-lights: kpr_a
+		Offset: -9, -66
 		Length: 9
 		Tick: 200
-	idle-lights2: kpr_b
-		Length: 6
-		Tick: 200
 	damaged-idle-lights: kpr_a
+		Offset: -9, -66
 		Start: 0
 		Length: 9
 		Tick: 200
 	make: kprmk
-		Length: 19
-		ShadowStart: 19
+		Length: 25
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0, 25
