@@ -571,7 +571,7 @@
 
 ^Gate_A:
 	Inherits: ^Gate
-    Inherits@2: ^3x1hitshape
+	Inherits@2: ^3x1hitshape
 	Gate:
 		Dimensions: 3,1
 		Footprint: xxx
@@ -582,7 +582,7 @@
 
 ^Gate_B:
 	Inherits: ^Gate
-    Inherits@2: ^1x3hitshape
+	Inherits@2: ^1x3hitshape
 	Gate:
 		Dimensions: 1,3
 		Footprint: xxx
@@ -592,14 +592,15 @@
 		Connections: 0,-1, 0,1
 
 ^BuildingPlug:
+	Inherits@hitshape: ^1x1hitshape
 	AlwaysVisible:
 	Building:
 		BuildSounds: place2.aud
 	KillsSelf:
 		RemoveInstead: True
 	RenderSprites:
-	HitShape:
-		UseOccupiedCellsOffsets: true
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
 
 ^Infantry:
 	Inherits@1: ^GainsExperienceInf
@@ -2175,6 +2176,7 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^Cloakable
+	Inherits@5: ^IronCurtainable
 	RenderVoxels:
 		PlayerPalette: cdvoxels
 		LightAmbientColor: -0.1,-0.1,-0.1
@@ -2258,89 +2260,89 @@
 		RequiresCondition: !power-outage
 
 ^3x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -1536
-            BottomRight: 1536, 1536
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+
 ^2x2hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -1024
-            BottomRight: 1024, 1024
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
+
 ^1x1hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -512, -512
-            BottomRight: 512, 512
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+
 ^2x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -1536
-            BottomRight: 1024, 1536
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -1536
+			BottomRight: 1024, 1536
+
 ^2x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -2048
-            BottomRight: 1024, 2048
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -2048
+			BottomRight: 1024, 2048
+
 ^1x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -512, -1536
-            BottomRight: 512, 1536
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
+
 ^3x1hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -512
-            BottomRight: 1536, 512
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
+
 ^3x2hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -1024
-            BottomRight: 1536, 1024
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 1024
+
 ^3x3hitshapewithyoffset:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -2048
-            BottomRight: 1536, 1024
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 1024
+
 ^4x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2048, -2048
-            BottomRight: 2048, 2048
-            
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
+
 ^3x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -2048
-            BottomRight: 1536, 2048
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 2048
