@@ -13,7 +13,7 @@ FAWALL:
 	Tooltip:
 		Name: Concrete Wall
 	Health:
-		HP: 400
+		HP: 560
 	BlocksProjectiles:
 		Height: 0c905
 	Crushable:
@@ -44,6 +44,7 @@ FAGATE_B:
 
 FASILO:
 	Inherits: ^BuildingInfiltrate
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 403
@@ -64,7 +65,7 @@ FASILO:
 		Bounds: 80, 48, -5, 0
 	-GivesBuildableArea:
 	Health:
-		HP: 600
+		HP: 840
 	RevealsShroud:
 		Range: 5c673
 	RenderSprites:
@@ -84,6 +85,7 @@ FASILO:
 
 FATOWER:
 	Inherits: ^Defense
+	Inherits: ^1x1hitshape
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 403
@@ -101,7 +103,7 @@ FATOWER:
 	Power:
 		Amount: -25
 	Health:
-		HP: 940
+		HP: 1316
 	RevealsShroud:
 		Range: 14c146
 	Armament@attack:
@@ -120,6 +122,7 @@ FATOWER:
 
 FAFLAK:
 	Inherits: ^Defense
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 404
@@ -137,7 +140,7 @@ FAFLAK:
 	Power:
 		Amount: -25
 	Health:
-		HP: 940
+		HP: 1316
 	RevealsShroud:
 		Range: 18c394
 	BodyOrientation:
@@ -162,6 +165,7 @@ FAFLAK:
 
 FAMISSILE:
 	Inherits: ^Defense
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Defense.Forg
@@ -180,7 +184,7 @@ FAMISSILE:
 	Power:
 		Amount: -50
 	Health:
-		HP: 1800
+		HP: 2520
 	RevealsShroud:
 		Range: 18c394
 	BodyOrientation:

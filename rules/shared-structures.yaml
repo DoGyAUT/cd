@@ -30,6 +30,7 @@ TECH:
 
 TIBTECH:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Tooltip:
 		Name: Drill Station
 	Building:
@@ -60,10 +61,10 @@ TIBTECH:
 	Explodes:
 		Weapon: TiberiumExplosionDrill
 		EmptyWeapon: TiberiumExplosionDrill
-	HitShape:
 
 CAHOSP:
 	Inherits: ^Building
+	Inherits@2: ^3x4hitshape
 	Tooltip:
 		Name: Civilian Hospital
 	Building:
@@ -85,10 +86,10 @@ CAHOSP:
 	ProximityExternalCondition:
 		Condition: medic_heal
 		Range: 707c109
-	HitShape:
 
 CAARMR:
 	Inherits: ^Building
+	Inherits@2: ^4x4hitshape
 	Tooltip:
 		Name: Civilian Armory
 	Building:
@@ -111,10 +112,10 @@ CAARMR:
 		CaptureCompleteTime: 7
 	ProvidesPrerequisite:
 		Prerequisite: armory.upgraded
-	HitShape:
 
 CAARAY:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Tooltip:
 		Name: Civilian Array
 	Building:
@@ -140,4 +141,3 @@ CAARAY:
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
-	HitShape:
