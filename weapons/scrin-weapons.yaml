@@ -3,7 +3,7 @@ LocustNail:
 	ReloadDelay: 100
 	Range: 9c921
 	Report: nailgun01.aud, nailgun02.aud, nailgun03.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground
 	Projectile: BulletAS
 		Speed: 3c548
 		Inaccuracy: 0c91
@@ -19,10 +19,6 @@ LocustNail:
 		Spread: 0c181
 		Damage: 200
 		ValidTargets: Ground
-	Warhead@2Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 100
-		ValidTargets: Air, MidAir
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
@@ -32,6 +28,14 @@ LocustNail:
 	Warhead@6Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
+
+LocustNailAA:
+	Inherits: LocustNail
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 100
+		ValidTargets: Air, MidAir, HighAir
 
 ChimeraZap:
 	Inherits@wh: ^SonicWH

@@ -17,9 +17,9 @@ HUSK:
 		VoiceSet: Husk
 		Volume: 2
 	Health:
-		HP: 400
+		HP: 450
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 8c497
 	Armament@PRIMARY:
@@ -50,7 +50,7 @@ HHUSK:
 		Prerequisites: ~cybbar
 		Description: Cabals standard infantry production type.\n\nGood vs: Ground Targets\n\nSpecial:\n- Receives only 50% damage from fire\n- Gets stunned by EMP\n- Crush class: Medium infantry
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: Cannon Husk
 	Selectable:
@@ -60,9 +60,9 @@ HHUSK:
 		VoiceSet: Husk
 		Volume: 2
 	Health:
-		HP: 180
+		HP: 280
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 9c921
 	Armament@PRIMARY:
@@ -104,7 +104,7 @@ CYBSPY:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 14c146
 	WithInfantryBody:
@@ -141,7 +141,7 @@ JAGUAR:
 	Health:
 		HP: 420
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 14c146
 	Armament@primary:
@@ -178,11 +178,11 @@ KENGINEER:
 		VoiceSet: Ascentor
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 8c497
 	Health:
-		HP: 360
+		HP: 400
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -212,7 +212,7 @@ VANGUARD:
 		VoiceSet: CyborgL
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 	Health:
 		HP: 390
 	RevealsShroud:
@@ -267,7 +267,7 @@ OVERSEER:
 	Health:
 		HP: 720
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 8c497
 	Armament@PRIMARY:
@@ -305,7 +305,7 @@ CYBFLY:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 10
-		Speed: 150
+		Speed: 135
 		AirborneCondition: airborne
 		CruisingCondition: cruising
 		LandWhenIdle: no
@@ -323,7 +323,12 @@ CYBFLY:
 		Range: 14c146
 		Type: GroundPosition
 	Armament@primary:
-		Weapon: SkirmishLaserFire
+		Weapon: SkirmisherLaserFire
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 566,91,849, 566,-91,849
+	Armament@primaryAA:
+		Weapon: SkirmisherLaserFireAA
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
 		LocalOffset: 566,91,849, 566,-91,849
@@ -376,7 +381,7 @@ CYC2:
 		VoiceSet: CyborgA
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 		SharesCell: False
 	Health:
 		HP: 1040
@@ -477,7 +482,7 @@ KAMIKAZE:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		Range: 14c146
 	Armament@primary:

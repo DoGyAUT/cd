@@ -1,5 +1,6 @@
 FACNST:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -11,7 +12,7 @@ FACNST:
 		Adjacent: 8
 		Description: Builds base structures.
 	Health:
-		HP: 5200
+		HP: 7280
 	RevealsShroud:
 		Range: 14c146
 	Production:
@@ -76,6 +77,7 @@ FACNST:
 
 FAPOWR:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -98,7 +100,7 @@ FAPOWR:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 5c673
 	Power:
@@ -116,13 +118,14 @@ FAPOWR:
 
 FPROC:
 	Inherits: ^BuildingInfiltrate
+	Inherits@2: ^5x3hitshapewithyoffset
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 402
 		Prerequisites: anypower, ~structures.forgotten
 		Description: Processes raw Tiberium into useable resources. \n\nStores 700$.
 	Valued:
-		Cost: 1500
+		Cost: 2800
 	Tooltip:
 		Name: Forgotten Refinery
 	Building:
@@ -136,7 +139,7 @@ FPROC:
 		Bounds: 160, 96, -5, -25
 	GivesBuildableArea:
 	Health:
-		HP: 1500
+		HP: 2800
 	TiberianSunRefinery:
 		DockAngle: 160
 		DockOffset: 5,0
@@ -178,6 +181,7 @@ FPROC:
 
 FABAR:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Forg
@@ -196,7 +200,7 @@ FABAR:
 	Selectable:
 		Bounds: 88, 56, 0, -8
 	Health:
-		HP: 800
+		HP: 1120
 	RevealsShroud:
 		Range: 7c73
 	RallyPoint:
@@ -228,6 +232,7 @@ FABAR:
 
 FAWEAP:
 	Inherits: ^Building
+	Inherits@2: ^4x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -246,7 +251,7 @@ FAWEAP:
 	Selectable:
 		Bounds: 149, 116, -3, -20
 	Health:
-		HP: 2000
+		HP: 2800
 	RevealsShroud:
 		Range: 5c673
 	RallyPoint:
@@ -292,6 +297,7 @@ FAWEAP:
 
 FARADR:
 	Inherits: ^BuildingInfiltrate
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -311,7 +317,7 @@ FARADR:
 	Selectable:
 		Bounds: 96, 82, 0, -17
 	Health:
-		HP: 1200
+		HP: 1680
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: mouse
@@ -322,7 +328,7 @@ FARADR:
 	DetectCloaked:
 		Range: 0c14
 	RevealsShroud:
-		Range: 28c291
+		Range: 16c942
 	WithIdleOverlay@DISH1:
 		Sequence: idle-dish1
 		PauseOnCondition: power-outage
@@ -338,16 +344,17 @@ FARADR:
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
-		Amount: -100
+		Amount: -75
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 21c218
+		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
 
 FHOVEL:
 	Inherits: ^Building
+	Inherits@2: ^4x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Forg
@@ -364,7 +371,7 @@ FHOVEL:
 	Selectable:
 		Bounds: 88, 56, 0, -8
 	Health:
-		HP: 1000
+		HP: 1400
 	RevealsShroud:
 		Range: 7c73
 	Power:
@@ -393,6 +400,7 @@ FHOVEL:
 
 FAHPAD:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 750
@@ -407,7 +415,7 @@ FAHPAD:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 800
+		HP: 1120
 	RevealsShroud:
 		Range: 7c73
 	Exit@1:
@@ -442,6 +450,7 @@ FAHPAD:
 
 FATRADE:
 	Inherits: ^Building
+	Inherits@2: ^5x5hitshape
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 409
@@ -457,7 +466,7 @@ FATRADE:
 	Selectable:
 		Bounds: 160, 120, 0, -8
 	Health:
-		HP: 2400
+		HP: 3360
 	RevealsShroud:
 		Range: 7c73
 	Power:

@@ -445,7 +445,6 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 
-
 ^BuildingInfiltrate:
 	Inherits: ^Building
 	Targetable:
@@ -696,14 +695,14 @@
 		DamageTypes: EnergyDeath, TriggerVisceroid
 	SpawnActorOnDeath@1:
 		Actor: visc_lrg
-		Probability: 35
+		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TriggerVisceroid
 		RequiresLobbyCreeps: True
 	SpawnActorOnDeath@2:
 		Actor: visc_sml
-		Probability: 15
+		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TriggerSmallVisceroid
@@ -1783,7 +1782,7 @@
 	Aircraft:
 		LandWhenIdle: False
 		CruiseAltitude: 11c321
-		IdealSeparation: 1c424
+		IdealSeparation: 0c001
 		Repulsable: False
 
 ^AttackBomber:
@@ -1791,7 +1790,7 @@
 	Aircraft:
 		LandWhenIdle: True
 		CruiseAltitude: 11c321
-		IdealSeparation: 1c424
+		IdealSeparation: 0c001
 		Repulsable: True
 	ReturnOnIdle:
 	Targetable@GROUND:
@@ -1808,7 +1807,7 @@
 		LandWhenIdle: False
 		CruiseAltitude: 11c321
 		Repulsable: True
-		IdealSeparation: 1c424
+		IdealSeparation: 0c001
 	ReturnOnIdle:
 	Targetable@GROUND:
 		TargetTypes: Ground
@@ -2338,6 +2337,22 @@
             LocalYaw: 128
             TopLeft: -1536, -2048
             BottomRight: 1536, 1024
+			
+^4x3hitshapewithyoffset:
+    HitShape:
+        UseOccupiedCellsOffsets: true
+        Type: Rectangle
+            LocalYaw: 128
+            TopLeft: -2048, -2560
+            BottomRight: 2048, 2048
+			
+^5x3hitshapewithyoffset:
+    HitShape:
+        UseOccupiedCellsOffsets: true
+        Type: Rectangle
+            LocalYaw: 128
+            TopLeft: -2560, -3072
+            BottomRight: 2560, 2560
             
 ^4x4hitshape:
     HitShape:
@@ -2354,3 +2369,19 @@
             LocalYaw: 128
             TopLeft: -1536, -2048
             BottomRight: 1536, 2048
+			
+^4x3hitshape:
+    HitShape:
+        UseOccupiedCellsOffsets: true
+        Type: Rectangle
+            LocalYaw: 128
+            TopLeft: -2048, -1536
+            BottomRight: 2048, 1536
+			
+^5x5hitshape:
+    HitShape:
+        UseOccupiedCellsOffsets: true
+        Type: Rectangle
+            LocalYaw: 128
+            TopLeft: -2560, -2560
+            BottomRight: 2560, 2560

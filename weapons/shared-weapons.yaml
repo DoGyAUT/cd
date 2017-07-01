@@ -113,7 +113,7 @@ UnitExplodeSmaller:
 UnitExplodeHeli:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
-		Damage: 300
+		Damage: 50
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -135,7 +135,7 @@ UnitExplodeHeli:
 UnitExplodePlane:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 700
+		Damage: 100
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -156,8 +156,8 @@ UnitExplodePlane:
 
 UnitExplodeCrapJet:
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
-		Damage: 900
+		Spread: 1c0
+		Damage: 350
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -416,7 +416,7 @@ TiberiumHeal:
 
 Vulcan:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 35
 	Range: 7c73
 	Report: mgfire.aud
@@ -430,7 +430,7 @@ Vulcan:
 
 WatchSniper:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ValidTargets: Ground
 	ReloadDelay: 60
 	Range: 14c146
@@ -487,7 +487,7 @@ RPGTower:
 
 UmagonSniper:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 60
 	Range: 9c559
 	Report: silencer.aud
@@ -657,7 +657,7 @@ SlimeAttack:
 		Speed: 0c602
 		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
-		Damage: 100
+		Damage: 125
 
 SmallSlimeAttack:
 	Inherits@wh: ^TiberiumWH
@@ -668,7 +668,7 @@ SmallSlimeAttack:
 		Speed: 0c602
 		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
-		Damage: 50
+		Damage: 75
 
 Tentacle:
 	Inherits@wh: ^TiberiumWH

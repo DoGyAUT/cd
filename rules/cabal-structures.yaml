@@ -12,7 +12,7 @@ KACNST:
 		Adjacent: 8
 		Description: Builds base structures.\n\nSpecial:\n- Provides minimap radar.
 	Health:
-		HP: 5200
+		HP: 7280
 	RevealsShroud:
 		Range: 14c146
 	Production:
@@ -99,7 +99,7 @@ KPR:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 5c673
 #	WithIdleOverlay@LIGHTS:
@@ -136,7 +136,7 @@ KPROC:
 	Selectable:
 		Bounds: 134, 122, 0, -18
 	Health:
-		HP: 1500
+		HP: 2800
 	RevealsShroud:
 		Range: 8c497
 	TiberianSunRefinery:
@@ -186,7 +186,7 @@ CYBBAR:
 	Selectable:
 		Bounds: 116, 78, 3, -8
 	Health:
-		HP: 800
+		HP: 1280
 	RevealsShroud:
 		Range: 7c73
 	Exit@1:
@@ -242,7 +242,7 @@ KAWEAP:
 	Selectable:
 		Bounds: 149, 116, -3, -20
 	Health:
-		HP: 2000
+		HP: 2800
 	RevealsShroud:
 		Range: 5c673
 	RallyPoint:
@@ -304,7 +304,7 @@ KARADR:
 	Selectable:
 		Bounds: 96, 82, 0, -17
 	Health:
-		HP: 1200
+		HP: 1680
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: mouse
@@ -315,7 +315,7 @@ KARADR:
 	DetectCloaked:
 		Range: 0c14
 	RevealsShroud:
-		Range: 28c291
+		Range: 16c942
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: power-outage
@@ -325,11 +325,11 @@ KARADR:
 	Targetable:
 		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
-		Amount: -100
+		Amount: -75
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 21c218
+		Range: 12c696
 		CloakTypes: Underground
 	GrantExternalConditionPower@powerboost:
 		OrderName: GrantPowerBoostPowerInfoOrder
@@ -347,7 +347,6 @@ KARADR:
 		CircleSequence: circles
 		ClockSequence: clock
 		Range: 2
-	HitShape:
 
 KAHPAD:
 	Inherits: ^Building
@@ -362,7 +361,7 @@ KAHPAD:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 1000
+		HP: 1400
 	RevealsShroud:
 		Range: 7c73
 	Exit@1:
@@ -423,7 +422,7 @@ KABTECH:
 	Selectable:
 		Bounds: 118, 118, -6, -38
 	Health:
-		HP: 2400
+		HP: 3360
 	RevealsShroud:
 		Range: 7c73
 	Power:
