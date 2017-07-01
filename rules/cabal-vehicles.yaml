@@ -36,7 +36,11 @@ KMCV:
 	Health:
 		HP: 2000
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	MustBeDestroyed:
 		RequiredForShortGame: True
 	BaseBuilding:
@@ -104,7 +108,11 @@ KHARV:
 	Health:
 		HP: 1200
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	RenderSprites:
 	RenderVoxels:
 	-WithVoxelBody:
@@ -143,7 +151,11 @@ DREADFIRE:
 		Interval: 18
 		RequiresCondition: walker
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 7c73
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 9c73
 	Health:
 		HP: 1850
 	AttackFrontal:
@@ -195,7 +207,11 @@ REAPER:
 	Health:
 		HP: 1000
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 12c745
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 14c745
 	AttackFrontal:
 	AutoTarget:
 	BodyOrientation:
@@ -255,7 +271,11 @@ GOLEM:
 		Speed: 78
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	Health:
 		HP: 520
 	SelfHealing:
@@ -327,7 +347,11 @@ TARANTULA:
 	Health:
 		HP: 960
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 20c394
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -374,11 +398,17 @@ SILVER:
 	RevealsShroud@cruising:
 		Range: 10c0
 		Type: CenterPosition
-		RequiresCondition: airborne
+		RequiresCondition: airborne && !upgrade.visionuplink
+	RevealsShroud@upgrade.visionuplink_airborne:
+		RequiresCondition: upgrade.visionuplink && airborne
+		Range: 12c0
 	RevealsShroud@ground:
 		Range: 3c0
 		Type: CenterPosition
-		RequiresCondition: !airborne
+		RequiresCondition: !airborne && !upgrade.visionuplink
+	RevealsShroud@upgrade.visionuplink_ground:
+		RequiresCondition: upgrade.visionuplink && !airborne
+		Range: 5c0
 	Armament@primary:
 		Weapon: HelionGun
 		LocalOffset: -362,362,724, -362,-362,724
@@ -461,7 +491,11 @@ KRONOS:
 	Health:
 		HP: 2080
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 11c321
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 13c321
 	Turreted:
 		TurnSpeed: 2
 		Offset: -362,0,45
@@ -525,7 +559,11 @@ FURY:
 	Health:
 		HP: 10400
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	Turreted@main:
 		Turret: primary
 		TurnSpeed: 1
@@ -619,7 +657,11 @@ GARGANTUA:
 		HealIfBelow: 50
 		DamageCooldown: 200
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 21c218
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 23c218
 	AttackFrontal:
 	AutoTarget:
 	BodyOrientation:

@@ -1177,18 +1177,23 @@
 		Voice: Move
 		Weight: 2
 
-^CyborgUpgrades:
-	GrantConditionOnPrerequisite@upgrade1a:
-		Condition: HChassis
-		Prerequisites: upgrade.hc
+^CyborgBuildingUpgrades:
+	ExternalCondition@upgrade.hc:
+		Condition: upgrade.hc
 	DamageMultiplier@hc:
-		RequiresCondition: HChassis
+		RequiresCondition: upgrade.hc
 		Modifier: 75
-	GrantConditionOnPrerequisite@upgrade1b:
-		Condition: LChassis
-		Prerequisites: upgrade.lc
+
+^CyborgUpgrades:
+	ExternalCondition@upgrade.lc:
+		Condition: upgrade.lc
 	SpeedMultiplier@lc:
-		RequiresCondition: LChassis
+		RequiresCondition: upgrade.lc
+		Modifier: 130
+	ExternalCondition@upgrade.visionuplink:
+		Condition: upgrade.visionuplink
+	InaccuracyMultiplier@visionuplink:
+		RequiresCondition: upgrade.visionuplink
 		Modifier: 130
 
 ^InitiateUpgrades:

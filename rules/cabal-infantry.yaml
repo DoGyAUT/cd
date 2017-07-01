@@ -21,7 +21,11 @@ HUSK:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	Armament@PRIMARY:
 		Weapon: HuskGun
 		LocalOffset: 424,0,849
@@ -64,7 +68,11 @@ HHUSK:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 9c921
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 11c921
 	Armament@PRIMARY:
 		Weapon: CannonHuskGun
 		LocalOffset: 424,198,1086
@@ -106,7 +114,11 @@ CYBSPY:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	WithInfantryBody:
 		IdleSequences: idle1,idle2,idle3
 	AttackFrontal:
@@ -143,7 +155,11 @@ JAGUAR:
 	Mobile:
 		Speed: 45
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	Armament@primary:
 		Name: Bite
 		Weapon: JaguarClaw
@@ -180,7 +196,11 @@ KENGINEER:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	Health:
 		HP: 360
 	Passenger:
@@ -216,7 +236,11 @@ VANGUARD:
 	Health:
 		HP: 390
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 9c921
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 11c921
 	Armament@primary:
 		Weapon: VanguardGun
 		LocalOffset: 424,91,1131
@@ -269,7 +293,11 @@ OVERSEER:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 10c497
 	Armament@PRIMARY:
 		Weapon: OverseerGun
 		LocalOffset: 424,0,742
@@ -320,8 +348,12 @@ CYBFLY:
 	Armor@base:
 		Type: Aircraft
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
 		Type: GroundPosition
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	Armament@primary:
 		Weapon: SkirmishLaserFire
 		MuzzleSequence: muzzle
@@ -381,7 +413,11 @@ CYC2:
 	Health:
 		HP: 1040
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 11c321
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 13c321
 	SelfHealing:
 		Step: 1
 		PercentageStep: 0
@@ -423,7 +459,11 @@ GLAD:
 	Health:
 		HP: 5000
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 15c570
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 17c570
 	Armament@Plasma1:
 		Weapon: HarbringerGun
 		LocalOffset: 240,283,966
@@ -479,6 +519,10 @@ KAMIKAZE:
 	Mobile:
 		Speed: 38
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
+		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
 		Range: 14c146
 	Armament@primary:
 		Weapon: FanticBoom
