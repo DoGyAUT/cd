@@ -221,6 +221,7 @@ CYBBAR:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
 
+
 KAWEAP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshapewithyoffset
@@ -412,7 +413,7 @@ KABTECH:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 308
 		Prerequisites: anypower, karadr, ~structures.cabal
-		Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm
+		Description: Gives access to superior technology.\n\nSpecial:\n- Nanoswarm\n- Manta Strike
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -449,3 +450,21 @@ KABTECH:
 		Condition: invulnerability
 		Range: 2
 	HitShape:
+	AirstrikePower@MantaStrikeRun:
+		OrderName: MantaStrikeRun
+		UnitType: manta
+		SquadSize: 9
+		Icon: havoc
+		Description: Manta Strike
+		LongDesc: Attack everything in an area of the map.
+		SquadOffset: -2000,2000,0
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		QuantizedFacings: 8
+		ChargeTime: 240
+		DisplayBeacon: true
+		DisplayRadarPing: true
+		BeaconPoster: havoc
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
