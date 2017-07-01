@@ -280,7 +280,7 @@ GOLEM:
 		VoiceSet: CyborgH
 		Volume: 2
 	-ThrowsShrapnel@human:
-	ProximityExternalCondition:
+	ProximityExternalCondition@repair_heal:
 		Condition: repair_heal
 		Range: 7c73
 	WithRangeCircle:
@@ -288,7 +288,7 @@ GOLEM:
 		Range: 7c73
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
-	ProximityExternalCondition:
+	ProximityExternalCondition@cloakgenerator:
 		Condition: cloakgenerator
 		Range: 7c73
 		EnableSound: stealth01.aud
