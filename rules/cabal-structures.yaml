@@ -229,7 +229,7 @@ CYBBAR:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@cleansingaura:
+	DetonateWeaponPower@cleansingaura:
 		OrderName: cleansingaura
 		Icon: fortification
 		ChargeTime: 300
@@ -239,9 +239,9 @@ CYBBAR:
 		LowPowerSpeechNotification: LowPower
 		EndChargeSpeechNotification: SupportPowerReady
 		DisplayRadarPing: True
-		Condition: cleansingaura
-		Range: 4
-		Duration: 500
+		Weapon: cleansingaura
+		ActivationSequence: 
+		TargetCircleRange: 4c0
 
 KAWEAP:
 	Inherits: ^Building

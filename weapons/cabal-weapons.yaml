@@ -959,3 +959,13 @@ ReaperMissileAA:
 		Damage: 125
 		ValidTargets: Air, MidAir, HighAir
     DamageTypes: CabalWeapon
+
+cleansingaura:
+	ValidTargets: Infantry, Mutant
+	Warhead@emp: GrantExternalCondition
+		Range: 4c0
+		Duration: 90
+		Condition: cleansingaura
+		Duration: 500
+		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidStances: None, Enemy, Neutral, Ally
