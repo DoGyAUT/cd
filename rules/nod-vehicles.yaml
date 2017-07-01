@@ -63,7 +63,7 @@ NIHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
@@ -71,14 +71,32 @@ NIHARV:
 	Mobile:
 		Speed: 71
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
 			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
 	Health:
-		HP: 1200
+		HP: 1500
 	Armament@primary:
 		Weapon: NodHarvGun
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
 		LocalOffset: 362,0,1061
+		RequiresCondition: !upgrade.tibgas
+	Armament@primarytib:
+		Weapon: NodHarvTibGun
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 362,0,1061
+		RequiresCondition: upgrade.tibgas
 	AttackTurreted:
 	AutoTarget:
 	Turreted:
@@ -86,6 +104,9 @@ NIHARV:
 		Offset: 311,0,0
 	RevealsShroud:
 		Range: 8c497
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelTurret:
@@ -124,7 +145,7 @@ NTHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
@@ -132,9 +153,20 @@ NTHARV:
 	Mobile:
 		Speed: 71
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
 			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
 	Health:
-		HP: 1200
+		HP: 1500
 	GrantConditionOnPrerequisite@cloak:
 		Condition: technology
 		Prerequisites: technology
@@ -179,7 +211,7 @@ NPHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
@@ -189,9 +221,20 @@ NPHARV:
 	Mobile:
 		Speed: 71
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
 			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
 	Health:
-		HP: 1200
+		HP: 1500
 	RevealsShroud:
 		Range: 8c497
 	-ProducibleWithLevel:
@@ -375,9 +418,6 @@ GORRAN:
 		Range: 8c497
 	Turreted:
 		TurnSpeed: 3
-	DetectCloaked:
-		Range: 8c497
-	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: GorranCannon
 		LocalOffset: 990,0,891
@@ -441,6 +481,11 @@ BIKE:
 	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: BikeMissile
+		LocalOffset: 0,-232,622, 0,233,622
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@SECONDARY:
+		Weapon: BikeMissileAA
 		LocalOffset: 0,-232,622, 0,233,622
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha

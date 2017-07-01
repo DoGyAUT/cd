@@ -148,7 +148,7 @@ BisonLauncher:
 
 GriffinMG:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 50
 	Burst: 3
 	Range: 5c673
@@ -168,7 +168,7 @@ GriffinMG:
 
 AssaultTruckMG:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 60
 	Range: 5c673
 	Burst: 20
@@ -214,7 +214,7 @@ BuzzardGattlingCannonAttack2:
 
 BisonMG:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 200
 	Range: 9c559
 	Burst: 50
@@ -232,7 +232,7 @@ BisonMG:
 
 TaurusMG:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 80
 	Range: 11c321
 	Burst: 12
@@ -254,7 +254,7 @@ TaurusMG:
 
 WatchTowerMG:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 70
 	Range: 9c921
 	Burst: 30
@@ -674,7 +674,15 @@ ForgottenT2Missile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 75
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground
+
+ForgottenT2MissileAA:
+	Inherits: ForgottenT2Missile
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 75
+		ValidTargets: Air, MidAir, HighAir
 
 BuggyMissile:
 	Inherits: ^MissileAPHE
@@ -684,7 +692,7 @@ BuggyMissile:
 	BurstDelay: 3
 	Range: 8c497
 	Report: misl1.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground
 	Projectile: Missile
 		Arm: 2
 		Shadow: true
@@ -699,7 +707,15 @@ BuggyMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 60
-		ValidTargets: Ground, Air, MidAir
+		ValidTargets: Ground
+
+BuggyMissileAA:
+	Inherits: BuggyMissile
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 60
+		ValidTargets: Air, MidAir, HighAir
 
 BuzzardMissiles:
 	Inherits: ^MissileAPHE

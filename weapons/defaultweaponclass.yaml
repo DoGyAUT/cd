@@ -83,6 +83,7 @@ BlueFireballLauncher:
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		InvalidImpactTypes: Water
@@ -106,6 +107,7 @@ BlueFireballLauncher:
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		InvalidImpactTypes: Water
@@ -120,6 +122,8 @@ BlueFireballLauncher:
 ^MissileAPHE:
 	ValidTargets: Ground, Air, MidAir, HighAir
 	Projectile: Missile
+		MinimumLaunchAngle: 270
+		MaximumLaunchAngle: 270
 		MaximumLaunchSpeed: 0c301
 		Blockable: true
 		Shadow: true
@@ -128,14 +132,16 @@ BlueFireballLauncher:
 		HorizontalRateOfTurn: 8
 		RangeLimit: 28c291
 		Palette: effect
-		AllowSnapping: true
 		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
+		AllowSnapping: true
+		CloseEnough: 768
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 0
 		ValidTargets: Ground, Air, MidAir, HighAir
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_tumu
 		ExplosionPalette: apolra50alpha
@@ -161,6 +167,8 @@ BlueFireballLauncher:
 ^RocketHE:
 	ValidTargets: Ground
 	Projectile: BulletAS
+		MinimumLaunchAngle: 270
+		MaximumLaunchAngle: 270
 		Speed: 0c362
 		LaunchAngle: 125
 		Blockable: true
@@ -170,11 +178,14 @@ BlueFireballLauncher:
 		Palette: effect
 		TrailImage: durasmoke
 		TrailPalette: apolra50alpha
+		AllowSnapping: true
+		CloseEnough: 768
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 0
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
@@ -208,6 +219,7 @@ BlueFireballLauncher:
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
@@ -240,6 +252,7 @@ BlueFireballLauncher:
 		Spread: 0c362
 		Damage: 0
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
@@ -277,6 +290,7 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 200
+		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -319,6 +333,18 @@ BlueFireballLauncher:
 			Infantry: 100
 			Cyborg: 100
 			Vehicle: 10
+			Aircraft: 100
+			Building: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		
+^SuperBulletWH: #for heavier mgs's like raider, gattling etc.
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 0
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 15
 			Aircraft: 100
 			Building: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath

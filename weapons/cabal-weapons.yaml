@@ -1,7 +1,7 @@
 HuskGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 45
+	ReloadDelay: 30
 	Range: 7c73
 	Burst: 5
 	BurstDelay: 2
@@ -723,16 +723,16 @@ SabercutLaser:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
-SkirmishLaserFire:
+SkirmisherLaserFire:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 180
+	ReloadDelay: 40
 	Range: 5c673
 	MinRange: 1c424
-	Burst: 6
+	Burst: 2
 	BurstDelay: 10
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-	ValidTargets: Ground, Air, HighAir, Midair
+	ValidTargets: Ground
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c42
@@ -743,11 +743,9 @@ SkirmishLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Air, HighAir, Midair
+		ValidTargets: Ground
 		Spread: 0c59
 		Damage: 18
-		Versus:
-			Aircraft: 50
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -756,6 +754,14 @@ SkirmishLaserFire:
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidImpactTypes: Air, AirHit, Water
+		
+SkirmisherLaserFireAA:
+	Inherits: SkirmisherLaserFire
+	ValidTargets: Air, HighAir, Midair
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air, HighAir, Midair
+		Spread: 0c59
+		Damage: 9
 
 HarbingerLaserFire:
 	Inherits: ^BasicLaser
@@ -933,7 +939,7 @@ ReaperMissile:
 	Burst: 2
 	BurstDelay: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
@@ -942,5 +948,14 @@ ReaperMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 125
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground
 		DamageTypes: CabalWeapon
+		
+ReaperMissileAA:
+	Inherits: ReaperMissile
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 125
+		ValidTargets: Air, MidAir, HighAir
+    DamageTypes: CabalWeapon

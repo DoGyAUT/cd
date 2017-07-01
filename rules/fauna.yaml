@@ -24,6 +24,10 @@ DOGGIE:
 		WanderMoveRadius: 6
 		MinMoveDelay: 50
 		MaxMoveDelay: 300
+	AmbientSound:
+		SoundFiles: fiendscream01.aud, fiendscream02.aud, fiendscream03.aud, fiendscream04.aud, fiendscream05.aud, fiendscream06.aud, fiendscream07.aud
+		Delay: 150, 450
+		Interval: 300, 1000
 	HitShape:
 
 JFISH:
@@ -84,7 +88,7 @@ VISC_SML:
 		Name: Baby Visceroid
 		Description: Infantry transmorgifies into this, when killed by Adult Visceroids.
 	Health:
-		HP: 300
+		HP: 500
 	Valued:
 		Cost: 250
 	Armament:
@@ -107,6 +111,17 @@ VISC_SML:
 		Delay: 20
 		HealIfBelow: 100
 		DamageCooldown: 80
+	GrantPeriodicCondition@evolve:
+		Condition: evolve
+		CooldownDuration: 2000
+		ActiveDuration: 1000
+	TransformOnCondition:
+		RequiresCondition: evolve
+		IntoActor: visc_lrg
+	AmbientSound:
+		SoundFiles: visscream01.aud, visscream02.aud, visscream03.aud, visscream04.aud
+		Delay: 150, 450
+		Interval: 300, 1000
 	HitShape:
 
 VISC_LRG:
@@ -115,7 +130,7 @@ VISC_LRG:
 		Name: Adult Visceroid
 		Description: Infantry transmorgifies into this, when dieing on Tiberium fields.
 	Health:
-		HP: 450
+		HP: 700
 	Valued:
 		Cost: 500
 	Armament:
@@ -137,6 +152,10 @@ VISC_LRG:
 		Delay: 10
 		HealIfBelow: 100
 		DamageCooldown: 60
+	AmbientSound:
+		SoundFiles: visscream01.aud, visscream02.aud, visscream03.aud, visscream04.aud
+		Delay: 150, 450
+		Interval: 300, 1000
 	GrantPeriodicCondition@evolve:
 		Condition: evolve
 		CooldownDuration: 2000

@@ -84,7 +84,7 @@ KHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
@@ -106,7 +106,7 @@ KHARV:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1200
+		HP: 1500
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -137,7 +137,7 @@ DREADFIRE:
 		Class: Dreadfire
 	Buildable:
 		Queue: Vehicle.Cabal
-		BuildPaletteOrder: 303
+		BuildPaletteOrder: 304
 		Prerequisites: ~kaweap, karadr
 		Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
 	Mobile:
@@ -189,7 +189,7 @@ DREADFIRE:
 REAPER:
 	Inherits@1: ^Walker
 	Valued:
-		Cost: 1400
+		Cost: 1300
 	Tooltip:
 		Name: Reaper
 	Selectable:
@@ -197,7 +197,7 @@ REAPER:
 		Class: Reaper
 	Buildable:
 		Queue: Vehicle.Cabal
-		BuildPaletteOrder: 304
+		BuildPaletteOrder: 303
 		Prerequisites: ~kaweap
 		Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
 	Mobile:
@@ -227,6 +227,11 @@ REAPER:
 		MuzzlePalette: apolra50alpha
 	Armament@missiles:
 		Weapon: ReaperMissile
+		LocalOffset: 0,45,1556
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@missilesAA:
+		Weapon: ReaperMissileAA
 		LocalOffset: 0,45,1556
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha

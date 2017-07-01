@@ -228,32 +228,6 @@ GDIEpicRailgun2:
 	Inherits: GDIEpicRailgun
 	ReloadDelay: 80
 
-GuardianTowerRailgun:
-	Inherits@wh: ^RailgunWH
-	ReloadDelay: 80
-	Range: 11c321
-	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
-	Projectile: BulletAS
-		Speed: 2c848
-		Inaccuracy: 0c362
-		Blockable: false
-		Shadow: true
-		LaunchAngle: 45
-		Image: plasmaBullet
-		ContrailLength: 30
-		ContrailColor: 00FFFF
-		ContrailWidth: 0c35
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c59
-		Damage: 300
-	Warhead@2Eff: CreateEffect
-		Explosions: plasmawave1
-		ExplosionPalette: effect50alpha
-		ImpactSounds: explo09.aud
-		InvalidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumScorch
-
 LeviathanGun:
 	ReloadDelay: 200
 	Range: 22c642
@@ -713,7 +687,7 @@ TitanMK2Railgun:
 
 ColossusGun:
 	Inherits@wh: ^SonicWH
-	ReloadDelay: 72
+	ReloadDelay: 150
 	Range: 8c497
 	Report: sonic5.aud, sonic6.aud, sonic7.aud
 	Projectile: AreaBeam
@@ -751,7 +725,7 @@ ColossusGun:
 
 MammothMG:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 200
 	Range: 11c321
 	Report: TankMG_01.aud, TankMG_02.aud, TankMG_03.aud, TankMG_04.aud, TankMG_05.aud
@@ -772,7 +746,7 @@ MammothMG:
 
 VulcanTower:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 26
 	Burst: 3
 	Range: 9c921
@@ -789,7 +763,7 @@ VulcanTower:
 
 VulcanTower1:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 26
 	Burst: 3
 	Range: 11c321
@@ -815,7 +789,7 @@ VulcanTower3:
 
 WolverineGun:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
 	Range: 7c73
 	Report: Gat01.aud, Gat02.aud, Gat03.aud
@@ -833,7 +807,7 @@ WolverineGun:
 
 VultureGat:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 85
 	Range: 8c497
 	Report: mgfire.aud
@@ -851,7 +825,7 @@ VultureGat:
 
 APCMGvisual:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 75
 	Range: 8c497
 	Burst: 25
@@ -885,7 +859,7 @@ APCMGattack:
 
 OrcaCannon:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
 	Range: 8c497
 	MinRange: 1c424
@@ -1024,38 +998,6 @@ ZoneRaiderBazooka:
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidImpactTypes: Water, Air, AirHit
 
-GuardianTowerMissile:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ValidTargets: Ground
-	ReloadDelay: 100
-	Burst: 2
-	BurstDelay: 10
-	Range: 11c321
-	MinRange: 5c673
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c242
-		Blockable: false
-		Inaccuracy: 0c724
-		RangeLimit: 28c291
-		Speed: 2c486
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
-		Damage: 100
-		ValidTargets: Ground
-	Warhead@2Eff: CreateEffect
-		Explosions: small_tumu, medium_tumu, large_tumu
-		ExplosionPalette: apolra2
-		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@6Eff: CreateEffect
-		Explosions: medium_flash
-		ExplosionPalette: light
-
 VultureMissile:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^HEWH
@@ -1100,7 +1042,7 @@ MammothTusk:
 	Burst: 2
 	BurstDelay: 8
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c362
 		MinimumLaunchSpeed: 0c181
@@ -1109,7 +1051,15 @@ MammothTusk:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
-		ValidTargets: Ground, Air, MidAir
+		ValidTargets: Ground
+	
+MammothTuskAA:
+	Inherits: MammothTusk
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 150
+		ValidTargets: Air, MidAir, HighAir
 
 MammothWalkerTusk:
 	Inherits: ^MissileAPHE
@@ -1370,19 +1320,28 @@ HoverMRLSMissileAA:
 JavelinGun:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground
 	ReloadDelay: 100
 	Range: 8c497
 	Report: smaw.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
+		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
 		InvalidImpactTypes: Water, Air, AirHit
-
+		
+JavelinGunAA:
+	Inherits: JavelinGun
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 120
+		ValidTargets: Air, MidAir, HighAir
+		
 JavelinGunGarrison:
 	Inherits: JavelinGun
 	Range: 11c321
@@ -1416,3 +1375,65 @@ HellfireMissile:
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+
+GuardianTowerGun:
+	Inherits: 122mmAP
+	Range: 12c0
+	
+GuardianTowerMissile:
+	Inherits: ^MissileAPHE
+	Inherits@wh: ^APWH
+	ValidTargets: Ground
+	ReloadDelay: 100
+	Burst: 2
+	BurstDelay: 10
+	Range: 11c321
+	MinRange: 5c673
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c242
+		Blockable: false
+		Inaccuracy: 0c724
+		RangeLimit: 28c291
+		Speed: 2c486
+	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 100
+		ValidTargets: Ground
+	Warhead@2Eff: CreateEffect
+		Explosions: small_tumu, medium_tumu, large_tumu
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+
+GuardianTowerRailgun:
+	Inherits@wh: ^RailgunWH
+	ReloadDelay: 80
+	Range: 11c321
+	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
+	Projectile: BulletAS
+		Speed: 2c848
+		Inaccuracy: 0c362
+		Blockable: false
+		Shadow: true
+		LaunchAngle: 45
+		Image: plasmaBullet
+		ContrailLength: 30
+		ContrailColor: 00FFFF
+		ContrailWidth: 0c35
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c59
+		Damage: 300
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmawave1
+		ExplosionPalette: effect50alpha
+		ImpactSounds: explo09.aud
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch

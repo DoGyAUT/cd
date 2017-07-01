@@ -62,17 +62,28 @@ GHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
 	Mobile:
 		Speed: 71
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
 			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1500
+		HP: 1800
 	RevealsShroud:
 		Range: 8c497
 	RenderSprites:
@@ -346,7 +357,7 @@ HVR:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Valued:
-		Cost: 1100
+		Cost: 1250
 	Tooltip:
 		Name: Hover MLRS
 	Selectable:
@@ -360,7 +371,7 @@ HVR:
 		VoiceSet: Slingshot
 		Volume: 2
 	Mobile:
-		Speed: 99
+		Speed: 85
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Clear: 100
@@ -534,6 +545,11 @@ TRITON:
 		FireDelay: 10
 	Armament@rockets:
 		Weapon: MammothTusk
+		LocalOffset: 181,424,785, 181,-424,919
+		MuzzleSequence: muzzle2
+		MuzzlePalette: apolra50alpha
+	Armament@rocketsAA:
+		Weapon: MammothTuskAA
 		LocalOffset: 181,424,785, 181,-424,919
 		MuzzleSequence: muzzle2
 		MuzzlePalette: apolra50alpha

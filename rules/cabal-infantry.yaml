@@ -19,7 +19,7 @@ HUSK:
 	Health:
 		HP: 400
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -54,7 +54,7 @@ HHUSK:
 		Prerequisites: ~cybbar
 		Description: Cabals standard infantry production type.\n\nGood vs: Ground Targets\n\nSpecial:\n- Receives only 50% damage from fire\n- Immune to tiberium\n- Gets stunned by EMP\n- Crush class: Medium infantry
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: Cannon Husk
 	Selectable:
@@ -64,9 +64,9 @@ HHUSK:
 		VoiceSet: Husk
 		Volume: 2
 	Health:
-		HP: 180
+		HP: 280
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 9c921
@@ -93,11 +93,11 @@ HHUSK:
 CYBSPY:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
-	Buildable:
-		Queue: Infantry.Cabal
-		BuildPaletteOrder: 306
-		Prerequisites: ~cybbar, karadr
-		Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Immune to tiberium\n- Gets stunned by EMP\n- Crush class: Medium infantry
+	#Buildable:
+		#Queue: Infantry.Cabal
+		#BuildPaletteOrder: 306
+		#Prerequisites: ~cybbar, karadr
+		#Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Immune to tiberium\n- Gets stunned by EMP\n- Crush class: Medium infantry
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -112,7 +112,7 @@ CYBSPY:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
@@ -153,7 +153,7 @@ JAGUAR:
 	Health:
 		HP: 420
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
@@ -194,7 +194,7 @@ KENGINEER:
 		VoiceSet: Ascentor
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -202,7 +202,7 @@ KENGINEER:
 		RequiresCondition: upgrade.visionuplink
 		Range: 10c497
 	Health:
-		HP: 360
+		HP: 400
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -232,7 +232,7 @@ VANGUARD:
 		VoiceSet: CyborgL
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 	Health:
 		HP: 390
 	RevealsShroud:
@@ -291,7 +291,7 @@ OVERSEER:
 	Health:
 		HP: 720
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -333,7 +333,7 @@ CYBFLY:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 10
-		Speed: 150
+		Speed: 135
 		AirborneCondition: airborne
 		CruisingCondition: cruising
 		LandWhenIdle: no
@@ -355,7 +355,12 @@ CYBFLY:
 		RequiresCondition: upgrade.visionuplink
 		Range: 16c146
 	Armament@primary:
-		Weapon: SkirmishLaserFire
+		Weapon: SkirmisherLaserFire
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 566,91,849, 566,-91,849
+	Armament@primaryAA:
+		Weapon: SkirmisherLaserFireAA
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
 		LocalOffset: 566,91,849, 566,-91,849
@@ -408,7 +413,7 @@ CYC2:
 		VoiceSet: CyborgA
 		Volume: 2
 	Mobile:
-		Speed: 38
+		Speed: 34
 		SharesCell: False
 	Health:
 		HP: 1040
@@ -517,7 +522,7 @@ KAMIKAZE:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 38
+		Speed: 34
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146

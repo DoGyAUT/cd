@@ -17,7 +17,7 @@ SHOCKER:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 127
+		Speed: 114
 	RevealsShroud:
 		Range: 8c497
 	Armament@PRIMARY:
@@ -63,7 +63,7 @@ SLASHER:
 	Health:
 		HP: 390
 	Mobile:
-		Speed: 113
+		Speed: 102
 		SharesCell: False
 	RevealsShroud:
 		Range: 9c921
@@ -94,12 +94,16 @@ LOCUST:
 	Health:
 		HP: 500
 	Mobile:
-		Speed: 79
+		Speed: 71
 		SharesCell: False
 	RevealsShroud:
 		Range: 11c321
 	Armament@PRIMARY:
 		Weapon: LocustNail
+		LocalOffset: 255,0,990
+		MuzzlePalette: effect50alpha
+	Armament@SECONDARY:
+		Weapon: LocustNailAA
 		LocalOffset: 255,0,990
 		MuzzlePalette: effect50alpha
 	AttackFrontal:
