@@ -1,5 +1,6 @@
 KAWALL:
 	Inherits: ^Wall
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 300
@@ -24,6 +25,7 @@ KAWALL:
 
 KAGATE_A:
 	Inherits: ^Gate_A
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 301
@@ -34,6 +36,7 @@ KAGATE_A:
 
 KAGATE_B:
 	Inherits: ^Gate_B
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 302
@@ -46,6 +49,7 @@ KASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
@@ -68,7 +72,11 @@ KASILO:
 	Health:
 		HP: 600
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 5c673
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 7c673
 	RenderSprites:
 	WithSpriteBody:
 	WithSiloAnimation:
@@ -88,6 +96,7 @@ KABLASR:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -108,7 +117,11 @@ KABLASR:
 	Health:
 		HP: 1200
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 12c745
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 14c745
 	Turreted:
 		TurnSpeed: 5
 		InitialFacing: 222
@@ -134,6 +147,7 @@ KABCAN:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -154,7 +168,11 @@ KABCAN:
 	Health:
 		HP: 1440
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	Turreted:
 		TurnSpeed: 5
 		InitialFacing: 0
@@ -182,6 +200,7 @@ KDARK:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -200,7 +219,11 @@ KDARK:
 	Health:
 		HP: 2400
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 20c394
 	Armament:
 		Weapon: CabalObeliskLaserAA
 		LocalOffset: 2263,0,2828
@@ -230,6 +253,7 @@ KOBEL:
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -248,7 +272,11 @@ KOBEL:
 	Health:
 		HP: 3750
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 16c146
 	Armament:
 		Weapon: CabalObeliskLaser
 		LocalOffset: 2263,0,1131
