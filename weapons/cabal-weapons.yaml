@@ -3,7 +3,7 @@ HuskGun:
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 30
 	Range: 7c73
-	Burst: 4
+	Burst: 5
 	BurstDelay: 2
 	Report: rifle_c1.aud, rifle_c2.aud, rifle_c3.aud
 	Projectile: BulletAS
@@ -13,6 +13,7 @@ HuskGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 25
+		DamageTypes: CabalWeapon
 
 OverseerGun:
 	Inherits: ^Bullet
@@ -27,6 +28,7 @@ OverseerGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 80
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidImpactTypes: Water
@@ -58,27 +60,27 @@ PlasmaVortexCannon:
 	Warhead@1dam: SpreadDamage
 		Spread: 2c848
 		Damage: 450
-		DamageTypes: EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@2dam: SpreadDamage
 		Delay: 25
 		Spread: 2c848
 		Damage: 450
-		DamageTypes: EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@3dam: SpreadDamage
 		Delay: 50
 		Spread: 2c848
 		Damage: 450
-		DamageTypes: EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@4dam: SpreadDamage
 		Delay: 75
 		Spread: 2c848
 		Damage: 450
-		DamageTypes: EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@5dam: SpreadDamage
 		Delay: 100
 		Spread: 2c848
 		Damage: 450
-		DamageTypes: EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 
 VanguardGun:
 	Inherits: ^Bullet
@@ -93,6 +95,7 @@ VanguardGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 20
+		DamageTypes: CabalWeapon
 
 VanguardGun2:
 	Inherits: VanguardGun
@@ -122,6 +125,7 @@ MantaBombardCannon:
 		Spread: 0c724
 		Damage: 400
 		ValidTargets: Ground
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
@@ -169,7 +173,7 @@ HelionGun:
 			Building: 100
 			Air: 50
 		ValidTargets: Ground, Water, Air
-		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone50Percent, TriggerProne, EnergyDeath
 		Falloff: 100, 67, 40, 17, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
@@ -208,7 +212,7 @@ KronosCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 650
-		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone100Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
@@ -243,7 +247,7 @@ HarbringerGun:
 		Spread: 0c724
 		Damage: 120
 		ValidTargets: Ground
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_med
 		ExplosionPalette: effect50alpha
@@ -281,7 +285,7 @@ PlasmaBlasterGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 150
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -316,7 +320,7 @@ CannonHuskGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 40
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: CabalWeapon, Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -359,7 +363,7 @@ HarbingerMachal:
 		Spread: 0c181
 		Damage: 30
 		ValidTargets: Ground
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -395,7 +399,7 @@ DroneMachal:
 		Damage: 36
 		ValidStances: Neutral, Enemy
 		ValidTargets: Air, MidAir, HighAir
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
@@ -436,7 +440,7 @@ PteroisMachal:
 		Spread: 0c181
 		Damage: 60
 		ValidTargets: Ground
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -452,10 +456,10 @@ PteroisMachal:
 
 MantaMachal:
 	Inherits@wh: ^PlasmaWH
-	ReloadDelay: 100
-	Range: 22c642
-	Burst: 3
-	BurstDelay: 20
+	ReloadDelay: 10
+	Range: 1000000c0
+	Burst: 1
+	BurstDelay: 10
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 	Projectile: BulletAS
 		Speed: 2c848
@@ -470,7 +474,7 @@ MantaMachal:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 300
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -502,7 +506,7 @@ CommandoLaserFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
@@ -538,6 +542,7 @@ CyborgCommandoPlasma:
 		Spread: 0c362
 		Damage: 350
 		ValidTargets: Ground
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
@@ -573,6 +578,7 @@ CabalObeliskLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
 		Damage: 900
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -605,6 +611,7 @@ CabalObeliskLaserAA:
 		ValidTargets: Air, MidAir, HighAir
 		Spread: 0c724
 		Damage: 800
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -639,6 +646,7 @@ TarantulaLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
 		Damage: 30
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -673,6 +681,7 @@ TarantulaLaserAA:
 		ValidTargets: Air, MidAir
 		Spread: 0c59
 		Damage: 100
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -707,6 +716,7 @@ SabercutLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
 		Damage: 125
+		DamageTypes: CabalWeapon
 	Warhead@3Eff: CreateEffect
 		Explosions: piff
 		InvalidImpactTypes: Water
@@ -735,7 +745,8 @@ SkirmisherLaserFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c59
-		Damage: 18
+		Damage: 54
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -775,6 +786,7 @@ HarbingerLaserFire:
 		ValidTargets: Ground, Air, MidAir
 		Spread: 0c59
 		Damage: 100
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -807,6 +819,7 @@ GargantuaLaser:
 		ValidTargets: Ground, Air, MidAir
 		Spread: 0c59
 		Damage: 80
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -827,6 +840,7 @@ ReaperCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 75
+		DamageTypes: CabalWeapon
 
 DreadfireLauncher:
 	Inherits: FireballLauncher
@@ -843,6 +857,7 @@ DreadfireLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 60
+		DamageTypes: CabalWeapon
 
 DreadfireShrapnel:
 	Inherits@wh: ^FireWH
@@ -857,6 +872,7 @@ DreadfireShrapnel:
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
 		Damage: 10
+		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud
@@ -885,7 +901,7 @@ JaguarClaw:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 100
-		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		DamageTypes: CabalWeapon, Prone100Percent, TriggerProne, BulletDeath
 
 WebLauncher:
 	ValidTargets: Infantry, Mutant
@@ -907,7 +923,7 @@ WebLauncher:
 		Spread: 0c0
 		Damage: 0
 		ValidTargets: Infantry, Mutant
-		DamageTypes: TriggerProne
+		DamageTypes: CabalWeapon, TriggerProne
 		ImpactSounds: fireweb1.aud
 	Warhead@emp: GrantExternalCondition
 		Range: 0c724
@@ -933,6 +949,7 @@ ReaperMissile:
 		Spread: 0c181
 		Damage: 125
 		ValidTargets: Ground
+		DamageTypes: CabalWeapon
 		
 ReaperMissileAA:
 	Inherits: ReaperMissile
@@ -941,3 +958,4 @@ ReaperMissileAA:
 		Spread: 0c181
 		Damage: 125
 		ValidTargets: Air, MidAir, HighAir
+    DamageTypes: CabalWeapon
