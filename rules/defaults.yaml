@@ -813,6 +813,8 @@
 	TimedConditionBar@cleansingaura:
 		Condition: cleansingaura
 		Color: 0000FF
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^Soldier:
 	Inherits@1: ^Infantry
@@ -1546,6 +1548,8 @@
 		RequiresCondition: firedamage
 	ExternalCondition@firedamage:
 		Condition: firedamage
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^LightVehicle:
 	Crushable:
@@ -1988,6 +1992,8 @@
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^Clouds:
 	Inherits@1: ^ExistsInWorld
@@ -2046,6 +2052,8 @@
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^FireActor:
 	Inherits@1: ^ExistsInWorld
@@ -2098,6 +2106,8 @@
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
@@ -2244,6 +2254,8 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 	HitShape:
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^Box:
 	Inherits: ^Decoration

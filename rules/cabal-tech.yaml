@@ -62,6 +62,22 @@ upgrade.photonreactors:
 	Plug:
 		Type: plug.upgrade.photonreactors
 
+upgrade.teleporter:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Teleporter
+	Buildable:
+		BuildPaletteOrder: 303
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Teleporter which allows teleporting a small group of units.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: KACNST
+	Plug:
+		Type: plug.upgrade.teleporter
+
 ^KAUPGRADE:
 	Inherits@hitshape: ^1x1hitshape
 	Inherits@BasicBuilding: ^BasicBuilding

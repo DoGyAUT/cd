@@ -474,11 +474,13 @@ KABTECH:
 			plug.upgrade.lc: plug1.upgrade.lc
 			plug.upgrade.visionuplink: plug1.upgrade.visionuplink
 			plug.upgrade.photonreactors: plug1.upgrade.photonreactors
+			plug.upgrade.teleporter: plug1.upgrade.teleporter
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter
 	Pluggable@plug2:
 		Offset: 3,3
 		Conditions:
@@ -486,11 +488,13 @@ KABTECH:
 			plug.upgrade.lc: plug2.upgrade.lc
 			plug.upgrade.visionuplink: plug2.upgrade.visionuplink
 			plug.upgrade.photonreactors: plug2.upgrade.photonreactors
+			plug.upgrade.teleporter: plug2.upgrade.teleporter
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter
 	Pluggable@plug3:
 		Offset: 3,2
 		Conditions:
@@ -498,11 +502,13 @@ KABTECH:
 			plug.upgrade.lc: plug3.upgrade.lc
 			plug.upgrade.visionuplink: plug3.upgrade.visionuplink
 			plug.upgrade.photonreactors: plug3.upgrade.photonreactors
+			plug.upgrade.teleporter: plug3.upgrade.teleporter
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter
 	Pluggable@plug4:
 		Offset: 3,1
 		Conditions:
@@ -510,11 +516,13 @@ KABTECH:
 			plug.upgrade.lc: plug4.upgrade.lc
 			plug.upgrade.visionuplink: plug4.upgrade.visionuplink
 			plug.upgrade.photonreactors: plug4.upgrade.photonreactors
+			plug.upgrade.teleporter: plug4.upgrade.teleporter
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter
 	ProximityExternalCondition@plug.upgrade.hc
 		Condition: upgrade.hc
 		Range: 1000000c0
@@ -531,6 +539,20 @@ KABTECH:
 		Condition: upgrade.photonreactors
 		Range: 1000000c0
 		RequiresCondition: plug1.upgrade.photonreactors || plug2.upgrade.photonreactors || plug3.upgrade.photonreactors || plug4.upgrade.photonreactors
+	ChronoshiftPower@teleporter:
+		OrderName: Teleporter
+		PauseOnCondition: disabled
+		Icon: fortification
+		ChargeTime: 240
+		Description: Teleporter
+		LongDesc: Teleports a group of units.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Duration: -1
+		KillCargo: False
+		DisplayRadarPing: True
+		RequiresCondition: plug1.upgrade.teleporter || plug2.upgrade.teleporter || plug3.upgrade.teleporter || plug4.upgrade.teleporter
 	AirstrikePower@MantaStrikeRun:
 		OrderName: MantaStrikeRun
 		UnitType: manta
