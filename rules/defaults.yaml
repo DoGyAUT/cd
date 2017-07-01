@@ -802,6 +802,17 @@
 		Type: Circle
 			Radius: 128
 			VerticalTopOffset: 512
+	ExternalCondition@cleansingaura:
+		Condition: cleansingaura
+	SpawnActorOnDeath@cleansingaura:
+		Actor: husk
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalWeapon
+		RequiresCondition: cleansingaura
+	TimedConditionBar@cleansingaura:
+		Condition: cleansingaura
+		Color: 0000FF
 
 ^Soldier:
 	Inherits@1: ^Infantry

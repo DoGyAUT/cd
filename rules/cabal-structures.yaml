@@ -173,7 +173,7 @@ CYBBAR:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 304
 		Prerequisites: anypower, ~structures.cabal
-		Description: Produces cyborgs.
+		Description: Produces cyborgs.\n\nSpecial:\n- Cleansing Aura
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -220,7 +220,18 @@ CYBBAR:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-
+	GrantExternalConditionPower@cleansingaura:
+		Icon: fortification
+		ChargeTime: 300
+		Description: Cleansing Aura
+		LongDesc: Dying infantry is converted to husks controlled by the attacker.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Condition: cleansingaura
+		Range: 4
+		Duration: 500
 
 KAWEAP:
 	Inherits: ^Building
