@@ -457,7 +457,7 @@ PteroisMachal:
 MantaMachal:
 	Inherits@wh: ^PlasmaWH
 	ReloadDelay: 10
-	Range: 1000000c0
+	Range: 30c0
 	Burst: 1
 	BurstDelay: 10
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
@@ -473,7 +473,7 @@ MantaMachal:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 300
+		Damage: 350
 		DamageTypes: CabalWeapon, Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
@@ -959,3 +959,13 @@ ReaperMissileAA:
 		Damage: 125
 		ValidTargets: Air, MidAir, HighAir
     DamageTypes: CabalWeapon
+
+cleansingaura:
+	ValidTargets: Infantry, Mutant
+	Warhead@emp: GrantExternalCondition
+		Range: 4c0
+		Duration: 90
+		Condition: cleansingaura
+		Duration: 500
+		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidStances: None, Enemy, Neutral, Ally

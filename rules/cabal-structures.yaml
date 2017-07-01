@@ -229,7 +229,8 @@ CYBBAR:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@cleansingaura:
+	DetonateWeaponPower@cleansingaura:
+		OrderName: cleansingaura
 		Icon: fortification
 		ChargeTime: 300
 		Description: Cleansing Aura
@@ -238,9 +239,9 @@ CYBBAR:
 		LowPowerSpeechNotification: LowPower
 		EndChargeSpeechNotification: SupportPowerReady
 		DisplayRadarPing: True
-		Condition: cleansingaura
-		Range: 4
-		Duration: 500
+		Weapon: cleansingaura
+		ActivationSequence: 
+		TargetCircleRange: 4c0
 
 KAWEAP:
 	Inherits: ^Building
@@ -446,6 +447,7 @@ KABTECH:
 		ReadyAudio: TechComplete
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 3
+	ProvidesPrerequisite@buildingname:
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: mouse
@@ -549,6 +551,7 @@ KABTECH:
 		DisplayRadarPing: True
 		RequiresCondition: plug1.upgrade.teleporter || plug2.upgrade.teleporter || plug3.upgrade.teleporter || plug4.upgrade.teleporter
 	GrantExternalConditionPower@nanoswarm:
+		OrderName: nanoswarm
 		Icon: fortification
 		ChargeTime: 240
 		Description: Nanoswarm
