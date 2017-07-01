@@ -268,13 +268,14 @@ EliteCadreGun:
 RocketeerGun:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground
 	ReloadDelay: 100
 	Range: 8c497
 	Report: javelin.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
+		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
@@ -283,16 +284,31 @@ RocketeerGun:
 
 RocketeerGunAA:
 	Inherits: RocketeerGun
-	ValidTargets:
+	ValidTargets: Air, MidAir, HighAir
 	Range: 8c497
-
-NodHarvGun:
-	Inherits: AcolyteGun
-	ReloadDelay: 50
-	Range: 7c73
-	Burst: 2
 	Warhead@1Dam: SpreadDamage
-		Damage: 30
+		Spread: 0c181
+		Damage: 120
+		ValidTargets: Air, MidAir, HighAir
+		
+NodHarvGun:
+	Inherits: ^Bullet
+	Inherits: ^SuperBulletWH
+	ReloadDelay: 25
+	Burst: 5
+	Range: 7c73
+	Warhead@1Dam:
+		Damage: 18
+
+NodHarvTibGun:
+	Inherits: AcolyteGun
+	ReloadDelay: 25
+	Burst: 5
+	Range: 7c73
+	Projectile: BulletAS
+		Speed: 0c1007
+	Warhead@1Dam: SpreadDamage
+		Damage: 18
 
 SpecterGun:
 	Inherits: ^ShellHE
@@ -434,7 +450,7 @@ SpecterGunNapalm:
 
 RaiderGunVisual:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 75
 	Range: 8c497
 	BurstDelay: 2
@@ -761,32 +777,67 @@ AcolyteGunE:
 		Image: bluetiberiumBullet
 		ContrailColor: 5980FF
 
-ShadowTrooperGun:
-	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
-	ValidTargets: Ground
-	ReloadDelay: 100
+ShadowTrooperLaser:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 130
 	Range: 12c745
-	Report: sniper1.aud, sniper2.aud, sniper3.aud
-	Projectile: BulletAS
-		Speed: 2c848
-		Inaccuracy: 0c45
-		ContrailLength: 10
-		ContrailColor: FFFFFF
-		ContrailWidth: 0c21
+	Report: laserpulse.aud
+	ValidTargets: Ground
+	Projectile: LaserZap
+		Color: F6FF00
+		Width: 0c42
+		BeamDuration: 20
+		ZOffset: 2047
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c21
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c91
-		Damage: 500
-		Versus:
-			Aircraft: 25
+		Spread: 0c59
+		Damage: 130
 		ValidTargets: Ground
-	Warhead@2prone: SpreadDamage
-		Spread: 0c354
-		Damage: 1
 	Warhead@2Eff: CreateEffect
-		Explosions: gatpiff
+		Explosions: plasmaexpl2
+		ExplosionPalette: player50alpha
 		InvalidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@4EffAir: CreateEffect
+		Explosions: lasershot1
+		ExplosionPalette: player50alpha
+		ValidImpactTypes: Air, AirHit
 
+ShadowTrooperEnchancedLaser:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 130
+	Range: 12c745
+	Report: laserpulse.aud
+	ValidTargets: Ground
+	Projectile: LaserZap
+		Color: C80000
+		Width: 0c42
+		BeamDuration: 20
+		ZOffset: 2047
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c21
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c59
+		Damage: 200
+		ValidTargets: Ground
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl2
+		ExplosionPalette: player50alpha
+		InvalidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@4EffAir: CreateEffect
+		Explosions: lasershot1
+		ExplosionPalette: player50alpha
+		ValidImpactTypes: Air, AirHit
 ConfessorGrenade:
 	Inherits: ^ShellAP
 	Inherits@wh: ^HEWH
@@ -969,7 +1020,7 @@ ZodiacBomb:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 400
+		Damage: 600
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -1128,11 +1179,11 @@ MontaukProton:
 
 GattlingCannonAttack:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 125
 	Range: 10c621
 	Burst: 200
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground
 	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
@@ -1142,7 +1193,15 @@ GattlingCannonAttack:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground
+
+GattlingCannonAttackAA:
+	Inherits: GattlingCannonAttack
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 20
+		ValidTargets: Air, MidAir, HighAir
 
 GattlingCannonVisual:
 	Inherits: ^APBullet
@@ -1166,7 +1225,7 @@ GattlingCannonVisual:
 
 VenomCannon:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 75
 	Range: 8c497
 	MinRange: 1c424
@@ -1187,7 +1246,7 @@ VenomCannon:
 
 HydraCannon:
 	Inherits: ^Bullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 200
 	Range: 8c497
 	MinRange: 1c424
@@ -1208,7 +1267,7 @@ HydraCannon:
 
 HavocCannon:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
 	Range: 9c921
 	ValidTargets: Ground
@@ -1233,7 +1292,7 @@ HavocCannon:
 
 RavenCannon:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
 	Range: 19c818
 	MinRange: 4c248
@@ -1251,7 +1310,7 @@ RavenCannon:
 
 RavenCannonAA:
 	Inherits: ^APBullet
-	Inherits@wh: ^BulletWH
+	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
 	Range: 19c818
 	MinRange: 2c848
@@ -1269,37 +1328,6 @@ RavenCannonAA:
 		Damage: 40
 		ValidTargets: Air, MidAir, HighAir
 		ValidStances: Neutral, Enemy
-
-ShadowTrooperLaser:
-	Inherits: ^BasicLaser
-	Inherits@wh: ^LaserWH
-	ReloadDelay: 130
-	Range: 12c745
-	Report: laserpulse.aud
-	ValidTargets: Ground
-	Projectile: LaserZap
-		Color: C80000
-		Width: 0c42
-		BeamDuration: 20
-		ZOffset: 2047
-		SecondaryBeam: true
-		SecondaryBeamWidth: 0c21
-		SecondaryBeamZOffset: 2047
-		SecondaryBeamColor: FFFFFF
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c59
-		Damage: 200
-		ValidTargets: Ground
-	Warhead@2Eff: CreateEffect
-		Explosions: plasmaexpl2
-		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
-	Warhead@3Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-	Warhead@4EffAir: CreateEffect
-		Explosions: lasershot1
-		ExplosionPalette: player50alpha
-		ValidImpactTypes: Air, AirHit
 
 LaserTurretTibLaser:
 	Inherits: ^BasicLaser
@@ -1698,7 +1726,7 @@ BikeMissile:
 	BurstDelay: 20
 	Range: 8c497
 	Report: misl1.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground
 	Projectile: Missile
 		Arm: 2
 		Shadow: true
@@ -1713,7 +1741,15 @@ BikeMissile:
 		Damage: 120
 		Versus:
 			Building: 30
-		ValidTargets: Ground, Air, MidAir
+		ValidTargets: Ground
+
+BikeMissileAA:
+	Inherits: BikeMissile
+	ValidTargets: Air, MidAir, HighAir
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 120
+		ValidTargets: Air, MidAir, HighAir
 
 StealthTankMissile:
 	Inherits: ^MissileAPHE
@@ -1797,16 +1833,16 @@ HailstormMissile:
 	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c242
-		Inaccuracy: 0c724
+		Inaccuracy: 0c868
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
 		CruiseAltitude: 3c548
 		RangeLimit: 28c291
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 75
+		Spread: 0c416
+		Damage: 60
 		Versus:
-			Building: 200
+			Building: 175
 		ValidTargets: Ground
 
 HailstormMissileAA:
@@ -1832,10 +1868,10 @@ HailstormMissileGas:
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 85
+		Spread: 0c416
+		Damage: 68
 		Versus:
-			Building: 200
+			Building: 175
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
@@ -2059,6 +2095,10 @@ TermiteGunShrapnel:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 50
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Fire1
+		Owner: Creeps
 	Warhead@2Eff: CreateEffect
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2

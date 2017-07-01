@@ -90,6 +90,13 @@ NIHARV:
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
 		LocalOffset: 362,0,1061
+		RequiresCondition: !upgrade.tibgas
+	Armament@primarytib:
+		Weapon: NodHarvTibGun
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+		LocalOffset: 362,0,1061
+		RequiresCondition: upgrade.tibgas
 	AttackTurreted:
 	AutoTarget:
 	Turreted:
@@ -97,6 +104,9 @@ NIHARV:
 		Offset: 311,0,0
 	RevealsShroud:
 		Range: 8c497
+	GrantConditionOnPrerequisite@upgrade:
+		Condition: upgrade.tibgas
+		Prerequisites: upgrade.tibgas
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelTurret:
@@ -408,9 +418,6 @@ GORRAN:
 		Range: 8c497
 	Turreted:
 		TurnSpeed: 3
-	DetectCloaked:
-		Range: 8c497
-	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: GorranCannon
 		LocalOffset: 990,0,891
@@ -474,6 +481,11 @@ BIKE:
 	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: BikeMissile
+		LocalOffset: 0,-232,622, 0,233,622
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+	Armament@SECONDARY:
+		Weapon: BikeMissileAA
 		LocalOffset: 0,-232,622, 0,233,622
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha

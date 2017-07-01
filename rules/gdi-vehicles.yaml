@@ -357,7 +357,7 @@ HVR:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Valued:
-		Cost: 1100
+		Cost: 1250
 	Tooltip:
 		Name: Hover MLRS
 	Selectable:
@@ -371,7 +371,7 @@ HVR:
 		VoiceSet: Slingshot
 		Volume: 2
 	Mobile:
-		Speed: 99
+		Speed: 85
 		TurnSpeed: 6
 		TerrainSpeeds:
 			Clear: 100
@@ -545,6 +545,11 @@ TRITON:
 		FireDelay: 10
 	Armament@rockets:
 		Weapon: MammothTusk
+		LocalOffset: 181,424,785, 181,-424,919
+		MuzzleSequence: muzzle2
+		MuzzlePalette: apolra50alpha
+	Armament@rocketsAA:
+		Weapon: MammothTuskAA
 		LocalOffset: 181,424,785, 181,-424,919
 		MuzzleSequence: muzzle2
 		MuzzlePalette: apolra50alpha

@@ -21,7 +21,7 @@ NASOL:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 50
+		Speed: 45
 	RevealsShroud:
 		Range: 7c73
 	Armament@PRIMARY:
@@ -59,7 +59,7 @@ E3:
 		Prerequisites: ~nahand, ~!upgrade.mass
 		Description: Nod Soldiers armed with a Rocket Launcher.\n\nGood vs: Vehicles\n\nSpecial:\n- Can attack Air\n- Tiberium Infusion (Industry)\n- Stealth Emitter (Technology Nod)\n- Mass Recruitment (Propaganda)\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
 	Valued:
-		Cost: 250
+		Cost: 400
 	Tooltip:
 		Name: Rocketeer
 	Selectable:
@@ -71,11 +71,14 @@ E3:
 	Health:
 		HP: 125
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 9c921
 	Armament@primary:
 		Weapon: RocketeerGun
+		LocalOffset: 396,119,990
+	Armament@secondary:
+		Weapon: RocketeerGunAA
 		LocalOffset: 396,119,990
 	AttackFrontal:
 	GrantConditionOnPrerequisite@upgrade2:
@@ -98,7 +101,7 @@ E32:
 	RenderSprites:
 		Image: E3
 	Valued:
-		Cost: 125
+		Cost: 200
 
 CHAMSPY:
 	Inherits@1: ^Soldier
@@ -121,7 +124,7 @@ CHAMSPY:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 14c146
 	AttackFrontal:
@@ -158,7 +161,7 @@ NDOG:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 85
+		Speed: 76
 	RevealsShroud:
 		Range: 14c146
 	Armament@primary:
@@ -204,11 +207,11 @@ NENGINEER:
 		VoiceSet: Saboteur
 		Volume: 2
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 8c497
 	Health:
-		HP: 250
+		HP: 200
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -248,7 +251,7 @@ FANATIC:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 71
+		Speed: 64
 	RevealsShroud:
 		Range: 8c497
 	Armament@primary:
@@ -293,7 +296,7 @@ NACAD:
 	Health:
 		HP: 250
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 8c497
 	Armament@PRIMARY:
@@ -320,7 +323,7 @@ NCONF:
 	Inherits@4: ^AvatarUpgrades
 	Buildable:
 		Queue: Infantry.Nod
-		BuildPaletteOrder: 207
+		BuildPaletteOrder: 208
 		Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
 		Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Nod Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
 	Valued:
@@ -335,7 +338,7 @@ NCONF:
 	Health:
 		HP: 480
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 11c321
 	Armament@PRIMARY:
@@ -388,15 +391,15 @@ SHADOW:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 45
+		Speed: 40
 	RevealsShroud:
 		Range: 8c497
 	Armament@PRIMARY:
-		Weapon: ShadowTrooperGun
+		Weapon: ShadowTrooperLaser
 		LocalOffset: 362,0,778
 		RequiresCondition: !upgrade.laser
 	Armament@LaserA:
-		Weapon: ShadowTrooperLaser
+		Weapon: ShadowTrooperEnchancedLaser
 		LocalOffset: 362,0,778
 		RequiresCondition: upgrade.laser
 	AttackFrontal:
@@ -441,7 +444,7 @@ BHAND:
 		CargoType: Infantry
 		Voice: Move
 	Mobile:
-		Speed: 45
+		Speed: 40
 		SharesCell: False
 		TerrainSpeeds:
 			Tiberium: 70
@@ -495,7 +498,7 @@ TIBTROOPER:
 	Health:
 		HP: 500
 	Mobile:
-		Speed: 45
+		Speed: 40
 		TerrainSpeeds:
 			Tiberium: 70
 				PathingCost: 0

@@ -1,5 +1,6 @@
 SACNST:
 	Inherits: ^Building
+	Inherits: ^3x3hitshape
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -11,7 +12,7 @@ SACNST:
 		Adjacent: 8
 		Description: Builds base structures.
 	Health:
-		HP: 5200
+		HP: 7280
 	RevealsShroud:
 		Range: 14c146
 	Production:
@@ -69,6 +70,7 @@ SACNST:
 
 SAPOWR:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -91,7 +93,7 @@ SAPOWR:
 	Selectable:
 		Bounds: 88, 80, 2, -12
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 5c673
 	Power:
@@ -103,8 +105,9 @@ SAPOWR:
 
 SPROC:
 	Inherits: ^BuildingInfiltrate
+	Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
-		Cost: 2500
+		Cost: 2800
 	Tooltip:
 		Name: Ichor Refinery
 	Buildable:
@@ -122,7 +125,7 @@ SPROC:
 	Selectable:
 		Bounds: 134, 122, 0, -18
 	Health:
-		HP: 1500
+		HP: 2800
 	RevealsShroud:
 		Range: 8c497
 	TiberianSunRefinery:
@@ -137,10 +140,6 @@ SPROC:
 		Actor: SHARV
 		SpawnOffset: 2,1
 		Facing: 160
-	FreeActor@2:
-		Actor: SHARV
-		SpawnOffset: 2,2
-		Facing: 160
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
@@ -150,6 +149,7 @@ SPROC:
 
 SAPORTAL:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshapewithyoffset
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -167,7 +167,7 @@ SAPORTAL:
 	Selectable:
 		Bounds: 154, 100, -2, -12
 	Health:
-		HP: 2400
+		HP: 3360
 	RevealsShroud:
 		Range: 5c673
 	RallyPoint:
@@ -221,6 +221,7 @@ SAPORTAL:
 
 SANODE:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Scrin
@@ -237,7 +238,7 @@ SANODE:
 	Selectable:
 		Bounds: 96, 118, 0, -38
 	Health:
-		HP: 1600
+		HP: 2240
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: mouse
@@ -246,18 +247,19 @@ SANODE:
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RevealsShroud:
-		Range: 28c291
+		Range: 16c942
 	Power:
-		Amount: -50
+		Amount: -75
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 28c291
+		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
 
 SASEED:
 	Inherits: ^Building
+	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Scrin
@@ -274,7 +276,7 @@ SASEED:
 	Selectable:
 		Bounds: 48, 48, 0, -12
 	Health:
-		HP: 2400
+		HP: 3360
 	RequiresPower:
 	RevealsShroud:
 		Range: 7c73

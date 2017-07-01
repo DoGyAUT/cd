@@ -1196,14 +1196,21 @@ GALITE:
 	Selectable:
 		Bounds: 25, 35, 0, -1
 	-Cloak:
+	-ExternalCapturable:
+	-ExternalCapturableBar:
 	-ExternalCondition@EXTERNALCLOAK1:
 	-ExternalCondition@EXTERNALCLOAK2:
+	-WithColoredOverlay@EMPDISABLE:
+	-DisableOnCondition@EMPDISABLE:
+	-TimedConditionBar@EMPDISABLE:
+	-WithIdleOverlay@EMPDISABLE:
+	-PowerMultiplier@EMPDISABLE:
+	-ExternalCondition@EMPDISABLE:
 	HitShape:
 
 TSTLAMP:
 	Inherits: GALITE
-	-ExternalCapturable:
-	-ExternalCapturableBar:
+	Inherits@2: ^1x1hitshape
 	RenderSprites:
 		Image: galite
 	Tooltip:
@@ -1288,6 +1295,7 @@ UFO:
 
 GASPOT:
 	Inherits: ^Defense
+	Inherits@2: ^1x1hitshape
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1315,10 +1323,10 @@ GASPOT:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 NASPOT:
 	Inherits: ^Defense
+	Inherits@2: ^1x1hitshape
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1345,10 +1353,10 @@ NASPOT:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 FASPOT:
 	Inherits: ^Defense
+	Inherits@2: ^1x1hitshape
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1375,7 +1383,6 @@ FASPOT:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	HitShape:
 
 GACTWR:
 	Inherits: ^Defense

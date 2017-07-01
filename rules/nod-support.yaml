@@ -13,7 +13,7 @@ NAWALL:
 	Tooltip:
 		Name: Concrete Wall
 	Health:
-		HP: 400
+		HP: 560
 	BlocksProjectiles:
 		Height: 0c905
 	Crushable:
@@ -65,7 +65,7 @@ NASILO:
 		Bounds: 80, 48, -5, 0
 	-GivesBuildableArea:
 	Health:
-		HP: 600
+		HP: 840
 	RevealsShroud:
 		Range: 5c673
 	RenderSprites:
@@ -101,7 +101,7 @@ NAFLAMER:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 8c497
 	BodyOrientation:
@@ -165,7 +165,7 @@ NAGAT:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 11c321
 	BodyOrientation:
@@ -180,6 +180,13 @@ NAGAT:
 		Recoils: True
 	Armament@1:
 		Weapon: GattlingCannonAttack
+		LocalOffset: 990,255,919, 990,-255,919
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 50
+		RecoilRecovery: 5
+	Armament@1aa:
+		Weapon: GattlingCannonAttackAA
 		LocalOffset: 990,255,919, 990,-255,919
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
@@ -219,7 +226,7 @@ NALASR:
 		Bounds: 40, 36, -8, -8
 	RequiresPower:
 	Health:
-		HP: 1800
+		HP: 2520
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -282,7 +289,7 @@ NASAM:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -327,7 +334,7 @@ NABUNKER:
 	Selectable:
 		Bounds: 40, 36, -3, -8
 	Health:
-		HP: 1300
+		HP: 1820
 	RevealsShroud:
 		Range: 14c146
 	RenderRangeCircle:
@@ -371,7 +378,7 @@ NAOBEL:
 		Bounds: 88, 130, 0, -36
 	RequiresPower:
 	Health:
-		HP: 3000
+		HP: 4200
 	RevealsShroud:
 		Range: 14c146
 	Armament@normalA:
@@ -445,7 +452,7 @@ NAPULS:
 		Bounds: 78, 54, 0, -12
 	RequiresPower:
 	Health:
-		HP: 2600
+		HP: 3640
 	RevealsShroud:
 		Range: 5c673
 	Turreted:
@@ -500,7 +507,7 @@ NAMISL:
 	Selectable:
 		Bounds: 75,48
 	Health:
-		HP: 5200
+		HP: 7260
 	RevealsShroud:
 		Range: 2c848
 	WithIdleOverlay@LIGHTS:
@@ -558,7 +565,7 @@ NASTLH:
 		Footprint: xxxxx xxxxx
 		Dimensions: 5,2
 	Health:
-		HP: 1200
+		HP: 1680
 	RevealsShroud:
 		Range: 5c673
 	WithIdleOverlay@pulse:
