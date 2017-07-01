@@ -62,17 +62,28 @@ GHARV:
 		BaleLoadDelay: 12
 		BaleUnloadDelay: 6
 		SearchFromProcRadius: 36
-		SearchFromOrderRadius: 18
+		SearchFromOrderRadius: 20
 		HarvestVoice: Action
 		DeliverVoice: Move
 		PipCount: 7
 	Mobile:
 		Speed: 71
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
 			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			PurpleTiberium: 100
+			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1500
+		HP: 1800
 	RevealsShroud:
 		Range: 8c497
 	RenderSprites:
