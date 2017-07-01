@@ -67,7 +67,7 @@ upgrade.teleporter:
 	Tooltip:
 		Name: Teleporter
 	Buildable:
-		BuildPaletteOrder: 303
+		BuildPaletteOrder: 304
 		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
 		Description: Research the Teleporter which allows teleporting a small group of units.
@@ -77,6 +77,22 @@ upgrade.teleporter:
 		Image: KACNST
 	Plug:
 		Type: plug.upgrade.teleporter
+
+upgrade.nanoswarm:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Nanoswarm
+	Buildable:
+		BuildPaletteOrder: 305
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Nanoswarm which allows making a small group of units invulnerable.
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: KAGATE_A
+	Plug:
+		Type: plug.upgrade.nanoswarm
 
 ^KAUPGRADE:
 	Inherits@hitshape: ^1x1hitshape
