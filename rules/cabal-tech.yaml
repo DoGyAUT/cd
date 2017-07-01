@@ -1,33 +1,107 @@
 upgrade.hc:
-	Inherits: ^Tech
+	Inherits: ^KAUPGRADE
 	Tooltip:
-		Name: Reinforced Chassis
+		Name: Advanced Platings
 	Buildable:
 		BuildPaletteOrder: 300
-		Prerequisites: ~kabtech, ~!upgrade.lc
+		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
-		BuildLimit: 1
-		Description: Research reinforced chassis for all basic cyborgs which provides a 25% damage reduction.
+		Description: Research reinforced chassis for all cabal buildings which provides a damage reduction.
 	Valued:
 		Cost: 1000
 	RenderSprites:
-		Image: cab_hc
-	ProvidesPrerequisite:
-		Prerequisite: upgrade.hc
+		Image: KAWALL
+	Plug:
+		Type: plug.upgrade.hc
 
 upgrade.lc:
-	Inherits: ^Tech
+	Inherits: ^KAUPGRADE
 	Tooltip:
 		Name: Alloyed Chassis
 	Buildable:
 		BuildPaletteOrder: 301
-		Prerequisites: ~kabtech, ~!upgrade.hc
+		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
-		BuildLimit: 1
-		Description: Research alloyed chassis for all basic cyborgs which provides a 30% speed increase.
+		Description: Research alloyed chassis for all basic cyborgs which provides a speed increase.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: cab_lc
+	Plug:
+		Type: plug.upgrade.lc
+
+upgrade.visionuplink:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Vision Uplink
+	Buildable:
+		BuildPaletteOrder: 302
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research vision uplink for cyborgs, vehicles and turrets which provides increased vision range and less inaccuracy for weapons.
 	Valued:
 		Cost: 1000
 	RenderSprites:
-		Image: cab_lc
-	ProvidesPrerequisite:
-		Prerequisite: upgrade.lc
+		Image: KARADR
+	Plug:
+		Type: plug.upgrade.visionuplink
+
+upgrade.photonreactors:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Photon Rreactors
+	Buildable:
+		BuildPaletteOrder: 303
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research photon reactors for the power plants which provides more power.
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: KPR
+	Plug:
+		Type: plug.upgrade.photonreactors
+
+upgrade.teleporter:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Teleporter
+	Buildable:
+		BuildPaletteOrder: 304
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Teleporter which allows teleporting a small group of units.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: KACNST
+	Plug:
+		Type: plug.upgrade.teleporter
+
+upgrade.nanoswarm:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Nanoswarm
+	Buildable:
+		BuildPaletteOrder: 305
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Nanoswarm which allows making a small group of units invulnerable.
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: KAGATE_A
+	Plug:
+		Type: plug.upgrade.nanoswarm
+
+^KAUPGRADE:
+	Inherits@hitshape: ^1x1hitshape
+	Inherits@BasicBuilding: ^BasicBuilding
+	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@2: ^EmpDisable
+	Inherits@3: ^IronCurtainable
+	Inherits@fortification: ^FortificationUpgrades
+	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	KillsSelf:
+		RemoveInstead: True

@@ -16,8 +16,12 @@ PTEROIS:
 	Health:
 		HP: 400
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
 		Type: GroundPosition
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 20c394
 	Armament:
 		Weapon: PteroisMachal
 		LocalOffset: 636,311,283, 636,-311,283
@@ -66,8 +70,12 @@ KDRONE:
 	Health:
 		HP: 650
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 19c818
 		Type: GroundPosition
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 21c818
 	Armament:
 		Weapon: DroneMachal
 		LocalOffset: 181,0,0
@@ -107,11 +115,16 @@ MANTA:
 		Speed: 113
 		IdealSeparation: 0c001
 		CruiseAltitude: 11c321
+		AltitudeVelocity: 10c0
 	Health:
 		HP: 2600
 	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
 		Type: GroundPosition
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 20c394
 	Armament@1:
 		Weapon: MantaMachal
 		LocalOffset: 1131,136,1273, 1131,0,1273, 1131,-136,1273
@@ -120,8 +133,7 @@ MANTA:
 	Targetable@AIRBORNE:
 		TargetTypes: HighAir
 		RequiresCondition: airborne
-	AttackTurreted:
-		FacingTolerance: 20
+	AttackBomber:
 	AmmoPool:
 		Ammo: 40
 		PipCount: 0
