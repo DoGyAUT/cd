@@ -680,8 +680,10 @@ TarantulaLaserAA:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, MidAir
 		Spread: 0c59
-		Damage: 100
+		Damage: 115
 		DamageTypes: CabalWeapon
+		Versus:
+			Infantry: 120
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -690,7 +692,7 @@ TarantulaLaserAA:
 	Warhead@3EffAir: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidImpactTypes: Air, AirHit, MidAir, HighAir
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light

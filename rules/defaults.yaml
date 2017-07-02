@@ -910,10 +910,10 @@
 		Type: CenterPosition
 	-Targetable:
 	Targetable@GROUND:
-		TargetTypes: Ground
+		TargetTypes: Ground, Infantry
 		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
-		TargetTypes: Air
+		TargetTypes: Air, Infantry
 		RequiresCondition: airborne
 	Aircraft:
 		AirborneUpgrades: airborne
