@@ -75,7 +75,7 @@
 	QuantizeFacingsFromSequence:
 	AutoSelectionSize:
 	RenderSprites:
-	
+
 ^TerrainOverlay:
 	AlwaysVisible:
 	Immobile:
@@ -388,31 +388,31 @@
 		DeathType: FireDeath
 	HitShape:
 		UseOccupiedCellsOffsets: true
-	DamagedByTerrain@firedamage:
-		Damage: 40
-		DamageInterval: 16
-	DamagedByTerrain@firedamage1:
-		Damage: 20
-		DamageInterval: 16
-	DamagedByTerrain@firedamage2:
-		Damage: 10
-		DamageInterval: 16
-	DamagedByTerrain@firedamage3:
-		Damage: 5
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue:
-		Damage: 45
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue1:
-		Damage: 30
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue2:
-		Damage: 15
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue3:
-		Damage: 10
-		DamageInterval: 16
-		
+	SelfHealing@firedamage:
+		Step: -40
+		Delay: 16
+	SelfHealing@firedamage1:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 16
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 16
+	SelfHealing@firedamageblue:
+		Step: -45
+		Delay: 16
+	SelfHealing@firedamageblue1:
+		Step: -30
+		Delay: 16
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 16
+
 ^Burningtank:
 	ThrowsShrapnel:
 		Weapons: TermiteGunShrapnel1
@@ -816,30 +816,30 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 20
-		DamageInterval: 8
-	DamagedByTerrain@firedamage1:
-		Damage: 15
-		DamageInterval: 8
-	DamagedByTerrain@firedamage2:
-		Damage: 10
-		DamageInterval: 8
-	DamagedByTerrain@firedamage3:
-		Damage: 5
-		DamageInterval: 8
-	DamagedByTerrain@firedamageblue:
-		Damage: 25
-		DamageInterval: 8
-	DamagedByTerrain@firedamageblue1:
-		Damage: 20
-		DamageInterval: 8
-	DamagedByTerrain@firedamageblue2:
-		Damage: 15
-		DamageInterval: 8
-	DamagedByTerrain@firedamageblue3:
-		Damage: 10
-		DamageInterval: 8
+	SelfHealing@firedamage:
+		Step: -20
+		Delay: 8
+	SelfHealing@firedamage1:
+		Step: -15
+		Delay: 8
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 8
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 8
+	SelfHealing@firedamageblue:
+		Step: -25
+		Delay: 8
+	SelfHealing@firedamageblue1:
+		Step: -20
+		Delay: 8
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 8
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 8
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1585,30 +1585,30 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 20
-		DamageInterval: 16
-	DamagedByTerrain@firedamage1:
-		Damage: 15
-		DamageInterval: 16
-	DamagedByTerrain@firedamage2:
-		Damage: 10
-		DamageInterval: 16
-	DamagedByTerrain@firedamage3:
-		Damage: 5
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue:
-		Damage: 25
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue1:
-		Damage: 20
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue2:
-		Damage: 15
-		DamageInterval: 16
-	DamagedByTerrain@firedamageblue3:
-		Damage: 10
-		DamageInterval: 16
+	SelfHealing@firedamage:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamage1:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 16
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 16
+	SelfHealing@firedamageblue:
+		Step: -25
+		Delay: 16
+	SelfHealing@firedamageblue1:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 16
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -2178,14 +2178,14 @@
 		CooldownDuration: 50
 	KillsSelf:
 		Delay: 0,20
-		
+
 ^FireActorFast:
 	Inherits@1: ^FireActor
 	GrantPeriodicCondition@kill:
 		CooldownDuration: 10
 	KillsSelf:
 		Delay: 0,5
-		
+
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
 	Tooltip:
@@ -2371,7 +2371,7 @@
             LocalYaw: 128
             TopLeft: -1536, -1536
             BottomRight: 1536, 1536
-            
+
 ^2x2hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2379,7 +2379,7 @@
             LocalYaw: 128
             TopLeft: -1024, -1024
             BottomRight: 1024, 1024
-            
+
 ^1x1hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2387,7 +2387,7 @@
             LocalYaw: 128
             TopLeft: -512, -512
             BottomRight: 512, 512
-            
+
 ^2x3hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2395,7 +2395,7 @@
             LocalYaw: 128
             TopLeft: -1024, -1536
             BottomRight: 1024, 1536
-            
+
 ^2x4hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2411,7 +2411,7 @@
             LocalYaw: 128
             TopLeft: -1024, -2560
             BottomRight: 1024, 2560
-            
+
 ^1x3hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2419,7 +2419,7 @@
             LocalYaw: 128
             TopLeft: -512, -1536
             BottomRight: 512, 1536
-            
+
 ^3x1hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2427,7 +2427,7 @@
             LocalYaw: 128
             TopLeft: -1536, -512
             BottomRight: 1536, 512
-            
+
 ^3x2hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2435,7 +2435,7 @@
             LocalYaw: 128
             TopLeft: -1536, -1024
             BottomRight: 1536, 1024
-            
+
 ^3x3hitshapewithyoffset:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2443,7 +2443,7 @@
             LocalYaw: 128
             TopLeft: -1536, -2048
             BottomRight: 1536, 1024
-			
+
 ^4x3hitshapewithyoffset:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2451,7 +2451,7 @@
             LocalYaw: 128
             TopLeft: -2048, -2560
             BottomRight: 2048, 2048
-			
+
 ^5x3hitshapewithyoffset:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2459,7 +2459,7 @@
             LocalYaw: 128
             TopLeft: -2560, -3072
             BottomRight: 2560, 2560
-            
+
 ^4x4hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2467,7 +2467,7 @@
             LocalYaw: 128
             TopLeft: -2048, -2048
             BottomRight: 2048, 2048
-            
+
 ^3x4hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2475,7 +2475,7 @@
             LocalYaw: 128
             TopLeft: -1536, -2048
             BottomRight: 1536, 2048
-			
+
 ^4x3hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2483,7 +2483,7 @@
             LocalYaw: 128
             TopLeft: -2048, -1536
             BottomRight: 2048, 1536
-			
+
 ^5x5hitshape:
     HitShape:
         UseOccupiedCellsOffsets: true
@@ -2493,47 +2493,51 @@
             BottomRight: 2560, 2560
 
 ^AffectedByFlames:
-	DamagedByTerrain@firedamage:
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+	SelfHealing@firedamage:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
 		RequiresCondition: firedamage
 	ExternalCondition@firedamage:
 		Condition: firedamage
-	DamagedByTerrain@firedamage1:
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+	SelfHealing@firedamage1:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
 		RequiresCondition: firedamage1
 	ExternalCondition@firedamage1:
 		Condition: firedamage1
-	DamagedByTerrain@firedamage2:
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+	SelfHealing@firedamage2:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
 		RequiresCondition: firedamage2
 	ExternalCondition@firedamage2:
 		Condition: firedamage2
-	DamagedByTerrain@firedamage3:
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+	SelfHealing@firedamage3:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
 		RequiresCondition: firedamage3
 	ExternalCondition@firedamage3:
 		Condition: firedamage3
-	DamagedByTerrain@firedamageblue:
+	SelfHealing@firedamageblue:
+		HealIfBelow: 101
 		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
 		RequiresCondition: firedamageblue
 	ExternalCondition@firedamageblue:
 		Condition: firedamageblue
-	DamagedByTerrain@firedamageblue1:
+	SelfHealing@firedamageblue1:
+		HealIfBelow: 101
 		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
 		RequiresCondition: firedamageblue1
 	ExternalCondition@firedamageblue1:
 		Condition: firedamageblue1
-	DamagedByTerrain@firedamageblue2:
+	SelfHealing@firedamageblue2:
+		HealIfBelow: 101
 		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
 		RequiresCondition: firedamageblue2
 	ExternalCondition@firedamageblue2:
 		Condition: firedamageblue2
-	DamagedByTerrain@firedamageblue3:
+	SelfHealing@firedamageblue3:
+		HealIfBelow: 101
 		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
 		RequiresCondition: firedamage3
 	ExternalCondition@firedamageblue3:
 		Condition: firedamageblue3
