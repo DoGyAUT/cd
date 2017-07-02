@@ -342,6 +342,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
 		Palette: pips
@@ -359,8 +360,6 @@
 		RequiresBaseProvider: True
 	Valued:
 		Cost: 25
-	Armor@base:
-		Type: Building
 	FrozenUnderFog:
 	SoundOnDamageTransition:
 		DamagedSounds: expnew01.aud
@@ -494,6 +493,7 @@
 
 ^Wall:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	CombatDebugOverlay:
 	AppearsOnRadar:
 	Building:
@@ -530,10 +530,6 @@
 		RequiredForShortGame: False
 	Health:
 		HP: 500
-	Armor@base:
-		Type: Building
-	Armor:
-		Type: Heavy
 	-GivesExperience:
 	HitShape:
 		Type: Rectangle
@@ -548,8 +544,6 @@
 		Cost: 50
 	Health:
 		HP: 400
-	Armor:
-		Type: Heavy
 	LineBuildNode:
 		Types: wall, gate
 	-Building:
@@ -611,11 +605,10 @@
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
 	Inherits@parach: ^Parachutable
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	DrawLineToTarget:
 	Health:
 		HP: 50
-	Armor@base:
-		Type: Infantry
 	Valued:
 		Cost: 100
 	RevealsShroud:
@@ -1126,6 +1119,7 @@
 	Inherits@2: ^EmpDisable
 	Inherits@3: ^DamagedByVeins
 	Inherits@8: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeCyborg
 	MustBeDestroyed:
 	Crushable:
 		CrushClasses: cyborg
@@ -1133,8 +1127,6 @@
 	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Armor@base:
-		Type: Cyborg
 	Targetable:
 		TargetTypes: Ground, Cyborg
 	ThrowsShrapnel@sparks:
@@ -1420,6 +1412,7 @@
 	Inherits@8: ^IronCurtainable
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1466,8 +1459,6 @@
 		Voice: Move
 		Weight: 5
 		RequiresCondition: !deployed
-	Armor@base:
-		Type: Vehicle
 	AttackMove:
 		Voice: Move
 	HiddenUnderFog:
@@ -1703,6 +1694,7 @@
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^Cloakable
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	DrawLineToTarget:
 	RevealsShroud:
 		Range: 11c321
@@ -1714,8 +1706,6 @@
 	Targetable@AIRBORNE:
 		TargetTypes: Air
 		RequiresCondition: airborne
-	Armor@base:
-		Type: Aircraft
 	Selectable:
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
@@ -1839,10 +1829,9 @@
 
 ^Corpse:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	AutoTargetIgnore:
@@ -1852,13 +1841,12 @@
 
 ^InfantryHusk:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Aircraft:
 		RepairBuildings:
 		RearmBuildings:
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	AutoTargetIgnore:
@@ -1878,6 +1866,7 @@
 	HitShape:
 
 ^AircraftHusk:
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	RenderSprites:
 	RenderVoxels:
 		PlayerPalette: cdvoxels
@@ -1896,8 +1885,6 @@
 		RearmBuildings:
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	RevealsShroud:
@@ -2132,6 +2119,7 @@
 
 ^Tree:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeFlora
 	HiddenUnderShroud:
 	RenderSprites:
 		Palette: terraindecoration
@@ -2148,8 +2136,6 @@
 		TargetTypes: Ground, Wall, DetonateAttack
 	Health:
 		HP: 200
-	Armor:
-		Type: none
 	HitShape:
 
 ^Rock:
@@ -2203,6 +2189,7 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^Cloakable
 	Inherits@5: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
 	RenderVoxels:
 		PlayerPalette: cdvoxels
 		LightAmbientColor: -0.1,-0.1,-0.1
@@ -2221,8 +2208,6 @@
 		RequiresCondition: !(empdisable && !invulnerability)
 	Health:
 		HP: 100
-	Armor@base:
-		Type: Vehicle
 	RevealsShroud:
 		Range: 7c73
 	Selectable:

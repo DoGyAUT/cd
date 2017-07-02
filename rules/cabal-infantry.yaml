@@ -317,6 +317,7 @@ OVERSEER:
 CYBFLY:
 	Inherits@1: ^SoldierJumpjet
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -345,8 +346,6 @@ CYBFLY:
 		RequiresCondition: cruising
 	Health:
 		HP: 400
-	Armor@base:
-		Type: Aircraft
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146

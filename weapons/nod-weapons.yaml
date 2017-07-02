@@ -482,7 +482,7 @@ RaiderGunAttack:
 		Spread: 0c91
 		Damage: 15
 		Versus:
-			Air: 25
+			Aircraft: 25
 
 RaiderGunLaser:
 	Inherits: ^BasicLaser
@@ -504,7 +504,7 @@ RaiderGunLaser:
 		Spread: 0c59
 		Damage: 30
 		Versus:
-			Air: 50
+			Aircraft: 50
 			Infantry: 100
 		ValidTargets: Ground, Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
@@ -595,8 +595,6 @@ ClusterMissile:
 		Damage: 75
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air, HighAir
-		Versus:
-			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction0: DestroyResource
 		Size: 1
@@ -609,8 +607,6 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
 		ValidTargets: Ground, Water, Air, HighAir
-		Versus:
-			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction1: DestroyResource
 		Size: 2
@@ -625,8 +621,6 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground, Water, Air, HighAir
-		Versus:
-			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction2: DestroyResource
 		Size: 3
@@ -641,8 +635,6 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Air, HighAir
-		Versus:
-			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction3: DestroyResource
 		Size: 4
@@ -657,8 +649,6 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Ground, Water, Air, HighAir
-		Versus:
-			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction4: DestroyResource
 		Size: 5
@@ -691,12 +681,6 @@ MultiCluster:
 		Spread: 0c181
 		Damage: 65
 		ValidTargets: Ground
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
