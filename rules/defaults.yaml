@@ -75,14 +75,6 @@
 	QuantizeFacingsFromSequence:
 	AutoSelectionSize:
 	RenderSprites:
-
-^SpriteActor1:
-	BodyOrientation:
-		UseClassicPerspectiveFudge: False
-	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
-	RenderSprites:
-		Palette: beamzap
 	
 ^TerrainOverlay:
 	AlwaysVisible:
@@ -350,6 +342,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
+	Inherits@4: ^AffectedByFlames
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
 		Palette: pips
@@ -390,71 +383,35 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 40
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
-	DamagedByTerrain@firedamage1:
-		Damage: 20
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage1
-	ExternalCondition@firedamage1:
-		Condition: firedamage1
-	DamagedByTerrain@firedamage2:
-		Damage: 10
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage2
-	ExternalCondition@firedamage2:
-		Condition: firedamage2
-	DamagedByTerrain@firedamage3:
-		Damage: 5
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamage3:
-		Condition: firedamage3
-	DamagedByTerrain@firedamageblue:
-		Damage: 45
-		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue
-	ExternalCondition@firedamageblue:
-		Condition: firedamageblue
-	DamagedByTerrain@firedamageblue1:
-		Damage: 30
-		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue1
-	ExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
-	DamagedByTerrain@firedamageblue2:
-		Damage: 15
-		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue2
-	ExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
-	DamagedByTerrain@firedamageblue3:
-		Damage: 10
-		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
 	HitShape:
 		UseOccupiedCellsOffsets: true
+	DamagedByTerrain@firedamage:
+		Damage: 40
+		DamageInterval: 16
+	DamagedByTerrain@firedamage1:
+		Damage: 20
+		DamageInterval: 16
+	DamagedByTerrain@firedamage2:
+		Damage: 10
+		DamageInterval: 16
+	DamagedByTerrain@firedamage3:
+		Damage: 5
+		DamageInterval: 16
+	DamagedByTerrain@firedamageblue:
+		Damage: 45
+		DamageInterval: 16
+	DamagedByTerrain@firedamageblue1:
+		Damage: 30
+		DamageInterval: 16
+	DamagedByTerrain@firedamageblue2:
+		Damage: 15
+		DamageInterval: 16
+	DamagedByTerrain@firedamageblue3:
+		Damage: 10
+		DamageInterval: 16
 		
 ^Burningtank:
 	ThrowsShrapnel:
@@ -679,6 +636,7 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
+	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
 	DrawLineToTarget:
 	Health:
@@ -861,67 +819,27 @@
 	DamagedByTerrain@firedamage:
 		Damage: 20
 		DamageInterval: 8
-		DamageTypes: FireDeath
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
 	DamagedByTerrain@firedamage1:
 		Damage: 15
 		DamageInterval: 8
-		DamageTypes: FireDeath
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage1
-	ExternalCondition@firedamage1:
-		Condition: firedamage1
 	DamagedByTerrain@firedamage2:
 		Damage: 10
 		DamageInterval: 8
-		DamageTypes: FireDeath
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage2
-	ExternalCondition@firedamage2:
-		Condition: firedamage2
 	DamagedByTerrain@firedamage3:
 		Damage: 5
 		DamageInterval: 8
-		DamageTypes: FireDeath
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamage3:
-		Condition: firedamage3
 	DamagedByTerrain@firedamageblue:
 		Damage: 25
 		DamageInterval: 8
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue
-	ExternalCondition@firedamageblue:
-		Condition: firedamageblue
 	DamagedByTerrain@firedamageblue1:
 		Damage: 20
 		DamageInterval: 8
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue1
-	ExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
 	DamagedByTerrain@firedamageblue2:
 		Damage: 15
 		DamageInterval: 8
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue2
-	ExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
 	DamagedByTerrain@firedamageblue3:
 		Damage: 10
 		DamageInterval: 8
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1543,6 +1461,7 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^IronCurtainable
+	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	DrawLineToTarget:
@@ -1668,68 +1587,28 @@
 		Condition: gasdamage
 	DamagedByTerrain@firedamage:
 		Damage: 20
-		DamageTypes: FireDeath
 		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
 	DamagedByTerrain@firedamage1:
 		Damage: 15
-		DamageTypes: FireDeath
 		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage1
-	ExternalCondition@firedamage1:
-		Condition: firedamage1
 	DamagedByTerrain@firedamage2:
 		Damage: 10
-		DamageTypes: FireDeath
 		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage2
-	ExternalCondition@firedamage2:
-		Condition: firedamage2
 	DamagedByTerrain@firedamage3:
 		Damage: 5
-		DamageTypes: FireDeath
 		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamage3:
-		Condition: firedamage3
 	DamagedByTerrain@firedamageblue:
 		Damage: 25
 		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue
-	ExternalCondition@firedamageblue:
-		Condition: firedamageblue
 	DamagedByTerrain@firedamageblue1:
 		Damage: 20
 		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue1
-	ExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
 	DamagedByTerrain@firedamageblue2:
 		Damage: 15
 		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamageblue2
-	ExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
 	DamagedByTerrain@firedamageblue3:
 		Damage: 10
 		DamageInterval: 16
-		DamageTypes: FireDeathBlue
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -2275,18 +2154,17 @@
 	WithSpriteBody:
 	GrantPeriodicCondition@kill:
 		Condition: killfire
-		CooldownDuration: 50
 		ActiveDuration: 50
+	GrantConditionOnTerrain@kill:
+		Condition: killfire
+		TerrainTypes: Water
 	Explodes:
 		Weapon: NapalmShrapnelSmudge
 		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
 		RequiresCondition: killfire
-		Delay: 0,20
 	ProximityExternalCondition@firedamage:
-		Condition: firedamage
 		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
 	HitShape:
 		Type: Circle
 			Radius: 256
@@ -2294,817 +2172,19 @@
 	Chronoshiftable:
 		ReturnToOrigin: False
 
-^FireActor1:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
+^FireActorSlow:
+	Inherits@1: ^FireActor
 	GrantPeriodicCondition@kill:
-		Condition: killfire
 		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
-		RequiresCondition: killfire
 		Delay: 0,20
-	ProximityExternalCondition@firedamage1:
-		Condition: firedamage1
-		ValidStances: Ally, Neutral, Enemy
-		Range: 2c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActor2:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamage2:
-		Condition: firedamage2
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActor3:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamage3:
-		Condition: firedamage3
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-
-^FireActorBlue:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamageblue:
-		Condition: firedamageblue
-		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue1:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
-		ValidStances: Ally, Neutral, Enemy
-		Range: 2c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue2:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue3:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 50
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,20
-	ProximityExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
 		
-^FireActorfast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
+^FireActorFast:
+	Inherits@1: ^FireActor
 	GrantPeriodicCondition@kill:
-		Condition: killfire
 		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
-		RequiresCondition: killfire
 		Delay: 0,5
-	ProximityExternalCondition@firedamage:
-		Condition: firedamage
-		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActor1fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamage1:
-		Condition: firedamage1
-		ValidStances: Ally, Neutral, Enemy
-		Range: 2c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActor2fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamage2:
-		Condition: firedamage2
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActor3fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamage3:
-		Condition: firedamage3
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBluefast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamageblue:
-		Condition: firedamageblue
-		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue1fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
-		ValidStances: Ally, Neutral, Enemy
-		Range: 2c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue2fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorBlue3fast:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		CooldownDuration: 10
-		ActiveDuration: 50
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-		Delay: 0,5
-	ProximityExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
-		ValidStances: Ally, Neutral, Enemy
-		Range: 1c0
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-		
 		
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
@@ -3411,3 +2491,49 @@
             LocalYaw: 128
             TopLeft: -2560, -2560
             BottomRight: 2560, 2560
+
+^AffectedByFlames:
+	DamagedByTerrain@firedamage:
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamage
+	ExternalCondition@firedamage:
+		Condition: firedamage
+	DamagedByTerrain@firedamage1:
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamage1
+	ExternalCondition@firedamage1:
+		Condition: firedamage1
+	DamagedByTerrain@firedamage2:
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamage2
+	ExternalCondition@firedamage2:
+		Condition: firedamage2
+	DamagedByTerrain@firedamage3:
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamage3
+	ExternalCondition@firedamage3:
+		Condition: firedamage3
+	DamagedByTerrain@firedamageblue:
+		DamageTypes: FireDeathBlue
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamageblue
+	ExternalCondition@firedamageblue:
+		Condition: firedamageblue
+	DamagedByTerrain@firedamageblue1:
+		DamageTypes: FireDeathBlue
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamageblue1
+	ExternalCondition@firedamageblue1:
+		Condition: firedamageblue1
+	DamagedByTerrain@firedamageblue2:
+		DamageTypes: FireDeathBlue
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamageblue2
+	ExternalCondition@firedamageblue2:
+		Condition: firedamageblue2
+	DamagedByTerrain@firedamageblue3:
+		DamageTypes: FireDeathBlue
+		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
+		RequiresCondition: firedamage3
+	ExternalCondition@firedamageblue3:
+		Condition: firedamageblue3
