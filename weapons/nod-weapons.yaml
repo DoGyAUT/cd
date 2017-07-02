@@ -16,6 +16,10 @@ DevilsTongueGun:
 		Spread: 1c62
 		Damage: 55
 		Falloff: 100, 80
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 4
+		AimChance: 0
 
 DevilsTongueGunTiberium:
 	Inherits@wh: BlueFireballLauncher
@@ -56,7 +60,11 @@ PyradonGun:
 		Spread: 1c62
 		Damage: 110
 		Falloff: 100, 80
-
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 4
+		AimChance: 0
+		
 PyradonGunBlue:
 	Inherits@wh: BlueFireballLauncher
 	ReloadDelay: 80
@@ -76,6 +84,10 @@ PyradonGunBlue:
 		Spread: 1c62
 		Damage: 150
 		Falloff: 100, 80
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 4
+		AimChance: 0
 
 GorranMissile:
 	Inherits: ^MissileAPHE
@@ -136,6 +148,10 @@ RavenMissile:
 	Warhead@3Sound: CreateEffect
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
 		InvalidImpactTypes: Water
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 6
+		AimChance: 0
 
 RavenMissileAA:
 	Inherits: ^MissileAPHE
@@ -174,8 +190,12 @@ BluehellRavenMissile:
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
-		ExplosionPalette: apolra2
+		ExplosionPalette: beamzap
 		InvalidImpactTypes: Water
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 6
+		AimChance: 0
 
 TiberiumRavenMissile:
 	Inherits: RavenMissile
@@ -222,7 +242,7 @@ BluehellRavenMissileAA:
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
-		ExplosionPalette: apolra2
+		ExplosionPalette: beamzap
 		InvalidImpactTypes: Water
 	Warhead@3Sound: CreateEffect
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
@@ -383,17 +403,21 @@ SpecterGunInferno:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
-		ExplosionPalette: apolra2
+		ExplosionPalette: beamzap
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidImpactTypes: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 12
+		AimChance: 0
 
 InfernoShrapnel:
 	Inherits@wh: ^FireWH
@@ -411,7 +435,7 @@ InfernoShrapnel:
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
@@ -423,6 +447,10 @@ InfernoShrapnel:
 		Range: 1
 		Actors: BFire1, BFire1, BFire1
 		Owner: Creeps
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 4
+		AimChance: 0
 
 SpecterGunNapalm:
 	Inherits: SpecterGun
@@ -447,6 +475,10 @@ SpecterGunNapalm:
 		SmudgeType: LargeScorch
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 12
+		AimChance: 0
 
 RaiderGunVisual:
 	Inherits: ^Bullet
@@ -936,7 +968,7 @@ VertigoBombNapalm:
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
 		Weapon: NapalmShrapnel
-		Amount: 30
+		Amount: 40
 		AimChance: 0
 
 NapalmShrapnel:
@@ -1613,14 +1645,18 @@ FlamerTurretBlueFireballLauncher:
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
-		ExplosionPalette: light
+		ExplosionPalette: light2
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 4
+		AimChance: 0
 
 FlamerTurretFireballLauncher:
 	Inherits@wh: ^FireWH
@@ -1651,6 +1687,10 @@ FlamerTurretFireballLauncher:
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light2
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 4
+		AimChance: 0
 
 FanticBoom:
 	Inherits@wh: ^HEAPWH
@@ -2034,9 +2074,13 @@ BlackHandFlamer:
 		Damage: 175
 		Falloff: 100, 80
 		InvalidTargets: Flameproof
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnel
+		Amount: 3
+		AimChance: 0
 
 BlackHandFlamerBlue:
-	Inherits: BlackHandFlamer
+	Inherits: BlueFireballLauncher
 	ReloadDelay: 60
 	Range: 4c611
 	Report: firstrm1.aud
@@ -2058,11 +2102,15 @@ BlackHandFlamerBlue:
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
+	WarheadAS: FireShrapnel
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 3
+		AimChance: 0
 
 TermiteGun:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
-	ReloadDelay: 130
+	ReloadDelay: 150
 	Range: 9c921
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
@@ -2072,8 +2120,8 @@ TermiteGun:
 		Spread: 0c181
 		Damage: 300
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
-		ExplosionPalette: apolra2
+		Explosions: fireexpl
+		ExplosionPalette: effect
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidImpactTypes: Water
 	WarheadAS: FireShrapnel
@@ -2094,15 +2142,80 @@ TermiteGunShrapnel:
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 50
+		Damage: 25
 	WarheadAS: SpawnActor
 		Range: 1
-		Actors: Fire1
+		Actors: Fire3small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
-		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-		ExplosionPalette: apolra2
-		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
+		Explosions: infexpl
+		ExplosionPalette: apolra25alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light2
+
+TermiteGunShrapnel1:
+	Inherits: ^ShellAP
+	Inherits@wh: ^HEAPWH
+	Range: 2c124
+	Projectile: BulletAS
+		Speed: 1c424
+		LaunchAngle: 90
+		Inaccuracy: 0c362
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c14
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 25
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Fire1small
+		Owner: Creeps
+	Warhead@2Eff: CreateEffect
+		Explosions: infexpl
+		ExplosionPalette: apolra25alpha
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light2
+
+termitegunshrapnelblue:
+	Inherits: ^ShellAP
+	Inherits@wh: ^HEAPWH
+	Range: 2c124
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: blueflametrailer
+		TrailImage: blueflametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 25
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: BFire3small
+		Owner: Creeps
+	Warhead@2Eff: CreateEffect
+		Explosions: infexpl
+		ExplosionPalette: beamzap
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash

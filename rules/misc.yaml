@@ -131,24 +131,24 @@ BFire1:
 		Actor: bfire2
 
 BFire2:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor1
 	RenderSprites:
 		Image: bmediumfire
 	SpawnActorOnDeath:
 		Actor: bfire3
 
 BFire3:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor2
 	RenderSprites:
 		Image: bsmallfire
 	SpawnActorOnDeath:
 		Actor: bfire4
 
 BFire4:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor3
 	RenderSprites:
 		Image: btinyfire
-
+		
 Fire1:
 	Inherits@1: ^FireActor
 	RenderSprites:
@@ -157,23 +157,75 @@ Fire1:
 		Actor: fire2
 
 Fire2:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor1
 	RenderSprites:
 		Image: mediumfire
 	SpawnActorOnDeath:
 		Actor: fire3
 
 Fire3:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor2
 	RenderSprites:
 		Image: smallfire
 	SpawnActorOnDeath:
 		Actor: fire4
 
 Fire4:
-	Inherits@1: ^FireActor
+	Inherits@1: ^FireActor3
 	RenderSprites:
 		Image: tinyfire
+
+Fire1small:
+	Inherits@1: ^FireActorfast
+	RenderSprites:
+		Image: largefire
+	SpawnActorOnDeath:
+		Actor: fire2small
+
+Fire2small:
+	Inherits@1: ^FireActor1fast
+	RenderSprites:
+		Image: mediumfire
+	SpawnActorOnDeath:
+		Actor: fire3small
+
+Fire3small:
+	Inherits@1: ^FireActor2fast
+	RenderSprites:
+		Image: smallfire
+	SpawnActorOnDeath:
+		Actor: fire4small
+
+Fire4small:
+	Inherits@1: ^FireActor3fast
+	RenderSprites:
+		Image: tinyfire
+		
+BFire1small:
+	Inherits@1: ^FireActorBluefast
+	RenderSprites:
+		Image: blargefire
+	SpawnActorOnDeath:
+		Actor: bfire2small
+
+BFire2small:
+	Inherits@1: ^FireActorBlue1fast
+	RenderSprites:
+		Image: bmediumfire
+	SpawnActorOnDeath:
+		Actor: bfire3small
+
+BFire3small:
+	Inherits@1: ^FireActorBlue2fast
+	RenderSprites:
+		Image: bsmallfire
+	SpawnActorOnDeath:
+		Actor: bfire4small
+
+BFire4small:
+	Inherits@1: ^FireActorBlue3fast
+	RenderSprites:
+		Image: btinyfire
 
 SROCK01:
 	Inherits: ^Rock
