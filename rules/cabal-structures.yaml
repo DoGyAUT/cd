@@ -564,21 +564,23 @@ KABTECH:
 		Condition: invulnerability
 		Range: 2
 		RequiresCondition: plug1.upgrade.nanoswarm || plug2.upgrade.nanoswarm || plug3.upgrade.nanoswarm || plug4.upgrade.nanoswarm
-	AirstrikePower@MantaStrikeRun:
+	AirstrikePowerAS@MantaStrikeRun:
 		OrderName: MantaStrikeRun
 		UnitType: manta
-		SquadSize: 9
-		Icon: havoc
+		SquadSize: 1
+		Icon: mantastrike
 		Description: Manta Strike
 		LongDesc: Attack everything in an area of the map.
 		SquadOffset: -2000,2000,0
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
-		QuantizedFacings: 8
+		Mission: Guard
+		GuardDuration: 1200 # value here doesn't matter at all, it'll run away after killing first target
+		#QuantizedFacings: 8
 		ChargeTime: 240
 		DisplayBeacon: true
 		DisplayRadarPing: true
-		BeaconPoster: havoc
+		BeaconPoster: mantastrike
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock

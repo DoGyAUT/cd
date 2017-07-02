@@ -112,7 +112,7 @@ MANTA:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 1
-		Speed: 113
+		Speed: 112
 		IdealSeparation: 0c001
 		CruiseAltitude: 11c321
 		AltitudeVelocity: 10c0
@@ -130,17 +130,18 @@ MANTA:
 		LocalOffset: 1131,136,1273, 1131,0,1273, 1131,-136,1273
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
+	AmmoPool: #doesn't work without it
+		Ammo: 999
+		PipCount: 1
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		ReloadCount: 3
 	Targetable@AIRBORNE:
 		TargetTypes: HighAir
 		RequiresCondition: airborne
-	AttackBomber:
-	AmmoPool:
-		Ammo: 40
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
+	AttackPlane:
+		FacingTolerance: 257
+		AttackTurnDelay: 120
 	Turreted:
 		TurnSpeed: 2
 		Offset: 566,0,181
@@ -180,3 +181,5 @@ MANTA:
 		Probability: 100
 	HitShape:
 	-Selectable:
+	FlyAwayOnIdle:
+	-ReturnOnIdle:
