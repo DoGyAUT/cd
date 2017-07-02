@@ -671,6 +671,26 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+	AirstrikePower@VertigoSeismicAirstrikePower:
+		OrderName: VertigoSeismicAirstrikePowerInfoOrder
+		Prerequisites: naradr, ~technology
+		Icon: vertigo
+		ChargeTime: 300
+		QuantizedFacings: 8
+		Description: Seismic Bomb
+		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo3
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 
 NATECH:
 	Inherits: ^Building
