@@ -589,3 +589,21 @@ NASTLH:
 		AffectsParent: True
 	Selectable:
 		Bounds: 106, 60, 8, -15
+	GrantExternalConditionPower@emergencyrepairNod:
+		OrderName: CloakingFieldPower
+		Prerequisites: ~technology
+		Icon: cloakingfield
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Cloaking Field
+		LongDesc: Cloaks all vehicles in the radius
+		Condition: cloakgeneratorpower
+		OnFireSound: cloak5.aud
+		Sequence: idle
+		ChargeTime: 180
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 5
+		Duration: 0

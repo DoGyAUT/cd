@@ -326,7 +326,7 @@
 
 ^Cloakable:
 	Cloak:
-		RequiresCondition: cloakgenerator || crate-cloak
+		RequiresCondition: cloakgenerator || crate-cloak || cloakgeneratorpower
 		InitialDelay: 0
 		CloakDelay: 90
 		IsPlayerPalette: True
@@ -337,6 +337,11 @@
 		Condition: cloakgenerator
 	ExternalCondition@EXTERNALCLOAK2:
 		Condition: crate-cloak
+	ExternalCondition@EXTERNALCLOAK3:
+		Condition: cloakgeneratorpower
+	#TimedConditionBar@cloakgeneratorpower: #change it if you want to make it non perma
+		#Condition: cloakgeneratorpower
+		#Color: FF0000
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
