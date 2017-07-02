@@ -151,7 +151,7 @@ HelionGun:
 	Range: 35c364
 	MinRange: 14c146
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-	ValidTargets: Ground, Water, Air
+	ValidTargets: Ground, Aircraft
 	Projectile: BulletAS
 		Speed: 0c362
 		Blockable: true
@@ -169,7 +169,7 @@ HelionGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c848
 		Damage: 1000
-		ValidTargets: Ground, Water, Air
+		ValidTargets: Ground, Aircraft
 		DamageTypes: CabalWeapon, Prone50Percent, TriggerProne, EnergyDeath
 		Falloff: 100, 67, 40, 17, 0
 	Warhead@2Eff: CreateEffect
@@ -379,7 +379,7 @@ DroneMachal:
 	ReloadDelay: 100
 	Range: 19c818
 	MinRange: 2c848
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Report: machal01.aud, machal02.aud, machal03.aud, machal04.aud
 	Burst: 10
 	BurstDelay: 2
@@ -395,7 +395,7 @@ DroneMachal:
 		Spread: 0c362
 		Damage: 36
 		ValidStances: Neutral, Enemy
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
@@ -593,7 +593,7 @@ CabalObeliskLaserAA:
 	ReloadDelay: 120
 	Range: 16c994
 	Report: cablaser01.aud
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c71
@@ -605,7 +605,7 @@ CabalObeliskLaserAA:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 		Spread: 0c724
 		Damage: 800
 		DamageTypes: CabalWeapon
@@ -663,7 +663,7 @@ TarantulaLaserAA:
 	Burst: 2
 	BurstDelay: 0
 	Report: cablaser01.aud
-	ValidTargets: Air, MidAir
+	ValidTargets: Aircraft
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c42
@@ -675,7 +675,7 @@ TarantulaLaserAA:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air, MidAir
+		ValidTargets: Aircraft
 		Spread: 0c59
 		Damage: 100
 		DamageTypes: CabalWeapon
@@ -754,9 +754,9 @@ SkirmisherLaserFire:
 		
 SkirmisherLaserFireAA:
 	Inherits: SkirmisherLaserFire
-	ValidTargets: Air, HighAir, Midair
+	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air, HighAir, Midair
+		ValidTargets: Aircraft
 		Spread: 0c59
 		Damage: 9
 
@@ -768,7 +768,7 @@ HarbingerLaserFire:
 	Burst: 3
 	BurstDelay: 5
 	Report: bigggun1.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground, Aircraft
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c28
@@ -780,7 +780,7 @@ HarbingerLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Air, MidAir
+		ValidTargets: Ground, Aircraft
 		Spread: 0c59
 		Damage: 100
 		DamageTypes: CabalWeapon
@@ -801,7 +801,7 @@ GargantuaLaser:
 	Burst: 8
 	BurstDelay: 5
 	Report: cablaser01.aud
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground, Aircraft
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c71
@@ -813,7 +813,7 @@ GargantuaLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Air, MidAir
+		ValidTargets: Ground, Aircraft
 		Spread: 0c59
 		Damage: 80
 		DamageTypes: CabalWeapon
@@ -843,7 +843,6 @@ DreadfireLauncher:
 	Inherits: FireballLauncher
 	ReloadDelay: 60
 	Range: 6c11
-	InvalidTargets: Flameproof
 	Projectile: BulletAS
 		Speed: 0c181
 		LaunchAngle: 90
@@ -887,8 +886,7 @@ DreadfireShrapnel:
 		Owner: Creeps
 
 JaguarClaw:
-	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-	InvalidTargets: Vehicle, Buildings
+	ValidTargets: Infantry
 	ReloadDelay: 20
 	Range: 1c424
 	Report: jaguar_a1.aud, jaguar_s1.aud, jaguar_s2.aud
@@ -901,7 +899,7 @@ JaguarClaw:
 		DamageTypes: CabalWeapon, Prone100Percent, TriggerProne, BulletDeath
 
 WebLauncher:
-	ValidTargets: Infantry, Mutant
+	ValidTargets: Infantry
 	ReloadDelay: 120
 	Range: 14c146
 	Burst: 3
@@ -919,14 +917,14 @@ WebLauncher:
 	Warhead@target: SpreadDamage
 		Spread: 0c0
 		Damage: 0
-		ValidTargets: Infantry, Mutant
+		ValidTargets: Infantry
 		DamageTypes: CabalWeapon, TriggerProne
 		ImpactSounds: fireweb1.aud
 	Warhead@emp: GrantExternalCondition
 		Range: 0c724
 		Duration: 90
 		Condition: webdisable
-		ValidTargets: Infantry, Mutant
+		ValidTargets: Infantry
 
 ReaperMissile:
 	Inherits: ^MissileAPHE
@@ -950,19 +948,19 @@ ReaperMissile:
 		
 ReaperMissileAA:
 	Inherits: ReaperMissile
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 125
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
     DamageTypes: CabalWeapon
 
 cleansingaura:
-	ValidTargets: Infantry, Mutant
+	ValidTargets: Infantry
 	Warhead@emp: GrantExternalCondition
 		Range: 4c0
 		Duration: 90
 		Condition: cleansingaura
 		Duration: 500
-		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidTargets: Infantry
 		ValidStances: None, Enemy, Neutral, Ally

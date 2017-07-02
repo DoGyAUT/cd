@@ -253,6 +253,7 @@ NPHARV:
 SAPC:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -273,7 +274,7 @@ SAPC:
 		Speed: 113
 		RequiresCondition: !(empdisable && !invulnerability) && !loading
 		Subterranean: true
-		SubterraneanCondition: submerged
+		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
 		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drillup.aud
@@ -283,13 +284,13 @@ SAPC:
 		TerrainSpeeds:
 			Subterranean: 110
 	RejectsOrders:
-		RequiresCondition: submerged
+		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
 		HP: 600
 	RevealsShroud:
 		Range: 8c497
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	Cargo:
 		Types: Infantry
 		MaxWeight: 8
@@ -299,14 +300,12 @@ SAPC:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
+		RequiresCondition: !subterranean
 	LeavesTrails@ground:
 		Image: dust
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	AnnounceOnSeen:
 		PingRadar: True
 		Notification: SubterraneanUnitDetected
@@ -996,6 +995,7 @@ NHWTZ:
 
 SUBTANK:
 	Inherits: ^VoxelTank
+	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1014,7 +1014,7 @@ SUBTANK:
 		TurnSpeed: 4
 		Speed: 99
 		Subterranean: true
-		SubterraneanCondition: submerged
+		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
 		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drillup.aud
@@ -1024,50 +1024,48 @@ SUBTANK:
 		TerrainSpeeds:
 			Subterranean: 110
 	RejectsOrders:
-		RequiresCondition: submerged
+		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
 		HP: 650
 	RevealsShroud:
 		Range: 9c921
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	Armament@primary:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,0,724
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@secondary:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,-509,424
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@secondary2:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,509,424
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@primaryB:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,0,724
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	Armament@secondaryB:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,-509,424
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	Armament@secondary2B:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,509,424
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	AttackFrontal:
 	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
+		RequiresCondition: !subterranean
 	LeavesTrails@ground:
 		Image: dust
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	AnnounceOnSeen:
 		PingRadar: True
 		Notification: SubterraneanUnitDetected

@@ -49,7 +49,7 @@ GruntGun:
 HuntressGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground, Aircraft
 	ReloadDelay: 150
 	Range: 9c921
 	Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
@@ -60,7 +60,7 @@ HuntressGun:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground, Aircraft
 		Spread: 0c91
 		Damage: 150
 		Versus:
@@ -238,7 +238,7 @@ TaurusMG:
 	Burst: 12
 	BurstDelay: 2
 	Report: m3.aud
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground, Aircraft
 	Projectile: BulletAS
 		Speed: 2c848
 		Inaccuracy: 0c724
@@ -247,7 +247,7 @@ TaurusMG:
 		Damage: 50
 		Versus:
 			Aircraft: 33
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidImpactTypes: Water
@@ -317,7 +317,7 @@ BuggyFlak:
 	ReloadDelay: 100
 	Burst: 10
 	BurstDelay: 4
-	ValidTargets: MidAir, Air
+	ValidTargets: Aircraft
 	Range: 12c745
 	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
 	Projectile: BulletAS
@@ -333,7 +333,7 @@ BuggyFlak:
 		Versus:
 			Building: 50
 			Vehicle: 40
-		ValidTargets: MidAir, Air
+		ValidTargets: Aircraft
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
@@ -352,7 +352,7 @@ FlakCannon:
 	ReloadDelay: 100
 	Burst: 20
 	BurstDelay: 4
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Range: 11c321
 	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
 	Projectile: BulletAS
@@ -365,7 +365,7 @@ FlakCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
 		Damage: 30
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
@@ -480,7 +480,7 @@ RagnarokCannon:
 GoonHammer:
 	ReloadDelay: 40
 	Range: 2c124
-	ValidTargets: Infantry, Mutant, Goon
+	ValidTargets: Infantry
 	Report: splatter01.aud, splatter02.aud
 	Projectile: BulletAS
 		Speed: 0c602
@@ -491,7 +491,7 @@ GoonHammer:
 	Warhead@21Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		AffectsParent: True
-		ValidTargets: Goon
+		ValidTargets: Infantry
 		ValidStances: Ally
 		Spread: 0c362
 		Damage: -100
@@ -499,7 +499,7 @@ GoonHammer:
 GoonHammer2:
 	ReloadDelay: 40
 	Range: 2c124
-	InvalidTargets: Infantry, Mutant
+	InvalidTargets: Infantry
 	Report: metal01.aud, metal02.aud, metal03.aud, metal04.aud, metal05.aud, metal06.aud, metal07.aud, metal08.aud
 	Projectile: BulletAS
 		Speed: 0c602
@@ -518,8 +518,7 @@ GoonHammer2:
 		DamageTypes: BulletDeath
 
 HellHoundBite:
-	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-	InvalidTargets: Vehicle, Buildings
+	ValidTargets: Infantry
 	ReloadDelay: 20
 	Range: 1c424
 	Report: mdog_a1.aud, mdog_m1.aud, mdog_s1.aud
@@ -543,7 +542,6 @@ BuggyFireballLauncher:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
-	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 75
@@ -577,7 +575,7 @@ BountyMG:
 BountyHunterBazooka:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-	ValidTargets: Building, Cyborg, Air, MidAir, HighAir
+	ValidTargets: Building, Vehicles, Aircraft
 	ReloadDelay: 120
 	Range: 11c321
 	MinRange: 2c124
@@ -585,7 +583,7 @@ BountyHunterBazooka:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 300
-		ValidTargets: Ground, Air, MidAir, HighAir
+		ValidTargets: Ground, Aircraft
 		Versus:
 			Aircraft: 50
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
@@ -630,7 +628,7 @@ GeckoLauncherBarrage:
 ForgottenT3Missile:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-	ValidTargets: Ground, Air, MidAir
+	ValidTargets: Ground, Aircraft
 	ReloadDelay: 220
 	Range: 11c321
 	MinRange: 2c848
@@ -644,7 +642,7 @@ ForgottenT3Missile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 300
-		ValidTargets: Ground
+		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: small_tumu, medium_tumu, large_tumu
 		ExplosionPalette: apolra2
@@ -665,7 +663,7 @@ ForgottenT2Missile:
 	BurstDelay: 8
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground, Air, MidAir, HighAir
+	ValidTargets: Ground
 	Projectile: Missile
 		Inaccuracy: 0c362
 		MaximumLaunchSpeed: 0c362
@@ -678,11 +676,11 @@ ForgottenT2Missile:
 
 ForgottenT2MissileAA:
 	Inherits: ForgottenT2Missile
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 75
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 
 BuggyMissile:
 	Inherits: ^MissileAPHE
@@ -711,11 +709,11 @@ BuggyMissile:
 
 BuggyMissileAA:
 	Inherits: BuggyMissile
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 60
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 
 BuzzardMissiles:
 	Inherits: ^MissileAPHE
@@ -774,7 +772,7 @@ StrikerMissiles:
 	MinRange: 5c673
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	Burst: 2
-	ValidTargets: Air, MidAir, HighAir
+	ValidTargets: Aircraft
 	Projectile: Missile
 		MaximumLaunchSpeed: 1c62
 		MinimumLaunchSpeed: 1c62
@@ -788,7 +786,7 @@ StrikerMissiles:
 		Spread: 0c724
 		Damage: 300
 		ValidStances: Neutral, Enemy
-		ValidTargets: Air, MidAir, HighAir
+		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
 		ExplosionPalette: apolra50alpha

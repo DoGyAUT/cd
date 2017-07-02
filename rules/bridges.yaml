@@ -10,8 +10,6 @@ CABHUT:
 		NeighbourOffsets: -1,-1, -1,0, -1,1, 0,-1, 0,1, 1,-1, 1,0, 1,1
 	RenderSprites:
 		Palette: player
-	Targetable:
-		TargetTypes: C4
 	-SelectionDecorations:
 	-Demolishable:
 	-Explodes:
@@ -24,6 +22,8 @@ CABHUT:
 
 ^LowBridgeRamp:
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	Inherits@FeatureTargettypeForceFire: ^FeatureTargettypeForceFireOnly
 	AlwaysVisible:
 	RenderSprites:
 		Palette: terraindecoration
@@ -40,9 +40,6 @@ CABHUT:
 
 ^LowBridge:
 	Inherits: ^LowBridgeRamp
-	Targetable:
-		TargetTypes: Ground, Building
-		RequiresForceFire: true
 	Health:
 		HP: 500
 	HitShape:

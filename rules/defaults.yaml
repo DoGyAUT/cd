@@ -1,4 +1,5 @@
 ^ExistsInWorld:
+	Inherits@FeatureTargettypeDamaged: ^FeatureTargettypeDamaged
 	AppearsOnRadar:
 	UpdatesPlayerStatistics:
 	CombatDebugOverlay:
@@ -65,9 +66,6 @@
 		OpeningSequence: open
 		Sequence: idle
 		ClosingSequence: close
-	Targetable@parachute:
-		RequiresCondition: parachute
-		TargetTypes: Air
 
 ^SpriteActor:
 	BodyOrientation:
@@ -343,14 +341,13 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
 		Palette: pips
 	WithTextControlGroupDecoration:
 	Selectable:
 		Priority: 3
-	Targetable:
-		TargetTypes: Ground, Building, C4
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -446,8 +443,6 @@
 
 ^BuildingInfiltrate:
 	Inherits: ^Building
-	Targetable:
-		TargetTypes: Ground, Building, C4, SpyInfiltrate
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -492,8 +487,10 @@
 		CustomBounds: 24,24
 
 ^Wall:
+	Inherits@0: ^ExistsInWorld
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	CombatDebugOverlay:
 	AppearsOnRadar:
 	Building:
@@ -514,8 +511,6 @@
 		NodeTypes: wall, gate
 	LineBuildNode:
 		Types: wall
-	Targetable:
-		TargetTypes: Ground, Wall, C4
 	FrozenUnderFog:
 	WithWallSpriteBody:
 		Type: wall
@@ -606,6 +601,7 @@
 	Inherits@8: ^InitiateUpgrades
 	Inherits@parach: ^Parachutable
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
 	DrawLineToTarget:
 	Health:
 		HP: 50
@@ -646,9 +642,6 @@
 		Bounds: 14,23,-1,-9
 	Voiced:
 		VoiceSet: Infantry
-	Targetable:
-		RequiresCondition: !inside-tunnel && !parachute
-		TargetTypes: Ground, Infantry
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -724,7 +717,6 @@
 	DeathSounds@ZAPPED:
 		Voice: Zapped
 		DeathTypes: EnergyDeath
-	ConditionManager:
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
 		Pieces: 0, 10
@@ -829,8 +821,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, Soldier
 	Mobile:
 		RequiresCondition: !webdisable
 
@@ -846,8 +836,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, Soldier
 	Mobile:
 		RequiresCondition: !webdisable
 
@@ -864,8 +852,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, HeavyInfantry
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -885,8 +871,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, HeavyInfantry
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -894,6 +878,7 @@
 
 ^SoldierJumpjet:
 	Inherits: ^Infantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeJumpjet
 	-Crushable:
 	-Mobile:
 	RevealsShroud:
@@ -901,13 +886,6 @@
 	MustBeDestroyed:
 	HiddenUnderFog:
 		Type: CenterPosition
-	-Targetable:
-	Targetable@GROUND:
-		TargetTypes: Ground
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne
 	Aircraft:
 		AirborneUpgrades: airborne
 		RepairBuildings:
@@ -917,8 +895,6 @@
 
 ^SoldierFearlessVeryHeavy:
 	Inherits: ^SoldierFearlessHeavy
-	Targetable:
-		TargetTypes: Ground, Infantry, VeryHeavyInfantry
 
 ^HealsOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
@@ -952,8 +928,7 @@
 		RequiresCondition: tiberiumheal || tiberiumheal2
 
 ^CorruptorHeal:
-	Targetable@scrin:
-		TargetTypes: Scrin
+	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
@@ -990,8 +965,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Mutant
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
@@ -1022,8 +995,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Mutant
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
@@ -1061,8 +1032,6 @@
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	Targetable:
-		TargetTypes: Ground, Goon
 	-DamagedByTerrain@Tiberium:
 	Passenger:
 		CargoType: Infantry
@@ -1092,8 +1061,6 @@
 	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Targetable:
-		TargetTypes: Ground, Infantry
 	-WithDecoration@medic:
 	-SelfHealing@medic:
 	-ExternalCondition@medic:
@@ -1107,8 +1074,6 @@
 	Crushable:
 		CrushClasses: heavyinf
 		WarnProbability: 0
-	Targetable:
-		TargetTypes: Ground, HeavyCyborg
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1127,8 +1092,6 @@
 	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Targetable:
-		TargetTypes: Ground, Cyborg
 	ThrowsShrapnel@sparks:
 		Weapons: Sparky
 		Pieces: 1, 10
@@ -1174,8 +1137,6 @@
 
 ^HeavyCyborg:
 	Inherits@1: ^Cyborg
-	Targetable:
-		TargetTypes: Ground, HeavyCyborg
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1413,6 +1374,7 @@
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1448,9 +1410,6 @@
 	WithTextControlGroupDecoration:
 	Voiced:
 		VoiceSet: Vehicle
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !inside-tunnel && !parachute
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move
@@ -1695,17 +1654,12 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^Cloakable
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	DrawLineToTarget:
 	RevealsShroud:
 		Range: 11c321
 	AppearsOnRadar:
 		UseLocation: True
-	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne
 	Selectable:
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
@@ -1804,12 +1758,6 @@
 		IdealSeparation: 0c001
 		Repulsable: True
 	ReturnOnIdle:
-	Targetable@GROUND:
-		TargetTypes: Ground
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: HighAir
-		RequiresCondition: airborne
 
 ^AttackAdvancedPlane:
 	Inherits: ^Aircraft
@@ -1820,12 +1768,6 @@
 		Repulsable: True
 		IdealSeparation: 0c001
 	ReturnOnIdle:
-	Targetable@GROUND:
-		TargetTypes: Ground
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: MidAir
-		RequiresCondition: airborne
 
 ^Corpse:
 	Inherits@1: ^SpriteActor
@@ -1937,6 +1879,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
 	DrawLineToTarget:
 	Health:
 	Mobile:
@@ -1965,8 +1908,6 @@
 	WithTextControlGroupDecoration:
 	Selectable:
 		Bounds: 26,26,0,-3
-	Targetable:
-		TargetTypes: Ground, Infantry
 	AttackMove:
 	HiddenUnderFog:
 	Guardable:
@@ -2120,6 +2061,7 @@
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeFlora
+	Inherits@FeatureTargettype: ^FeatureTargettypeFlora
 	HiddenUnderShroud:
 	RenderSprites:
 		Palette: terraindecoration
@@ -2132,8 +2074,6 @@
 		Terrain: Tree
 	Tooltip:
 		Name: Tree
-	Targetable:
-		TargetTypes: Ground, Wall, DetonateAttack
 	Health:
 		HP: 200
 	HitShape:
@@ -2190,6 +2130,7 @@
 	Inherits@4: ^Cloakable
 	Inherits@5: ^IronCurtainable
 	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
 	RenderVoxels:
 		PlayerPalette: cdvoxels
 		LightAmbientColor: -0.1,-0.1,-0.1
@@ -2218,8 +2159,6 @@
 	WithTextControlGroupDecoration:
 	Voiced:
 		VoiceSet: Vehicle
-	Targetable:
-		TargetTypes: Ground, Vehicle
 	Passenger:
 		CargoType: Infantry
 		Voice: Move

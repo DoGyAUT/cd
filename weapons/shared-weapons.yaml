@@ -383,14 +383,14 @@ Repair:
 	ReloadDelay: 80
 	Range: 2c558
 	Report: repair11.aud
-	ValidTargets: Repair
+	ValidTargets: Damaged
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50
-		ValidTargets: Repair
+		ValidTargets: Damaged
 	Warhead@1Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light2
@@ -399,14 +399,14 @@ MechanicRepair:
 	ReloadDelay: 80
 	Range: 2c558
 	Report: fixit1.aud
-	ValidTargets: Repair
+	ValidTargets: Damaged
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50
-		ValidTargets: Repair
+		ValidTargets: Damaged
 
 TiberiumHeal:
 	ReloadDelay: 30
@@ -498,8 +498,7 @@ UmagonSniper:
 		Damage: 150
 
 DogBite:
-	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
-	InvalidTargets: Vehicle, Buildings
+	ValidTargets: Infantry
 	ReloadDelay: 20
 	Range: 2c124
 	Report: dog_a1.aud, dog_m1.aud, dog_s1.aud
@@ -677,13 +676,11 @@ Tentacle:
 	Report: floatk1.aud
 	Projectile: BulletAS
 		Speed: 0c602
-	InvalidTargets: Wall, Bridge
 	Warhead@1Dam: SpreadDamage
 		Damage: 160
-		InvalidTargets: Wall, Bridge
 		DamageTypes: TriggerProne, TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
 		Range: 2c124
 		Duration: 50
 		Condition: empdisable
-		ValidTargets: Vehicle, Cyborg, Building
+		ValidTargets: Ground
