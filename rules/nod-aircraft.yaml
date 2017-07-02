@@ -521,8 +521,15 @@ VERTIGO:
 	RevealsShroud:
 		Range: 21c218
 		Type: GroundPosition
-	Armament@primary:
+	Armament@primary1:
 		Weapon: VertigoBombNapalm
+		RequiresCondition: !upgrade.bluehell
+	Armament@primary2:
+		Weapon: VertigoBombBlueNapalm
+		RequiresCondition: upgrade.bluehell
+	GrantConditionOnPrerequisite@upgrade.bluehell:
+		Condition: upgrade.bluehell
+		Prerequisites: upgrade.bluehell
 	AttackBomber:
 		FacingTolerance: 20
 	AmmoPool:

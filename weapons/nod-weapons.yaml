@@ -971,6 +971,16 @@ VertigoBombNapalm:
 		Amount: 40
 		AimChance: 0
 
+VertigoBombBlueNapalm:
+	Inherits: VertigoBombNapalm
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c124
+		Damage: 1350
+	WarheadAS: FireShrapnel
+		Weapon: BlueNapalmShrapnel
+		Amount: 50
+		AimChance: 0
+
 NapalmShrapnel:
 	Inherits@wh: ^FireWH
 	Range: 7c797
@@ -998,6 +1008,16 @@ NapalmShrapnel:
 	WarheadAS: SpawnActor
 		Range: 3
 		Actors: Fire1, Fire1, Fire1
+		Owner: Creeps
+
+BlueNapalmShrapnel:
+	Inherits: NapalmShrapnel
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c124
+		Damage: 135
+	WarheadAS: SpawnActor
+		Range: 3
+		Actors: BFire1, BFire1, BFire1
 		Owner: Creeps
 
 NapalmShrapnelSmudge:
