@@ -666,7 +666,7 @@ TarantulaLaserAA:
 	Burst: 2
 	BurstDelay: 0
 	Report: cablaser01.aud
-	ValidTargets: Air, MidAir
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c42
@@ -678,7 +678,7 @@ TarantulaLaserAA:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air, MidAir
+		ValidTargets: Air, MidAir, HighAir
 		Spread: 0c59
 		Damage: 115
 		DamageTypes: CabalWeapon
@@ -692,7 +692,7 @@ TarantulaLaserAA:
 	Warhead@3EffAir: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		ValidImpactTypes: Air, AirHit, MidAir, HighAir
+		ValidImpactTypes: Air, AirHit
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -957,10 +957,12 @@ ReaperMissileAA:
 	Inherits: ReaperMissile
 	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
-		Damage: 125
+		Spread: 1c0
+		Damage: 105
 		ValidTargets: Air, MidAir, HighAir
-    DamageTypes: CabalWeapon
+		Versus:
+			Infantry: 140
+	DamageTypes: CabalWeapon
 
 cleansingaura:
 	ValidTargets: Infantry, Mutant
