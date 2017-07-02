@@ -588,7 +588,7 @@ EMPulseCannon:
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Building
 
-ClusterMissile:
+ClusterMissile: #nuke
 	ValidTargets: Ground, Water, Air, MidAir, HighAir
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c424
@@ -679,6 +679,8 @@ MultiCluster:
 	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c240
+		MaximumLaunchAngle: 128
+		MinimumLaunchAngle: -64
 		Arm: 2
 		Blockable: false
 		Shadow: true
