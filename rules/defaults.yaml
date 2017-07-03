@@ -326,21 +326,19 @@
 
 ^Cloakable:
 	Cloak:
-		RequiresCondition: cloakgenerator || crate-cloak || cloakgeneratorpower
+		RequiresCondition: cloak || cloak-bar
 		InitialDelay: 0
 		CloakDelay: 90
 		IsPlayerPalette: True
 		CloakSound: stealth01.aud
 		UncloakSound: unstealth01.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-	ExternalCondition@EXTERNALCLOAK1:
-		Condition: cloakgenerator
-	ExternalCondition@EXTERNALCLOAK2:
-		Condition: crate-cloak
-	ExternalCondition@EXTERNALCLOAK3:
-		Condition: cloakgeneratorpower
-	#TimedConditionBar@cloakgeneratorpower: #change it if you want to make it non perma
-		#Condition: cloakgeneratorpower
+	ExternalCondition@EXTERNALCLOAK:
+		Condition: cloak
+	ExternalCondition@EXTERNALCLOAKBAR:
+		Condition: cloak-bar
+	#TimedConditionBar@cloakedbar: #change it if you want to make it non perma
+		#Condition: cloak-bar
 		#Color: FF0000
 
 ^BasicBuilding:

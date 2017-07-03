@@ -141,7 +141,7 @@ NAFLAMER:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -265,7 +265,7 @@ NALASR:
 	Power:
 		Amount: -100
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -319,7 +319,7 @@ NASAM:
 		Condition: industry
 		Prerequisites: industry
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
 
@@ -573,7 +573,7 @@ NASTLH:
 		PauseOnCondition: power-outage
 	WithRangeCircle:
 		Range: 16c994
-		Type: cloakgenerator
+		Type: cloak
 	Power:
 		Amount: -150
 	RequiresPower:
@@ -582,7 +582,7 @@ NASTLH:
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
 	ProximityExternalCondition:
-		Condition: cloakgenerator
+		Condition: cloak
 		Range: 16c994
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
@@ -598,7 +598,7 @@ NASTLH:
 		EndChargeSpeechNotification: SupportPowerReady
 		Description: Cloaking Field
 		LongDesc: Cloaks all vehicles in the radius
-		Condition: cloakgeneratorpower
+		Condition: cloak
 		OnFireSound: cloak5.aud
 		Sequence: idle
 		ChargeTime: 180
