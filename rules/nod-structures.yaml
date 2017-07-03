@@ -606,7 +606,7 @@ NAPYRA:
 		Queue: Building.Nod
 		BuildPaletteOrder: 208
 		Prerequisites: anypower, naradr, ~structures.nod, ~ideology
-		Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda) or Tiberium (Technology)
+		Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda), Tiberium (Industry) or Seismic Bomb (Technology)
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -672,6 +672,26 @@ NAPYRA:
 		EndChargeSound: vertigo_st1.aud
 		LaunchSound: vertigo_a1.aud
 		UnitType: vertigo2
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	AirstrikePower@VertigoSeismicAirstrikePower:
+		OrderName: VertigoSeismicAirstrikePowerInfoOrder
+		Prerequisites: naradr, ~technology
+		Icon: vertigo
+		ChargeTime: 300
+		QuantizedFacings: 8
+		Description: Seismic Bomb
+		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo3
 		SquadSize: 1
 		DisplayBeacon: True
 		BeaconPoster: vertigo

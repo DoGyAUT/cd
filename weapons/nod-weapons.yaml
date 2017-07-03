@@ -620,7 +620,7 @@ EMPulseCannon:
 		Condition: empdisable
 		ValidTargets: Vehicle, Cyborg, Building
 
-ClusterMissile:
+ClusterMissile: #nuke
 	ValidTargets: Ground, Water, Air, MidAir, HighAir
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c424
@@ -711,6 +711,8 @@ MultiCluster:
 	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c240
+		MaximumLaunchAngle: 128
+		MinimumLaunchAngle: -64
 		Arm: 2
 		Blockable: false
 		Shadow: true
@@ -981,6 +983,97 @@ VertigoBombBlueNapalm:
 		Amount: 50
 		AimChance: 0
 
+VertigoBombSeismic:
+	Inherits: ^ShellHE
+	Inherits@wh: ^HEWH
+	ReloadDelay: 60
+	Range: 2c124
+	Report: bombdrop.aud
+	Projectile: BulletAS
+		Speed: 0c724
+		Inaccuracy: 0c181
+		Image: shell01
+		Shadow: true
+		LaunchAngle: 60
+		Palette: effect
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c124
+		Damage: 500
+	Warhead@2Eff: CreateEffect
+		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+	WarheadAS@1: FireShrapnel
+		Weapon: SeismicShrapnel
+		Amount: 20
+		AimChance: 0
+		Delay: 50
+	WarheadAS@2: FireShrapnel
+		Weapon: SeismicShrapnel2
+		Amount: 20
+		AimChance: 0
+		Delay: 100
+	WarheadAS@3: FireShrapnel
+		Weapon: SeismicShrapnel3
+		Amount: 20
+		AimChance: 0
+		Delay: 150
+	WarheadAS@4: FireShrapnel
+		Weapon: SeismicShrapnel4
+		Amount: 20
+		AimChance: 0
+		Delay: 200
+
+SeismicShrapnel:
+	Inherits: ^ShellHE
+	Inherits@wh: ^HEAPWH
+	ReloadDelay: 200
+	Range: 6c0
+	MinRange: 3c0
+	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c512
+		Damage: 80
+		Versus:
+			Building: 200
+	Warhead@2Eff: CreateEffect
+		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+
+SeismicShrapnel2:
+	Inherits: SeismicShrapnel
+	Range: 9c0
+	MinRange: 6c0
+
+SeismicShrapnel3:
+	Inherits: SeismicShrapnel
+	Range: 12c0
+	MinRange: 9c0
+
+SeismicShrapnel4:
+	Inherits: SeismicShrapnel
+	Range: 15c0
+	MinRange: 12c0
+
 NapalmShrapnel:
 	Inherits@wh: ^FireWH
 	Range: 7c797
@@ -995,7 +1088,7 @@ NapalmShrapnel:
 		Spread: 2c124
 		Damage: 100
 	Warhead@2Eff: CreateEffect
-		Explosions: fire01a, fire02a, fire03a
+		Explosions: medium_clsn
 		ImpactSounds: flamtnk1.aud
 		ExplosionPalette: apolra50alpha
 	Warhead@3Smu: LeaveSmudge

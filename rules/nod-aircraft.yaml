@@ -543,7 +543,7 @@ VERTIGO:
 	RenderVoxels:
 	WithVoxelBody:
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		InitialDelay: 90
 		CloakDelay: 300
 	GrantConditionOnPrerequisite@upgrade1:
@@ -559,6 +559,15 @@ VERTIGO2:
 	Inherits: VERTIGO
 	Armament@primary:
 		Weapon: VertigoBombGas
+	RenderVoxels:
+		Image: vertigo
+	RenderSprites:
+		Image: vertigo
+
+VERTIGO3:
+	Inherits: VERTIGO
+	Armament@primary:
+		Weapon: VertigoBombSeismic
 	RenderVoxels:
 		Image: vertigo
 	RenderSprites:

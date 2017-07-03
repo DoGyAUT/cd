@@ -326,17 +326,20 @@
 
 ^Cloakable:
 	Cloak:
-		RequiresCondition: cloakgenerator || crate-cloak
+		RequiresCondition: cloak || cloak-bar
 		InitialDelay: 0
 		CloakDelay: 90
 		IsPlayerPalette: True
 		CloakSound: stealth01.aud
 		UncloakSound: unstealth01.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-	ExternalCondition@EXTERNALCLOAK1:
-		Condition: cloakgenerator
-	ExternalCondition@EXTERNALCLOAK2:
-		Condition: crate-cloak
+	ExternalCondition@EXTERNALCLOAK:
+		Condition: cloak
+	ExternalCondition@EXTERNALCLOAKBAR:
+		Condition: cloak-bar
+	TimedConditionBar@cloakedbar: #unused atm, made for optional cloakgen change
+		Condition: cloak-bar
+		Color: FF0000
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
@@ -574,6 +577,7 @@
 		CustomBounds: 24,24
 
 ^Wall:
+	Inherits: ^ExistsInWorld
 	Inherits@1: ^SpriteActor
 	CombatDebugOverlay:
 	AppearsOnRadar:
@@ -813,7 +817,6 @@
 	DeathSounds@ZAPPED:
 		Voice: Zapped
 		DeathTypes: EnergyDeath
-	ConditionManager:
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
 		Pieces: 1, 10
@@ -1012,10 +1015,10 @@
 		Type: CenterPosition
 	-Targetable:
 	Targetable@GROUND:
-		TargetTypes: Ground
+		TargetTypes: Ground, Infantry
 		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
-		TargetTypes: Air
+		TargetTypes: Air, Infantry
 		RequiresCondition: airborne
 	Aircraft:
 		AirborneUpgrades: airborne

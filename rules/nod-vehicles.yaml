@@ -171,7 +171,7 @@ NTHARV:
 		Condition: technology
 		Prerequisites: technology
 	Cloak:
-		RequiresCondition: crate-cloak || cloakgenerator || technology
+		RequiresCondition: cloak || technology
 	RevealsShroud:
 		Range: 8c497
 	-ProducibleWithLevel:
@@ -966,7 +966,7 @@ NHWTZ:
 		RequiresCondition: deployed
 	WithMuzzleOverlay:
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		InitialDelay: 90
 		CloakDelay: 250
 	GrantConditionOnDeploy:
