@@ -493,6 +493,7 @@
 		CustomBounds: 24,24
 
 ^Wall:
+	Inherits: ^ExistsInWorld
 	Inherits@1: ^SpriteActor
 	CombatDebugOverlay:
 	AppearsOnRadar:
@@ -731,7 +732,6 @@
 	DeathSounds@ZAPPED:
 		Voice: Zapped
 		DeathTypes: EnergyDeath
-	ConditionManager:
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
 		Pieces: 0, 10
