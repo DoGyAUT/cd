@@ -475,6 +475,60 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 
+^ExploBuildingsmall:
+	ThrowsShrapnel@LargeDebrisFast:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@SmallDebrisFast:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@Sparky:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmall
+		Weapon: Buildingexplosionsmall
+		Type: CenterPosition
+
+^ExploBuildingsmallcabal:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmallcabal
+		Weapon: Buildingexplosionsmallcabal
+
+^ExploBuildingPower:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlant
+		Weapon: BuildingexplosionPowerPlant
+
+^ExploBuildingPowercabal:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlantCabal
+		Weapon: BuildingexplosionPowerPlantCabal
+
+^ExploBuildingmedium:
+	Inherits: ^ExploBuildingsmall
+	ThrowsShrapnel@LargeDebrisFast:
+		Pieces: 4, 15
+	ThrowsShrapnel@SmallDebrisFast:
+		Pieces: 10, 35
+	ThrowsShrapnel@Sparky:
+		Pieces: 10, 100
+	Explodes:
+		EmptyWeapon: Buildingexplosionmedium
+		Weapon: Buildingexplosionmedium
+
+^ExploBuildingmediumcabal:
+	Inherits: ^ExploBuildingmedium
+	Explodes:
+		EmptyWeapon: Buildingexplosionmediumcabal
+		Weapon: Buildingexplosionmediumcabal
+
 ^BuildingInfiltrate:
 	Inherits: ^Building
 	Targetable:
@@ -765,8 +819,12 @@
 		DeathTypes: EnergyDeath
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
-		Pieces: 0, 10
+		Pieces: 1, 10
 		Range: 0c512, 1c0
+	ThrowsShrapnel@Bloodytrail:
+		Weapons: Bloodytrail
+		Pieces: 0, 5
+		Range: 0c064, 0c918
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
