@@ -464,25 +464,25 @@
 		Type: CenterPosition
 
 ^ExploBuildingsmallcabal:
-	Inherit: ^ExploBuildingsmall
+	Inherits: ^ExploBuildingsmall
 	Explodes:
 		EmptyWeapon: Buildingexplosionsmallcabal
 		Weapon: Buildingexplosionsmallcabal
 
 ^ExploBuildingPower:
-	Inherit: ^ExploBuildingsmall
+	Inherits: ^ExploBuildingsmall
 	Explodes:
 		EmptyWeapon: BuildingexplosionPowerPlant
 		Weapon: BuildingexplosionPowerPlant
 
 ^ExploBuildingPowercabal:
-	Inherit: ^ExploBuildingsmall
+	Inherits: ^ExploBuildingsmall
 	Explodes:
 		EmptyWeapon: BuildingexplosionPowerPlantCabal
 		Weapon: BuildingexplosionPowerPlantCabal
 
 ^ExploBuildingmedium:
-	Inherit: ^ExploBuildingsmall
+	Inherits: ^ExploBuildingsmall
 	ThrowsShrapnel@LargeDebrisFast:
 		Pieces: 4, 15
 	ThrowsShrapnel@SmallDebrisFast:
@@ -494,7 +494,7 @@
 		Weapon: Buildingexplosionmedium
 
 ^ExploBuildingmediumcabal:
-	Inherit: ^ExploBuildingmedium
+	Inherits: ^ExploBuildingmedium
 	Explodes:
 		EmptyWeapon: Buildingexplosionmediumcabal
 		Weapon: Buildingexplosionmediumcabal
