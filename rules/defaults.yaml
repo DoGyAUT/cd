@@ -445,6 +445,114 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 
+^ExploBuildingsmall:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmall
+		Weapon: Buildingexplosionsmall
+		Type: CenterPosition
+
+^ExploBuildingsmallcabal:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmallcabal
+		Weapon: Buildingexplosionsmallcabal
+		Type: CenterPosition
+
+^ExploBuildingPower:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlant
+		Weapon: BuildingexplosionPowerPlant
+		Type: CenterPosition
+
+^ExploBuildingPowercabal:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlantCabal
+		Weapon: BuildingexplosionPowerPlantCabal
+		Type: CenterPosition
+
+^ExploBuildingmedium:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 4, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 10, 35
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 10, 100
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionmedium
+		Weapon: Buildingexplosionmedium
+		Type: CenterPosition
+
+^ExploBuildingmediumcabal:
+	ThrowsShrapnel:
+		Weapons: LargeDebrisFast
+		Pieces: 4, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@1:
+		Weapons: SmallDebrisFast
+		Pieces: 10, 35
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 10, 100
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionmediumcabal
+		Weapon: Buildingexplosionmediumcabal
+		Type: CenterPosition
+
 ^BuildingInfiltrate:
 	Inherits: ^Building
 	Targetable:
@@ -734,8 +842,12 @@
 	ConditionManager:
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
-		Pieces: 0, 10
+		Pieces: 1, 10
 		Range: 0c512, 1c0
+	ThrowsShrapnel:
+		Weapons: Bloodytrail
+		Pieces: 0, 5
+		Range: 0c064, 0c918
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
