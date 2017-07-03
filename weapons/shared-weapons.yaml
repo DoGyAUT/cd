@@ -313,30 +313,21 @@ SmallDebrisFast:
 		Shadow: true
 
 LargeDebris:
-	ReloadDelay: 60
-	Range: 5c673
-	Report:
+	Inherits: SmallDebrisFast
 	Projectile: BulletAS
 		Speed: 0c71, 0c177
 		LaunchAngle: 45, 135
 		Image: dbrislg
 		TrailImage: durasmoke
 		TrailPalette: apolra50alpha
-		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-		Shadow: true
 
 LargeDebrisFast:
-	ReloadDelay: 60
-	Range: 5c673
-	Report:
+	Inherits: SmallDebrisFast
 	Projectile: BulletAS
 		Speed: 0c120, 0c250
-		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
 		Image: dbrislg
 		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
-		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-		Shadow: true
 
 Buildingexplosionsmall:
 	Inherits: ^MissileAPHE
@@ -376,78 +367,22 @@ Buildingexplosionsmall:
 		AimChance: 0
 
 Buildingexplosionsmallcabal:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	Burst: 1
-	Range: 14c146
-	MinRange: 2c848
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 1c62
-		Inaccuracy: 0c181
-		Image: patriot
-		HorizontalRateOfTurn: 30
-		RangeLimit: 28c291
-		ContrailLength: 20
-		ContrailWidth: 0c21
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
-		Damage: 1
-		ValidTargets: Ground
+	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: MediumCrater
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
-		Amount: 3
-		AimChance: 0
 
 BuildingexplosionPowerPlant:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	Burst: 1
-	Range: 14c146
-	MinRange: 2c848
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 1c62
-		Inaccuracy: 0c181
-		Image: patriot
-		HorizontalRateOfTurn: 30
-		RangeLimit: 28c291
-		ContrailLength: 20
-		ContrailWidth: 0c21
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
-		Damage: 1
-		ValidTargets: Ground
-	Warhead@1Eff: CreateEffect
-		Explosions: building, medium_tumu, medium_grey_explosion, large_tumu, large_bang, medium_bang
-		ExplosionPalette: apolra25alpha
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: MediumCrater
+	Inherits: Buildingexplosionsmall
 	Warhead@2Eff: CreateEffect
 		Explosions: glow
 		ExplosionPalette: apolra25alpha
 		ImpactSounds:
-	Warhead@3Eff: CreateEffect
-		Explosions: large_flash
-		ExplosionPalette: light2
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light2
@@ -455,39 +390,13 @@ BuildingexplosionPowerPlant:
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnel
 		Amount: 6
-		AimChance: 0
 
 BuildingexplosionPowerPlantCabal:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	Burst: 1
-	Range: 14c146
-	MinRange: 2c848
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 1c62
-		Inaccuracy: 0c181
-		Image: patriot
-		HorizontalRateOfTurn: 30
-		RangeLimit: 28c291
-		ContrailLength: 20
-		ContrailWidth: 0c21
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
-		Damage: 1
-		ValidTargets: Ground
+	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: MediumCrater
 	Warhead@2Eff: CreateEffect
 		Explosions: pulsefx1
 		ExplosionPalette: effect
@@ -498,81 +407,23 @@ BuildingexplosionPowerPlantCabal:
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 6
-		AimChance: 0
 
 Buildingexplosionmedium:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	Burst: 1
-	Range: 14c146
-	MinRange: 2c848
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 1c62
-		Inaccuracy: 0c181
-		Image: patriot
-		HorizontalRateOfTurn: 30
-		RangeLimit: 28c291
-		ContrailLength: 20
-		ContrailWidth: 0c21
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
-		Damage: 1
-		ValidTargets: Ground
+	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
-		Explosions: coreexplo1, coreexplo2, large_bang, verylarge_twlt,
-		ExplosionPalette: apolra25alpha
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
+		Explosions: coreexplo1, coreexplo2, large_bang, verylarge_twlt
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: LargeCrater
-	Warhead@3Eff: CreateEffect
-		Explosions: large_flash
-		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnel
 		Amount: 5
-		AimChance: 0
 
 Buildingexplosionmediumcabal:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	Burst: 1
-	Range: 14c146
-	MinRange: 2c848
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 1c62
-		Inaccuracy: 0c181
-		Image: patriot
-		HorizontalRateOfTurn: 30
-		RangeLimit: 28c291
-		ContrailLength: 20
-		ContrailWidth: 0c21
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c128
-		Damage: 1
-		ValidTargets: Ground
-	Warhead@1Eff: CreateEffect
-		Explosions: coreexplo1, coreexplo2, large_bang, verylarge_twlt,
-		ExplosionPalette: apolra25alpha
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: LargeCrater
+	Inherits: Buildingexplosionmedium
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
-		Amount: 5
-		AimChance: 0
 
 Sparky:
 	ReloadDelay: 10
