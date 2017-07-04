@@ -2153,10 +2153,26 @@ HydraGasMissiles:
 		InvalidImpactTypes: Water, Air, AirHit
 
 SAMSiteMissile:
-	Inherits: RedEye
+	Inherits: ^MissileAPHE
+	Inherits@wh: ^APHEWH
+	Range: 11c321
 	ReloadDelay: 75
 	Burst: 3
 	BurstDelay: 10
+	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+	ValidTargets: Air, MidAir, HighAir
+	Projectile: Missile
+        MaximumLaunchSpeed: 1c512
+        MinimumLaunchSpeed: 1c512
+        Speed : 1c512
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 0c0
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		RangeLimit: 42c437
+		CloseEnough: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150
