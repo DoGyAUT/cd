@@ -324,22 +324,26 @@
 
 ^Cloakable:
 	Cloak:
-		RequiresCondition: cloakgenerator || crate-cloak
+		RequiresCondition: cloak || cloak-bar
 		InitialDelay: 0
 		CloakDelay: 90
 		IsPlayerPalette: True
 		CloakSound: stealth01.aud
 		UncloakSound: unstealth01.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-	ExternalCondition@EXTERNALCLOAK1:
-		Condition: cloakgenerator
-	ExternalCondition@EXTERNALCLOAK2:
-		Condition: crate-cloak
+	ExternalCondition@EXTERNALCLOAK:
+		Condition: cloak
+	ExternalCondition@EXTERNALCLOAKBAR:
+		Condition: cloak-bar
+	TimedConditionBar@cloakedbar: #unused atm, made for optional cloakgen change
+		Condition: cloak-bar
+		Color: FF0000
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
+	Inherits@4: ^AffectedByFlames
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	SelectionDecorations:
@@ -378,15 +382,41 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 40
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
 	HitShape:
 		UseOccupiedCellsOffsets: true
+	SelfHealing@firedamage:
+		Step: -40
+		Delay: 16
+	SelfHealing@firedamage1:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 16
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 16
+	SelfHealing@firedamageblue:
+		Step: -45
+		Delay: 16
+	SelfHealing@firedamageblue1:
+		Step: -30
+		Delay: 16
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 16
+
+^Burningtank:
+	ThrowsShrapnel:
+		Weapons: TermiteGunShrapnel1
+		Pieces: 2, 10
+		Range: 2c848, 7c73
 
 ^Building:
 	Inherits@1: ^BasicBuilding
@@ -440,6 +470,60 @@
 		Weapons: Sparky
 		Pieces: 9, 100
 		Range: 1c0, 6c0
+
+^ExploBuildingsmall:
+	ThrowsShrapnel@LargeDebrisFast:
+		Weapons: LargeDebrisFast
+		Pieces: 1, 5
+		Range: 2c848, 7c73
+	ThrowsShrapnel@SmallDebrisFast:
+		Weapons: SmallDebrisFast
+		Pieces: 5, 15
+		Range: 2c848, 7c73
+	ThrowsShrapnel@Sparky:
+		Weapons: Sparky
+		Pieces: 5, 50
+		Range: 1c0, 6c0
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmall
+		Weapon: Buildingexplosionsmall
+		Type: CenterPosition
+
+^ExploBuildingsmallcabal:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmallcabal
+		Weapon: Buildingexplosionsmallcabal
+
+^ExploBuildingPower:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlant
+		Weapon: BuildingexplosionPowerPlant
+
+^ExploBuildingPowercabal:
+	Inherits: ^ExploBuildingsmall
+	Explodes:
+		EmptyWeapon: BuildingexplosionPowerPlantCabal
+		Weapon: BuildingexplosionPowerPlantCabal
+
+^ExploBuildingmedium:
+	Inherits: ^ExploBuildingsmall
+	ThrowsShrapnel@LargeDebrisFast:
+		Pieces: 4, 15
+	ThrowsShrapnel@SmallDebrisFast:
+		Pieces: 10, 35
+	ThrowsShrapnel@Sparky:
+		Pieces: 10, 100
+	Explodes:
+		EmptyWeapon: Buildingexplosionmedium
+		Weapon: Buildingexplosionmedium
+
+^ExploBuildingmediumcabal:
+	Inherits: ^ExploBuildingmedium
+	Explodes:
+		EmptyWeapon: Buildingexplosionmediumcabal
+		Weapon: Buildingexplosionmediumcabal
 
 ^BuildingInfiltrate:
 	Inherits: ^Building
@@ -599,6 +683,7 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
+	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
@@ -719,8 +804,12 @@
 		DeathTypes: EnergyDeath
 	ThrowsShrapnel@sparks:
 		Weapons: Bloody
-		Pieces: 0, 10
+		Pieces: 1, 10
 		Range: 0c512, 1c0
+	ThrowsShrapnel@Bloodytrail:
+		Weapons: Bloodytrail
+		Pieces: 0, 5
+		Range: 0c064, 0c918
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -774,14 +863,30 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 20
-		DamageInterval: 8
-		DamageTypes: FireDeath
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
+	SelfHealing@firedamage:
+		Step: -20
+		Delay: 8
+	SelfHealing@firedamage1:
+		Step: -15
+		Delay: 8
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 8
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 8
+	SelfHealing@firedamageblue:
+		Step: -25
+		Delay: 8
+	SelfHealing@firedamageblue1:
+		Step: -20
+		Delay: 8
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 8
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 8
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1371,6 +1476,7 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^IronCurtainable
+	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
@@ -1491,13 +1597,33 @@
 		RequiresCondition: gasdamage
 	ExternalCondition@gasdamage:
 		Condition: gasdamage
-	DamagedByTerrain@firedamage:
-		Damage: 20
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
+	SelfHealing@firedamage:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamage1:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamage2:
+		Step: -10
+		Delay: 16
+	SelfHealing@firedamage3:
+		Step: -5
+		Delay: 16
+	SelfHealing@firedamageblue:
+		Step: -25
+		Delay: 16
+	SelfHealing@firedamageblue1:
+		Step: -20
+		Delay: 16
+	SelfHealing@firedamageblue2:
+		Step: -15
+		Delay: 16
+	SelfHealing@firedamageblue3:
+		Step: -10
+		Delay: 16
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
 	Chronoshiftable:
 		ReturnToOrigin: False
 
@@ -2018,24 +2144,37 @@
 	WithSpriteBody:
 	GrantPeriodicCondition@kill:
 		Condition: killfire
-		CooldownDuration: 100
 		ActiveDuration: 50
+	GrantConditionOnTerrain@kill:
+		Condition: killfire
+		TerrainTypes: Water
 	Explodes:
 		Weapon: NapalmShrapnelSmudge
 		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
 		RequiresCondition: killfire
-		Delay: 0,40
 	ProximityExternalCondition@firedamage:
-		Condition: firedamage
 		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
 	HitShape:
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
 	Chronoshiftable:
 		ReturnToOrigin: False
+
+^FireActorSlow:
+	Inherits@1: ^FireActor
+	GrantPeriodicCondition@kill:
+		CooldownDuration: 50
+	KillsSelf:
+		Delay: 0,20
+
+^FireActorFast:
+	Inherits@1: ^FireActor
+	GrantPeriodicCondition@kill:
+		CooldownDuration: 10
+	KillsSelf:
+		Delay: 0,5
 
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
@@ -2338,3 +2477,54 @@
 			LocalYaw: 128
 			TopLeft: -2560, -2560
 			BottomRight: 2560, 2560
+
+^AffectedByFlames:
+	SelfHealing@firedamage:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
+		RequiresCondition: firedamage
+	ExternalCondition@firedamage:
+		Condition: firedamage
+	SelfHealing@firedamage1:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
+		RequiresCondition: firedamage1
+	ExternalCondition@firedamage1:
+		Condition: firedamage1
+	SelfHealing@firedamage2:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
+		RequiresCondition: firedamage2
+	ExternalCondition@firedamage2:
+		Condition: firedamage2
+	SelfHealing@firedamage3:
+		HealIfBelow: 101
+		DamageTypes: FireDeath
+		RequiresCondition: firedamage3
+	ExternalCondition@firedamage3:
+		Condition: firedamage3
+	SelfHealing@firedamageblue:
+		HealIfBelow: 101
+		DamageTypes: FireDeathBlue
+		RequiresCondition: firedamageblue
+	ExternalCondition@firedamageblue:
+		Condition: firedamageblue
+	SelfHealing@firedamageblue1:
+		HealIfBelow: 101
+		DamageTypes: FireDeathBlue
+		RequiresCondition: firedamageblue1
+	ExternalCondition@firedamageblue1:
+		Condition: firedamageblue1
+	SelfHealing@firedamageblue2:
+		HealIfBelow: 101
+		DamageTypes: FireDeathBlue
+		RequiresCondition: firedamageblue2
+	ExternalCondition@firedamageblue2:
+		Condition: firedamageblue2
+	SelfHealing@firedamageblue3:
+		HealIfBelow: 101
+		DamageTypes: FireDeathBlue
+		RequiresCondition: firedamageblue3
+	ExternalCondition@firedamageblue3:
+		Condition: firedamageblue3
+

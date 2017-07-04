@@ -177,8 +177,22 @@ DREADFIRE:
 		VoiceSet: Dreadfire
 		Volume: 2
 	-ThrowsShrapnel@human:
-	-DamagedByTerrain@firedamage:
+	-SelfHealing@firedamage:
 	-ExternalCondition@firedamage:
+	-SelfHealing@firedamage1:
+	-ExternalCondition@firedamage1:
+	-SelfHealing@firedamage2:
+	-ExternalCondition@firedamage2:
+	-SelfHealing@firedamage3:
+	-ExternalCondition@firedamage3:
+	-SelfHealing@firedamageblue:
+	-ExternalCondition@firedamageblue:
+	-SelfHealing@firedamageblue1:
+	-ExternalCondition@firedamageblue1:
+	-SelfHealing@firedamageblue2:
+	-ExternalCondition@firedamageblue2:
+	-SelfHealing@firedamageblue3:
+	-ExternalCondition@firedamageblue3:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		Chance: 100
@@ -312,7 +326,7 @@ GOLEM:
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 	ProximityExternalCondition@cloakgenerator:
-		Condition: cloakgenerator
+		Condition: cloak
 		Range: 7c73
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
@@ -380,6 +394,7 @@ TARANTULA:
 SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -455,8 +470,22 @@ SILVER:
 	-WithIdleOverlay@Veins:
 	-DamagedByTerrain@TibGas:
 	-ExternalCondition@gasdamage:
-	-DamagedByTerrain@firedamage:
+	-SelfHealing@firedamage:
 	-ExternalCondition@firedamage:
+	-SelfHealing@firedamage1:
+	-ExternalCondition@firedamage1:
+	-SelfHealing@firedamage2:
+	-ExternalCondition@firedamage2:
+	-SelfHealing@firedamage3:
+	-ExternalCondition@firedamage3:
+	-SelfHealing@firedamageblue:
+	-ExternalCondition@firedamageblue:
+	-SelfHealing@firedamageblue1:
+	-ExternalCondition@firedamageblue1:
+	-SelfHealing@firedamageblue2:
+	-ExternalCondition@firedamageblue2:
+	-SelfHealing@firedamageblue3:
+	-ExternalCondition@firedamageblue3:
 	HiddenUnderFog:
 		Type: GroundPosition
 	HitShape:

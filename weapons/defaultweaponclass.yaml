@@ -60,7 +60,7 @@ BlueFireballLauncher:
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
@@ -128,6 +128,7 @@ BlueFireballLauncher:
 		Inaccuracy: 0c181
 		Image: missile01
 		HorizontalRateOfTurn: 8
+		VerticalRateOfTurn: 12
 		RangeLimit: 28c291
 		Palette: effect
 		TrailImage: durasmoke
@@ -167,6 +168,7 @@ BlueFireballLauncher:
 	Projectile: BulletAS
 		MinimumLaunchAngle: 270
 		MaximumLaunchAngle: 270
+		VerticalRateOfTurn: 12
 		Speed: 0c362
 		LaunchAngle: 125
 		Blockable: true
@@ -465,30 +467,3 @@ BlueFireballLauncher:
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidImpactTypes: Water
-
-RedEye:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^APHEWH
-	ReloadDelay: 55
-	Range: 11c321
-	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-	ValidTargets: Aircraft
-	Projectile: Missile
-		MaximumLaunchSpeed: 1c512
-		MinimumLaunchSpeed: 1c512
-		Speed : 1c512
-		Arm: 2
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 0c181
-		Image: missile01
-		HorizontalRateOfTurn: 8
-		RangeLimit: 42c437
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
-		Damage: 200
-		ValidTargets: Aircraft
-	Warhead@2Eff: CreateEffect
-		Explosions: tiny_tumu
-		ExplosionPalette: apolra50alpha
-		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud

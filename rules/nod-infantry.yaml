@@ -85,7 +85,7 @@ E3:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 	SoundOnDamageTransition:
@@ -226,7 +226,7 @@ NENGINEER:
 	SoundOnDamageTransition:
 		DamagedSounds: nodeng_f1.aud, nodeng_f2.aud, nodeng_f3.aud, nodeng_f4.aud, nodeng_f5.aud
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		InitialDelay: 90
 		CloakDelay: 250
 	GrantConditionOnPrerequisite@upgrade:
@@ -309,7 +309,7 @@ NACAD:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 	SoundOnDamageTransition:
@@ -354,7 +354,7 @@ NCONF:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 	DetectCloaked:
@@ -412,7 +412,7 @@ SHADOW:
 		Condition: upgrade.laser
 		Prerequisites: upgrade.laser
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 	SoundOnDamageTransition:

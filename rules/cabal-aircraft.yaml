@@ -105,8 +105,7 @@ MANTA:
 		Cost: 2200
 	Tooltip:
 		Name: Manta
-	Selectable:
-		Bounds: 60,48,0,-10
+	-Selectable:
 	Voiced:
 		VoiceSet: Cabalbeep
 		Volume: 2
@@ -141,7 +140,6 @@ MANTA:
 	Turreted:
 		TurnSpeed: 2
 		Offset: 566,0,181
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -176,4 +174,4 @@ MANTA:
 		Actor: MANTA.Husk
 		Probability: 100
 	HitShape:
-	-Selectable:
+	RejectsOrders:

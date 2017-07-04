@@ -1,6 +1,7 @@
 NACNST:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -73,6 +74,7 @@ NACNST:
 NAPOWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -108,6 +110,7 @@ NAPOWR:
 NAAPWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x3hitshape
+	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -149,6 +152,7 @@ NAAPWR:
 NIPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@3: ^ExploBuildingmedium
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -232,6 +236,7 @@ NPPROC:
 NAHAND:
 	Inherits: ^Building
 	Inherits@2: ^2x4hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
@@ -281,6 +286,7 @@ NAHAND:
 NAWEAP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
@@ -369,6 +375,7 @@ NAWEAP:
 NARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -450,6 +457,7 @@ NARADR:
 NAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
@@ -586,12 +594,13 @@ NAHPAD:
 NAPYRA:
 	Inherits: ^Building
 	Inherits@2: ^4x4hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 208
 		Prerequisites: anypower, naradr, ~structures.nod, ~ideology
-		Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda) or Tiberium (Technology)
+		Description: Gives access to stronger units and upgrades.\n\nSpecial:\n- Call a vertigo bomber dropping napalm (Propaganda), Tiberium (Industry) or Seismic Bomb (Technology)
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -665,10 +674,31 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+	AirstrikePower@VertigoSeismicAirstrikePower:
+		OrderName: VertigoSeismicAirstrikePowerInfoOrder
+		Prerequisites: naradr, ~technology
+		Icon: vertigo
+		ChargeTime: 300
+		QuantizedFacings: 8
+		Description: Seismic Bomb
+		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo3
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 
 NATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 2000
@@ -696,6 +726,7 @@ NATECH:
 NATMPL:
 	Inherits: ^Building
 	Inherits@2: ^3x4hitshape
+	Inherits@3: ^ExploBuildingmedium
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000

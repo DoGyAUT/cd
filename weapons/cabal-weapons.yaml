@@ -677,8 +677,10 @@ TarantulaLaserAA:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Aircraft
 		Spread: 0c59
-		Damage: 100
+		Damage: 115
 		DamageTypes: CabalWeapon
+		Versus:
+			Infantry: 120
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -950,9 +952,11 @@ ReaperMissileAA:
 	Inherits: ReaperMissile
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
-		Damage: 125
+		Spread: 1c0
+		Damage: 105
 		ValidTargets: Aircraft
+		Versus:
+			Infantry: 140
 	DamageTypes: CabalWeapon
 
 cleansingaura:

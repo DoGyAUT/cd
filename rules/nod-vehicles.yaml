@@ -171,7 +171,7 @@ NTHARV:
 		Condition: technology
 		Prerequisites: technology
 	Cloak:
-		RequiresCondition: crate-cloak || cloakgenerator || technology
+		RequiresCondition: cloak || technology
 	RevealsShroud:
 		Range: 8c497
 	-ProducibleWithLevel:
@@ -603,7 +603,8 @@ REPAIR:
 	HitShape:
 
 FTNK:
-	Inherits: ^VoxelVehicle
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^Burningtank
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -659,6 +660,7 @@ FTNK:
 		EmptyWeapon: PyradonExplosion
 		Chance: 100
 	HitShape:
+
 
 RECKONER:
 	Inherits: ^VoxelVehicle
@@ -716,7 +718,7 @@ TERMITE:
 	RevealsShroud:
 		Range: 12c745
 	Health:
-		HP: 2600
+		HP: 2000
 	Turreted:
 		Turret: primary
 		TurnSpeed: 2
@@ -963,7 +965,7 @@ NHWTZ:
 		RequiresCondition: deployed
 	WithMuzzleOverlay:
 	Cloak:
-		RequiresCondition: upgrade.stealth || crate-cloak || cloakgenerator
+		RequiresCondition: upgrade.stealth || cloak
 		InitialDelay: 90
 		CloakDelay: 250
 	GrantConditionOnDeploy:
