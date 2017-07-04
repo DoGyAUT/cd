@@ -2047,11 +2047,9 @@ HailstormMissileGasAA:
 HavocMissiles:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-	ReloadDelay: 10
+	ReloadDelay: 5
 	Range: 9c921
 	MinRange: 1c424
-	Burst: 2
-	BurstDelay: 10
 	Report: rocket01.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -2072,15 +2070,13 @@ HavocMissiles:
 HavocMissilesTibGas:
 	Inherits: HavocMissiles
 	Inherits@wh: ^TiberiumWH
-	ReloadDelay: 150
-	Burst: 8
 	Projectile: Missile
 		ContrailLength: 10
 		ContrailColor: 00FF64
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 180
+		Damage: 240
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
