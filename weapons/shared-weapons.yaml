@@ -9,7 +9,7 @@ UnitExplode:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
 		ExplosionPalette: apolra50alpha
@@ -31,7 +31,7 @@ UnitExplodeEpic:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -57,7 +57,7 @@ PyradonExplosion:
 			Vehicle: 10
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: apolra50alpha
@@ -78,7 +78,7 @@ UnitExplodeSmall:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
@@ -99,7 +99,7 @@ UnitExplodeSmaller:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
@@ -121,7 +121,7 @@ UnitExplodeHeli:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
@@ -143,7 +143,7 @@ UnitExplodePlane:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
@@ -164,7 +164,7 @@ UnitExplodeCrapJet:
 			Cyborg: 100
 			Vehicle: 100
 			Aircraft: 100
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: crapexplo
 		ExplosionPalette: apolra2
@@ -185,7 +185,7 @@ UnitExplodeCyborg:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: SmallExplosionDeath
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -233,7 +233,7 @@ SmallTiberiumExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
+		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Tiberium
 		Size: 1,1
@@ -255,7 +255,7 @@ LargeTiberiumExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
+		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Tiberium
 		Size: 1,1
@@ -277,7 +277,7 @@ LargeVeinExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
+		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Veins
 		Size: 1,1
@@ -637,7 +637,7 @@ DogBite:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 100
-		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		DamageTypes: BulletDeath
 		Versus:
 			Infantry: 100
 			Cyborg: 75
@@ -783,7 +783,6 @@ SlimeAttack:
 	Report: vicer1.aud
 	Projectile: BulletAS
 		Speed: 0c602
-		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 125
 
@@ -794,7 +793,6 @@ SmallSlimeAttack:
 	Report: vicer1.aud
 	Projectile: BulletAS
 		Speed: 0c602
-		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 75
 
@@ -807,7 +805,7 @@ Tentacle:
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
 		Damage: 160
-		DamageTypes: TriggerProne, TriggerSmallVisceroid
+		DamageTypes: TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
 		Range: 2c124
 		Duration: 50

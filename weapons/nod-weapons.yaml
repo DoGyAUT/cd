@@ -32,7 +32,7 @@ DevilsTongueGunTiberium:
 		TrailImage: tibflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
-		DamageTypes: Prone100Percent, TriggerProne, TriggerVisceroid
+		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 75
@@ -396,7 +396,7 @@ SpecterGunInferno:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 200
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+		DamageTypes: FireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: beamzap
@@ -623,7 +623,7 @@ ClusterMissile:
 		Damage: 75
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ResourceDestruction0: DestroyResource
 		Size: 1
 	Warhead@ClusterSmudges0: LeaveSmudge
@@ -635,7 +635,7 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ResourceDestruction1: DestroyResource
 		Size: 2
 		Delay: 5
@@ -649,7 +649,7 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ResourceDestruction2: DestroyResource
 		Size: 3
 		Delay: 10
@@ -663,7 +663,7 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ResourceDestruction3: DestroyResource
 		Size: 4
 		Delay: 15
@@ -677,7 +677,7 @@ ClusterMissile:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ResourceDestruction4: DestroyResource
 		Size: 5
 		Delay: 20
@@ -711,7 +711,7 @@ MultiCluster:
 		Spread: 0c181
 		Damage: 65
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: TakeCoverEffect, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ExplosionPalette: apolra2
@@ -1793,7 +1793,7 @@ FanticBoom:
 		Spread: 0c724
 		Damage: 500
 		AffectsParent: True
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: SmallExplosionDeath
 	Warhead@kill: GrantExternalCondition
 		AffectsParent: True
 		Range: 3c548

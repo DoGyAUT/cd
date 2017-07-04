@@ -170,7 +170,7 @@ HelionGun:
 		Spread: 2c848
 		Damage: 1000
 		ValidTargets: Ground, Aircraft
-		DamageTypes: CabalWeapon, Prone50Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 		Falloff: 100, 67, 40, 17, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
@@ -209,7 +209,7 @@ KronosCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 650
-		DamageTypes: CabalWeapon, Prone100Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
@@ -244,7 +244,7 @@ HarbringerGun:
 		Spread: 0c724
 		Damage: 120
 		ValidTargets: Ground
-		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_med
 		ExplosionPalette: effect50alpha
@@ -282,7 +282,7 @@ PlasmaBlasterGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 150
-		DamageTypes: CabalWeapon, Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -317,7 +317,7 @@ CannonHuskGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 40
-		DamageTypes: CabalWeapon, Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -360,7 +360,7 @@ HarbingerMachal:
 		Spread: 0c181
 		Damage: 30
 		ValidTargets: Ground
-		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -396,7 +396,7 @@ DroneMachal:
 		Damage: 36
 		ValidStances: Neutral, Enemy
 		ValidTargets: Aircraft
-		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
@@ -437,7 +437,7 @@ PteroisMachal:
 		Spread: 0c181
 		Damage: 60
 		ValidTargets: Ground
-		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -471,7 +471,7 @@ MantaMachal:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 350
-		DamageTypes: CabalWeapon, Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -503,7 +503,7 @@ CommandoLaserFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
-		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: CabalWeapon, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
@@ -898,7 +898,7 @@ JaguarClaw:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 100
-		DamageTypes: CabalWeapon, Prone100Percent, TriggerProne, BulletDeath
+		DamageTypes: CabalWeapon, BulletDeath
 
 WebLauncher:
 	ValidTargets: Infantry
@@ -920,7 +920,7 @@ WebLauncher:
 		Spread: 0c0
 		Damage: 0
 		ValidTargets: Infantry
-		DamageTypes: CabalWeapon, TriggerProne
+		DamageTypes: CabalWeapon, TakeCoverEffect
 		ImpactSounds: fireweb1.aud
 	Warhead@emp: GrantExternalCondition
 		Range: 0c724

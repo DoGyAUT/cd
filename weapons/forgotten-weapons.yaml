@@ -290,7 +290,7 @@ ForgHECannon:
 		Versus:
 			Infantry: 100
 			Cyborg: 100
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		DamageTypes: TakeCoverEffect, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
@@ -487,7 +487,7 @@ GoonHammer:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 200
-		DamageTypes: Prone350Percent, TriggerProne, BulletDeath
+		DamageTypes: BulletDeath
 	Warhead@21Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		AffectsParent: True
@@ -525,7 +525,7 @@ HellHoundBite:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 225
-		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		DamageTypes: BulletDeath
 
 BuggyFireballLauncher:
 	Inherits@wh: ^FireWH
@@ -567,7 +567,7 @@ BountyMG:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
-		DamageTypes: Prone100Percent, TriggerProne, BountyKill
+		DamageTypes: TakeCoverEffect, BountyKill
 
 BountyHunterBazooka:
 	Inherits: ^MissileAPHE
@@ -583,7 +583,7 @@ BountyHunterBazooka:
 		ValidTargets: Ground, Aircraft
 		Versus:
 			Aircraft: 50
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, BountyKill
+		DamageTypes: TakeCoverEffect, SmallExplosionDeath, BountyKill
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha

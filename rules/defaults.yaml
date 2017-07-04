@@ -908,18 +908,11 @@
 ^Soldier:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
 	RevealsShroud:
 		Range: 7c73
 	MustBeDestroyed:
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone200Percent: 200
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
+
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:
@@ -928,7 +921,6 @@
 		CrushedPaletteIsPlayerPalette: True
 	Mobile:
 		RequiresCondition: !webdisable
-
 ^SoldierFearless:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
@@ -1052,18 +1044,10 @@
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
 	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
 	RevealsShroud:
 		Range: 5c673
 	MustBeDestroyed:
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone200Percent: 200
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:

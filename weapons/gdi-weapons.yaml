@@ -294,7 +294,7 @@ AtlasGun:
 			Vehicle: 60
 			Aircraft: 100
 			Building: 200
-		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
+		DamageTypes: EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: swave
 		ExplosionPalette: swave
@@ -351,14 +351,14 @@ IonCannon:
 		Damage: 100
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Aircraft
-		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+		DamageTypes: EnergyDeath
 	Warhead@2Dam_area: SpreadDamage
 		Spread: 1c424
 		Damage: 250
 		Falloff: 100, 50, 25, 0
 		Delay: 3
 		ValidTargets: Ground, Aircraft
-		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
+		DamageTypes: TakeCoverEffect, EnergyDeath
 	Warhead@4Effect: CreateEffect
 		Explosions: ionbeam
 		ImpactSound: ion1.aud
