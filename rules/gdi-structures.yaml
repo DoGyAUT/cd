@@ -1,6 +1,7 @@
 GACNST:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -71,6 +72,7 @@ GACNST:
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -131,6 +133,7 @@ GAPOWR:
 GPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@3: ^ExploBuildingmedium
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -181,6 +184,7 @@ GPROC:
 GAPILE:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.GDI
@@ -235,6 +239,7 @@ GAPILE:
 GAWEAP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@3: ^ExploBuildingmedium
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -294,6 +299,7 @@ GAWEAP:
 GARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
@@ -339,6 +345,7 @@ GARADR:
 GAARMORY:
 	Inherits: ^Building
 	Inherits@2: ^3x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Buildable:
 		Queue: Building.GDI
@@ -466,6 +473,7 @@ GAARMORY:
 GAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 750
@@ -546,6 +554,7 @@ GAHPAD:
 GADEPT:
 	Inherits: ^Building
 	Inherits@2: ^1x1hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 750
@@ -615,6 +624,7 @@ GADEPT:
 GATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x3hitshape
+	Inherits@3: ^ExploBuildingPower
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 110
@@ -663,6 +673,7 @@ GATECH:
 GADROP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
+	Inherits@3: ^ExploBuildingmedium
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 111
