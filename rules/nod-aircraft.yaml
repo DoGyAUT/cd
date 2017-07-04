@@ -521,10 +521,10 @@ VERTIGO:
 	RevealsShroud:
 		Range: 21c218
 		Type: GroundPosition
-	Armament@primary1:
+	Armament@primary:
 		Weapon: VertigoBombNapalm
 		RequiresCondition: !upgrade.bluehell
-	Armament@primary2:
+	Armament@primaryupgraded:
 		Weapon: VertigoBombBlueNapalm
 		RequiresCondition: upgrade.bluehell
 	GrantConditionOnPrerequisite@upgrade.bluehell:
@@ -559,6 +559,8 @@ VERTIGO2:
 	Inherits: VERTIGO
 	Armament@primary:
 		Weapon: VertigoBombGas
+		-RequiresCondition:
+	-Armament@primaryupgraded:
 	RenderVoxels:
 		Image: vertigo
 	RenderSprites:
@@ -568,6 +570,8 @@ VERTIGO3:
 	Inherits: VERTIGO
 	Armament@primary:
 		Weapon: VertigoBombSeismic
+		-RequiresCondition:
+	-Armament@primaryupgraded:
 	RenderVoxels:
 		Image: vertigo
 	RenderSprites:
