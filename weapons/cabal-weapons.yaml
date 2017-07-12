@@ -697,33 +697,46 @@ TarantulaLaserAA:
 		Explosions: medium_flash
 		ExplosionPalette: light
 
-SabercutLaser:
+SabercutLaserNew:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
 	ReloadDelay: 120
 	Range: 10c621
-	Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 3
 	BurstDelay: 4
-	Projectile: LaserZap
-		Color: 0064FF
-		Width: 0c57
-		BeamDuration: 3
-		ZOffset: 2047
-		UsePlayerColor: false
-		SecondaryBeam: true
-		SecondaryBeamWidth: 0c28
-		SecondaryBeamZOffset: 2047
-		SecondaryBeamColor: 00C8FF
+	Charges: yes
+	Projectile: TeslaZap
+		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 125
+		Damage: 115
 		DamageTypes: CabalWeapon
 	Warhead@3Eff: CreateEffect
-		Explosions: piff
+		Explosions: small_emp
+		ExplosionPalette: apolcyan
 		InvalidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@op: FireShrapnel
+		Weapon: SabercutLaserSplash
+		Amount: 3
+		AimChance: 50
+		AllowDirectHit: false
+
+SabercutLaserSplash:
+	Inherits: SabercutLaserNew
+	Range: 3c0
+	Projectile: TeslaZap
+		Palette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Damage: 10
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+	-Warhead@op: FireShrapnel
 
 SkirmisherLaserFire:
 	Inherits: ^BasicLaser
