@@ -343,7 +343,8 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
-	Inherits@4: ^AffectedByFlames
+	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
+	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	SelectionDecorations:
@@ -375,42 +376,8 @@
 	Guardable:
 		Range: 4c248
 	Demolishable:
-	DamagedByTerrain@TibGas:
-		Damage: 20
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
 	HitShape:
 		UseOccupiedCellsOffsets: true
-	SelfHealing@firedamage:
-		Step: -40
-		Delay: 16
-	SelfHealing@firedamage1:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 16
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 16
-	SelfHealing@firedamageblue:
-		Step: -45
-		Delay: 16
-	SelfHealing@firedamageblue1:
-		Step: -30
-		Delay: 16
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 16
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -683,7 +650,8 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
-	Inherits@9: ^AffectedByFlames
+	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
+	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
 	Inherits@parach: ^Parachutable
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
@@ -735,7 +703,6 @@
 		DeathTypes:
 			BulletDeath: 1
 			SmallExplosionDeath: 2
-			HeadshotDeath: 3
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
@@ -758,26 +725,6 @@
 	Crushable:
 		CrushSound: squish6.aud
 		WarnProbability: 0
-	DamagedByTerrain@Tiberium:
-		RequiresCondition: !inside-tunnel
-		Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-		Damage: 8
-		DamageInterval: 10
-		DamageTypes: EnergyDeath, TriggerVisceroid
-	SpawnActorOnDeath@1:
-		Actor: visc_lrg
-		Probability: 10
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TriggerVisceroid
-		RequiresLobbyCreeps: True
-	SpawnActorOnDeath@2:
-		Actor: visc_sml
-		Probability: 10
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TriggerSmallVisceroid
-		RequiresLobbyCreeps: True
 	SpawnActorOnDeath@Corruptor:
 		Actor: visc_corrupt
 		Probability: 80
@@ -810,9 +757,6 @@
 		Weapons: Bloodytrail
 		Pieces: 0, 5
 		Range: 0c064, 0c918
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
 	WithDecoration@medic:
 		Image: pips
 		Sequence: medic
@@ -855,38 +799,6 @@
 	ReloadDelayMultiplier@repair:
 		RequiresCondition: repair_healboost
 		Modifier: 90
-	DamagedByTerrain@TibGas:
-		Damage: 10
-		DamageInterval: 16
-		DamageTypes: EnergyDeath, TriggerVisceroid
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SelfHealing@firedamage:
-		Step: -20
-		Delay: 8
-	SelfHealing@firedamage1:
-		Step: -15
-		Delay: 8
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 8
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 8
-	SelfHealing@firedamageblue:
-		Step: -25
-		Delay: 8
-	SelfHealing@firedamageblue1:
-		Step: -20
-		Delay: 8
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 8
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 8
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1058,7 +970,6 @@
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	-DamagedByTerrain@Tiberium:
 	Mobile:
 		RequiresCondition: !webdisable
 		TerrainSpeeds:
@@ -1088,7 +999,6 @@
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	-DamagedByTerrain@Tiberium:
 	Mobile:
 		RequiresCondition: !webdisable
 		TerrainSpeeds:
@@ -1121,7 +1031,6 @@
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	-DamagedByTerrain@Tiberium:
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1147,7 +1056,6 @@
 	Crushable:
 		CrushClasses: infantry
 		WarnProbability: 0
-	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	-WithDecoration@medic:
@@ -1178,7 +1086,6 @@
 	Crushable:
 		CrushClasses: cyborg
 		WarnProbability: 0
-	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	ThrowsShrapnel@sparks:
@@ -1460,7 +1367,8 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^IronCurtainable
-	Inherits@9: ^AffectedByFlames
+	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
+	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
@@ -1574,40 +1482,6 @@
 		Gravity: -68,-68,68, 68,68,68
 		Image: durasmoke
 		Palette: apolra25alpha
-	DamagedByTerrain@TibGas:
-		Damage: 10
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SelfHealing@firedamage:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamage1:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 16
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 16
-	SelfHealing@firedamageblue:
-		Step: -25
-		Delay: 16
-	SelfHealing@firedamageblue1:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 16
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
 	Chronoshiftable:
 		ReturnToOrigin: False
 
@@ -2082,16 +1956,14 @@
 	KillsSelf:
 		RequiresCondition: killcloud
 		Delay: 0,190
-	ProximityExternalCondition@gasdamage:
-		Condition: gasdamage
-		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
 	HitShape:
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
 	Chronoshiftable:
 		ReturnToOrigin: False
+	ExplodeWeapon@Tiberium:
+		Weapon: Tiberium
 
 ^FireActor:
 	Inherits@1: ^ExistsInWorld
@@ -2137,8 +2009,6 @@
 		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
 		RequiresCondition: killfire
-	ProximityExternalCondition@firedamage:
-		ValidStances: Ally, Neutral, Enemy
 	HitShape:
 		Type: Circle
 			Radius: 256
@@ -2462,53 +2332,4 @@
 			TopLeft: -2560, -2560
 			BottomRight: 2560, 2560
 
-^AffectedByFlames:
-	SelfHealing@firedamage:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
-	SelfHealing@firedamage1:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage1
-	ExternalCondition@firedamage1:
-		Condition: firedamage1
-	SelfHealing@firedamage2:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage2
-	ExternalCondition@firedamage2:
-		Condition: firedamage2
-	SelfHealing@firedamage3:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamage3:
-		Condition: firedamage3
-	SelfHealing@firedamageblue:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue
-	ExternalCondition@firedamageblue:
-		Condition: firedamageblue
-	SelfHealing@firedamageblue1:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue1
-	ExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
-	SelfHealing@firedamageblue2:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue2
-	ExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
-	SelfHealing@firedamageblue3:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue3
-	ExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
 

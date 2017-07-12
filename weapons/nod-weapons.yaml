@@ -879,20 +879,20 @@ VertigoBombGas:
 	Inherits: ^ShellHE
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 60
-	Range: 2c124
+	Range: 0c512
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c181
+		Inaccuracy: 0c0
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 60
+		LaunchAngle: 0
 		Palette: effect
 		ContrailLength: 10
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c124
+		Spread: 0c512
 		Damage: 2000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
@@ -918,21 +918,21 @@ VertigoBombNapalm:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
-	Range: 2c124
+	Range: 0c512
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c181
+		Inaccuracy: 0c0
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 60
+		LaunchAngle: 0
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c124
-		Damage: 1000
+		Spread: 0c512
+		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: napalmnuke
 		ExplosionPalette: napalmnuke50
@@ -956,25 +956,24 @@ VertigoBombNapalm:
 VertigoBombBlueNapalm:
 	Inherits: VertigoBombNapalm
 	Warhead@1Dam: SpreadDamage
-		Spread: 2c124
-		Damage: 1350
+		Damage: 600
 	WarheadAS: FireShrapnel
 		Weapon: BlueNapalmShrapnel
-		Amount: 50
+		Amount: 40
 		AimChance: 0
 
 VertigoBombSeismic:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
-	Range: 2c124
+	Range: 0c512
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c181
+		Inaccuracy: 0c0
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 60
+		LaunchAngle: 0
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
