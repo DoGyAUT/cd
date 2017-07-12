@@ -902,9 +902,6 @@
 		LandWhenIdle: False
 		Voice: Move
 
-^SoldierFearlessVeryHeavy:
-	Inherits: ^SoldierFearlessHeavy
-
 ^HealsOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
 		TerrainTypes: Tiberium
@@ -935,9 +932,6 @@
 		ZOffset: 256
 		ValidStances: Ally, Neutral, Enemy
 		RequiresCondition: tiberiumheal || tiberiumheal2
-
-^CorruptorHeal:
-	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
@@ -1050,7 +1044,7 @@
 ^Alien:
 	Inherits@1: ^Infantry
 	Inherits@2: ^HealsOnTiberium
-	Inherits@3: ^CorruptorHeal
+	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@4: ^WebDisable
 	MustBeDestroyed:
 	Crushable:
