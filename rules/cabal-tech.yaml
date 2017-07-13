@@ -6,7 +6,7 @@ upgrade.hc:
 		BuildPaletteOrder: 300
 		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
-		Description: Research reinforced chassis for all cabal buildings which provides a damage reduction.
+		Description: Research reinforced walls for all cabal buildings which provides a damage reduction.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -93,3 +93,26 @@ upgrade.nanoswarm:
 		Image: KAGATE_A
 	Plug:
 		Type: plug.upgrade.nanoswarm
+
+upgrade.combatreactors:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Advanced Combat Reactors
+	Buildable:
+		BuildPaletteOrder: 306
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Advanced Combat Reactors which allow higher reload speeds of all CABAL weapons.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: KABCAN
+	Plug:
+		Type: plug.upgrade.combatreactors
+
+^KAUPGRADE:
+	Inherits@hitshape: ^1x1hitshape
+	Inherits@BasicBuilding: ^BasicBuilding
+	KillsSelf:
+		RemoveInstead: True
+
