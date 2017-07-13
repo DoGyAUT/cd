@@ -343,8 +343,8 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
-	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
-	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	SelectionDecorations:
@@ -650,11 +650,12 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
-	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
-	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
 	Inherits@parach: ^Parachutable
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
 	DrawLineToTarget:
 	Health:
 		HP: 50
@@ -757,48 +758,9 @@
 		Weapons: Bloodytrail
 		Pieces: 0, 5
 		Range: 0c064, 0c918
-	WithDecoration@medic:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: medic_heal
-	SelfHealing@medic:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: medic_heal
-	ExternalCondition@medic:
-		Condition: medic_heal
 	ProducibleWithLevel:
 		Prerequisites: armory.upgraded
 	RevealOnFire:
-	WithDecoration@repair:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_healboost
-	SelfHealing@repair:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_healboost
-	ExternalCondition@repair:
-		Condition: repair_healboost
-	ReloadDelayMultiplier@repair:
-		RequiresCondition: repair_healboost
-		Modifier: 90
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1052,9 +1014,6 @@
 		WarnProbability: 0
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	-WithDecoration@medic:
-	-SelfHealing@medic:
-	-ExternalCondition@medic:
 	-GrantConditionOnPrerequisite@nanofiber:
 	-DamageMultiplier@nanofiber:
 	Mobile:
@@ -1076,6 +1035,7 @@
 	Inherits@3: ^DamagedByVeins
 	Inherits@8: ^IronCurtainable
 	Inherits@FeatureArmortype: ^FeatureArmortypeCyborg
+	Inherits@FeatureTargettypeCyborg: ^FeatureTargettypeCyborg
 	MustBeDestroyed:
 	Crushable:
 		CrushClasses: cyborg
@@ -1090,9 +1050,6 @@
 		Weapons: SmallDebris
 		Pieces: 1, 3
 		Range: 1c424, 5c673
-	-WithDecoration@medic:
-	-SelfHealing@medic:
-	-ExternalCondition@medic:
 	-GrantConditionOnPrerequisite@nanofiber:
 	-DamageMultiplier@nanofiber:
 	Mobile:
@@ -1106,24 +1063,6 @@
 				PathingCost: 0
 			PurpleTiberium: 70
 				PathingCost: 0
-	SelfHealing@repair_golem:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_heal
-	ExternalCondition@repair_golem:
-		Condition: repair_heal
-	WithDecoration@repair_golem:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_heal
 
 ^HeavyCyborg:
 	Inherits@1: ^Cyborg
@@ -1361,12 +1300,13 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^IronCurtainable
-	Inherits@FeatureDamagesourceFire: ^FeatureDamagesourceFire
-	Inherits@FeatureDamagesourceTiberium: ^FeatureDamagesourceTiberium
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
 	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1445,24 +1385,6 @@
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
 		RequiresCondition: !inside-tunnel
-	WithDecoration@repair_golem:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_heal
-	SelfHealing@repair_golem:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_heal
-	ExternalCondition@repair_golem:
-		Condition: repair_heal
 	ProducibleWithLevel:
 		Prerequisites: armory.upgraded
 	RevealOnFire:

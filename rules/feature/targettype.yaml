@@ -22,6 +22,13 @@
 	Targetable@TargettypeParachute:
 		TargetTypes: Aircraft
 		RequiresCondition: parachute
+^FeatureTargettypeCyborg:
+	Targetable@Targettype:
+		TargetTypes: Infantry, Cyborg, Ground
+		RequiresCondition: !inside-tunnel && !parachute
+	Targetable@TargettypeParachute:
+		TargetTypes: Aircraft
+		RequiresCondition: parachute
 ^FeatureTargettypeVehicle:
 	Targetable@Targettype:
 		TargetTypes: Vehicle, Ground

@@ -59,3 +59,54 @@ Tiberium:
 		Spread: 1c0
 		Damage: 4
 		DamageTypes: TriggerVisceroid
+
+^Repair:
+	ReloadDelay: 1
+	Range: 0c0
+	Projectile: InstantExplode
+	Warhead@Damage: SpreadDamage
+		Falloff: 100, 0
+		Spread: 7c73
+		DamageTypes: Repair
+	Warhead@Condition: GrantExternalConditionWarhead
+		Condition: FeatureBuffRepair
+		Spread: 7c73
+		Duration: 1
+
+^GlobalRepair:
+	Warhead@Damage: SpreadDamage
+		Spread: 1000000c0
+	Warhead@Condition: GrantExternalConditionWarhead
+		Spread: 1000000c0
+
+RepairInfantry:
+	ReloadDelay: 10
+	Inherits: ^Repair
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Infantry
+		Spread: 4c248
+		Damage: -5
+	Warhead@Condition: GrantExternalConditionWarhead
+		ValidTargets: Infantry
+		Spread: 4c248
+		Duration: 10
+
+RepairCyborg:
+	Inherits: ^Repair
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Cyborg
+		Damage: -4
+	Warhead@Condition: GrantExternalConditionWarhead
+		ValidTargets: Cyborg
+
+RepairVehicle:
+	Inherits: ^Repair
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Vehicle
+		Damage: -4
+	Warhead@Condition: GrantExternalConditionWarhead
+		ValidTargets: Vehicle
+
+RepairInfantryGlobal:
+	Inherits: RepairInfantry
+	Inherits@GlobalRepair: ^GlobalRepair
