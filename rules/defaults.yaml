@@ -2720,3 +2720,21 @@
 		RequiresCondition: firedamageblue3
 	ExternalCondition@firedamageblue3:
 		Condition: firedamageblue3
+
+^PowerplantEffects:
+	ExternalCondition@overload_active:
+		Condition: overload_active
+	PowerMultiplier@overload_active:
+		RequiresCondition: overload_active
+		Modifier: 500
+	TimedConditionBar@overload_active:
+		Condition: overload_active
+		Color: 0000FF
+	ExternalCondition@overload_disable:
+		Condition: overload_disable
+	PowerMultiplier@overload_disable:
+		RequiresCondition: overload_disable && !overload_active
+		Modifier: 0
+	TimedConditionBar@overload_disable:
+		Condition: overload_disable
+		Color: FFFFFF

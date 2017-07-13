@@ -110,6 +110,22 @@ upgrade.combatreactors:
 	Plug:
 		Type: plug.upgrade.combatreactors
 
+upgrade.overload:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Overload
+	Buildable:
+		BuildPaletteOrder: 307
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research a method to temporarily boost powerplants.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: KALASR
+	Plug:
+		Type: plug.upgrade.overload
+
 ^KAUPGRADE:
 	Inherits@hitshape: ^1x1hitshape
 	Inherits@BasicBuilding: ^BasicBuilding

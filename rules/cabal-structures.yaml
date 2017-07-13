@@ -83,6 +83,7 @@ KPR:
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@3: ^3x3hitshape
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 301
@@ -475,14 +476,16 @@ KABTECH:
 			plug.upgrade.teleporter: plug1.upgrade.teleporter
 			plug.upgrade.nanoswarm: plug1.upgrade.nanoswarm
 			plug.upgrade.combatreactors: plug1.upgrade.combatreactors
+			plug.upgrade.overload: plug1.upgrade.overload
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
-			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
+			plug.upgrade.overload: !plug1.upgrade.overload && !plug2.upgrade.overload && !plug3.upgrade.overload && !plug4.upgrade.overload && !plug1.upgrade.lc && !plug1.upgrade.hc && !plug1.upgrade.visionuplink && !plug1.upgrade.photonreactors && !plug1.upgrade.teleporter && !plug1.upgrade.nanoswarm && !plug1.upgrade.combatreactors && !plug1.upgrade.overload
 	Pluggable@plug2:
 		Offset: 3,3
 		Conditions:
@@ -493,14 +496,16 @@ KABTECH:
 			plug.upgrade.teleporter: plug2.upgrade.teleporter
 			plug.upgrade.nanoswarm: plug2.upgrade.nanoswarm
 			plug.upgrade.combatreactors: plug2.upgrade.combatreactors
+			plug.upgrade.overload: plug2.upgrade.overload
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
-			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
+			plug.upgrade.overload: !plug1.upgrade.overload && !plug2.upgrade.overload && !plug3.upgrade.overload && !plug4.upgrade.overload && !plug2.upgrade.lc && !plug2.upgrade.hc && !plug2.upgrade.visionuplink && !plug2.upgrade.photonreactors && !plug2.upgrade.teleporter && !plug2.upgrade.nanoswarm && !plug2.upgrade.combatreactors && !plug2.upgrade.overload
 	Pluggable@plug3:
 		Offset: 3,2
 		Conditions:
@@ -511,14 +516,16 @@ KABTECH:
 			plug.upgrade.teleporter: plug3.upgrade.teleporter
 			plug.upgrade.nanoswarm: plug3.upgrade.nanoswarm
 			plug.upgrade.combatreactors: plug3.upgrade.combatreactors
+			plug.upgrade.overload: plug3.upgrade.overload
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
-			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
+			plug.upgrade.overload: !plug1.upgrade.overload && !plug2.upgrade.overload && !plug3.upgrade.overload && !plug4.upgrade.overload && !plug3.upgrade.lc && !plug3.upgrade.hc && !plug3.upgrade.visionuplink && !plug3.upgrade.photonreactors && !plug3.upgrade.teleporter && !plug3.upgrade.nanoswarm && !plug3.upgrade.combatreactors && !plug3.upgrade.overload
 	Pluggable@plug4:
 		Offset: 3,1
 		Conditions:
@@ -529,14 +536,16 @@ KABTECH:
 			plug.upgrade.teleporter: plug4.upgrade.teleporter
 			plug.upgrade.nanoswarm: plug4.upgrade.nanoswarm
 			plug.upgrade.combatreactors: plug4.upgrade.combatreactors
+			plug.upgrade.overload: plug4.upgrade.overload
 		Requirements:
-			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
-			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors
+			plug.upgrade.hc: !plug1.upgrade.hc && !plug2.upgrade.hc && !plug3.upgrade.hc && !plug4.upgrade.hc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.lc: !plug1.upgrade.lc && !plug2.upgrade.lc && !plug3.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.visionuplink: !plug1.upgrade.visionuplink && !plug2.upgrade.visionuplink && !plug3.upgrade.visionuplink && !plug4.upgrade.visionuplink && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.photonreactors: !plug1.upgrade.photonreactors && !plug2.upgrade.photonreactors && !plug3.upgrade.photonreactors && !plug4.upgrade.photonreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.teleporter: !plug1.upgrade.teleporter && !plug2.upgrade.teleporter && !plug3.upgrade.teleporter && !plug4.upgrade.teleporter && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.nanoswarm: !plug1.upgrade.nanoswarm && !plug2.upgrade.nanoswarm && !plug3.upgrade.nanoswarm && !plug4.upgrade.nanoswarm && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.combatreactors: !plug1.upgrade.combatreactors && !plug2.upgrade.combatreactors && !plug3.upgrade.combatreactors && !plug4.upgrade.combatreactors && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
+			plug.upgrade.overload: !plug1.upgrade.overload && !plug2.upgrade.overload && !plug3.upgrade.overload && !plug4.upgrade.overload && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.overload
 	ProximityExternalCondition@plug.upgrade.hc
 		Condition: upgrade.hc
 		Range: 1000000c0
@@ -621,4 +630,18 @@ KABTECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+	DetonateWeaponPower@overload:
+		OrderName: overload
+		Icon: batr
+		ChargeTime: 180
+		Description: Overload
+		LongDesc: Boost power plants temporarily with all associated side effects.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Weapon: overload
+		ActivationSequence:
+		TargetCircleRange: 6c0
+		RequiresCondition: plug1.upgrade.overload || plug2.upgrade.overload || plug3.upgrade.overload || plug4.upgrade.overload
 
