@@ -99,6 +99,29 @@ KDRONE:
 		Probability: 100
 	HitShape:
 
+KDRONE1:
+	Inherits: KDRONE
+	Health:
+		HP: 1400
+	AttackBomber:
+	-AttackTurreted:
+	-Turreted:
+	AmmoPool:
+		Ammo: 1
+		PipCount: 1
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		SelfReloads: True
+		SelfReloadDelay: 250
+	Armament@primary:
+		Weapon: Hightensionbomb
+	RenderVoxels:
+		Image: kdrone
+	RenderSprites:
+		Image: kdrone
+	-Selectable:
+	RejectsOrders:
+
 MANTA:
 	Inherits: ^AttackAdvancedPlane
 	Valued:
@@ -178,3 +201,4 @@ MANTA:
 		Probability: 100
 	HitShape:
 	RejectsOrders:
+

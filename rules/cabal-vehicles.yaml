@@ -1,6 +1,7 @@
 KMCV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@3: ^VehicleC
 	Buildable:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 300
@@ -62,6 +63,8 @@ KMCV:
 KHARV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@3: ^VehicleC
+	Inherits@4: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -117,9 +120,6 @@ KHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -128,10 +128,11 @@ KHARV:
 
 DREADFIRE:
 	Inherits@1: ^Walker
+	Inherits@2: ^VehicleC
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Dreadfire
+		Name: Shockwave
 	Selectable:
 		Bounds: 42, 60, 0, -25
 		Class: Dreadfire
@@ -139,7 +140,7 @@ DREADFIRE:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 304
 		Prerequisites: ~kaweap, karadr
-		Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
+		Description: Heavy walker armed with 2 Teslacoils.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 5
 		Speed: 71
@@ -165,12 +166,16 @@ DREADFIRE:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Armament@primary:
-		Weapon: DreadfireLauncher
+		Weapon: ShockwaveTesla
 		LocalOffset: 990,424,1980
+		MuzzleSequence: muzzle0
+		MuzzlePalette: effect50alpha
 		FireDelay: 5
 	Armament@secondary:
-		Weapon: DreadfireLauncher
+		Weapon: ShockwaveTesla
 		LocalOffset: 990,-424,1980
+		MuzzleSequence: muzzle1
+		MuzzlePalette: effect50alpha
 		FireDelay: 5
 	RenderSprites:
 	WithInfantryBody:
@@ -195,13 +200,11 @@ DREADFIRE:
 	-ExternalCondition@firedamageblue2:
 	-SelfHealing@firedamageblue3:
 	-ExternalCondition@firedamageblue3:
-	Explodes:
-		Weapon: UnitExplodeSmall
-		Chance: 100
 	HitShape:
 
 REAPER:
 	Inherits@1: ^Walker
+	Inherits@2: ^VehicleC
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -274,8 +277,9 @@ REAPER:
 
 GOLEM:
 	Inherits: ^Walker
+	Inherits@3: ^VehicleC
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Golem
 	Selectable:
@@ -329,7 +333,7 @@ GOLEM:
 		DeployedCondition: deployed
 	ProximityExternalCondition@cloakgenerator:
 		Condition: cloak
-		Range: 7c73
+		Range: 3c512
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
 		AffectsParent: True
@@ -338,6 +342,7 @@ GOLEM:
 
 TARANTULA:
 	Inherits@1: ^Walker
+	Inherits@3: ^VehicleC
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -501,6 +506,7 @@ SILVER:
 KRONOS:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^HeavyVehicle
+	Inherits@3: ^VehicleC
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -574,6 +580,7 @@ KRONOS:
 FURY:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@3: ^VehicleC
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -671,6 +678,7 @@ FURY:
 GARGANTUA:
 	Inherits@1: ^Walker
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@3: ^VehicleC
 	Valued:
 		Cost: 5000
 	Tooltip:

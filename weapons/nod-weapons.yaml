@@ -39,6 +39,10 @@ DevilsTongueGunTiberium:
 		Spread: 1c62
 		Damage: 75
 		Falloff: 100, 80
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
 
 PyradonGun:
 	Inherits: FireballLauncher
@@ -567,7 +571,7 @@ AvatarLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
+		Spread: 0c001
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
@@ -588,8 +592,6 @@ AvatarLaserE:
 		SecondaryBeamWidth: 0c28
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 0000FF
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
 
 EMPulseCannon:
 	ReloadDelay: 100
@@ -913,6 +915,11 @@ VertigoBombGas:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 80
+			Building: 10
 		Damage: 2000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
@@ -952,6 +959,12 @@ VertigoBombNapalm:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 25
+			Aircraft: 25
+			Building: 100
 		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: napalmnuke
@@ -1997,6 +2010,10 @@ HailstormMissile:
 		Versus:
 			Building: 175
 		ValidTargets: Ground
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
 
 HailstormMissileAA:
 	Inherits: HailstormMissile

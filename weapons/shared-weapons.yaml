@@ -88,7 +88,13 @@ UnitExplodeSmall:
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light2
-
+		
+UnitExplodeSmallC:
+	Inherits@1: UnitExplodeSmall
+	Warhead@2Eff: CreateEffect
+		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
+		ExplosionPalette: effect25alpha
+		
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
@@ -285,6 +291,54 @@ LargeVeinExplosion:
 		Explosions: tibbomb
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew09.aud
+		
+TibDebris:
+	ReloadDelay: 60
+	Range: 4c673
+	Report:
+	Projectile: BulletAS
+		Speed: 0c71, 0c177
+		LaunchAngle: 45, 135
+		Inaccuracy: 853
+		Image: dbrissm
+		Speed: 0c301
+		Image: bluetiberiumbullet
+		Palette: apolgren
+		TrailImage: tiberiumtrail 
+		TrailPalette: apolgren
+		Shadow: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c424
+		Damage: 10
+		Falloff: 100, 80
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl1
+		ExplosionPalette: apolgren
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+
+TibDebrisFull:
+	Inherits: TibDebris
+	Warhead@2Res: CreateResource
+		AddsResourceType: Tiberium
+		Size: 1,1
+
+TibDebrisexpsmall:
+	Inherits: TibDebris
+	Warhead@8Eff: CreateEffect
+		Explosions: scexplo
+		ExplosionPalette: apolgren
+
+TibDebrisexpbig:
+	Inherits: TibDebris
+	Warhead@8Eff: CreateEffect
+		Explosions: cabexplo
+		ExplosionPalette: apolgren
 
 SmallDebris:
 	ReloadDelay: 60
@@ -449,6 +503,15 @@ Buildingexplosionsmall:
 		Weapon: TermiteGunShrapnel1
 		Amount: 6
 		AimChance: 0
+
+Buildingexplosionsmallcabaldef:
+	Inherits: Buildingexplosionsmall
+	Warhead@1Eff: CreateEffect
+		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
+		ExplosionPalette: effect25alpha
+	Warhead@6Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
 
 Buildingexplosionsmallcabal:
 	Inherits: Buildingexplosionsmall

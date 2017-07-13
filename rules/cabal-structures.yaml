@@ -127,6 +127,7 @@ KPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmediumcabal
+	Inherits@4: ^ExploBuildingTibbig
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1500
@@ -587,6 +588,24 @@ KABTECH:
 		DisplayBeacon: true
 		DisplayRadarPing: true
 		BeaconPoster: havoc
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	AirstrikePower@totalmeltdown:
+		OrderName: totalmeltdown
+		UnitType: kdrone1
+		SquadSize: 1
+		Icon: kdroneicon
+		Description: Total Meltdown
+		LongDesc: Attack everything with an sonicbomb in an area of the map.
+		SquadOffset: -2000,2000,0
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		QuantizedFacings: 8
+		ChargeTime: 240
+		DisplayBeacon: true
+		DisplayRadarPing: true
+		BeaconPoster: kdroneicon
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
