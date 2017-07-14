@@ -8,7 +8,7 @@ VENOM:
 		Queue: Air.Nod
 		BuildPaletteOrder: 200
 		Prerequisites: ~nahpad, ~technology
-		Description: Technology Nod's basic Vtol unit.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)
+		Description: Technology Nod's basic Vtol unit.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Detects cloaked units
 	Voiced:
 		VoiceSet: Venom
 		Volume: 2
@@ -73,7 +73,7 @@ HYDRA:
 		Queue: Air.Nod
 		BuildPaletteOrder: 201
 		Prerequisites: ~nahpad, ~industry
-		Description: Advanced Vtol unit from Industry Nod.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)
+		Description: Advanced Vtol unit from Industry Nod.\n\nGood vs: Infantry, Vehicles\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Detects cloaked units
 	Voiced:
 		VoiceSet: Venom
 		Volume: 2
@@ -215,9 +215,6 @@ HAVOC:
 	AmmoPool@rockets:
 		Name: rockets
 		Ammo: 8
-		PipCount: 8
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
 		SelfReloadDelay: 160
 		ReloadCount: 8
@@ -588,7 +585,7 @@ ZODIAC:
 		Queue: Air.Nod
 		BuildPaletteOrder: 206
 		Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~propaganda
-		Description: Propaganda Nod´s Battleship that weakens enemy forces and is armed with high explosive bombs.\n\nGood vs: Ground\n\nSpecial:\n- Lowers movementspeed and attackspeed of nearby enemy soldiers\n- Crashes with high AOE on the ground upon death
+		Description: Propaganda Nod´s Battleship that weakens enemy forces and is armed with high explosive bombs.\n\nGood vs: Ground\n\nSpecial:\n- Lowers movementspeed and attackspeed of nearby enemy soldiers\n- Crashes with high AOE on the ground upon death\n- Detects cloaked units
 	Voiced:
 		VoiceSet: Venom
 		Volume: 2
@@ -597,7 +594,7 @@ ZODIAC:
 	Aircraft:
 		TurnSpeed: 2
 		CruiseAltitude: 11c321
-		Speed: 35
+		Speed: 25
 		IdealSeparation: 2c848
 		AltitudeVelocity: 0c57
 	Health:

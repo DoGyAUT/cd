@@ -270,12 +270,12 @@ PlasmaBlasterGun:
 	Range: 12c745
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 	Projectile: BulletAS
-		Speed: 2c848
+		Speed: 1c000
 		Inaccuracy: 0c724
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 45
-		Image: plasmaBullet
+		Image: eonball
 		ContrailLength: 30
 		ContrailColor: 0080FF
 		ContrailWidth: 0c35
@@ -283,6 +283,12 @@ PlasmaBlasterGun:
 		Spread: 1c62
 		Damage: 150
 		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
+		Versus:
+			Infantry: 5
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 50
+			Building: 75
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
@@ -559,13 +565,15 @@ CyborgCommandoPlasma:
 CabalObeliskLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 80
+	ReloadDelay: 100
+	Burst: 20
+	BurstDelay: 2
 	Range: 12c745
 	Report: cablaser01.aud
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c71
-		BeamDuration: 20
+		BeamDuration: 30
 		ZOffset: 2047
 		UsePlayerColor: false
 		SecondaryBeam: true
@@ -574,7 +582,7 @@ CabalObeliskLaser:
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 900
+		Damage: 50
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
@@ -606,7 +614,6 @@ CabalObeliskLaserAA:
 		SecondaryBeamColor: 00C8FF
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Aircraft
-		Spread: 0c724
 		Damage: 800
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
@@ -621,6 +628,24 @@ CabalObeliskLaserAA:
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
+	Warhead@op: FireShrapnel
+		Weapon: CabalObeliskLaserAASplash
+		Amount: 4
+		AimChance: 50
+		AllowDirectHit: false
+		ValidImpactTypes: Air, AirHit
+		ValidTargets: Air
+
+CabalObeliskLaserAASplash:
+	Inherits: CabalObeliskLaserAA
+	Range: 1c750
+	Warhead@1Dam: SpreadDamage
+		Damage: 400
+		Spread: 0c128
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+	-Warhead@op: FireShrapnel
+	-Report:
 
 TarantulaLaser:
 	Inherits: ^BasicLaser
@@ -694,33 +719,52 @@ TarantulaLaserAA:
 		Explosions: medium_flash
 		ExplosionPalette: light
 
-SabercutLaser:
+SabercutTesla:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
 	ReloadDelay: 120
 	Range: 10c621
-	Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 3
 	BurstDelay: 4
-	Projectile: LaserZap
-		Color: 0064FF
-		Width: 0c57
-		BeamDuration: 3
-		ZOffset: 2047
-		UsePlayerColor: false
-		SecondaryBeam: true
-		SecondaryBeamWidth: 0c28
-		SecondaryBeamZOffset: 2047
-		SecondaryBeamColor: 00C8FF
+	Projectile: TeslaZap
+		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 125
+		Damage: 160
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 15
+			Aircraft: 15
+			Building: 75
 		DamageTypes: CabalWeapon
 	Warhead@3Eff: CreateEffect
-		Explosions: piff
+		Explosions: small_emp
+		ExplosionPalette: apolcyan
 		InvalidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@op: FireShrapnel
+		Weapon: SabercutTeslaSplash
+		Amount: 5
+		AimChance: 50
+		AllowDirectHit: false
+
+SabercutTeslaSplash:
+	Inherits: SabercutTesla
+	Range: 1c750
+	Projectile: TeslaZap
+		Palette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Damage: 15
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+	-Warhead@op: FireShrapnel
+	-Report:
 
 SkirmisherLaserFire:
 	Inherits: ^BasicLaser
@@ -834,12 +878,72 @@ ReaperCannon:
 	ReloadDelay: 120
 	Burst: 2
 	BurstDelay: 5
+	Projectile: Missile
+		MaximumLaunchSpeed: 0c272
+		Blockable: false
+		HorizontalRateOfTurn: 2
+		Shadow: true
+		Image: plasmaBullet
+		LaunchAngle: 45
+		Palette: effect
+		Speed: 1c424
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c35
 	Range: 8c497
 	Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 75
 		DamageTypes: CabalWeapon
+
+ShockwaveTesla:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 60
+	Range: 6c11
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
+	Burst: 3
+	BurstDelay: 4
+	Charges: yes
+	Projectile: TeslaZap
+		Palette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 20
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 15
+			Aircraft: 15
+			Building: 75
+		DamageTypes: CabalWeapon
+	Warhead@3Eff: CreateEffect
+		Explosions: small_emp
+		ExplosionPalette: apolcyan
+		InvalidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@op: FireShrapnel
+		Weapon: ShockwaveTeslaSplash
+		Amount: 3
+		AimChance: 50
+		AllowDirectHit: false
+
+ShockwaveTeslaSplash:
+	Inherits: ShockwaveTesla
+	Range: 1c750
+	Projectile: TeslaZap
+		Palette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Damage: 10
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+	-Warhead@op: FireShrapnel
+	-Report:
 
 DreadfireLauncher:
 	Inherits: FireballLauncher
@@ -942,12 +1046,53 @@ ReaperMissile:
 		MinimumLaunchSpeed: 0c301
 		Speed: 0c543
 		Inaccuracy: 0c362
+		ContrailLength: 10
+		ContrailColor: 00FFFFC8
+		ContrailWidth: 0c58
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 125
+		Damage: 100
 		ValidTargets: Ground
 		DamageTypes: CabalWeapon
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl1
+		ExplosionPalette: effect50alpha
+		InvalidImpactTypes: Water
+		ImpactSounds: bursterhit01.aud
+	Warhead@3Eff: CreateEffect
+		Explosions: small_emp
+		ExplosionPalette: apolcyan
+		InvalidImpactTypes: Water
+	Warhead@5Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@dx: FireShrapnel
+		Weapon: ReaperClusterMissile
+		Amount: 4
+		AimChance: 75
+		AllowDirectHit: false
 
+ReaperClusterMissile:
+	Inherits@: HarbingerMachal
+	Range: 2c512
+	ValidTargets: Ground
+	Projectile: Missile
+		RangeLimit: 5c300
+	Burst: 1
+	BurstDelay: 1
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 30
+		ValidTargets: Ground
+		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
+
+ReaperClusterMissileAA:
+	Inherits@: ReaperClusterMissile
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+		
 ReaperMissileAA:
 	Inherits: ReaperMissile
 	ValidTargets: Aircraft
@@ -958,7 +1103,14 @@ ReaperMissileAA:
 		Versus:
 			Infantry: 140
 	DamageTypes: CabalWeapon
-
+	Warhead@op: FireShrapnel
+		Weapon: ReaperClusterMissile
+		Amount: 4
+		AimChance: 75
+		AllowDirectHit: false
+		ValidImpactTypes: Air, AirHit
+		ValidTargets: Air
+		
 cleansingaura:
 	ValidTargets: Infantry
 	Warhead@emp: GrantExternalCondition
@@ -968,3 +1120,133 @@ cleansingaura:
 		Duration: 500
 		ValidTargets: Infantry
 		ValidStances: None, Enemy, Neutral, Ally
+
+Hightensionbomb:
+	Inherits: MantaMachal
+	ReloadDelay: 10
+	Range: 1c100
+	Burst: 1
+	BurstDelay: 1
+	Projectile: BulletAS
+		Inaccuracy: 0c256
+		Speed: 0c158
+		Blockable: false
+		Shadow: false
+		Palette: apolcyan
+		Image: pulsball
+		ContrailLength: 25
+		ContrailColor: 00FFFFC8
+		ContrailWidth: 0c95
+		TrailImage: cabspark
+		TrailPalette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c512
+		Damage: 450
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage1
+		Amount: 30
+		AimChance: 75
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+
+Hightensionrage:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 100
+	Range: 4c512
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
+	ValidTargets: Ground
+	Projectile: BulletAS
+		Speed: 0c058
+		Blockable: false
+		Shadow: false
+		Palette: apolcyan
+		Image: eonball
+		ContrailLength: 20
+		ContrailColor: 00FFFFC8
+		ContrailWidth: 0c58
+		TrailImage: cabspark
+		TrailPalette: apolcyan
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 60
+		Versus:
+		ValidTargets: Ground
+		DamageTypes: CabalWeapon
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage1
+		Amount: 1
+		AimChance: 30
+		AllowDirectHit: false
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+	Warhead@opx: FireShrapnel
+		Weapon: SabercutTeslaSplash
+		Amount: 4
+		AimChance: 65
+		AllowDirectHit: false
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+
+Hightensionrage1:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage2
+
+Hightensionrage2:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage3
+
+Hightensionrage3:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage4
+		
+Hightensionrage4:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage5
+
+Hightensionrage5:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage6
+
+Hightensionrage6:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage7
+
+Hightensionrage7:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage8
+
+Hightensionrage8:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage9
+
+Hightensionrage9:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage10
+
+Hightensionrage10:
+	Inherits: Hightensionrage
+	Warhead@op: FireShrapnel
+		Weapon: Hightensionrage11
+
+Hightensionrage11:
+	Inherits: Hightensionrage
+	-Warhead@op: FireShrapnel
+	Warhead@5Eff: CreateEffect
+		Explosions: pulse_explosion
+		ImpactSounds: psl.aud
+	Warhead@5dam: SpreadDamage
+		Spread: 0c512
+		Damage: 175
+		DamageTypes: CabalWeapon, EnergyDeath
+

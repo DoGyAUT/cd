@@ -40,6 +40,7 @@ GMCV:
 
 GHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -90,9 +91,6 @@ GHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect

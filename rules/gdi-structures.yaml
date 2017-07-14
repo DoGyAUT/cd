@@ -132,6 +132,7 @@ GPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@4: ^ExploBuildingTibbig
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -404,7 +405,7 @@ GAARMORY:
 		OrderName: ArtilleryStrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.gdf
 		Icon: artystrike
-		ChargeTime: 300
+		ChargeTime: 240
 		QuantizedFacings: 8
 		Description: Artillery Strike
 		LongDesc: Call an artillery strike to the designated position.
@@ -425,7 +426,7 @@ GAARMORY:
 		OrderName: OrcaBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.st
 		Icon: orcabomber
-		ChargeTime: 300
+		ChargeTime: 240
 		QuantizedFacings: 8
 		Description: Orca Bombing run
 		LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
@@ -447,7 +448,7 @@ GAARMORY:
 		OrderName: OXBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.zc
 		Icon: orcaoxbomber
-		ChargeTime: 210
+		ChargeTime: 150
 		QuantizedFacings: 8
 		Description: OX-Sonic Bombing run
 		LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
@@ -549,7 +550,7 @@ GAHPAD:
 
 GADEPT:
 	Inherits: ^Building
-	Inherits@2: ^1x1hitshape
+	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:

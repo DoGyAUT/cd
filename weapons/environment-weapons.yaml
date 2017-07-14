@@ -68,15 +68,17 @@ Tiberium:
 		Falloff: 100, 0
 		Spread: 7c73
 		DamageTypes: Repair
-	Warhead@Condition: GrantExternalConditionWarhead
+	Warhead@Condition: GrantExternalCondition
 		Condition: FeatureBuffRepair
 		Spread: 7c73
 		Duration: 1
 
 ^GlobalRepair:
 	Warhead@Damage: SpreadDamage
+		Falloff: 100, 0
 		Spread: 1000000c0
-	Warhead@Condition: GrantExternalConditionWarhead
+	Warhead@Condition: GrantExternalCondition
+		Condition: FeatureBuffRepair
 		Spread: 1000000c0
 
 RepairInfantry:
@@ -86,7 +88,7 @@ RepairInfantry:
 		ValidTargets: Infantry
 		Spread: 4c248
 		Damage: -5
-	Warhead@Condition: GrantExternalConditionWarhead
+	Warhead@Condition: GrantExternalCondition
 		ValidTargets: Infantry
 		Spread: 4c248
 		Duration: 10
@@ -96,7 +98,7 @@ RepairCyborg:
 	Warhead@Damage: SpreadDamage
 		ValidTargets: Cyborg
 		Damage: -4
-	Warhead@Condition: GrantExternalConditionWarhead
+	Warhead@Condition: GrantExternalCondition
 		ValidTargets: Cyborg
 
 RepairVehicle:
@@ -104,7 +106,7 @@ RepairVehicle:
 	Warhead@Damage: SpreadDamage
 		ValidTargets: Vehicle
 		Damage: -4
-	Warhead@Condition: GrantExternalConditionWarhead
+	Warhead@Condition: GrantExternalCondition
 		ValidTargets: Vehicle
 
 RepairInfantryGlobal:

@@ -37,6 +37,10 @@ DevilsTongueGunTiberium:
 		Spread: 1c62
 		Damage: 75
 		Falloff: 100, 80
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
 
 PyradonGun:
 	Inherits: FireballLauncher
@@ -563,7 +567,7 @@ AvatarLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
+		Spread: 0c001
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
@@ -584,8 +588,6 @@ AvatarLaserE:
 		SecondaryBeamWidth: 0c28
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 0000FF
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
 
 EMPulseCannon:
 	ReloadDelay: 100
@@ -1974,6 +1976,10 @@ HailstormMissile:
 		Versus:
 			Building: 175
 		ValidTargets: Ground
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
 
 HailstormMissileAA:
 	Inherits: HailstormMissile
@@ -2310,6 +2316,39 @@ termitegunshrapnelblue:
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: BFire3small
+		Owner: Creeps
+	Warhead@2Eff: CreateEffect
+		Explosions: infexpl
+		ExplosionPalette: beamzap
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: small_flash
+		ExplosionPalette: light2
+
+termitegunshrapnelblue1:
+	Inherits: ^ShellAP
+	Inherits@wh: ^HEAPWH
+	Range: 2c124
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: blueflametrailer
+		TrailImage: blueflametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 25
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: BFire1small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl

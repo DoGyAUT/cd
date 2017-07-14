@@ -41,6 +41,7 @@ NMCV:
 
 NIHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -113,9 +114,6 @@ NIHARV:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
 	WithMuzzleOverlay:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -123,6 +121,7 @@ NIHARV:
 
 NTHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -179,9 +178,6 @@ NTHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -189,6 +185,7 @@ NTHARV:
 
 NPHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -242,9 +239,6 @@ NPHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -264,11 +258,11 @@ SAPC:
 	Buildable:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 202
-		Prerequisites: ~naweap, ~!t1, ~industry
+		Prerequisites: ~naradar, ~!t1, ~industry
 		Description: Industry Nod´s subterranean transport unit.\n\nGood vs: Nothing\n\nSpecial:\n- Subterranean movement\n- 8 slots for infantry\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: SAPC
-		Volume: 5
+		Volume: 8
 	Mobile:
 		TurnSpeed: 5
 		Speed: 113
@@ -324,7 +318,7 @@ SAPC1:
 		Types: Infantry
 		MaxWeight: 8
 		PipCount: 8
-		InitialUnits: NASOL,NASOL,NASOL,NASOL,E3,E3,E3,E3
+		InitialUnits: NASOL,NASOL,NASOL,E3,E3,E3,E3,E3
 		EjectOnDeath: False
 		LoadingCondition: loading
 
@@ -340,8 +334,8 @@ BGGY:
 	Buildable:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 203
-		Prerequisites: ~naweap, ~technology
-		Description: Technology Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
+		Prerequisites: ~naweap
+		Description: Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: Buggy
 		Volume: 2
@@ -475,9 +469,6 @@ BIKE:
 		HP: 350
 	RevealsShroud:
 		Range: 9c921
-	DetectCloaked:
-		Range: 8c497
-	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: BikeMissile
 		LocalOffset: 0,-232,622, 0,233,622
@@ -499,7 +490,7 @@ BIKE:
 CHEETAH:
 	Inherits: ^VoxelVehicle
 	Valued:
-		Cost: 1150
+		Cost: 1200
 	Tooltip:
 		Name: Phantom
 	Selectable:
@@ -507,7 +498,7 @@ CHEETAH:
 	Buildable:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 205
-		Prerequisites: ~naweap, naradr, ~technology
+		Prerequisites: ~naweap, ~technology
 		Description: A standard frontline Tank for Technology Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Cheetah
