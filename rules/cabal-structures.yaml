@@ -115,8 +115,6 @@ KPR:
 #		PauseOnCondition: power-outage
 	Power:
 		Amount: 200
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	ExternalCondition@upgrade.photonreactors:
 		Condition: upgrade.photonreactors
@@ -354,8 +352,6 @@ KARADR:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 		PauseOnCondition: power-outage
-	Targetable:
-		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
 		Amount: -75
 	ProvidesPrerequisite@buildingname:

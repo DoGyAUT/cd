@@ -161,8 +161,6 @@ DREADFIRE:
 		HP: 1850
 	AttackFrontal:
 	AutoTarget:
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, Flameproof
 	BodyOrientation:
 		QuantizedFacings: 8
 	Armament@primary:
@@ -184,22 +182,9 @@ DREADFIRE:
 		VoiceSet: Dreadfire
 		Volume: 2
 	-ThrowsShrapnel@human:
-	-SelfHealing@firedamage:
-	-ExternalCondition@firedamage:
-	-SelfHealing@firedamage1:
-	-ExternalCondition@firedamage1:
-	-SelfHealing@firedamage2:
-	-ExternalCondition@firedamage2:
-	-SelfHealing@firedamage3:
-	-ExternalCondition@firedamage3:
-	-SelfHealing@firedamageblue:
-	-ExternalCondition@firedamageblue:
-	-SelfHealing@firedamageblue1:
-	-ExternalCondition@firedamageblue1:
-	-SelfHealing@firedamageblue2:
-	-ExternalCondition@firedamageblue2:
-	-SelfHealing@firedamageblue3:
-	-ExternalCondition@firedamageblue3:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		Chance: 100
 	HitShape:
 
 REAPER:
@@ -323,9 +308,10 @@ GOLEM:
 		VoiceSet: CyborgH
 		Volume: 2
 	-ThrowsShrapnel@human:
-	ProximityExternalCondition@repair_heal:
-		Condition: repair_heal
-		Range: 7c73
+	ExplodeWeapon@RepairCyborg:
+		Weapon: RepairCyborg
+	ExplodeWeapon@RepairVehicle:
+		Weapon: RepairVehicle
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
@@ -401,6 +387,7 @@ TARANTULA:
 SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@CabalUpgrades: ^CabalUpgrades
 	Valued:
 		Cost: 3000
@@ -475,31 +462,6 @@ SILVER:
 	-LeavesTrails@water:
 	-GrantConditionOnTerrain@Veins:
 	-WithIdleOverlay@Veins:
-	-DamagedByTerrain@TibGas:
-	-ExternalCondition@gasdamage:
-	-SelfHealing@firedamage:
-	-ExternalCondition@firedamage:
-	-SelfHealing@firedamage1:
-	-ExternalCondition@firedamage1:
-	-SelfHealing@firedamage2:
-	-ExternalCondition@firedamage2:
-	-SelfHealing@firedamage3:
-	-ExternalCondition@firedamage3:
-	-SelfHealing@firedamageblue:
-	-ExternalCondition@firedamageblue:
-	-SelfHealing@firedamageblue1:
-	-ExternalCondition@firedamageblue1:
-	-SelfHealing@firedamageblue2:
-	-ExternalCondition@firedamageblue2:
-	-SelfHealing@firedamageblue3:
-	-ExternalCondition@firedamageblue3:
-	-Targetable:
-	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne
 	HiddenUnderFog:
 		Type: GroundPosition
 	HitShape:

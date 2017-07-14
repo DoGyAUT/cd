@@ -17,7 +17,7 @@ Packages:
 	./mods/common: common
 	./mods/as: as
 	$ts: ts
-    
+
 # Tiberian Sun
 	~scores.mix
 	~sidenc01.mix
@@ -92,7 +92,7 @@ Packages:
 	cd|bits/terrain
 	cd|fonts
 	cd|uibits
-    
+
 MapFolders:
 	cd|maps: System
 	~^maps/cd/git-fc6de91ba: User
@@ -150,6 +150,11 @@ Rules:
 	cd|rules/fauna.yaml
 	cd|rules/trees.yaml
 	cd|rules/bridges.yaml
+	cd|rules/feature/armortype.yaml
+	cd|rules/feature/targettype.yaml
+	cd|rules/feature/damagemodifier.yaml
+	cd|rules/feature/deatheffect.yaml
+	cd|rules/feature/buff.yaml
 
 Weapons:
 	cd|weapons/defaultweaponclass.yaml
@@ -160,6 +165,7 @@ Weapons:
 	cd|weapons/scrin-weapons.yaml
 	cd|weapons/cabal-weapons.yaml
 	cd|weapons/shared-weapons.yaml
+	cd|weapons/environment-weapons.yaml
 
 Sequences:
 	cd|sequences/aircraft.yaml
@@ -240,7 +246,7 @@ ChromeLayout:
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/editor.yaml
-	
+
 Voices:
 	cd|audio/voices.yaml
 
