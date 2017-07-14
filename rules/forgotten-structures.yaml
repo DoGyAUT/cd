@@ -80,6 +80,7 @@ FAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 401
@@ -111,14 +112,13 @@ FAPOWR:
 	WithIdleOverlay@SMOKE2:
 		Sequence: idle-smoke2
 		Palette: player50alpha
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	HitShape:
 
 FPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^5x3hitshapewithyoffset
+	Inherits@4: ^ExploBuildingTibbig
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 402
@@ -341,8 +341,6 @@ FARADR:
 	WithIdleOverlay@LIGHT:
 		Sequence: idle-light
 		PauseOnCondition: power-outage
-	Targetable:
-		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
 		Amount: -75
 	ProvidesPrerequisite@buildingname:

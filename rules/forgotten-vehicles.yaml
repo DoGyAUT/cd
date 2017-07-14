@@ -45,6 +45,7 @@ FMCV:
 
 FHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -97,9 +98,6 @@ FHARV:
 	WithVoxelUnloadBody:
 		UnloadSequence: unload2
 		IdleSequence: idle2
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 	Armament@primary:
 		Offset: 0,0,0
@@ -154,9 +152,8 @@ ATRUCK:
 		Delay: 3
 		HealIfBelow: 100
 		DamageCooldown: 200
-	ProximityExternalCondition:
-		Condition: repair_healboost
-		Range: 7c73
+	ExplodeWeapon@RepairInfantry:
+		Weapon: RepairInfantry
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73

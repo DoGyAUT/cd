@@ -1,0 +1,20 @@
+^FeatureDeathEffectFire:
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
+
+^FeatureDeathEffectTiberium:
+	SpawnActorOnDeath@1:
+		Actor: visc_lrg
+		Probability: 10
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TriggerVisceroid
+		RequiresLobbyCreeps: True
+	SpawnActorOnDeath@2:
+		Actor: visc_sml
+		Probability: 10
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TriggerSmallVisceroid
+		RequiresLobbyCreeps: True

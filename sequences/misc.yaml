@@ -82,6 +82,8 @@ beacon:
 		Offset: 0,-42
 	crapjet: crapjeticon
 		Offset: 0,-42
+	kdroneicon: kdroneicon
+		Offset: 0,-42
 	clock: gclock2
 		Length: *
 		Offset: 0,-42
@@ -195,6 +197,15 @@ resources:
 		ShadowStart: -1
 		Tick: 180
 
+litning:
+	bright:
+		Length: 4
+		Offset: 0,0,3
+	dim:
+		Offset: 0,0,3
+		Start: 4
+		Length: 4
+
 explosion:
 	Defaults:
 		Length: *
@@ -206,6 +217,10 @@ explosion:
 	ionring: ring1
 		BlendMode: Additive
 		ZRamp: 1
+		Tick: 100
+	ring: ring
+		BlendMode: Additive
+		Length: *
 		Tick: 100
 	ionbeam: ionbeam
 		Offset: 0,-60
@@ -251,6 +266,7 @@ explosion:
 	water_piffs: w_piffs
 	piff: piff
 	epiff: epiff
+	exppiff: exppiff
 	tpiff: tpiff
 	gatpiff: gatexp1
 	piffs: piffpiff
@@ -335,6 +351,7 @@ explosion:
 		BlendMode: Additive
 	shockwave: shockwave
 		Offset: 0, -12
+	plasmaexplo: plasmaexplo
 	plasmawave1: plasmawave1
 	plasmaexpl1: plasmaexpl1
 	plasmaexpl2: plasmaexpl2
@@ -350,6 +367,7 @@ explosion:
 	tiberiumbomb: tiberiumbomb
 		Tick: 80
 	scexplo: scexplo
+	cabexplo: cabexplo
 	plasmaexp01: plasmaexp01
 	plasmaexp02: plasmaexp02
 	protonexpl_lrg2: plasbomb_small
@@ -410,13 +428,13 @@ explosion:
 		BlendMode: Additive
 	phosexp2: exp34fr
 		BlendMode: Additive
-	phosexp3: exp33fr
+	phosexp3: exp43fr
 		BlendMode: Additive
-	phosexp4: exp34fr
+	phosexp4: exp44fr
 		BlendMode: Additive
-	phosexp5: exp33fr
+	phosexp5: exp45fr
 		BlendMode: Additive
-	phosexp6: exp34fr
+	phosexp6: exp46fr
 		BlendMode: Additive
 	small_emp: emp_fx01
 		BlendMode: Additive
@@ -559,13 +577,118 @@ flameall:
 		Facings: -8
 		Tick: 160
 
-largesmoke:
-	idle: lgrysmk1
+ring1:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+plasmaexplo7: 
+	idle: plasmaexpl1
+		Length: *
+		ZOffset: 1023
+
+scexplo7:
+	idle: scexplo 
+		Length: *
+		ZOffset: 1023
+
+cabexplo:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+cabspark:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+dot:
+	idle:
 		Length: *
 		ZOffset: 1023
 
 smallsmoke:
 	idle: sgrysmk1
+		Length: *
+		ZOffset: 1023
+
+twlt026:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp33fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp34fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp43fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp44fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp45fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+exp46fr:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+artexplo01:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+artexplo02:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+artexplo03:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+artexplo04:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+blueexpl01:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+blueexpl02:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+blueexpl03:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+blueexpl04:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+blueexpl05:
+	idle:
 		Length: *
 		ZOffset: 1023
 
@@ -799,6 +922,7 @@ icon:
 	ioncannon: ioncicon
 	hunterseeker: detnicon
 	emp: pulsicon
+	kdroneicon: kdroneicon
 	crapjet: crapjeticon
 	orcabomber: orca_bicon
 	orcaoxbomber: orca_oxicon
@@ -822,6 +946,7 @@ icon:
 	vertigo: vertigoicon
 	fanatic: fanaticicon
 	nodscanicon: npingicon
+	batr: batricon
 
 clustermissile:
 	up: nukeup
