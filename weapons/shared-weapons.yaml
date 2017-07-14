@@ -239,7 +239,7 @@ SmallTiberiumExplosion:
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: tibbomb
-		ExplosionPalette: effect50alpha
+		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
@@ -261,7 +261,7 @@ LargeTiberiumExplosion:
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: tibbomb
-		ExplosionPalette: effect50alpha
+		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
@@ -293,21 +293,29 @@ SmallDebris:
 	Projectile: BulletAS
 		Speed: 0c71, 0c177
 		LaunchAngle: 45, 135
+		Inaccuracy: 853
 		Image: dbrissm
 		TrailImage: small_smoke_trail
-		TrailPalette: apolra50alpha
+		TrailPalette: apolra25alpha
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
 
+SmallDebrisc:
+	Inherits: SmallDebris
+	Projectile: BulletAS
+		TrailImage: plasmatrail
+		TrailPalette: effect50alpha
+
 SmallDebrisFast:
 	ReloadDelay: 60
-	Range: 5c673
+	Range: 3c673
 	Report:
 	Projectile: BulletAS
 		Speed: 0c150, 0c270
 		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
+		Inaccuracy: 853
 		Image: dbrissm
-		TrailImage: small_smoke_trail
+		TrailImage: twlt026
 		TrailPalette: apolra25alpha
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
@@ -315,19 +323,92 @@ SmallDebrisFast:
 LargeDebris:
 	Inherits: SmallDebrisFast
 	Projectile: BulletAS
-		Speed: 0c71, 0c177
-		LaunchAngle: 45, 135
-		Image: dbrislg
-		TrailImage: durasmoke
-		TrailPalette: apolra50alpha
-
-LargeDebrisFast:
-	Inherits: SmallDebrisFast
-	Projectile: BulletAS
-		Speed: 0c120, 0c250
+		Speed: 0c170
 		Image: dbrislg
 		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
+
+LargeDebrisc:
+	Inherits: LargeDebris
+	Projectile: BulletAS
+		TrailImage: blueflametrailer
+		TrailPalette: effect50alpha
+
+LargeDebrisFast:
+	Inherits: SmallDebrisFast
+	Range: 2c512
+	Projectile: BulletAS
+		Speed: 0c170
+		Image: dbrislg
+		TrailImage: exp33fr
+		TrailPalette: apolra25alpha
+	Warhead@1Eff: CreateEffect
+		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+		ExplosionPalette: apolra75alpha
+		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@3Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+
+LargeDebrisFast1:
+	Inherits: LargeDebrisFast
+		TrailImage: exp34fr
+
+LargeDebrisFast2:
+	Inherits: LargeDebrisFast
+		TrailImage: exp43fr
+
+LargeDebrisFast3:
+	Inherits: LargeDebrisFast
+		TrailImage: exp44fr
+
+LargeDebrisFast4:
+	Inherits: LargeDebrisFast
+		TrailImage: exp45fr
+
+LargeDebrisFast5:
+	Inherits: LargeDebrisFast
+		TrailImage: exp46fr
+
+LargeDebrisFastcabal:
+	Inherits: SmallDebrisFast
+	Range: 0c750
+	Projectile: BulletAS
+		Speed: 0c250
+		Image: dbrislg
+		TrailImage: blueexpl01
+		TrailPalette: effect50alpha
+	Warhead@1Eff: CreateEffect
+		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
+		ExplosionPalette: beamzap
+		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@3Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+
+LargeDebrisFastcabal1:
+	Inherits: LargeDebrisFastcabal
+		TrailImage: blueexpl01
+
+LargeDebrisFastcabal2:
+	Inherits: LargeDebrisFastcabal
+		TrailImage: blueexpl02
+
+LargeDebrisFastcabal3:
+	Inherits: LargeDebrisFastcabal
+		TrailImage: blueexpl03
+
+LargeDebrisFastcabal4:
+	Inherits: LargeDebrisFastcabal
+		TrailImage: blueexpl04
+
+LargeDebrisFastcabal5:
+	Inherits: LargeDebrisFastcabal
+		TrailImage: blueexpl04
 
 Buildingexplosionsmall:
 	Inherits: ^MissileAPHE
@@ -361,21 +442,26 @@ Buildingexplosionsmall:
 	Warhead@3Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light2
+	Warhead@6Eff: CreateEffect
+		Explosions: ionring
+		ExplosionPalette: apolyell
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnel
-		Amount: 3
+		Weapon: TermiteGunShrapnel1
+		Amount: 6
 		AimChance: 0
 
 Buildingexplosionsmallcabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect
+		ExplosionPalette: effect25alpha
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
+	Warhead@6Eff: CreateEffect
+		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnelBlue
+		Weapon: termitegunshrapnelblue1
 
 BuildingexplosionPowerPlant:
 	Inherits: Buildingexplosionsmall
@@ -390,13 +476,14 @@ BuildingexplosionPowerPlant:
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
-		Amount: 6
+		Weapon: termitegunshrapnel1
+		Amount: 12
 
 BuildingexplosionPowerPlantCabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect
+		ExplosionPalette: effect25alpha
 	Warhead@2Eff: CreateEffect
 		Explosions: pulsefx1
 		ExplosionPalette: effect
@@ -404,9 +491,11 @@ BuildingexplosionPowerPlantCabal:
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
+	Warhead@6Eff: CreateEffect
+		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnelBlue
-		Amount: 6
+		Weapon: termitegunshrapnelblue1
+		Amount: 12
 
 Buildingexplosionmedium:
 	Inherits: Buildingexplosionsmall
@@ -419,9 +508,14 @@ Buildingexplosionmedium:
 
 Buildingexplosionmediumcabal:
 	Inherits: Buildingexplosionmedium
+	Warhead@1Eff: CreateEffect
+		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
+		ExplosionPalette: effect25alpha
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
+	Warhead@6Eff: CreateEffect
+		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
 
