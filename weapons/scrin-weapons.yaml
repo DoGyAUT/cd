@@ -31,11 +31,11 @@ LocustNail:
 
 LocustNailAA:
 	Inherits: LocustNail
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 100
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 ChimeraZap:
 	Inherits@wh: ^SonicWH
@@ -251,7 +251,7 @@ ShardLauncherGun:
 	Burst: 4
 	BurstDelay: 10
 	Report: rail1.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 		Image: CRYSTAL4
@@ -267,7 +267,7 @@ ShardLauncherGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 100
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -347,7 +347,7 @@ CorruptorBlast:
 		Damage: 120
 		Versus:
 			Vehicle: 50
-		DamageTypes: BulletDeath, TriggerCorruptorVisceroid
+		DamageTypes: Prone200Percent, TriggerProne, BulletDeath, TriggerCorruptorVisceroid
 		ValidStances: Neutral, Enemy
 	Warhead@2Dam: SpreadDamage
 		Spread: 0c724
@@ -400,7 +400,7 @@ StormRaiderCannonAA:
 	Inherits@wh: ^PlasmaWH
 	ReloadDelay: 150
 	Range: 11c321
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Report: scrin5b.aud
 	Burst: 10
 	BurstDelay: 8
@@ -411,7 +411,7 @@ StormRaiderCannonAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 50
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny

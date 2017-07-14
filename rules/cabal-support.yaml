@@ -1,6 +1,6 @@
 KAWALL:
 	Inherits: ^Wall
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 300
@@ -25,7 +25,7 @@ KAWALL:
 
 KAGATE_A:
 	Inherits: ^Gate_A
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 301
@@ -36,7 +36,7 @@ KAGATE_A:
 
 KAGATE_B:
 	Inherits: ^Gate_B
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 302
@@ -48,10 +48,8 @@ KAGATE_B:
 KASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
-	Inherits@3: ^ExploBuildingdefensecabal
-	Inherits@4: ^ExploBuildingTibsmall
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
@@ -97,9 +95,8 @@ KASILO:
 KABLASR:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
-	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -108,7 +105,7 @@ KABLASR:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
 		Prerequisites: anypower, cybbar, ~structures.cabal
-		Description: Cabals low tech defense structure.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+		Description: Cabals low tech defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -130,7 +127,7 @@ KABLASR:
 		InitialFacing: 222
 	AttackTurreted:
 	Armament:
-		Weapon: SabercutTesla
+		Weapon: SabercutLaser
 		LocalOffset: 1025,0,2404
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
@@ -149,18 +146,17 @@ KABLASR:
 KABCAN:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
-	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
-		Cost: 1500
+		Cost: 1400
 	Tooltip:
 		Name: Plasma Blaster
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 304
 		Prerequisites: anypower, karadr, ~structures.cabal
-		Description: Cabals tech 2 defense structure.\n\nGood vs: Vehicles\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
+		Description: Cabals tech 2 defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -203,9 +199,8 @@ KABCAN:
 KDARK:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
-	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -256,10 +251,9 @@ KDARK:
 KOBEL:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
-	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -287,7 +281,7 @@ KOBEL:
 		Weapon: CabalObeliskLaser
 		LocalOffset: 2263,0,1131
 	AttackCharges:
-		ChargeLevel: 1
+		ChargeLevel: 40
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging

@@ -73,7 +73,6 @@ SAPOWR:
 	Inherits@2: ^3x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Scrin
 		BuildPaletteOrder: 501
@@ -99,6 +98,8 @@ SAPOWR:
 		Range: 5c673
 	Power:
 		Amount: 200
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	HitShape:
 

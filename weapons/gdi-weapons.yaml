@@ -113,7 +113,7 @@ DiscThrowerGunEMP:
 		Range: 0c724
 		Duration: 50
 		Condition: empdisable
-		ValidTargets: Ground
+		ValidTargets: Vehicle, Cyborg, Building
 	Warhead@5Eff: CreateEffect
 		Explosions: small_emp
 		ExplosionPalette: effect
@@ -294,7 +294,7 @@ AtlasGun:
 			Vehicle: 60
 			Aircraft: 100
 			Building: 200
-		DamageTypes: EnergyDeath
+		DamageTypes: Prone350Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: swave
 		ExplosionPalette: swave
@@ -345,20 +345,25 @@ CyclopsCannon:
 		ExplosionPalette: swave
 
 IonCannon:
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c424
 		Damage: 100
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Aircraft
-		DamageTypes: EnergyDeath
+		ValidTargets: Ground, Air, MidAir, HighAir
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
 	Warhead@2Dam_area: SpreadDamage
 		Spread: 1c424
 		Damage: 250
 		Falloff: 100, 50, 25, 0
 		Delay: 3
-		ValidTargets: Ground, Aircraft
-		DamageTypes: TakeCoverEffect, EnergyDeath
+		ValidTargets: Ground, Air, MidAir, HighAir
+		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
+	Warhead@3Smu_area: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
+		Size: 2
+		Delay: 3
 	Warhead@4Effect: CreateEffect
 		Explosions: ionbeam
 		ImpactSound: ion1.aud
@@ -475,7 +480,7 @@ OrcaBombingRun:
 		Speed: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 400
+		Damage: 500
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -485,19 +490,19 @@ ArtilleryStrikeGun:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 230
 	Burst: 10
-	BurstDelay: 2
-	Range: 5c600
+	BurstDelay: 3
+	Range: 8c497
 	Report: incoming1.aud, incoming2.aud, incoming3.aud, incoming4.aud, incoming5.aud, incoming6.aud, incoming7.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 2c0
+		Inaccuracy: 2c848
 		Image: shell02
 		ContrailLength: 40
 		ContrailWidth: 0c42
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 250
+		Damage: 500
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -513,8 +518,8 @@ SonicBomb:
 	Inherits: ^SonicWH
 	ReloadDelay: 200
 	Range: 8c497
-	Burst: 6
-	BurstDelay: 6
+	Burst: 5
+	BurstDelay: 10
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	Projectile: BulletAS
 		Speed: 1c424
@@ -528,7 +533,7 @@ SonicBomb:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 1000
+		Damage: 1500
 	Warhead@1Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -712,6 +717,7 @@ ColossusGun:
 		Range: 0c0, 0c45
 		Falloff: 50, 50
 		Damage: 15
+		InvalidTargets: Disruptor
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
@@ -825,12 +831,12 @@ APCMGvisual:
 	Burst: 25
 	BurstDelay: 2
 	Report: cygun1.aud
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	Projectile: BulletAS
 		Speed: 1c424
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 		Spread: 0c181
 		Damage: 0
 	Warhead@2Eff: CreateEffect
@@ -844,7 +850,7 @@ APCMGattack:
 		Speed: 8c497
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground ,Air, MidAir, HighAir
 		Spread: 0c181
 		Damage: 10
 	Warhead@2Eff: CreateEffect
@@ -981,11 +987,11 @@ ZoneRaiderBazooka:
 	Burst: 2
 	BurstDelay: 0
 	Report: javelin.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 50
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
@@ -999,7 +1005,7 @@ VultureMissile:
 	Burst: 2
 	Range: 12c745
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
@@ -1007,7 +1013,7 @@ VultureMissile:
 		Damage: 80
 		Versus:
 			Buildings: 75
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 PoseidonTusk:
 	Inherits: ^MissileAPHE
@@ -1017,7 +1023,7 @@ PoseidonTusk:
 	Burst: 2
 	BurstDelay: 10
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c362
 		MinimumLaunchSpeed: 0c181
@@ -1026,7 +1032,7 @@ PoseidonTusk:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground, Air, MidAir
 
 MammothTusk:
 	Inherits: ^MissileAPHE
@@ -1046,14 +1052,14 @@ MammothTusk:
 		Spread: 0c362
 		Damage: 150
 		ValidTargets: Ground
-
+	
 MammothTuskAA:
 	Inherits: MammothTusk
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 MammothWalkerTusk:
 	Inherits: ^MissileAPHE
@@ -1061,7 +1067,7 @@ MammothWalkerTusk:
 	ReloadDelay: 180
 	Range: 16c994
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir
 	Burst: 16
 	BurstDelay: 4
 	Projectile: Missile
@@ -1075,7 +1081,7 @@ MammothWalkerTusk:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 100
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground, Air, MidAir
 
 OrcaF1Missiles:
 	Inherits: ^MissileAPHE
@@ -1162,7 +1168,7 @@ HawkMissileAA:
 	Range: 21c218
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c724
 		MinimumLaunchSpeed: 0c724
@@ -1176,7 +1182,7 @@ HawkMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 300
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu, small_tumu
 		ExplosionPalette: apolra50alpha
@@ -1220,7 +1226,7 @@ HornetMissileAA:
 	Range: 21c218
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c724
 		MinimumLaunchSpeed: 0c724
@@ -1234,7 +1240,7 @@ HornetMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 300
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu, small_tumu
 		ExplosionPalette: apolra50alpha
@@ -1248,11 +1254,11 @@ SAMMissile:
 	BurstDelay: 10
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
-		MaximumLaunchSpeed: 1c512
-		MinimumLaunchSpeed: 1c512
-		Speed : 1c512
+        MaximumLaunchSpeed: 1c512
+        MinimumLaunchSpeed: 1c512
+        Speed : 1c512
 		Arm: 2
 		Blockable: false
 		Shadow: true
@@ -1267,7 +1273,7 @@ SAMMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 HoverMRLSMissile:
 	Inherits: ^MissileAPHE
@@ -1300,7 +1306,7 @@ HoverMRLSMissileAA:
 	BurstDelay: 2
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c362
 		MinimumLaunchSpeed: 0c91
@@ -1310,7 +1316,7 @@ HoverMRLSMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c1
 		Damage: 60
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 JavelinGun:
 	Inherits: ^MissileAPHE
@@ -1328,14 +1334,14 @@ JavelinGun:
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
 		InvalidImpactTypes: Water, Air, AirHit
-
+		
 JavelinGunAA:
 	Inherits: JavelinGun
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 		
 JavelinGunGarrison:
 	Inherits: JavelinGun
@@ -1374,7 +1380,7 @@ HellfireMissile:
 GuardianTowerGun:
 	Inherits: 122mmAP
 	Range: 12c0
-
+	
 GuardianTowerMissile:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH

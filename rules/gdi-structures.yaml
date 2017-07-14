@@ -75,7 +75,6 @@ GAPOWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 101
@@ -108,6 +107,8 @@ GAPOWR:
 		Bounds: 90, 84, 0, -12
 	Power:
 		Amount: 100
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.gapowerup1
@@ -133,7 +134,6 @@ GPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
-	Inherits@4: ^ExploBuildingTibbig
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -332,6 +332,8 @@ GARADR:
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: power-outage
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
 		Amount: -75
 	ProvidesPrerequisite@buildingname:
@@ -406,7 +408,7 @@ GAARMORY:
 		OrderName: ArtilleryStrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.gdf
 		Icon: artystrike
-		ChargeTime: 240
+		ChargeTime: 300
 		QuantizedFacings: 8
 		Description: Artillery Strike
 		LongDesc: Call an artillery strike to the designated position.
@@ -427,7 +429,7 @@ GAARMORY:
 		OrderName: OrcaBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.st
 		Icon: orcabomber
-		ChargeTime: 240
+		ChargeTime: 300
 		QuantizedFacings: 8
 		Description: Orca Bombing run
 		LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
@@ -449,7 +451,7 @@ GAARMORY:
 		OrderName: OXBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.zc
 		Icon: orcaoxbomber
-		ChargeTime: 150
+		ChargeTime: 210
 		QuantizedFacings: 8
 		Description: OX-Sonic Bombing run
 		LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
@@ -551,7 +553,7 @@ GAHPAD:
 
 GADEPT:
 	Inherits: ^Building
-	Inherits@2: ^3x3hitshape
+	Inherits@2: ^1x1hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:

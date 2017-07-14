@@ -317,7 +317,6 @@ OVERSEER:
 CYBFLY:
 	Inherits@1: ^SoldierJumpjet
 	Inherits@2: ^HuskUpgrades
-	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -346,6 +345,8 @@ CYBFLY:
 		RequiresCondition: cruising
 	Health:
 		HP: 400
+	Armor@base:
+		Type: Aircraft
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
@@ -353,7 +354,6 @@ CYBFLY:
 	RevealsShroud@upgrade.visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Range: 16c146
-		Type: GroundPosition
 	Armament@primary:
 		Weapon: SkirmisherLaserFire
 		MuzzleSequence: muzzle
@@ -364,13 +364,14 @@ CYBFLY:
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
 		LocalOffset: 566,91,849, 566,-91,849
+	-DamagedByTerrain@Tiberium:
 	-SpawnActorOnDeath@1:
 	-SpawnActorOnDeath@2:
 	-SpawnActorOnDeath@Corruptor:
 	-SpawnActorOnDeath@Infected:
 	AmmoPool:
 		Name: primary
-		Ammo: 16
+		Ammo: 20
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
@@ -539,6 +540,7 @@ KAMIKAZE:
 		DeathTypes:
 			BulletDeath: 1
 			SmallExplosionDeath: 2
+			HeadshotDeath: 3
 			FireDeath: 5
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
