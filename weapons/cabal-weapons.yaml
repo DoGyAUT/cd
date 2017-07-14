@@ -909,7 +909,6 @@ ShockwaveTesla:
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 3
 	BurstDelay: 4
-	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
@@ -948,6 +947,17 @@ ShockwaveTeslaSplash:
 		Explosions: small_flash
 	-Warhead@op: FireShrapnel
 	-Report:
+
+PowerplantOverload:
+	ReloadDelay: 1
+	Range: 6c11
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
+	Projectile: InstantExplode
+	Warhead@shrapnel: FireShrapnel
+		Weapon: ShockwaveTesla
+		Amount: 1
+		AimChance: 0
+		AllowDirectHit: false
 
 DreadfireLauncher:
 	Inherits: FireballLauncher
