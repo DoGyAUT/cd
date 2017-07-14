@@ -1,5 +1,5 @@
 upgrade.hc:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Advanced Platings
 	Buildable:
@@ -15,7 +15,7 @@ upgrade.hc:
 		Type: plug.upgrade.hc
 
 upgrade.lc:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Alloyed Chassis
 	Buildable:
@@ -31,7 +31,7 @@ upgrade.lc:
 		Type: plug.upgrade.lc
 
 upgrade.visionuplink:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Vision Uplink
 	Buildable:
@@ -47,7 +47,7 @@ upgrade.visionuplink:
 		Type: plug.upgrade.visionuplink
 
 upgrade.photonreactors:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Photon Rreactors
 	Buildable:
@@ -63,7 +63,7 @@ upgrade.photonreactors:
 		Type: plug.upgrade.photonreactors
 
 upgrade.teleporter:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Teleporter
 	Buildable:
@@ -79,7 +79,7 @@ upgrade.teleporter:
 		Type: plug.upgrade.teleporter
 
 upgrade.nanoswarm:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Nanoswarm
 	Buildable:
@@ -93,9 +93,3 @@ upgrade.nanoswarm:
 		Image: KAGATE_A
 	Plug:
 		Type: plug.upgrade.nanoswarm
-
-^KAUPGRADE:
-	Inherits@hitshape: ^1x1hitshape
-	Inherits@BasicBuilding: ^BasicBuilding
-	KillsSelf:
-		RemoveInstead: True
