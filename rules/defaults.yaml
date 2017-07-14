@@ -549,7 +549,7 @@
 
 ^ExploBuildingdefensecabal:
 	ThrowsShrapnel@SmallDebris:
-		Weapons: SmallDebrisC
+		Weapons: SmallDebrisCabal
 		Pieces: 8, 15
 		Range: 3c512, 5c512
 	Explodes:
@@ -559,10 +559,10 @@
 ^ExploBuildingsmallcabal:
 	Inherits: ^ExploBuildingsmall
 	ThrowsShrapnel:
-		Weapons: LargeDebrisC
+		Weapons: LargeDebrisCabal
 		Range: 0c512, 1c512
 	ThrowsShrapnel@SmallDebris:
-		Weapons: SmallDebrisC
+		Weapons: SmallDebrisCabal
 	ThrowsShrapnel@LargeDebrisFast:
 		Weapons: LargeDebrisFastcabal
 		Range: 0c512, 1c512
@@ -612,9 +612,9 @@
 ^ExploBuildingmediumcabal:
 	Inherits: ^ExploBuildingsmallcabal
 	ThrowsShrapnel:
-		Weapons: LargeDebrisC
+		Weapons: LargeDebrisCabal
 	ThrowsShrapnel@SmallDebris:
-		Weapons: SmallDebrisC
+		Weapons: SmallDebrisCabal
 	ThrowsShrapnel@LargeDebrisFast:
 		Weapons: LargeDebrisFastcabal
 	ThrowsShrapnel@LargeDebrisFast1:
