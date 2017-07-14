@@ -1396,24 +1396,25 @@
 		Voice: Move
 		Weight: 2
 
-^CyborgBuildingUpgrades:
+^CabalBuildingUpgrades:
+	Inherits@CabalUpgrades: ^CabalUpgrades
 	ExternalCondition@upgrade.hc:
 		Condition: upgrade.hc
 	DamageMultiplier@hc:
 		RequiresCondition: upgrade.hc
 		Modifier: 75
 
-^CyborgUpgrades:
-	ExternalCondition@upgrade.lc:
-		Condition: upgrade.lc
-	SpeedMultiplier@lc:
-		RequiresCondition: upgrade.lc
-		Modifier: 160
+^CabalUpgrades:
 	ExternalCondition@upgrade.visionuplink:
 		Condition: upgrade.visionuplink
 	InaccuracyMultiplier@visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Modifier: 10
+	ExternalCondition@upgrade.combatreactors:
+		Condition: upgrade.combatreactors
+	ReloadDelayMultiplier@upgrade.combatreactors:
+		RequiresCondition: upgrade.combatreactors
+		Modifier: 85
 
 ^InitiateUpgrades:
 	WithDecoration@conf:
@@ -1506,7 +1507,7 @@
 		Modifier: 85
 
 ^HuskUpgrades:
-	Inherits@1: ^CyborgUpgrades
+	Inherits@1: ^CabalUpgrades
 	WithDecoration:
 		Image: bufficon
 		Sequence: buff
@@ -1523,6 +1524,11 @@
 		Modifier: 80
 	ExternalCondition@overseer:
 		Condition: overseerboost
+	ExternalCondition@upgrade.lc:
+		Condition: upgrade.lc
+	SpeedMultiplier@lc:
+		RequiresCondition: upgrade.lc
+		Modifier: 130
 
 ^GoonUpgrades:
 	WithDecoration@goon:
@@ -1617,6 +1623,7 @@
 		Condition: invulnerability
 
 ^VehicleCabal:
+	Inherits@CabalUpgrades: ^CabalUpgrades
 	Explodes:
 		Weapon: UnitExplodeSmallCabal
 		EmptyWeapon: UnitExplodeSmallCabal
@@ -2713,3 +2720,30 @@
 		RequiresCondition: firedamageblue3
 	ExternalCondition@firedamageblue3:
 		Condition: firedamageblue3
+
+^PowerplantEffects:
+	ExternalCondition@overload_active:
+		Condition: overload_active
+	PowerMultiplier@overload_active:
+		RequiresCondition: overload_active
+		Modifier: 500
+	TimedConditionBar@overload_active:
+		Condition: overload_active
+		Color: 0000FF
+	ExternalCondition@overload_disable:
+		Condition: overload_disable
+	PowerMultiplier@overload_disable:
+		RequiresCondition: overload_disable && !overload_active
+		Modifier: 0
+	TimedConditionBar@overload_disable:
+		Condition: overload_disable
+		Color: FFFFFF
+	ExplodeWeapon@overload_active1:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active
+	ExplodeWeapon@overload_active2:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active
+	ExplodeWeapon@overload_active3:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active

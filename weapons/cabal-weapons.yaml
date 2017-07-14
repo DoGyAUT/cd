@@ -909,7 +909,6 @@ ShockwaveTesla:
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 3
 	BurstDelay: 4
-	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
@@ -948,6 +947,17 @@ ShockwaveTeslaSplash:
 		Explosions: small_flash
 	-Warhead@op: FireShrapnel
 	-Report:
+
+PowerplantOverload:
+	ReloadDelay: 1
+	Range: 6c11
+	Report: lastur2.aud, lastur3.aud, lastur4.aud
+	Projectile: InstantExplode
+	Warhead@shrapnel: FireShrapnel
+		Weapon: ShockwaveTesla
+		Amount: 1
+		AimChance: 0
+		AllowDirectHit: false
 
 DreadfireLauncher:
 	Inherits: FireballLauncher
@@ -1121,7 +1131,6 @@ cleansingaura:
 	ValidTargets: Infantry, Mutant
 	Warhead@emp: GrantExternalCondition
 		Range: 4c0
-		Duration: 90
 		Condition: cleansingaura
 		Duration: 500
 		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
@@ -1255,3 +1264,19 @@ Hightensionrage11:
 		Spread: 0c512
 		Damage: 175
 		DamageTypes: CabalWeapon, EnergyDeath
+
+overload:
+	ValidTargets: Building
+	Warhead@overload_active: GrantExternalCondition
+		Range: 8c0
+		Condition: overload_active
+		Duration: 1500
+		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidStances: None, Enemy, Neutral, Ally
+	Warhead@overload_disable: GrantExternalCondition
+		Range: 8c0
+		Condition: overload_disable
+		Duration: 1875
+		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidStances: None, Enemy, Neutral, Ally
+
