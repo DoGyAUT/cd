@@ -89,12 +89,12 @@ UnitExplodeSmall:
 		Explosions: medium_flash
 		ExplosionPalette: light2
 		
-UnitExplodeSmallC:
+UnitExplodeSmallCabal:
 	Inherits@1: UnitExplodeSmall
 	Warhead@2Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
-		
+
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
@@ -291,7 +291,7 @@ LargeVeinExplosion:
 		Explosions: tibbomb
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew09.aud
-		
+
 TibDebris:
 	ReloadDelay: 60
 	Range: 4c673
@@ -354,7 +354,7 @@ SmallDebris:
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
 
-SmallDebrisc:
+SmallDebrisCabal:
 	Inherits: SmallDebris
 	Projectile: BulletAS
 		TrailImage: plasmatrail
