@@ -9,7 +9,7 @@ UnitExplode:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
 		ExplosionPalette: apolra50alpha
@@ -31,7 +31,7 @@ UnitExplodeEpic:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -57,7 +57,7 @@ PyradonExplosion:
 			Vehicle: 10
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: apolra50alpha
@@ -78,7 +78,7 @@ UnitExplodeSmall:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
@@ -88,12 +88,6 @@ UnitExplodeSmall:
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light2
-		
-UnitExplodeSmallCabal:
-	Inherits@1: UnitExplodeSmall
-	Warhead@2Eff: CreateEffect
-		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect25alpha
 
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
@@ -105,7 +99,7 @@ UnitExplodeSmaller:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
@@ -127,7 +121,7 @@ UnitExplodeHeli:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
@@ -149,7 +143,7 @@ UnitExplodePlane:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
@@ -170,7 +164,7 @@ UnitExplodeCrapJet:
 			Cyborg: 100
 			Vehicle: 100
 			Aircraft: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: crapexplo
 		ExplosionPalette: apolra2
@@ -191,7 +185,7 @@ UnitExplodeCyborg:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -239,13 +233,13 @@ SmallTiberiumExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: ExplosionDeath
+		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Tiberium
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: tibbomb
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
@@ -261,13 +255,13 @@ LargeTiberiumExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: ExplosionDeath
+		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Tiberium
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: tibbomb
-		ExplosionPalette: apolra50alpha
+		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
@@ -283,7 +277,7 @@ LargeVeinExplosion:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: ExplosionDeath
+		DamageTypes: Prone350Percent, TriggerProne, ExplosionDeath
 	Warhead@2Res: CreateResource
 		AddsResourceType: Veins
 		Size: 1,1
@@ -292,54 +286,6 @@ LargeVeinExplosion:
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew09.aud
 
-TibDebris:
-	ReloadDelay: 60
-	Range: 4c673
-	Report:
-	Projectile: BulletAS
-		Speed: 0c71, 0c177
-		LaunchAngle: 45, 135
-		Inaccuracy: 853
-		Image: dbrissm
-		Speed: 0c301
-		Image: bluetiberiumbullet
-		Palette: apolgren
-		TrailImage: tiberiumtrail 
-		TrailPalette: apolgren
-		Shadow: true
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c424
-		Damage: 10
-		Falloff: 100, 80
-	Warhead@2Eff: CreateEffect
-		Explosions: plasmaexpl1
-		ExplosionPalette: apolgren
-	Warhead@3Smu: LeaveSmudge
-		SmudgeType: MediumScorch
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-	Warhead@6Eff: CreateEffect
-		Explosions: medium_flash
-		ExplosionPalette: light2
-
-TibDebrisFull:
-	Inherits: TibDebris
-	Warhead@2Res: CreateResource
-		AddsResourceType: Tiberium
-		Size: 1,1
-
-TibDebrisexpsmall:
-	Inherits: TibDebris
-	Warhead@8Eff: CreateEffect
-		Explosions: scexplo
-		ExplosionPalette: apolgren
-
-TibDebrisexpbig:
-	Inherits: TibDebris
-	Warhead@8Eff: CreateEffect
-		Explosions: cabexplo
-		ExplosionPalette: apolgren
-
 SmallDebris:
 	ReloadDelay: 60
 	Range: 5c673
@@ -347,29 +293,21 @@ SmallDebris:
 	Projectile: BulletAS
 		Speed: 0c71, 0c177
 		LaunchAngle: 45, 135
-		Inaccuracy: 853
 		Image: dbrissm
 		TrailImage: small_smoke_trail
-		TrailPalette: apolra25alpha
+		TrailPalette: apolra50alpha
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
 
-SmallDebrisCabal:
-	Inherits: SmallDebris
-	Projectile: BulletAS
-		TrailImage: plasmatrail
-		TrailPalette: effect50alpha
-
 SmallDebrisFast:
 	ReloadDelay: 60
-	Range: 3c673
+	Range: 5c673
 	Report:
 	Projectile: BulletAS
 		Speed: 0c150, 0c270
 		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
-		Inaccuracy: 853
 		Image: dbrissm
-		TrailImage: twlt026
+		TrailImage: small_smoke_trail
 		TrailPalette: apolra25alpha
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
@@ -377,92 +315,19 @@ SmallDebrisFast:
 LargeDebris:
 	Inherits: SmallDebrisFast
 	Projectile: BulletAS
-		Speed: 0c170
+		Speed: 0c71, 0c177
+		LaunchAngle: 45, 135
 		Image: dbrislg
 		TrailImage: durasmoke
-		TrailPalette: apolra25alpha
-
-LargeDebrisCabal:
-	Inherits: LargeDebris
-	Projectile: BulletAS
-		TrailImage: blueflametrailer
-		TrailPalette: effect50alpha
+		TrailPalette: apolra50alpha
 
 LargeDebrisFast:
 	Inherits: SmallDebrisFast
-	Range: 2c512
 	Projectile: BulletAS
-		Speed: 0c170
+		Speed: 0c120, 0c250
 		Image: dbrislg
-		TrailImage: exp33fr
+		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
-	Warhead@1Eff: CreateEffect
-		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-		ExplosionPalette: apolra75alpha
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: MediumScorch
-	Warhead@3Eff: CreateEffect
-		Explosions: medium_flash
-		ExplosionPalette: light2
-
-LargeDebrisFast1:
-	Inherits: LargeDebrisFast
-		TrailImage: exp34fr
-
-LargeDebrisFast2:
-	Inherits: LargeDebrisFast
-		TrailImage: exp43fr
-
-LargeDebrisFast3:
-	Inherits: LargeDebrisFast
-		TrailImage: exp44fr
-
-LargeDebrisFast4:
-	Inherits: LargeDebrisFast
-		TrailImage: exp45fr
-
-LargeDebrisFast5:
-	Inherits: LargeDebrisFast
-		TrailImage: exp46fr
-
-LargeDebrisFastcabal:
-	Inherits: SmallDebrisFast
-	Range: 0c750
-	Projectile: BulletAS
-		Speed: 0c250
-		Image: dbrislg
-		TrailImage: blueexpl01
-		TrailPalette: effect50alpha
-	Warhead@1Eff: CreateEffect
-		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
-		ExplosionPalette: beamzap
-		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: MediumScorch
-	Warhead@3Eff: CreateEffect
-		Explosions: medium_flash
-		ExplosionPalette: light2
-
-LargeDebrisFastcabal1:
-	Inherits: LargeDebrisFastcabal
-		TrailImage: blueexpl01
-
-LargeDebrisFastcabal2:
-	Inherits: LargeDebrisFastcabal
-		TrailImage: blueexpl02
-
-LargeDebrisFastcabal3:
-	Inherits: LargeDebrisFastcabal
-		TrailImage: blueexpl03
-
-LargeDebrisFastcabal4:
-	Inherits: LargeDebrisFastcabal
-		TrailImage: blueexpl04
-
-LargeDebrisFastcabal5:
-	Inherits: LargeDebrisFastcabal
-		TrailImage: blueexpl04
 
 Buildingexplosionsmall:
 	Inherits: ^MissileAPHE
@@ -496,35 +361,21 @@ Buildingexplosionsmall:
 	Warhead@3Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light2
-	Warhead@6Eff: CreateEffect
-		Explosions: ionring
-		ExplosionPalette: apolyell
 	WarheadAS: FireShrapnel
-		Weapon: TermiteGunShrapnel1
-		Amount: 6
+		Weapon: TermiteGunShrapnel
+		Amount: 3
 		AimChance: 0
-
-Buildingexplosionsmallcabaldef:
-	Inherits: Buildingexplosionsmall
-	Warhead@1Eff: CreateEffect
-		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect25alpha
-	Warhead@6Eff: CreateEffect
-		Explosions: large_flash
-		ExplosionPalette: light2
 
 Buildingexplosionsmallcabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect25alpha
+		ExplosionPalette: effect
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
-	Warhead@6Eff: CreateEffect
-		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
-		Weapon: termitegunshrapnelblue1
+		Weapon: TermiteGunShrapnelBlue
 
 BuildingexplosionPowerPlant:
 	Inherits: Buildingexplosionsmall
@@ -539,14 +390,13 @@ BuildingexplosionPowerPlant:
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
-		Weapon: termitegunshrapnel1
-		Amount: 12
+		Amount: 6
 
 BuildingexplosionPowerPlantCabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect25alpha
+		ExplosionPalette: effect
 	Warhead@2Eff: CreateEffect
 		Explosions: pulsefx1
 		ExplosionPalette: effect
@@ -554,11 +404,9 @@ BuildingexplosionPowerPlantCabal:
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
-	Warhead@6Eff: CreateEffect
-		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
-		Weapon: termitegunshrapnelblue1
-		Amount: 12
+		Weapon: TermiteGunShrapnelBlue
+		Amount: 6
 
 Buildingexplosionmedium:
 	Inherits: Buildingexplosionsmall
@@ -571,14 +419,9 @@ Buildingexplosionmedium:
 
 Buildingexplosionmediumcabal:
 	Inherits: Buildingexplosionmedium
-	Warhead@1Eff: CreateEffect
-		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
-		ExplosionPalette: effect25alpha
 	Warhead@3Eff: CreateEffect
 		Explosions: cabalring
 		ExplosionPalette: effect
-	Warhead@6Eff: CreateEffect
-		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
 
@@ -669,14 +512,14 @@ Repair:
 	ReloadDelay: 80
 	Range: 2c558
 	Report: repair11.aud
-	ValidTargets: Damaged
+	ValidTargets: Repair
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50
-		ValidTargets: Damaged
+		ValidTargets: Repair
 	Warhead@1Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light2
@@ -685,14 +528,14 @@ MechanicRepair:
 	ReloadDelay: 80
 	Range: 2c558
 	Report: fixit1.aud
-	ValidTargets: Damaged
+	ValidTargets: Repair
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50
-		ValidTargets: Damaged
+		ValidTargets: Repair
 
 TiberiumHeal:
 	ReloadDelay: 30
@@ -784,7 +627,8 @@ UmagonSniper:
 		Damage: 150
 
 DogBite:
-	ValidTargets: Infantry
+	ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon
+	InvalidTargets: Vehicle, Buildings
 	ReloadDelay: 20
 	Range: 2c124
 	Report: dog_a1.aud, dog_m1.aud, dog_s1.aud
@@ -794,7 +638,7 @@ DogBite:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 100
-		DamageTypes: BulletDeath
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 		Versus:
 			Infantry: 100
 			Cyborg: 75
@@ -940,6 +784,7 @@ SlimeAttack:
 	Report: vicer1.aud
 	Projectile: BulletAS
 		Speed: 0c602
+		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 125
 
@@ -950,6 +795,7 @@ SmallSlimeAttack:
 	Report: vicer1.aud
 	Projectile: BulletAS
 		Speed: 0c602
+		DamageTypes: TriggerProne
 	Warhead@1Dam: SpreadDamage
 		Damage: 75
 
@@ -960,11 +806,13 @@ Tentacle:
 	Report: floatk1.aud
 	Projectile: BulletAS
 		Speed: 0c602
+	InvalidTargets: Wall, Bridge
 	Warhead@1Dam: SpreadDamage
 		Damage: 160
-		DamageTypes: TriggerSmallVisceroid
+		InvalidTargets: Wall, Bridge
+		DamageTypes: TriggerProne, TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
 		Range: 2c124
 		Duration: 50
 		Condition: empdisable
-		ValidTargets: Ground
+		ValidTargets: Vehicle, Cyborg, Building

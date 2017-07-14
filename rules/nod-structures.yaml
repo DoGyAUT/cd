@@ -77,7 +77,6 @@ NAPOWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -106,6 +105,8 @@ NAPOWR:
 		Palette: player50alpha
 	Power:
 		Amount: 200
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 
 NAAPWR:
@@ -114,7 +115,6 @@ NAAPWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -149,13 +149,14 @@ NAAPWR:
 		Palette: player50alpha
 	Power:
 		Amount: 300
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
 
 NIPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
-	Inherits@4: ^ExploBuildingTibbig
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -413,6 +414,8 @@ NARADR:
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 		PauseOnCondition: power-outage
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
 	Power:
 		Amount: -75
 	ProvidesPrerequisite@buildingname:
@@ -581,7 +584,7 @@ NAHPAD:
 		Icon: valkyrie
 		OrderName: ShadowTrooperInfantryDropOrder
 		SquadSize: 1
-		ChargeTime: 240
+		ChargeTime: 180
 		Description: Shadow Trooper Drop
 		LongDesc: Drops a special infantry taskforce on the field.
 		SelectTargetSpeechNotification: SelectTarget
@@ -641,7 +644,7 @@ NAPYRA:
 		OrderName: VertigoNapalmAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~propaganda
 		Icon: vertigo
-		ChargeTime: 240
+		ChargeTime: 300
 		QuantizedFacings: 8
 		Description: Napalm Strike
 		LongDesc: Deploy a devastating Napalm bomb.
@@ -661,7 +664,7 @@ NAPYRA:
 		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~industry
 		Icon: vertigo
-		ChargeTime: 240
+		ChargeTime: 300
 		QuantizedFacings: 8
 		Description: Tiberium Splitter Bomb
 		LongDesc: Deploy a devastating Tiberium bomb.
@@ -681,7 +684,7 @@ NAPYRA:
 		OrderName: VertigoSeismicAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~technology
 		Icon: vertigo
-		ChargeTime: 240
+		ChargeTime: 300
 		QuantizedFacings: 8
 		Description: Seismic Bomb
 		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.

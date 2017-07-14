@@ -32,6 +32,7 @@ SHOCKER:
 		DeathTypes:
 			BulletDeath: 1
 			SmallExplosionDeath: 2
+			HeadshotDeath: 3
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: apolra50alpha
 		DeathPaletteIsPlayerPalette: false
@@ -112,7 +113,7 @@ LOCUST:
 VISC_INFECTED:
 	Inherits@1: ^Visceroid
 	Inherits@2: ^GainsExperienceInf
-	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@3: ^CorruptorHeal
 	Tooltip:
 		Name: Infected Visceroid
 	Health:
@@ -141,7 +142,7 @@ VISC_INFECTED:
 VISC_CORRUPT:
 	Inherits@1: ^Visceroid
 	Inherits@2: ^GainsExperienceInf
-	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@3: ^CorruptorHeal
 	Tooltip:
 		Name: Corrupt Visceroid
 	Health:

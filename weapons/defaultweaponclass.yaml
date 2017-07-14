@@ -1,3 +1,10 @@
+Tiberium:
+	ReloadDelay: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c59
+		Damage: 10
+		DamageTypes: TriggerVisceroid, BulletDeath
+
 Veins:
 	ReloadDelay: 16
 	Warhead@Damage: SpreadDamage
@@ -20,6 +27,7 @@ FireballLauncher:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 75
@@ -47,6 +55,7 @@ BlueFireballLauncher:
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 100
@@ -73,7 +82,7 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 0
-		DamageTypes: TakeCoverEffect, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -97,7 +106,7 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 0
-		DamageTypes: TakeCoverEffect, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -111,7 +120,7 @@ BlueFireballLauncher:
 		ExplosionPalette: light2
 
 ^MissileAPHE:
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	Projectile: Missile
 		MinimumLaunchAngle: 270
 		MaximumLaunchAngle: 270
@@ -131,8 +140,8 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 0
-		ValidTargets: Ground, Aircraft
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		ValidTargets: Ground, Air, MidAir, HighAir
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_tumu
@@ -177,7 +186,7 @@ BlueFireballLauncher:
 		Spread: 0c724
 		Damage: 0
 		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -211,7 +220,7 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 0
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -244,7 +253,7 @@ BlueFireballLauncher:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 0
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -316,7 +325,7 @@ BlueFireballLauncher:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 70
-		DamageTypes: TakeCoverEffect, EnergyDeath
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ^BulletWH:
 	Warhead@1Dam: SpreadDamage
@@ -328,7 +337,7 @@ BlueFireballLauncher:
 			Vehicle: 10
 			Aircraft: 100
 			Building: 10
-		DamageTypes: TakeCoverEffect, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 ^SuperBulletWH: #for heavier mgs's like raider, gattling etc.
 	Warhead@1Dam: SpreadDamage
@@ -340,7 +349,7 @@ BlueFireballLauncher:
 			Vehicle: 15
 			Aircraft: 100
 			Building: 10
-		DamageTypes: TakeCoverEffect, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 ^APWH:
 	Warhead@1Dam: SpreadDamage
@@ -352,7 +361,7 @@ BlueFireballLauncher:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 60
-		DamageTypes: TakeCoverEffect, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 ^HEWH:
 	Warhead@1Dam: SpreadDamage
@@ -364,7 +373,7 @@ BlueFireballLauncher:
 			Vehicle: 10
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
 ^APHEWH:
 	Warhead@1Dam: SpreadDamage
@@ -376,7 +385,7 @@ BlueFireballLauncher:
 			Vehicle: 70
 			Aircraft: 100
 			Building: 80
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
 ^HEAPWH:
 	Warhead@1Dam: SpreadDamage
@@ -388,7 +397,7 @@ BlueFireballLauncher:
 			Vehicle: 50
 			Aircraft: 100
 			Building: 80
-		DamageTypes: TakeCoverEffect, SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
 ^SonicWH:
 	Warhead@1Dam: SpreadDamage
@@ -400,7 +409,7 @@ BlueFireballLauncher:
 			Vehicle: 70
 			Aircraft: 100
 			Building: 100
-		DamageTypes: SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 
 ^PlasmaWH:
 	Warhead@1Dam: SpreadDamage
@@ -412,7 +421,7 @@ BlueFireballLauncher:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 100
-		DamageTypes: TakeCoverEffect, EnergyDeath
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ^RailgunWH:
 	Warhead@1Dam: SpreadDamage
@@ -424,7 +433,7 @@ BlueFireballLauncher:
 			Vehicle: 100
 			Aircraft: 100
 			Building: 60
-		DamageTypes: TakeCoverEffect, EnergyDeath
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ^FireWH:
 	Warhead@1Dam: SpreadDamage
@@ -437,7 +446,7 @@ BlueFireballLauncher:
 			Vehicle: 25
 			Aircraft: 100
 			Building: 100
-		DamageTypes: FireDeath
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 
 ^TiberiumWH:
 	Warhead@1Dam: SpreadDamage
@@ -449,7 +458,7 @@ BlueFireballLauncher:
 			Vehicle: 50
 			Aircraft: 100
 			Building: 50
-		DamageTypes: EnergyDeath, TriggerVisceroid
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath, TriggerVisceroid
 
 ^ShellAPElite:
 	Inherits: ^ShellAP

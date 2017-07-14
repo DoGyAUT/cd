@@ -123,48 +123,15 @@ Cloud1:
 Cloud2:
 	Inherits@1: ^Clouds
 
-Fire1:
-	Inherits@1: ^FireActorSlow
-	RenderSprites:
-		Image: largefire
-	SpawnActorOnDeath:
-		Actor: fire2
-	ExplodeWeapon@Fire:
-		Weapon: Fire1
-
-Fire2:
-	Inherits@1: ^FireActorSlow
-	RenderSprites:
-		Image: mediumfire
-	SpawnActorOnDeath:
-		Actor: fire3
-	ExplodeWeapon@Fire:
-		Weapon: Fire2
-
-Fire3:
-	Inherits@1: ^FireActorSlow
-	RenderSprites:
-		Image: smallfire
-	SpawnActorOnDeath:
-		Actor: fire4
-	ExplodeWeapon@Fire:
-		Weapon: Fire3
-
-Fire4:
-	Inherits@1: ^FireActorSlow
-	RenderSprites:
-		Image: tinyfire
-	ExplodeWeapon@Fire:
-		Weapon: Fire4
-
 BFire1:
 	Inherits@1: ^FireActorSlow
 	RenderSprites:
 		Image: blargefire
 	SpawnActorOnDeath:
 		Actor: bfire2
-	ExplodeWeapon@Fire:
-		Weapon: BFire1
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue
+		Range: 3c0
 
 BFire2:
 	Inherits@1: ^FireActorSlow
@@ -172,8 +139,9 @@ BFire2:
 		Image: bmediumfire
 	SpawnActorOnDeath:
 		Actor: bfire3
-	ExplodeWeapon@Fire:
-		Weapon: BFire2
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue1
+		Range: 2c0
 
 BFire3:
 	Inherits@1: ^FireActorSlow
@@ -181,15 +149,55 @@ BFire3:
 		Image: bsmallfire
 	SpawnActorOnDeath:
 		Actor: bfire4
-	ExplodeWeapon@Fire:
-		Weapon: BFire3
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue2
+		Range: 1c0
 
 BFire4:
 	Inherits@1: ^FireActorSlow
 	RenderSprites:
 		Image: btinyfire
-	ExplodeWeapon@Fire:
-		Weapon: BFire4
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue3
+		Range: 1c0
+		
+Fire1:
+	Inherits@1: ^FireActorSlow
+	RenderSprites:
+		Image: largefire
+	SpawnActorOnDeath:
+		Actor: fire2
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage
+		Range: 3c0
+
+Fire2:
+	Inherits@1: ^FireActorSlow
+	RenderSprites:
+		Image: mediumfire
+	SpawnActorOnDeath:
+		Actor: fire3
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage1
+		Range: 2c0
+
+Fire3:
+	Inherits@1: ^FireActorSlow
+	RenderSprites:
+		Image: smallfire
+	SpawnActorOnDeath:
+		Actor: fire4
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage2
+		Range: 1c0
+
+Fire4:
+	Inherits@1: ^FireActorSlow
+	RenderSprites:
+		Image: tinyfire
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage3
+		Range: 1c0
 
 Fire1small:
 	Inherits@1: ^FireActorFast
@@ -197,8 +205,9 @@ Fire1small:
 		Image: largefire
 	SpawnActorOnDeath:
 		Actor: fire2small
-	ExplodeWeapon@Fire:
-		Weapon: Fire1
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage
+		Range: 3c0
 
 Fire2small:
 	Inherits@1: ^FireActorFast
@@ -206,8 +215,9 @@ Fire2small:
 		Image: mediumfire
 	SpawnActorOnDeath:
 		Actor: fire3small
-	ExplodeWeapon@Fire:
-		Weapon: Fire2
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage1
+		Range: 2c0
 
 Fire3small:
 	Inherits@1: ^FireActorFast
@@ -215,24 +225,27 @@ Fire3small:
 		Image: smallfire
 	SpawnActorOnDeath:
 		Actor: fire4small
-	ExplodeWeapon@Fire:
-		Weapon: Fire3
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage2
+		Range: 1c0
 
 Fire4small:
 	Inherits@1: ^FireActorFast
 	RenderSprites:
 		Image: tinyfire
-	ExplodeWeapon@Fire:
-		Weapon: Fire4
-
+	ProximityExternalCondition@firedamage:
+		Condition: firedamage3
+		Range: 1c0
+		
 BFire1small:
 	Inherits@1: ^FireActorFast
 	RenderSprites:
 		Image: blargefire
 	SpawnActorOnDeath:
 		Actor: bfire2small
-	ExplodeWeapon@Fire:
-		Weapon: BFire1
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue
+		Range: 3c0
 
 BFire2small:
 	Inherits@1: ^FireActorFast
@@ -240,8 +253,9 @@ BFire2small:
 		Image: bmediumfire
 	SpawnActorOnDeath:
 		Actor: bfire3small
-	ExplodeWeapon@Fire:
-		Weapon: BFire2
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue1
+		Range: 2c0
 
 BFire3small:
 	Inherits@1: ^FireActorFast
@@ -249,15 +263,17 @@ BFire3small:
 		Image: bsmallfire
 	SpawnActorOnDeath:
 		Actor: bfire4small
-	ExplodeWeapon@Fire:
-		Weapon: BFire3
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue2
+		Range: 1c0
 
 BFire4small:
 	Inherits@1: ^FireActorFast
 	RenderSprites:
 		Image: btinyfire
-	ExplodeWeapon@Fire:
-		Weapon: BFire4
+	ProximityExternalCondition@firedamage:
+		Condition: firedamageblue3
+		Range: 1c0
 
 SROCK01:
 	Inherits: ^Rock

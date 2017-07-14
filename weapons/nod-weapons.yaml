@@ -11,6 +11,7 @@ DevilsTongueGun:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 55
@@ -32,15 +33,12 @@ DevilsTongueGunTiberium:
 		TrailImage: tibflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
-		DamageTypes: TriggerVisceroid
+		DamageTypes: Prone100Percent, TriggerProne, TriggerVisceroid
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 75
 		Falloff: 100, 80
-	WarheadAS: SpawnActor
-		Range: 1
-		Actors: Cloud1, Cloud2
-		Owner: Creeps
 
 PyradonGun:
 	Inherits: FireballLauncher
@@ -57,6 +55,7 @@ PyradonGun:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 0c0
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 110
@@ -80,6 +79,7 @@ PyradonGunBlue:
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 0c0
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 150
@@ -161,7 +161,7 @@ RavenMissileAA:
 	Burst: 2
 	BurstDelay: 5
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c724
 		Speed: 1c62
@@ -175,7 +175,7 @@ RavenMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 400
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 BluehellRavenMissile:
 	Inherits: RavenMissile
@@ -304,13 +304,13 @@ RocketeerGun:
 
 RocketeerGunAA:
 	Inherits: RocketeerGun
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Range: 8c497
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
-		ValidTargets: Aircraft
-
+		ValidTargets: Air, MidAir, HighAir
+		
 NodHarvGun:
 	Inherits: ^Bullet
 	Inherits: ^SuperBulletWH
@@ -380,7 +380,7 @@ SpecterGunEMP:
 		Range: 3c548
 		Duration: 100
 		Condition: empdisable
-		ValidTargets: Ground
+		ValidTargets: Vehicle, Cyborg, Building
 	Warhead@EMPEff: CreateEffect
 		Explosions: pulse_explosion
 		ImpactSounds: plsecan2.aud
@@ -400,7 +400,7 @@ SpecterGunInferno:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 200
-		DamageTypes: FireDeath
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: beamzap
@@ -487,7 +487,7 @@ RaiderGunVisual:
 	Range: 8c497
 	BurstDelay: 2
 	Burst: 20
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
 	Projectile: BulletAS
 		Speed: 0c964
@@ -495,7 +495,7 @@ RaiderGunVisual:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
 		Damage: 0
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground, Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidImpactTypes: Water
@@ -514,7 +514,7 @@ RaiderGunAttack:
 		Spread: 0c91
 		Damage: 15
 		Versus:
-			Aircraft: 25
+			Air: 25
 
 RaiderGunLaser:
 	Inherits: ^BasicLaser
@@ -522,7 +522,7 @@ RaiderGunLaser:
 	ReloadDelay: 20
 	Range: 8c497
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	Projectile: LaserZap
 		Color: C80000
 		Width: 0c42
@@ -536,9 +536,9 @@ RaiderGunLaser:
 		Spread: 0c59
 		Damage: 30
 		Versus:
-			Aircraft: 50
+			Air: 50
 			Infantry: 100
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground, Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
@@ -567,7 +567,7 @@ AvatarLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c001
+		Spread: 0c181
 		Damage: 500
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
@@ -588,6 +588,8 @@ AvatarLaserE:
 		SecondaryBeamWidth: 0c28
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 0000FF
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
 
 EMPulseCannon:
 	ReloadDelay: 100
@@ -616,16 +618,18 @@ EMPulseCannon:
 		Range: 5c673
 		Duration: 200
 		Condition: empdisable
-		ValidTargets: Ground
+		ValidTargets: Vehicle, Cyborg, Building
 
-ClusterMissile:
-	ValidTargets: Ground
+ClusterMissile: #nuke
+	ValidTargets: Ground, Water, Air, MidAir, HighAir
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c424
 		Damage: 75
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
+		ValidTargets: Ground, Water, Air, HighAir
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction0: DestroyResource
 		Size: 1
 	Warhead@ClusterSmudges0: LeaveSmudge
@@ -636,8 +640,10 @@ ClusterMissile:
 		Damage: 30
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
+		ValidTargets: Ground, Water, Air, HighAir
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction1: DestroyResource
 		Size: 2
 		Delay: 5
@@ -650,8 +656,10 @@ ClusterMissile:
 		Damage: 30
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
+		ValidTargets: Ground, Water, Air, HighAir
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction2: DestroyResource
 		Size: 3
 		Delay: 10
@@ -664,8 +672,10 @@ ClusterMissile:
 		Damage: 30
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
+		ValidTargets: Ground, Water, Air, HighAir
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction3: DestroyResource
 		Size: 4
 		Delay: 15
@@ -678,8 +688,10 @@ ClusterMissile:
 		Damage: 30
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
+		ValidTargets: Ground, Water, Air, HighAir
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ResourceDestruction4: DestroyResource
 		Size: 5
 		Delay: 20
@@ -713,7 +725,13 @@ MultiCluster:
 		Spread: 0c181
 		Damage: 65
 		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, ExplosionDeath
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ExplosionPalette: apolra2
@@ -881,20 +899,20 @@ VertigoBombGas:
 	Inherits: ^ShellHE
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 60
-	Range: 0c512
+	Range: 2c124
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c0
+		Inaccuracy: 0c181
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 0
+		LaunchAngle: 60
 		Palette: effect
 		ContrailLength: 10
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 2c124
 		Damage: 2000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
@@ -920,21 +938,21 @@ VertigoBombNapalm:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
-	Range: 0c512
+	Range: 2c124
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c0
+		Inaccuracy: 0c181
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 0
+		LaunchAngle: 60
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
-		Damage: 500
+		Spread: 2c124
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: napalmnuke
 		ExplosionPalette: napalmnuke50
@@ -958,24 +976,25 @@ VertigoBombNapalm:
 VertigoBombBlueNapalm:
 	Inherits: VertigoBombNapalm
 	Warhead@1Dam: SpreadDamage
-		Damage: 600
+		Spread: 2c124
+		Damage: 1350
 	WarheadAS: FireShrapnel
 		Weapon: BlueNapalmShrapnel
-		Amount: 40
+		Amount: 50
 		AimChance: 0
 
 VertigoBombSeismic:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
-	Range: 0c512
+	Range: 2c124
 	Report: bombdrop.aud
 	Projectile: BulletAS
 		Speed: 0c724
-		Inaccuracy: 0c0
+		Inaccuracy: 0c181
 		Image: shell01
 		Shadow: true
-		LaunchAngle: 0
+		LaunchAngle: 60
 		Palette: effect
 		ContrailLength: 10
 		ContrailColor: FFFFFF
@@ -1240,7 +1259,7 @@ BansheeCannonAA:
 	ReloadDelay: 150
 	Range: 11c321
 	MinRange: 2c848
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Report: scrin5b.aud
 	Burst: 10
 	BurstDelay: 8
@@ -1251,7 +1270,7 @@ BansheeCannonAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 50
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
@@ -1323,11 +1342,11 @@ GattlingCannonAttack:
 
 GattlingCannonAttackAA:
 	Inherits: GattlingCannonAttack
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 GattlingCannonVisual:
 	Inherits: ^APBullet
@@ -1335,7 +1354,7 @@ GattlingCannonVisual:
 	ReloadDelay: 125
 	Range: 10c621
 	Burst: 200
-	ValidTargets: Ground, Aircraft
+	ValidTargets: Ground, Air, MidAir, HighAir
 	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
@@ -1344,7 +1363,7 @@ GattlingCannonVisual:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 0
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground, Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidImpactTypes: Water
@@ -1440,7 +1459,7 @@ RavenCannonAA:
 	ReloadDelay: 150
 	Range: 19c818
 	MinRange: 2c848
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Report: mg6.aud
 	Burst: 20
 	BurstDelay: 4
@@ -1452,7 +1471,7 @@ RavenCannonAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 40
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 		ValidStances: Neutral, Enemy
 
 LaserTurretTibLaser:
@@ -1732,6 +1751,7 @@ FlamerTurretBlueFireballLauncher:
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 50
@@ -1765,6 +1785,7 @@ FlamerTurretFireballLauncher:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+	InvalidTargets: Flameproof
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 40
@@ -1794,7 +1815,7 @@ FanticBoom:
 		Spread: 0c724
 		Damage: 500
 		AffectsParent: True
-		DamageTypes: SmallExplosionDeath
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 	Warhead@kill: GrantExternalCondition
 		AffectsParent: True
 		Range: 3c548
@@ -1877,11 +1898,11 @@ BikeMissile:
 
 BikeMissileAA:
 	Inherits: BikeMissile
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 120
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 
 StealthTankMissile:
 	Inherits: ^MissileAPHE
@@ -1927,7 +1948,7 @@ StealthTankMissileEMP:
 		Range: 0c724
 		Duration: 75
 		Condition: empdisable
-		ValidTargets: Ground
+		ValidTargets: Vehicle, Cyborg, Building
 	Warhead@5Eff: CreateEffect
 		Explosions: small_emp
 		ExplosionPalette: effect
@@ -1941,7 +1962,7 @@ StealthTankMissileAA:
 	Burst: 6
 	BurstDelay: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
@@ -1951,7 +1972,7 @@ StealthTankMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir
 
 HailstormMissile:
 	Inherits: ^MissileAPHE
@@ -1976,17 +1997,13 @@ HailstormMissile:
 		Versus:
 			Building: 175
 		ValidTargets: Ground
-	WarheadAS: SpawnActor
-		Range: 1
-		Actors: Cloud1, Cloud2
-		Owner: Creeps
 
 HailstormMissileAA:
 	Inherits: HailstormMissile
 	ReloadDelay: 220
 	Burst: 8
 	BurstDelay: 10
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
@@ -1994,7 +2011,7 @@ HailstormMissileAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir
 
 HailstormMissileGas:
 	Inherits: HailstormMissile
@@ -2017,7 +2034,7 @@ HailstormMissileGas:
 HailstormMissileGasAA:
 	Inherits: HailstormMissileGas
 	ReloadDelay: 220
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
@@ -2025,7 +2042,7 @@ HailstormMissileGasAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 200
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir
 
 HavocMissiles:
 	Inherits: ^MissileAPHE
@@ -2143,7 +2160,7 @@ SAMSiteMissile:
 	Burst: 3
 	BurstDelay: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
-	ValidTargets: Aircraft
+	ValidTargets: Air, MidAir, HighAir
 	Projectile: Missile
         MaximumLaunchSpeed: 1c512
         MinimumLaunchSpeed: 1c512
@@ -2159,7 +2176,7 @@ SAMSiteMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150
-		ValidTargets: Aircraft
+		ValidTargets: Air, MidAir, HighAir
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
@@ -2169,6 +2186,7 @@ BlackHandFlamer:
 	Inherits: FireballLauncher
 	ReloadDelay: 60
 	Range: 4c611
+	InvalidTargets: Flameproof
 	Projectile: BulletAS
 		Speed: 0c181
 		LaunchAngle: 90
@@ -2180,6 +2198,7 @@ BlackHandFlamer:
 		Spread: 0c543
 		Damage: 175
 		Falloff: 100, 80
+		InvalidTargets: Flameproof
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
 		Amount: 3
@@ -2190,6 +2209,7 @@ BlackHandFlamerBlue:
 	ReloadDelay: 60
 	Range: 4c611
 	Report: firstrm1.aud
+	InvalidTargets: Flameproof
 	Projectile: BulletAS
 		Speed: 0c181
 		LaunchAngle: 90
@@ -2203,6 +2223,7 @@ BlackHandFlamerBlue:
 		Versus:
 			Vehicle: 75
 		Falloff: 100, 90, 80
+		InvalidTargets: Flameproof
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -2316,39 +2337,6 @@ termitegunshrapnelblue:
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: BFire3small
-		Owner: Creeps
-	Warhead@2Eff: CreateEffect
-		Explosions: infexpl
-		ExplosionPalette: beamzap
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-	Warhead@5Eff: CreateEffect
-		Explosions: small_flash
-		ExplosionPalette: light2
-
-termitegunshrapnelblue1:
-	Inherits: ^ShellAP
-	Inherits@wh: ^HEAPWH
-	Range: 2c124
-	Projectile: BulletAS
-		Speed: 0c181
-		LaunchAngle: 90
-		Image: blueflametrailer
-		TrailImage: blueflametrailer
-		TrailPalette: effect50alpha
-		Inaccuracy: 1c424
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 25
-	WarheadAS: SpawnActor
-		Range: 1
-		Actors: BFire1small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl
