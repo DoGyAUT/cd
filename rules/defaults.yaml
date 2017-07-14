@@ -445,7 +445,7 @@
 		Palette: apolra25alpha
 	RepairableBuilding:
 		IndicatorPalette: mouse
-		RepairInterval: 4
+		RepairInterval: 8
 		PlayerExperience: 25
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -489,6 +489,26 @@
 		Pieces: 10, 50
 		Range: 1c0, 6c0
 
+^ExploBuildingTibsmall:
+	ThrowsShrapnel@TibDebris:
+		Weapons: TibDebris
+		Pieces: 5, 10
+		Range: 0c512, 3c512
+	Explodes:
+		EmptyWeapon: TibDebrisexpsmall
+		Weapon: TibDebrisexpsmall
+		Type: CenterPosition
+
+^ExploBuildingTibbig:
+	Inherits: ^ExploBuildingTibsmall
+	ThrowsShrapnel@TibDebris:
+		Pieces: 10, 20
+		Range: 0c512, 5c512
+	Explodes:
+		EmptyWeapon: TibDebrisexpbig
+		Weapon: TibDebrisexpbig
+		Type: CenterPosition
+
 ^ExploBuildingsmall:
 	ThrowsShrapnel@LargeDebrisFast:
 		Weapons: LargeDebrisFast
@@ -526,6 +546,15 @@
 		EmptyWeapon: Buildingexplosionsmall
 		Weapon: Buildingexplosionsmall
 		Type: CenterPosition
+
+^ExploBuildingdefensecabal:
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebrisC
+		Pieces: 8, 15
+		Range: 3c512, 5c512
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmallcabaldef
+		Weapon: Buildingexplosionsmallcabaldef
 
 ^ExploBuildingsmallcabal:
 	Inherits: ^ExploBuildingsmall
@@ -1379,7 +1408,7 @@
 		Condition: upgrade.lc
 	SpeedMultiplier@lc:
 		RequiresCondition: upgrade.lc
-		Modifier: 130
+		Modifier: 160
 	ExternalCondition@upgrade.visionuplink:
 		Condition: upgrade.visionuplink
 	InaccuracyMultiplier@visionuplink:
@@ -1556,7 +1585,7 @@
 	SelfHealing@Erepairs:
 		Step: 10
 		PercentageStep: 1
-		Delay: 10
+		Delay: 13
 		HealIfBelow: 100
 		DamageCooldown: 0
 		RequiresCondition: emergencyrepairs
@@ -1586,6 +1615,14 @@
 		Color: 0000FF
 	ExternalCondition@INVULNERABILITY:
 		Condition: invulnerability
+
+^VehicleCabal:
+	Explodes:
+		Weapon: UnitExplodeSmallCabal
+		EmptyWeapon: UnitExplodeSmallCabal
+	ThrowsShrapnel@debris:
+		Weapons: SmallDebrisCabal
+
 
 ^Vehicle:
 	Inherits@1: ^GainsExperience

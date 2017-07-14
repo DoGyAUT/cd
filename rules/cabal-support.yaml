@@ -48,6 +48,8 @@ KAGATE_B:
 KASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingdefensecabal
+	Inherits@4: ^ExploBuildingTibsmall
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Buildable:
@@ -95,6 +97,7 @@ KASILO:
 KABLASR:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
@@ -105,7 +108,7 @@ KABLASR:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
 		Prerequisites: anypower, cybbar, ~structures.cabal
-		Description: Cabals low tech defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
+		Description: Cabals low tech defense structure.\n\nGood vs: Infantry\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -127,7 +130,7 @@ KABLASR:
 		InitialFacing: 222
 	AttackTurreted:
 	Armament:
-		Weapon: SabercutLaser
+		Weapon: SabercutTesla
 		LocalOffset: 1025,0,2404
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
@@ -146,6 +149,7 @@ KABLASR:
 KABCAN:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
@@ -156,7 +160,7 @@ KABCAN:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 304
 		Prerequisites: anypower, karadr, ~structures.cabal
-		Description: Cabals tech 2 defense structure.\n\nGood vs: Ground Units\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
+		Description: Cabals tech 2 defense structure.\n\nGood vs: Vehicles\n\nSpecial:\n- Provides stealth detection\n- Requires power to operate\n- AOE damage
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -199,6 +203,7 @@ KABCAN:
 KDARK:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
 	Valued:
@@ -251,6 +256,7 @@ KDARK:
 KOBEL:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CyborgBuildingUpgrades: ^CyborgBuildingUpgrades
@@ -281,7 +287,7 @@ KOBEL:
 		Weapon: CabalObeliskLaser
 		LocalOffset: 2263,0,1131
 	AttackCharges:
-		ChargeLevel: 40
+		ChargeLevel: 1
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging

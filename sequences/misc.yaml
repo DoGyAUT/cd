@@ -82,6 +82,8 @@ beacon:
 		Offset: 0,-42
 	crapjet: crapjeticon
 		Offset: 0,-42
+	kdroneicon: kdroneicon
+		Offset: 0,-42
 	clock: gclock2
 		Length: *
 		Offset: 0,-42
@@ -349,6 +351,7 @@ explosion:
 		BlendMode: Additive
 	shockwave: shockwave
 		Offset: 0, -12
+	plasmaexplo: plasmaexplo
 	plasmawave1: plasmawave1
 	plasmaexpl1: plasmaexpl1
 	plasmaexpl2: plasmaexpl2
@@ -364,6 +367,7 @@ explosion:
 	tiberiumbomb: tiberiumbomb
 		Tick: 80
 	scexplo: scexplo
+	cabexplo: cabexplo
 	plasmaexp01: plasmaexp01
 	plasmaexp02: plasmaexp02
 	protonexpl_lrg2: plasbomb_small
@@ -578,8 +582,28 @@ ring1:
 		Length: *
 		ZOffset: 1023
 
-largesmoke:
-	idle: lgrysmk1
+plasmaexplo7: 
+	idle: plasmaexpl1
+		Length: *
+		ZOffset: 1023
+
+scexplo7:
+	idle: scexplo 
+		Length: *
+		ZOffset: 1023
+
+cabexplo:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+cabspark:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+dot:
+	idle:
 		Length: *
 		ZOffset: 1023
 
@@ -898,6 +922,7 @@ icon:
 	ioncannon: ioncicon
 	hunterseeker: detnicon
 	emp: pulsicon
+	kdroneicon: kdroneicon
 	crapjet: crapjeticon
 	orcabomber: orca_bicon
 	orcaoxbomber: orca_oxicon
