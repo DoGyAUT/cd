@@ -10,33 +10,16 @@ CABHUT:
 		NeighbourOffsets: -1,-1, -1,0, -1,1, 0,-1, 0,1, 1,-1, 1,0, 1,1
 	RenderSprites:
 		Palette: player
-	Targetable:
-		TargetTypes: C4
 	-SelectionDecorations:
 	-Demolishable:
 	-Explodes:
-	-DamagedByTerrain@TibGas:
-	-ExternalCondition@gasdamage:
-	-SelfHealing@firedamage:
-	-ExternalCondition@firedamage:
-	-SelfHealing@firedamage1:
-	-ExternalCondition@firedamage1:
-	-SelfHealing@firedamage2:
-	-ExternalCondition@firedamage2:
-	-SelfHealing@firedamage3:
-	-ExternalCondition@firedamage3:
-	-SelfHealing@firedamageblue:
-	-ExternalCondition@firedamageblue:
-	-SelfHealing@firedamageblue1:
-	-ExternalCondition@firedamageblue1:
-	-SelfHealing@firedamageblue2:
-	-ExternalCondition@firedamageblue2:
-	-SelfHealing@firedamageblue3:
-	-ExternalCondition@firedamageblue3:
 	HitShape:
 		UseOccupiedCellsOffsets: true
 
 ^LowBridgeRamp:
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	Inherits@FeatureTargettypeForceFire: ^FeatureTargettypeForceFireOnly
 	AlwaysVisible:
 	RenderSprites:
 		Palette: terraindecoration
@@ -53,13 +36,8 @@ CABHUT:
 
 ^LowBridge:
 	Inherits: ^LowBridgeRamp
-	Targetable:
-		TargetTypes: Ground, Building
-		RequiresForceFire: true
 	Health:
 		HP: 500
-	Armor:
-		Type: Heavy
 	HitShape:
 
 LOBRDG_A:

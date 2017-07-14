@@ -41,6 +41,7 @@ NMCV:
 
 NIHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -113,9 +114,6 @@ NIHARV:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
 	WithMuzzleOverlay:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -123,6 +121,7 @@ NIHARV:
 
 NTHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -179,9 +178,6 @@ NTHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -189,6 +185,7 @@ NTHARV:
 
 NPHARV:
 	Inherits: ^VoxelTank
+	Inherits@3: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -242,9 +239,6 @@ NPHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -253,6 +247,7 @@ NPHARV:
 SAPC:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -262,18 +257,18 @@ SAPC:
 		Class: SAPC
 	Buildable:
 		Queue: Vehicle.Nod
-		BuildPaletteOrder: 202
-		Prerequisites: ~naweap, ~!t1, ~industry
+		BuildPaletteOrder: 206
+		Prerequisites: ~naweap, naradr, ~!t1, ~industry
 		Description: Industry Nod´s subterranean transport unit.\n\nGood vs: Nothing\n\nSpecial:\n- Subterranean movement\n- 8 slots for infantry\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: SAPC
-		Volume: 5
+		Volume: 8
 	Mobile:
 		TurnSpeed: 5
 		Speed: 113
 		RequiresCondition: !(empdisable && !invulnerability) && !loading
 		Subterranean: true
-		SubterraneanCondition: submerged
+		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
 		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drillup.aud
@@ -283,13 +278,13 @@ SAPC:
 		TerrainSpeeds:
 			Subterranean: 110
 	RejectsOrders:
-		RequiresCondition: submerged
+		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
 		HP: 600
 	RevealsShroud:
 		Range: 8c497
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	Cargo:
 		Types: Infantry
 		MaxWeight: 8
@@ -299,14 +294,12 @@ SAPC:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
+		RequiresCondition: !subterranean
 	LeavesTrails@ground:
 		Image: dust
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	AnnounceOnSeen:
 		PingRadar: True
 		Notification: SubterraneanUnitDetected
@@ -325,7 +318,7 @@ SAPC1:
 		Types: Infantry
 		MaxWeight: 8
 		PipCount: 8
-		InitialUnits: NASOL,NASOL,NASOL,NASOL,E3,E3,E3,E3
+		InitialUnits: E3,E3,E3,E3,E3
 		EjectOnDeath: False
 		LoadingCondition: loading
 
@@ -341,8 +334,8 @@ BGGY:
 	Buildable:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 203
-		Prerequisites: ~naweap, ~technology
-		Description: Technology Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
+		Prerequisites: ~naweap
+		Description: Nod´s fast scout and Anti infantry vehicle.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can shoot air\n- Can detect stealth\n- Improved Laser Emitter (Technology)\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: Buggy
 		Volume: 2
@@ -476,9 +469,6 @@ BIKE:
 		HP: 350
 	RevealsShroud:
 		Range: 9c921
-	DetectCloaked:
-		Range: 8c497
-	RenderDetectionCircle:
 	Armament@PRIMARY:
 		Weapon: BikeMissile
 		LocalOffset: 0,-232,622, 0,233,622
@@ -500,15 +490,15 @@ BIKE:
 CHEETAH:
 	Inherits: ^VoxelVehicle
 	Valued:
-		Cost: 1150
+		Cost: 1200
 	Tooltip:
 		Name: Phantom
 	Selectable:
 		Bounds: 42,42, 0, -5
 	Buildable:
 		Queue: Vehicle.Nod
-		BuildPaletteOrder: 205
-		Prerequisites: ~naweap, naradr, ~technology
+		BuildPaletteOrder: 203
+		Prerequisites: ~naweap, ~technology
 		Description: A standard frontline Tank for Technology Nod.\n\nGood vs: Vehicles\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Cheetah
@@ -592,9 +582,8 @@ REPAIR:
 		Voice: Action
 	RenderSprites:
 	RenderVoxels:
-	ProximityExternalCondition:
-		Condition: repair_heal
-		Range: 7c73
+	ExplodeWeapon@RepairVehicle:
+		Weapon: RepairVehicle
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
@@ -998,6 +987,7 @@ NHWTZ:
 
 SUBTANK:
 	Inherits: ^VoxelTank
+	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1006,7 +996,7 @@ SUBTANK:
 		Bounds: 42,42, 0, -5
 	Buildable:
 		Queue: Vehicle.Nod
-		BuildPaletteOrder: 210
+		BuildPaletteOrder: 205
 		Prerequisites: ~naweap, naradr, ~!t1, ~industry
 		Description: Subterranean Tank that uses a flame thrower for ambushes and burning down buildings.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Subterranean movement\n- Tiberium Weapons Research (Industry)\n- Crush class: Medium vehicle
 	Voiced:
@@ -1016,7 +1006,7 @@ SUBTANK:
 		TurnSpeed: 4
 		Speed: 99
 		Subterranean: true
-		SubterraneanCondition: submerged
+		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
 		SubterraneanTransitionCost: 1
 		SubterraneanTransitionSound: drillup.aud
@@ -1026,50 +1016,48 @@ SUBTANK:
 		TerrainSpeeds:
 			Subterranean: 110
 	RejectsOrders:
-		RequiresCondition: submerged
+		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
 		HP: 650
 	RevealsShroud:
 		Range: 9c921
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	Armament@primary:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,0,724
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@secondary:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,-509,424
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@secondary2:
 		Weapon: DevilsTongueGun
 		LocalOffset: 1188,509,424
-		RequiresCondition: !submerged && !upgrade.tibgas
+		RequiresCondition: !subterranean && !upgrade.tibgas
 	Armament@primaryB:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,0,724
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	Armament@secondaryB:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,-509,424
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	Armament@secondary2B:
 		Weapon: DevilsTongueGunTiberium
 		LocalOffset: 1188,509,424
-		RequiresCondition: !submerged && upgrade.tibgas
+		RequiresCondition: !subterranean && upgrade.tibgas
 	AttackFrontal:
 	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-		RequiresCondition: !submerged
-	Targetable:
-		RequiresCondition: !inside-tunnel && !submerged
+		RequiresCondition: !subterranean
 	LeavesTrails@ground:
 		Image: dust
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad
-		RequiresCondition: !submerged
+		RequiresCondition: !subterranean
 	AnnounceOnSeen:
 		PingRadar: True
 		Notification: SubterraneanUnitDetected

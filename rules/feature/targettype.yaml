@@ -1,0 +1,82 @@
+^FeatureTargettypeBuilding:
+	Targetable@Targettype:
+		TargetTypes: Building, Ground
+^FeatureTargettypeAircraft:
+	Targetable@Targettype:
+		TargetTypes: Aircraft
+		RequiresCondition: airborne
+	Targetable@TargettypeGrounded:
+		TargetTypes: Vehicle, Ground
+		RequiresCondition: !airborne
+^FeatureTargettypeJumpjet:
+	Targetable@Targettype:
+		TargetTypes: Aircraft
+		RequiresCondition: airborne
+	Targetable@TargettypeGrounded:
+		TargetTypes: Infantry, Ground
+		RequiresCondition: !airborne
+^FeatureTargettypeInfantry:
+	Targetable@Targettype:
+		TargetTypes: Infantry, Ground
+		RequiresCondition: !inside-tunnel && !parachute
+	Targetable@TargettypeParachute:
+		TargetTypes: Aircraft
+		RequiresCondition: parachute
+^FeatureTargettypeCyborg:
+	Targetable@Targettype:
+		TargetTypes: Infantry, Cyborg, Ground
+		RequiresCondition: !inside-tunnel && !parachute
+	Targetable@TargettypeParachute:
+		TargetTypes: Aircraft
+		RequiresCondition: parachute
+^FeatureTargettypeVehicle:
+	Targetable@Targettype:
+		TargetTypes: Vehicle, Ground
+		RequiresCondition: !inside-tunnel && !parachute
+	Targetable@TargettypeParachute:
+		TargetTypes: Aircraft
+		RequiresCondition: parachute
+^FeatureTargettypeSubterranean:
+	Targetable@Targettype:
+		TargetTypes: Subterranean
+		RequiresCondition: subterranean
+	Targetable@TargettypeGrounded:
+		TargetTypes: Vehicle, Ground
+		RequiresCondition: !subterranean && !inside-tunnel && !parachute
+	Targetable@TargettypeParachute:
+		TargetTypes: Aircraft
+		RequiresCondition: parachute
+^FeatureTargettypeSubmergable:
+	Targetable@Targettype:
+		TargetTypes: Vehicle, Ground
+		RequiresCondition: !submerged
+	Targetable@TargettypeSubmergable:
+		TargetTypes: Submerged
+		RequiresCondition: submerged
+^FeatureTargettypeFlora:
+	Targetable@Targettype:
+		TargetTypes: Flora
+
+^FeatureTargettypeDamaged:
+	Targetable@TargettypeDamaged:
+		TargetTypes: Damaged
+		RequiresCondition: FeatureTargettypeDamaged && !inside-tunnel && !parachute
+	GrantConditionOnDamageState@TargettypeDamaged:
+		Condition: FeatureTargettypeDamaged
+		ValidDamageStates: Light, Medium, Heavy, Critical, Dead
+^FeatureTargettypeScrin:
+	Targetable@TargettypeScrin:
+		TargetTypes: Scrin
+^FeatureTargettypeForceFireOnly:
+	Targetable@Targettype:
+		RequiresForceFire: true
+	Targetable@TargettypeParachute:
+		RequiresForceFire: true
+	Targetable@TargettypeGrounded:
+		RequiresForceFire: true
+	Targetable@TargettypeSubmergable:
+		RequiresForceFire: true
+	Targetable@TargettypeDamaged:
+		RequiresForceFire: true
+	Targetable@TargettypeScrin:
+		RequiresForceFire: true

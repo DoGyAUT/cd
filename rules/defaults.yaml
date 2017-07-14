@@ -1,4 +1,5 @@
 ^ExistsInWorld:
+	Inherits@FeatureTargettypeDamaged: ^FeatureTargettypeDamaged
 	AppearsOnRadar:
 	UpdatesPlayerStatistics:
 	CombatDebugOverlay:
@@ -65,9 +66,6 @@
 		OpeningSequence: open
 		Sequence: idle
 		ClosingSequence: close
-	Targetable@parachute:
-		RequiresCondition: parachute
-		TargetTypes: Air
 
 ^SpriteActor:
 	BodyOrientation:
@@ -345,15 +343,16 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^Cloakable
-	Inherits@4: ^AffectedByFlames
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
 		Palette: pips
 	WithTextControlGroupDecoration:
 	Selectable:
 		Priority: 3
-	Targetable:
-		TargetTypes: Ground, Building, C4
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -363,8 +362,6 @@
 		RequiresBaseProvider: True
 	Valued:
 		Cost: 25
-	Armor@base:
-		Type: Building
 	FrozenUnderFog:
 	SoundOnDamageTransition:
 		DamagedSounds: expnew01.aud
@@ -379,42 +376,8 @@
 	Guardable:
 		Range: 4c248
 	Demolishable:
-	DamagedByTerrain@TibGas:
-		Damage: 20
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
 	HitShape:
 		UseOccupiedCellsOffsets: true
-	SelfHealing@firedamage:
-		Step: -40
-		Delay: 16
-	SelfHealing@firedamage1:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 16
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 16
-	SelfHealing@firedamageblue:
-		Step: -45
-		Delay: 16
-	SelfHealing@firedamageblue1:
-		Step: -30
-		Delay: 16
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 16
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -433,9 +396,19 @@
 	ExternalCapturable:
 		CaptureCompleteTime: 7
 	ExternalCapturableBar:
+	GrantConditionOnDamageState@smoke:
+		Condition: damaged
+		ValidDamageStates: Heavy, Critical
+	SmokeParticleEmitter:
+		RequiresCondition: damaged
+		Sequence: idle
+		SpawnFrequency: 5
+		Gravity: -68,-68,68, 68,68,68
+		Image: durasmoke
+		Palette: apolra25alpha
 	RepairableBuilding:
 		IndicatorPalette: mouse
-		RepairInterval: 6
+		RepairInterval: 8
 		PlayerExperience: 25
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -468,22 +441,66 @@
 		MaxHeightDelta: 3
 	ThrowsShrapnel:
 		Weapons: LargeDebris
-		Pieces: 2, 20
-		Range: 2c848, 7c73
+		Pieces: 4, 15
+		Range: 3c512, 5c73
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebris
+		Pieces: 10, 30
+		Range: 3c0, 6c0
 	ThrowsShrapnel@sparks:
 		Weapons: Sparky
-		Pieces: 9, 100
+		Pieces: 10, 50
 		Range: 1c0, 6c0
+
+^ExploBuildingTibsmall:
+	ThrowsShrapnel@TibDebris:
+		Weapons: TibDebris
+		Pieces: 5, 10
+		Range: 0c512, 3c512
+	Explodes:
+		EmptyWeapon: TibDebrisexpsmall
+		Weapon: TibDebrisexpsmall
+		Type: CenterPosition
+
+^ExploBuildingTibbig:
+	Inherits: ^ExploBuildingTibsmall
+	ThrowsShrapnel@TibDebris:
+		Pieces: 10, 20
+		Range: 0c512, 5c512
+	Explodes:
+		EmptyWeapon: TibDebrisexpbig
+		Weapon: TibDebrisexpbig
+		Type: CenterPosition
 
 ^ExploBuildingsmall:
 	ThrowsShrapnel@LargeDebrisFast:
 		Weapons: LargeDebrisFast
-		Pieces: 1, 5
-		Range: 2c848, 7c73
+		Pieces: 1, 3
+		Range: 0c512, 3c512
+	ThrowsShrapnel@LargeDebrisFast1:
+		Weapons: LargeDebrisFast1
+		Pieces: 1, 3
+		Range: 0c512, 3c512
+	ThrowsShrapnel@LargeDebrisFast2:
+		Weapons: LargeDebrisFast2
+		Pieces: 1, 3
+		Range: 0c512, 3c512
+	ThrowsShrapnel@LargeDebrisFast3:
+		Weapons: LargeDebrisFast3
+		Pieces: 1, 3
+		Range: 0c512, 3c512
+	ThrowsShrapnel@LargeDebrisFast4:
+		Weapons: LargeDebrisFast4
+		Pieces: 1, 3
+		Range: 0c512, 3c512
+	ThrowsShrapnel@LargeDebrisFast5:
+		Weapons: LargeDebrisFast5
+		Pieces: 1, 3
+		Range: 0c512, 3c512
 	ThrowsShrapnel@SmallDebrisFast:
 		Weapons: SmallDebrisFast
-		Pieces: 5, 15
-		Range: 2c848, 7c73
+		Pieces: 1, 3
+		Range: 3c512, 5c512
 	ThrowsShrapnel@Sparky:
 		Weapons: Sparky
 		Pieces: 5, 50
@@ -493,8 +510,40 @@
 		Weapon: Buildingexplosionsmall
 		Type: CenterPosition
 
+^ExploBuildingdefensecabal:
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebrisCabal
+		Pieces: 8, 15
+		Range: 3c512, 5c512
+	Explodes:
+		EmptyWeapon: Buildingexplosionsmallcabaldef
+		Weapon: Buildingexplosionsmallcabaldef
+
 ^ExploBuildingsmallcabal:
 	Inherits: ^ExploBuildingsmall
+	ThrowsShrapnel:
+		Weapons: LargeDebrisCabal
+		Range: 0c512, 1c512
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebrisCabal
+	ThrowsShrapnel@LargeDebrisFast:
+		Weapons: LargeDebrisFastcabal
+		Range: 0c512, 1c512
+	ThrowsShrapnel@LargeDebrisFast1:
+		Weapons: LargeDebrisFastcabal1
+		Range: 0c512, 1c512
+	ThrowsShrapnel@LargeDebrisFast2:
+		Weapons: LargeDebrisFastcabal2
+		Range: 0c512, 1c512
+	ThrowsShrapnel@LargeDebrisFast3:
+		Weapons: LargeDebrisFastcabal3
+		Range: 0c512, 1c512
+	ThrowsShrapnel@LargeDebrisFast4:
+		Weapons: LargeDebrisFastcabal4
+		Range: 0c512, 1c512
+	ThrowsShrapnel@LargeDebrisFast5:
+		Weapons: LargeDebrisFastcabal5
+		Range: 0c512, 1c512
 	Explodes:
 		EmptyWeapon: Buildingexplosionsmallcabal
 		Weapon: Buildingexplosionsmallcabal
@@ -506,7 +555,7 @@
 		Weapon: BuildingexplosionPowerPlant
 
 ^ExploBuildingPowercabal:
-	Inherits: ^ExploBuildingsmall
+	Inherits: ^ExploBuildingsmallcabal
 	Explodes:
 		EmptyWeapon: BuildingexplosionPowerPlantCabal
 		Weapon: BuildingexplosionPowerPlantCabal
@@ -524,15 +573,29 @@
 		Weapon: Buildingexplosionmedium
 
 ^ExploBuildingmediumcabal:
-	Inherits: ^ExploBuildingmedium
+	Inherits: ^ExploBuildingsmallcabal
+	ThrowsShrapnel:
+		Weapons: LargeDebrisCabal
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebrisCabal
+	ThrowsShrapnel@LargeDebrisFast:
+		Weapons: LargeDebrisFastcabal
+	ThrowsShrapnel@LargeDebrisFast1:
+		Weapons: LargeDebrisFastcabal1
+	ThrowsShrapnel@LargeDebrisFast2:
+		Weapons: LargeDebrisFastcabal2
+	ThrowsShrapnel@LargeDebrisFast3:
+		Weapons: LargeDebrisFastcabal3
+	ThrowsShrapnel@LargeDebrisFast4:
+		Weapons: LargeDebrisFastcabal4
+	ThrowsShrapnel@LargeDebrisFast5:
+		Weapons: LargeDebrisFastcabal5
 	Explodes:
 		EmptyWeapon: Buildingexplosionmediumcabal
 		Weapon: Buildingexplosionmediumcabal
 
 ^BuildingInfiltrate:
 	Inherits: ^Building
-	Targetable:
-		TargetTypes: Ground, Building, C4, SpyInfiltrate
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -577,8 +640,10 @@
 		CustomBounds: 24,24
 
 ^Wall:
-	Inherits: ^ExistsInWorld
+	Inherits@0: ^ExistsInWorld
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
 	CombatDebugOverlay:
 	AppearsOnRadar:
 	Building:
@@ -599,8 +664,6 @@
 		NodeTypes: wall, gate
 	LineBuildNode:
 		Types: wall
-	Targetable:
-		TargetTypes: Ground, Wall, C4
 	FrozenUnderFog:
 	WithWallSpriteBody:
 		Type: wall
@@ -615,10 +678,6 @@
 		RequiredForShortGame: False
 	Health:
 		HP: 500
-	Armor@base:
-		Type: Building
-	Armor:
-		Type: Heavy
 	-GivesExperience:
 	HitShape:
 		Type: Rectangle
@@ -633,8 +692,6 @@
 		Cost: 50
 	Health:
 		HP: 400
-	Armor:
-		Type: Heavy
 	LineBuildNode:
 		Types: wall, gate
 	-Building:
@@ -695,13 +752,15 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
-	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
 	DrawLineToTarget:
 	Health:
 		HP: 50
-	Armor@base:
-		Type: Infantry
 	Valued:
 		Cost: 100
 	RevealsShroud:
@@ -739,9 +798,6 @@
 		Bounds: 14,23,-1,-9
 	Voiced:
 		VoiceSet: Infantry
-	Targetable:
-		RequiresCondition: !inside-tunnel && !parachute
-		TargetTypes: Ground, Infantry
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -750,7 +806,6 @@
 		DeathTypes:
 			BulletDeath: 1
 			SmallExplosionDeath: 2
-			HeadshotDeath: 3
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
@@ -773,26 +828,6 @@
 	Crushable:
 		CrushSound: squish6.aud
 		WarnProbability: 0
-	DamagedByTerrain@Tiberium:
-		RequiresCondition: !inside-tunnel
-		Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-		Damage: 8
-		DamageInterval: 10
-		DamageTypes: EnergyDeath, TriggerVisceroid
-	SpawnActorOnDeath@1:
-		Actor: visc_lrg
-		Probability: 10
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TriggerVisceroid
-		RequiresLobbyCreeps: True
-	SpawnActorOnDeath@2:
-		Actor: visc_sml
-		Probability: 10
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TriggerSmallVisceroid
-		RequiresLobbyCreeps: True
 	SpawnActorOnDeath@Corruptor:
 		Actor: visc_corrupt
 		Probability: 80
@@ -825,83 +860,9 @@
 		Weapons: Bloodytrail
 		Pieces: 0, 5
 		Range: 0c064, 0c918
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
-	WithDecoration@medic:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: medic_heal
-	SelfHealing@medic:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: medic_heal
-	ExternalCondition@medic:
-		Condition: medic_heal
 	ProducibleWithLevel:
 		Prerequisites: armory.upgraded
 	RevealOnFire:
-	WithDecoration@repair:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_healboost
-	SelfHealing@repair:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_healboost
-	ExternalCondition@repair:
-		Condition: repair_healboost
-	ReloadDelayMultiplier@repair:
-		RequiresCondition: repair_healboost
-		Modifier: 90
-	DamagedByTerrain@TibGas:
-		Damage: 10
-		DamageInterval: 16
-		DamageTypes: EnergyDeath, TriggerVisceroid
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SelfHealing@firedamage:
-		Step: -20
-		Delay: 8
-	SelfHealing@firedamage1:
-		Step: -15
-		Delay: 8
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 8
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 8
-	SelfHealing@firedamageblue:
-		Step: -25
-		Delay: 8
-	SelfHealing@firedamageblue1:
-		Step: -20
-		Delay: 8
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 8
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 8
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -923,29 +884,19 @@
 ^Soldier:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
 	RevealsShroud:
 		Range: 7c73
 	MustBeDestroyed:
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone200Percent: 200
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
+
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, Soldier
 	Mobile:
 		RequiresCondition: !webdisable
-
 ^SoldierFearless:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
@@ -958,8 +909,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, Soldier
 	Mobile:
 		RequiresCondition: !webdisable
 
@@ -976,8 +925,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, HeavyInfantry
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -997,8 +944,6 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Infantry, HeavyInfantry
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1006,6 +951,7 @@
 
 ^SoldierJumpjet:
 	Inherits: ^Infantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeJumpjet
 	-Crushable:
 	-Mobile:
 	RevealsShroud:
@@ -1013,24 +959,12 @@
 	MustBeDestroyed:
 	HiddenUnderFog:
 		Type: CenterPosition
-	-Targetable:
-	Targetable@GROUND:
-		TargetTypes: Ground, Infantry
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air, Infantry
-		RequiresCondition: airborne
 	Aircraft:
 		AirborneUpgrades: airborne
 		RepairBuildings:
 		RearmBuildings:
 		LandWhenIdle: False
 		Voice: Move
-
-^SoldierFearlessVeryHeavy:
-	Inherits: ^SoldierFearlessHeavy
-	Targetable:
-		TargetTypes: Ground, Infantry, VeryHeavyInfantry
 
 ^HealsOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
@@ -1063,10 +997,6 @@
 		ValidStances: Ally, Neutral, Enemy
 		RequiresCondition: tiberiumheal || tiberiumheal2
 
-^CorruptorHeal:
-	Targetable@scrin:
-		TargetTypes: Scrin
-
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
 		Damage: 20
@@ -1084,31 +1014,20 @@
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
 	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
 	RevealsShroud:
 		Range: 5c673
 	MustBeDestroyed:
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone200Percent: 200
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Mutant
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	-DamagedByTerrain@Tiberium:
 	Mobile:
 		RequiresCondition: !webdisable
 		TerrainSpeeds:
@@ -1134,13 +1053,10 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: True
-	Targetable:
-		TargetTypes: Ground, Mutant
 	Explodes:
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	-DamagedByTerrain@Tiberium:
 	Mobile:
 		RequiresCondition: !webdisable
 		TerrainSpeeds:
@@ -1173,9 +1089,6 @@
 		Weapon: TiberiumExplosion
 		EmptyWeapon: TiberiumExplosion
 		Chance: 10
-	Targetable:
-		TargetTypes: Ground, Goon
-	-DamagedByTerrain@Tiberium:
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1195,20 +1108,14 @@
 ^Alien:
 	Inherits@1: ^Infantry
 	Inherits@2: ^HealsOnTiberium
-	Inherits@3: ^CorruptorHeal
+	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@4: ^WebDisable
 	MustBeDestroyed:
 	Crushable:
 		CrushClasses: infantry
 		WarnProbability: 0
-	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Targetable:
-		TargetTypes: Ground, Infantry
-	-WithDecoration@medic:
-	-SelfHealing@medic:
-	-ExternalCondition@medic:
 	-GrantConditionOnPrerequisite@nanofiber:
 	-DamageMultiplier@nanofiber:
 	Mobile:
@@ -1219,8 +1126,6 @@
 	Crushable:
 		CrushClasses: heavyinf
 		WarnProbability: 0
-	Targetable:
-		TargetTypes: Ground, HeavyCyborg
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1231,17 +1136,14 @@
 	Inherits@2: ^EmpDisable
 	Inherits@3: ^DamagedByVeins
 	Inherits@8: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeCyborg
+	Inherits@FeatureTargettypeCyborg: ^FeatureTargettypeCyborg
 	MustBeDestroyed:
 	Crushable:
 		CrushClasses: cyborg
 		WarnProbability: 0
-	-DamagedByTerrain@Tiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Armor@base:
-		Type: Cyborg
-	Targetable:
-		TargetTypes: Ground, Cyborg
 	ThrowsShrapnel@sparks:
 		Weapons: Sparky
 		Pieces: 1, 10
@@ -1250,9 +1152,6 @@
 		Weapons: SmallDebris
 		Pieces: 1, 3
 		Range: 1c424, 5c673
-	-WithDecoration@medic:
-	-SelfHealing@medic:
-	-ExternalCondition@medic:
 	-GrantConditionOnPrerequisite@nanofiber:
 	-DamageMultiplier@nanofiber:
 	Mobile:
@@ -1266,52 +1165,33 @@
 				PathingCost: 0
 			PurpleTiberium: 70
 				PathingCost: 0
-	SelfHealing@repair_golem:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_heal
-	ExternalCondition@repair_golem:
-		Condition: repair_heal
-	WithDecoration@repair_golem:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_heal
 
 ^HeavyCyborg:
 	Inherits@1: ^Cyborg
-	Targetable:
-		TargetTypes: Ground, HeavyCyborg
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
 		Weight: 2
 
-^CyborgBuildingUpgrades:
+^CabalBuildingUpgrades:
+	Inherits@CabalUpgrades: ^CabalUpgrades
 	ExternalCondition@upgrade.hc:
 		Condition: upgrade.hc
 	DamageMultiplier@hc:
 		RequiresCondition: upgrade.hc
 		Modifier: 75
 
-^CyborgUpgrades:
-	ExternalCondition@upgrade.lc:
-		Condition: upgrade.lc
-	SpeedMultiplier@lc:
-		RequiresCondition: upgrade.lc
-		Modifier: 130
+^CabalUpgrades:
 	ExternalCondition@upgrade.visionuplink:
 		Condition: upgrade.visionuplink
 	InaccuracyMultiplier@visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Modifier: 10
+	ExternalCondition@upgrade.combatreactors:
+		Condition: upgrade.combatreactors
+	ReloadDelayMultiplier@upgrade.combatreactors:
+		RequiresCondition: upgrade.combatreactors
+		Modifier: 85
 
 ^InitiateUpgrades:
 	WithDecoration@conf:
@@ -1404,7 +1284,7 @@
 		Modifier: 85
 
 ^HuskUpgrades:
-	Inherits@1: ^CyborgUpgrades
+	Inherits@1: ^CabalUpgrades
 	WithDecoration:
 		Image: bufficon
 		Sequence: buff
@@ -1421,6 +1301,11 @@
 		Modifier: 80
 	ExternalCondition@overseer:
 		Condition: overseerboost
+	ExternalCondition@upgrade.lc:
+		Condition: upgrade.lc
+	SpeedMultiplier@lc:
+		RequiresCondition: upgrade.lc
+		Modifier: 130
 
 ^GoonUpgrades:
 	WithDecoration@goon:
@@ -1483,7 +1368,7 @@
 	SelfHealing@Erepairs:
 		Step: 10
 		PercentageStep: 1
-		Delay: 10
+		Delay: 13
 		HealIfBelow: 100
 		DamageCooldown: 0
 		RequiresCondition: emergencyrepairs
@@ -1514,6 +1399,15 @@
 	ExternalCondition@INVULNERABILITY:
 		Condition: invulnerability
 
+^VehicleCabal:
+	Inherits@CabalUpgrades: ^CabalUpgrades
+	Explodes:
+		Weapon: UnitExplodeSmallCabal
+		EmptyWeapon: UnitExplodeSmallCabal
+	ThrowsShrapnel@debris:
+		Weapons: SmallDebrisCabal
+
+
 ^Vehicle:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
@@ -1523,9 +1417,13 @@
 	Inherits@6: ^ZepUpgrades
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^IronCurtainable
-	Inherits@9: ^AffectedByFlames
 	Inherits@parach: ^Parachutable
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -1561,9 +1459,6 @@
 	WithTextControlGroupDecoration:
 	Voiced:
 		VoiceSet: Vehicle
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !inside-tunnel && !parachute
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move
@@ -1572,8 +1467,6 @@
 		Voice: Move
 		Weight: 5
 		RequiresCondition: !deployed
-	Armor@base:
-		Type: Vehicle
 	AttackMove:
 		Voice: Move
 	HiddenUnderFog:
@@ -1609,24 +1502,6 @@
 		Palette: player50alpha
 		TerrainTypes: Clear, Rough, Green, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
 		RequiresCondition: !inside-tunnel
-	WithDecoration@repair_golem:
-		Image: pips
-		Sequence: medic
-		Palette: pips
-		ReferencePoint: Bottom, Left
-		Offset: 0, 0
-		ZOffset: 256
-		ValidStances: Ally, Neutral
-		RequiresCondition: repair_heal
-	SelfHealing@repair_golem:
-		Step: 0
-		PercentageStep: 1
-		Delay: 10
-		HealIfBelow: 100
-		DamageCooldown: 200
-		RequiresCondition: repair_heal
-	ExternalCondition@repair_golem:
-		Condition: repair_heal
 	ProducibleWithLevel:
 		Prerequisites: armory.upgraded
 	RevealOnFire:
@@ -1640,40 +1515,6 @@
 		Gravity: -68,-68,68, 68,68,68
 		Image: durasmoke
 		Palette: apolra25alpha
-	DamagedByTerrain@TibGas:
-		Damage: 10
-		DamageInterval: 16
-		Terrain: Clear, Road, Bridge, Rail, DirtRoad, Rough, Green, Tiberium, BlueTiberium, RedTiberium, Veins, Water
-		RequiresCondition: gasdamage
-	ExternalCondition@gasdamage:
-		Condition: gasdamage
-	SelfHealing@firedamage:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamage1:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamage2:
-		Step: -10
-		Delay: 16
-	SelfHealing@firedamage3:
-		Step: -5
-		Delay: 16
-	SelfHealing@firedamageblue:
-		Step: -25
-		Delay: 16
-	SelfHealing@firedamageblue1:
-		Step: -20
-		Delay: 16
-	SelfHealing@firedamageblue2:
-		Step: -15
-		Delay: 16
-	SelfHealing@firedamageblue3:
-		Step: -10
-		Delay: 16
-	SpawnActorOnDeath@FLAMEGUY:
-		Actor: FLAMEGUY
-		DeathType: FireDeath
 	Chronoshiftable:
 		ReturnToOrigin: False
 
@@ -1829,19 +1670,13 @@
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^Cloakable
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	DrawLineToTarget:
 	RevealsShroud:
 		Range: 11c321
 	AppearsOnRadar:
 		UseLocation: True
-	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne
-	Armor@base:
-		Type: Aircraft
 	Selectable:
 	SelectionDecorations:
 		SelectionBoxColor: 00FF00
@@ -1940,12 +1775,6 @@
 		IdealSeparation: 0c001
 		Repulsable: True
 	ReturnOnIdle:
-	Targetable@GROUND:
-		TargetTypes: Ground
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: HighAir
-		RequiresCondition: airborne
 
 ^AttackAdvancedPlane:
 	Inherits: ^Aircraft
@@ -1956,19 +1785,12 @@
 		Repulsable: True
 		IdealSeparation: 0c001
 	ReturnOnIdle:
-	Targetable@GROUND:
-		TargetTypes: Ground
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: MidAir
-		RequiresCondition: airborne
 
 ^Corpse:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	AutoTargetIgnore:
@@ -1978,13 +1800,12 @@
 
 ^InfantryHusk:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Aircraft:
 		RepairBuildings:
 		RearmBuildings:
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	AutoTargetIgnore:
@@ -2004,6 +1825,7 @@
 	HitShape:
 
 ^AircraftHusk:
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	RenderSprites:
 	RenderVoxels:
 		PlayerPalette: cdvoxels
@@ -2022,8 +1844,6 @@
 		RearmBuildings:
 	Health:
 		HP: 280
-	Armor:
-		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	RevealsShroud:
@@ -2076,6 +1896,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
 	DrawLineToTarget:
 	Health:
 	Mobile:
@@ -2104,8 +1925,6 @@
 	WithTextControlGroupDecoration:
 	Selectable:
 		Bounds: 26,26,0,-3
-	Targetable:
-		TargetTypes: Ground, Infantry
 	AttackMove:
 	HiddenUnderFog:
 	Guardable:
@@ -2170,16 +1989,14 @@
 	KillsSelf:
 		RequiresCondition: killcloud
 		Delay: 0,190
-	ProximityExternalCondition@gasdamage:
-		Condition: gasdamage
-		ValidStances: Ally, Neutral, Enemy
-		Range: 3c0
 	HitShape:
 		Type: Circle
 			Radius: 256
 			VerticalTopOffset: 512
 	Chronoshiftable:
 		ReturnToOrigin: False
+	ExplodeWeapon@Tiberium:
+		Weapon: Tiberium
 
 ^FireActor:
 	Inherits@1: ^ExistsInWorld
@@ -2225,8 +2042,6 @@
 		EmptyWeapon: NapalmShrapnelSmudge
 	KillsSelf:
 		RequiresCondition: killfire
-	ProximityExternalCondition@firedamage:
-		ValidStances: Ally, Neutral, Enemy
 	HitShape:
 		Type: Circle
 			Radius: 256
@@ -2271,6 +2086,8 @@
 
 ^Tree:
 	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeFlora
+	Inherits@FeatureTargettype: ^FeatureTargettypeFlora
 	HiddenUnderShroud:
 	RenderSprites:
 		Palette: terraindecoration
@@ -2283,12 +2100,8 @@
 		Terrain: Tree
 	Tooltip:
 		Name: Tree
-	Targetable:
-		TargetTypes: Ground, Wall, DetonateAttack
 	Health:
 		HP: 200
-	Armor:
-		Type: none
 	HitShape:
 
 ^Rock:
@@ -2342,6 +2155,8 @@
 	Inherits@3: ^SpriteActor
 	Inherits@4: ^Cloakable
 	Inherits@5: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
 	RenderVoxels:
 		PlayerPalette: cdvoxels
 		LightAmbientColor: -0.1,-0.1,-0.1
@@ -2360,8 +2175,6 @@
 		RequiresCondition: !(empdisable && !invulnerability)
 	Health:
 		HP: 100
-	Armor@base:
-		Type: Vehicle
 	RevealsShroud:
 		Range: 7c73
 	Selectable:
@@ -2372,8 +2185,6 @@
 	WithTextControlGroupDecoration:
 	Voiced:
 		VoiceSet: Vehicle
-	Targetable:
-		TargetTypes: Ground, Vehicle
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -2427,132 +2238,132 @@
 		RequiresCondition: !power-outage
 
 ^3x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -1536
-            BottomRight: 1536, 1536
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
 
 ^2x2hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -1024
-            BottomRight: 1024, 1024
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
 
 ^1x1hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -512, -512
-            BottomRight: 512, 512
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -512, -512
+			BottomRight: 512, 512
 
 ^2x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -1536
-            BottomRight: 1024, 1536
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -1536
+			BottomRight: 1024, 1536
 
 ^2x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -2048
-            BottomRight: 1024, 2048
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -2048
+			BottomRight: 1024, 2048
 
 ^2x5hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1024, -2560
-            BottomRight: 1024, 2560
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1024, -2560
+			BottomRight: 1024, 2560
 
 ^1x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -512, -1536
-            BottomRight: 512, 1536
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
 
 ^3x1hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -512
-            BottomRight: 1536, 512
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
 
 ^3x2hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -1024
-            BottomRight: 1536, 1024
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 1024
 
 ^3x3hitshapewithyoffset:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -2048
-            BottomRight: 1536, 1024
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 1024
 
 ^4x3hitshapewithyoffset:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2048, -2560
-            BottomRight: 2048, 2048
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2048, -2560
+			BottomRight: 2048, 2048
 
 ^5x3hitshapewithyoffset:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2560, -3072
-            BottomRight: 2560, 2560
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2560, -3072
+			BottomRight: 2560, 2560
 
 ^4x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2048, -2048
-            BottomRight: 2048, 2048
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
 
 ^3x4hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -1536, -2048
-            BottomRight: 1536, 2048
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 2048
 
 ^4x3hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2048, -1536
-            BottomRight: 2048, 1536
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
 
 ^5x5hitshape:
-    HitShape:
-        UseOccupiedCellsOffsets: true
-        Type: Rectangle
-            LocalYaw: 128
-            TopLeft: -2560, -2560
-            BottomRight: 2560, 2560
+	HitShape:
+		UseOccupiedCellsOffsets: true
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -2560, -2560
+			BottomRight: 2560, 2560
 
 ^AffectedByFlames:
 	SelfHealing@firedamage:
@@ -2603,3 +2414,33 @@
 		RequiresCondition: firedamageblue3
 	ExternalCondition@firedamageblue3:
 		Condition: firedamageblue3
+
+^PowerplantEffects:
+	ExternalCondition@overload_active:
+		Condition: overload_active
+	PowerMultiplier@overload_active:
+		RequiresCondition: overload_active
+		Modifier: 500
+	TimedConditionBar@overload_active:
+		Condition: overload_active
+		Color: 0000FF
+	ExternalCondition@overload_disable:
+		Condition: overload_disable
+	PowerMultiplier@overload_disable:
+		RequiresCondition: overload_disable && !overload_active
+		Modifier: 0
+	TimedConditionBar@overload_disable:
+		Condition: overload_disable
+		Color: FFFFFF
+	ExplodeWeapon@overload_active1:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active
+	ExplodeWeapon@overload_active2:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active
+	ExplodeWeapon@overload_active3:
+		Weapon: PowerplantOverload
+		RequiresCondition: overload_active
+	Sellable:
+		RequiresCondition: !overload_active
+

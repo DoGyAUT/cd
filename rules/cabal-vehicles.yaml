@@ -1,6 +1,7 @@
 KMCV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@3: ^VehicleCabal
 	Buildable:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 300
@@ -62,6 +63,8 @@ KMCV:
 KHARV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@3: ^VehicleCabal
+	Inherits@4: ^ExploBuildingTibsmall
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -117,9 +120,6 @@ KHARV:
 	RenderVoxels:
 	-WithVoxelBody:
 	WithVoxelUnloadBody:
-	Explodes:
-		Weapon: LargeTiberiumExplosion
-		EmptyWeapon: SmallTiberiumExplosion
 	WithHarvestOverlay:
 		LocalOffset: 543,0,0
 		Palette: effect
@@ -128,10 +128,11 @@ KHARV:
 
 DREADFIRE:
 	Inherits@1: ^Walker
+	Inherits@2: ^VehicleCabal
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Dreadfire
+		Name: Shockwave
 	Selectable:
 		Bounds: 42, 60, 0, -25
 		Class: Dreadfire
@@ -139,7 +140,7 @@ DREADFIRE:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 304
 		Prerequisites: ~kaweap, karadr
-		Description: Heavy walker armed with 2 flamethrowers.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
+		Description: Heavy walker armed with 2 Teslacoils.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 5
 		Speed: 71
@@ -160,17 +161,19 @@ DREADFIRE:
 		HP: 1850
 	AttackFrontal:
 	AutoTarget:
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, Flameproof
 	BodyOrientation:
 		QuantizedFacings: 8
 	Armament@primary:
-		Weapon: DreadfireLauncher
+		Weapon: ShockwaveTesla
 		LocalOffset: 990,424,1980
+		MuzzleSequence: muzzle0
+		MuzzlePalette: effect50alpha
 		FireDelay: 5
 	Armament@secondary:
-		Weapon: DreadfireLauncher
+		Weapon: ShockwaveTesla
 		LocalOffset: 990,-424,1980
+		MuzzleSequence: muzzle1
+		MuzzlePalette: effect50alpha
 		FireDelay: 5
 	RenderSprites:
 	WithInfantryBody:
@@ -179,22 +182,6 @@ DREADFIRE:
 		VoiceSet: Dreadfire
 		Volume: 2
 	-ThrowsShrapnel@human:
-	-SelfHealing@firedamage:
-	-ExternalCondition@firedamage:
-	-SelfHealing@firedamage1:
-	-ExternalCondition@firedamage1:
-	-SelfHealing@firedamage2:
-	-ExternalCondition@firedamage2:
-	-SelfHealing@firedamage3:
-	-ExternalCondition@firedamage3:
-	-SelfHealing@firedamageblue:
-	-ExternalCondition@firedamageblue:
-	-SelfHealing@firedamageblue1:
-	-ExternalCondition@firedamageblue1:
-	-SelfHealing@firedamageblue2:
-	-ExternalCondition@firedamageblue2:
-	-SelfHealing@firedamageblue3:
-	-ExternalCondition@firedamageblue3:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		Chance: 100
@@ -202,6 +189,7 @@ DREADFIRE:
 
 REAPER:
 	Inherits@1: ^Walker
+	Inherits@2: ^VehicleCabal
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -274,8 +262,9 @@ REAPER:
 
 GOLEM:
 	Inherits: ^Walker
+	Inherits@3: ^VehicleCabal
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Golem
 	Selectable:
@@ -319,9 +308,10 @@ GOLEM:
 		VoiceSet: CyborgH
 		Volume: 2
 	-ThrowsShrapnel@human:
-	ProximityExternalCondition@repair_heal:
-		Condition: repair_heal
-		Range: 7c73
+	ExplodeWeapon@RepairCyborg:
+		Weapon: RepairCyborg
+	ExplodeWeapon@RepairVehicle:
+		Weapon: RepairVehicle
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
@@ -329,7 +319,7 @@ GOLEM:
 		DeployedCondition: deployed
 	ProximityExternalCondition@cloakgenerator:
 		Condition: cloak
-		Range: 7c73
+		Range: 3c512
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud
 		AffectsParent: True
@@ -338,6 +328,7 @@ GOLEM:
 
 TARANTULA:
 	Inherits@1: ^Walker
+	Inherits@3: ^VehicleCabal
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -396,6 +387,8 @@ TARANTULA:
 SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@CabalUpgrades: ^CabalUpgrades
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -469,31 +462,6 @@ SILVER:
 	-LeavesTrails@water:
 	-GrantConditionOnTerrain@Veins:
 	-WithIdleOverlay@Veins:
-	-DamagedByTerrain@TibGas:
-	-ExternalCondition@gasdamage:
-	-SelfHealing@firedamage:
-	-ExternalCondition@firedamage:
-	-SelfHealing@firedamage1:
-	-ExternalCondition@firedamage1:
-	-SelfHealing@firedamage2:
-	-ExternalCondition@firedamage2:
-	-SelfHealing@firedamage3:
-	-ExternalCondition@firedamage3:
-	-SelfHealing@firedamageblue:
-	-ExternalCondition@firedamageblue:
-	-SelfHealing@firedamageblue1:
-	-ExternalCondition@firedamageblue1:
-	-SelfHealing@firedamageblue2:
-	-ExternalCondition@firedamageblue2:
-	-SelfHealing@firedamageblue3:
-	-ExternalCondition@firedamageblue3:
-	-Targetable:
-	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle, Repair
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
-		TargetTypes: Air
-		RequiresCondition: airborne
 	HiddenUnderFog:
 		Type: GroundPosition
 	HitShape:
@@ -501,6 +469,7 @@ SILVER:
 KRONOS:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^HeavyVehicle
+	Inherits@3: ^VehicleCabal
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -574,6 +543,7 @@ KRONOS:
 FURY:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@3: ^VehicleCabal
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -671,6 +641,7 @@ FURY:
 GARGANTUA:
 	Inherits@1: ^Walker
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@3: ^VehicleCabal
 	Valued:
 		Cost: 5000
 	Tooltip:

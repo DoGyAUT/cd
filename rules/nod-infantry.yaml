@@ -108,7 +108,7 @@ CHAMSPY:
 	Inherits@2: ^InfusionUpgrade
 	Buildable:
 		Queue: Infantry.Nod
-		BuildPaletteOrder: 206
+		BuildPaletteOrder: 208
 		Prerequisites: ~nahand, napyra, ~technology
 		Description: Technology Nod´s unarmed and invisible agent.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Can steal money out of refineries and silos\n- Can sabotage power\n- Huge vision range\n- Crush class: Light Infantry
 	Valued:
@@ -261,9 +261,6 @@ FANATIC:
 		Armaments: Suicide
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	Explodes:
-		EmptyWeapon: FanticBoomExplosion
-		Weapon: FanticBoomExplosion
 	AutoTarget:
 		ScanRadius: 5
 	KillsSelf:
@@ -325,7 +322,7 @@ NCONF:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
 		Prerequisites: ~nahand, napyra, ~propaganda, ~!t3
-		Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Nod Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
+		Description: Black Hand soldiers armed with a Combat Rifle and a Grenade Launcher. Confessors enhance surrounding Soldiers.\n\nGood vs: Infantry\n\nSpecial:\n- Buffing friendly Nod soldier's attackspeed\n- Provides stealth detection\n- Nanofiber Armor (Propaganda)\n- Crush class: Light Infantry
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -376,7 +373,7 @@ SHADOW:
 	Inherits@4: ^AvatarUpgrades
 	Buildable:
 		Queue: Infantry.Nod
-		BuildPaletteOrder: 208
+		BuildPaletteOrder: 207
 		Prerequisites: ~nahand, naradr, ~technology
 		Description: Advanced sniper for Technology Nod.\n\nGood vs: Infantry\n\nSpecial:\n- Improved Laser Emitter (Technology)\n- Stealth Emitter (Technology)\n- Crush class: Light Infantry
 	Valued:
@@ -420,7 +417,7 @@ SHADOW:
 	HitShape:
 
 BHAND:
-	Inherits@1: ^SoldierFearlessVeryHeavy
+	Inherits@1: ^SoldierFearlessHeavy
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
@@ -468,7 +465,6 @@ BHAND:
 	AttackFrontal:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	-DamagedByTerrain@Tiberium:
 	GrantConditionOnPrerequisite@upgrade:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
@@ -518,7 +514,6 @@ TIBTROOPER:
 		Weapon: AcolyteGunE
 		LocalOffset: 362,0,778
 		RequiresCondition: rank-elite
-	-DamagedByTerrain@Tiberium:
 	AttackFrontal:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
