@@ -60,9 +60,9 @@
 ^FeatureTargettypeDamaged:
 	Targetable@TargettypeDamaged:
 		TargetTypes: Damaged
-		RequiresCondition: damaged && !inside-tunnel && !parachute
+		RequiresCondition: FeatureTargettypeDamaged && !inside-tunnel && !parachute
 	GrantConditionOnDamageState@TargettypeDamaged:
-		Condition: damaged
+		Condition: FeatureTargettypeDamaged
 		ValidDamageStates: Light, Medium, Heavy, Critical, Dead
 ^FeatureTargettypeScrin:
 	Targetable@TargettypeScrin:
