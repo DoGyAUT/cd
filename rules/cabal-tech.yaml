@@ -110,12 +110,28 @@ upgrade.combatreactors:
 	Plug:
 		Type: plug.upgrade.combatreactors
 
+upgrade.totalmeltdown:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Total Meltdown
+	Buildable:
+		BuildPaletteOrder: 307
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research an experimental energy bomb.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: KDRONE
+	Plug:
+		Type: plug.upgrade.totalmeltdown
+
 upgrade.overload:
 	Inherits: ^KAUPGRADE
 	Tooltip:
 		Name: Overload
 	Buildable:
-		BuildPaletteOrder: 307
+		BuildPaletteOrder: 308
 		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
 		Description: Research a method to temporarily boost powerplants.
