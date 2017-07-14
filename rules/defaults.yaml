@@ -435,7 +435,7 @@
 	ExternalCapturableBar:
 	GrantConditionOnDamageState@smoke:
 		Condition: damaged
-		ValidDamageStates: Critical
+		ValidDamageStates: Heavy, Critical
 	SmokeParticleEmitter:
 		RequiresCondition: damaged
 		Sequence: idle
@@ -483,7 +483,7 @@
 	ThrowsShrapnel@SmallDebris:
 		Weapons: SmallDebris
 		Pieces: 10, 30
-		Range: 3c000, 6c000
+		Range: 3c0, 6c0
 	ThrowsShrapnel@sparks:
 		Weapons: Sparky
 		Pieces: 10, 50
