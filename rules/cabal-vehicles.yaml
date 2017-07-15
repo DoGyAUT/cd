@@ -129,6 +129,9 @@ KHARV:
 DREADFIRE:
 	Inherits@1: ^Walker
 	Inherits@2: ^VehicleCabal
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -160,7 +163,6 @@ DREADFIRE:
 	Health:
 		HP: 1850
 	AttackFrontal:
-	AutoTarget:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Armament@primary:
@@ -190,6 +192,10 @@ DREADFIRE:
 REAPER:
 	Inherits@1: ^Walker
 	Inherits@2: ^VehicleCabal
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -215,7 +221,6 @@ REAPER:
 		RequiresCondition: upgrade.visionuplink
 		Range: 14c745
 	AttackFrontal:
-	AutoTarget:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -263,6 +268,7 @@ REAPER:
 GOLEM:
 	Inherits: ^Walker
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -329,6 +335,7 @@ GOLEM:
 TARANTULA:
 	Inherits@1: ^Walker
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -377,7 +384,6 @@ TARANTULA:
 		MuzzlePalette: effect50alpha
 		Recoil: 50
 		RecoilRecovery: 10
-	AutoTarget:
 	AttackMove:
 	WithMuzzleOverlay:
 	RenderSprites:
@@ -389,6 +395,10 @@ SILVER:
 	Inherits@2: ^HoverVehicle
 	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@CabalUpgrades: ^CabalUpgrades
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft4
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -428,8 +438,6 @@ SILVER:
 		MuzzlePalette: effect50alpha
 		RequiresCondition: !empdisable
 	AttackFrontal:
-	ForceReload:
-		RequiresCondition: airborne
 	WithMuzzleOverlay:
 		RequiresCondition: !airborne
 	ReloadArmamentsBar:
@@ -470,6 +478,9 @@ KRONOS:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^HeavyVehicle
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -515,7 +526,6 @@ KRONOS:
 		HealIfBelow: 100
 		DamageCooldown: 200
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelTurret:
@@ -544,6 +554,9 @@ FURY:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^SuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -595,7 +608,6 @@ FURY:
 		HealIfBelow: 50
 		DamageCooldown: 200
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelTurret:
@@ -642,6 +654,10 @@ GARGANTUA:
 	Inherits@1: ^Walker
 	Inherits@2: ^SuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -667,7 +683,6 @@ GARGANTUA:
 		RequiresCondition: upgrade.visionuplink
 		Range: 23c218
 	AttackFrontal:
-	AutoTarget:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Armament@primary:

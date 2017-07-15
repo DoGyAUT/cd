@@ -1,5 +1,8 @@
 ORCA_F1:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -38,7 +41,6 @@ ORCA_F1:
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
 		SelfReloadDelay: 5
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -53,6 +55,9 @@ ORCA_F1:
 
 ORCA_F2:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -90,7 +95,6 @@ ORCA_F2:
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
 		SelfReloadDelay: 5
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -105,6 +109,10 @@ ORCA_F2:
 
 ORCA_TRAN:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -145,7 +153,6 @@ ORCA_TRAN:
 	WithVoxelBody:
 	ParaDrop:
 		DropRange: 5c673
-	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: ORCA_TRAN.Husk
 		Probability: 100
@@ -243,6 +250,9 @@ ORCA_OXTRAN:
 
 GUNNER:
 	Inherits: ^AttackPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -274,7 +284,6 @@ GUNNER:
 	Turreted:
 		TurnSpeed: 360
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -432,6 +441,9 @@ ARTILLERY_BEACON:
 
 PHOENIX:
 	Inherits: ^AttackPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -474,6 +486,11 @@ PHOENIX:
 
 FHAWK:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -516,10 +533,6 @@ FHAWK:
 		PipCount: 2
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-	AutoTarget:
-		TargetWhenIdle: false
-		TargetWhenDamaged: false
-		EnableStances: false
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -531,6 +544,11 @@ FHAWK:
 
 HORNET:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
 		Cost: 2250
 	Tooltip:
@@ -574,10 +592,6 @@ HORNET:
 		ReloadCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-	AutoTarget:
-		TargetWhenIdle: false
-		TargetWhenDamaged: false
-		EnableStances: false
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -589,6 +603,10 @@ HORNET:
 
 CONDOR:
 	Inherits: ^AttackPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -626,10 +644,6 @@ CONDOR:
 		PipCount: 2
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-	AutoTarget:
-		TargetWhenIdle: false
-		TargetWhenDamaged: false
-		EnableStances: false
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -730,6 +744,9 @@ DSHP:
 
 KODIAK:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 8000
 	Tooltip:
@@ -840,7 +857,6 @@ KODIAK:
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
 		SelfReloadDelay: 5
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:

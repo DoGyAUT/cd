@@ -644,6 +644,7 @@
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	CombatDebugOverlay:
 	AppearsOnRadar:
 	Building:
@@ -668,7 +669,6 @@
 	WithWallSpriteBody:
 		Type: wall
 	GivesExperience:
-	AutoTargetIgnore:
 	Sellable:
 		SellSounds: cashturn.aud
 	UpdatesPlayerStatistics:
@@ -816,7 +816,6 @@
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
 			EnergyDeath: 6
-	AutoTarget:
 	AttackMove:
 		Voice: Move
 	Passenger:
@@ -1789,11 +1788,11 @@
 ^Corpse:
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Health:
 		HP: 280
 	HiddenUnderFog:
 		Type: GroundPosition
-	AutoTargetIgnore:
 	Tooltip:
 		GenericName: Dead Infantry
 	HitShape:
@@ -1801,6 +1800,7 @@
 ^InfantryHusk:
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Aircraft:
 		RepairBuildings:
 		RearmBuildings:
@@ -1808,7 +1808,6 @@
 		HP: 280
 	HiddenUnderFog:
 		Type: GroundPosition
-	AutoTargetIgnore:
 	ScriptTriggers:
 	Tooltip:
 		GenericName: Dead Infantry
@@ -1826,6 +1825,7 @@
 
 ^AircraftHusk:
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	RenderSprites:
 	RenderVoxels:
 		PlayerPalette: cdvoxels
@@ -1849,7 +1849,6 @@
 	RevealsShroud:
 		Range: 14c146
 		Type: GroundPosition
-	AutoTargetIgnore:
 	ScriptTriggers:
 	Tooltip:
 		GenericName: Destroyed Aircraft
@@ -1897,6 +1896,10 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	DrawLineToTarget:
 	Health:
 	Mobile:
@@ -1931,8 +1934,6 @@
 	WithSpriteBody:
 	WithAttackAnimation:
 		AttackSequence: attack
-	AutoTarget:
-		ScanRadius: 6
 	HitShape:
 		Type: Circle
 			Radius: 256
@@ -2137,7 +2138,6 @@
 	Inherits@1: ^Building
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
-	AutoTarget:
 	RenderRangeCircle:
 	CanPowerDown:
 		IndicatorPalette: mouse
