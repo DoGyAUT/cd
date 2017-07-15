@@ -335,7 +335,7 @@
 		Condition: cloak
 	ExternalCondition@EXTERNALCLOAKBAR:
 		Condition: cloak-bar
-	TimedConditionBar@cloakedbar: #unused atm, made for optional cloakgen change
+	TimedConditionBar@cloakedbar:
 		Condition: cloak-bar
 		Color: FF0000
 
@@ -377,7 +377,7 @@
 		Range: 4c248
 	Demolishable:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -887,7 +887,6 @@
 	RevealsShroud:
 		Range: 7c73
 	MustBeDestroyed:
-
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:
@@ -896,6 +895,7 @@
 		CrushedPaletteIsPlayerPalette: True
 	Mobile:
 		RequiresCondition: !webdisable
+
 ^SoldierFearless:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
@@ -1405,7 +1405,6 @@
 		EmptyWeapon: UnitExplodeSmallCabal
 	ThrowsShrapnel@debris:
 		Weapons: SmallDebrisCabal
-
 
 ^Vehicle:
 	Inherits@1: ^GainsExperience
@@ -2083,7 +2082,7 @@
 		Interval: 110
 	WithIdleAnimation:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -2120,7 +2119,7 @@
 	Tooltip:
 		Name: Rock
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Decoration:
 	Inherits@1: ^SpriteActor
@@ -2132,7 +2131,7 @@
 		Footprint: x
 		Dimensions: 1, 1
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Defense:
 	Inherits@1: ^Building
@@ -2239,7 +2238,7 @@
 
 ^3x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -1536
@@ -2247,7 +2246,7 @@
 
 ^2x2hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -1024
@@ -2255,7 +2254,7 @@
 
 ^1x1hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -512, -512
@@ -2263,7 +2262,7 @@
 
 ^2x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -1536
@@ -2271,7 +2270,7 @@
 
 ^2x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -2048
@@ -2279,7 +2278,7 @@
 
 ^2x5hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -2560
@@ -2287,7 +2286,7 @@
 
 ^1x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -512, -1536
@@ -2295,7 +2294,7 @@
 
 ^3x1hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -512
@@ -2303,7 +2302,7 @@
 
 ^3x2hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -1024
@@ -2311,7 +2310,7 @@
 
 ^3x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -2048
@@ -2319,7 +2318,7 @@
 
 ^4x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -2560
@@ -2327,7 +2326,7 @@
 
 ^5x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2560, -3072
@@ -2335,7 +2334,7 @@
 
 ^4x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -2048
@@ -2343,7 +2342,7 @@
 
 ^3x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -2048
@@ -2351,7 +2350,7 @@
 
 ^4x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -1536
@@ -2359,7 +2358,7 @@
 
 ^5x5hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2560, -2560
@@ -2443,4 +2442,3 @@
 		RequiresCondition: overload_active
 	Sellable:
 		RequiresCondition: !overload_active
-

@@ -1,6 +1,7 @@
 ^FeatureTargettypeBuilding:
 	Targetable@Targettype:
 		TargetTypes: Building, Ground
+
 ^FeatureTargettypeAircraft:
 	Targetable@Targettype:
 		TargetTypes: Aircraft
@@ -8,6 +9,7 @@
 	Targetable@TargettypeGrounded:
 		TargetTypes: Vehicle, Ground
 		RequiresCondition: !airborne
+
 ^FeatureTargettypeJumpjet:
 	Targetable@Targettype:
 		TargetTypes: Aircraft
@@ -15,6 +17,7 @@
 	Targetable@TargettypeGrounded:
 		TargetTypes: Infantry, Ground
 		RequiresCondition: !airborne
+
 ^FeatureTargettypeInfantry:
 	Targetable@Targettype:
 		TargetTypes: Infantry, Ground
@@ -22,6 +25,7 @@
 	Targetable@TargettypeParachute:
 		TargetTypes: Aircraft
 		RequiresCondition: parachute
+
 ^FeatureTargettypeCyborg:
 	Targetable@Targettype:
 		TargetTypes: Infantry, Cyborg, Ground
@@ -29,6 +33,7 @@
 	Targetable@TargettypeParachute:
 		TargetTypes: Aircraft
 		RequiresCondition: parachute
+
 ^FeatureTargettypeVehicle:
 	Targetable@Targettype:
 		TargetTypes: Vehicle, Ground
@@ -36,6 +41,7 @@
 	Targetable@TargettypeParachute:
 		TargetTypes: Aircraft
 		RequiresCondition: parachute
+
 ^FeatureTargettypeSubterranean:
 	Targetable@Targettype:
 		TargetTypes: Subterranean
@@ -46,6 +52,7 @@
 	Targetable@TargettypeParachute:
 		TargetTypes: Aircraft
 		RequiresCondition: parachute
+
 ^FeatureTargettypeSubmergable:
 	Targetable@Targettype:
 		TargetTypes: Vehicle, Ground
@@ -53,6 +60,7 @@
 	Targetable@TargettypeSubmergable:
 		TargetTypes: Submerged
 		RequiresCondition: submerged
+
 ^FeatureTargettypeFlora:
 	Targetable@Targettype:
 		TargetTypes: Flora
@@ -64,12 +72,15 @@
 	GrantConditionOnDamageState@TargettypeDamaged:
 		Condition: FeatureTargettypeDamaged
 		ValidDamageStates: Light, Medium, Heavy, Critical, Dead
+
 ^FeatureTargettypeScrin:
 	Targetable@TargettypeScrin:
 		TargetTypes: Scrin
+
 ^FeatureTargettypeNoAutoTarget:
 	Targetable@TargetTypeNoAutoTarget:
 		TargetTypes: NoAutoTarget
+
 ^FeatureTargettypeForceFireOnly:
 	Targetable@Targettype:
 		RequiresForceFire: true

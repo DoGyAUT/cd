@@ -88,7 +88,7 @@ UnitExplodeSmall:
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light2
-		
+
 UnitExplodeSmallCabal:
 	Inherits@1: UnitExplodeSmall
 	Warhead@2Eff: CreateEffect
@@ -304,7 +304,7 @@ TibDebris:
 		Speed: 0c301
 		Image: bluetiberiumbullet
 		Palette: apolgren
-		TrailImage: tiberiumtrail 
+		TrailImage: tiberiumtrail
 		TrailPalette: apolgren
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
@@ -483,6 +483,7 @@ Buildingexplosionsmall:
 		RangeLimit: 28c291
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
 		Damage: 1

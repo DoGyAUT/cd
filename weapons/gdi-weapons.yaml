@@ -1002,6 +1002,7 @@ VultureMissile:
 	ValidTargets: Aircraft
 	Projectile: Missile
 		Inaccuracy: 0c362
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 80
@@ -1023,6 +1024,7 @@ PoseidonTusk:
 		MinimumLaunchSpeed: 0c181
 		Speed: 1c62
 		Inaccuracy: 0c362
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
@@ -1042,6 +1044,7 @@ MammothTusk:
 		MinimumLaunchSpeed: 0c181
 		Speed: 1c62
 		Inaccuracy: 0c362
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
@@ -1072,6 +1075,7 @@ MammothWalkerTusk:
 		HorizontalRateOfTurn: 10
 		LaunchAngle: 62
 		RangeLimit: 42c437
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 100
@@ -1090,6 +1094,7 @@ OrcaF1Missiles:
 	Projectile: Missile
 		Inaccuracy: 0c362
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 120
@@ -1145,6 +1150,7 @@ HawkMissile:
 		RangeLimit: 28c291
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 550
@@ -1173,6 +1179,7 @@ HawkMissileAA:
 		RangeLimit: 28c291
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 300
@@ -1202,6 +1209,7 @@ HornetMissile:
 		RangeLimit: 42c437
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 550
@@ -1231,6 +1239,7 @@ HornetMissileAA:
 		RangeLimit: 42c437
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 300
@@ -1252,7 +1261,7 @@ SAMMissile:
 	Projectile: Missile
 		MaximumLaunchSpeed: 1c512
 		MinimumLaunchSpeed: 1c512
-		Speed : 1c512
+		Speed: 1c512
 		Arm: 2
 		Blockable: false
 		Shadow: true
@@ -1264,6 +1273,7 @@ SAMMissile:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 		CloseEnough: 2c0
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150
@@ -1287,6 +1297,7 @@ HoverMRLSMissile:
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
 		CruiseAltitude: 3c548
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 250
@@ -1307,6 +1318,7 @@ HoverMRLSMissileAA:
 		Speed: 0c724
 		RangeLimit: 28c291
 		Inaccuracy: 0c724
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c1
 		Damage: 60
@@ -1336,7 +1348,7 @@ JavelinGunAA:
 		Spread: 0c181
 		Damage: 120
 		ValidTargets: Aircraft
-		
+
 JavelinGunGarrison:
 	Inherits: JavelinGun
 	Range: 11c321
@@ -1360,6 +1372,7 @@ HellfireMissile:
 		RangeLimit: 28c291
 		ContrailLength: 20
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 550
@@ -1390,6 +1403,7 @@ GuardianTowerMissile:
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		Speed: 2c486
+		TerrainHeightAware: true
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
