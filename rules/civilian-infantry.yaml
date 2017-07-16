@@ -114,6 +114,7 @@ MUTANT3:
 
 TRATOS:
 	Inherits: ^Mutant
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Valued:
 		Cost: 1
 	Tooltip:
@@ -128,13 +129,13 @@ TRATOS:
 		Speed: 90
 	RevealsShroud:
 		Range: 5c673
-	-AutoTarget:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	HitShape:
 
 OXANNA:
 	Inherits: ^Soldier
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Valued:
 		Cost: 1
 	Tooltip:
@@ -149,13 +150,13 @@ OXANNA:
 		Speed: 71
 	RevealsShroud:
 		Range: 5c673
-	-AutoTarget:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	HitShape:
 
 SLAV:
 	Inherits: ^Soldier
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Valued:
 		Cost: 1
 	Tooltip:
@@ -170,7 +171,6 @@ SLAV:
 		Speed: 71
 	RevealsShroud:
 		Range: 5c673
-	-AutoTarget:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	HitShape:
@@ -196,7 +196,7 @@ CIV1:
 
 CIV2:
 	Inherits: ^CivilianInfantry
-	-AutoTarget:
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750

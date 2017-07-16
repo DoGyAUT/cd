@@ -1,5 +1,8 @@
 VENOM:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -50,7 +53,6 @@ VENOM:
 	DetectCloaked:
 		Range: 9c921
 	RenderDetectionCircle:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -65,6 +67,9 @@ VENOM:
 
 HYDRA:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -137,7 +142,6 @@ HYDRA:
 	GrantConditionOnPrerequisite@upgrade2:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	-WithVoxelBody:
@@ -162,6 +166,9 @@ HYDRA:
 
 HAVOC:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -220,7 +227,6 @@ HAVOC:
 		ReloadCount: 8
 	DetectCloaked:
 		Range: 9c921
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -356,6 +362,11 @@ VALKYRIE.SUPPORT:
 
 RAVEN:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -442,14 +453,14 @@ RAVEN:
 		Probability: 100
 	AttackPlane:
 		FacingTolerance: 45
-	AutoTarget:
-		TargetWhenIdle: false
-		TargetWhenDamaged: false
-		EnableStances: false
 	HitShape:
 
 SCRINB:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -489,7 +500,6 @@ SCRINB:
 	Turreted:
 		TurnSpeed: 360
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -577,6 +587,9 @@ VERTIGO3:
 
 ZODIAC:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -608,7 +621,6 @@ ZODIAC:
 	Turreted:
 		TurnSpeed: 360
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	-RenderVoxels:
 	WithFacingSpriteBody:

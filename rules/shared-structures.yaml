@@ -31,6 +31,7 @@ TECH:
 TIBTECH:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Tooltip:
 		Name: Drill Station
 	Building:
@@ -47,7 +48,6 @@ TIBTECH:
 		Range: 7c73
 	ActorLostNotification:
 		Notification: CriticalStructureLost
-	AutoTargetIgnore:
 	RenderSprites:
 		Image: CGOILD
 	WithIdleOverlay@flag:
@@ -65,6 +65,7 @@ TIBTECH:
 CAHOSP:
 	Inherits: ^Building
 	Inherits@2: ^3x4hitshape
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Tooltip:
 		Name: Civilian Hospital
 	Building:
@@ -79,7 +80,6 @@ CAHOSP:
 		Range: 8c497
 	ActorLostNotification:
 		Notification: CriticalStructureLost
-	AutoTargetIgnore:
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
@@ -89,6 +89,7 @@ CAHOSP:
 CAARMR:
 	Inherits: ^Building
 	Inherits@2: ^4x4hitshape
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Tooltip:
 		Name: Civilian Armory
 	Building:
@@ -103,7 +104,6 @@ CAARMR:
 		Range: 4c248
 	ActorLostNotification:
 		Notification: CriticalStructureLost
-	AutoTargetIgnore:
 	WithIdleOverlay@flag:
 		Sequence: idle-flag
 	Capturable:

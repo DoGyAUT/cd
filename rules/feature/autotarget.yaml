@@ -1,0 +1,114 @@
+^FeatureAutotargetVehicle:
+	AutoTarget:
+	AutoTargetPriority@FeatureAutotargetVehicle:
+		ValidTargets: Vehicle
+		InvalidTargets: NoAutoTarget
+
+^FeatureAutotargetInfantry:
+	AutoTarget:
+	AutoTargetPriority@FeatureAutotargetInfantry:
+		ValidTargets: Infantry
+		InvalidTargets: NoAutoTarget
+
+^FeatureAutotargetAircraft:
+	AutoTarget:
+	AutoTargetPriority@FeatureAutotargetAircraft:
+		ValidTargets: Aircraft
+		InvalidTargets: NoAutoTarget
+
+^FeatureAutotargetBuilding:
+	AutoTarget:
+	AutoTargetPriority@FeatureAutotargetBuilding:
+		ValidTargets: Building
+		InvalidTargets: NoAutoTarget
+
+^FeatureAutotargetVehicle1:
+	Inherits: ^FeatureAutotargetVehicle
+	AutoTargetPriority@FeatureAutotargetVehicle:
+		Priority: 1
+
+^FeatureAutotargetInfantry1:
+	Inherits: ^FeatureAutotargetInfantry
+	AutoTargetPriority@FeatureAutotargetInfantry:
+		Priority: 1
+
+^FeatureAutotargetAircraft1:
+	Inherits: ^FeatureAutotargetAircraft
+	AutoTargetPriority@FeatureAutotargetAircraft:
+		Priority: 1
+
+^FeatureAutotargetBuilding1:
+	Inherits: ^FeatureAutotargetBuilding
+	AutoTargetPriority@FeatureAutotargetBuilding:
+		Priority: 1
+
+^FeatureAutotargetVehicle2:
+	Inherits: ^FeatureAutotargetVehicle
+	AutoTargetPriority@FeatureAutotargetVehicle:
+		Priority: 2
+
+^FeatureAutotargetInfantry2:
+	Inherits: ^FeatureAutotargetInfantry
+	AutoTargetPriority@FeatureAutotargetInfantry:
+		Priority: 2
+
+^FeatureAutotargetAircraft2:
+	Inherits: ^FeatureAutotargetAircraft
+	AutoTargetPriority@FeatureAutotargetAircraft:
+		Priority: 2
+
+^FeatureAutotargetBuilding2:
+	Inherits: ^FeatureAutotargetBuilding
+	AutoTargetPriority@FeatureAutotargetBuilding:
+		Priority: 2
+
+^FeatureAutotargetVehicle3:
+	Inherits: ^FeatureAutotargetVehicle
+	AutoTargetPriority@FeatureAutotargetVehicle:
+		Priority: 3
+
+^FeatureAutotargetInfantry3:
+	Inherits: ^FeatureAutotargetInfantry
+	AutoTargetPriority@FeatureAutotargetInfantry:
+		Priority: 3
+
+^FeatureAutotargetAircraft3:
+	Inherits: ^FeatureAutotargetAircraft
+	AutoTargetPriority@FeatureAutotargetAircraft:
+		Priority: 3
+
+^FeatureAutotargetBuilding3:
+	Inherits: ^FeatureAutotargetBuilding
+	AutoTargetPriority@FeatureAutotargetBuilding:
+		Priority: 3
+
+^FeatureAutotargetVehicle4:
+	Inherits: ^FeatureAutotargetVehicle
+	AutoTargetPriority@FeatureAutotargetVehicle:
+		Priority: 4
+
+^FeatureAutotargetInfantry4:
+	Inherits: ^FeatureAutotargetInfantry
+	AutoTargetPriority@FeatureAutotargetInfantry:
+		Priority: 4
+
+^FeatureAutotargetAircraft4:
+	Inherits: ^FeatureAutotargetAircraft
+	AutoTargetPriority@FeatureAutotargetAircraft:
+		Priority: 4
+
+^FeatureAutotargetBuilding4:
+	Inherits: ^FeatureAutotargetBuilding
+	AutoTargetPriority@FeatureAutotargetBuilding:
+		Priority: 4
+
+^FeatureAutotargetDontReturn:
+	AutoTarget:
+		TargetWhenIdle: false
+		TargetWhenDamaged: false
+		EnableStances: false
+
+^FeatureAutotargetHoldfireDefault:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire

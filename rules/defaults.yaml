@@ -335,7 +335,7 @@
 		Condition: cloak
 	ExternalCondition@EXTERNALCLOAKBAR:
 		Condition: cloak-bar
-	TimedConditionBar@cloakedbar: #unused atm, made for optional cloakgen change
+	TimedConditionBar@cloakedbar:
 		Condition: cloak-bar
 		Color: FF0000
 
@@ -377,7 +377,7 @@
 		Range: 4c248
 	Demolishable:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -644,6 +644,7 @@
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
 	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	CombatDebugOverlay:
 	AppearsOnRadar:
 	Building:
@@ -668,7 +669,6 @@
 	WithWallSpriteBody:
 		Type: wall
 	GivesExperience:
-	AutoTargetIgnore:
 	Sellable:
 		SellSounds: cashturn.aud
 	UpdatesPlayerStatistics:
@@ -816,7 +816,6 @@
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
 			EnergyDeath: 6
-	AutoTarget:
 	AttackMove:
 		Voice: Move
 	Passenger:
@@ -888,7 +887,6 @@
 	RevealsShroud:
 		Range: 7c73
 	MustBeDestroyed:
-
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	WithDeathAnimation:
@@ -897,6 +895,7 @@
 		CrushedPaletteIsPlayerPalette: True
 	Mobile:
 		RequiresCondition: !webdisable
+
 ^SoldierFearless:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
@@ -1407,7 +1406,6 @@
 	ThrowsShrapnel@debris:
 		Weapons: SmallDebrisCabal
 
-
 ^Vehicle:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
@@ -1789,11 +1787,11 @@
 ^Corpse:
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Health:
 		HP: 280
 	HiddenUnderFog:
 		Type: GroundPosition
-	AutoTargetIgnore:
 	Tooltip:
 		GenericName: Dead Infantry
 	HitShape:
@@ -1801,6 +1799,7 @@
 ^InfantryHusk:
 	Inherits@1: ^SpriteActor
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Aircraft:
 		RepairBuildings:
 		RearmBuildings:
@@ -1808,7 +1807,6 @@
 		HP: 280
 	HiddenUnderFog:
 		Type: GroundPosition
-	AutoTargetIgnore:
 	ScriptTriggers:
 	Tooltip:
 		GenericName: Dead Infantry
@@ -1826,6 +1824,7 @@
 
 ^AircraftHusk:
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	RenderSprites:
 	RenderVoxels:
 		PlayerPalette: cdvoxels
@@ -1849,7 +1848,6 @@
 	RevealsShroud:
 		Range: 14c146
 		Type: GroundPosition
-	AutoTargetIgnore:
 	ScriptTriggers:
 	Tooltip:
 		GenericName: Destroyed Aircraft
@@ -1897,6 +1895,10 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	DrawLineToTarget:
 	Health:
 	Mobile:
@@ -1931,8 +1933,6 @@
 	WithSpriteBody:
 	WithAttackAnimation:
 		AttackSequence: attack
-	AutoTarget:
-		ScanRadius: 6
 	HitShape:
 		Type: Circle
 			Radius: 256
@@ -2082,7 +2082,7 @@
 		Interval: 110
 	WithIdleAnimation:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -2119,7 +2119,7 @@
 	Tooltip:
 		Name: Rock
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Decoration:
 	Inherits@1: ^SpriteActor
@@ -2131,13 +2131,12 @@
 		Footprint: x
 		Dimensions: 1, 1
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 
 ^Defense:
 	Inherits@1: ^Building
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
-	AutoTarget:
 	RenderRangeCircle:
 	CanPowerDown:
 		IndicatorPalette: mouse
@@ -2239,7 +2238,7 @@
 
 ^3x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -1536
@@ -2247,7 +2246,7 @@
 
 ^2x2hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -1024
@@ -2255,7 +2254,7 @@
 
 ^1x1hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -512, -512
@@ -2263,7 +2262,7 @@
 
 ^2x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -1536
@@ -2271,7 +2270,7 @@
 
 ^2x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -2048
@@ -2279,7 +2278,7 @@
 
 ^2x5hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1024, -2560
@@ -2287,7 +2286,7 @@
 
 ^1x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -512, -1536
@@ -2295,7 +2294,7 @@
 
 ^3x1hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -512
@@ -2303,7 +2302,7 @@
 
 ^3x2hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -1024
@@ -2311,7 +2310,7 @@
 
 ^3x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -2048
@@ -2319,7 +2318,7 @@
 
 ^4x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -2560
@@ -2327,7 +2326,7 @@
 
 ^5x3hitshapewithyoffset:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2560, -3072
@@ -2335,7 +2334,7 @@
 
 ^4x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -2048
@@ -2343,7 +2342,7 @@
 
 ^3x4hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -1536, -2048
@@ -2351,7 +2350,7 @@
 
 ^4x3hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2048, -1536
@@ -2359,7 +2358,7 @@
 
 ^5x5hitshape:
 	HitShape:
-		UseOccupiedCellsOffsets: true
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			LocalYaw: 128
 			TopLeft: -2560, -2560
@@ -2443,4 +2442,3 @@
 		RequiresCondition: overload_active
 	Sellable:
 		RequiresCondition: !overload_active
-

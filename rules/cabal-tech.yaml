@@ -110,21 +110,21 @@ upgrade.combatreactors:
 	Plug:
 		Type: plug.upgrade.combatreactors
 
-upgrade.totalmeltdown:
+upgrade.mantastrike:
 	Inherits: ^KAUPGRADE
 	Tooltip:
-		Name: Total Meltdown
+		Name: Manta Strike
 	Buildable:
 		BuildPaletteOrder: 307
 		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
-		Description: Research an experimental energy bomb.
+		Description: Research a fighter aircraft which attacks everything in an area of the map.
 	Valued:
 		Cost: 3000
 	RenderSprites:
-		Image: KDRONE
+		Image: MANTA
 	Plug:
-		Type: plug.upgrade.totalmeltdown
+		Type: plug.upgrade.mantastrike
 
 upgrade.overload:
 	Inherits: ^KAUPGRADE
@@ -147,4 +147,3 @@ upgrade.overload:
 	Inherits@BasicBuilding: ^BasicBuilding
 	KillsSelf:
 		RemoveInstead: True
-
