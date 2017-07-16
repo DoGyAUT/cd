@@ -111,7 +111,7 @@ APC:
 	Buildable:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 103
-		Prerequisites: ~gaweap
+		Prerequisites: ~gaweap, ~!upgrade.st
 		Description: Armored infantry transport.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can transport infantry\n- Can attack air\n- Can swim on water\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Predator
@@ -229,7 +229,7 @@ VULTURE:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 4
-		Speed: 78
+		Speed: 85
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -285,7 +285,7 @@ GTMTNK:
 	Buildable:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 105
-		Prerequisites: ~gaweap, ~!upgrade.st
+		Prerequisites: ~gaweap, ~!upgrade.st, ~!upgrade.gdf
 		Description: Well balanced main battle tank armed with a 90mm cannon and a coaxial MG.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Archon
@@ -333,13 +333,13 @@ GTHTNK:
 	Buildable:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 105
-		Prerequisites: ~gaweap, ~upgrade.st
-		Description: Steel Talon's main battle tank armed.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
+		Prerequisites: ~gaweap, ~upgrade.gdf
+		Description: GDF's main battle tank.\n\nGood vs: Vehicles\n\nSpecial:\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Predator
 		Volume: 2
 	Mobile:
-		Speed: 78
+		Speed: 70
 		TurnSpeed: 3
 	Health:
 		HP: 1600
@@ -601,20 +601,20 @@ MMCH:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 1450
+		Cost: 1500
 	Tooltip:
 		Name: Titan
 	Buildable:
 		Queue: Vehicle.GDI
-		BuildPaletteOrder: 107
-		Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+		BuildPaletteOrder: 106
+		Prerequisites: ~gaweap, ~upgrade.st
 		Description: Steel Talon's assault mech.\n\nGood vs: Ground Targets\n\nSpecial:\n- Crush class: Heavy vehicle
 	Voiced:
 		VoiceSet: Titan
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 78
+		Speed: 80
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -635,7 +635,7 @@ MMCH:
 	WithSpriteTurret:
 		Recoils: True
 	Armament:
-		Weapon: TitanRailgun
+		Weapon: 122mmAP
 		LocalOffset: 1188,458,1485
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
