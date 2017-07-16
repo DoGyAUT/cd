@@ -88,6 +88,9 @@ NAFLAMER:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -128,7 +131,6 @@ NAFLAMER:
 		Weapon: FlamerTurretBlueFireballLauncher
 		LocalOffset: 990,-255,919
 		RequiresCondition: upgrade.bluehell
-	AutoTarget:
 	Power:
 		Amount: -50
 	WithSpriteTurret:
@@ -150,6 +152,10 @@ NAGAT:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -170,7 +176,6 @@ NAGAT:
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 85
@@ -211,6 +216,9 @@ NALASR:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -260,7 +268,6 @@ NALASR:
 		RequiresCondition: upgrade.tiblaser && !upgrade.laser
 	WithSpriteTurret:
 		Recoils: False
-	AutoTarget:
 	Power:
 		Amount: -100
 	Cloak:
@@ -274,6 +281,7 @@ NASAM:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -294,7 +302,6 @@ NASAM:
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 85
@@ -325,6 +332,10 @@ NASAM:
 NABUNKER:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -345,7 +356,6 @@ NABUNKER:
 		PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
-	AutoTarget:
 	Power:
 		Amount: 0
 	RenderDetectionCircle:
@@ -359,6 +369,9 @@ NAOBEL:
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -407,7 +420,6 @@ NAOBEL:
 		Sequence: active
 		Palette: player
 		IsPlayerPalette: True
-	AutoTarget:
 	RenderRangeCircle:
 	WithIdleOverlayAS@LIGHTS:
 		RequiresCondition: !charging
@@ -465,7 +477,6 @@ NAPULS:
 		LocalYaw: 0,100
 		MuzzleSequence: muzzle
 		MuzzlePalette: effect50alpha
-	-AutoTarget:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret

@@ -1,6 +1,9 @@
 HUSK:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 300
@@ -48,6 +51,9 @@ HUSK:
 HHUSK:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 301
@@ -93,11 +99,6 @@ HHUSK:
 CYBSPY:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
-	#Buildable:
-		#Queue: Infantry.Cabal
-		#BuildPaletteOrder: 306
-		#Prerequisites: ~cybbar, karadr
-		#Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range\n- Receives only 50% damage from fire\n- Immune to tiberium\n- Gets stunned by EMP\n- Crush class: Medium infantry
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -141,6 +142,7 @@ CYBSPY:
 JAGUAR:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -169,8 +171,6 @@ JAGUAR:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 7c73
-	AutoTarget:
-		ScanRadius: 5
 	SoundOnDamageTransition:
 		DamagedSounds: jaguar_s1.aud, jaguar_s2.aud
 	HitShape:
@@ -212,7 +212,6 @@ KENGINEER:
 		Type: building
 		ConsumeActor: true
 		PlayerExperience: 50
-	-AutoTarget:
 	-ProducibleWithLevel:
 	SoundOnDamageTransition:
 		DamagedSounds: ascentor_f1.aud, ascentor_f2.aud, ascentor_f3.aud, ascentor_f4.aud
@@ -221,6 +220,7 @@ KENGINEER:
 VANGUARD:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -273,6 +273,9 @@ VANGUARD:
 OVERSEER:
 	Inherits@1: ^HeavyCyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 306
@@ -318,6 +321,10 @@ CYBFLY:
 	Inherits@1: ^SoldierJumpjet
 	Inherits@2: ^HuskUpgrades
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -396,6 +403,9 @@ CYBFLY:
 CYC2:
 	Inherits@1: ^HeavyCyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -441,6 +451,10 @@ CYC2:
 
 GLAD:
 	Inherits@1: ^HeavyCyborg
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 6000
 	Tooltip:
@@ -509,6 +523,9 @@ GLAD:
 KAMIKAZE:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	Valued:
 		Cost: 400
 	Tooltip:

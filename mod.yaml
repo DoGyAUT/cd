@@ -5,7 +5,7 @@ Metadata:
 	Author: Astor
 
 RequiresMods:
-	ts: cd-release-20170701
+	ts: cd-release-20170715
 
 PackageFormats: Mix
 
@@ -155,6 +155,7 @@ Rules:
 	cd|rules/feature/damagemodifier.yaml
 	cd|rules/feature/deatheffect.yaml
 	cd|rules/feature/buff.yaml
+	cd|rules/feature/autotarget.yaml
 
 Weapons:
 	cd|weapons/defaultweaponclass.yaml
@@ -178,7 +179,7 @@ Sequences:
 	cd|sequences/trees.yaml
 	cd|sequences/bridges.yaml
 
-VoxelSequences:
+ModelSequences:
 	cd|sequences/voxels.yaml
 
 TileSets:
@@ -315,6 +316,8 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 	TilesetCodes:
 		TEMPERATE: t
 		SNOW: a
+
+ModelSequenceFormat: VoxelModelSequence
 
 GameSpeeds:
 	slower:

@@ -1,5 +1,8 @@
 PTEROIS:
 	Inherits: ^Helicopter
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -40,7 +43,6 @@ PTEROIS:
 	DetectCloaked:
 		Range: 9c921
 	RenderDetectionCircle:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -52,6 +54,7 @@ PTEROIS:
 
 KDRONE:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -90,7 +93,6 @@ KDRONE:
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
 		SelfReloadDelay: 5
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -198,4 +200,3 @@ MANTA:
 		Probability: 100
 	HitShape:
 	RejectsOrders:
-

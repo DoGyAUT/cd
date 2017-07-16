@@ -121,6 +121,7 @@ MantaBombardCannon:
 		ContrailLength: 30
 		ContrailWidth: 0c113
 		ContrailColor: 0080FF
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 400
@@ -240,6 +241,7 @@ HarbringerGun:
 		ContrailLength: 10
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c71
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 120
@@ -362,6 +364,7 @@ HarbingerMachal:
 		ContrailLength: 10
 		ContrailColor: 00FFFFC8
 		ContrailWidth: 0c28
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 30
@@ -439,6 +442,7 @@ PteroisMachal:
 		ContrailLength: 10
 		ContrailColor: 00FFFFC8
 		ContrailWidth: 0c28
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 60
@@ -459,11 +463,13 @@ PteroisMachal:
 
 MantaMachal:
 	Inherits@wh: ^PlasmaWH
-	ReloadDelay: 10
 	Range: 30c0
-	Burst: 1
+	Burst: 61
 	BurstDelay: 10
+	ReloadDelay: 10000
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+	FirstBurstTargetOffset: -30c0,0,0
+	FollowingBurstTargetOffset: 1c200,0,0
 	Projectile: BulletAS
 		Speed: 2c848
 		Inaccuracy: 0c724
@@ -541,6 +547,7 @@ CyborgCommandoPlasma:
 		ContrailLength: 10
 		ContrailColor: 0080FF
 		ContrailWidth: 0c35
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 350
@@ -890,6 +897,7 @@ ReaperCannon:
 		ContrailLength: 10
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c35
+		TerrainHeightAware: true
 	Range: 8c497
 	Report: tankcannon1.aud, tankcannon2.aud, tankcannon3.aud, tankcannon4.aud, tankcannon5.aud, tankcannon6.aud
 	Warhead@1Dam: SpreadDamage
@@ -1059,6 +1067,7 @@ ReaperMissile:
 		ContrailLength: 10
 		ContrailColor: 00FFFFC8
 		ContrailWidth: 0c58
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 100
@@ -1090,6 +1099,7 @@ ReaperClusterMissile:
 	ValidTargets: Ground
 	Projectile: Missile
 		RangeLimit: 5c300
+		TerrainHeightAware: true
 	Burst: 1
 	BurstDelay: 1
 	Warhead@1Dam: SpreadDamage
@@ -1102,7 +1112,7 @@ ReaperClusterMissileAA:
 	Inherits@: ReaperClusterMissile
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		
+
 ReaperMissileAA:
 	Inherits: ReaperMissile
 	ValidTargets: Aircraft
@@ -1120,7 +1130,7 @@ ReaperMissileAA:
 		AllowDirectHit: false
 		ValidImpactTypes: Air, AirHit
 		ValidTargets: Air
-		
+
 cleansingaura:
 	ValidTargets: Infantry
 	Warhead@emp: GrantExternalCondition
@@ -1212,7 +1222,7 @@ Hightensionrage3:
 	Inherits: Hightensionrage
 	Warhead@op: FireShrapnel
 		Weapon: Hightensionrage4
-		
+
 Hightensionrage4:
 	Inherits: Hightensionrage
 	Warhead@op: FireShrapnel
@@ -1273,4 +1283,3 @@ overload:
 		Duration: 1875
 		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
 		ValidStances: None, Enemy, Neutral, Ally
-

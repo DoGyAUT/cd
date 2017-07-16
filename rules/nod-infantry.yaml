@@ -3,6 +3,9 @@ NASOL:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 200
@@ -53,6 +56,10 @@ E3:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 201
@@ -106,6 +113,7 @@ E32:
 CHAMSPY:
 	Inherits@1: ^Soldier
 	Inherits@2: ^InfusionUpgrade
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
@@ -150,6 +158,7 @@ CHAMSPY:
 NDOG:
 	Inherits@1: ^SoldierFearless
 	Inherits@1: ^InfusionUpgrade
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -175,8 +184,6 @@ NDOG:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 7c73
-	AutoTarget:
-		ScanRadius: 5
 	SpawnActorOnDeath@1:
 		Actor: doggie
 		Probability: 25
@@ -221,7 +228,6 @@ NENGINEER:
 		Type: building
 		ConsumeActor: true
 		PlayerExperience: 50
-	-AutoTarget:
 	-ProducibleWithLevel:
 	SoundOnDamageTransition:
 		DamagedSounds: nodeng_f1.aud, nodeng_f2.aud, nodeng_f3.aud, nodeng_f4.aud, nodeng_f5.aud
@@ -239,6 +245,9 @@ FANATIC:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -261,8 +270,6 @@ FANATIC:
 		Armaments: Suicide
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-	AutoTarget:
-		ScanRadius: 5
 	KillsSelf:
 		RequiresCondition: Boom
 	ExternalCondition@kill:
@@ -276,6 +283,9 @@ NACAD:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 200
@@ -318,6 +328,9 @@ NCONF:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
@@ -371,6 +384,9 @@ SHADOW:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 207
@@ -421,6 +437,9 @@ BHAND:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 207
@@ -477,6 +496,9 @@ TIBTROOPER:
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
