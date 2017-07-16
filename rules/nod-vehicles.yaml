@@ -42,6 +42,9 @@ NMCV:
 NIHARV:
 	Inherits: ^VoxelTank
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -99,7 +102,6 @@ NIHARV:
 		LocalOffset: 362,0,1061
 		RequiresCondition: upgrade.tibgas
 	AttackTurreted:
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 311,0,0
@@ -325,6 +327,10 @@ SAPC1:
 BGGY:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -375,7 +381,6 @@ BGGY:
 		Range: 8c497
 	RenderDetectionCircle:
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -388,6 +393,9 @@ BGGY:
 
 GORRAN:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -426,7 +434,6 @@ GORRAN:
 		MuzzlePalette: apolra50alpha
 		RequiresCondition: upgrade.tibgas
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -447,6 +454,10 @@ GORRAN:
 BIKE:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -480,7 +491,6 @@ BIKE:
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
 	AttackFrontal:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -489,6 +499,9 @@ BIKE:
 
 CHEETAH:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -526,7 +539,6 @@ CHEETAH:
 		LocalOffset: 1202,141,849
 		RequiresCondition: upgrade.laser
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -542,6 +554,7 @@ CHEETAH:
 REPAIR:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -595,6 +608,9 @@ REPAIR:
 FTNK:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^Burningtank
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -639,7 +655,6 @@ FTNK:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
 	AttackTurreted:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -651,9 +666,12 @@ FTNK:
 		Chance: 100
 	HitShape:
 
-
 RECKONER:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -681,12 +699,14 @@ RECKONER:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-	AutoTarget:
 	HitShape:
 
 TERMITE:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -747,7 +767,6 @@ TERMITE:
 		DamageCooldown: 200
 		RequiresCondition: deployed
 	WithMuzzleOverlay:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -790,6 +809,10 @@ TERMITE:
 
 HAILSTORM:
 	Inherits@: ^VoxelVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -848,7 +871,6 @@ HAILSTORM:
 		Offset: -181,0,120
 	AttackTurreted:
 		Armaments: Primary
-	AutoTarget:
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 		Facing: -1
@@ -882,6 +904,9 @@ HAILSTORM:
 
 NHWTZ:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -938,7 +963,6 @@ NHWTZ:
 	AttackTurreted:
 		Armaments: Primary
 		RequiresCondition: deployed
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -988,6 +1012,9 @@ NHWTZ:
 SUBTANK:
 	Inherits: ^VoxelTank
 	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1048,7 +1075,6 @@ SUBTANK:
 		LocalOffset: 1188,509,424
 		RequiresCondition: !subterranean && upgrade.tibgas
 	AttackFrontal:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -1068,6 +1094,11 @@ SUBTANK:
 
 STNK:
 	Inherits: ^VoxelTank
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureAutotargetHoldfireDefault: ^FeatureAutotargetHoldfireDefault
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1117,9 +1148,6 @@ STNK:
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
 	AttackTurreted:
-	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: ReturnFire
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -1139,6 +1167,9 @@ STNK:
 AVATAR:
 	Inherits@1: ^Walker
 	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1176,7 +1207,6 @@ AVATAR:
 	BodyOrientation:
 		QuantizedFacings: 8
 	AttackFrontal:
-	AutoTarget:
 	Armament@primary:
 		Weapon: AvatarLaser
 		LocalOffset: 990,509,2121
@@ -1203,6 +1233,10 @@ AVATAR:
 MONTAUK:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 8000
 	Tooltip:
@@ -1234,7 +1268,6 @@ MONTAUK:
 		LocalOffset: 919,283,724, 919,-283,724
 		RequiresCondition: !deployed
 	AttackFrontal:
-	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:

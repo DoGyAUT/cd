@@ -108,6 +108,7 @@ GorranMissile:
 		ContrailLength: 15
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 225
@@ -137,6 +138,7 @@ RavenMissile:
 		ContrailLength: 40
 		ContrailColor: FF9000
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 300
@@ -172,6 +174,7 @@ RavenMissileAA:
 		ContrailLength: 40
 		ContrailColor: FF9000
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 400
@@ -185,6 +188,7 @@ BluehellRavenMissile:
 		ContrailLength: 10
 		ContrailColor: 0096D2
 		ContrailWidth: 0c35
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 500
@@ -204,6 +208,7 @@ TiberiumRavenMissile:
 		ContrailLength: 10
 		ContrailColor: 008000
 		ContrailWidth: 0c35
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 400
@@ -220,6 +225,7 @@ TiberiumRavenMissileAA:
 		ContrailLength: 10
 		ContrailColor: 008000
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
 		Damage: 400
@@ -237,6 +243,7 @@ BluehellRavenMissileAA:
 		ContrailLength: 10
 		ContrailColor: 0096D2
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 500
@@ -709,6 +716,7 @@ MultiCluster:
 		HorizontalRateOfTurn: 8
 		RangeLimit: 28c291
 		Palette: ra
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 65
@@ -854,6 +862,7 @@ ShadowTrooperEnchancedLaser:
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidImpactTypes: Air, AirHit
+
 ConfessorGrenade:
 	Inherits: ^ShellAP
 	Inherits@wh: ^HEWH
@@ -1211,6 +1220,7 @@ BansheeSpecial:
 		ContrailLength: 20
 		ContrailWidth: 0c35
 		Image: TORPEDO
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 450
@@ -1868,6 +1878,7 @@ BikeMissile:
 		HorizontalRateOfTurn: 8
 		MaximumLaunchSpeed: 0c301
 		Palette: effect
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 120
@@ -1897,6 +1908,7 @@ StealthTankMissile:
 		MinimumLaunchSpeed: 0c301
 		Speed: 0c543
 		Inaccuracy: 0c724
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
@@ -1919,6 +1931,7 @@ StealthTankMissileEMP:
 		ContrailLength: 20
 		ContrailColor: C8C8FF
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
@@ -1948,6 +1961,7 @@ StealthTankMissileAA:
 		Speed: 0c543
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 120
@@ -1970,6 +1984,7 @@ HailstormMissile:
 		MaximumLaunchAngle: 192
 		CruiseAltitude: 3c548
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c416
 		Damage: 60
@@ -1991,6 +2006,7 @@ HailstormMissileAA:
 		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
@@ -2003,6 +2019,7 @@ HailstormMissileGas:
 		ContrailLength: 30
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c416
 		Damage: 68
@@ -2022,6 +2039,7 @@ HailstormMissileGasAA:
 		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 200
@@ -2042,6 +2060,7 @@ HavocMissiles:
 		Inaccuracy: 1c424
 		HorizontalRateOfTurn: 8
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 150
@@ -2057,6 +2076,7 @@ HavocMissilesTibGas:
 		ContrailLength: 10
 		ContrailColor: 00FF64
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 240
@@ -2093,6 +2113,7 @@ HydraMissiles:
 		Inaccuracy: 0c362
 		HorizontalRateOfTurn: 8
 		RangeLimit: 28c291
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 100
@@ -2123,6 +2144,7 @@ HydraGasMissiles:
 		ContrailLength: 10
 		ContrailColor: 00FF64
 		ContrailWidth: 0c21
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
 		Damage: 120
@@ -2145,9 +2167,9 @@ SAMSiteMissile:
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
-        MaximumLaunchSpeed: 1c512
-        MinimumLaunchSpeed: 1c512
-        Speed : 1c512
+		MaximumLaunchSpeed: 1c512
+		MinimumLaunchSpeed: 1c512
+		Speed: 1c512
 		Arm: 2
 		Blockable: false
 		Shadow: true
@@ -2156,6 +2178,7 @@ SAMSiteMissile:
 		HorizontalRateOfTurn: 8
 		RangeLimit: 42c437
 		CloseEnough: 2c0
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150

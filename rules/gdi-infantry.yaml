@@ -1,5 +1,8 @@
 GASOL:
 	Inherits: ^Soldier
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 100
@@ -48,6 +51,10 @@ GASOL:
 
 GMISINF:
 	Inherits: ^Soldier
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 102
@@ -84,6 +91,9 @@ GMISINF:
 
 E2:
 	Inherits: ^Soldier
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 108
@@ -175,6 +185,7 @@ SCOUT:
 
 GDOG:
 	Inherits: ^SoldierFearless
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -200,8 +211,6 @@ GDOG:
 	DetectCloaked:
 		Range: 7c73
 	RenderDetectionCircle:
-	AutoTarget:
-		ScanRadius: 6
 	SpawnActorOnDeath@1:
 		Actor: doggie
 		Probability: 50
@@ -244,12 +253,12 @@ ENGINEER:
 		Type: building
 		ConsumeActor: true
 		PlayerExperience: 50
-	-AutoTarget:
 	-ProducibleWithLevel:
 	HitShape:
 
 MEDIC:
 	Inherits: ^Soldier
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -282,8 +291,6 @@ MEDIC:
 		DefaultAttackSequence: heal
 	SelfHealing:
 		Delay: 10
-	AutoTarget:
-		ScanRadius: 5
 	Passenger:
 		PipType: Red
 		CargoType: Infantry
@@ -300,6 +307,9 @@ MEDIC:
 
 ZMARINE:
 	Inherits: ^SoldierFearless
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 101
@@ -349,6 +359,9 @@ ZMARINE:
 
 ZTROOPER:
 	Inherits: ^SoldierFearlessHeavy
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 108
@@ -395,6 +408,10 @@ ZTROOPER:
 
 ZRAIDER:
 	Inherits: ^SoldierFearlessHeavy
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 109
@@ -442,6 +459,9 @@ ZRAIDER:
 
 ZCOMMANDO:
 	Inherits: ^SoldierFearlessHeavy
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 2000
 	Tooltip:

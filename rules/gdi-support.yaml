@@ -90,6 +90,9 @@ GAMG:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	WithSpriteBody:
 	Valued:
 		Cost: 600
@@ -110,7 +113,6 @@ GAMG:
 		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 212,0,-141
@@ -155,6 +157,9 @@ GAMG2:
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -175,7 +180,6 @@ GAMG2:
 		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 212,0,-141
@@ -248,6 +252,9 @@ GASENTUR:
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	WithSpriteBody:
 	Valued:
 		Cost: 600
@@ -272,7 +279,6 @@ GASENTUR:
 	DetectCloaked:
 		Range: 12c745
 		CloakTypes: Cloak, Underground
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 240,0,-141
@@ -307,6 +313,7 @@ GAMIS:
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -327,7 +334,6 @@ GAMIS:
 		Range: 12c745
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 212,0,-141
@@ -361,6 +367,9 @@ GACAN:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -381,7 +390,6 @@ GACAN:
 		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: 212,0,-141
@@ -419,6 +427,9 @@ GAMORTAR:
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	WithSpriteBody:
 	Valued:
 		Cost: 1500
@@ -439,7 +450,6 @@ GAMORTAR:
 		Range: 11c321
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted:
 		TurnSpeed: 10
 		Offset: -141,0,283
@@ -477,6 +487,9 @@ FTWR:
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	WithSpriteBody:
 	Valued:
 		Cost: 1000
@@ -496,7 +509,6 @@ FTWR:
 		Range: 14c146
 	BodyOrientation:
 		QuantizedFacings: 32
-	AutoTarget:
 	Turreted@cannon:
 		TurnSpeed: 6
 		Offset: 150,0,-100
@@ -558,6 +570,10 @@ GAFORT:
 	Inherits: ^Defense
 	Inherits@2: ^4x4hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -587,7 +603,6 @@ GAFORT:
 		MaxWeight: 12
 		PipCount: 12
 		Types: Infantry
-	AutoTarget:
 	AttackGarrisoned:
 		Armaments: garrisoned
 		PortOffsets: 543,0,181, 317,-482,181, -317,-482,181, -543,0,181, -317,482,181, 317,482,181

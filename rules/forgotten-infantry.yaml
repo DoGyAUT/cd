@@ -140,8 +140,6 @@ FENGINEER:
 		ConsumeActor: true
 		PlayerExperience: 50
 	-ProducibleWithLevel:
-	AutoTarget:
-		ScanRadius: 5
 	SoundOnDamageTransition:
 		DamagedSounds: mechanic_f1.aud, mechanic_f2.aud, mechanic_f3.aud
 	HitShape:
@@ -238,8 +236,6 @@ FDOG:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 7c73
-	AutoTarget:
-		ScanRadius: 5
 	SpawnActorOnDeath@1:
 		Actor: doggie
 		Probability: 25
@@ -312,7 +308,6 @@ MHIJACK:
 	Captures:
 		CaptureTypes: Vehicle
 		PlayerExperience: 50
-	-AutoTarget:
 	Cloak@self:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -355,8 +350,6 @@ GOON:
 		Weapon: GoonHammer2
 		LocalOffset: 0,0,0
 	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 6
 	SoundOnDamageTransition:
 		DamagedSounds: goon_f1.aud, goon_f2.aud, goon_f3.aud, goon_f4.aud, goon_f5.aud
 	GrantConditionOnDamageState:
