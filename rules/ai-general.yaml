@@ -1,6 +1,7 @@
 Player:
 	HackyAI@EasyAI:
 		Name: Easy AI
+		Type: EasyAI
 		MinimumExcessPower: 10
 		BuildingQueues: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
 		DefenseQueues: Defense.GDI, Defense.Nod, Defense.Cabal, Defense.Forg, Defense.Scrin
@@ -341,9 +342,9 @@ Player:
 				Attractiveness: 1
 				TargetMetric: Value
 				CheckRadius: 5c0
-		Type: Easy AI
 	HackyAI@NormalAI:
 		Name: Normal AI
+		Type: NormalAI
 		MinimumExcessPower: 10
 		BuildingQueues: Building.GDI, Building.Nod, Building.Cabal, Building.Forg, Building.Scrin, Tech.GDI, Tech.Nod, Tech.Cabal, Tech.Forg
 		DefenseQueues: Defense.GDI, Defense.Nod, Defense.Cabal, Defense.Forg, Defense.Scrin
@@ -684,4 +685,3 @@ Player:
 				Attractiveness: 1
 				TargetMetric: Value
 				CheckRadius: 5c0
-		Type: Normal AI

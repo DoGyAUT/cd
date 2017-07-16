@@ -463,11 +463,13 @@ PteroisMachal:
 
 MantaMachal:
 	Inherits@wh: ^PlasmaWH
-	ReloadDelay: 10
 	Range: 30c0
-	Burst: 1
+	Burst: 61
 	BurstDelay: 10
+	ReloadDelay: 10000
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+	FirstBurstTargetOffset: -30c0,0,0
+	FollowingBurstTargetOffset: 1c200,0,0
 	Projectile: BulletAS
 		Speed: 2c848
 		Inaccuracy: 0c724
