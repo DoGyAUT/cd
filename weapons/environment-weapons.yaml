@@ -68,47 +68,68 @@ Tiberium:
 		Falloff: 100, 0
 		Spread: 7c73
 		DamageTypes: Repair
+		ValidStances: Ally
 	Warhead@Condition: GrantExternalCondition
 		Condition: FeatureBuffRepair
-		Spread: 7c73
+		Range: 7c73
 		Duration: 1
+		ValidStances: Ally
 
 ^GlobalRepair:
-	Warhead@Damage: SpreadDamage
-		Falloff: 100, 0
-		Spread: 1000000c0
+	ReloadDelay: 1
+	Warhead@Global: GlobalExplodeWeapon
+		ValidStances: Ally
+		Weapon: ^GlobalRepair1
+
+^GlobalRepair1:
+	Warhead@Damage: TargetDamage
+		ValidStances: Ally
 	Warhead@Condition: GrantExternalCondition
 		Condition: FeatureBuffRepair
-		Spread: 1000000c0
+		Range: 0c0
+		Duration: 1
+		ValidStances: Ally
 
 RepairInfantry:
 	ReloadDelay: 10
 	Inherits: ^Repair
-	Warhead@Damage: SpreadDamage
+	Warhead@Damage:
 		ValidTargets: Infantry
 		Spread: 4c248
 		Damage: -5
-	Warhead@Condition: GrantExternalCondition
+	Warhead@Condition:
 		ValidTargets: Infantry
-		Spread: 4c248
+		Range: 4c248
 		Duration: 10
 
 RepairCyborg:
 	Inherits: ^Repair
-	Warhead@Damage: SpreadDamage
+	Warhead@Damage:
 		ValidTargets: Cyborg
 		Damage: -4
-	Warhead@Condition: GrantExternalCondition
+	Warhead@Condition:
 		ValidTargets: Cyborg
 
 RepairVehicle:
 	Inherits: ^Repair
-	Warhead@Damage: SpreadDamage
+	Warhead@Damage:
 		ValidTargets: Vehicle
 		Damage: -4
-	Warhead@Condition: GrantExternalCondition
+	Warhead@Condition:
 		ValidTargets: Vehicle
 
 RepairInfantryGlobal:
-	Inherits: RepairInfantry
-	Inherits@GlobalRepair: ^GlobalRepair
+	ReloadDelay: 10
+	Inherits: ^GlobalRepair
+	Warhead@Global:
+		Weapon: RepairInfantryGlobal1
+
+RepairInfantryGlobal1:
+	Inherits: ^GlobalRepair1
+	Warhead@Damage:
+		ValidTargets: Infantry
+		Damage: -5
+	Warhead@Condition:
+		ValidTargets: Infantry
+		Duration: 10
+
