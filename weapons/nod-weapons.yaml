@@ -904,7 +904,7 @@ VertigoBombGas:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
-		Damage: 2000
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
 		ExplosionPalette: tiberiumbomb50
@@ -961,7 +961,7 @@ VertigoBombNapalm:
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
 		Weapon: NapalmShrapnel
-		Amount: 40
+		Amount: 30
 		AimChance: 0
 
 VertigoBombBlueNapalm:
@@ -970,7 +970,7 @@ VertigoBombBlueNapalm:
 		Damage: 600
 	WarheadAS: FireShrapnel
 		Weapon: BlueNapalmShrapnel
-		Amount: 40
+		Amount: 35
 		AimChance: 0
 
 VertigoBombSeismic:
@@ -1076,7 +1076,7 @@ NapalmShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 100
+		Damage: 75
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
 		ImpactSounds: flamtnk1.aud
@@ -1097,7 +1097,7 @@ BlueNapalmShrapnel:
 	Inherits: NapalmShrapnel
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 135
+		Damage: 100
 	WarheadAS: SpawnActor
 		Range: 3
 		Actors: BFire1, BFire1, BFire1
@@ -1122,7 +1122,7 @@ TiberiumProtonShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 200
+		Damage: 120
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
 		ImpactSounds: scrin5b.aud

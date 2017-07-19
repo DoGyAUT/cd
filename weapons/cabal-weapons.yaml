@@ -952,13 +952,26 @@ ShockwaveTeslaSplash:
 	-Warhead@op: FireShrapnel
 	-Report:
 
+ShockwaveTeslaOverlord:
+	Inherits: ShockwaveTesla
+	Burst: 2
+	Warhead@1Dam: SpreadDamage
+		Damage: 7
+		Versus:
+			Building: 15
+	Warhead@op: FireShrapnel
+		Weapon: ShockwaveTeslaSplash
+		Amount: 2
+		AimChance: 75
+		AllowDirectHit: false
+
 PowerplantOverload:
 	ReloadDelay: 1
 	Range: 6c11
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Projectile: InstantExplode
 	Warhead@shrapnel: FireShrapnel
-		Weapon: ShockwaveTesla
+		Weapon: ShockwaveTeslaOverlord
 		Amount: 1
 		AimChance: 0
 		AllowDirectHit: false
@@ -1272,13 +1285,13 @@ Hightensionrage11:
 overload:
 	ValidTargets: Building
 	Warhead@overload_active: GrantExternalCondition
-		Range: 8c0
+		Range: 3c0
 		Condition: overload_active
 		Duration: 500
 		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
 		ValidStances: None, Enemy, Neutral, Ally
 	Warhead@overload_disable: GrantExternalCondition
-		Range: 8c0
+		Range: 3c0
 		Condition: overload_disable
 		Duration: 875
 		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir

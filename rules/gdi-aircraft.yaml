@@ -294,6 +294,7 @@ GUNNER:
 
 ORCA_G:
 	Inherits: ^Plane
+	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -324,6 +325,7 @@ ORCA_G:
 
 OXBOMBER:
 	Inherits: ^AttackPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	RenderSprites:
 		Image: orca_oxtran
 	RenderVoxels:
@@ -347,7 +349,7 @@ OXBOMBER:
 	Armament:
 		Weapon: SonicBomb
 	AmmoPool:
-		Ammo: 6
+		Ammo: 30
 		PipCount: 0
 		ReloadCount: 5
 		ReloadDelay: 50
@@ -366,6 +368,7 @@ OXBOMBER:
 
 ORCA_B:
 	Inherits: ^AttackPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -404,6 +407,7 @@ ORCA_B:
 
 ARTILLERY_BEACON:
 	Inherits: ^AttackPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -655,6 +659,7 @@ CONDOR:
 
 DSHP.SUPPORT:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 800
 	Tooltip:
