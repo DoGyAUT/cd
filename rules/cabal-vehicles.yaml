@@ -393,78 +393,47 @@ TARANTULA:
 SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
-	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@CabalUpgrades: ^CabalUpgrades
-	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
-	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
-	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft4
 	Valued:
-		Cost: 3000
+		Cost: 500
 	Tooltip:
 		Name: Helion
 	Selectable:
 		Bounds: 42,42, 0, -5
 		Class: Helion
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 302
+		Prerequisites: ~kaweap, ~!t1
+		Description: Troop transporter capable of crossing water.\n\nSpecial:\n- Can swim on water\n- Crush class: light vehicle
 	Voiced:
 		VoiceSet: Husk
 		Volume: 2
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 300
-	RevealsShroud@cruising:
-		Range: 10c0
-		Type: CenterPosition
-		RequiresCondition: airborne && !upgrade.visionuplink
-	RevealsShroud@upgrade.visionuplink_airborne:
-		RequiresCondition: upgrade.visionuplink && airborne
-		Range: 12c0
-	RevealsShroud@ground:
-		Range: 3c0
-		Type: CenterPosition
-		RequiresCondition: !airborne && !upgrade.visionuplink
-	RevealsShroud@upgrade.visionuplink_ground:
-		RequiresCondition: upgrade.visionuplink && !airborne
-		Range: 5c0
-	Armament@primary:
-		Weapon: HelionGun
-		LocalOffset: -362,362,724, -362,-362,724
-		MuzzleSequence: muzzle
-		MuzzlePalette: effect50alpha
-		RequiresCondition: !empdisable
-	AttackFrontal:
-	WithMuzzleOverlay:
-		RequiresCondition: !airborne
-	ReloadArmamentsBar:
-		Color: 0000FF
+		HP: 500
+	Cargo:
+		Types: Infantry
+		MaxWeight: 7
+		PipCount: 7
+		EjectOnDeath: False
 	RenderSprites:
 	RenderVoxels:
-	RenderRangeCircle@max:
-	RenderRangeCircle@min:
-		RangeCircleMode: Minimum
-		Color: FF000080
 	WithVoxelBody:
+	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
+		Range: 10c321
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 14c321
 	-ThrowsShrapnel@human:
-	GrantConditionOnDeploy:
-		DeployedCondition: shouldLand
-		CanDeployOnRamps: True
-		AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-	Aircraft:
-		CruiseAltitude: 5c673
-		AltitudeVelocity: 0c362
-		Speed: 141
-		TurnSpeed: 10
-		CanHover: True
-		LandWhenIdle: False
-		LandOnCondition: shouldLand
-		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-		AirborneCondition: airborne
-		CruisingCondition: cruising
-	-Mobile:
-	-LeavesTrails@ground:
-	-LeavesTrails@water:
-	-GrantConditionOnTerrain@Veins:
-	-WithIdleOverlay@Veins:
+	Mobile:
+		TurnSpeed: 5
+		Speed: 80
+	LeavesTrails@ground:
+	LeavesTrails@water:
+	GrantConditionOnTerrain@Veins:
+	WithIdleOverlay@Veins:
 	HiddenUnderFog:
 		Type: GroundPosition
 	HitShape:
