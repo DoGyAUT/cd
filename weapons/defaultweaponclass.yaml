@@ -77,11 +77,11 @@ BlueFireballLauncher:
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: tiny_flash
 		ExplosionPalette: light2
@@ -101,11 +101,11 @@ BlueFireballLauncher:
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: tiny_flash
 		ExplosionPalette: light2
@@ -139,20 +139,20 @@ BlueFireballLauncher:
 		Explosions: small_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -184,15 +184,15 @@ BlueFireballLauncher:
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light2
@@ -218,12 +218,12 @@ BlueFireballLauncher:
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 	Warhead@5Eff: CreateEffect
@@ -251,12 +251,12 @@ BlueFireballLauncher:
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 	Warhead@5Eff: CreateEffect
@@ -289,12 +289,12 @@ BlueFireballLauncher:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -460,4 +460,4 @@ BlueFireballLauncher:
 		Explosions: large_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water

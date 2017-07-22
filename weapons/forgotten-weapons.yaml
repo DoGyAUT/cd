@@ -18,12 +18,12 @@ ScoundrelGrenade:
 		Explosions: medium_brnl, small_brnl
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@4Eff: CreateEffect
@@ -70,7 +70,7 @@ HuntressGun:
 		Damage: 1
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 ScoundrelGun:
 	Inherits: ^Bullet
@@ -144,7 +144,7 @@ BisonLauncher:
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 GriffinMG:
 	Inherits: ^APBullet
@@ -160,11 +160,11 @@ GriffinMG:
 		Damage: 50
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 AssaultTruckMG:
 	Inherits: ^Bullet
@@ -182,7 +182,7 @@ AssaultTruckMG:
 		Damage: 40
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 BuzzardGattlingCannonAttack:
 	Inherits: GattlingCannonAttack
@@ -228,7 +228,7 @@ BisonMG:
 		Damage: 7
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 TaurusMG:
 	Inherits: ^Bullet
@@ -250,7 +250,7 @@ TaurusMG:
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 WatchTowerMG:
 	Inherits: ^Bullet
@@ -268,7 +268,7 @@ WatchTowerMG:
 		Damage: 30
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 ForgHECannon:
 	Inherits: ^ShellHE
@@ -295,14 +295,14 @@ ForgHECannon:
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piffs
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 GriffinAutocannon:
 	Inherits: ForgHECannon
@@ -339,12 +339,12 @@ BuggyFlak:
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 FlakCannon:
 	Inherits: ^ShellHE
@@ -371,12 +371,12 @@ FlakCannon:
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo04.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 BuggyMortar:
 	Inherits: ^ShellHE
@@ -401,7 +401,7 @@ BuggyMortar:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 GremlinMortar:
 	Inherits: ^ShellHE
@@ -426,7 +426,7 @@ GremlinMortar:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 AurochMortar:
 	Inherits: ^ShellHE
@@ -473,7 +473,7 @@ RagnarokCannon:
 		Explosions: fireexpl
 		ExplosionPalette: effect
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 
@@ -588,7 +588,7 @@ BountyHunterBazooka:
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 GeckoLauncherBarrage:
 	Inherits: ^MissileAPHE
@@ -615,10 +615,10 @@ GeckoLauncherBarrage:
 		Explosions: small_tumu, medium_tumu, large_tumu
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -646,10 +646,10 @@ ForgottenT3Missile:
 		Explosions: small_tumu, medium_tumu, large_tumu
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -744,17 +744,17 @@ BuzzardMissiles:
 		Explosions: small_bang
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 BuzzardHErocket:
 	Inherits: ^RocketHE
@@ -794,17 +794,17 @@ StrikerMissiles:
 		Explosions: small_bang
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft

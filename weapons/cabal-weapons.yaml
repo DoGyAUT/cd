@@ -31,7 +31,7 @@ OverseerGun:
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 PlasmaVortexCannon:
 	ReloadDelay: 100
@@ -131,12 +131,12 @@ MantaBombardCannon:
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@6Eff: CreateEffect
@@ -177,12 +177,12 @@ HelionGun:
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@6Eff: CreateEffect
@@ -214,7 +214,7 @@ KronosCannon:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: LargeScorch
@@ -251,12 +251,12 @@ HarbringerGun:
 		Explosions: protonexpl_med
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@5Eff: CreateEffect
@@ -295,7 +295,7 @@ PlasmaBlasterGun:
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -330,12 +330,12 @@ CannonHuskGun:
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@5Eff: CreateEffect
@@ -373,12 +373,12 @@ HarbingerMachal:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -409,12 +409,12 @@ DroneMachal:
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -451,12 +451,12 @@ PteroisMachal:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -488,7 +488,7 @@ MantaMachal:
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -519,12 +519,12 @@ CommandoLaserFire:
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -557,12 +557,12 @@ CyborgCommandoPlasma:
 		Explosions: plasmaexp01
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@5Eff: CreateEffect
@@ -594,7 +594,7 @@ CabalObeliskLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: LargeScorch
@@ -626,12 +626,12 @@ CabalObeliskLaserAA:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffAir: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -640,8 +640,7 @@ CabalObeliskLaserAA:
 		Amount: 4
 		AimChance: 50
 		AllowDirectHit: false
-		ValidImpactTypes: Air, AirHit
-		ValidTargets: Air
+		ValidTargets: Aircraft
 
 CabalObeliskLaserAASplash:
 	Inherits: CabalObeliskLaserAA
@@ -679,7 +678,7 @@ TarantulaLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
@@ -716,12 +715,12 @@ TarantulaLaserAA:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffAir: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 	Warhead@4Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -749,7 +748,7 @@ SabercutTesla:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_emp
 		ExplosionPalette: apolcyan
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -800,10 +799,10 @@ SkirmisherLaserFire:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
-		InvalidImpactTypes: Air, AirHit, Water
+		InvalidTargets: Aircraft
 
 SkirmisherLaserFireAA:
 	Inherits: SkirmisherLaserFire
@@ -841,10 +840,10 @@ HarbingerLaserFire:
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
-		InvalidImpactTypes: Air, AirHit, Water
+		InvalidTargets: Aircraft, Water
 
 GargantuaLaser:
 	Inherits: ^BasicLaser
@@ -873,11 +872,11 @@ GargantuaLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: LargeScorch
-		InvalidImpactTypes: Air, AirHit, Water
+		InvalidTargets: Aircraft, Water
 
 ReaperCannon:
 	Inherits: ^ShellAP
@@ -928,7 +927,7 @@ ShockwaveTesla:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_emp
 		ExplosionPalette: apolcyan
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -1076,12 +1075,12 @@ ReaperMissile:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@3Eff: CreateEffect
 		Explosions: small_emp
 		ExplosionPalette: apolcyan
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
@@ -1128,8 +1127,7 @@ ReaperMissileAA:
 		Amount: 4
 		AimChance: 75
 		AllowDirectHit: false
-		ValidImpactTypes: Air, AirHit
-		ValidTargets: Air
+		ValidTargets: Aircraft
 
 cleansingaura:
 	ValidTargets: Infantry
@@ -1167,7 +1165,7 @@ Hightensionbomb:
 		AimChance: 75
 		AllowDirectHit: true
 		AimTargetStances: Enemy
-		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+		ValidTargets: Ground
 
 Hightensionrage:
 	Inherits: ^BasicLaser
@@ -1199,14 +1197,14 @@ Hightensionrage:
 		AimChance: 30
 		AllowDirectHit: false
 		AimTargetStances: Enemy
-		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+		ValidTargets: Ground
 	Warhead@opx: FireShrapnel
 		Weapon: SabercutTeslaSplash
 		Amount: 4
 		AimChance: 65
 		AllowDirectHit: false
 		AimTargetStances: Enemy
-		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+		ValidTargets: Ground
 
 Hightensionrage1:
 	Inherits: Hightensionrage
@@ -1275,11 +1273,11 @@ overload:
 		Range: 8c0
 		Condition: overload_active
 		Duration: 500
-		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidTargets: Ground, Aircraft
 		ValidStances: None, Enemy, Neutral, Ally
 	Warhead@overload_disable: GrantExternalCondition
 		Range: 8c0
 		Condition: overload_disable
 		Duration: 875
-		ValidTargets: Infantry, Mutant, Cyborg, HeavyInfantry, HeavyCyborg, Goon, Ground, Air, MidAir, HighAir
+		ValidTargets: Ground, Aircraft
 		ValidStances: None, Enemy, Neutral, Ally
