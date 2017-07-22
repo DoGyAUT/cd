@@ -50,6 +50,8 @@ beacon:
 	circles: ring
 		Length: 12
 		BlendMode: Additive
+	kodiak: kodiakicon
+		Offset: 0,-42
 	artystrike: artystrikeicon
 		Offset: 0,-42
 	orcaoxbomber: orca_oxicon
@@ -926,6 +928,7 @@ icon:
 	crapjet: crapjeticon
 	orcabomber: orca_bicon
 	orcaoxbomber: orca_oxicon
+	kodiak: kodiakicon
 	orcascout: orca_gicon
 	fenzy: nodfenzyicon
 	fortification: forticon
@@ -1608,3 +1611,23 @@ dig:
 		Length: *
 		ZOffset: 511
 		Offset: 0, 0, 24
+
+hellfire:
+	idle:
+		Length: 1
+		Facings: 32
+
+tibstick:
+    Defaults:
+        Offset: 0, -18 #hier nochmal ingame überprüfen und ggf anpasen
+        UseTilesetCode: false
+    idle:
+    damaged-idle:
+    dead:
+        Tick: 400
+    emp-overlay: emp_fx01
+        Length: *
+        Offset: 0, 0, 25
+        UseTilesetCode: false
+        ZOffset: 512
+        BlendMode: Additive

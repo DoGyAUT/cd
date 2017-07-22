@@ -466,6 +466,27 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+	AirstrikePower@HellfireMissilesStrikePower:
+		Prerequisites: garadr, upgrade.gdf
+		Icon: kodiak
+		OrderName: HellfireMissilesStrikePowerInfoOrder
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: A huge Rocketbombardment
+		LongDesc: Deploy a bombardment of an Kodiak Battleship.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: predator_a8.aud
+		EndChargeSound: predator_m2.aud
+		LaunchSound: predator_a10.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: hellfire_beacon
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: kodiak
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 
 GAHPAD:
 	Inherits: ^Building
