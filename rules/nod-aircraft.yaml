@@ -1,5 +1,6 @@
 VENOM:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -67,6 +68,7 @@ VENOM:
 
 HYDRA:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -238,6 +240,7 @@ HAVOC:
 
 NODCARRY:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -281,7 +284,6 @@ NODCARRY:
 
 NODCARRY.SUPPORT:
 	Inherits: NODCARRY
-	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	-Buildable:
 	Valued:
 		Cost: 650
@@ -322,7 +324,6 @@ NODCARRY.SUPPORT:
 
 VALKYRIE.SUPPORT:
 	Inherits: ^Helicopter
-	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -364,6 +365,7 @@ VALKYRIE.SUPPORT:
 
 RAVEN:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
@@ -459,6 +461,7 @@ RAVEN:
 
 SCRINB:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
@@ -512,7 +515,6 @@ SCRINB:
 
 VERTIGO:
 	Inherits: ^AttackPlane
-	Inherits@FeatureTargettype: ^FeatureTargettypeFloraAir
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -590,6 +592,7 @@ VERTIGO3:
 
 ZODIAC:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
