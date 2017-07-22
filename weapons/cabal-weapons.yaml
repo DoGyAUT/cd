@@ -1141,7 +1141,6 @@ cleansingaura:
 		ValidStances: None, Enemy, Neutral, Ally
 
 Hightensionbomb:
-	Inherits: MantaMachal
 	ReloadDelay: 10
 	Range: 1c100
 	Burst: 1
@@ -1168,6 +1167,19 @@ Hightensionbomb:
 		AllowDirectHit: true
 		AimTargetStances: Enemy
 		ValidTargets: Infantry, Vehicle, Building, Ground, Wall
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexp02
+		ExplosionPalette: effect50alpha
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: swave
+		ExplosionPalette: swave
+	Warhead@7Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
 
 Hightensionrage:
 	Inherits: ^BasicLaser
