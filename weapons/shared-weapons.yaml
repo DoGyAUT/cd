@@ -45,7 +45,7 @@ UnitExplodeEpic:
 		Explosions: ionring
 		ExplosionPalette: effect50alpha
 		ImpactSounds: ion1.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 PyradonExplosion:
 	Warhead@1Dam: SpreadDamage
@@ -197,7 +197,7 @@ UnitExplodeCyborg:
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@4Eff: CreateEffect
@@ -734,7 +734,7 @@ WatchSniper:
 		Damage: 250
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 CivilianPistol:
 	Inherits: ^Bullet
@@ -770,7 +770,7 @@ RPGTower:
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 UmagonSniper:
 	Inherits: ^Bullet
@@ -820,7 +820,7 @@ FiendShard:
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 FiendShardGreen:
 	Inherits@wh: ^TiberiumWH
@@ -845,11 +845,11 @@ FiendShardGreen:
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 FiendShardBlue:
 	Inherits@wh: ^TiberiumWH
@@ -873,11 +873,11 @@ FiendShardBlue:
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 FiendShardRed:
 	Inherits@wh: ^TiberiumWH
@@ -900,11 +900,11 @@ FiendShardRed:
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 FiendShardPurple:
 	Inherits@wh: ^TiberiumWH
@@ -928,11 +928,11 @@ FiendShardPurple:
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 SlimeAttack:
 	Inherits@wh: ^TiberiumWH

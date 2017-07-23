@@ -67,7 +67,7 @@ KDRONE:
 	Aircraft:
 		MaximumPitch: 90
 		TurnSpeed: 4
-		Speed: 339
+		Speed: 200
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
@@ -108,13 +108,7 @@ KDRONE1:
 	AttackBomber:
 	-AttackTurreted:
 	-Turreted:
-	AmmoPool:
-		Ammo: 1
-		PipCount: 1
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 250
+	-AmmoPool:
 	Armament@primary:
 		Weapon: Hightensionbomb
 	RenderVoxels:

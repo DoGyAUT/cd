@@ -405,8 +405,8 @@ GAARMORY:
 		OrderName: ArtilleryStrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.gdf
 		Icon: artystrike
-		ChargeTime: 270
-		QuantizedFacings: 8
+		ChargeTime: 330
+		QuantizedFacings: 2
 		Description: Artillery Strike
 		LongDesc: Call an artillery strike to the designated position.
 		SelectTargetSpeechNotification: SelectTarget
@@ -426,8 +426,8 @@ GAARMORY:
 		OrderName: OrcaBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.st
 		Icon: orcabomber
-		ChargeTime: 240
-		QuantizedFacings: 8
+		ChargeTime: 360
+		QuantizedFacings: 2
 		Description: Orca Bombing run
 		LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
 		SelectTargetSound: orca_s5.aud
@@ -448,8 +448,8 @@ GAARMORY:
 		OrderName: OXBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.zc
 		Icon: orcaoxbomber
-		ChargeTime: 150
-		QuantizedFacings: 8
+		ChargeTime: 300
+		QuantizedFacings: 2
 		Description: OX-Sonic Bombing run
 		LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
 		SelectTargetSound: orca_s5.aud
@@ -461,6 +461,27 @@ GAARMORY:
 		SquadOffset: -3072,3072,0
 		DisplayBeacon: True
 		BeaconPoster: orcaoxbomber
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	AirstrikePower@HellfireMissilesStrikePower:
+		Prerequisites: garadr, upgrade.gdf
+		Icon: kodiak
+		OrderName: HellfireMissilesStrikePowerInfoOrder
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: A huge Rocketbombardment
+		LongDesc: Deploy a bombardment of an Kodiak Battleship.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: predator_a8.aud
+		EndChargeSound: predator_m2.aud
+		LaunchSound: predator_a10.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: hellfire_beacon
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: kodiak
 		DisplayRadarPing: True
 		CameraActor: camera
 		ArrowSequence: arrow
@@ -540,7 +561,7 @@ GAHPAD:
 		UnitType: orca_g
 		SquadSize: 3
 		SquadOffset: -3072,3072,0
-		QuantizedFacings: 8
+		QuantizedFacings: 2
 		DisplayBeacon: true
 		DisplayRadarPing: True
 		BeaconPoster: orcascout
@@ -655,6 +676,7 @@ GATECH:
 		OrderName: ZoneInfDropOrder
 		SquadSize: 1
 		ChargeTime: 300
+		QuantizedFacings: 2
 		Description: Zone Commander drop
 		LongDesc: Drops a Zone Commander with a squad of 2 Troopers and 2 Raiders.
 		SelectTargetSpeechNotification: SelectTarget
@@ -723,7 +745,8 @@ GADROP:
 		Icon: poseidon
 		OrderName: PoseidonDropOrder
 		SquadSize: 1
-		ChargeTime: 240
+		ChargeTime: 300
+		QuantizedFacings: 2
 		Description: Poseidon tank drop
 		LongDesc: Drops a Steel Talon tank battalion on the field.
 		SelectTargetSpeechNotification: SelectTarget
@@ -741,7 +764,8 @@ GADROP:
 		Icon: titan
 		OrderName: TitanDropOrder
 		SquadSize: 1
-		ChargeTime: 300
+		ChargeTime: 330
+		QuantizedFacings: 2
 		Description: Titan mech drop
 		LongDesc: Drops a Steel Talon mech battalion on the field.
 		SelectTargetSpeechNotification: SelectTarget

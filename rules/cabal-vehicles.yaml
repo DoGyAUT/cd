@@ -18,7 +18,7 @@ KMCV:
 		VoiceSet: Cmcv
 		Volume: 2
 	Mobile:
-		Speed: 71
+		Speed: 65
 		TurnSpeed: 5
 		TerrainSpeeds:
 			Clear: 100
@@ -146,7 +146,7 @@ DREADFIRE:
 		Description: Heavy walker armed with 2 Teslacoils.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 5
-		Speed: 71
+		Speed: 70
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -210,7 +210,7 @@ REAPER:
 		Description: Fast infantry hunting cybernetic spider-human hybrid armed with 2 anti tank barrels and a rocket launcher.\n\nGood vs: Vehicles, Air\n\nSpecial:\n- Can attack Air\n- Can stun infantry\n- Provides stealth detection\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 8
-		Speed: 106
+		Speed: 85
 		Crushes: crate
 	Health:
 		HP: 1000
@@ -282,7 +282,7 @@ GOLEM:
 		Description: Heavy walker equipped with repairing tools.\n\nSpecial:\n- Repairs vehicles and cyborgs with AOE\n- Cloakes everyting in the repair range if deployed\n- Repairs vehicles directly\n- Crush class: Medium vehicle
 	Mobile:
 		TurnSpeed: 3
-		Speed: 78
+		Speed: 65
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
@@ -337,7 +337,7 @@ TARANTULA:
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Valued:
-		Cost: 800
+		Cost: 1100
 	Tooltip:
 		Name: Tarantula
 	Selectable:
@@ -353,7 +353,7 @@ TARANTULA:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 6
-		Speed: 78
+		Speed: 65
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -362,7 +362,7 @@ TARANTULA:
 		Interval: 31
 		RequiresCondition: walker
 	Health:
-		HP: 960
+		HP: 1000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
@@ -393,80 +393,43 @@ TARANTULA:
 SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
-	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@CabalUpgrades: ^CabalUpgrades
-	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
-	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
-	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft4
 	Valued:
-		Cost: 3000
+		Cost: 500
 	Tooltip:
 		Name: Helion
 	Selectable:
 		Bounds: 42,42, 0, -5
 		Class: Helion
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 302
+		Prerequisites: ~kaweap, ~!t1
+		Description: Troop transporter capable of crossing water.\n\nSpecial:\n- Can swim on water\n- Crush class: light vehicle
 	Voiced:
 		VoiceSet: Husk
 		Volume: 2
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 300
-	RevealsShroud@cruising:
-		Range: 10c0
-		Type: CenterPosition
-		RequiresCondition: airborne && !upgrade.visionuplink
-	RevealsShroud@upgrade.visionuplink_airborne:
-		RequiresCondition: upgrade.visionuplink && airborne
-		Range: 12c0
-	RevealsShroud@ground:
-		Range: 3c0
-		Type: CenterPosition
-		RequiresCondition: !airborne && !upgrade.visionuplink
-	RevealsShroud@upgrade.visionuplink_ground:
-		RequiresCondition: upgrade.visionuplink && !airborne
-		Range: 5c0
-	Armament@primary:
-		Weapon: HelionGun
-		LocalOffset: -362,362,724, -362,-362,724
-		MuzzleSequence: muzzle
-		MuzzlePalette: effect50alpha
-		RequiresCondition: !empdisable
-	AttackFrontal:
-	WithMuzzleOverlay:
-		RequiresCondition: !airborne
-	ReloadArmamentsBar:
-		Color: 0000FF
+		HP: 500
+	Cargo:
+		Types: Infantry
+		MaxWeight: 7
+		PipCount: 7
+		EjectOnDeath: False
 	RenderSprites:
 	RenderVoxels:
-	RenderRangeCircle@max:
-	RenderRangeCircle@min:
-		RangeCircleMode: Minimum
-		Color: FF000080
 	WithVoxelBody:
+	RevealsShroud:
+		RequiresCondition: !upgrade.visionuplink
+		Range: 10c321
+	RevealsShroud@upgrade.visionuplink:
+		RequiresCondition: upgrade.visionuplink
+		Range: 14c321
 	-ThrowsShrapnel@human:
-	GrantConditionOnDeploy:
-		DeployedCondition: shouldLand
-		CanDeployOnRamps: True
-		AllowedTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-	Aircraft:
-		CruiseAltitude: 5c673
-		AltitudeVelocity: 0c362
-		Speed: 141
-		TurnSpeed: 10
-		CanHover: True
-		LandWhenIdle: False
-		LandOnCondition: shouldLand
-		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement, Water
-		AirborneCondition: airborne
-		CruisingCondition: cruising
-	-Mobile:
-	-LeavesTrails@ground:
-	-LeavesTrails@water:
-	-GrantConditionOnTerrain@Veins:
-	-WithIdleOverlay@Veins:
-	HiddenUnderFog:
-		Type: GroundPosition
+	Mobile:
+		TurnSpeed: 5
+		Speed: 80
 	HitShape:
 
 KRONOS:
@@ -492,7 +455,7 @@ KRONOS:
 		VoiceSet: Husk
 		Volume: 2
 	Mobile:
-		Speed: 57
+		Speed: 60
 		TurnSpeed: 3
 		TerrainSpeeds:
 			Water: 50
