@@ -477,7 +477,7 @@ OrcaBombingRun:
 		Speed: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 400
+		Damage: 150
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -501,7 +501,7 @@ ArtilleryStrikeGun:
 		Spread: 1c424
 		Damage: 250
 		Versus:
-			Buildings: 30
+			Buildings: 20
 			Vehicles: 40
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -515,11 +515,11 @@ SonicBomb:
 	Inherits: ^SonicWH
 	ReloadDelay: 200
 	Range: 8c497
-	Burst: 6
-	BurstDelay: 6
+	Burst: 44
+	BurstDelay: 1
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	FirstBurstTargetOffset: -7c512,0,0
-	FollowingBurstTargetOffset: 3c0,0,0
+	FollowingBurstTargetOffset: 0c512,0,0
 	Projectile: BulletAS
 		Speed: 1c424
 		Inaccuracy: 0c362
@@ -531,8 +531,14 @@ SonicBomb:
 		ContrailColor: 00FFFF
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
-		Damage: 1000
+		Spread: 1c000
+		Damage: 220
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 75
+			Aircraft: 50
+			Building: 75
 	Warhead@1Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2

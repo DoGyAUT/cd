@@ -1,5 +1,6 @@
 ORCA_F1:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -55,6 +56,7 @@ ORCA_F1:
 
 ORCA_F2:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -109,6 +111,7 @@ ORCA_F2:
 
 ORCA_TRAN:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
@@ -347,7 +350,7 @@ OXBOMBER:
 	Armament:
 		Weapon: SonicBomb
 	AmmoPool:
-		Ammo: 6
+		Ammo: 30
 		PipCount: 0
 		ReloadCount: 5
 		ReloadDelay: 50
@@ -486,6 +489,7 @@ PHOENIX:
 
 FHAWK:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
@@ -544,6 +548,7 @@ FHAWK:
 
 HORNET:
 	Inherits: ^AttackAdvancedPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
@@ -603,6 +608,7 @@ HORNET:
 
 CONDOR:
 	Inherits: ^AttackPlane
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
@@ -701,6 +707,7 @@ DSHP.SUPPORT:
 
 DSHP:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Valued:
 		Cost: 800
 	Tooltip:
