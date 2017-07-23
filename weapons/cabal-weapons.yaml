@@ -463,26 +463,29 @@ PteroisMachal:
 
 MantaMachal:
 	Inherits@wh: ^PlasmaWH
-	Range: 30c0
+	Range: 10c0
 	Burst: 61
 	BurstDelay: 10
 	ReloadDelay: 10000
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
-	FirstBurstTargetOffset: -30c0,0,0
-	FollowingBurstTargetOffset: 1c200,0,0
+	FirstBurstTargetOffset: -10c0,0,0
+	FollowingBurstTargetOffset: 0c800,0,0
 	Projectile: BulletAS
 		Speed: 2c848
 		Inaccuracy: 0c724
 		Blockable: false
-		Shadow: true
+		Shadow: false
 		LaunchAngle: 45
 		Image: plasmaBullet
 		ContrailLength: 30
 		ContrailColor: 0080FF
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
+		Spread: 0c786
 		Damage: 350
+		Versus:
+			Vehicle: 65
+			Building: 32
 		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexp02
