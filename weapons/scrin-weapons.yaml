@@ -22,7 +22,7 @@ LocustNail:
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -105,11 +105,11 @@ WarAntGun:
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: tiny_flash
 		ExplosionPalette: light
@@ -135,12 +135,12 @@ SlasherDisc:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -166,12 +166,12 @@ AntiMatterCannonGun:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light
@@ -201,11 +201,11 @@ MantisShockerDisc:
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -235,11 +235,11 @@ HexapodShockerDisc:
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -272,11 +272,11 @@ ShardLauncherGun:
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -305,7 +305,7 @@ TripodLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
@@ -359,11 +359,11 @@ CorruptorBlast:
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 
 StormRaiderCannon:
 	Inherits@wh: ^PlasmaWH
@@ -385,11 +385,11 @@ StormRaiderCannon:
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -417,11 +417,11 @@ StormRaiderCannonAA:
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect

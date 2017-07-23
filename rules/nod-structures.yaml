@@ -522,7 +522,8 @@ NAHPAD:
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: Reinforce
 		LowPowerSpeechNotification: LowPower
-		ChargeTime: 240
+		ChargeTime: 330
+		QuantizedFacings: 2
 		DisplayBeacon: false
 		DisplayRadarPing: false
 		BeaconPoster: havoc
@@ -539,7 +540,8 @@ NAHPAD:
 		OrderName: PropagandaInfantryDropOrder
 		SquadSize: 3
 		SquadOffset: -3072,3072,0
-		ChargeTime: 300
+		ChargeTime: 330
+		QuantizedFacings: 2
 		Description: Propaganda Infantry Drop
 		LongDesc: Drops an infantry battalion on the field.
 		SelectTargetSpeechNotification: SelectTarget
@@ -558,7 +560,8 @@ NAHPAD:
 		Icon: fanatic
 		OrderName: FanaticDropOrder
 		SquadSize: 1
-		ChargeTime: 240
+		ChargeTime: 300
+		QuantizedFacings: 2
 		Description: Fanatic Drop
 		LongDesc: Drops a group of fanatics on the field.
 		SelectTargetSpeechNotification: SelectTarget
@@ -577,7 +580,8 @@ NAHPAD:
 		Icon: valkyrie
 		OrderName: ShadowTrooperInfantryDropOrder
 		SquadSize: 1
-		ChargeTime: 240
+		ChargeTime: 300
+		QuantizedFacings: 2
 		Description: Shadow Trooper Drop
 		LongDesc: Drops a special infantry taskforce on the field.
 		SelectTargetSpeechNotification: SelectTarget
@@ -637,8 +641,8 @@ NAPYRA:
 		OrderName: VertigoNapalmAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~propaganda
 		Icon: vertigo
-		ChargeTime: 240
-		QuantizedFacings: 8
+		ChargeTime: 330
+		QuantizedFacings: 2
 		Description: Napalm Strike
 		LongDesc: Deploy a devastating Napalm bomb.
 		SelectTargetSound: vertigo_s2.aud
@@ -657,8 +661,8 @@ NAPYRA:
 		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~industry
 		Icon: vertigo
-		ChargeTime: 240
-		QuantizedFacings: 8
+		ChargeTime: 330
+		QuantizedFacings: 2
 		Description: Tiberium Splitter Bomb
 		LongDesc: Deploy a devastating Tiberium bomb.
 		SelectTargetSound: vertigo_s2.aud
@@ -677,8 +681,8 @@ NAPYRA:
 		OrderName: VertigoSeismicAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~technology
 		Icon: vertigo
-		ChargeTime: 240
-		QuantizedFacings: 8
+		ChargeTime: 360
+		QuantizedFacings: 2
 		Description: Seismic Bomb
 		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
 		SelectTargetSound: vertigo_s2.aud

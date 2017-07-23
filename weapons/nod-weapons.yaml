@@ -117,7 +117,7 @@ GorranMissile:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 RavenMissile:
 	Inherits: ^MissileAPHE
@@ -146,10 +146,10 @@ RavenMissile:
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: apolra2
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Sound: CreateEffect
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
 		Amount: 6
@@ -195,7 +195,7 @@ BluehellRavenMissile:
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: beamzap
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 6
@@ -216,7 +216,7 @@ TiberiumRavenMissile:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 TiberiumRavenMissileAA:
 	Inherits: RavenMissileAA
@@ -233,7 +233,7 @@ TiberiumRavenMissileAA:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 BluehellRavenMissileAA:
 	Inherits: RavenMissileAA
@@ -250,10 +250,10 @@ BluehellRavenMissileAA:
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: beamzap
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Sound: CreateEffect
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 GorranCannon:
 	Inherits: ^ShellHE
@@ -274,7 +274,7 @@ GorranCannon:
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 
@@ -307,7 +307,7 @@ RocketeerGun:
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 RocketeerGunAA:
 	Inherits: RocketeerGun
@@ -364,7 +364,7 @@ SpecterGun:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 
@@ -412,7 +412,7 @@ SpecterGunInferno:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: beamzap
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
@@ -477,7 +477,7 @@ SpecterGunNapalm:
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: LargeScorch
 	Warhead@4Smu: LeaveSmudge
@@ -505,7 +505,7 @@ RaiderGunVisual:
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 RaiderGunAttack:
 	Inherits: RaiderGunVisual
@@ -549,13 +549,13 @@ RaiderGunLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 AvatarLaser:
 	Inherits: ^BasicLaser
@@ -580,7 +580,7 @@ AvatarLaser:
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew06.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeScorch
 	Warhead@5Eff: CreateEffect
@@ -726,12 +726,12 @@ MultiCluster:
 		Explosions: large_explosion
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew09.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash2.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 
@@ -785,11 +785,11 @@ AcolyteGun:
 		Damage: 60
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
 		Explosions: tiny_flash
 		ExplosionPalette: light
@@ -824,13 +824,13 @@ ShadowTrooperLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 ShadowTrooperEnchancedLaser:
 	Inherits: ^BasicLaser
@@ -855,13 +855,13 @@ ShadowTrooperEnchancedLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 ConfessorGrenade:
 	Inherits: ^ShellAP
@@ -882,7 +882,7 @@ ConfessorGrenade:
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 
@@ -904,17 +904,17 @@ VertigoBombGas:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
-		Damage: 2000
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
 		ExplosionPalette: tiberiumbomb50
 		ImpactSounds: snukexpl.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -948,12 +948,12 @@ VertigoBombNapalm:
 		Explosions: napalmnuke
 		ExplosionPalette: napalmnuke50
 		ImpactSounds: snukexpl.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -961,7 +961,7 @@ VertigoBombNapalm:
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
 		Weapon: NapalmShrapnel
-		Amount: 40
+		Amount: 30
 		AimChance: 0
 
 VertigoBombBlueNapalm:
@@ -970,7 +970,7 @@ VertigoBombBlueNapalm:
 		Damage: 600
 	WarheadAS: FireShrapnel
 		Weapon: BlueNapalmShrapnel
-		Amount: 40
+		Amount: 35
 		AimChance: 0
 
 VertigoBombSeismic:
@@ -996,12 +996,12 @@ VertigoBombSeismic:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -1045,7 +1045,7 @@ SeismicShrapnel:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 
@@ -1076,7 +1076,7 @@ NapalmShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 100
+		Damage: 75
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
 		ImpactSounds: flamtnk1.aud
@@ -1097,7 +1097,7 @@ BlueNapalmShrapnel:
 	Inherits: NapalmShrapnel
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 135
+		Damage: 100
 	WarheadAS: SpawnActor
 		Range: 3
 		Actors: BFire1, BFire1, BFire1
@@ -1122,7 +1122,7 @@ TiberiumProtonShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 200
+		Damage: 120
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
 		ImpactSounds: scrin5b.aud
@@ -1160,12 +1160,12 @@ ZodiacBomb:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -1191,11 +1191,11 @@ BansheeCannon:
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -1228,12 +1228,12 @@ BansheeSpecial:
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
@@ -1267,11 +1267,11 @@ BansheeCannonAA:
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
@@ -1302,11 +1302,11 @@ MontaukProton:
 		Explosions: protonexpl_lrg
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piff
 		ExplosionPalette: ra
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeScorch
 	Warhead@6Eff: CreateEffect
@@ -1357,7 +1357,7 @@ GattlingCannonVisual:
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 VenomCannon:
 	Inherits: ^APBullet
@@ -1378,7 +1378,7 @@ VenomCannon:
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 HydraCannon:
 	Inherits: ^Bullet
@@ -1399,7 +1399,7 @@ HydraCannon:
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 
 HavocCannon:
 	Inherits: ^APBullet
@@ -1421,10 +1421,10 @@ HavocCannon:
 		Explosions: tiny_brnl
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 RavenCannon:
 	Inherits: ^APBullet
@@ -1488,7 +1488,7 @@ LaserTurretTibLaser:
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
@@ -1513,7 +1513,7 @@ LaserTurretLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
@@ -1538,7 +1538,7 @@ PhantomLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
@@ -1579,7 +1579,7 @@ ObeliskLaser:
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -1609,7 +1609,7 @@ ObeliskLaserTib:
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -1633,7 +1633,7 @@ ObeliskLaserUpgraded:
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: large_flash
 		ExplosionPalette: light
@@ -1662,13 +1662,13 @@ VenomLaserFire:
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		ImpactSounds: bursterhit01.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 
 HydraLaserFire:
 	Inherits: ^BasicLaser
@@ -1695,7 +1695,7 @@ HydraLaserFire:
 		Damage: 50
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
@@ -1724,7 +1724,7 @@ HavocLaserFire:
 		Damage: 50
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
@@ -1848,12 +1848,12 @@ FanaticShrapnel:
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
@@ -2029,7 +2029,7 @@ HailstormMissileGas:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 HailstormMissileGasAA:
 	Inherits: HailstormMissileGas
@@ -2067,7 +2067,7 @@ HavocMissiles:
 		ValidTargets: Ground
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 HavocMissilesTibGas:
 	Inherits: HavocMissiles
@@ -2085,16 +2085,16 @@ HavocMissilesTibGas:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: LargeScorch
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: MediumScorch
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallScorch
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 HydraMissiles:
 	Inherits: ^MissileAPHE
@@ -2122,20 +2122,20 @@ HydraMissiles:
 		Explosions: small_bang, medium_bang, large_bang
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		ValidImpactTypes: Air, AirHit
+		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 HydraGasMissiles:
 	Inherits: HydraMissiles
@@ -2155,7 +2155,7 @@ HydraGasMissiles:
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidImpactTypes: Water, Air, AirHit
+		InvalidTargets: Water, Aircraft
 
 SAMSiteMissile:
 	Inherits: ^MissileAPHE
@@ -2250,7 +2250,7 @@ TermiteGun:
 		Explosions: fireexpl
 		ExplosionPalette: effect
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
 		Amount: 4
@@ -2277,12 +2277,12 @@ TermiteGunShrapnel:
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl
 		ExplosionPalette: apolra25alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
@@ -2310,12 +2310,12 @@ TermiteGunShrapnel1:
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl
 		ExplosionPalette: apolra25alpha
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
@@ -2343,12 +2343,12 @@ termitegunshrapnelblue:
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl
 		ExplosionPalette: beamzap
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
@@ -2376,12 +2376,12 @@ termitegunshrapnelblue1:
 	Warhead@2Eff: CreateEffect
 		Explosions: infexpl
 		ExplosionPalette: beamzap
-		InvalidImpactTypes: Water
+		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
-		ValidImpactTypes: Water
+		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
