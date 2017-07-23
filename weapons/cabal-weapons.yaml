@@ -689,7 +689,7 @@ TarantulaLaser:
 TarantulaLaserAA:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 90
+	ReloadDelay: 3
 	Range: 16c994
 	Burst: 2
 	BurstDelay: 0
@@ -698,7 +698,7 @@ TarantulaLaserAA:
 	Projectile: LaserZap
 		Color: 0064FF
 		Width: 0c42
-		BeamDuration: 20
+		BeamDuration: 40
 		ZOffset: 2047
 		UsePlayerColor: false
 		SecondaryBeam: true
@@ -708,7 +708,7 @@ TarantulaLaserAA:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Aircraft
 		Spread: 0c59
-		Damage: 115
+		Damage: 6
 		DamageTypes: CabalWeapon
 		Versus:
 			Infantry: 120
@@ -794,7 +794,7 @@ SkirmisherLaserFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c59
-		Damage: 54
+		Damage: 40
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -810,7 +810,7 @@ SkirmisherLaserFireAA:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Aircraft
 		Spread: 0c59
-		Damage: 9
+		Damage: 35
 
 HarbingerLaserFire:
 	Inherits: ^BasicLaser
