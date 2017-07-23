@@ -1461,3 +1461,41 @@ TitanAP:
 	Inherits: 122mmAP
 	Range: 11c0
 
+KodiacMissilesBig:
+	Inherits: ^Bomb
+	Inherits@wh: ^HEAPWH
+	ReloadDelay: 111
+	Burst: 10
+	BurstDelay: 1
+	Range: 3c600
+	Report: rocket02.aud, rocket03.aud, rocket06.aud
+	Projectile: BulletAS
+		Speed: 0c328
+		Inaccuracy: 2c512
+		Image: hellfire
+		Palette: player
+		TrailImage: durasmoke
+		TrailPalette: apolra25alpha
+		ContrailLength: 40
+		ContrailWidth: 0c92
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 275
+		Versus:
+			Buildings: 30
+			Vehicles: 40
+	Warhead@2Eff: CreateEffect
+		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
+		ExplosionPalette: apolra2
+		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
+		InvalidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@4Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+	WarheadAS: FireShrapnel
+		Weapon: NapalmShrapnel
+		Amount: 6
+		AimChance: 75

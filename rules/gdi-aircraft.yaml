@@ -869,3 +869,44 @@ KODIAK:
 	WithVoxelBody:
 	WithMuzzleOverlay:
 	HitShape:
+
+Hellfire_beacon:
+	Inherits: ^AttackPlane
+	RenderSprites:
+		Image: kodiak
+	RenderVoxels:
+		Image: kodiak
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Hellfire Beacon
+	-Voiced:
+	-Selectable:
+	SelectionDecorations:
+		RenderSelectionBars: False
+	Aircraft:
+		CruiseAltitude: 20c291
+		IdealSeparation: 1c424
+		TurnSpeed: 3
+		Speed: 64
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 7c73
+		Type: GroundPosition
+	Armament:
+		Weapon: KodiacMissilesBig
+	AttackBomber:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 18
+		PipCount: 0
+		ReloadCount: 5
+		ReloadDelay: 50
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	RejectsOrders:
+	HitShape:
