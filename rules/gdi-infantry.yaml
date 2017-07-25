@@ -316,7 +316,7 @@ ZMARINE:
 		Prerequisites: ~gapile, ~!t1, ~upgrade.zc
 		Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Light Infantry
 	Valued:
-		Cost: 200
+		Cost: 175
 	Tooltip:
 		Name: Zone Marine
 	Selectable:
@@ -462,10 +462,16 @@ ZCOMMANDO:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
-	Valued:
-		Cost: 2000
+	Buildable:
+		Queue: Infantry.GDI
+		BuildPaletteOrder: 110
+        BuildLimit: 1
+		Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
+		Description: Colonel Mobius is one of the most famous GDI commanders.\nHe is armed with a Railgunshotgun.\n\nGood vs: Ground\n\nSpecial:\n- Stealth Detection\n- Selfhealing\n- Immune to Tiberium radiation\n- Crush class: Heavy infantry
+    Valued:
+		Cost: 4000
 	Tooltip:
-		Name: Zone Commander
+		Name: Colonel Mobius
 	Selectable:
 		Bounds: 24,34,0,-9
 	Voiced:
@@ -514,9 +520,16 @@ ZCOMMANDO:
 		MuzzlePalette: effect50alpha
 	AttackFrontal:
 	WithMuzzleOverlay:
+    SelfHealing:
+		Step: 2
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
 	DetectCloaked:
 		Range: 8c497
 	RenderDetectionCircle:
 	SoundOnDamageTransition:
 		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
-	HitShape:
+	-Crushable:
+    HitShape:

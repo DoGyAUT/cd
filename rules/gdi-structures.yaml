@@ -466,27 +466,6 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-	AirstrikePower@HellfireMissilesStrikePower:
-		Prerequisites: garadr, upgrade.gdf
-		Icon: kodiak
-		OrderName: HellfireMissilesStrikePowerInfoOrder
-		ChargeTime: 360
-		QuantizedFacings: 2
-		Description: A huge Rocketbombardment
-		LongDesc: Deploy a bombardment of an Kodiak Battleship.\nVery effective vs buildings and light armored targets.
-		SelectTargetSound: predator_a8.aud
-		EndChargeSound: predator_m2.aud
-		LaunchSound: predator_a10.aud
-		IncomingSound: g_00-cd004.aud
-		UnitType: hellfire_beacon
-		SquadSize: 1
-		DisplayBeacon: True
-		BeaconPoster: kodiak
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
 
 GAHPAD:
 	Inherits: ^Building
@@ -670,14 +649,14 @@ GATECH:
 	ProvidesPrerequisite@buildingname:
 	ParatroopersPower@zonecommander:
 		UnitType: dshp.support
-		DropItems: ztrooper, ztrooper, zcommando, zraider, zraider
+		DropItems: ztrooper, ztrooper, ztrooper, zraider, zraider, zraider
 		Prerequisites: gaarmory, ~upgrade.zc
 		Icon: zonecommando
 		OrderName: ZoneInfDropOrder
 		SquadSize: 1
 		ChargeTime: 300
 		QuantizedFacings: 2
-		Description: Zone Commander drop
+		Description: Zone Troop Drop
 		LongDesc: Drops a Zone Commander with a squad of 2 Troopers and 2 Raiders.
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
@@ -685,6 +664,26 @@ GATECH:
 		DisplayBeacon: true
 		DisplayRadarPing: True
 		BeaconPoster: zonecommando
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	ParatroopersPower@poseidon:
+		UnitType: dshp.support
+		DropItems: gthtnk, gthtnk, gthtnk
+        Prerequisites: gaarmory, ~upgrade.gdf
+		Icon: poseidon
+		OrderName: PoseidonDropOrder
+		SquadSize: 1
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: Grizzly Tank Drop
+		LongDesc: Drops 3 Grizzly Tanks on the battlefield.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: poseidon
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
@@ -739,41 +738,43 @@ GADROP:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	ParatroopersPower@poseidon:
-		UnitType: dshp.support
-		DropItems: gthtnk, poseidon, gthtnk, gthtnk
-		Icon: poseidon
-		OrderName: PoseidonDropOrder
-		SquadSize: 1
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: Poseidon tank drop
-		LongDesc: Drops a Steel Talon tank battalion on the field.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: poseidon
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
 	ParatroopersPower@titans:
 		UnitType: dshp.support
-		DropItems: mmch, mmch2, mmch, mmch
+		DropItems: mmch, mmch, mmch, mmch
 		Icon: titan
 		OrderName: TitanDropOrder
 		SquadSize: 1
 		ChargeTime: 330
 		QuantizedFacings: 2
-		Description: Titan mech drop
-		LongDesc: Drops a Steel Talon mech battalion on the field.
+		Description: Titan Mech Drop
+		LongDesc: Drops 4 Titans on the battlefield.
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
 		LaunchSpeechNotification: Reinforce
 		DisplayBeacon: true
 		DisplayRadarPing: True
 		BeaconPoster: titan
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+	AirstrikePower@HellfireMissilesStrikePower:
+		Prerequisites: garadr, upgrade.st
+		Icon: kodiak
+		OrderName: HellfireMissilesStrikePowerInfoOrder
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: Hellfire Missiles
+		LongDesc: Deploy a bombardment of an Kodiak Battleship.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: predator_a8.aud
+		EndChargeSound: predator_m2.aud
+		LaunchSound: predator_a10.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: hellfire_beacon
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: kodiak
+		DisplayRadarPing: True
+		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
