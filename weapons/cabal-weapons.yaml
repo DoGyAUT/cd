@@ -200,7 +200,7 @@ KronosCannon:
 	Projectile: BulletAS
 		Speed: 2c848
 		Inaccuracy: 0c362
-		Blockable: false
+		Blockable: true
 		Shadow: true
 		LaunchAngle: 45
 		Image: plasmaBullet
@@ -232,9 +232,6 @@ HarbringerGun:
 	Report: cablaser01.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c272
-		Blockable: false
-		HorizontalRateOfTurn: 2
 		Shadow: true
 		Image: eonball
 		Inaccuracy: 1c424
@@ -351,9 +348,8 @@ HarbingerMachal:
 	Burst: 20
 	BurstDelay: 4
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		Blockable: false
 		HorizontalRateOfTurn: 3
+		Blockable: true
 		RangeLimit: 28c291
 		Shadow: true
 		Image: plasmaBullet
@@ -429,9 +425,6 @@ PteroisMachal:
 	Burst: 8
 	BurstDelay: 4
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		Blockable: false
-		HorizontalRateOfTurn: 3
 		RangeLimit: 28c291
 		Shadow: true
 		Image: plasmaBullet
@@ -539,14 +532,12 @@ CyborgCommandoPlasma:
 	Report: scrin5b.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c272
-		Blockable: true
-		HorizontalRateOfTurn: 2
 		Shadow: true
 		Image: pulsball
 		TrailImage: plasmatrail
 		TrailPalette: effect50alpha
 		Palette: effect
+		Blockable: true
 		ContrailLength: 10
 		ContrailColor: 0080FF
 		ContrailWidth: 0c35
@@ -830,6 +821,7 @@ HarbingerLaserFire:
 		BeamDuration: 10
 		ZOffset: 2047
 		UsePlayerColor: false
+		Blockable: true
 		SecondaryBeam: true
 		SecondaryBeamWidth: 0c21
 		SecondaryBeamZOffset: 2047
@@ -888,10 +880,9 @@ ReaperCannon:
 	Burst: 2
 	BurstDelay: 5
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c272
-		Blockable: false
 		HorizontalRateOfTurn: 2
 		Shadow: true
+		Blockable: true
 		Image: plasmaBullet
 		LaunchAngle: 45
 		Palette: effect
@@ -1075,9 +1066,6 @@ ReaperMissile:
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c543
-		MinimumLaunchSpeed: 0c301
-		Speed: 0c543
 		Inaccuracy: 0c362
 		ContrailLength: 10
 		ContrailColor: 00FFFFC8
