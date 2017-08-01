@@ -501,12 +501,20 @@ NAPULS:
 NAMISL:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
+	Inherits@3: ^SuperWeapon
+	Inherits@4: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: Nod Missile Silo
+	Buildable:
+		Queue: Defense.Nod
+		BuildLimit: 1
+		BuildPaletteOrder: 221
+		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~propaganda
+		Description: Gives access to an Nuclear Warhead.\n\nSpecial:\n- Building is visible to other Player!
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -515,13 +523,11 @@ NAMISL:
 	Selectable:
 		Bounds: 75,48
 	Health:
-		HP: 7260
-	RevealsShroud:
-		Range: 2c848
+		HP: 8000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
-		Amount: -150
+		Amount: -300
 	CanPowerDown:
 		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
@@ -530,9 +536,10 @@ NAMISL:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	NukePower:
-		Icon: clustermissile
+		Icon: nodpropasup
+		Cursor: nuke
 		OrderName: NukePowerInfoOrder
-		ChargeTime: 360
+		ChargeTime: 480
 		Description: Cluster Missile
 		LongDesc: Launches a conventional warhead\nat a target location.
 		MissilePalette: player
@@ -540,10 +547,11 @@ NAMISL:
 		EndChargeSpeechNotification: ClusterMissileReady
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSound: icbm1.aud
 		MissileWeapon: ClusterMissile
 		SpawnOffset: 0,604,0
-		DisplayTimerStances: None
+		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: True
 		DisplayRadarPing: True
 		BeaconPoster:
@@ -551,9 +559,128 @@ NAMISL:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 125
+
+NATECH:
+	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
+	Inherits@3: ^SuperWeapon
+	Inherits@4: ^ExploBuildingmedium
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Nod Laser Tech Center
+	Buildable:
+		Queue: Defense.Nod
+		BuildLimit: 1
+		BuildPaletteOrder: 225
+		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~industry
+		Description: Gives access to an Tiberian Laser SuperWeapon.\n\nSpecial:\n- Building is visible to other Player!
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 86, 58, 0, -4
+	Health:
+		HP: 8000
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
 		PauseOnCondition: power-outage
-	-FrozenUnderFog:
-	AlwaysVisible:
+	Power:
+		Amount: -300
+	RequiresPower:
+	ProvidesPrerequisite@buildingname:
+	SupportPowerChargeBar:
+	HitShape:
+	DetonateWeaponPower@industrynodlaser:
+		Icon: nodindustrysup
+		Description: Tiberian Laser Cannon Alpha Strike
+		DisplayTimer: True
+		DisplayBeacon: True
+		LongDesc: Fires a strong tiberian laser on the targetted area.
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: TiberiumBombIndustry
+		OrderName: nodindusup
+		Cursor: ioncannon
+		DisplayTimerStances: Ally, Neutral, Enemy
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350
+
+NATMPL:
+	Inherits: ^Building
+	Inherits@2: ^3x4hitshape
+	Inherits@3: ^SuperWeapon
+	Inherits@4: ^ExploBuildingmedium
+	ProvidesPrerequisite@buildingname:
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Temple of Nod
+	Buildable:
+		Queue: Defense.Nod
+		BuildLimit: 1
+		BuildPaletteOrder: 223
+		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~technology
+		Description: Gives access to Kane's Light SuperWeapon.\n\nSpecial:\n- Building is visible to other Player!
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Adjacent: 3
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 120, 12, -12
+	Health:
+		HP: 8000
+	Power:
+		Amount: -300
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	HitShape:
+	RequiresPower:
+	SupportPowerChargeBar:
+	DetonateWeaponPower@technologynodlaser:
+		Icon: nodtechnosup
+		Description: Kane's Light
+		DisplayTimer: True
+		DisplayBeacon: True
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSound: obelcharge01.aud
+		LongDesc: Fires a barrage of orbital obelisk laser strikes on the targetted area.
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: TechnologyLaserStarter
+		OrderName: nodtechsup
+		Cursor: ioncannon
+		DisplayTimerStances: Ally, Neutral, Enemy
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
 
 NASTLH:
 	Inherits: ^Building

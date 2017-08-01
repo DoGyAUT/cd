@@ -615,25 +615,22 @@ GAFORT:
 
 GAPLUG2:
 	Inherits: ^BuildingPlug
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Supply Node
-	Plug:
-		Type: plug.hunterseeker
-	Power:
-		Amount: -100
-
-GAPLUG3:
-	Inherits: ^BuildingPlug
+	Inherits@2: ^SuperWeapon
+	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 114
+		Prerequisites: anypower, gatech, gaarmory, gaplug, ~structures.gdi
+		BuildLimit: 1
+		Description: Ion Cannon Uplink.
 	Tooltip:
 		Name: Ion Cannon Uplink
 	Plug:
 		Type: plug.ioncannon
 	Power:
-		Amount: -200
+		Amount: -100
 
 GAPLUG:
 	Inherits: ^Building
@@ -641,7 +638,13 @@ GAPLUG:
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
-		Cost: 2000
+		Cost: 3000
+	Buildable:
+		Queue: Defense.GDI
+		BuildPaletteOrder: 113
+		Prerequisites: anypower, gatech, gaarmory, ~structures.gdi
+		BuildLimit: 1
+		Description: Provides access to GDI's strongest Weapon.\n\nSpecial:\n- Enable the Ion Cannon Plug
 	Tooltip:
 		Name: GDI Upgrade Center
 	Selectable:
@@ -662,30 +665,33 @@ GAPLUG:
 	WithIdleOverlay@STRIP:
 		Sequence: idle-strip
 	Health:
-		HP: 7260
-	RevealsShroud:
-		Range: 2c848
-	IonCannonPower:
+		HP: 8000
+	DetonateWeaponPower@ioncannon:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
-		Icon: ioncannon
-		Effect: ionring
-		WeaponDelay: 0
-		ChargeTime: 180
-		Description: Ion Cannon
-		LongDesc: Initiate an Ion Cannon strike which applies instant damage to a small area.
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		DisplayRadarPing: True
+		Icon: gdigdfsup
+		Description: Ion Cannon Alpha Strike
+		DisplayTimer: True
+		DisplayBeacon: True
+		LongDesc: Fires many ion cannons on the targetted area.
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: IonCannon
+		OrderName: IonCannonGDF
+		Cursor: ioncannon
+		DisplayTimerStances: Ally, Neutral, Enemy
 		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
 		PauseOnCondition: power-outage
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 100
 	Exit@1:
 	ExitsDebugOverlay:
 	SupportPowerChargeBar:
 	Power:
-		Amount: -100
+		Amount: -200
 	Power@ioncannon:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Amount: -100
@@ -717,6 +723,5 @@ GAPLUG:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 115,104,0,-24
-	-FrozenUnderFog:
-	AlwaysVisible:
+	FrozenUnderFog:
 	HitShape:

@@ -698,59 +698,6 @@ NAPYRA:
 		CircleSequence: circles
 		ClockSequence: clock
 
-NATECH:
-	Inherits: ^Building
-	Inherits@2: ^2x2hitshape
-	Inherits@3: ^ExploBuildingmedium
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Nod Tech Center
-	ProvidesPrerequisite:
-		Prerequisite: tech
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Selectable:
-		Bounds: 86, 58, 0, -4
-	Health:
-		HP: 3024
-	RevealsShroud:
-		Range: 5c673
-	WithIdleOverlay@LIGHTS:
-		Sequence: idle-lights
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -150
-	ProvidesPrerequisite@buildingname:
-	HitShape:
-
-NATMPL:
-	Inherits: ^Building
-	Inherits@2: ^3x4hitshape
-	Inherits@3: ^ExploBuildingmedium
-	ProvidesPrerequisite@buildingname:
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Temple of Nod
-	Building:
-		Adjacent: 3
-		Footprint: xxxx xxxx xxxx
-		Dimensions: 4,3
-	Selectable:
-		Bounds: 134, 120, 12, -12
-	Health:
-		HP: 7280
-	RevealsShroud:
-		Range: 8c497
-	Power:
-		Amount: -200
-	WithIdleOverlay@LIGHTS:
-		Sequence: idle-lights
-	HitShape:
-
 NAWAST:
 	Inherits: ^Building
 	Valued:
