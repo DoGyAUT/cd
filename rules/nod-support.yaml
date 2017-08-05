@@ -368,7 +368,6 @@ NAOBEL:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -497,6 +496,7 @@ NAPULS:
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: false
+		PauseOnCondition: power-outage
 
 NAMISL:
 	Inherits: ^Building
@@ -504,7 +504,6 @@ NAMISL:
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -562,13 +561,13 @@ NAMISL:
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 125
+		PauseOnCondition: power-outage
 
 NATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -620,6 +619,7 @@ NATECH:
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
+		PauseOnCondition: power-outage
 
 NATMPL:
 	Inherits: ^Building
@@ -678,6 +678,7 @@ NATMPL:
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
+		PauseOnCondition: power-outage
 	CanPowerDown:
 		PowerupSound: EnablePower
 		PowerdownSound: DisablePower
@@ -686,7 +687,6 @@ NASTLH:
 	Inherits: ^Building
 	Inherits@2: ^2x5hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -742,3 +742,4 @@ NASTLH:
 		ClockSequence: clock
 		Range: 5
 		Duration: 0
+		PauseOnCondition: power-outage

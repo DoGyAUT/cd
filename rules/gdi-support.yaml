@@ -46,7 +46,6 @@ GASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingTibsmall
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 103
@@ -156,7 +155,6 @@ GAMG2:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -251,7 +249,6 @@ GASENTUR:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -312,7 +309,6 @@ GAMIS:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	WithSpriteBody:
 	Valued:
@@ -636,7 +632,6 @@ GAPLUG:
 	Inherits: ^Building
 	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 3000
 	Buildable:
@@ -683,10 +678,10 @@ GAPLUG:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 100
+		PauseOnCondition: power-outage
 	Exit@1:
 	ExitsDebugOverlay:
 	SupportPowerChargeBar:

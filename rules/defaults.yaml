@@ -393,6 +393,7 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@fortification: ^FortificationUpgrades
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	GivesBuildableArea:
 	Capturable:
 	ExternalCapturable:
@@ -2230,12 +2231,9 @@
 		Condition: disabled
 
 ^AffectedByPowerOutage:
-	AffectedByPowerOutage:
+	RequiresPower:
+	GrantConditionOnDisabled:
 		Condition: power-outage
-	DisableOnCondition@PowerOutage:
-		RequiresCondition: power-outage
-	Power:
-		RequiresCondition: !power-outage
 
 ^3x3hitshape:
 	HitShape:
@@ -2416,6 +2414,10 @@
 		Condition: firedamageblue3
 
 ^PowerplantEffects:
+	AffectedByPowerOutage:
+		Condition: power-outage-pp
+	Power:
+		RequiresCondition: !power-outage-pp
 	ExternalCondition@overload_active:
 		Condition: overload_active
 	PowerMultiplier@overload_active:
@@ -2443,6 +2445,7 @@
 		RequiresCondition: overload_active
 	Sellable:
 		RequiresCondition: !overload_active
+
 
 ####Superweapons####
 

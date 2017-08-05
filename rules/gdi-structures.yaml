@@ -73,7 +73,6 @@ GAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.GDI
@@ -300,7 +299,6 @@ GARADR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 106
@@ -399,6 +397,7 @@ GAARMORY:
 		CircleSequence: circles
 		ClockSequence: clock
 		Range: 2
+		PauseOnCondition: power-outage
 	ProvidesAIPrerequisite@gafortAI:
 		Prerequisite: gafortAI
 	AirstrikePower@artillery:
@@ -422,6 +421,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@orcabomber:
 		OrderName: OrcaBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.st
@@ -444,6 +444,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@oxbomber:
 		OrderName: OXBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.zc
@@ -466,6 +467,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@HellfireMissilesStrikePower:
 		Prerequisites: garadr, upgrade.gdf
 		Icon: kodiak
@@ -487,6 +489,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GAHPAD:
 	Inherits: ^Building
@@ -568,6 +571,7 @@ GAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GADEPT:
 	Inherits: ^Building
@@ -638,6 +642,7 @@ GADEPT:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
+		PauseOnCondition: power-outage
 
 GATECH:
 	Inherits: ^Building
@@ -688,6 +693,7 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GADROP:
 	Inherits: ^Building
@@ -760,6 +766,7 @@ GADROP:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@titans:
 		UnitType: dshp.support
 		DropItems: mmch, mmch2, mmch, mmch
@@ -779,3 +786,4 @@ GADROP:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage

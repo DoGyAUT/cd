@@ -76,7 +76,6 @@ NAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
@@ -113,7 +112,6 @@ NAAPWR:
 	Inherits@2: ^2x3hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
@@ -356,6 +354,7 @@ NAWEAP:
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
 		LaunchSpeechNotification: Reinforce
+		PauseOnCondition: power-outage
 	GrantExternalConditionPower@emergencyrepairNod:
 		OrderName: EmergancyRepairs2PowerInfoOrder
 		Prerequisites: ~industry
@@ -374,13 +373,13 @@ NAWEAP:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
+		PauseOnCondition: power-outage
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
@@ -439,6 +438,7 @@ NARADR:
 		ClockSequence: clock
 		Range: 8
 		Duration: 450
+		PauseOnCondition: power-outage
 	SpawnActorPower@nodscan:
 		OrderName: RadarScanPower
 		Actor: camera.nodscan
@@ -452,13 +452,13 @@ NARADR:
 		CircleSequence: circles
 		ClockSequence: clock
 		Sequence: idle
+		PauseOnCondition: power-outage
 
 NAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -553,6 +553,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@fanatic:
 		UnitType: valkyrie.support
 		Prerequisites: ~propaganda, naradr
@@ -573,6 +574,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@techcarry:
 		UnitType: valkyrie.support
 		Prerequisites: ~technology
@@ -593,6 +595,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 NAPYRA:
 	Inherits: ^Building
@@ -657,6 +660,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@VertigoTiberiumAirstrikePower:
 		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~industry
@@ -677,6 +681,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@VertigoSeismicAirstrikePower:
 		OrderName: VertigoSeismicAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~technology
@@ -697,6 +702,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 NAWAST:
 	Inherits: ^Building
