@@ -611,8 +611,6 @@ GAFORT:
 
 GAPLUG2:
 	Inherits: ^BuildingPlug
-	Inherits@2: ^SuperWeapon
-	Inherits@DisabledOverlay: ^DisabledOverlay
 	Valued:
 		Cost: 2000
 	Buildable:
@@ -625,8 +623,6 @@ GAPLUG2:
 		Name: Ion Cannon Uplink
 	Plug:
 		Type: plug.ioncannon
-	Power:
-		Amount: -100
 
 GAPLUG:
 	Inherits: ^Building
@@ -639,7 +635,7 @@ GAPLUG:
 		BuildPaletteOrder: 113
 		Prerequisites: anypower, gatech, gaarmory, ~structures.gdi
 		BuildLimit: 1
-		Description: Provides access to GDI's strongest Weapon.\n\nSpecial:\n- Enable the Ion Cannon Plug
+		Description: Provides access to GDI's strongest Weapon.\n\nSpecial:\n- Allows building the Ion Cannon Plug
 	Tooltip:
 		Name: GDI Upgrade Center
 	Selectable:
@@ -720,3 +716,5 @@ GAPLUG:
 		VisualBounds: 115,104,0,-24
 	FrozenUnderFog:
 	HitShape:
+	RevealsShroud@revealhimself:
+		RequiresCondition: plug.ioncannona || plug.ioncannonb

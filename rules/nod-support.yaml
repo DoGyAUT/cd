@@ -513,7 +513,7 @@ NAMISL:
 		BuildLimit: 1
 		BuildPaletteOrder: 221
 		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~propaganda
-		Description: Gives access to an Nuclear Warhead.\n\nSpecial:\n- Building is visible to other Player!
+		Description: Gives access to an Nuclear Warhead.\n\nSpecial:\n- Building is visible to other players!
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -577,7 +577,7 @@ NATECH:
 		BuildLimit: 1
 		BuildPaletteOrder: 225
 		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~industry
-		Description: Gives access to an Tiberian Laser SuperWeapon.\n\nSpecial:\n- Building is visible to other Player!
+		Description: Gives access to an Tiberian Laser Super Weapon.\n\nSpecial:\n- Building is visible to other players!
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -636,7 +636,7 @@ NATMPL:
 		BuildLimit: 1
 		BuildPaletteOrder: 223
 		Prerequisites: anypower, naradr, napyra, ~structures.nod, ~ideology, ~technology
-		Description: Gives access to Kane's Light SuperWeapon.\n\nSpecial:\n- Building is visible to other Player!
+		Description: Gives access to Kane's Light Super Weapon.\n\nSpecial:\n- Building is visible to other players!
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -679,9 +679,6 @@ NATMPL:
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
 		PauseOnCondition: power-outage
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 
 NASTLH:
 	Inherits: ^Building
