@@ -3744,9 +3744,6 @@ gadrop:
 gaplug2:
 	icon: rad2icon
 
-gaplug3:
-	icon: rad3icon
-
 gaarmory:
 	Defaults:
 		Offset: 6, -30
@@ -3979,3 +3976,82 @@ cgoild:
 	icon: gprocicon
 		Offset: 0,0
 		UseTilesetCode: false
+
+cabsw1:
+	Defaults:
+		Offset: 0, -36, 36
+		UseTilesetCode: true
+	idle:
+	damaged-idle:
+	dead:
+	turret:
+		Start: 31
+		Facings: 32
+		Shadowstart: 126
+	damaged-turret:
+		Start: 63
+		Facings: 32
+		Shadowstart: 158
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	make:
+		Length: 29
+		ShadowStart: 95
+	icon: cabsw1icon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+napost:
+	Defaults:
+		Offset: 0, -12, 13
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	lights: napost_b
+		Start: 0
+		Length: 7
+		ShadowStart: 14
+		Tick: 80
+	damaged-lights: napost_b
+		Start: 7
+		Length: 7
+		ShadowStart: 21
+		Tick: 80
+	chainoflights: napost_a
+		Start: 0
+		Length: 12
+		ShadowStart: 24
+		Tick: 80
+	damaged-chainoflights: napost_a
+		Start: 12
+		Length: 12
+		ShadowStart: 36
+		Tick: 80
+	dead:
+		Start: 2
+		Tick: 400
+		ShadowStart: 5
+	make: napostmk
+		Start: 0
+		Length: 12
+		ShadowStart: 12
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 25
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: lasricon
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:

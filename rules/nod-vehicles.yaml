@@ -479,7 +479,7 @@ BIKE:
 	Health:
 		HP: 350
 	RevealsShroud:
-		Range: 9c921
+		Range: 10c921
 	Armament@PRIMARY:
 		Weapon: BikeMissile
 		LocalOffset: 0,-232,622, 0,233,622
@@ -565,7 +565,7 @@ REPAIR:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 204
 		Prerequisites: ~naweap, naradr
-		Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Crush class: Light vehicle
+		Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Stealth Emitters (Technology)\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: Cabalbeep
 		Volume: 2
@@ -600,6 +600,13 @@ REPAIR:
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
+	Cloak:
+		RequiresCondition: upgrade.stealth || cloak
+		InitialDelay: 90
+		CloakDelay: 250
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
 	WithVoxelBody:
 	WithVoxelTurret:
 		Recoils: False
@@ -664,41 +671,6 @@ FTNK:
 		Weapon: PyradonExplosion
 		EmptyWeapon: PyradonExplosion
 		Chance: 100
-	HitShape:
-
-RECKONER:
-	Inherits: ^VoxelVehicle
-	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
-	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
-	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Reckoner
-	Selectable:
-		Bounds: 42,42, 0, -5
-	Voiced:
-		VoiceSet: Cheetah
-		Volume: 2
-	Mobile:
-		TurnSpeed: 5
-		Speed: 85
-	Health:
-		HP: 1080
-	RevealsShroud:
-		Range: 14c146
-	AttackGarrisoned:
-		PortOffsets: 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362
-		PortYaws: 0, 176, 341, 512, 682, 853
-		PortCones: 86, 86, 86, 86, 86, 86
-	Cargo:
-		Types: Infantry
-		MaxWeight: 6
-		PipCount: 6
-	RenderSprites:
-	RenderVoxels:
-	WithVoxelBody:
 	HitShape:
 
 TERMITE:
@@ -1186,7 +1158,7 @@ AVATAR:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 65
+		Speed: 70
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
@@ -1228,82 +1200,6 @@ AVATAR:
 	WithRangeCircle:
 		Range: 8c497
 		Type: avatarboost
-	HitShape:
-
-MONTAUK:
-	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
-	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
-	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
-	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
-	Valued:
-		Cost: 8000
-	Tooltip:
-		Name: Montauk
-	Selectable:
-		Bounds: 42,42, 0, -5
-	Voiced:
-		VoiceSet: Sting
-		Volume: 2
-	Mobile:
-		TurnSpeed: 2
-		Speed: 100
-	Health:
-		HP: 6500
-	SelfHealing:
-		Step: 1
-		PercentageStep: 0
-		Delay: 1
-		HealIfBelow: 100
-		DamageCooldown: 200
-	RevealsShroud:
-		Range: 21c218
-	Armament@nose:
-		Weapon: BansheeCannon
-		LocalOffset: 1188,0,1202
-		RequiresCondition: !deployed
-	Armament@eyes:
-		Weapon: MontaukProton
-		LocalOffset: 919,283,724, 919,-283,724
-		RequiresCondition: !deployed
-	AttackFrontal:
-	RenderSprites:
-	RenderVoxels:
-	WithVoxelBody:
-	Explodes:
-		Weapon: UnitExplodeEpic
-		EmptyWeapon: UnitExplodeEpic
-	ActorLostNotification:
-		Notification: CriticalUnitLost
-	Passenger:
-		CargoType: Epic
-		Voice: Move
-		Weight: 20
-	Cloak@underground:
-		RequiresCondition: deployed
-		InitialDelay: 0
-		CloakDelay: 0
-		IsPlayerPalette: True
-		CloakTypes: Underground
-	WithSpriteBody@deployed:
-		RequiresCondition: !deployed
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: drilldwn.aud
-		UndeploySound: drillup.aud
-		CanDeployOnRamps: True
-	WithMakeAnimation:
-	LeavesTrails@ground:
-		Image: dust
-		Palette: player50alpha
-		TerrainTypes: Clear, Rough, Green, DirtRoad
-		RequiresCondition: !deployed
-	AnnounceOnSeen:
-		PingRadar: True
-		Notification: SubterraneanUnitDetected
 	HitShape:
 
 WEED:
@@ -1351,3 +1247,215 @@ WEED:
 		LocalOffset: 543,0,0
 		Palette: effect
 	HitShape:
+
+SCORPION:
+	Inherits@1: ^Walker
+	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Valued:
+		Cost: 8000
+	Tooltip:
+		Name: Nod Scorpion
+	Selectable:
+		Bounds: 42,82, 0, -20
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 254
+		Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~technology
+		BuildLimit: 1
+		Description: Heavy Walker armed with a strong laser and also is cloaked.\n\nGood vs: Ground\n\nSpecial:\n- This unit is cloaked\n- This unit can emp\n- Crush class: Super Heavy vehicle
+	Voiced:
+		VoiceSet: Avatar
+		Volume: 2
+	Mobile:
+		TurnSpeed: 5
+		Speed: 65
+	GrantConditionOnMovement@steps:
+		Condition: walker
+	AmbientSound@step1:
+		SoundFiles: stomp2a.aud, stomp2b.aud, stomp2c.aud
+		Delay: 3
+		Interval: 21
+		RequiresCondition: walker
+	Health:
+		HP: 5000
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 1
+		DamageCooldown: 200
+	RevealsShroud:
+		Range: 12c745
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackFrontal:
+	Armament@primary:
+		Weapon: ScorpionLaser
+		Sequence: shoot
+		LocalOffset: 750,0,2000
+		MuzzlePalette: apolra50alpha
+		RequiresCondition: !rank-heroic
+	Armament@eyes:
+		Weapon: RaiderGunLaser
+		LocalOffset: 924,350,654
+	Armament@eyes2:
+		Weapon: RaiderGunLaser
+		LocalOffset: 924,-350,654
+	WithInfantryBody:
+		DefaultAttackSequence: shoot1
+	WithDeathAnimation:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			EnergyDeath: 1
+	RenderSprites:
+		Scale: 1.0
+	WithMuzzleOverlay:
+	HitShape:
+	Cloak@self:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: stealth01.aud
+		UncloakSound: unstealth01.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+
+MONTAUK:
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeSubterranean
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Valued:
+		Cost: 7500
+	Tooltip:
+		Name: Montauk
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 255
+		Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~industry
+		BuildLimit: 1
+		Description: Heavy subterranean Tank armed with a strong plasma cannons.\n\nGood vs: Ground\n\nSpecial:\n- Subterranean movement\n- Crush class: Super Heavy vehicle
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Sting
+		Volume: 2
+	Health:
+		HP: 4500
+	Mobile:
+		TurnSpeed: 4
+		Speed: 20
+		Subterranean: true
+		SubterraneanCondition: subterranean
+		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
+		SubterraneanTransitionCost: 0
+		SubterraneanTransitionSound: drillup.aud
+		SubterraneanTransitionImage: dig
+		SubterraneanTransitionSequence: idle
+		SubterraneanTransitionPalette: player
+		TerrainSpeeds:
+			Subterranean: 200
+	RejectsOrders:
+		RequiresCondition: subterranean
+		Except: Attack, AttackMove, Guard, Move
+	RevealsShroud:
+		Range: 13c921
+		RequiresCondition: !subterranean
+	AttackFrontal:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+		RequiresCondition: !subterranean
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+	Armament@nose:
+		Weapon: BansheeCannon
+		LocalOffset: 1188,0,1202
+		RequiresCondition: !subterranean
+	Armament@eyes:
+		Weapon: MontaukProton
+		LocalOffset: 919,283,724, 919,-283,724
+		RequiresCondition: !subterranean
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad
+		RequiresCondition: !subterranean
+	AnnounceOnSeen:
+		PingRadar: True
+		Notification: SubterraneanUnitDetected
+	HitShape:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+
+RECKONER:
+	Inherits: ^VoxelVehicle
+	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Reckoner
+	Buildable:
+		Queue: Vehicle.Nod
+		BuildPaletteOrder: 259
+		Prerequisites: ~naweap, napyra, ~!t1, ~!t2, ~propaganda
+		BuildLimit: 1
+		Description: Heavy Transporter.\n\nGood vs: Ground\n\nSpecial:\n- Garrisoned with up to 20 infantry\n- Crush class: Super Heavy vehicle
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Cheetah
+		Volume: 2
+	Mobile:
+		TurnSpeed: 5
+		Speed: 70
+	Health:
+		HP: 6000
+	AutoTarget:
+	RevealsShroud:
+		Range: 14c146
+	AttackGarrisoned:
+		PortOffsets: 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362, 0,0,362
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86
+	Cargo:
+		Types: Infantry
+		MaxWeight: 20
+		PipCount: 20
+	RenderSprites:
+		Scale: 1.2
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad
+	RenderVoxels:
+	WithVoxelBody:
+	HitShape:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost

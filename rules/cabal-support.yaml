@@ -50,7 +50,6 @@ KASILO:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@4: ^ExploBuildingTibsmall
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Buildable:
 		Queue: Defense.Cabal
@@ -262,7 +261,6 @@ KOBEL:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
@@ -317,3 +315,76 @@ KOBEL:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+
+CABSW1:
+	Inherits: ^Building
+	Inherits@2: ^3x4hitshape
+	Inherits@3: ^SuperWeapon
+	Inherits@4: ^ExploBuildingmedium
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		PlayerPalette: playercab
+	WithDeathAnimation:
+		DeathSequencePalette: playercab
+		CrushedSequencePalette: playercab
+		CrushedPaletteIsPlayerPalette: true
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Cabal Annihilator
+	Buildable:
+		Queue: Defense.Cabal
+		BuildPaletteOrder: 323
+		Prerequisites: anypower, kabtech, ~structures.cabal
+		Description: Cabals Super Weapon structure.\n\nSpecial:\n- Building is visible to other players!
+		BuildLimit: 1
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 110, 70, 3, -20
+	RequiresPower:
+	Health:
+		HP: 8000
+	BodyOrientation:
+		QuantizedFacings: 32
+	Turreted:
+		TurnSpeed: 2
+		InitialFacing: 50
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: OrbitalProjectile
+		LocalOffset: 1000,0,1500
+		Name: cabalsuperweapon
+	Power:
+		Amount: -200
+	SelectionDecorations:
+		VisualBounds: 110, 70, 3, -20
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	SupportPowerChargeBar:
+	FireArmamentPower:
+		ArmamentName: cabalsuperweapon
+		Cursor: emp
+		Icon: cabsup
+		Description: Cabals Pride
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LongDesc: Fires a barrage of plamsagrenades on the targetted area.
+		ChargeTime: 480
+		OrderName: cabalsup
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster:
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 375

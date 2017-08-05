@@ -324,7 +324,7 @@ CannonHuskGun:
 		ContrailWidth: 0c71
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 40
+		Damage: 50
 		DamageTypes: CabalWeapon, TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -746,7 +746,7 @@ SabercutTesla:
 			Cyborg: 100
 			Vehicle: 15
 			Aircraft: 15
-			Building: 75
+			Building: 30
 		DamageTypes: CabalWeapon
 	Warhead@3Eff: CreateEffect
 		Explosions: small_emp
@@ -913,7 +913,7 @@ ShockwaveTesla:
 	ReloadDelay: 60
 	Range: 6c11
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
-	Burst: 3
+	Burst: 2
 	BurstDelay: 4
 	Projectile: TeslaZap
 		Palette: apolcyan
@@ -1039,7 +1039,7 @@ JaguarClaw:
 
 WebLauncher:
 	ValidTargets: Infantry
-	ReloadDelay: 120
+	ReloadDelay: 200
 	Range: 14c146
 	Burst: 3
 	BurstDelay: 5
@@ -1061,7 +1061,7 @@ WebLauncher:
 		ImpactSounds: fireweb1.aud
 	Warhead@emp: GrantExternalCondition
 		Range: 0c724
-		Duration: 90
+		Duration: 160
 		Condition: webdisable
 		ValidTargets: Infantry
 
@@ -1069,7 +1069,7 @@ ReaperMissile:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ReloadDelay: 100
-	Range: 8c497
+	Range: 9c559
 	Burst: 2
 	BurstDelay: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
@@ -1086,6 +1086,8 @@ ReaperMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 100
+		Versus:
+			Building: 50
 		ValidTargets: Ground
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
@@ -1120,6 +1122,8 @@ ReaperClusterMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 30
+		Versus:
+			Building: 50
 		ValidTargets: Ground
 		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 
@@ -1157,7 +1161,7 @@ cleansingaura:
 		Explosions: cleansingauraexp
 
 Hightensionbomb:
-	ReloadDelay: 10
+	ReloadDelay: 10000
 	Range: 1c100
 	Burst: 1
 	BurstDelay: 1
@@ -1311,3 +1315,181 @@ overload:
 		Duration: 875
 		ValidTargets: Ground, Aircraft
 		ValidStances: None, Enemy, Neutral, Ally
+
+####SUPERWEAPON####
+OrbitalProjectile:
+	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
+	Range: 1000000c0
+	MinRange: 8c497
+	Burst: 6
+	BurstDelay: 60
+	Inherits: ^ShellHE
+	ReloadDelay: 100
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Projectile: BulletAS
+		Inaccuracy: 100000c999
+		Speed: 999
+		Blockable: true
+		HorizontalRateOfTurn: 2
+		Shadow: true
+		LaunchAngle: 150
+		Image: pulsball
+		TrailImage: plasmatrail
+		TrailPalette: effect50alpha
+		Palette: effect
+		ContrailLength: 90
+		ContrailColor: 0080FF
+		ContrailWidth: 0c200
+		TrailInterval: 1
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c528
+		Damage: 888
+		ValidTargets: Ground, Aircraft
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
+		Falloff: 100, 67, 40, 17, 0
+	Warhead@2Eff: CreateEffect
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+	Warhead@3Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+	Warhead@4Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+	Warhead@5EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidTargets: Water
+	Warhead@6Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@7Eff: CreateEffect
+		Explosions: swave
+		ExplosionPalette: swave
+	Warhead@8Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+	Warhead@9Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileExp
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: false
+		ValidTargets: Ground
+	Warhead@66Eff: CreateEffect
+		Explosions: large_flash
+
+OrbitalProjectileExp:
+	Inherits: OrbitalProjectile
+	Projectile: InstantExplode
+	-Warhead@9Sharpnel:
+	Warhead@9Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy2
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@10Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy3
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@11Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy4
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@12Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@13Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy5
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@14Sharpnel: FireShrapnel
+		Weapon: OrbitalProjectileCopy6
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+
+OrbitalProjectileCopy:
+	Inherits: LargeDebris
+	Range: 12c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		Speed: 75
+		LaunchAngle: -360
+		Blockable: true
+		Shadow: true
+		TrailImage: plasmatrail
+		TrailPalette: effect50alpha
+		Palette: effect
+		Image: eonball
+		Inaccuracy: 4c424
+		ContrailLength: 80
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c71
+		-Sequences
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c524
+		Damage: 666
+		ValidTargets: Ground
+		DamageTypes: CabalWeapon, TakeCoverEffect, EnergyDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_med
+		ExplosionPalette: effect50alpha
+		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
+		InvalidTargets: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidTargets: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@5Eff: CreateEffect
+		Explosions: swave
+		ExplosionPalette: swave
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+	Warhead@7Sharpnel: FireShrapnel
+		Weapon: Sparky
+		Amount: 10
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+
+OrbitalProjectileCopy2:
+	Inherits: OrbitalProjectileCopy
+	Range: 12c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		LaunchAngle: -330
+
+OrbitalProjectileCopy3:
+	Inherits: OrbitalProjectileCopy
+	Range: 10c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		LaunchAngle: -300
+
+OrbitalProjectileCopy4:
+	Inherits: OrbitalProjectileCopy
+	Range: 8c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		LaunchAngle: -270
+
+OrbitalProjectileCopy5:
+	Inherits: OrbitalProjectileCopy
+	Range: 6c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		LaunchAngle: -240
+
+OrbitalProjectileCopy6:
+	Inherits: OrbitalProjectileCopy
+	Range: 4c0
+	MinRange: 2c0
+	Projectile: BulletAS
+		LaunchAngle: -210
