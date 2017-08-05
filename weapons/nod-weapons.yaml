@@ -1797,8 +1797,8 @@ FlamerTurretFireballLauncher:
 FlamerTurretTiberium:
 	Inherits@wh: BlueFireballLauncher
 	ReloadDelay: 100
-    Burst: 2
-    BurstDelay: 20
+	Burst: 2
+	BurstDelay: 20
 	Range: 7c435
 	Report: flamtnk1.aud
 	Projectile: BulletAS
@@ -1813,7 +1813,7 @@ FlamerTurretTiberium:
 		Spread: 1c424
 		Damage: 55
 		Falloff: 100, 80
-    Warhead@2Eff: CreateEffect
+	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
@@ -2060,7 +2060,7 @@ HailstormMissileGas:
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Aircraft
-    WarheadAS: SpawnActor
+	WarheadAS: SpawnActor
 		Range: 1
 		Actors: Cloud1
 		Owner: Creeps
@@ -2246,7 +2246,7 @@ SAMSiteMissileTiberium:
 		ContrailLength: 10
 		ContrailColor: 00FF64
 		ContrailWidth: 0c21
-        TerrainHeightAware: true
+		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 175

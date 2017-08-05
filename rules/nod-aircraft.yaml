@@ -168,10 +168,10 @@ HYDRA:
 
 HAVOC:
 	Inherits: ^Helicopter
-    Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
-    Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
-    Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
-    Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -285,8 +285,8 @@ NODCARRY:
 
 NODCARRY.SUPPORT:
 	Inherits: NODCARRY
-    -Targetable@Targettype:
-    -Targetable@TargettypeGrounded:
+	-Targetable@Targettype:
+	-Targetable@TargettypeGrounded:
 	-Buildable:
 	Valued:
 		Cost: 650

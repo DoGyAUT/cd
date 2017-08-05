@@ -139,7 +139,7 @@ NAFLAMER:
 		Weapon: FlamerTurretTiberium
 		LocalOffset: 990,-255,919
 		RequiresCondition: !upgrade.bluehell && upgrade.tibgas
-    Power:
+	Power:
 		Amount: -50
 	WithSpriteTurret:
 		Recoils: False
@@ -149,7 +149,7 @@ NAFLAMER:
 	GrantConditionOnPrerequisite@upgrade2:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
-    GrantConditionOnPrerequisite@upgrade3:
+	GrantConditionOnPrerequisite@upgrade3:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
 #	Cloak:
@@ -216,11 +216,11 @@ NAGAT:
 		RecoilRecovery: 5
 	Power:
 		Amount: -50
-    GrantConditionOnPrerequisite@upgrade1:
+	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	WithMuzzleOverlay:
-    Cloak:
+	Cloak:
 		RequiresCondition: upgrade.stealth || cloak
 	RenderDetectionCircle:
 	DetectCloaked:
@@ -348,7 +348,7 @@ NASAM:
 #	GrantConditionOnPrerequisite@upgrade2:
 #		Condition: industry
 #		Prerequisites: industry
-    GrantConditionOnPrerequisite@upgrade3:
+	GrantConditionOnPrerequisite@upgrade3:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
 #	Cloak:
@@ -455,12 +455,12 @@ NAOBEL:
 		PauseOnCondition: power-outage
 	Power:
 		Amount: -150
-    GrantConditionOnPrerequisite@upgrade1:
+	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	Cloak:
 		RequiresCondition: upgrade.stealth || cloak
-    WithMuzzleOverlay:
+	WithMuzzleOverlay:
 	GrantConditionOnPrerequisite@tiblaser:
 		Condition: upgrade.tiblaser
 		Prerequisites: upgrade.tiblaser
