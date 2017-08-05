@@ -60,6 +60,12 @@ ZoneCommandoGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 150
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmawave1
 		ExplosionPalette: effect50alpha
@@ -376,7 +382,7 @@ IonCannon:
 ZoneMarineGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 7c73
 	Burst: 3
 	BurstDelay: 4
@@ -576,7 +582,13 @@ CondorBomb:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 700
+		Damage: 800
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: swave
 		ExplosionPalette: swave
@@ -1130,7 +1142,7 @@ OrcaF1Missiles:
 
 OrcaF2Missiles:
 	Inherits: OrcaF1Missiles
-	ReloadDelay: 160
+	ReloadDelay: 120
 	ValidTargets: Ground
 	Range: 8c497
 	MinRange: 1c424
@@ -1316,7 +1328,7 @@ HoverMRLSMissile:
 HoverMRLSMissileAA:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-	ReloadDelay: 200
+	ReloadDelay: 150
 	Burst: 8
 	BurstDelay: 2
 	Range: 11c321
@@ -1327,10 +1339,10 @@ HoverMRLSMissileAA:
 		MinimumLaunchSpeed: 0c91
 		Speed: 0c724
 		RangeLimit: 28c291
-		Inaccuracy: 0c724
+		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c1
+		Spread: 0c362
 		Damage: 60
 		ValidTargets: Aircraft
 

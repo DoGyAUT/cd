@@ -112,7 +112,7 @@ APC:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 103
 		Prerequisites: ~gaweap, ~!upgrade.st
-		Description: Armored infantry transport.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can transport infantry\n- Can attack air\n- Can swim on water\n- Crush class: Medium vehicle
+		Description: Armored infantry transport.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can transport infantry\n- Can attack air\n- Can swim on water\n- Stealth detection\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Predator
 		Volume: 2
@@ -223,7 +223,7 @@ VULTURE:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 104
 		Prerequisites: ~gaweap, ~!t1, ~upgrade.st
-		Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can attack Air\n- Crush class: Medium vehicle
+		Description: Medium walker, armed with multipurpose missiles and gattling cannons.\n\nGood vs: Infantry, Air\n\nSpecial:\n- Can attack Air\n- Stealth detection\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Vulture
 		Volume: 2
@@ -623,7 +623,7 @@ MMCH:
 		Interval: 16
 		RequiresCondition: walker
 	Health:
-		HP: 1440
+		HP: 1200
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -635,7 +635,7 @@ MMCH:
 	WithSpriteTurret:
 		Recoils: True
 	Armament:
-		Weapon: 122mmAP
+		Weapon: TitanAP
 		LocalOffset: 1188,458,1485
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha

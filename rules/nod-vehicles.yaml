@@ -479,7 +479,7 @@ BIKE:
 	Health:
 		HP: 350
 	RevealsShroud:
-		Range: 9c921
+		Range: 10c921
 	Armament@PRIMARY:
 		Weapon: BikeMissile
 		LocalOffset: 0,-232,622, 0,233,622
@@ -565,7 +565,7 @@ REPAIR:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 204
 		Prerequisites: ~naweap, naradr
-		Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Crush class: Light vehicle
+		Description: The repair vehicle in the arsenal of Nod.\n\nGood vs: Nothing\n\nSpecial:\n- Repairs vehicles directly\n- Has a weak repair buff on vehicles in an area around him\n- Stealth Emitters (Technology)\n- Crush class: Light vehicle
 	Voiced:
 		VoiceSet: Cabalbeep
 		Volume: 2
@@ -600,6 +600,13 @@ REPAIR:
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
+	Cloak:
+		RequiresCondition: upgrade.stealth || cloak
+		InitialDelay: 90
+		CloakDelay: 250
+	GrantConditionOnPrerequisite@upgrade1:
+		Condition: upgrade.stealth
+		Prerequisites: upgrade.stealth
 	WithVoxelBody:
 	WithVoxelTurret:
 		Recoils: False
@@ -1186,7 +1193,7 @@ AVATAR:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 5
-		Speed: 65
+		Speed: 70
 	GrantConditionOnMovement@steps:
 		Condition: walker
 	AmbientSound@step1:
