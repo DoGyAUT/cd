@@ -39,7 +39,7 @@ DevilsTongueGunTiberium:
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
 		Range: 1
-		Actors: Cloud1, Cloud2
+		Actors: Cloud1
 		Owner: Creeps
 
 PyradonGun:
@@ -1739,7 +1739,7 @@ FlamerTurretBlueFireballLauncher:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 50
+		Damage: 65
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -1772,7 +1772,7 @@ FlamerTurretFireballLauncher:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 40
+		Damage: 45
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -1788,6 +1788,40 @@ FlamerTurretFireballLauncher:
 		Weapon: TermiteGunShrapnel
 		Amount: 4
 		AimChance: 0
+
+FlamerTurretTiberium:
+	Inherits@wh: BlueFireballLauncher
+	ReloadDelay: 100
+	Burst: 2
+	BurstDelay: 20
+	Range: 7c435
+	Report: flamtnk1.aud
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: tibflametrailer
+		TrailImage: tibflametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+		DamageTypes: TriggerVisceroid
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c424
+		Damage: 55
+		Falloff: 100, 80
+	Warhead@2Eff: CreateEffect
+		Explosions: fire01a, fire02a, fire03a
+		ExplosionPalette: beamzap
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@6Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light2
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1
+		Owner: Creeps
 
 FanticBoom:
 	Inherits@wh: ^HEAPWH
@@ -1861,7 +1895,7 @@ BikeMissile:
 	ReloadDelay: 100
 	Burst: 2
 	BurstDelay: 20
-	Range: 8c497
+	Range: 9c559
 	Report: misl1.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -1986,10 +2020,6 @@ HailstormMissile:
 		Versus:
 			Building: 175
 		ValidTargets: Ground
-	WarheadAS: SpawnActor
-		Range: 1
-		Actors: Cloud1, Cloud2
-		Owner: Creeps
 
 HailstormMissileAA:
 	Inherits: HailstormMissile
@@ -2025,6 +2055,10 @@ HailstormMissileGas:
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Aircraft
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1
+		Owner: Creeps
 
 HailstormMissileGasAA:
 	Inherits: HailstormMissileGas
@@ -2177,6 +2211,40 @@ SAMSiteMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 150
+		ValidTargets: Aircraft
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_tumu
+		ExplosionPalette: apolra50alpha
+		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
+
+SAMSiteMissileTiberium:
+	Inherits: ^MissileAPHE
+	Inherits@wh: ^APHEWH
+	Range: 11c321
+	ReloadDelay: 75
+	Burst: 3
+	BurstDelay: 10
+	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
+	ValidTargets: Aircraft
+	Projectile: Missile
+		MaximumLaunchSpeed: 1c512
+		MinimumLaunchSpeed: 1c512
+		Speed: 1c512
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 0c0
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		RangeLimit: 42c437
+		CloseEnough: 2c0
+		ContrailLength: 10
+		ContrailColor: 00FF64
+		ContrailWidth: 0c21
+		TerrainHeightAware: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c724
+		Damage: 175
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
