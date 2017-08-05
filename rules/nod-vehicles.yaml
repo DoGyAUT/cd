@@ -267,18 +267,18 @@ SAPC:
 		Volume: 8
 	Mobile:
 		TurnSpeed: 5
-		Speed: 60
+		Speed: 30
 		RequiresCondition: !(empdisable && !invulnerability) && !loading
 		Subterranean: true
 		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-		SubterraneanTransitionCost: 1
+		SubterraneanTransitionCost: 0
 		SubterraneanTransitionSound: drillup.aud
 		SubterraneanTransitionImage: dig
 		SubterraneanTransitionSequence: idle
 		SubterraneanTransitionPalette: player
 		TerrainSpeeds:
-			Subterranean: 60
+			Subterranean: 200
 	RejectsOrders:
 		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
