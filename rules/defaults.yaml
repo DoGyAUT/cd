@@ -393,6 +393,7 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@fortification: ^FortificationUpgrades
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	GivesBuildableArea:
 	Capturable:
 	ExternalCapturable:
@@ -755,6 +756,7 @@
 	Inherits@7: ^DeployBuffUpgrades
 	Inherits@8: ^InitiateUpgrades
 	Inherits@parach: ^Parachutable
+	Inherits@DamagedByTiberiumResource: ^DamagedByTiberiumResource
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
 	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
@@ -1011,6 +1013,14 @@
 		Sequence: veins
 		RequiresCondition: veins
 
+^DamagedByTiberiumResource:
+	DamagedByTerrain@DamagedByTiberiumResource:
+		RequiresCondition: !inside-tunnel
+		Terrain: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		Damage: 8
+		DamageInterval: 10
+		DamageTypes: EnergyDeath, TriggerVisceroid
+
 ^Mutant:
 	Inherits@1: ^Infantry
 	Inherits@2: ^WebDisable
@@ -1155,6 +1165,7 @@
 		Range: 1c424, 5c673
 	-GrantConditionOnPrerequisite@nanofiber:
 	-DamageMultiplier@nanofiber:
+	-DamagedByTerrain@DamagedByTiberiumResource:
 	Mobile:
 		RequiresCondition: !(empdisable && !invulnerability)
 		TerrainSpeeds:
@@ -2230,12 +2241,9 @@
 		Condition: disabled
 
 ^AffectedByPowerOutage:
-	AffectedByPowerOutage:
+	RequiresPower:
+	GrantConditionOnDisabled:
 		Condition: power-outage
-	DisableOnCondition@PowerOutage:
-		RequiresCondition: power-outage
-	Power:
-		RequiresCondition: !power-outage
 
 ^3x3hitshape:
 	HitShape:
@@ -2365,57 +2373,11 @@
 			TopLeft: -2560, -2560
 			BottomRight: 2560, 2560
 
-^AffectedByFlames:
-	SelfHealing@firedamage:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage
-	ExternalCondition@firedamage:
-		Condition: firedamage
-	SelfHealing@firedamage1:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage1
-	ExternalCondition@firedamage1:
-		Condition: firedamage1
-	SelfHealing@firedamage2:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage2
-	ExternalCondition@firedamage2:
-		Condition: firedamage2
-	SelfHealing@firedamage3:
-		HealIfBelow: 101
-		DamageTypes: FireDeath
-		RequiresCondition: firedamage3
-	ExternalCondition@firedamage3:
-		Condition: firedamage3
-	SelfHealing@firedamageblue:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue
-	ExternalCondition@firedamageblue:
-		Condition: firedamageblue
-	SelfHealing@firedamageblue1:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue1
-	ExternalCondition@firedamageblue1:
-		Condition: firedamageblue1
-	SelfHealing@firedamageblue2:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue2
-	ExternalCondition@firedamageblue2:
-		Condition: firedamageblue2
-	SelfHealing@firedamageblue3:
-		HealIfBelow: 101
-		DamageTypes: FireDeathBlue
-		RequiresCondition: firedamageblue3
-	ExternalCondition@firedamageblue3:
-		Condition: firedamageblue3
-
 ^PowerplantEffects:
+	AffectedByPowerOutage:
+		Condition: power-outage-pp
+	Power:
+		RequiresCondition: !power-outage-pp
 	ExternalCondition@overload_active:
 		Condition: overload_active
 	PowerMultiplier@overload_active:
@@ -2443,3 +2405,10 @@
 		RequiresCondition: overload_active
 	Sellable:
 		RequiresCondition: !overload_active
+
+^SuperWeapon:
+	RequiresPower:
+	RevealsShroud@revealhimself:
+		ValidStances: Neutral, Enemy
+		MaxHeightDelta: 3
+		Range: 2c0

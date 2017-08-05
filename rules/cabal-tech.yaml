@@ -1,7 +1,7 @@
 upgrade.hc:
 	Inherits: ^BuildingPlug
 	Tooltip:
-		Name: Advanced Platings
+		Name: Fullerene Construction Techniques
 	Buildable:
 		BuildPaletteOrder: 300
 		Prerequisites: ~kabtech
@@ -17,7 +17,7 @@ upgrade.hc:
 upgrade.lc:
 	Inherits: ^BuildingPlug
 	Tooltip:
-		Name: Alloyed Chassis
+		Name: Cybernetic Legs
 	Buildable:
 		BuildPaletteOrder: 301
 		Prerequisites: ~kabtech
@@ -33,7 +33,7 @@ upgrade.lc:
 upgrade.visionuplink:
 	Inherits: ^BuildingPlug
 	Tooltip:
-		Name: Vision Uplink
+		Name: Optics Augmentation
 	Buildable:
 		BuildPaletteOrder: 302
 		Prerequisites: ~kabtech
@@ -65,14 +65,14 @@ upgrade.photonreactors:
 upgrade.teleporter:
 	Inherits: ^BuildingPlug
 	Tooltip:
-		Name: Teleporter
+		Name: Experimental Phase Jump
 	Buildable:
 		BuildPaletteOrder: 304
 		Prerequisites: ~kabtech
 		Queue: Tech.Cabal
 		Description: Research the Teleporter which allows teleporting a small group of units.
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	RenderSprites:
 		Image: KACNST
 	Plug:
@@ -88,7 +88,7 @@ upgrade.nanoswarm:
 		Queue: Tech.Cabal
 		Description: Research the Nanoswarm which allows making a small group of units invulnerable.
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	RenderSprites:
 		Image: KAGATE_A
 	Plug:
@@ -120,7 +120,7 @@ upgrade.mantastrike:
 		Queue: Tech.Cabal
 		Description: Research a fighter aircraft which attacks everything in an area of the map.
 	Valued:
-		Cost: 3000
+		Cost: 1500
 	RenderSprites:
 		Image: MANTA
 	Plug:
@@ -136,7 +136,7 @@ upgrade.overload:
 		Queue: Tech.Cabal
 		Description: Research a method to temporarily boost powerplants.
 	Valued:
-		Cost: 3000
+		Cost: 1000
 	RenderSprites:
 		Image: KALASR
 	Plug:

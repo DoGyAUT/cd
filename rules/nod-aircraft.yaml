@@ -73,7 +73,7 @@ HYDRA:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 1400
+		Cost: 1650
 	Tooltip:
 		Name: Hydra
 	Buildable:
@@ -168,6 +168,7 @@ HYDRA:
 
 HAVOC:
 	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -284,6 +285,8 @@ NODCARRY:
 
 NODCARRY.SUPPORT:
 	Inherits: NODCARRY
+	-Targetable@Targettype:
+	-Targetable@TargettypeGrounded:
 	-Buildable:
 	Valued:
 		Cost: 650

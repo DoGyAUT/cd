@@ -20,6 +20,7 @@ FireballLauncher:
 		TrailImage: flametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 75
@@ -47,6 +48,7 @@ BlueFireballLauncher:
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
 		Damage: 100
@@ -115,19 +117,22 @@ BlueFireballLauncher:
 	Projectile: Missile
 		MinimumLaunchAngle: 270
 		MaximumLaunchAngle: 270
-		MaximumLaunchSpeed: 0c301
-		Blockable: true
+		MaximumLaunchSpeed: 0c543
+		MinimumLaunchSpeed: 0c301
+		Speed: 0c543
+		Blockable: false
 		Shadow: true
 		Inaccuracy: 0c181
 		Image: missile01
-		HorizontalRateOfTurn: 8
-		VerticalRateOfTurn: 12
+		HorizontalRateOfTurn: 16
+		VerticalRateOfTurn: 20
 		RangeLimit: 28c291
 		Palette: effect
 		TrailImage: durasmoke
 		TrailPalette: apolra25alpha
 		AllowSnapping: true
-		CloseEnough: 768
+		CloseEnough: 200
+		CruiseAltitude: 1600
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
@@ -162,10 +167,12 @@ BlueFireballLauncher:
 	Projectile: BulletAS
 		MinimumLaunchAngle: 270
 		MaximumLaunchAngle: 270
-		VerticalRateOfTurn: 12
-		Speed: 0c362
+		VerticalRateOfTurn: 20
+		MaximumLaunchSpeed: 0c543
+		MinimumLaunchSpeed: 0c301
+		Speed: 0c543
 		LaunchAngle: 125
-		Blockable: true
+		Blockable: false
 		Shadow: true
 		Inaccuracy: 4c248
 		Image: missile01
@@ -173,7 +180,8 @@ BlueFireballLauncher:
 		TrailImage: durasmoke
 		TrailPalette: apolra50alpha
 		AllowSnapping: true
-		CloseEnough: 768
+		CloseEnough: 200
+		CruiseAltitude: 1600
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
 		Damage: 0
@@ -305,6 +313,7 @@ BlueFireballLauncher:
 	Inherits: ^LaserWH
 	Projectile: LaserZap
 		Width: 0c71
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Damage: 0
 

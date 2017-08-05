@@ -197,7 +197,7 @@ REAPER:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
-		Cost: 1300
+		Cost: 1200
 	Tooltip:
 		Name: Reaper
 	Selectable:
@@ -414,8 +414,8 @@ SILVER:
 		HP: 500
 	Cargo:
 		Types: Infantry
-		MaxWeight: 7
-		PipCount: 7
+		MaxWeight: 10
+		PipCount: 10
 		EjectOnDeath: False
 	RenderSprites:
 	RenderVoxels:
@@ -429,7 +429,7 @@ SILVER:
 	-ThrowsShrapnel@human:
 	Mobile:
 		TurnSpeed: 5
-		Speed: 80
+		Speed: 90
 	HitShape:
 
 KRONOS:
@@ -516,9 +516,15 @@ FURY:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 2500
+		Cost: 8500
 	Tooltip:
 		Name: Fury
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 311
+		Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+		Description: Battle fortress tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can build Cyborgs\n- Can swim on water\n- Crush class: SuperHeavyVehicle
+		BuildLimit: 1
 	Selectable:
 		Bounds: 42,42, 0, -5
 		Class: Fury
@@ -526,7 +532,7 @@ FURY:
 		VoiceSet: Husk
 		Volume: 2
 	Mobile:
-		Speed: 71
+		Speed: 45
 		TurnSpeed: 2
 		TerrainSpeeds:
 			Water: 80
@@ -607,6 +613,11 @@ FURY:
 		StationaryInterval: 18
 		MovingInterval: 6
 	HitShape:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
 
 GARGANTUA:
 	Inherits@1: ^Walker
@@ -617,17 +628,23 @@ GARGANTUA:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
-		Cost: 2500
+		Cost: 8000
 	Tooltip:
 		Name: Gargantua
 	Selectable:
 		Bounds: 42,42, 0, -10
 		Class: Gargantua
+	Buildable:
+		Queue: Vehicle.Cabal
+		BuildPaletteOrder: 312
+		Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+		Description: Battle Mech.\n\nGood vs: Ground Units\n\nSpecial:\n- Crush class: SuperHeavyVehicle
+		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 5
-		Speed: 71
+		Speed: 55
 	Health:
-		HP: 13000
+		HP: 12000
 	SelfHealing:
 		Step: 1
 		PercentageStep: 0
@@ -670,3 +687,8 @@ GARGANTUA:
 		Voice: Move
 		Weight: 20
 	HitShape:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
