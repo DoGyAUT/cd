@@ -220,6 +220,8 @@ explosion:
 		BlendMode: Additive
 		ZRamp: 1
 		Tick: 100
+	cleansingauraexp: cleansingauraexp
+		BlendMode: Additive
 	ring: ring
 		BlendMode: Additive
 		Length: *
@@ -744,6 +746,12 @@ smoketrail:
 		BlendMode: Additive
 
 smallsmoketrail:
+	idle:
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive
+
+cleansingauraexp:
 	idle:
 		Length: *
 		ZOffset: 1023
