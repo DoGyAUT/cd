@@ -1159,15 +1159,16 @@ MARV:
 		Weapon: UnitExplodeEpic
 		EmptyWeapon: UnitExplodeEpic
 	Harvester:
-		DeliveryBuildings: kahpad
-		Capacity: 14000
+		DeliveryBuildings: MARV # Placeholder because he shouldn't unload at all
+		Capacity: 1000000
 		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
-		BaleLoadDelay: 1
-		BaleUnloadDelay: 6
-		SearchFromProcRadius: 1
-		SearchFromOrderRadius: 1
+		BaleLoadDelay: 0
+		FullyLoadedSpeed: 100
+		SearchFromProcRadius: 5
+		SearchFromOrderRadius: 5
+		SearchOnCreation: False
 		HarvestVoice: Action
-		PipCount: 20
+		PipCount: 0
 	Armament@primary:
 		Name: primary
 		Weapon: MarvGun
