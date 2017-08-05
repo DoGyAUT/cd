@@ -1152,11 +1152,13 @@ ReaperMissileAA:
 cleansingaura:
 	ValidTargets: Infantry
 	Warhead@emp: GrantExternalCondition
-		Range: 4c0
+		Range: 3c0
 		Condition: cleansingaura
 		Duration: 500
 		ValidTargets: Infantry
 		ValidStances: None, Enemy, Neutral, Ally
+	Warhead@2Eff: CreateEffect
+		Explosions: cleansingauraexp
 
 Hightensionbomb:
 	ReloadDelay: 10000
