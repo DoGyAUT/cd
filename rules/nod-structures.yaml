@@ -76,7 +76,6 @@ NAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
@@ -113,7 +112,6 @@ NAAPWR:
 	Inherits@2: ^2x3hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Nod
@@ -358,13 +356,13 @@ NAWEAP:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
+		PauseOnCondition: power-outage
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
@@ -423,6 +421,7 @@ NARADR:
 		ClockSequence: clock
 		Range: 8
 		Duration: 450
+		PauseOnCondition: power-outage
 	SpawnActorPower@nodscan:
 		OrderName: RadarScanPower
 		Actor: camera.nodscan
@@ -436,6 +435,7 @@ NARADR:
 		CircleSequence: circles
 		ClockSequence: clock
 		Sequence: idle
+		PauseOnCondition: power-outage
 	SpawnActorPower@subambush:
 		OrderName: SubAmbushPowerInfoOrder
 		Prerequisites: ~industry
@@ -452,13 +452,13 @@ NARADR:
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
 		LaunchSpeechNotification: Reinforce
+		PauseOnCondition: power-outage
 
 NAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -553,6 +553,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@fanatic:
 		UnitType: valkyrie.support
 		Prerequisites: ~propaganda, naradr
@@ -573,6 +574,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@techcarry:
 		UnitType: valkyrie.support
 		Prerequisites: ~technology
@@ -593,6 +595,7 @@ NAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 NAPYRA:
 	Inherits: ^Building
@@ -657,6 +660,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@VertigoTiberiumAirstrikePower:
 		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~industry
@@ -677,6 +681,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@VertigoSeismicAirstrikePower:
 		OrderName: VertigoSeismicAirstrikePowerInfoOrder
 		Prerequisites: naradr, ~technology
@@ -697,59 +702,7 @@ NAPYRA:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-
-NATECH:
-	Inherits: ^Building
-	Inherits@2: ^2x2hitshape
-	Inherits@3: ^ExploBuildingmedium
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Nod Tech Center
-	ProvidesPrerequisite:
-		Prerequisite: tech
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Selectable:
-		Bounds: 86, 58, 0, -4
-	Health:
-		HP: 3024
-	RevealsShroud:
-		Range: 5c673
-	WithIdleOverlay@LIGHTS:
-		Sequence: idle-lights
 		PauseOnCondition: power-outage
-	Power:
-		Amount: -150
-	ProvidesPrerequisite@buildingname:
-	HitShape:
-
-NATMPL:
-	Inherits: ^Building
-	Inherits@2: ^3x4hitshape
-	Inherits@3: ^ExploBuildingmedium
-	ProvidesPrerequisite@buildingname:
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Temple of Nod
-	Building:
-		Adjacent: 3
-		Footprint: xxxx xxxx xxxx
-		Dimensions: 4,3
-	Selectable:
-		Bounds: 134, 120, 12, -12
-	Health:
-		HP: 7280
-	RevealsShroud:
-		Range: 8c497
-	Power:
-		Amount: -200
-	WithIdleOverlay@LIGHTS:
-		Sequence: idle-lights
-	HitShape:
 
 NAWAST:
 	Inherits: ^Building

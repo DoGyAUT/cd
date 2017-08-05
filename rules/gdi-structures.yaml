@@ -73,7 +73,6 @@ GAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.GDI
@@ -300,7 +299,6 @@ GARADR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 106
@@ -399,6 +397,7 @@ GAARMORY:
 		CircleSequence: circles
 		ClockSequence: clock
 		Range: 2
+		PauseOnCondition: power-outage
 	ProvidesAIPrerequisite@gafortAI:
 		Prerequisite: gafortAI
 	AirstrikePower@artillery:
@@ -422,6 +421,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@orcabomber:
 		OrderName: OrcaBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.st
@@ -444,6 +444,7 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	AirstrikePower@oxbomber:
 		OrderName: OXBomberAirstrikePowerInfoOrder
 		Prerequisites: garadr, upgrade.zc
@@ -466,6 +467,29 @@ GAARMORY:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
+	AirstrikePower@HellfireMissilesStrikePower:
+		Prerequisites: garadr, upgrade.gdf
+		Icon: kodiak
+		OrderName: HellfireMissilesStrikePowerInfoOrder
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: A huge Rocketbombardment
+		LongDesc: Deploy a bombardment of an Kodiak Battleship.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: predator_a8.aud
+		EndChargeSound: predator_m2.aud
+		LaunchSound: predator_a10.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: hellfire_beacon
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: kodiak
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GAHPAD:
 	Inherits: ^Building
@@ -547,6 +571,7 @@ GAHPAD:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GADEPT:
 	Inherits: ^Building
@@ -617,6 +642,7 @@ GADEPT:
 		ClockSequence: clock
 		Range: 8
 		Duration: 300
+		PauseOnCondition: power-outage
 
 GATECH:
 	Inherits: ^Building
@@ -667,6 +693,7 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@poseidon:
 		UnitType: dshp.support
 		DropItems: gthtnk, gthtnk, gthtnk
@@ -687,6 +714,7 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	ParatroopersPower@titans:
 		UnitType: dshp.support
 		DropItems: mmch, mmch, mmch, mmch
@@ -706,6 +734,7 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 
 GADROP:
 	Inherits: ^Building
@@ -721,6 +750,8 @@ GADROP:
 		Cost: 2000
 	Tooltip:
 		Name: Steel Talon Dropship-Bay
+	ProvidesPrerequisite:
+		Prerequisite: factory
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -778,4 +809,4 @@ GADROP:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-
+		PauseOnCondition: power-outage

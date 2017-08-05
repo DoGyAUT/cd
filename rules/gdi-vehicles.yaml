@@ -991,23 +991,30 @@ HMEC:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
-		Cost: 2500
+		Cost: 9500
 	Tooltip:
 		Name: Mammoth Mk.II
+	Buildable:
+		Queue: Vehicle.GDI.Ace
+		BuildPaletteOrder: 130
+		BuildLimit: 1
+		Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.st
+		Description: Steel Talon's ultra-heavy walker.\n\nGood vs: Everything\n\nSpecial:\n- Self Healing\n- Crush class: Super Heavy vehicle
 	Voiced:
 		VoiceSet: Marv
 		Volume: 2
 	Mobile:
 		TurnSpeed: 2
-		Speed: 54
+		Speed: 50
 	Health:
-		HP: 6500
+		HP: 8500
 	SelfHealing:
 		Step: 1
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
+	AutoTarget:
 	RevealsShroud:
 		Range: 21c218
 	RenderSprites:
@@ -1066,7 +1073,13 @@ IONTANK:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
-		Cost: 2500
+		Cost: 7000
+	Buildable:
+		Queue: Vehicle.GDI
+		BuildPaletteOrder: 128
+		BuildLimit: 1
+		Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.gdf
+		Description: GDF's ultra-heavy ion cannon tank.\n\nGood vs: Ground\n\nSpecial:\n- Self Healing\n- Crush class: Super Heavy vehicle
 	Tooltip:
 		Name: Leviathan
 	Voiced:
@@ -1074,9 +1087,9 @@ IONTANK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 2
-		Speed: 54
+		Speed: 50
 	Health:
-		HP: 5200
+		HP: 5000
 	SelfHealing:
 		Step: 1
 		PercentageStep: 0
@@ -1096,6 +1109,7 @@ IONTANK:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
+	AutoTarget:
 	WithVoxelTurret:
 	Explodes:
 		Weapon: UnitExplodeEpic
@@ -1107,3 +1121,82 @@ IONTANK:
 		Voice: Move
 		Weight: 20
 	HitShape:
+
+MARV:
+	Inherits@1: ^VoxelTank
+	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Valued:
+		Cost: 8500
+	Tooltip:
+		Name: M.A.R.V.
+	Buildable:
+		Queue: Vehicle.GDI
+		BuildPaletteOrder: 127
+		BuildLimit: 1
+		Prerequisites: ~gaweap, gatech, ~!t1, ~!t2, ~upgrade.zc
+		Description: Zocom's ultra-heavy tank.\n\nGood vs: Ground\n\nSpecial:\n- Self Healing\n- Can destroy Tiberium\n- Crush class: Super Heavy vehicle
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Voiced:
+		VoiceSet: Marv
+		Volume: 2
+	Mobile:
+		Speed: 45
+		TurnSpeed: 3
+	Health:
+		HP: 6500
+	RevealsShroud:
+		Range: 14c745
+	AutoTarget:
+	Turreted:
+		TurnSpeed: 2
+		Offset: -500,0,0
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	Harvester:
+		DeliveryBuildings: MARV # Placeholder because he shouldn't unload at all
+		Capacity: 1000000
+		Resources: Tiberium, BlueTiberium, RedTiberium, PurpleTiberium
+		BaleLoadDelay: 0
+		FullyLoadedSpeed: 100
+		SearchFromProcRadius: 5
+		SearchFromOrderRadius: 5
+		SearchOnCreation: False
+		HarvestVoice: Action
+		PipCount: 0
+	Armament@primary:
+		Name: primary
+		Weapon: MarvGun
+		LocalOffset: 1556,-181,1061
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra50alpha
+		Recoil: 100
+		RecoilRecovery: 10
+	AttackTurreted:
+	SelfHealing:
+		Step: 1
+		PercentageStep: 0
+		Delay: 3
+		HealIfBelow: 100
+		DamageCooldown: 200
+	RenderSprites:
+	RenderVoxels:
+		Scale: 1.0
+	WithVoxelBody:
+	WithVoxelTurret:
+	WithMuzzleOverlay:
+	HitShape:
+	Explodes:
+		Weapon: UnitExplodeEpic
+		EmptyWeapon: UnitExplodeEpic
+	ActorLostNotification:
+		Notification: CriticalUnitLost
+	Passenger:
+		CargoType: Epic
+		Voice: Move
+		Weight: 20

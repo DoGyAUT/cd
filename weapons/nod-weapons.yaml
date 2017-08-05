@@ -557,6 +557,75 @@ RaiderGunLaser:
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
 
+ScorpionLaserFast:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 10
+	Range: 8c497
+	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
+	ValidTargets: Ground, Aircraft
+	Projectile: LaserZap
+		Color: C80000
+		Width: 0c42
+		BeamDuration: 3
+		ZOffset: 2047
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c21
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c59
+		Damage: 15
+		Versus:
+			Aircraft: 50
+			Infantry: 100
+		ValidTargets: Ground, Aircraft
+	Warhead@2Eff: CreateEffect
+		Explosions: plasmaexpl2
+		ExplosionPalette: player50alpha
+		InvalidTargets: Water
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+	Warhead@4EffAir: CreateEffect
+		Explosions: lasershot1
+		ExplosionPalette: player50alpha
+		ValidTargets: Aircraft
+
+ScorpionLaser:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 40
+	Range: 8c497
+	Report: obelray1.aud
+	Projectile: LaserZap
+		Color: FF0000
+		Width: 0c111
+		BeamDuration: 20
+		ZOffset: 2047
+		UsePlayerColor: true
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c48
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c128
+		Damage: 300
+	Warhead@2Eff: CreateEffect
+		Explosions: scexplo
+		ExplosionPalette: effect50alpha
+		ImpactSounds: expnew06.aud
+		InvalidTargets: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeScorch
+	Warhead@5Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light
+	Warhead@emp: GrantExternalCondition
+		Range: 0c128
+		Duration: 20
+		Condition: empdisable
+		ValidTargets: Ground
+
 AvatarLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
@@ -624,80 +693,6 @@ EMPulseCannon:
 		Duration: 400
 		Condition: empdisable
 		ValidTargets: Ground
-
-ClusterMissile:
-	ValidTargets: Ground
-	Warhead@ImpactDamage0: SpreadDamage
-		Spread: 1c424
-		Damage: 75
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
-	Warhead@ResourceDestruction0: DestroyResource
-		Size: 1
-	Warhead@ClusterSmudges0: LeaveSmudge
-		SmudgeType: LargeCrater
-		Size: 1
-	Warhead@ClusterDamage1: SpreadDamage
-		Spread: 2c848
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 5
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
-	Warhead@ResourceDestruction1: DestroyResource
-		Size: 2
-		Delay: 5
-	Warhead@ClusterSmudges1: LeaveSmudge
-		SmudgeType: LargeScorch
-		Size: 2
-		Delay: 5
-	Warhead@ClusterDamage2: SpreadDamage
-		Spread: 4c248
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
-	Warhead@ResourceDestruction2: DestroyResource
-		Size: 3
-		Delay: 10
-	Warhead@ClusterSmudges2: LeaveSmudge
-		SmudgeType: LargeScorch
-		Size: 3
-		Delay: 10
-	Warhead@ClusterDamage3: SpreadDamage
-		Spread: 5c673
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
-	Warhead@ResourceDestruction3: DestroyResource
-		Size: 4
-		Delay: 15
-	Warhead@ClusterSmudges3: LeaveSmudge
-		SmudgeType: MediumScorch
-		Size: 4
-		Delay: 15
-	Warhead@ClusterDamage4: SpreadDamage
-		Spread: 7c73
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 20
-		ValidTargets: Ground
-		DamageTypes: TakeCoverEffect, FireDeath
-	Warhead@ResourceDestruction4: DestroyResource
-		Size: 5
-		Delay: 20
-	Warhead@ClusterSmudges4: LeaveSmudge
-		SmudgeType: SmallScorch
-		Size: 5
-		Delay: 20
-	Warhead@SoundEffect0: CreateEffect
-		Explosions: bigbomb
-		ExplosionPalette: effect
-		ImpactSounds: snukeexpl.aud
 
 MultiCluster:
 	ReloadDelay: 80
@@ -2455,3 +2450,815 @@ termitegunshrapnelblue1:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_flash
 		ExplosionPalette: light2
+
+####SUPERWEAPONS####
+ClusterMissile:
+	Inherits: ^ShellHE
+	Inherits@wh: ^HEWH
+	ReloadDelay: 60
+	Range: 0c512
+	Report: bombdrop.aud
+	Projectile: BulletAS
+		Speed: 0c724
+		Inaccuracy: 0c0
+		Image: shell01
+		Shadow: true
+		LaunchAngle: 0
+		Palette: effect
+		ContrailLength: 10
+		ContrailColor: FFFFFF
+		ContrailWidth: 0c21
+	Warhead@1Dam: SpreadDamage
+		Spread: 3c512
+		Damage: 5000
+	Warhead@2Eff: CreateEffect
+		Explosions: bignuke
+		ExplosionPalette: apolra2
+		ImpactSounds: snukexpl.aud
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@5Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light2
+	ValidTargets: Ground, Air
+	Warhead@ImpactDamage0: SpreadDamage
+		Spread: 1c424
+		Damage: 750
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@ClusterSmudges0: LeaveSmudge
+		SmudgeType: LargeCrater
+		Size: 2
+	Warhead@ClusterDamage1: SpreadDamage
+		Spread: 2c848
+		Damage: 300
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 20
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@ClusterSmudges1: LeaveSmudge
+		SmudgeType: LargeScorch
+		Size: 3
+		Delay: 20
+	Warhead@ClusterDamage2: SpreadDamage
+		Spread: 4c248
+		Damage: 300
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 30
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@ClusterSmudges2: LeaveSmudge
+		SmudgeType: LargeScorch
+		Size: 5
+		Delay: 30
+	Warhead@ClusterDamage3: SpreadDamage
+		Spread: 5c673
+		Damage: 300
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 40
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@ClusterSmudges3: LeaveSmudge
+		SmudgeType: MediumScorch
+		Size: 7
+		Delay: 40
+	Warhead@ClusterDamage4: SpreadDamage
+		Spread: 7c73
+		Damage: 300
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 50
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@ClusterSmudges4: LeaveSmudge
+		SmudgeType: SmallScorch
+		Size: 10
+		Delay: 50
+	Warhead@SoundEffect0: CreateEffect
+		Explosions: bigbomb
+		ExplosionPalette: effect
+		ImpactSounds: snukeexpl.aud
+	Warhead@6Sharpnel: FireShrapnel
+		Weapon: NukeShrapnel1
+		Amount: 90
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@7Sharpnel: FireShrapnel
+		Weapon: NukeShrapnel2
+		Amount: 60
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@8Sharpnel: FireShrapnel
+		Weapon: NukeShrapnel3
+		Amount: 60
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@9Sharpnel: FireShrapnel
+		Weapon: NukeShrapnel4
+		Amount: 30
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@10Eff: CreateEffect
+		Explosions: firedustwave
+		ExplosionPalette: effectra2
+	Warhead@11Sharpnel: FireShrapnel
+		Weapon: NukeRadiation
+		Amount: 15
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 5
+	Warhead@12Sharpnel: FireShrapnel
+		Weapon: NukeRadiation
+		Amount: 15
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 10
+	Warhead@13Sharpnel: FireShrapnel
+		Weapon: NukeRadiation
+		Amount: 15
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 15
+	Warhead@14Sharpnel: FireShrapnel
+		Weapon: NukeRadiation
+		Amount: 15
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 20
+
+NukeShrapnel1:
+	Inherits: LargeDebris
+	Range: 12c0
+	MinRange: 3c0
+	Projectile: BulletAS
+		Speed: 150
+		Blockable: true
+		-Image:
+		TrailImage: flametrailnuke
+		TrailPalette: apolra2
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 341
+		Damage: 400
+		DamageTypes: TriggerProne, FireDeath
+
+NukeShrapnel2:
+	Inherits: NukeShrapnel1
+	Range: 8c0
+	-MinRange:
+	Projectile: BulletAS
+		Speed: 100
+		LaunchAngle: -145
+
+NukeShrapnel3:
+	Inherits: NukeShrapnel1
+	Range: 14c0
+	-MinRange:
+	Projectile: BulletAS
+		Speed: 250
+		LaunchAngle: -85
+
+NukeShrapnel4:
+	Inherits: NukeShrapnel1
+	Range: 6c0
+	-MinRange:
+	Projectile: BulletAS
+		Speed: 75
+		LaunchAngle: -270
+
+NukeRadiation:
+	ReloadDelay: 10
+	Range: 9c573
+	Report:
+	Projectile: BulletAS
+		Speed: 0c145, 0c291, 0c336, 0c245, 0c291, 0c236, 0c345, 0c491, 0c536, 1c45, 1c91, 1c136
+		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, -195, -210, -225, -245
+		Image: dot
+		Shadow: false
+	Warhead@1Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibgloworange
+	WarheadAS: SpawnActor
+		Range: 2
+		Actors: Cloud3, Cloud4
+		Owner: Creeps
+
+TiberiumBombIndustry:
+	Range: 0c100
+	Projectile: BulletAS
+		Speed: 9000
+	Warhead@1Sharpnel: FireShrapnel
+		Weapon: TiberiumBombElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@2Sharpnel: FireShrapnel
+		Weapon: TiberiumBombElevator
+		Amount: 1
+		Delay: 90
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@3Sharpnel: FireShrapnel
+		Weapon: TiberiumBombElevatorSpecial
+		Amount: 1
+		Delay: 180
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@4Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 280
+		ValidTargets: Ground, Air
+	Warhead@5Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 290
+		ValidTargets: Ground, Air
+	Warhead@6Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 300
+		ValidTargets: Ground, Air
+	Warhead@7Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 310
+		ValidTargets: Ground, Air
+	Warhead@8Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 320
+		ValidTargets: Ground, Air
+	Warhead@9Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 330
+		ValidTargets: Ground, Air
+	Warhead@10Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 340
+		ValidTargets: Ground, Air
+	Warhead@11Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 350
+		ValidTargets: Ground, Air
+	Warhead@12Sharpnel: FireShrapnel
+		Weapon: TibDebrisSpecial
+		Amount: 10
+		Delay: 360
+		ValidTargets: Ground, Air
+
+TiberiumBombElevator:
+	ReloadDelay: 6
+	Range: 0c100
+	Projectile: AthenaProjectile
+		Altitude: 75000
+	Warhead@1Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHigh
+		ValidTargets: Ground, Air
+	Warhead@2Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 5
+		ValidTargets: Ground, Air
+	Warhead@3Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 10
+		ValidTargets: Ground, Air
+	Warhead@4Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 15
+		ValidTargets: Ground, Air
+	Warhead@5Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 20
+		ValidTargets: Ground, Air
+	Warhead@6Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 25
+		ValidTargets: Ground, Air
+	Warhead@7Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 30
+		ValidTargets: Ground, Air
+	Warhead@8Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 35
+		ValidTargets: Ground, Air
+	Warhead@9Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 40
+		ValidTargets: Ground, Air
+	Warhead@10Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 45
+		ValidTargets: Ground, Air
+	Warhead@11Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 50
+		ValidTargets: Ground, Air
+	Warhead@12Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 55
+		ValidTargets: Ground, Air
+	Warhead@13Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 60
+		ValidTargets: Ground, Air
+	Warhead@14Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 65
+		ValidTargets: Ground, Air
+	Warhead@15Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 70
+		ValidTargets: Ground, Air
+	Warhead@16Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 75
+		ValidTargets: Ground, Air
+	Warhead@17Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 80
+		ValidTargets: Ground, Air
+	Warhead@18Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 85
+		ValidTargets: Ground, Air
+	Warhead@19Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighDummy
+		Delay: 90
+		ValidTargets: Ground, Air
+
+TiberiumBombElevatorSpecial:
+	Inherits: TiberiumBombElevator
+	Warhead@1Sharpnel: FireShrapnel
+		Weapon: TiberiumLaserHighSpecial
+		ValidTargets: Ground, Air
+
+TiberiumLaserHigh:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 90
+	Range: 0c010
+	Report: industlaser2.wav
+	Projectile: LaserZap
+		Color: 11BD00
+		Width: 0c171
+		BeamDuration: 9000
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c128
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 29FF9B
+	Warhead@1Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 10
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 20
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@4Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 30
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@5Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 40
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@6Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 50
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@7Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 60
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@8Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 70
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@9Dam: SpreadDamage
+		Spread: 5c73
+		Damage: 25
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 80
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+	Warhead@2Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 20
+	Warhead@4Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 30
+	Warhead@5Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 40
+	Warhead@6Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 50
+	Warhead@7Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 60
+	Warhead@8Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 70
+	Warhead@9Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 80
+	Warhead@10Eff: CreateEffect
+		Explosions: greenring
+		ExplosionPalette: effectra2
+		Delay: 90
+	Warhead@11Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: light
+	Warhead@12Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 10
+	Warhead@13Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 20
+	Warhead@14Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 30
+	Warhead@15Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 40
+	Warhead@16Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 50
+	Warhead@17Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 60
+	Warhead@18Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 70
+	Warhead@19Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 80
+	Warhead@20Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+		Delay: 90
+	WarheadAS@10: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+	WarheadAS@11: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 10
+	WarheadAS@12: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 20
+	WarheadAS@13: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 30
+	WarheadAS@14: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 40
+	WarheadAS@15: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 50
+	WarheadAS@16: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 60
+	WarheadAS@17: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 70
+	WarheadAS@18: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 80
+	WarheadAS@19: FireShrapnel
+		Weapon: IndustryNodLaserHighSparks
+		Amount: 45
+		AimChance: 0
+		Delay: 90
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: DummyShakerVision
+		Owner: Creeps
+
+TiberiumLaserHighDummy:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 90
+	Range: 0c010
+	Report: industlaser2.wav
+	Projectile: LaserZap
+		Color: 11BD00
+		Width: 0c171
+		BeamDuration: 9000
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c128
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 29FF9B
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: DummyShakerVision
+		Owner: Creeps
+
+TiberiumLaserHighSpecial:
+	Inherits: TiberiumLaserHigh
+	Warhead@12Eff: CreateEffect
+		Explosions: attachanim
+		ExplosionPalette: tiberiumbomb
+		Delay: 90
+
+TibDebrisSpecial:
+	Inherits: TibDebris
+	Range: 12c000
+	MinRange: 2c000
+	Report: industlaser.wav
+	Projectile: BulletAS
+		Inaccuracy: 4c524
+		Speed: 0c301, 0c401, 0c501, 0c601
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c524
+		Damage: 1500
+		Falloff: 100, 80
+	Warhead@10Eff: CreateEffect
+		Explosions: explolb
+		ExplosionPalette: effectra2
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
+	WarheadAS@2: SpawnActor
+		Range: 1
+		Actors: DummyShakerVision
+		Owner: Creeps
+	Warhead@11Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglow
+
+TechnologyLaserStarter:
+	Range: 1c0
+	Projectile: BulletAS
+		Speed: 9000
+	Warhead@op: FireShrapnel
+		Weapon: TechnologyLaserElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@op1: FireShrapnel
+		Weapon: TechnologyLaserElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 60
+	Warhead@op2: FireShrapnel
+		Weapon: TechnologyLaserElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 120
+	Warhead@op3: FireShrapnel
+		Weapon: TechnologyLaserElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 180
+	Warhead@op4: FireShrapnel
+		Weapon: TechnologyLaserElevator
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 240
+
+TechnologyLaserElevator:
+	ReloadDelay: 6
+	Range: 2c0
+	MinRange: 1c0
+	Projectile: AthenaProjectile
+		Altitude: 175000
+	Warhead@op: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 0
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+		Delay: 70
+	Warhead@op1: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 75
+	Warhead@op2: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 80
+	Warhead@op3: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 85
+	Warhead@op4: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 90
+	Warhead@op5: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 95
+	Warhead@op6: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 100
+	Warhead@op7: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 105
+	Warhead@op8: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 110
+	Warhead@op9: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 115
+	Warhead@op10: FireShrapnel
+		Weapon: TechnologyLaserHigh
+		AimChance: 100
+		Amount: 1
+		AllowDirectHit: true
+		ValidTargets: Ground, Air
+		Delay: 120
+
+TechnologyLaserHigh:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^LaserWH
+	ReloadDelay: 1
+	Range: 12c010
+	Report: obelray1.aud
+	InvalidTargets: Water, Aircraft
+	Projectile: LaserZap
+		Color: FF0000
+		Width: 0c125
+		BeamDuration: 9000
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c35
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FFFFFF
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c000
+		Damage: 250
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 3c73
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: TakeCoverEffect, FireDeath
+	WarheadAS@2: SpawnActor
+		Range: 1
+		Actors: DummyShakerVision
+		Owner: Creeps
+	Warhead@3Eff: CreateEffect
+		Explosions: ionringmini
+		ExplosionPalette: apolred
+	Warhead@4Eff: CreateEffect
+		Explosions: ionring
+		ExplosionPalette: apolred
+	Warhead@5Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglowred
+		ImpactSounds: obelray1.aud
+	Warhead@6Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	WarheadAS@7: FireShrapnel
+		Weapon: NapalmShrapnelTechnologyNodSuperWeapon
+		Amount: 1
+		AimChance: 0
+	WarheadAS@8: FireShrapnel
+		Weapon: TechnologyLaserHighSparks
+		Amount: 45
+		AimChance: 0
+	Warhead@9Eff: CreateEffect
+		Explosions: scexplo
+		ExplosionPalette: effect50alpha
+		InvalidTargets: Water
+
+NapalmShrapnelTechnologyNodSuperWeapon:
+	Inherits@wh: NapalmShrapnel
+	Range: 0c597
+	Projectile: BulletAS
+		Speed: 6c181
+		-Image:
+		-TrailImage:
+	WarheadAS: SpawnActor
+		Delay: 5
+
+TechnologyLaserHighSparks:
+	ReloadDelay: 10
+	Range: 5c673
+	Report:
+	Projectile: BulletAS
+		Speed: 0c145, 0c291, 0c336, 0c245, 0c291, 0c236, 0c345, 0c491, 0c536, 1c45, 1c91, 1c136
+		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, -195, -210, -225, -245
+		Image: spark
+		Palette: apolred
+		ContrailLength: 25
+		ContrailColor: FF0000
+		ContrailWidth: 0c20
+		Sequences: 1
+		Shadow: false
+
+IndustryNodLaserHighSparks:
+	Inherits@wh: TechnologyLaserHighSparks
+	Projectile: BulletAS
+		ContrailColor: 0ADB00

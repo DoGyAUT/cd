@@ -80,7 +80,6 @@ KPR:
 	Inherits@2: ^PowerBoostUpgrades
 	Inherits@3: ^ExploBuildingPowercabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@3: ^3x3hitshape
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Inherits@PowerplantEffects: ^PowerplantEffects
@@ -174,7 +173,6 @@ CYBBAR:
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Buildable:
 		Queue: Building.Cabal
@@ -240,6 +238,7 @@ CYBBAR:
 		Weapon: cleansingaura
 		ActivationSequence:
 		TargetCircleRange: 4c0
+		PauseOnCondition: power-outage
 
 KAWEAP:
 	Inherits: ^Building
@@ -309,7 +308,6 @@ KARADR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmallcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Buildable:
 		Queue: Building.Cabal
@@ -359,7 +357,6 @@ KAHPAD:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmallcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Valued:
 		Cost: 1000
@@ -566,7 +563,6 @@ KABTECH:
 		RequiresCondition: plug1.upgrade.combatreactors || plug2.upgrade.combatreactors || plug3.upgrade.combatreactors || plug4.upgrade.combatreactors
 	ChronoshiftPower@teleporter:
 		OrderName: Teleporter
-		PauseOnCondition: disabled
 		Icon: fortification
 		ChargeTime: 210
 		Description: Teleporter
@@ -578,6 +574,7 @@ KABTECH:
 		KillCargo: False
 		DisplayRadarPing: True
 		RequiresCondition: plug1.upgrade.teleporter || plug2.upgrade.teleporter || plug3.upgrade.teleporter || plug4.upgrade.teleporter
+		PauseOnCondition: power-outage
 	GrantExternalConditionPower@nanoswarm:
 		OrderName: nanoswarm
 		Icon: fortification
@@ -592,6 +589,7 @@ KABTECH:
 		Condition: invulnerability
 		Range: 2
 		RequiresCondition: plug1.upgrade.nanoswarm || plug2.upgrade.nanoswarm || plug3.upgrade.nanoswarm || plug4.upgrade.nanoswarm
+		PauseOnCondition: power-outage
 	AirstrikePower@MantaStrikeRun:
 		OrderName: MantaStrikeRun
 		UnitType: manta
@@ -611,6 +609,7 @@ KABTECH:
 		CircleSequence: circles
 		ClockSequence: clock
 		RequiresCondition: plug1.upgrade.mantastrike || plug2.upgrade.mantastrike || plug3.upgrade.mantastrike || plug4.upgrade.mantastrike
+		PauseOnCondition: power-outage
 	AirstrikePower@totalmeltdown:
 		OrderName: totalmeltdown
 		UnitType: kdrone1
@@ -629,6 +628,7 @@ KABTECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	DetonateWeaponPower@overload:
 		OrderName: overload
 		Icon: batr
@@ -643,3 +643,4 @@ KABTECH:
 		ActivationSequence:
 		TargetCircleRange: 2c512
 		RequiresCondition: plug1.upgrade.overload || plug2.upgrade.overload || plug3.upgrade.overload || plug4.upgrade.overload
+		PauseOnCondition: power-outage

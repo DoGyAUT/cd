@@ -12,6 +12,19 @@
 		Tileset: TEMPERATE
 		Filename: unittem.pal
 		ShadowIndex: 1
+	PaletteFromFile@playercab:
+		Name: playercab
+		Filename: unitcab.pal	
+		ShadowIndex: 1
+		AllowModifiers: true
+	PlayerColorPalette@playercab:
+		BasePalette: playercab
+		BaseName: playercab
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromPlayerPaletteWithAlpha@cloakcab:
+		BaseName: cloakcab
+		BasePalette: playercab
+		Alpha: 0.55
 	PaletteFromFile@depth:
 		Name: depth
 		Filename: depth.pal
@@ -32,6 +45,9 @@
 	PaletteFromFile@apolred:
 		Name: apolred
 		Filename: apolred.pal
+	PaletteFromFile@apolorange:
+		Name: apolorange
+		Filename: apolorange.pal
 	PaletteFromFile@apolyell:
 		Name: apolyell
 		Filename: apolyell.pal
@@ -140,6 +156,10 @@
 	PaletteFromFile@tibglow:
 		Name: tibglow
 		Filename: tibglowgreen.pal
+		ShadowIndex: 0
+	PaletteFromFile@tibgloworange:
+		Name: tibgloworange
+		Filename: tibgloworange.pal
 		ShadowIndex: 0
 	PaletteFromFile@tibglowblue:
 		Name: tibglowblue
