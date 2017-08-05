@@ -1363,18 +1363,19 @@ OrbitalProjectile:
 	Warhead@8Eff: CreateEffect
 		Explosions: medium_flash
 		ExplosionPalette: light
-	Warhead@8Sharpnel: FireShrapnel
+	Warhead@9Sharpnel: FireShrapnel
 		Weapon: OrbitalProjectileExp
 		Amount: 1
+		AimChance: 100
 		AllowDirectHit: false
-		ValidTargets: Ground, Aircraft
+		ValidTargets: Ground
 	Warhead@66Eff: CreateEffect
 		Explosions: large_flash
 
 OrbitalProjectileExp:
 	Inherits: OrbitalProjectile
 	Projectile: InstantExplode
-	-Warhead@8Sharpnel:
+	-Warhead@9Sharpnel:
 	Warhead@9Sharpnel: FireShrapnel
 		Weapon: OrbitalProjectileCopy2
 		Amount: 10
