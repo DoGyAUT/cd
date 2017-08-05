@@ -626,7 +626,7 @@ GATECH:
 		Queue: Building.GDI
 		BuildPaletteOrder: 110
 		Prerequisites: anypower, garadr, gaarmory, ~structures.gdi
-		Description: Provides access to advanced GDI technologies.\n\nSpecial:\n- Allows calling a Zone Commander squad (ZOCOM)
+		Description: Provides access to advanced GDI technologies.\n\nSpecial:\n- Allows calling a Grizzly Tank Drop (GDF)\n- Allows calling a Titan drop (Steel Talons)\n- Allows calling a Zone Team Drop (ZOCOM)
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -656,8 +656,8 @@ GATECH:
 		SquadSize: 1
 		ChargeTime: 300
 		QuantizedFacings: 2
-		Description: Zone Troop Drop
-		LongDesc: Drops a Zone Commander with a squad of 2 Troopers and 2 Raiders.
+		Description: Zone Team Call
+		LongDesc: Drops a squad of 3 Troopers and 3 Raiders.
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
 		LaunchSpeechNotification: Reinforce
@@ -687,6 +687,25 @@ GATECH:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+	ParatroopersPower@titans:
+		UnitType: dshp.support
+		DropItems: mmch, mmch, mmch, mmch
+		Icon: titan
+		OrderName: TitanDropOrder
+		SquadSize: 1
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Titan Mech Drop
+		LongDesc: Drops 4 Titans on the battlefield.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: titan
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
 
 GADROP:
 	Inherits: ^Building
@@ -697,7 +716,7 @@ GADROP:
 		BuildPaletteOrder: 111
 		Prerequisites: anypower, gatech, gaarmory, ~structures.gdi, ~upgrade.st
 		BuildLimit: 1
-		Description: Provides access to GDI's strongest arsenal.\n\nSpecial:\n- Allows calling a Poseidon drop (Steel Talons)\n- Allows calling a Titan drop (Steel Talons)
+		Description: Provides access to GDI's strongest arsenal.\n\nSpecial:\n- Allows calling a Kodiak Battleship
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -738,25 +757,6 @@ GADROP:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	ParatroopersPower@titans:
-		UnitType: dshp.support
-		DropItems: mmch, mmch, mmch, mmch
-		Icon: titan
-		OrderName: TitanDropOrder
-		SquadSize: 1
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Titan Mech Drop
-		LongDesc: Drops 4 Titans on the battlefield.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: titan
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
 	AirstrikePower@HellfireMissilesStrikePower:
 		Prerequisites: garadr, upgrade.st
 		Icon: kodiak
@@ -778,3 +778,4 @@ GADROP:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+

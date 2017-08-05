@@ -143,17 +143,14 @@ NAFLAMER:
 		Amount: -50
 	WithSpriteTurret:
 		Recoils: False
-#	GrantConditionOnPrerequisite@upgrade1:
-#		Condition: upgrade.stealth
-#		Prerequisites: upgrade.stealth
 	GrantConditionOnPrerequisite@upgrade2:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
 	GrantConditionOnPrerequisite@upgrade3:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
-#	Cloak:
-#		RequiresCondition: upgrade.stealth || cloak
+	Cloak:
+		RequiresCondition: cloak
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -342,17 +339,11 @@ NASAM:
 		RequiresCondition: upgrade.tibgas
 	Power:
 		Amount: -50
-#	GrantConditionOnPrerequisite@upgrade1:
-#		Condition: upgrade.stealth
-#		Prerequisites: upgrade.stealth
-#	GrantConditionOnPrerequisite@upgrade2:
-#		Condition: industry
-#		Prerequisites: industry
 	GrantConditionOnPrerequisite@upgrade3:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
-#	Cloak:
-#		RequiresCondition: upgrade.stealth || cloak
+	Cloak:
+		RequiresCondition: cloak
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
 
