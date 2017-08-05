@@ -97,14 +97,8 @@ GorranMissile:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c91
-		Speed: 0c362
 		RangeLimit: 28c291
 		Inaccuracy: 0c181
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		CruiseAltitude: 4c973
 		ContrailLength: 15
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
@@ -531,6 +525,7 @@ RaiderGunLaser:
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: LaserZap
+		Blockable: true
 		Color: C80000
 		Width: 0c42
 		BeamDuration: 3
@@ -633,6 +628,7 @@ AvatarLaser:
 	Range: 12c21
 	Report: obelray1.aud
 	Projectile: LaserZap
+		Blockable: false
 		Color: C80000
 		Width: 0c71
 		BeamDuration: 20
@@ -804,6 +800,7 @@ ShadowTrooperLaser:
 	Report: laserpulse.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
+		Blockable: true
 		Color: F6FF00
 		Width: 0c42
 		BeamDuration: 20
@@ -835,6 +832,7 @@ ShadowTrooperEnchancedLaser:
 	Report: laserpulse.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
+		Blockable: true
 		Color: C80000
 		Width: 0c42
 		BeamDuration: 20
@@ -1318,6 +1316,7 @@ GattlingCannonAttack:
 	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
+		Blockable: false
 		Image:
 		Speed: 14c146
 		Inaccuracy: 0c0
@@ -1468,6 +1467,7 @@ LaserTurretTibLaser:
 	Report: bigggun1.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
+		Blockable: false
 		Color: FFFFFF
 		Width: 0c28
 		BeamDuration: 15
@@ -1494,6 +1494,7 @@ LaserTurretLaser:
 	Range: 12c21
 	Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
 	Projectile: LaserZap
+		Blockable: false
 		Color: C80000
 		Width: 0c57
 		BeamDuration: 40
@@ -1519,6 +1520,7 @@ PhantomLaser:
 	Range: 9c559
 	Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
 	Projectile: LaserZap
+		Blockable: true
 		Color: C80000
 		Width: 0c57
 		BeamDuration: 40
@@ -1542,6 +1544,7 @@ LaserTurretLaserUpgraded:
 	Range: 12c21
 	ReloadDelay: 55
 	Projectile: LaserZap
+		Blockable: false
 		Color: C80000
 		Width: 0c78
 		BeamDuration: 40
@@ -1561,6 +1564,7 @@ ObeliskLaser:
 	Range: 12c745
 	Report: obelray1.aud
 	Projectile: LaserZap
+		Blockable: false
 		Color: C80000
 		Width: 0c71
 		ZOffset: 2047
@@ -1590,6 +1594,7 @@ ObeliskLaserTib:
 	Range: 12c745
 	Report: obelray1.aud
 	Projectile: LaserZap
+		Blockable: false
 		Color: 00FF00
 		Width: 0c71
 		ZOffset: 2047
@@ -1616,6 +1621,7 @@ ObeliskLaserUpgraded:
 	Range: 12c745
 	Report: obelray1.aud
 	Projectile: LaserZap
+		Blockable: false
 		Color: C80000
 		Width: 0c71
 		SecondaryBeam: true
@@ -1731,6 +1737,7 @@ FlamerTurretBlueFireballLauncher:
 	Range: 7c435
 	Report: firstrm1.aud
 	Projectile: BulletAS
+		Blockable: false
 		Speed: 0c181
 		LaunchAngle: 90
 		Image: blueflametrailer
@@ -1764,6 +1771,7 @@ FlamerTurretFireballLauncher:
 	Range: 7c435
 	Report: flamtnk1.aud
 	Projectile: BulletAS
+		Blockable: false
 		Speed: 0c181
 		LaunchAngle: 90
 		Image: flametrailer
@@ -1902,10 +1910,8 @@ BikeMissile:
 		Arm: 2
 		Shadow: true
 		Inaccuracy: 0c724
-		Blockable: true
 		Image: missile01
 		HorizontalRateOfTurn: 8
-		MaximumLaunchSpeed: 0c301
 		Palette: effect
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1933,9 +1939,6 @@ StealthTankMissile:
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c543
-		MinimumLaunchSpeed: 0c301
-		Speed: 0c543
 		Inaccuracy: 0c724
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1953,9 +1956,6 @@ StealthTankMissileEMP:
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c543
-		MinimumLaunchSpeed: 0c301
-		Speed: 0c543
 		Inaccuracy: 0c724
 		ContrailLength: 20
 		ContrailColor: C8C8FF
@@ -1985,9 +1985,6 @@ StealthTankMissileAA:
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c543
-		MinimumLaunchSpeed: 0c301
-		Speed: 0c543
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		TerrainHeightAware: true
@@ -2007,7 +2004,6 @@ HailstormMissile:
 	Report: rocket01.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c242
 		Inaccuracy: 0c868
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
@@ -2028,7 +2024,6 @@ HailstormMissileAA:
 	BurstDelay: 10
 	ValidTargets: Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		TerrainHeightAware: true
@@ -2065,7 +2060,6 @@ HailstormMissileGasAA:
 	ReloadDelay: 220
 	ValidTargets: Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c301
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		TerrainHeightAware: true

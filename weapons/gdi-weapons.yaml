@@ -289,6 +289,7 @@ AtlasGun:
 	MinRange: 7c73
 	Report: railuse5.aud
 	Projectile: LaserZap
+		Blockable: true
 		Color: C8FFFA
 		Width: 0c113
 		BeamDuration: 30
@@ -749,6 +750,7 @@ VulcanTower:
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c181
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
@@ -766,6 +768,7 @@ VulcanTower1:
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c362
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
@@ -1021,9 +1024,6 @@ PoseidonTusk:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 1c62
 		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1041,9 +1041,6 @@ MammothTusk:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 1c62
 		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1069,9 +1066,6 @@ MammothWalkerTusk:
 	Burst: 16
 	BurstDelay: 4
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 2c124
 		Inaccuracy: 0c362
 		HorizontalRateOfTurn: 10
 		LaunchAngle: 62
@@ -1290,9 +1284,6 @@ HoverMRLSMissile:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c91
-		Speed: 0c724
 		RangeLimit: 28c291
 		Inaccuracy: 0c181
 		MinimumLaunchAngle: 128
@@ -1314,9 +1305,6 @@ HoverMRLSMissileAA:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c91
-		Speed: 0c724
 		RangeLimit: 28c291
 		Inaccuracy: 0c362
 		TerrainHeightAware: true
@@ -1399,8 +1387,6 @@ GuardianTowerMissile:
 	Range: 11c321
 	MinRange: 5c673
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c242
-		Blockable: false
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		Speed: 2c486
