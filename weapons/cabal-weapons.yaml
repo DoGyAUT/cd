@@ -324,7 +324,7 @@ CannonHuskGun:
 		ContrailWidth: 0c71
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 40
+		Damage: 50
 		DamageTypes: CabalWeapon, TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -746,7 +746,7 @@ SabercutTesla:
 			Cyborg: 100
 			Vehicle: 15
 			Aircraft: 15
-			Building: 75
+			Building: 30
 		DamageTypes: CabalWeapon
 	Warhead@3Eff: CreateEffect
 		Explosions: small_emp
@@ -1039,7 +1039,7 @@ JaguarClaw:
 
 WebLauncher:
 	ValidTargets: Infantry
-	ReloadDelay: 120
+	ReloadDelay: 200
 	Range: 14c146
 	Burst: 3
 	BurstDelay: 5
@@ -1061,7 +1061,7 @@ WebLauncher:
 		ImpactSounds: fireweb1.aud
 	Warhead@emp: GrantExternalCondition
 		Range: 0c724
-		Duration: 90
+		Duration: 160
 		Condition: webdisable
 		ValidTargets: Infantry
 
@@ -1086,6 +1086,8 @@ ReaperMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 100
+		Versus:
+			Building: 50
 		ValidTargets: Ground
 		DamageTypes: CabalWeapon
 	Warhead@2Eff: CreateEffect
@@ -1120,6 +1122,8 @@ ReaperClusterMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 30
+		Versus:
+			Building: 50
 		ValidTargets: Ground
 		DamageTypes: CabalWeapon, Prone350Percent, TriggerProne, EnergyDeath
 
