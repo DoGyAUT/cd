@@ -117,18 +117,17 @@ RavenMissile:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^FireWH
 	ReloadDelay: 200
-	Range: 8c497
+	Range: 0c256
 	Burst: 2
-	BurstDelay: 5
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
+	BurstDelay: 1
+	Report: bombdrop.aud
 	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		Speed: 1c62
-		RangeLimit: 28c291
-		Inaccuracy: 0c181
-		MinimumLaunchAngle: 25
-		MaximumLaunchAngle: 128
+	Projectile: BulletAS
+		Speed: 0c362
+		Inaccuracy: 0c0
+		Image: shell01
+		Shadow: true
+		Palette: effect
 		ContrailLength: 40
 		ContrailColor: FF9000
 		ContrailWidth: 0c21
@@ -149,34 +148,9 @@ RavenMissile:
 		Amount: 6
 		AimChance: 0
 
-RavenMissileAA:
-	Inherits: ^MissileAPHE
-	Inherits@wh: ^FireWH
-	ReloadDelay: 200
-	Range: 11c321
-	Burst: 2
-	BurstDelay: 5
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	ValidTargets: Aircraft
-	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		Speed: 1c62
-		RangeLimit: 28c291
-		Inaccuracy: 0c181
-		MinimumLaunchAngle: 25
-		MaximumLaunchAngle: 128
-		ContrailLength: 40
-		ContrailColor: FF9000
-		ContrailWidth: 0c21
-		TerrainHeightAware: true
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 400
-		ValidTargets: Aircraft
-
 BluehellRavenMissile:
 	Inherits: RavenMissile
-	Projectile: Missile
+	Projectile: BulletAS
 		TrailImage: blueflametrailer
 		TrailPalette: effect50alpha
 		ContrailLength: 10
@@ -198,7 +172,7 @@ BluehellRavenMissile:
 TiberiumRavenMissile:
 	Inherits: RavenMissile
 	Inherits@2: ^TiberiumWH
-	Projectile: Missile
+	Projectile: BulletAS
 		ContrailLength: 10
 		ContrailColor: 008000
 		ContrailWidth: 0c35
@@ -211,43 +185,10 @@ TiberiumRavenMissile:
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water
-
-TiberiumRavenMissileAA:
-	Inherits: RavenMissileAA
-	Inherits@2: ^TiberiumWH
-	Projectile: Missile
-		ContrailLength: 10
-		ContrailColor: 008000
-		ContrailWidth: 0c21
-		TerrainHeightAware: true
-	Warhead@1Dam: SpreadDamage
-		Spread: 1c62
-		Damage: 400
-	Warhead@2Eff: CreateEffect
-		Explosions: protonexpl_lrg2
-		ExplosionPalette: effect50alpha
-		ImpactSounds: expnew12.aud
-		InvalidTargets: Water
-
-BluehellRavenMissileAA:
-	Inherits: RavenMissileAA
-	Projectile: Missile
-		TrailImage: blueflametrailer
-		TrailPalette: effect50alpha
-		ContrailLength: 10
-		ContrailColor: 0096D2
-		ContrailWidth: 0c21
-		TerrainHeightAware: true
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c362
-		Damage: 500
-	Warhead@2Eff: CreateEffect
-		Explosions: napalm1, napalm2
-		ExplosionPalette: beamzap
-		InvalidTargets: Water
-	Warhead@3Sound: CreateEffect
-		ImpactSounds: flamtnk1.aud, firstrm1.aud
-		InvalidTargets: Water
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1, Cloud2
+		Owner: Creeps
 
 GorranCannon:
 	Inherits: ^ShellHE
@@ -275,16 +216,16 @@ GorranCannon:
 EliteCadreGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Range: 7c73
 	Report: carbine_n1.aud, carbine_n2.aud, carbine_n3.aud
-	Burst: 8
+	Burst: 4
 	BurstDelay: 2
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 15
+		Damage: 25
 
 RocketeerGun:
 	Inherits: ^MissileAPHE
@@ -671,7 +612,7 @@ EMPulseCannon:
 	ValidTargets: Ground
 	Projectile: BulletAS
 		Inaccuracy: 1414c219
-		Speed: 0c601
+		Speed: 0c301
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 62
@@ -1309,9 +1250,9 @@ MontaukProton:
 GattlingCannonAttack:
 	Inherits: ^APBullet
 	Inherits@wh: ^SuperBulletWH
-	ReloadDelay: 110
+	ReloadDelay: 180
 	Range: 10c621
-	Burst: 100
+	Burst: 25
 	ValidTargets: Ground
 	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
@@ -1462,7 +1403,7 @@ RavenCannonAA:
 LaserTurretTibLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^TiberiumWH
-	ReloadDelay: 55
+	ReloadDelay: 110
 	Range: 12c21
 	Report: bigggun1.aud
 	ValidTargets: Ground
@@ -1490,7 +1431,7 @@ LaserTurretTibLaser:
 LaserTurretLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 55
+	ReloadDelay: 110
 	Range: 12c21
 	Report: laser01.aud, laser02.aud, laser03.aud, laser04.aud, laser05.aud
 	Projectile: LaserZap
@@ -1989,7 +1930,7 @@ StealthTankMissileAA:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
+		Spread: 0c362
 		Damage: 120
 		ValidTargets: Aircraft
 

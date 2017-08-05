@@ -266,7 +266,7 @@ NODCARRY:
 	Health:
 		HP: 700
 	RevealsShroud:
-		Range: 2c848
+		Range: 5c000
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry, Vehicle
@@ -382,7 +382,7 @@ RAVEN:
 		Queue: Air.Nod
 		BuildPaletteOrder: 203
 		Prerequisites: ~nahpad, ~!t1, ~!technology
-		Description: A Jet equiped with 2 napalm rockets. Available for Industry and Propaganda Nod.\n\nGood vs: Infantry, Buildings, Air\n\nSpecial:\n- Can shoot air and ground\n- Tiberium Weapons Research (Industry)\n- Blue Hell Inferno (Propaganda)
+		Description: A Jet equiped with 2 napalm rockets. Available for Industry and Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Blue Hell Inferno (Propaganda)
 	Selectable:
 		Bounds: 60,48
 	Voiced:
@@ -396,13 +396,6 @@ RAVEN:
 	RevealsShroud:
 		Range: 19c818
 		Type: GroundPosition
-	Armament@primaryAA:
-		Weapon: RavenMissileAA
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: apolra50alpha
-		LocalOffset: 362,1131,-45, 362,-1131,-45
-		RequiresCondition: !upgrade.bluehell && !upgrade.tibgas
 	Armament@primary:
 		Weapon: RavenMissile
 		MuzzleSequence: muzzle
@@ -410,13 +403,6 @@ RAVEN:
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 362,1131,-45, 362,-1131,-45
 		RequiresCondition: !upgrade.bluehell && !upgrade.tibgas
-	Armament@primaryAAupgrade:
-		Weapon: BluehellRavenMissileAA
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: apolra50alpha
-		LocalOffset: 362,1131,-45, 362,-1131,-45
-		RequiresCondition: upgrade.bluehell
 	Armament@primaryupgrade:
 		Weapon: BluehellRavenMissile
 		MuzzleSequence: muzzle
@@ -426,13 +412,6 @@ RAVEN:
 		RequiresCondition: upgrade.bluehell
 	Armament@primaryupgrade2:
 		Weapon: TiberiumRavenMissile
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: apolra50alpha
-		LocalOffset: 362,1131,-45, 362,-1131,-45
-		RequiresCondition: upgrade.tibgas
-	Armament@primaryAAupgrade2:
-		Weapon: TiberiumRavenMissileAA
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		MuzzlePalette: apolra50alpha
