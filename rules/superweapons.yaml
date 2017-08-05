@@ -1,0 +1,51 @@
+DummyShakerVision:
+	Inherits: ^SpriteActor
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Target
+	Aircraft:
+		TurnSpeed: 6
+		Speed: 0
+		CanHover: True
+		IdealSeparation: 300
+	HiddenUnderFog:
+	ShakeOnDeath:
+	RevealsShroud:
+		Range: 10c0
+	Health:
+		HP: 10
+	SelfHealing:
+		Step: -10
+		Delay: 1
+		HealIfBelow: 200
+	RenderSprites:
+		Image: dot
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	HitShape:
+
+DummyShakerTarget:
+	Inherits: DummyShakerVision
+	Targetable:
+		TargetTypes: DummyTarget
+	Health:
+		HP: 200
+	-SelfHealing:
+
+DummyShakerTargeter:
+	Inherits: DummyShakerVision
+	Targetable:
+	Health:
+		HP: 200
+	-SelfHealing:
+	AttackHeli:
+		FacingTolerance: 20
+	AutoTarget:
+		ScanRadius: 99
+		InitialStance: AttackAnything
+		TargetStances: Ally
+	Armament:
+		Weapon: TechnologyLaserHigh
+		TargetStances: Ally
