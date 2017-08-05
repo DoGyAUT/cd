@@ -61,7 +61,7 @@ ORCA_F2:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 1200
+		Cost: 1350
 	Tooltip:
 		Name: Orca F-2
 	Buildable:
@@ -268,7 +268,7 @@ GUNNER:
 	Aircraft:
 		CruisingCondition: cruising
 		CruiseAltitude: 11c321
-		TurnSpeed: 2
+		TurnSpeed: 999
 		Speed: 200
 	Armament@small:
 		Weapon: GuardianTowerRailgun
@@ -307,7 +307,7 @@ ORCA_G:
 		RenderSelectionBars: False
 	Aircraft:
 		CruisingCondition: cruising
-		TurnSpeed: 5
+		TurnSpeed: 999
 		Speed: 160
 	Health:
 		HP: 500
@@ -336,7 +336,7 @@ OXBOMBER:
 	Tooltip:
 		Name: OX-Bomber
 	Aircraft:
-		TurnSpeed: 4
+		TurnSpeed: 999
 		Speed: 200
 	-Voiced:
 	-Selectable:
@@ -378,7 +378,7 @@ ORCA_B:
 	SelectionDecorations:
 		RenderSelectionBars: False
 	Aircraft:
-		TurnSpeed: 3
+		TurnSpeed: 999
 		Speed: 150
 	Health:
 		HP: 2000
@@ -418,8 +418,8 @@ ARTILLERY_BEACON:
 	Aircraft:
 		CruiseAltitude: 28c291
 		IdealSeparation: 1c424
-		TurnSpeed: 3
-		Speed: 424
+		TurnSpeed: 999
+		Speed: 150
 	Health:
 		HP: 2000
 	RevealsShroud:
@@ -459,7 +459,7 @@ PHOENIX:
 	SelectionDecorations:
 		RenderSelectionBars: False
 	Aircraft:
-		TurnSpeed: 1
+		TurnSpeed: 999
 		Speed: 150
 		CruiseAltitude: 11c321
 	Health:
@@ -629,7 +629,7 @@ CONDOR:
 		Volume: 2
 	Aircraft:
 		TurnSpeed: 4
-		Speed: 200
+		Speed: 220
 		CruiseAltitude: 11c321
 	Health:
 		HP: 1100
@@ -673,7 +673,7 @@ DSHP.SUPPORT:
 	-Selectable:
 	Aircraft:
 		LandWhenIdle: False
-		TurnSpeed: 8
+		TurnSpeed: 999
 		Speed: 100
 		InitialFacing: 0
 		Repulsable: False
@@ -732,7 +732,7 @@ DSHP:
 	Health:
 		HP: 1300
 	RevealsShroud:
-		Range: 2c848
+		Range: 5c000
 		Type: GroundPosition
 	Cargo:
 		Types: Infantry, Vehicle, Epic
@@ -887,8 +887,8 @@ Hellfire_beacon:
 	Aircraft:
 		CruiseAltitude: 20c291
 		IdealSeparation: 1c424
-		TurnSpeed: 3
-		Speed: 64
+		TurnSpeed: 999
+		Speed: 150
 	Health:
 		HP: 2000
 	RevealsShroud:

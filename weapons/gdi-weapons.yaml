@@ -60,6 +60,12 @@ ZoneCommandoGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 150
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmawave1
 		ExplosionPalette: effect50alpha
@@ -156,6 +162,14 @@ JuggernautGun:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: LargeCrater
 
+MarvGun:
+	Inherits: JuggernautGun
+	Burst: 9
+	BurstDelay: 10
+	ReloadDelay: 180
+	Range: 11c43
+	MinRange: 1c53
+
 TitanMK2Grenade:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
@@ -215,7 +229,7 @@ GDIEpicRailgun:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 400
+		Damage: 350
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmawave1
 		ExplosionPalette: effect50alpha
@@ -244,7 +258,7 @@ LeviathanGun:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c424
+		Spread: 1c512
 		Damage: 800
 		Falloff: 100, 50, 25, 0
 		Versus:
@@ -275,6 +289,7 @@ AtlasGun:
 	MinRange: 7c73
 	Report: railuse5.aud
 	Projectile: LaserZap
+		Blockable: true
 		Color: C8FFFA
 		Width: 0c113
 		BeamDuration: 30
@@ -344,39 +359,10 @@ CyclopsCannon:
 		Explosions: swave
 		ExplosionPalette: swave
 
-IonCannon:
-	ValidTargets: Ground, Aircraft
-	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c424
-		Damage: 100
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Aircraft
-		DamageTypes: EnergyDeath
-	Warhead@2Dam_area: SpreadDamage
-		Spread: 1c424
-		Damage: 250
-		Falloff: 100, 50, 25, 0
-		Delay: 3
-		ValidTargets: Ground, Aircraft
-		DamageTypes: TakeCoverEffect, EnergyDeath
-	Warhead@4Effect: CreateEffect
-		Explosions: ionbeam
-		ImpactSound: ion1.aud
-	Warhead@5Effect: CreateEffect
-		Explosions: ionbeam2
-	Warhead@6Effect: CreateEffect
-		Explosions: ionbeam3
-	Warhead@7Effect: CreateEffect
-		Explosions: ionbeam4
-	Warhead@8Effect: CreateEffect
-		Explosions: ionbeam5
-	Warhead@9Effect: CreateEffect
-		Explosions: ionbeam6
-
 ZoneMarineGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 7c73
 	Burst: 3
 	BurstDelay: 4
@@ -576,7 +562,13 @@ CondorBomb:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 700
+		Damage: 800
+		Versus:
+			Infantry: 100
+			Cyborg: 100
+			Vehicle: 100
+			Aircraft: 100
+			Building: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: swave
 		ExplosionPalette: swave
@@ -758,6 +750,7 @@ VulcanTower:
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c181
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
@@ -775,6 +768,7 @@ VulcanTower1:
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c362
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 20
@@ -1030,9 +1024,6 @@ PoseidonTusk:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 1c62
 		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1050,9 +1041,6 @@ MammothTusk:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 1c62
 		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
@@ -1078,9 +1066,6 @@ MammothWalkerTusk:
 	Burst: 16
 	BurstDelay: 4
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c181
-		Speed: 2c124
 		Inaccuracy: 0c362
 		HorizontalRateOfTurn: 10
 		LaunchAngle: 62
@@ -1130,7 +1115,7 @@ OrcaF1Missiles:
 
 OrcaF2Missiles:
 	Inherits: OrcaF1Missiles
-	ReloadDelay: 160
+	ReloadDelay: 120
 	ValidTargets: Ground
 	Range: 8c497
 	MinRange: 1c424
@@ -1299,9 +1284,6 @@ HoverMRLSMissile:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c91
-		Speed: 0c724
 		RangeLimit: 28c291
 		Inaccuracy: 0c181
 		MinimumLaunchAngle: 128
@@ -1316,21 +1298,18 @@ HoverMRLSMissile:
 HoverMRLSMissileAA:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APHEWH
-	ReloadDelay: 200
+	ReloadDelay: 150
 	Burst: 8
 	BurstDelay: 2
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c362
-		MinimumLaunchSpeed: 0c91
-		Speed: 0c724
 		RangeLimit: 28c291
-		Inaccuracy: 0c724
+		Inaccuracy: 0c362
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c1
+		Spread: 0c362
 		Damage: 60
 		ValidTargets: Aircraft
 
@@ -1408,8 +1387,6 @@ GuardianTowerMissile:
 	Range: 11c321
 	MinRange: 5c673
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c242
-		Blockable: false
 		Inaccuracy: 0c724
 		RangeLimit: 28c291
 		Speed: 2c486
@@ -1465,7 +1442,7 @@ KodiacMissilesBig:
 	Inherits: ^Bomb
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 111
-	Burst: 10
+	Burst: 12
 	BurstDelay: 1
 	Range: 3c600
 	Report: rocket02.aud, rocket03.aud, rocket06.aud
@@ -1481,7 +1458,7 @@ KodiacMissilesBig:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 275
+		Damage: 775
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -1499,3 +1476,274 @@ KodiacMissilesBig:
 		Weapon: NapalmShrapnel
 		Amount: 6
 		AimChance: 75
+
+####SUPERWEAPONS####
+IonCannon:
+	Report: ion1.aud
+	ValidTargets: Ground, Aircraft
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 5c424
+		Damage: 1000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Aircraft
+		DamageTypes: EnergyDeath
+		Delay: 84
+	Warhead@2Dam_area: SpreadDamage
+		Spread: 3c424
+		Damage: 2500
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Aircraft
+		DamageTypes: TakeCoverEffect, EnergyDeath
+		Delay: 84
+	Warhead@3Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+		Delay: 84
+	Warhead@4Effect: CreateEffect
+		Explosions: ionbeam
+		ExplosionPalette: apolblue
+		ImpactSounds: ion1.aud
+		Delay: 84
+	Warhead@5Effect: CreateEffect
+		Explosions: ionbeam2
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@6Effect: CreateEffect
+		Explosions: ionbeam3
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@7Effect: CreateEffect
+		Explosions: ionbeam4
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@8Effect: CreateEffect
+		Explosions: ionbeam5
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@9Effect: CreateEffect
+		Explosions: ionbeam6
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@10Effect: CreateEffect
+		Explosions: ionbeam7
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@11Effect: CreateEffect
+		Explosions: ionring
+		ExplosionPalette: apolblue
+		Delay: 84
+	Warhead@12Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+		Delay: 84
+	Warhead@13Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglowblue
+		Delay: 84
+	Warhead@14Eff: CreateEffect
+		Explosions: pulse_explosion
+		Delay: 84
+	Warhead@15Eff: CreateEffect
+		Delay: 24
+		ImpactSounds: ion1.aud
+	Warhead@16Eff: CreateEffect
+		Delay: 39
+		ImpactSounds: ion1.aud
+	Warhead@17Eff: CreateEffect
+		Delay: 50
+		ImpactSounds: ion1.aud
+	Warhead@18Eff: CreateEffect
+		Delay: 62
+		ImpactSounds: ion1.aud
+	Warhead@19Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglowblue
+		Delay: 86
+	Warhead@op: FireShrapnel
+		Weapon: IonCannonMini
+		Amount: 30
+		AllowDirectHit: false
+		Delay: 45
+	Warhead@op2: FireShrapnel
+		Weapon: IonCannonMini2
+		Amount: 45
+		AllowDirectHit: false
+		Delay: 30
+	Warhead@op3: FireShrapnel
+		Weapon: IonCannonMini3
+		Amount: 60
+		AllowDirectHit: false
+		Delay: 15
+	Warhead@op4: FireShrapnel
+		Weapon: IonCannonMini4
+		Amount: 75
+		AllowDirectHit: false
+	WarheadAS@60: SpawnActor
+		Range: 5
+		Actors: DummyShakerVision
+		Owner: Creeps
+		Amount: 3
+		Delay: 62
+	WarheadAS@61: SpawnActor
+		Range: 5
+		Actors: DummyShakerVision
+		Owner: Creeps
+		Amount: 7
+		Delay: 50
+	WarheadAS@62: SpawnActor
+		Range: 5
+		Actors: DummyShakerVision
+		Owner: Creeps
+		Amount: 10
+		Delay: 39
+	WarheadAS@63: SpawnActor
+		Range: 5
+		Actors: DummyShakerVision
+		Owner: Creeps
+		Amount: 15
+		Delay: 24
+
+IonCannonMini:
+	Range: 2c010
+	MinRange: 2c000
+	Projectile: BulletAS
+		LaunchAngle: 45
+		Image: dot
+		Speed: 0c301
+		Shadow: false
+		Blockable: false
+	ValidTargets: Ground, Aircraft
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c424
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Aircraft
+		DamageTypes: EnergyDeath
+	Warhead@2Dam_area: SpreadDamage
+		Spread: 1c424
+		Damage: 125
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Aircraft
+		DamageTypes: TakeCoverEffect, EnergyDeath
+	Warhead@3Eff: CreateEffect
+		Explosions: medium_flash
+		ExplosionPalette: light
+	Warhead@4Effect: CreateEffect
+		Explosions: ionbeammini
+		ExplosionPalette: apolblue
+	Warhead@5Effect: CreateEffect
+		Explosions: ionbeammini2
+		ExplosionPalette: apolblue
+	Warhead@6Effect: CreateEffect
+		Explosions: ionbeammini3
+		ExplosionPalette: apolblue
+	Warhead@7Effect: CreateEffect
+		Explosions: ionbeammini4
+		ExplosionPalette: apolblue
+	Warhead@8Effect: CreateEffect
+		Explosions: ionbeammini5
+		ExplosionPalette: apolblue
+	Warhead@9Effect: CreateEffect
+		Explosions: ionbeammini6
+		ExplosionPalette: apolblue
+	Warhead@10Effect: CreateEffect
+		Explosions: ionbeammini7
+		ExplosionPalette: apolblue
+	Warhead@11Effect: CreateEffect
+		Explosions: ionbeammini8
+		ExplosionPalette: apolblue
+	Warhead@12Effect: CreateEffect
+		Explosions: ionbeammini9
+		ExplosionPalette: apolblue
+	Warhead@13Effect: CreateEffect
+		Explosions: ionbeammini10
+		ExplosionPalette: apolblue
+	Warhead@14Effect: CreateEffect
+		Explosions: ionbeammini11
+		ExplosionPalette: apolblue
+	Warhead@15Effect: CreateEffect
+		Explosions: ionbeammini12
+		ExplosionPalette: apolblue
+	Warhead@16Effect: CreateEffect
+		Explosions: ionbeammini13
+		ExplosionPalette: apolblue
+	Warhead@17Effect: CreateEffect
+		Explosions: ionbeammini14
+		ExplosionPalette: apolblue
+	Warhead@18Effect: CreateEffect
+		Explosions: ionbeammini15
+		ExplosionPalette: apolblue
+	Warhead@19Effect: CreateEffect
+		Explosions: ionbeammini16
+		ExplosionPalette: apolblue
+	Warhead@20Effect: CreateEffect
+		Explosions: ionbeammini17
+		ExplosionPalette: apolblue
+	Warhead@21Effect: CreateEffect
+		Explosions: ionbeammini18
+		ExplosionPalette: apolblue
+	Warhead@22Effect: CreateEffect
+		Explosions: ionbeammini19
+		ExplosionPalette: apolblue
+	Warhead@23Effect: CreateEffect
+		Explosions: ionbeammini20
+		ExplosionPalette: apolblue
+	Warhead@24Effect: CreateEffect
+		Explosions: ionbeammini21
+		ExplosionPalette: apolblue
+	Warhead@25Effect: CreateEffect
+		Explosions: ionbeammini22
+		ExplosionPalette: apolblue
+	Warhead@26Effect: CreateEffect
+		Explosions: ionbeammini23
+		ExplosionPalette: apolblue
+	Warhead@27Effect: CreateEffect
+		Explosions: ionbeammini24
+		ExplosionPalette: apolblue
+	Warhead@28Effect: CreateEffect
+		Explosions: ionbeammini25
+		ExplosionPalette: apolblue
+	Warhead@29Effect: CreateEffect
+		Explosions: ionringmini
+		ExplosionPalette: apolblue
+	Warhead@12Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	Warhead@13Sharpnel: FireShrapnel
+		Weapon: IonCannonSparks
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Ground, Air
+	Warhead@14Eff: CreateEffect
+		Explosions: large_flash
+		ExplosionPalette: tibglowblue
+
+IonCannonMini2:
+	Inherits: IonCannonMini
+	Range: 4c010
+	MinRange: 4c000
+
+IonCannonMini3:
+	Inherits: IonCannonMini
+	Range: 6c010
+	MinRange: 6c000
+
+IonCannonMini4:
+	Inherits: IonCannonMini
+	Range: 8c010
+	MinRange: 8c000
+
+IonCannonSparks:
+	ReloadDelay: 10
+	Range: 5c673
+	Report:
+	Projectile: BulletAS
+		Speed: 0c145, 0c291, 0c336, 0c245, 0c291, 0c236, 0c345, 0c491, 0c536, 1c45, 1c91, 1c136
+		LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, -195, -210, -225, -245
+		Image: spark
+		Palette: apolblue
+		ContrailLength: 25
+		ContrailColor: 00AEFF
+		ContrailWidth: 0c20
+		Sequences: 1
+		Shadow: false

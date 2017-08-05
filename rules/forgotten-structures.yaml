@@ -79,7 +79,6 @@ FAPOWR:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Inherits@PowerplantEffects: ^PowerplantEffects
 	Buildable:
 		Queue: Building.Forg
@@ -299,7 +298,6 @@ FARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 406
@@ -491,4 +489,5 @@ FATRADE:
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
+		PauseOnCondition: power-outage
 	HitShape:
