@@ -142,6 +142,38 @@ upgrade.overload:
 	Plug:
 		Type: plug.upgrade.overload
 
+upgrade.epic1:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Fury
+	Buildable:
+		BuildPaletteOrder: 501
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Fury.
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: FURY
+	Plug:
+		Type: plug.upgrade.epic1
+
+upgrade.epic2:
+	Inherits: ^KAUPGRADE
+	Tooltip:
+		Name: Gargantua
+	Buildable:
+		BuildPaletteOrder: 502
+		Prerequisites: ~kabtech
+		Queue: Tech.Cabal
+		Description: Research the Gargantua.
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: GARGANTUA
+	Plug:
+		Type: plug.upgrade.epic2
+
 ^KAUPGRADE:
 	Inherits@hitshape: ^1x1hitshape
 	Inherits@BasicBuilding: ^BasicBuilding
