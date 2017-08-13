@@ -628,6 +628,7 @@ GAPLUG:
 	Inherits: ^Building
 	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SuperWeapon: ^SuperWeapon
 	Valued:
 		Cost: 3000
 	Buildable:
@@ -661,15 +662,15 @@ GAPLUG:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Icon: gdigdfsup
 		Description: Ion Cannon Alpha Strike
-		DisplayTimer: True
+		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: True
+		DisplayRadarPing: True
 		LongDesc: Fires many ion cannons on the targetted area.
 		ChargeTime: 480
 		ActivationSequence: idle
 		Weapon: IonCannon
 		OrderName: IonCannonGDF
 		Cursor: ioncannon
-		DisplayTimerStances: Ally, Neutral, Enemy
 		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles
@@ -685,7 +686,7 @@ GAPLUG:
 		Amount: -200
 	Power@ioncannon:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
-		Amount: -100
+		Amount: -200
 	Power@hunterseeker:
 		RequiresCondition: plug.hunterseekera || plug.hunterseekerb
 		Amount: -50
