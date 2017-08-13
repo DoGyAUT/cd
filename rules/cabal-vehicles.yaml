@@ -314,10 +314,12 @@ GOLEM:
 		VoiceSet: CyborgH
 		Volume: 2
 	-ThrowsShrapnel@human:
-	ExplodeWeapon@RepairCyborg:
-		Weapon: RepairCyborg
-	ExplodeWeapon@RepairVehicle:
-		Weapon: RepairVehicle
+	ProximityExternalCondition@FeatureBuffRepairCyborg:
+		Condition: FeatureBuffRepairCyborg
+		Range: 7c73
+	ProximityExternalCondition@FeatureBuffRepairVehicle:
+		Condition: FeatureBuffRepairVehicle
+		Range: 7c73
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
