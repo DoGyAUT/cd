@@ -662,15 +662,15 @@ GAPLUG:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Icon: gdigdfsup
 		Description: Ion Cannon Alpha Strike
-		DisplayTimer: True
+		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: True
+		DisplayRadarPing: True
 		LongDesc: Fires many ion cannons on the targetted area.
 		ChargeTime: 480
 		ActivationSequence: idle
 		Weapon: IonCannon
 		OrderName: IonCannonGDF
 		Cursor: ioncannon
-		DisplayTimerStances: Ally, Neutral, Enemy
 		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles
