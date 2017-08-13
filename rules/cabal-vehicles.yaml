@@ -314,10 +314,12 @@ GOLEM:
 		VoiceSet: CyborgH
 		Volume: 2
 	-ThrowsShrapnel@human:
-	ExplodeWeapon@RepairCyborg:
-		Weapon: RepairCyborg
-	ExplodeWeapon@RepairVehicle:
-		Weapon: RepairVehicle
+	ProximityExternalCondition@FeatureBuffRepairCyborg:
+		Condition: FeatureBuffRepairCyborg
+		Range: 7c73
+	ProximityExternalCondition@FeatureBuffRepairVehicle:
+		Condition: FeatureBuffRepairVehicle
+		Range: 7c73
 	WithRangeCircle:
 		Color: FFFFFFFF
 		Range: 7c73
@@ -522,7 +524,7 @@ FURY:
 	Buildable:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 311
-		Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+		Prerequisites: ~kaweap, epic1, ~!t1, ~!t2
 		Description: Battle fortress tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can build Cyborgs\n- Can swim on water\n- Crush class: SuperHeavyVehicle
 		BuildLimit: 1
 	Selectable:
@@ -637,7 +639,7 @@ GARGANTUA:
 	Buildable:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 312
-		Prerequisites: ~kaweap, kabtech, ~!t1, ~!t2
+		Prerequisites: ~kaweap, epic2, ~!t1, ~!t2
 		Description: Battle Mech.\n\nGood vs: Ground Units\n\nSpecial:\n- Crush class: SuperHeavyVehicle
 		BuildLimit: 1
 	Mobile:

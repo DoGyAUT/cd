@@ -549,7 +549,7 @@ NAMISL:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
-		Amount: -300
+		Amount: -400
 	CanPowerDown:
 		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
@@ -614,7 +614,7 @@ NATECH:
 		Sequence: idle-lights
 		PauseOnCondition: power-outage
 	Power:
-		Amount: -300
+		Amount: -400
 	RequiresPower:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
@@ -622,8 +622,9 @@ NATECH:
 	DetonateWeaponPower@industrynodlaser:
 		Icon: nodindustrysup
 		Description: Tiberian Laser Cannon Alpha Strike
-		DisplayTimer: True
+		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: True
+		DisplayRadarPing: True
 		LongDesc: Fires a strong tiberian laser on the targetted area.
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -634,7 +635,6 @@ NATECH:
 		Weapon: TiberiumBombIndustry
 		OrderName: nodindusup
 		Cursor: ioncannon
-		DisplayTimerStances: Ally, Neutral, Enemy
 		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles
@@ -671,7 +671,7 @@ NATMPL:
 	Health:
 		HP: 8000
 	Power:
-		Amount: -300
+		Amount: -400
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	HitShape:
@@ -680,8 +680,9 @@ NATMPL:
 	DetonateWeaponPower@technologynodlaser:
 		Icon: nodtechnosup
 		Description: Kane's Light
-		DisplayTimer: True
+		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: True
+		DisplayRadarPing: True
 		EndChargeSpeechNotification: IonCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: MissileLaunchDetected
@@ -693,7 +694,6 @@ NATMPL:
 		Weapon: TechnologyLaserStarter
 		OrderName: nodtechsup
 		Cursor: ioncannon
-		DisplayTimerStances: Ally, Neutral, Enemy
 		CameraActor: camera
 		ArrowSequence: arrow
 		CircleSequence: circles

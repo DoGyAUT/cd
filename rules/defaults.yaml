@@ -761,7 +761,7 @@
 	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
 	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
 	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
-	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
+	Inherits@FeatureBuffRepairInfantry: ^FeatureBuffRepairInfantry
 	DrawLineToTarget:
 	Health:
 		HP: 50
@@ -1149,6 +1149,7 @@
 	Inherits@8: ^IronCurtainable
 	Inherits@FeatureArmortype: ^FeatureArmortypeCyborg
 	Inherits@FeatureTargettypeCyborg: ^FeatureTargettypeCyborg
+	Inherits@FeatureBuffRepairCyborg: ^FeatureBuffRepairCyborg
 	MustBeDestroyed:
 	Crushable:
 		CrushClasses: cyborg
@@ -1434,7 +1435,7 @@
 	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
 	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
 	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
-	Inherits@FeatureBuffRepair: ^FeatureBuffRepair
+	Inherits@FeatureBuffRepairVehicle: ^FeatureBuffRepairVehicle
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
@@ -2241,8 +2242,7 @@
 		Condition: disabled
 
 ^AffectedByPowerOutage:
-	RequiresPower:
-	GrantConditionOnDisabled:
+	GrantConditionOnLowPower:
 		Condition: power-outage
 
 ^3x3hitshape:
