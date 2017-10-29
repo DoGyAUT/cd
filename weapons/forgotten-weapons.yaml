@@ -724,7 +724,7 @@ BuzzardMissile:
 
 BuzzardMissileFalling:
 	Inherits: ^RocketHE
-	Inherits@wh: ^APWH
+	Inherits@wh: ^APHEWH
 	ReloadDelay: 125
 	Range: 5c0
 	ValidTargets: Ground
@@ -735,8 +735,8 @@ BuzzardMissileFalling:
 		RateOfTurn: 20
 		RangeLimit: 20c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 200
+		Spread: 384
+		Damage: 250
 		ValidTargets: Ground
 
 StrikerMissiles:

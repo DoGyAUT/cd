@@ -426,7 +426,7 @@
 		ActorTypes: husk, husk, husk, husk
 		Factions: cabal
 	EmitInfantryOnSell@forgotten:
-		ActorTypes: brigand, brigand, brigand, brigand, brigand
+		ActorTypes: huntress, huntress, huntress, huntress, huntress
 		Factions: forgotten
 	EmitInfantryOnSell@scrin:
 		ActorTypes: shocker, shocker, shocker, shocker, shocker, shocker
@@ -1050,6 +1050,7 @@
 				PathingCost: 0
 			PurpleTiberium: 70
 				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^MutantFearless:
 	Inherits@1: ^Infantry
@@ -1079,6 +1080,7 @@
 				PathingCost: 0
 			PurpleTiberium: 70
 				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^MutantFearlessHeavy:
 	Inherits@1: ^Infantry
@@ -1115,6 +1117,7 @@
 				PathingCost: 0
 			PurpleTiberium: 70
 				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^Alien:
 	Inherits@1: ^Infantry
