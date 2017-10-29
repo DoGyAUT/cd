@@ -6,7 +6,7 @@ NMCV:
 		Prerequisites: ~naweap, naradr
 		Description: The heart of any Nod base.\n\nSpecial:\n- Provides a build radius for structures\n- Crush class: Medium vehicle
 	Valued:
-		Cost: 3000
+		Cost: 4500
 	Tooltip:
 		Name: Nod Mobile Construction Vehicle
 	Selectable:
@@ -19,7 +19,7 @@ NMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 65
+		Speed: 30
 	RevealsShroud:
 		Range: 8c497
 	MustBeDestroyed:
@@ -397,7 +397,7 @@ GORRAN:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Gorran
 	Selectable:
@@ -890,7 +890,7 @@ NHWTZ:
 		Queue: Vehicle.Nod
 		BuildPaletteOrder: 209
 		Prerequisites: ~naweap, napyra, ~!t1, ~!industry
-		Description: The long range artillery of Technology and Propaganda Nod that can be upgraded to a far greater threat.\n\nGood vs: Ground\n\nSpecial:\n- It has to deploy to attack\n- Immobile while being deployed\n- Stealth Emitter (Technology)\n- EMP Tech (Technology)\n- Blue Hell Inferno (Propaganda)\n- Crush class: Medium vehicle
+		Description: The long range artillery of Technology and Propaganda Nod that can be upgraded to a far greater threat.\n\nGood vs: Ground\n\nSpecial:\n- IT HAS TO DEPLOY IN ORDER TO FIRE\n- Immobile while being deployed\n- Stealth Emitter (Technology)\n- EMP Tech (Technology)\n- Blue Hell Inferno (Propaganda)\n- Crush class: Medium vehicle
 	Voiced:
 		VoiceSet: Specter
 		Volume: 1
@@ -1004,11 +1004,11 @@ SUBTANK:
 		Volume: 2
 	Mobile:
 		TurnSpeed: 4
-		Speed: 60
+		Speed: 61
 		Subterranean: true
 		SubterraneanCondition: subterranean
 		SubterraneanTransitionTerrainTypes: Clear, Rough, Green
-		SubterraneanTransitionCost: 1
+		SubterraneanTransitionCost: 0
 		SubterraneanTransitionSound: drillup.aud
 		SubterraneanTransitionImage: dig
 		SubterraneanTransitionSequence: idle

@@ -118,8 +118,6 @@ RavenMissile:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 200
 	Range: 0c256
-	Burst: 2
-	BurstDelay: 1
 	Report: bombdrop.aud
 	ValidTargets: Ground
 	Projectile: BulletAS
@@ -134,7 +132,7 @@ RavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 300
+		Damage: 600
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
@@ -159,7 +157,7 @@ BluehellRavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 500
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: beamzap
@@ -179,7 +177,7 @@ TiberiumRavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 400
+		Damage: 800
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
@@ -187,7 +185,7 @@ TiberiumRavenMissile:
 		InvalidTargets: Water
 	WarheadAS: SpawnActor
 		Range: 1
-		Actors: Cloud1, Cloud2
+		Actors: Cloud1, Cloud2, Cloud1, Cloud2
 		Owner: Creeps
 
 GorranCannon:
@@ -456,7 +454,7 @@ RaiderGunAttack:
 		Spread: 0c91
 		Damage: 15
 		Versus:
-			Aircraft: 25
+			Aircraft: 100
 
 RaiderGunLaser:
 	Inherits: ^BasicLaser
@@ -479,7 +477,7 @@ RaiderGunLaser:
 		Spread: 0c59
 		Damage: 30
 		Versus:
-			Aircraft: 50
+			Aircraft: 75
 			Infantry: 100
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
@@ -1157,7 +1155,7 @@ BansheeSpecial:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 450
+		Damage: 300
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -1277,9 +1275,9 @@ GattlingCannonAttackAA:
 GattlingCannonVisual:
 	Inherits: ^APBullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 125
+	ReloadDelay: 180
 	Range: 10c621
-	Burst: 200
+	Burst: 25
 	ValidTargets: Ground, Aircraft
 	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
@@ -1298,7 +1296,7 @@ VenomCannon:
 	Inherits: ^APBullet
 	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 75
-	Range: 8c497
+	Range: 7c0
 	MinRange: 1c424
 	ValidTargets: Ground
 	Report: cygun1.aud
@@ -1319,7 +1317,7 @@ HydraCannon:
 	Inherits: ^Bullet
 	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 200
-	Range: 8c497
+	Range: 7c0
 	MinRange: 1c424
 	ValidTargets: Ground
 	Report: tsgun4.aud
@@ -1340,7 +1338,7 @@ HavocCannon:
 	Inherits: ^APBullet
 	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 150
-	Range: 9c921
+	Range: 8c0
 	ValidTargets: Ground
 	Report: quadcannon1.aud
 	Burst: 10
@@ -1377,7 +1375,7 @@ RavenCannon:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 10
+		Damage: 20
 
 RavenCannonAA:
 	Inherits: ^APBullet
@@ -1396,7 +1394,7 @@ RavenCannonAA:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 40
+		Damage: 80
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 
@@ -1584,7 +1582,7 @@ VenomLaserFire:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
 	ReloadDelay: 20
-	Range: 8c497
+	Range: 7c0
 	MinRange: 1c424
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
 	ValidTargets: Ground
@@ -1616,7 +1614,7 @@ HydraLaserFire:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 90
-	Range: 8c497
+	Range: 7c0
 	MinRange: 1c424
 	Burst: 4
 	BurstDelay: 10
@@ -1647,7 +1645,7 @@ HavocLaserFire:
 	Burst: 3
 	BurstDelay: 3
 	ReloadDelay: 25
-	Range: 9c921
+	Range: 8c0
 	MinRange: 1c424
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
 	ValidTargets: Ground
@@ -2064,7 +2062,7 @@ HydraMissiles:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ReloadDelay: 160
-	Range: 8c497
+	Range: 7c0
 	MinRange: 1c424
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	Burst: 6

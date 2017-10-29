@@ -218,7 +218,7 @@ NAGAT:
 		Prerequisites: upgrade.stealth
 	WithMuzzleOverlay:
 	Cloak:
-		RequiresCondition: upgrade.stealth || cloak
+		RequiresCondition: cloak
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -284,7 +284,7 @@ NALASR:
 	Power:
 		Amount: -100
 	Cloak:
-		RequiresCondition: upgrade.stealth || cloak
+		RequiresCondition: cloak
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -449,7 +449,7 @@ NAOBEL:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
 	Cloak:
-		RequiresCondition: upgrade.stealth || cloak
+		RequiresCondition: cloak
 	WithMuzzleOverlay:
 	GrantConditionOnPrerequisite@tiblaser:
 		Condition: upgrade.tiblaser
@@ -738,6 +738,7 @@ NASTLH:
 		PowerdownSpeech: DisablePower
 	ProximityExternalCondition:
 		Condition: cloak
+		RequiresCondition: !disabled
 		Range: 16c994
 		EnableSound: stealth01.aud
 		DisableSound: unstealth01.aud

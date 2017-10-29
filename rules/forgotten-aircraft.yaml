@@ -1,6 +1,9 @@
 BUZZARD:
 	Inherits: ^Helicopter
 	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -8,8 +11,8 @@ BUZZARD:
 	Buildable:
 		Queue: Air.Forg
 		BuildPaletteOrder: 400
-		Prerequisites: upgrade.buzzard, ~!upgrade.griffin
-		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
+		Prerequisites: ~upgrade.buzzard
+		Description: Anti-tank support gunship\nArmed with stolen Tiberian sun era missile.\n  Strong vs Armoured\n  Weak vs anything else
 	Selectable:
 		Bounds: 60,48,0,-10
 	Voiced:
@@ -23,42 +26,25 @@ BUZZARD:
 	RevealsShroud:
 		Range: 21c218
 		Type: GroundPosition
-	Armament@gattling:
-		Weapon: BuzzardGattlingCannonAttack
-		LocalOffset: 1131,0,226
-		RequiresCondition: !upgrade.buzzard_gattling
-	Armament@gattlingvis:
-		Weapon: BuzzardGattlingCannonVisual
-		LocalOffset: 1131,0,226
-		RequiresCondition: !upgrade.buzzard_gattling
-	Armament@gattling2:
-		Weapon: BuzzardGattlingCannonAttack2
-		LocalOffset: 1131,0,226
-		RequiresCondition: upgrade.buzzard_gattling
-	Armament@gattling2vis:
-		Weapon: BuzzardGattlingCannonVisual2
-		LocalOffset: 1131,0,226
-		RequiresCondition: upgrade.buzzard_gattling
 	Armament@missiles:
-		AmmoPoolName: HEMissile
-		Weapon: BuzzardHErocket
+		AmmoPoolName: Missile
+		Weapon: BuzzardMissile
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 0,362,226, 0,-362,226
-		RequiresCondition: upgrade.buzzard_missiles
 	Turreted:
 		TurnSpeed: 5
 		Offset: 566,0,0
 	AmmoPool@1:
-		Name: HEMissile
+		Name: Missile
 		Ammo: 1
 		PipCount: 1
 		ReloadCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: True
-		SelfReloadDelay: 300
+		SelfReloadDelay: 250
 	AttackTurreted:
 		FacingTolerance: 20
 	WithIdleOverlay@ROTORAIR:
@@ -89,6 +75,9 @@ BUZZARD:
 GRIFFIN:
 	Inherits: ^Helicopter
 	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -96,7 +85,7 @@ GRIFFIN:
 	Buildable:
 		Queue: Air.Forg
 		BuildPaletteOrder: 400
-		Prerequisites: upgrade.griffin, ~!upgrade.buzzard
+		Prerequisites: ~upgrade.griffin
 		Description: Anti-personnel support gunship\narmed with dual chain guns.\n  Strong vs Infantry, Light armor, VTOLs\n  Weak vs Vehicles, Fighters
 	Selectable:
 		Bounds: 60,48,0,-10
@@ -107,27 +96,16 @@ GRIFFIN:
 		TurnSpeed: 5
 		Speed: 141
 	Health:
-		HP: 600
+		HP: 800
 	RevealsShroud:
 		Range: 21c218
 		Type: GroundPosition
-	Armament@mg:
-		Weapon: GriffinMG
-		LocalOffset: 990,0,113
 	Armament@missiles:
-		Weapon: BuzzardMissiles
+		Weapon: OrcaF1Missiles
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 0,362,226, 0,-362,226
-		RequiresCondition: upgrade.griffin_missiles
-	Armament@autocannnon:
-		Weapon: GriffinAutocannon
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: apolra50alpha
-		LocalOffset: 1131,0,198
-		RequiresCondition: upgrade.griffin_autocannon
 	AttackHeli:
 		FacingTolerance: 20
 	WithIdleOverlay@ROTORAIR:

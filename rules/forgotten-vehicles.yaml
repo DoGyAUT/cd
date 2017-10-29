@@ -6,7 +6,7 @@ FMCV:
 		Prerequisites: ~faweap, faradr
 		Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
 	Valued:
-		Cost: 3000
+		Cost: 4500
 	Tooltip:
 		Name: Forgotten Mobile Construction Vehicle
 	Selectable:
@@ -17,9 +17,9 @@ FMCV:
 	Health:
 		HP: 2000
 	Mobile:
-		Speed: 71
+		Speed: 30
 		TerrainSpeeds:
-			Water: 50
+			Water: 80
 	RevealsShroud:
 		Range: 8c497
 	MustBeDestroyed:
@@ -162,15 +162,18 @@ ATRUCK:
 FBUGGY_MG:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^LightVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Assault Buggy (Flamer)
+		Name: Assault Buggy (Toxin)
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 403
-		Prerequisites: ~faweap, ~upgrade.fbuggy_mg
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
+		Prerequisites: ~faweap
+		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft\n\n -Leaves tiberium clouds.
 	Selectable:
 		Bounds: 36,36
 	Voiced:
@@ -185,7 +188,7 @@ FBUGGY_MG:
 	RevealsShroud:
 		Range: 8c497
 	Armament@primary:
-		Weapon: BuggyFireballLauncher
+		Weapon: BuggyToxin
 		LocalOffset: 495,0,636
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
@@ -214,11 +217,11 @@ FBUGGY_MIS:
 		Cost: 500
 	Tooltip:
 		Name: Assault Buggy (Missile)
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 403
-		Prerequisites: ~faweap, ~upgrade.fbuggy_mis
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 403
+#		Prerequisites: ~faweap, ~upgrade.fbuggy_mis
+#		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
 	Selectable:
 		Bounds: 36,36
 	Voiced:
@@ -268,11 +271,11 @@ FBUGGY_MORTAR:
 		Cost: 500
 	Tooltip:
 		Name: Assault Buggy (Mortar)
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 403
-		Prerequisites: ~faweap, ~upgrade.fbuggy_mortar
-		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 403
+#		Prerequisites: ~faweap, ~upgrade.fbuggy_mortar
+#		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles\n  Useless vs Aircraft
 	Selectable:
 		Bounds: 36,36
 	Voiced:
@@ -313,11 +316,11 @@ FTRUCK_FLAMER:
 		Cost: 500
 	Tooltip:
 		Name: Assault Truck (MG)
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 404
-		Prerequisites: ~faweap, ~!t1, ~upgrade.ftruck_flamer
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 404
+#		Prerequisites: ~faweap, ~!t1, ~upgrade.ftruck_flamer
+#		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
 	Selectable:
 		Bounds: 42,42, 0, -5
 	Voiced:
@@ -357,10 +360,13 @@ FTRUCK_FLAMER:
 
 FTRUCK_MORTAR:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Assault Truck (Mortar)
+		Name: Assault Truck (Rockets)
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 404
@@ -405,6 +411,7 @@ FTRUCK_MORTAR:
 
 FTRUCK_FLAK:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft1
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -457,6 +464,9 @@ FTRUCK_FLAK:
 
 GREMLIN_HCAN:
 	Inherits: ^VoxelTank
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -510,11 +520,11 @@ GREMLIN_MORTAR:
 		Name: Gremlin (Howitzer)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 405
-		Prerequisites: ~faweap, ~!t1, ~upgrade.gremlin_mortar
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 405
+#		Prerequisites: ~faweap, ~!t1, ~upgrade.gremlin_mortar
+#		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
 	Voiced:
 		VoiceSet: Gremlin
 		Volume: 4
@@ -557,11 +567,11 @@ GREMLIN_90MM:
 		Name: Gremlin (90mm)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 405
-		Prerequisites: ~faweap, ~!t1, ~upgrade.gremlin_90mm
-		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 405
+#		Prerequisites: ~faweap, ~!t1, ~upgrade.gremlin_90mm
+#		Description: Fast Firesupport vehicle.\n Armed with fast firing Shotgun.\n  Strong vs Infantry, Light Armor, Aircraft\n  Weak vs Heavy Armor
 	Voiced:
 		VoiceSet: Gremlin
 		Volume: 4
@@ -604,11 +614,11 @@ TAURUS_MG:
 		Name: Taurus (Autocannon)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 406
-		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.taurus_mg
-		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 406
+#		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.taurus_mg
+#		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
 	Voiced:
 		VoiceSet: Taurus
 		Volume: 4
@@ -674,11 +684,11 @@ TAURUS_HCAN:
 		Name: Taurus (HE-Cannon)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 406
-		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.taurus_hcan
-		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 406
+#		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.taurus_hcan
+#		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
 	Voiced:
 		VoiceSet: Taurus
 		Volume: 4
@@ -737,6 +747,10 @@ TAURUS_HCAN:
 
 TAURUS_MIS:
 	Inherits: ^VoxelTank
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -747,7 +761,7 @@ TAURUS_MIS:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 406
 		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.taurus_mis
-		Description: Fast troop transport.\nArmed with a 122mmAP cannon and Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
+		Description: Fast troop transport.\nArmed with a Multipurpose missile launcher.\n  Strong vs Armored Targets\n  Weak vs Infantry, Aircraft
 	Voiced:
 		VoiceSet: Taurus
 		Volume: 4
@@ -817,11 +831,11 @@ LIZARD_MG:
 		Name: Lizard (Autocannon)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, ~upgrade.lizard_mg
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, ~upgrade.lizard_mg
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Grunt
 		Volume: 2
@@ -865,11 +879,11 @@ LIZARD_90MM:
 		Name: Lizard (90mm)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, ~upgrade.lizard_90mm
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, ~upgrade.lizard_90mm
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Grunt
 		Volume: 2
@@ -906,6 +920,9 @@ LIZARD_90MM:
 
 LIZARD_122MM:
 	Inherits: ^VoxelTank
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -959,11 +976,11 @@ DIGGER_MIS:
 		Name: Digger (Missile)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.digger_mis
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.digger_mis
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Digger
 		Volume: 2
@@ -1022,11 +1039,11 @@ DIGGER_MORTAR:
 		Name: Digger (Howitzer)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.digger_mortar
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.digger_mortar
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Digger
 		Volume: 2
@@ -1081,23 +1098,26 @@ DIGGER_MORTAR:
 
 DIGGER_122MM:
 	Inherits: ^VoxelTank
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Digger (122mm)
+		Name: Digger
 	Selectable:
 		Bounds: 42,42, 0, -5
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 407
 		Prerequisites: ~faweap, faradr, ~!t1, ~upgrade.digger_122mm
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+		Description: Heavy defensive tank tank.\n Armed with a rapid firing laser\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft \n\nHAS TO DEPLOY IN ORDER TO FIRE
 	Voiced:
 		VoiceSet: Digger
 		Volume: 2
 	Mobile:
-		Speed: 78
-		TurnSpeed: 4
+		Speed: 50
+		TurnSpeed: 3
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
 		HP: 1400
@@ -1106,12 +1126,13 @@ DIGGER_122MM:
 	Turreted:
 		TurnSpeed: 3
 	Armament@primary:
-		Weapon: 122mmAP
+		Weapon: DiggerLaser
 		LocalOffset: 1414,0,1018
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
 		Recoil: 200
 		RecoilRecovery: 10
+		RequiresCondition: deployed
 	AttackTurreted:
 	RenderSprites:
 		Image: digger_122mm
@@ -1153,11 +1174,11 @@ BISON_130MM:
 		Name: Bison (130mm + MG)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_130mm
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_130mm
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Marauder
 		Volume: 2
@@ -1216,11 +1237,11 @@ BISON_145MM:
 		Name: Bison (145mm + Grenade Launcher + MG)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_145mm
-		Description: Fast tank.\n Armed with a 145mm cannon, grenade launcher and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_145mm
+#		Description: Fast tank.\n Armed with a 145mm cannon, grenade launcher and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Marauder
 		Volume: 2
@@ -1280,11 +1301,11 @@ BISON_180MM:
 		Name: Bison (180mm)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 407
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_180mm
-		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 407
+#		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.bison_180mm
+#		Description: Fast tank.\n Armed with a 90mm cannon, multipurpose missiles and a machinegun\n  Strong vs Light Armor\n  Weak vs Heavy Armor, Aircraft
 	Voiced:
 		VoiceSet: Marauder
 		Volume: 2
@@ -1328,11 +1349,11 @@ AUROCH_130MM:
 		Name: Auroch (130mm + AGRocket)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 408
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_130mm
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 408
+#		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_130mm
+#		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
 	Voiced:
 		VoiceSet: MammothApocalypse
 		Volume: 2
@@ -1383,10 +1404,13 @@ AUROCH_130MM:
 AUROCH_120MMT:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
 		Cost: 1600
 	Tooltip:
-		Name: Auroch (120mm Twin Cannon)
+		Name: Auroch
 	Selectable:
 		Bounds: 42,42, 0, -5
 	Buildable:
@@ -1401,7 +1425,7 @@ AUROCH_120MMT:
 		Speed: 57
 		TurnSpeed: 3
 	Health:
-		HP: 2000
+		HP: 3250
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1473,11 +1497,11 @@ AUROCH_180MM:
 		Name: Auroch (180mm)
 	Selectable:
 		Bounds: 42,42, 0, -5
-	Buildable:
-		Queue: Vehicle.Forg
-		BuildPaletteOrder: 408
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_180mm
-		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
+#	Buildable:
+#		Queue: Vehicle.Forg
+#		BuildPaletteOrder: 408
+#		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.auroch_180mm
+#		Description: Anti armor battle Tank.\n\n  Strong vs Armored Targets\n  Weak vs Infantry\n Useless vs Aircraft
 	Voiced:
 		VoiceSet: MammothApocalypse
 		Volume: 2
@@ -1521,6 +1545,9 @@ AUROCH_180MM:
 RAGNAROK:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -1530,8 +1557,8 @@ RAGNAROK:
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 409
-		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2
-		Description: Super heavy mobile Artillery.\nNeeds to deploy in order to shoot.\n  Strong vs Slow Targets, Units\n  Weak vs Fast Targets, Buildings\n  Useless vs Aircraft
+		Prerequisites: ~faweap, fatrade, ~!t1, ~!t2, ~upgrade.ragnarok
+		Description: Super heavy mobile Artillery.\n  Strong vs Slow Targets, Units\n  Weak vs Fast Targets\n  Useless vs Aircraft
 	Voiced:
 		VoiceSet: Grunt
 		Volume: 2
@@ -1543,7 +1570,7 @@ RAGNAROK:
 	RevealsShroud:
 		Range: 9c921
 	Armament@primary:
-		Weapon: RagnarokCannon
+		Weapon: RagnarokCannon2
 		LocalOffset: 1202,0,2121
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
@@ -1593,8 +1620,16 @@ RAGNAROK:
 AVALANCHE:
 	Inherits@1: ^VoxelTank
 	Inherits@2: ^SuperHeavyVehicle
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Valued:
-		Cost: 2500
+		Cost: 6000
+	Buildable:
+		Queue: Vehicle.Forg
+		BuildPaletteOrder: 410
+		Prerequisites: ~faweap, fatrade
+		Description: Super heavy tank\n  Strong vs Ground\nUseless vs Aircraft
 	Tooltip:
 		Name: Rampage
 	Selectable:

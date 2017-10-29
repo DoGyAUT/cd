@@ -87,6 +87,9 @@ FASILO:
 FATOWER:
 	Inherits: ^Defense
 	Inherits: ^1x1hitshape
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 403
@@ -123,6 +126,7 @@ FATOWER:
 FAFLAK:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft1
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 404
@@ -166,6 +170,9 @@ FAMISSILE:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 405

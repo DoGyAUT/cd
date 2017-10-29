@@ -89,13 +89,6 @@ PhantomCannon:
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 
-auroch120mmx:
-	Inherits: 120mm
-	-Burst:
-	ReloadDelay: 50
-	Warhead@1Dam: SpreadDamage
-		Damage: 125
-
 180mm:
 	Inherits: ^ShellAP
 	Inherits@wh: ^APWH
@@ -117,7 +110,7 @@ auroch120mmx:
 
 160mm:
 	Inherits: ^ShellHE
-	Inherits@wh: ^HEWH
+	Inherits@wh: ^APHEWH
 	ReloadDelay: 70
 	Range: 10c983
 	Report: shot01.aud, shot02.aud, shot03.aud
@@ -129,7 +122,7 @@ auroch120mmx:
 		ContrailWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 400
+		Damage: 300
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
 		ExplosionPalette: apolra50alpha

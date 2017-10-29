@@ -51,7 +51,7 @@ HuntressGun:
 	Inherits@wh: ^BulletWH
 	ValidTargets: Ground, Aircraft
 	ReloadDelay: 150
-	Range: 9c921
+	Range: 6c512
 	Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
 	Projectile: BulletAS
 		Speed: 2c486
@@ -62,9 +62,9 @@ HuntressGun:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Aircraft
 		Spread: 0c91
-		Damage: 150
+		Damage: 50
 		Versus:
-			Aircraft: 25
+			Aircraft: 100
 	Warhead@2prone: SpreadDamage
 		Spread: 0c362
 		Damage: 1
@@ -183,34 +183,6 @@ AssaultTruckMG:
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
-
-BuzzardGattlingCannonAttack:
-	Inherits: GattlingCannonAttack
-	-Burst:
-	Range: 7c73
-	ReloadDelay: 2
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
-		Damage: 20
-		Versus:
-			Aircraft: 25
-
-BuzzardGattlingCannonVisual:
-	Inherits: GattlingCannonVisual
-	-Burst:
-	Range: 7c73
-	ReloadDelay: 2
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c181
-		Damage: 0
-
-BuzzardGattlingCannonVisual2:
-	Inherits: BuzzardGattlingCannonVisual
-	ReloadDelay: 1
-
-BuzzardGattlingCannonAttack2:
-	Inherits: BuzzardGattlingCannonAttack
-	ReloadDelay: 1
 
 BisonMG:
 	Inherits: ^Bullet
@@ -477,6 +449,14 @@ RagnarokCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 
+RagnarokCannon2:
+	Inherits: RagnarokCannon
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c124
+		Damage: 150
+		Versus:
+			Building: 250
+
 GoonHammer:
 	ReloadDelay: 40
 	Range: 2c124
@@ -715,56 +695,49 @@ BuggyMissileAA:
 		Spread: 0c362
 		Damage: 60
 		ValidTargets: Aircraft
-
-BuzzardMissiles:
-	Inherits: ^MissileAPHE
+		
+BuzzardMissile:
+	Inherits: ^RocketHE
 	Inherits@wh: ^APWH
-	ReloadDelay: 200
-	MinRange: 1c424
-	Range: 7c73
-	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
-	Burst: 4
+	ReloadDelay: 125
+	Range: 7c0
+	Report: samshot1.aud
 	ValidTargets: Ground
 	Projectile: Missile
-		MaximumLaunchSpeed: 0c724
-		MinimumLaunchSpeed: 0c724
-		Speed: 0c724
-		Inaccuracy: 0c362
-		Image: missile01
-		HorizontalRateOfTurn: 7
-		RangeLimit: 28c291
-		ContrailLength: 10
-		ContrailWidth: 0c21
-		TerrainHeightAware: true
-	Warhead@1Dam: SpreadDamage
-		Spread: 0c120
-		Damage: 140
-		ValidTargets: Ground
-	Warhead@2Eff: CreateEffect
-		Explosions: small_bang
-		ExplosionPalette: apolra50alpha
-		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		InvalidTargets: Water, Aircraft
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSounds: ssplash3.aud
-		ValidTargets: Water
-	Warhead@4EffAir: CreateEffect
-		Explosions: small_twlt
-		ExplosionPalette: apolra50alpha
-		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
-		ValidTargets: Aircraft
+		Speed: 512
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 1c0
+		VerticalRateOfTurn: 80
+		RateOfTurn: 10
+		RangeLimit: 15c0
+		AirburstAltitude: 11c0
+		CruiseAltitude: 11c0
+		CloseEnough: 2c0
+	Warhead@spread: FireShrapnel
+		Weapon: BuzzardMissileFalling
+		Amount: 4
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, Aircraft, AirHit
 
-BuzzardHErocket:
+BuzzardMissileFalling:
 	Inherits: ^RocketHE
-	Inherits@wh: ^HEWH
-	Range: 9c921
-	ReloadDelay: 1
-	Projectile: BulletAS
-		Inaccuracy: 0c0
+	Inherits@wh: ^APWH
+	ReloadDelay: 125
+	Range: 5c0
+	ValidTargets: Ground
+	Projectile: Missile
+		Speed: 328
+		Blockable: false
+		VerticalRateOfTurn: 30
+		RateOfTurn: 20
+		RangeLimit: 20c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 225
+		Spread: 256
+		Damage: 200
+		ValidTargets: Ground
 
 StrikerMissiles:
 	Inherits: ^MissileAPHE
@@ -808,3 +781,60 @@ StrikerMissiles:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
+
+auroch120mmx:
+	Inherits: 120mm
+	-Burst:
+	ReloadDelay: 100
+	Warhead@1Dam: SpreadDamage
+		Damage: 125
+		
+DiggerLaser:
+	Inherits: ^BasicLaser
+	Inherits@wh: ^TiberiumWH
+	ReloadDelay: 25
+	Range: 9c559
+	Report: lastur1.aud
+	ValidTargets: Ground
+	Projectile: LaserZap
+		Blockable: false
+		Color: FFFFFF
+		Width: 0c28
+		BeamDuration: 15
+		ZOffset: 2057
+		SecondaryBeam: true
+		SecondaryBeamWidth: 0c28
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 00FF00
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c181
+		Damage: 70
+	Warhead@2Eff: CreateEffect
+		Explosions: protonexpl_tiny
+		ExplosionPalette: effect50alpha
+		ImpactSounds: bursterhit01.aud
+		InvalidTargets: Water, Aircraft
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		
+BuggyToxin:
+	Inherits@wh: BlueFireballLauncher
+	ReloadDelay: 100
+	Range: 5c435
+	Report: flamtnk1.aud
+	Projectile: BulletAS
+		Speed: 0c181
+		LaunchAngle: 90
+		Image: tibflametrailer
+		TrailImage: tibflametrailer
+		TrailPalette: effect50alpha
+		Inaccuracy: 1c424
+		DamageTypes: TriggerVisceroid
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c62
+		Damage: 50
+		Falloff: 100, 80
+	WarheadAS: SpawnActor
+		Range: 1
+		Actors: Cloud1
+		Owner: Creeps

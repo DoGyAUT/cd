@@ -111,7 +111,7 @@ E2:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 40
+		Speed: 50
 	RevealsShroud:
 		Range: 9c921
 	Armament@primary:
@@ -357,9 +357,10 @@ ZMARINE:
 	SoundOnDamageTransition:
 		DamagedSounds: zmarine_f1.aud, zmarine_f2.aud, zmarine_f3.aud, zmarine_f4.aud, zmarine_f5.aud
 	HitShape:
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZTROOPER:
-	Inherits: ^SoldierFearlessHeavy
+	Inherits: ^SoldierHeavy
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
@@ -406,6 +407,7 @@ ZTROOPER:
 	SoundOnDamageTransition:
 		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
 	HitShape:
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZRAIDER:
 	Inherits: ^SoldierFearlessHeavy
@@ -457,6 +459,7 @@ ZRAIDER:
 	SoundOnDamageTransition:
 		DamagedSounds: raider_f1.aud, raider_f2.aud, raider_f3.aud, raider_f4.aud, raider_f5.aud, raider_f6.aud
 	HitShape:
+	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZCOMMANDO:
 	Inherits: ^SoldierFearlessHeavy
@@ -470,7 +473,7 @@ ZCOMMANDO:
 		Prerequisites: ~gapile, gatech, ~!t1, ~!t2, ~upgrade.zc
 		Description: Colonel Mobius is one of the most famous GDI commanders.\nHe is armed with a Railgunshotgun.\n\nGood vs: Ground\n\nSpecial:\n- Stealth Detection\n- Selfhealing\n- Immune to Tiberium radiation\n- Crush class: Heavy infantry
 	Valued:
-		Cost: 4000
+		Cost: 2500
 	Tooltip:
 		Name: Colonel Mobius
 	Selectable:
@@ -534,3 +537,4 @@ ZCOMMANDO:
 		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
 	-Crushable:
 	HitShape:
+	-DamagedByTerrain@DamagedByTiberiumResource:

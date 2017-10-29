@@ -2078,6 +2078,8 @@
 
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
+	Health:
+		HP: 100
 	Tooltip:
 		Name: Blossom Tree
 	RenderSprites:
@@ -2114,7 +2116,9 @@
 	Tooltip:
 		Name: Tree
 	Health:
-		HP: 200
+		HP: 100
+	HitShape:
+		UseTargetableCellsOffsets: true
 	HitShape:
 
 ^Rock:

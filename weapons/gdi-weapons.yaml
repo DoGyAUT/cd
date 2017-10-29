@@ -85,7 +85,7 @@ DiscThrowerGun:
 	Range: 7c797
 	MinRange: 2c124
 	Projectile: BulletAS
-		Speed: 0c362
+		Speed: 0c768
 		Blockable: false
 		Shadow: true
 		LaunchAngle: 45
@@ -548,7 +548,7 @@ CondorBomb:
 	ReloadDelay: 200
 	Burst: 2
 	BurstDelay: 0
-	Range: 9c921
+	Range: 6c0
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	Projectile: BulletAS
 		Speed: 1c424
@@ -753,7 +753,7 @@ VulcanTower:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 30
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -1080,7 +1080,7 @@ OrcaF1Missiles:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ReloadDelay: 120
-	Range: 8c497
+	Range: 7c512
 	MinRange: 1c424
 	Report: orcamis1.aud
 	Burst: 2
@@ -1117,7 +1117,7 @@ OrcaF2Missiles:
 	Inherits: OrcaF1Missiles
 	ReloadDelay: 120
 	ValidTargets: Ground
-	Range: 8c497
+	Range: 7c512
 	MinRange: 1c424
 	Burst: 4
 	BurstDelay: 6
@@ -1131,7 +1131,7 @@ HawkMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 200
 	Burst: 2
-	Range: 14c146
+	Range: 9c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
@@ -1160,7 +1160,7 @@ HawkMissileAA:
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 200
 	Burst: 2
-	Range: 21c218
+	Range: 15c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft
@@ -1190,7 +1190,7 @@ HornetMissile:
 	ReloadDelay: 200
 	Burst: 4
 	BurstDelay: 6
-	Range: 14c146
+	Range: 9c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
@@ -1220,7 +1220,7 @@ HornetMissileAA:
 	ReloadDelay: 200
 	Burst: 4
 	BurstDelay: 6
-	Range: 21c218
+	Range: 15c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft

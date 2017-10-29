@@ -28,11 +28,11 @@ GRUNT:
 
 BRIGAND:
 	Inherits: ^MutantFearless
-	Buildable:
-		Queue: Infantry.Forg
-		BuildPaletteOrder: 401
-		Prerequisites: ~fabar, ~!t1
-		Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
+#	Buildable:
+#		Queue: Infantry.Forg
+#		BuildPaletteOrder: 401
+#		Prerequisites: ~fabar, ~!t1
+#		Description: Frontline battle infantry, armed with a pumpgun.\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -70,13 +70,17 @@ BRIGAND:
 
 HUNTRESS:
 	Inherits: ^MutantFearless
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 402
 		Prerequisites: ~fabar
 		Description: General-purpose infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Dogs\n  Useless vs Aircraft\n\n  -Heals in Tiberium
 	Valued:
-		Cost: 250
+		Cost: 125
 	Tooltip:
 		Name: Huntress
 	Selectable:
@@ -85,7 +89,7 @@ HUNTRESS:
 		VoiceSet: Hunter
 		Volume: 1
 	Health:
-		HP: 190
+		HP: 200
 	Mobile:
 		Speed: 40
 	RevealsShroud:
@@ -177,11 +181,14 @@ EXPLORER:
 
 ELITEGRUNT:
 	Inherits: ^Mutant
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 404
 		Prerequisites: ~fabar, ~!upgrade.fiend, ~upgrade.grunt
-		Description: Anti tank only
+		Description: Forgotten anti tank grenadier. Capable of dealing a lot of damage, if it hits.
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -208,6 +215,7 @@ ELITEGRUNT:
 
 FDOG:
 	Inherits: ^MutantFearless
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
@@ -249,11 +257,14 @@ FDOG:
 
 FFIEND:
 	Inherits: ^MutantFearless
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
 		Prerequisites: ~fabar, ~upgrade.fiend, ~!upgrade.grunt
-		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
+		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Ground\n  Useless vs Air.\n\n  -Detects camoflage\n  -Heals in Tiberium
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -323,6 +334,9 @@ MHIJACK:
 GOON:
 	Inherits: ^MutantFearlessHeavy
 	Inherits@2: ^GoonUpgrades
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 409
@@ -361,6 +375,10 @@ GOON:
 
 GHOST:
 	Inherits: ^Mutant
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 1000
 	Tooltip:
