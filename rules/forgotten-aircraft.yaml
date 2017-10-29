@@ -237,3 +237,48 @@ STRIKER:
 		Actor: STRIKER.Husk
 		Probability: 100
 	HitShape:
+	
+DSHP2:
+	Inherits: ^Helicopter
+	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Crapcopter
+	Voiced:
+		VoiceSet: Orca
+		Volume: 2
+	Selectable:
+		Bounds: 60,48,0,-10
+#	Buildable:
+#		Queue: Air.Forg
+#		BuildPaletteOrder: 400
+#		Description: If you need to move a big tank army over the ocean, this dropship is the right thing for the task.\n\nGood vs: Nothing\n\nSpecial:\n- Unarmed\- Can transport 4 vehicles or 20 infantry
+	Aircraft:
+		LandWhenIdle: True
+		TurnSpeed: 2
+		Speed: 100
+		InitialFacing: 0
+		Repulsable: False
+		LandableTerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Green, Pavement
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 5c000
+		Type: GroundPosition
+	Cargo:
+		Types: Infantry, Vehicle, Epic
+		MaxWeight: 20
+		PipCount: 20
+	Selectable:
+	RenderSprites:
+		Image: DSHP
+	RenderVoxels:
+		Image: DSHP
+	WithVoxelBody:
+	ParaDrop:
+		DropRange: 5c673
+	SpawnActorOnDeath:
+		Actor: DSHP.Husk
+		Probability: 100
+	HitShape:
