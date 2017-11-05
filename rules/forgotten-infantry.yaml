@@ -12,7 +12,7 @@ GRUNT:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 40
+		Speed: 50
 	RevealsShroud:
 		Range: 7c73
 	Armament@primary:
@@ -91,7 +91,7 @@ HUNTRESS:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 40
+		Speed: 50
 	RevealsShroud:
 		Range: 11c321
 	Armament@primary:
@@ -216,11 +216,12 @@ ELITEGRUNT:
 FDOG:
 	Inherits: ^MutantFearless
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@TiberiumCloak: ^CloaksOnTiberium
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
 		Prerequisites: ~fabar, ~!upgrade.fiend
-		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals in Tiberium
+		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Infantry\n  Useless vs Cyborgs and everything else.\n\n  -Detects camoflage\n  -Heals on Tiberium\n -Cloaks on Tiberium
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -232,7 +233,7 @@ FDOG:
 	Health:
 		HP: 420
 	Mobile:
-		Speed: 60
+		Speed: 90
 	RevealsShroud:
 		Range: 14c146
 	Armament@primary:
@@ -260,11 +261,12 @@ FFIEND:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@TiberiumCloak: ^CloaksOnTiberium
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
 		Prerequisites: ~fabar, ~upgrade.fiend, ~!upgrade.grunt
-		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Ground\n  Useless vs Air.\n\n  -Detects camoflage\n  -Heals in Tiberium
+		Description: A ragged, angry beast from the wasteland.\nLikes to make chewtoys out of enemy soldiers, and is typically named Floyd.\n\n  Very Strong vs Ground\n  Useless vs Air.\n\n  -Detects camoflage\n  -Heals on Tiberium\n -Cloaks on Tiberium
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -313,7 +315,7 @@ MHIJACK:
 	Health:
 		HP: 300
 	Mobile:
-		Speed: 31
+		Speed: 70
 	RevealsShroud:
 		Range: 8c497
 	Captures:

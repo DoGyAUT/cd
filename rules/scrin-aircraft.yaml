@@ -1,6 +1,10 @@
 SCRIN:
 	Inherits: ^AttackAdvancedPlane
 	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -32,22 +36,6 @@ SCRIN:
 		Weapon: StormRaiderCannonAA
 		LocalOffset: 778,0,45
 	AttackTurreted:
-	AmmoPool@1:
-		Name: primary
-		Ammo: 40
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
-	AmmoPool@2:
-		Name: secondary
-		Ammo: 6
-		PipCount: 0
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	Turreted:
 		TurnSpeed: 6
 		Offset: 181,0,0

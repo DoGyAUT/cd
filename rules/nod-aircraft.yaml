@@ -375,14 +375,14 @@ RAVEN:
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
-		Cost: 1800
+		Cost: 1500
 	Tooltip:
 		Name: Raven
 	Buildable:
 		Queue: Air.Nod
 		BuildPaletteOrder: 203
 		Prerequisites: ~nahpad, ~!t1, ~!technology
-		Description: A Jet equiped with 2 napalm rockets. Available for Industry and Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Blue Hell Inferno (Propaganda)
+		Description: A Jet equiped with a napalm rockets. Available for Industry and Propaganda Nod.\n\nGood vs: Infantry, Buildings\n\nSpecial:\n- Tiberium Weapons Research (Industry)\n- Blue Hell Inferno (Propaganda)
 	Selectable:
 		Bounds: 60,48
 	Voiced:
@@ -419,8 +419,8 @@ RAVEN:
 		RequiresCondition: upgrade.tibgas
 	AmmoPool@1:
 		Name: primary
-		Ammo: 2
-		PipCount: 2
+		Ammo: 1
+		PipCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: False
@@ -449,14 +449,14 @@ SCRINB:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Banshee MK.II
 	Buildable:
 		Queue: Air.Nod
 		BuildPaletteOrder: 204
 		Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~technology
-		Description: Advanced Jet of Technology Nod.\n\nGood vs: Everything\n\nSpecial:\n- Can shoot air and ground\n- Does not need to reload
+		Description: Advanced Jet of Technology Nod.\n\nGood vs: Everything\n\nSpecial:\n- Does not need to reload
 	Selectable:
 		Bounds: 60,48
 	Voiced:
@@ -472,9 +472,6 @@ SCRINB:
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: BansheeCannon
-		LocalOffset: 778,0,45
-	Armament@primaryAA:
-		Weapon: BansheeCannonAA
 		LocalOffset: 778,0,45
 	Armament@special:
 		Weapon: BansheeSpecial

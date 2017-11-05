@@ -191,7 +191,7 @@ TiberiumRavenMissile:
 GorranCannon:
 	Inherits: ^ShellHE
 	Inherits@wh: ^APWH
-	ReloadDelay: 85
+	ReloadDelay: 65
 	Range: 8c497
 	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
 	Projectile: BulletAS
@@ -202,7 +202,7 @@ GorranCannon:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 130
+		Damage: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
@@ -229,12 +229,12 @@ RocketeerGun:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ValidTargets: Ground
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 8c497
 	Report: javelin.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -248,7 +248,7 @@ RocketeerGunAA:
 	Range: 8c497
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Aircraft
 
 NodHarvGun:
@@ -273,7 +273,7 @@ NodHarvTibGun:
 SpecterGun:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEAPWH
-	ReloadDelay: 200
+	ReloadDelay: 150
 	Range: 24c43
 	MinRange: 7c73
 	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
@@ -290,7 +290,7 @@ SpecterGun:
 		ContrailWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 150
+		Damage: 110
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -315,7 +315,7 @@ SpecterGunEMP:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 175
+		Damage: 130
 	Warhead@emp1: GrantExternalCondition
 		Range: 3c548
 		Duration: 100
@@ -339,7 +339,7 @@ SpecterGunInferno:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 200
+		Damage: 150
 		DamageTypes: FireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -394,7 +394,7 @@ InfernoShrapnel:
 
 SpecterGunNapalm:
 	Inherits: SpecterGun
-	ReloadDelay: 200
+	ReloadDelay: 150
 	Range: 19c818
 	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
 	Projectile: BulletAS
@@ -405,7 +405,7 @@ SpecterGunNapalm:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c1007
-		Damage: 200
+		Damage: 150
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
@@ -563,7 +563,7 @@ ScorpionLaser:
 AvatarLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 130
+	ReloadDelay: 100
 	Range: 12c21
 	Report: obelray1.aud
 	Projectile: LaserZap
@@ -579,7 +579,7 @@ AvatarLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c001
-		Damage: 500
+		Damage: 375
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
@@ -970,7 +970,7 @@ SeismicShrapnel:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
-		Damage: 80
+		Damage: 120
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -1087,7 +1087,7 @@ ZodiacBomb:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 600
+		Damage: 850
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -1248,11 +1248,9 @@ MontaukProton:
 GattlingCannonAttack:
 	Inherits: ^APBullet
 	Inherits@wh: ^SuperBulletWH
-	ReloadDelay: 180
+	ReloadDelay: 2
 	Range: 10c621
-	Burst: 25
 	ValidTargets: Ground
-	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
 		Blockable: false
@@ -1275,11 +1273,9 @@ GattlingCannonAttackAA:
 GattlingCannonVisual:
 	Inherits: ^APBullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 180
+	ReloadDelay: 2
 	Range: 10c621
-	Burst: 25
 	ValidTargets: Ground, Aircraft
-	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
 		Speed: 0c964
@@ -1841,7 +1837,7 @@ BikeMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 20
+	BurstDelay: 5
 	Range: 9c559
 	Report: misl1.aud
 	ValidTargets: Ground
@@ -1995,7 +1991,7 @@ HailstormMissileGas:
 		Owner: Creeps
 
 HailstormMissileGasAA:
-	Inherits: HailstormMissileGas
+	Inherits: HailstormMissileAA
 	ReloadDelay: 220
 	ValidTargets: Aircraft
 	Projectile: Missile
