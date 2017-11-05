@@ -53,12 +53,9 @@ HuntressGun:
 	ReloadDelay: 150
 	Range: 6c512
 	Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
-	Projectile: BulletAS
+	Projectile: InstantHit
 		Speed: 2c486
 		Inaccuracy: 0c91
-		ContrailLength: 10
-		ContrailColor: FFFFFF
-		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Aircraft
 		Spread: 0c91
@@ -423,7 +420,7 @@ AurochMortar:
 RagnarokCannon:
 	Inherits: ^ShellHE
 	Inherits@wh: ^APHEWH
-	ReloadDelay: 260
+	ReloadDelay: 195
 	Range: 19c818
 	Report: artyfire2.aud
 	Projectile: BulletAS
@@ -438,7 +435,7 @@ RagnarokCannon:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 30
+		Damage: 25
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -462,7 +459,7 @@ RagnarokCannon2:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 150
+		Damage: 115
 		Versus:
 			Building: 250
 
@@ -551,6 +548,7 @@ BountyMG:
 	BurstDelay: 3
 	Range: 7c73
 	Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
+	InvalidTargets: Vehicle
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
@@ -561,7 +559,7 @@ BountyMG:
 BountyHunterBazooka:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
-	ValidTargets: Building, Vehicles, Aircraft
+	ValidTargets: Building, Vehicle, Aircraft
 	ReloadDelay: 120
 	Range: 11c321
 	MinRange: 2c124
@@ -594,7 +592,9 @@ GeckoLauncherBarrage:
 		Inaccuracy: 2c124
 		RangeLimit: 28c291
 		Speed: 1c62
-		TerrainHeightAware: true
+		CruiseAltitude: 5c0
+		VerticalRateOfTurn: 80
+		HorizontalRateOfTurn: 80
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
@@ -718,6 +718,7 @@ BuzzardMissile:
 		Shadow: true
 		Inaccuracy: 1c0
 		VerticalRateOfTurn: 80
+		HorizontalRateOfTurn: 80
 		RateOfTurn: 10
 		RangeLimit: 15c0
 		AirburstAltitude: 11c0
@@ -794,13 +795,13 @@ StrikerMissiles:
 auroch120mmx:
 	Inherits: 120mm
 	-Burst:
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-		Damage: 125
+		Damage: 95
 		
 DiggerLaser:
 	Inherits: ^BasicLaser
-	Inherits@wh: ^TiberiumWH
+	Inherits@wh: ^LaserWH
 	ReloadDelay: 25
 	Range: 9c559
 	Report: lastur1.aud
@@ -847,3 +848,21 @@ BuggyToxin:
 		Range: 1
 		Actors: Cloud1
 		Owner: Creeps
+
+GriffinMissile:
+	Inherits: OrcaF1Missiles
+	ReloadDelay: 120
+	Range: 7c512
+	MinRange: 1c424
+	Report: orcamis1.aud
+	Burst: 2
+	BurstDelay: 6
+	ValidTargets: Ground
+	Projectile: Missile
+		Inaccuracy: 0c362
+		RangeLimit: 28c291
+		TerrainHeightAware: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 120
+		ValidTargets: Ground

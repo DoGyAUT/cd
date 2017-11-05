@@ -693,26 +693,6 @@ GATECH:
 		CircleSequence: circles
 		ClockSequence: clock
 		PauseOnCondition: power-outage
-	ParatroopersPower@titans:
-		UnitType: dshp.support, ~upgrade.st
-		DropItems: mmch, mmch, mmch
-		Icon: titan
-		OrderName: TitanDropOrder
-		SquadSize: 1
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Titan Mech Drop
-		LongDesc: Drops 3 Titans on the battlefield.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: titan
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 
 GADROP:
 	Inherits: ^Building
@@ -784,6 +764,27 @@ GADROP:
 		BeaconPoster: kodiak
 		DisplayRadarPing: True
 		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+	ParatroopersPower@titans:
+		Prerequisites: gatech
+		UnitType: dshp.support
+		DropItems: mmch, mmch, mmch
+		Icon: titan
+		OrderName: TitanDropOrder
+		SquadSize: 1
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Titan Mech Drop
+		LongDesc: Drops 3 Titans on the battlefield.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: titan
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
