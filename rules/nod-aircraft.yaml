@@ -449,14 +449,14 @@ SCRINB:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Banshee MK.II
 	Buildable:
 		Queue: Air.Nod
 		BuildPaletteOrder: 204
 		Prerequisites: ~nahpad, napyra, ~!t1, ~!t2, ~technology
-		Description: Advanced Jet of Technology Nod.\n\nGood vs: Everything\n\nSpecial:\n- Can shoot air and ground\n- Does not need to reload
+		Description: Advanced Jet of Technology Nod.\n\nGood vs: Everything\n\nSpecial:\n- Does not need to reload
 	Selectable:
 		Bounds: 60,48
 	Voiced:
@@ -472,9 +472,6 @@ SCRINB:
 		Type: GroundPosition
 	Armament@primary:
 		Weapon: BansheeCannon
-		LocalOffset: 778,0,45
-	Armament@primaryAA:
-		Weapon: BansheeCannonAA
 		LocalOffset: 778,0,45
 	Armament@special:
 		Weapon: BansheeSpecial
