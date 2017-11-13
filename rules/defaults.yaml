@@ -599,6 +599,8 @@
 
 ^BuildingInfiltrate:
 	Inherits: ^Building
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -999,7 +1001,20 @@
 		ZOffset: 256
 		ValidStances: Ally, Neutral, Enemy
 		RequiresCondition: tiberiumheal || tiberiumheal2
-
+		
+^CloaksOnTiberium:
+	GrantConditionOnTerrain@Tiberium:
+		TerrainTypes: Tiberium, BlueTiberium, PurpleTiberium, RedTiberium
+		Condition: tiberiumcloak
+	Cloak:
+		RequiresCondition: cloak || cloak-bar || tiberiumcloak
+		InitialDelay: 0
+		CloakDelay: 90
+		IsPlayerPalette: True
+		CloakSound: stealth01.aud
+		UncloakSound: unstealth01.aud
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
 		Damage: 20
@@ -2013,6 +2028,17 @@
 		ReturnToOrigin: False
 	ExplodeWeapon@Tiberium:
 		Weapon: Tiberium
+
+^CloudsWeak:
+	Inherits: ^Clouds
+	Mobile:
+		Speed: 20
+	ExplodeWeapon@Tiberium:
+		Weapon: TiberiumWeak
+	GrantPeriodicCondition@kill:
+		Condition: killcloud
+		CooldownDuration: 250
+		ActiveDuration: 200
 
 ^FireActor:
 	Inherits@1: ^ExistsInWorld

@@ -1,5 +1,8 @@
 SHOCKER:
 	Inherits@1: ^Alien
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 500
@@ -45,6 +48,9 @@ SHOCKER:
 
 SLASHER:
 	Inherits@1: ^HeavyAlien
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 501
@@ -76,6 +82,10 @@ SLASHER:
 
 LOCUST:
 	Inherits@1: ^HeavyAlien
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 502
@@ -113,6 +123,9 @@ VISC_INFECTED:
 	Inherits@1: ^Visceroid
 	Inherits@2: ^GainsExperienceInf
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Tooltip:
 		Name: Infected Visceroid
 	Health:
@@ -140,6 +153,9 @@ VISC_CORRUPT:
 	Inherits@1: ^Visceroid
 	Inherits@2: ^GainsExperienceInf
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Tooltip:
 		Name: Corrupt Visceroid
 	Health:

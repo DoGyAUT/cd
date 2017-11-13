@@ -229,12 +229,12 @@ RocketeerGun:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ValidTargets: Ground
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 8c497
 	Report: javelin.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -248,7 +248,7 @@ RocketeerGunAA:
 	Range: 8c497
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Aircraft
 
 NodHarvGun:
@@ -563,7 +563,7 @@ ScorpionLaser:
 AvatarLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
-	ReloadDelay: 130
+	ReloadDelay: 100
 	Range: 12c21
 	Report: obelray1.aud
 	Projectile: LaserZap
@@ -579,7 +579,7 @@ AvatarLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c001
-		Damage: 500
+		Damage: 375
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
@@ -970,7 +970,7 @@ SeismicShrapnel:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
-		Damage: 80
+		Damage: 120
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -1248,11 +1248,9 @@ MontaukProton:
 GattlingCannonAttack:
 	Inherits: ^APBullet
 	Inherits@wh: ^SuperBulletWH
-	ReloadDelay: 180
+	ReloadDelay: 2
 	Range: 10c621
-	Burst: 25
 	ValidTargets: Ground
-	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
 		Blockable: false
@@ -1275,11 +1273,9 @@ GattlingCannonAttackAA:
 GattlingCannonVisual:
 	Inherits: ^APBullet
 	Inherits@wh: ^BulletWH
-	ReloadDelay: 180
+	ReloadDelay: 2
 	Range: 10c621
-	Burst: 25
 	ValidTargets: Ground, Aircraft
-	BurstDelay: 2
 	Report: gattling01.aud, gattling02.aud, gattling03.aud
 	Projectile: BulletAS
 		Speed: 0c964
@@ -1841,7 +1837,7 @@ BikeMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 20
+	BurstDelay: 5
 	Range: 9c559
 	Report: misl1.aud
 	ValidTargets: Ground

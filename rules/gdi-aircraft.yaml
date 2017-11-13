@@ -498,14 +498,14 @@ FHAWK:
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
-		Cost: 1800
+		Cost: 1500
 	Tooltip:
 		Name: Firehawk
 	Buildable:
 		Queue: Air.GDI
 		BuildPaletteOrder: 106
 		Prerequisites: ~gahpad, gatech, ~upgrade.gdf
-		Description: This advanced fighter was designed to secure the uncontested air-superiority of GDI.\n\nGood vs: Aircraft, Vehicles and Buildings
+		Description: This advanced fighter was designed to secure the uncontested air-superiority of GDI.\n\nGood vs: Vehicles and Buildings
 	Selectable:
 		Bounds: 60,48,0,-10
 	Voiced:
@@ -522,12 +522,6 @@ FHAWK:
 	Armament@primary:
 		AmmoPoolName: Missiles
 		Weapon: HawkMissile
-		LocalOffset: -362,724,45, -724,-724,45
-		MuzzleSequence: muzzle
-		MuzzlePalette: apolra50alpha
-	Armament@primaryAA:
-		AmmoPoolName: Missiles
-		Weapon: HawkMissileAA
 		LocalOffset: -362,724,45, -724,-724,45
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
@@ -557,14 +551,14 @@ HORNET:
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
 	Inherits@FeatureAutotargetDontReturn: ^FeatureAutotargetDontReturn
 	Valued:
-		Cost: 2250
+		Cost: 1750
 	Tooltip:
 		Name: Hornet
 	Buildable:
 		Queue: Air.GDI
 		BuildPaletteOrder: 106
 		Prerequisites: ~gahpad, gatech, ~!t1, ~!t2, ~upgrade.zc
-		Description: This even more advanced Firehawk was constructed by ZOCOM for absolute air-superiority.\n\nGood vs: Aircraft, Vehicles and Buildings
+		Description: This even more advanced Firehawk was constructed by ZOCOM for absolute air-superiority.\n\nGood vs: Vehicles and Buildings
 	Selectable:
 		Bounds: 60,48,0,-10
 	Voiced:
@@ -581,12 +575,6 @@ HORNET:
 	Armament@primary:
 		AmmoPoolName: Missiles
 		Weapon: HornetMissile
-		LocalOffset: 0,566,362, 0,-566,362, 0,724,362, 0,-724,362
-		MuzzleSequence: muzzle
-		MuzzlePalette: apolra50alpha
-	Armament@primaryAA:
-		AmmoPoolName: Missiles
-		Weapon: HornetMissileAA
 		LocalOffset: 0,566,362, 0,-566,362, 0,724,362, 0,-724,362
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha

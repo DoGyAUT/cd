@@ -1,7 +1,7 @@
 ScoundrelGrenade:
 	Inherits: ^ShellHE
 	Inherits@wh: ^APWH
-	ReloadDelay: 110
+	ReloadDelay: 80
 	Range: 7c73
 	MinRange: 2c124
 	Projectile: BulletAS
@@ -13,7 +13,7 @@ ScoundrelGrenade:
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 120
+		Damage: 90
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_brnl
 		ExplosionPalette: apolra2
@@ -50,8 +50,8 @@ HuntressGun:
 	Inherits: ^Bullet
 	Inherits@wh: ^BulletWH
 	ValidTargets: Ground, Aircraft
-	ReloadDelay: 150
-	Range: 6c512
+	ReloadDelay: 85
+	Range: 7c512
 	Report: mutsniper01.aud, mutsniper02.aud, mutsniper03.aud
 	Projectile: InstantHit
 		Speed: 2c486
@@ -59,9 +59,9 @@ HuntressGun:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Aircraft
 		Spread: 0c91
-		Damage: 50
+		Damage: 30
 		Versus:
-			Aircraft: 100
+			Aircraft: 75
 	Warhead@2prone: SpreadDamage
 		Spread: 0c362
 		Damage: 1
@@ -113,7 +113,7 @@ CrapjetBomb:
 		Palette: effect
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 500
+		Damage: 350
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -283,9 +283,7 @@ GriffinAutocannon:
 BuggyFlak:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-	ReloadDelay: 100
-	Burst: 10
-	BurstDelay: 4
+	ReloadDelay: 9
 	ValidTargets: Aircraft
 	Range: 12c745
 	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
@@ -318,9 +316,7 @@ BuggyFlak:
 FlakCannon:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH
-	ReloadDelay: 100
-	Burst: 20
-	BurstDelay: 4
+	ReloadDelay: 4
 	ValidTargets: Aircraft
 	Range: 11c321
 	Report: 20mm_burst1.aud, 20mm_burst2.aud, 20mm_burst3.aud, 20mm_burst4.aud, 20mm_burst5.aud
@@ -828,9 +824,12 @@ DiggerLaser:
 		SmudgeType: SmallScorch
 		
 BuggyToxin:
-	Inherits@wh: BlueFireballLauncher
+	Inherits: BlueFireballLauncher
+	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 100
 	Range: 5c435
+	Burst: 2
+	BurstDelay: 10
 	Report: flamtnk1.aud
 	Projectile: BulletAS
 		Speed: 0c181
@@ -841,16 +840,45 @@ BuggyToxin:
 		Inaccuracy: 1c424
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c62
-		Damage: 50
+		Spread: 2c0
+		Damage: 25
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
-		Range: 1
-		Actors: Cloud1
+		Range: 2
+		Actors: Cloud1Weak
 		Owner: Creeps
 
+AssaultTruckMissile:
+	Inherits: ^MissileAPHE
+	Inherits@wh: ^APWH
+	ReloadDelay: 75
+	Range: 10c0
+	Report: misl1.aud
+	ValidTargets: Ground
+	Projectile: Missile
+		Arm: 2
+		Shadow: true
+		Inaccuracy: 0c724
+		Image: missile01
+		HorizontalRateOfTurn: 8
+		Palette: effect
+		TerrainHeightAware: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 90
+		ValidTargets: Ground
+
+AssaultTruckMissileAA:
+	Inherits: AssaultTruckMissile
+	ValidTargets: Ground, Air
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c362
+		Damage: 90
+		ValidTargets: Ground, Air
+
 GriffinMissile:
-	Inherits: OrcaF1Missiles
+	Inherits: ^MissileAPHE
+	Inherits@wh: ^APWH
 	ReloadDelay: 120
 	Range: 7c512
 	MinRange: 1c424

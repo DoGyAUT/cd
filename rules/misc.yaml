@@ -120,8 +120,20 @@ CRATE:
 Cloud1:
 	Inherits@1: ^Clouds
 
+Cloud1Weak:
+	Inherits@1: ^CloudsWeak
+	RenderSprites:
+		Image: Cloud1
+		Scale: 0.7
+
 Cloud2:
 	Inherits@1: ^Clouds
+
+Cloud2Weak:
+	Inherits@1: ^CloudsWeak
+	RenderSprites:
+		Image: Cloud2
+		Scale: 0.7
 
 Cloud3:
 	Inherits@1: ^Clouds

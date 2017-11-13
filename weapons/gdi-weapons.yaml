@@ -18,7 +18,7 @@ MarineGunGarrison:
 
 ZoneTrooperGun:
 	Inherits@wh: ^RailgunWH
-	ReloadDelay: 125
+	ReloadDelay: 75
 	Range: 8c497
 	Report: rail01.aud, rail02.aud, rail03.aud, rail04.aud
 	Projectile: BulletAS
@@ -33,7 +33,7 @@ ZoneTrooperGun:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 400
+		Damage: 240
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmawave1
 		ExplosionPalette: effect50alpha
@@ -1318,12 +1318,12 @@ JavelinGun:
 	Inherits: ^MissileAPHE
 	Inherits@wh: ^APWH
 	ValidTargets: Ground
-	ReloadDelay: 100
+	ReloadDelay: 75
 	Range: 8c497
 	Report: smaw.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -1336,7 +1336,7 @@ JavelinGunAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 90
 		ValidTargets: Aircraft
 
 JavelinGunGarrison:
