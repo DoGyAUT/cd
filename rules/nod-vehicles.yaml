@@ -17,7 +17,7 @@ NMCV:
 		VoiceSet: Nmcv
 		Volume: 2
 	Health:
-		HP: 2000
+		HP: 2000000
 	Mobile:
 		Speed: 30
 	RevealsShroud:
@@ -88,7 +88,7 @@ NIHARV:
 			PurpleTiberium: 100
 			Veins: 100
 	Health:
-		HP: 1500
+		HP: 1500000
 	Armament@primary:
 		Weapon: NodHarvGun
 		MuzzleSequence: muzzle
@@ -167,7 +167,7 @@ NTHARV:
 			PurpleTiberium: 100
 			Veins: 100
 	Health:
-		HP: 1500
+		HP: 1500000
 	GrantConditionOnPrerequisite@cloak:
 		Condition: technology
 		Prerequisites: technology
@@ -233,7 +233,7 @@ NPHARV:
 			PurpleTiberium: 100
 			Veins: 100
 	Health:
-		HP: 1500
+		HP: 1500000
 	RevealsShroud:
 		Range: 8c497
 	-ProducibleWithLevel:
@@ -283,7 +283,7 @@ SAPC:
 		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 8c497
 		RequiresCondition: !subterranean
@@ -350,7 +350,7 @@ BGGY:
 		Speed: 140
 		Crushes: crate
 	Health:
-		HP: 450
+		HP: 450000
 	RevealsShroud:
 		Range: 8c497
 	Armament@primary:
@@ -414,7 +414,7 @@ GORRAN:
 		Speed: 95
 		TurnSpeed: 4
 	Health:
-		HP: 700
+		HP: 700000
 	RevealsShroud:
 		Range: 8c497
 	Turreted:
@@ -477,7 +477,7 @@ BIKE:
 		Speed: 150
 		Crushes: crate
 	Health:
-		HP: 350
+		HP: 350000
 	RevealsShroud:
 		Range: 10c921
 	Armament@PRIMARY:
@@ -520,7 +520,7 @@ CHEETAH:
 		Speed: 85
 		TurnSpeed: 4
 	Health:
-		HP: 1500
+		HP: 1500000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -570,7 +570,7 @@ REPAIR:
 		VoiceSet: Cabalbeep
 		Volume: 2
 	Health:
-		HP: 400
+		HP: 400000
 	SelfHealing:
 		Step: 0
 		PercentageStep: 1
@@ -637,7 +637,7 @@ FTNK:
 		Speed: 90
 		TurnSpeed: 4
 	Health:
-		HP: 650
+		HP: 650000
 	RevealsShroud:
 		Range: 9c921
 	Turreted:
@@ -701,7 +701,7 @@ TERMITE:
 	RevealsShroud:
 		Range: 12c745
 	Health:
-		HP: 2000
+		HP: 2000000
 	Turreted:
 		Turret: primary
 		TurnSpeed: 2
@@ -733,9 +733,9 @@ TERMITE:
 		RecoilRecovery: 10
 		RequiresCondition: !deployed
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 		RequiresCondition: deployed
@@ -805,7 +805,7 @@ HAILSTORM:
 		TurnSpeed: 5
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 11c321
 	Armament@primary:
@@ -895,7 +895,7 @@ NHWTZ:
 		VoiceSet: Specter
 		Volume: 1
 	Health:
-		HP: 500
+		HP: 500000
 	Mobile:
 		Speed: 55
 		TurnSpeed: 2
@@ -1019,7 +1019,7 @@ SUBTANK:
 		RequiresCondition: subterranean
 		Except: Attack, AttackMove, Guard, Move
 	Health:
-		HP: 650
+		HP: 650000
 	RevealsShroud:
 		Range: 9c921
 		RequiresCondition: !subterranean
@@ -1090,7 +1090,7 @@ STNK:
 		TurnSpeed: 10
 		Speed: 100
 	Health:
-		HP: 820
+		HP: 820000
 	RevealsShroud:
 		Range: 14c146
 	Cloak@self:
@@ -1168,11 +1168,11 @@ AVATAR:
 		Interval: 21
 		RequiresCondition: walker
 	Health:
-		HP: 1820
+		HP: 1820000
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 1
 		DamageCooldown: 200
 	RevealsShroud:
@@ -1228,11 +1228,11 @@ WEED:
 		Speed: 100
 		TurnSpeed: 5
 	Health:
-		HP: 780
+		HP: 780000
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RevealsShroud:
@@ -1281,11 +1281,11 @@ SCORPION:
 		Interval: 21
 		RequiresCondition: walker
 	Health:
-		HP: 5000
+		HP: 5000000
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 1
 		DamageCooldown: 200
 	RevealsShroud:
@@ -1354,7 +1354,7 @@ MONTAUK:
 		VoiceSet: Sting
 		Volume: 2
 	Health:
-		HP: 4500
+		HP: 4500000
 	Mobile:
 		TurnSpeed: 4
 		Speed: 20
@@ -1380,7 +1380,7 @@ MONTAUK:
 	WithVoxelBody:
 		RequiresCondition: !subterranean
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
@@ -1434,7 +1434,7 @@ RECKONER:
 		TurnSpeed: 5
 		Speed: 70
 	Health:
-		HP: 6000
+		HP: 6000000
 	AutoTarget:
 	RevealsShroud:
 		Range: 14c146

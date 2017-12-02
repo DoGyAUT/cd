@@ -13,7 +13,7 @@ DevilsTongueGun:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 55
+		Damage: 55000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
@@ -35,7 +35,7 @@ DevilsTongueGunTiberium:
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 75
+		Damage: 75000
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
 		Range: 1
@@ -59,7 +59,7 @@ PyradonGun:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 110
+		Damage: 110000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
@@ -82,7 +82,7 @@ PyradonGunBlue:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 150
+		Damage: 150000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnelBlue
@@ -105,7 +105,7 @@ GorranMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 225
+		Damage: 225000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
@@ -132,7 +132,7 @@ RavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 600
+		Damage: 600000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
@@ -157,7 +157,7 @@ BluehellRavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 1000
+		Damage: 1000000
 	Warhead@2Eff: CreateEffect
 		Explosions: napalm1, napalm2
 		ExplosionPalette: beamzap
@@ -177,7 +177,7 @@ TiberiumRavenMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 800
+		Damage: 800000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
@@ -202,7 +202,7 @@ GorranCannon:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 100
+		Damage: 100000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
@@ -223,7 +223,7 @@ EliteCadreGun:
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 25
+		Damage: 25000
 
 RocketeerGun:
 	Inherits: ^MissileAPHE
@@ -234,7 +234,7 @@ RocketeerGun:
 	Report: javelin.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -248,7 +248,7 @@ RocketeerGunAA:
 	Range: 8c497
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Aircraft
 
 NodHarvGun:
@@ -258,7 +258,7 @@ NodHarvGun:
 	Burst: 5
 	Range: 7c73
 	Warhead@1Dam:
-		Damage: 18
+		Damage: 18000
 
 NodHarvTibGun:
 	Inherits: AcolyteGun
@@ -268,7 +268,7 @@ NodHarvTibGun:
 	Projectile: BulletAS
 		Speed: 0c1007
 	Warhead@1Dam: SpreadDamage
-		Damage: 18
+		Damage: 18000
 
 SpecterGun:
 	Inherits: ^ShellHE
@@ -290,7 +290,7 @@ SpecterGun:
 		ContrailWidth: 0c42
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 110
+		Damage: 110000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -315,7 +315,7 @@ SpecterGunEMP:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 130
+		Damage: 130000
 	Warhead@emp1: GrantExternalCondition
 		Range: 3c548
 		Duration: 100
@@ -339,7 +339,7 @@ SpecterGunInferno:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 150
+		Damage: 150000
 		DamageTypes: FireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
@@ -371,7 +371,7 @@ InfernoShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud
@@ -405,7 +405,7 @@ SpecterGunNapalm:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c1007
-		Damage: 150
+		Damage: 150000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
@@ -452,7 +452,7 @@ RaiderGunAttack:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 15
+		Damage: 15000
 		Versus:
 			Aircraft: 100
 
@@ -475,7 +475,7 @@ RaiderGunLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 30
+		Damage: 30000
 		Versus:
 			Aircraft: 75
 			Infantry: 100
@@ -509,7 +509,7 @@ ScorpionLaserFast:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 15
+		Damage: 15000
 		Versus:
 			Aircraft: 50
 			Infantry: 100
@@ -543,7 +543,7 @@ ScorpionLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
@@ -579,7 +579,7 @@ AvatarLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c001
-		Damage: 375
+		Damage: 375000
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
@@ -649,7 +649,7 @@ MultiCluster:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 65
+		Damage: 65000
 		ValidTargets: Ground
 		DamageTypes: TakeCoverEffect, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -677,7 +677,7 @@ RookieGun:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 
 RookieGunGarrison:
 	Inherits: RookieGun
@@ -695,7 +695,7 @@ ConfessorGun:
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 35
+		Damage: 35000
 
 AcolyteGun:
 	Inherits: ^Bullet
@@ -712,7 +712,7 @@ AcolyteGun:
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 60
+		Damage: 60000
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
 		InvalidTargets: Water
@@ -750,7 +750,7 @@ ShadowTrooperLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 130
+		Damage: 130000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
@@ -782,7 +782,7 @@ ShadowTrooperEnchancedLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 200
+		Damage: 200000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
@@ -809,7 +809,7 @@ ConfessorGrenade:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 40
+		Damage: 40000
 	Warhead@2Eff: CreateEffect
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
@@ -836,7 +836,7 @@ VertigoBombGas:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
-		Damage: 1000
+		Damage: 1000000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiberiumbomb
 		ExplosionPalette: tiberiumbomb50
@@ -875,7 +875,7 @@ VertigoBombNapalm:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
-		Damage: 500
+		Damage: 500000
 	Warhead@2Eff: CreateEffect
 		Explosions: napalmnuke
 		ExplosionPalette: napalmnuke50
@@ -899,7 +899,7 @@ VertigoBombNapalm:
 VertigoBombBlueNapalm:
 	Inherits: VertigoBombNapalm
 	Warhead@1Dam: SpreadDamage
-		Damage: 600
+		Damage: 600000
 	WarheadAS: FireShrapnel
 		Weapon: BlueNapalmShrapnel
 		Amount: 35
@@ -923,7 +923,7 @@ VertigoBombSeismic:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c124
-		Damage: 500
+		Damage: 500000
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -970,7 +970,7 @@ SeismicShrapnel:
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -1008,7 +1008,7 @@ NapalmShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 75
+		Damage: 75000
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
 		ImpactSounds: flamtnk1.aud
@@ -1029,7 +1029,7 @@ BlueNapalmShrapnel:
 	Inherits: NapalmShrapnel
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 100
+		Damage: 100000
 	WarheadAS: SpawnActor
 		Range: 3
 		Actors: BFire1, BFire1, BFire1
@@ -1054,7 +1054,7 @@ TiberiumProtonShrapnel:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 120
+		Damage: 120000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
 		ImpactSounds: scrin5b.aud
@@ -1087,7 +1087,7 @@ ZodiacBomb:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 850
+		Damage: 850000
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -1117,7 +1117,7 @@ BansheeCannon:
 		Inaccuracy: 1c62
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 75
+		Damage: 75000
 		Versus:
 			Building: 35
 	Warhead@2Eff: CreateEffect
@@ -1155,7 +1155,7 @@ BansheeSpecial:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
@@ -1192,7 +1192,7 @@ BansheeCannonAA:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 50
+		Damage: 50000
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
@@ -1228,7 +1228,7 @@ MontaukProton:
 		ContrailWidth: 0c71
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 300
+		Damage: 300000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg
@@ -1259,7 +1259,7 @@ GattlingCannonAttack:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 		ValidTargets: Ground
 
 GattlingCannonAttackAA:
@@ -1267,7 +1267,7 @@ GattlingCannonAttackAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 		ValidTargets: Aircraft
 
 GattlingCannonVisual:
@@ -1303,7 +1303,7 @@ VenomCannon:
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 20
+		Damage: 20000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
@@ -1324,7 +1324,7 @@ HydraCannon:
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 15
+		Damage: 15000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
@@ -1344,7 +1344,7 @@ HavocCannon:
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 50
+		Damage: 50000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_brnl
@@ -1371,7 +1371,7 @@ RavenCannon:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 20
+		Damage: 20000
 
 RavenCannonAA:
 	Inherits: ^APBullet
@@ -1390,7 +1390,7 @@ RavenCannonAA:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 80
+		Damage: 80000
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 
@@ -1413,7 +1413,7 @@ LaserTurretTibLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 200
+		Damage: 200000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
@@ -1440,7 +1440,7 @@ LaserTurretLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 200
+		Damage: 200000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
@@ -1466,7 +1466,7 @@ PhantomLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
@@ -1490,7 +1490,7 @@ LaserTurretLaserUpgraded:
 		SecondaryBeamColor: FFF200
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 300
+		Damage: 300000
 
 ObeliskLaser:
 	Inherits: ^BasicLaser
@@ -1509,7 +1509,7 @@ ObeliskLaser:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 800
+		Damage: 800000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
@@ -1539,7 +1539,7 @@ ObeliskLaserTib:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 1200
+		Damage: 1200000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
@@ -1565,7 +1565,7 @@ ObeliskLaserUpgraded:
 		SecondaryBeamColor: FFF200
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c119
-		Damage: 1200
+		Damage: 1200000
 	Warhead@2Eff: CreateEffect
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
@@ -1593,7 +1593,7 @@ VenomLaserFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c59
-		Damage: 30
+		Damage: 30000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
@@ -1628,7 +1628,7 @@ HydraLaserFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c59
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
 		InvalidTargets: Water
@@ -1657,7 +1657,7 @@ HavocLaserFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c59
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
 		Explosions: tpiff
 		InvalidTargets: Water
@@ -1681,7 +1681,7 @@ FlamerTurretBlueFireballLauncher:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 65
+		Damage: 65000
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -1715,7 +1715,7 @@ FlamerTurretFireballLauncher:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 45
+		Damage: 45000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -1749,7 +1749,7 @@ FlamerTurretTiberium:
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 55
+		Damage: 55000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -1774,7 +1774,7 @@ FanticBoom:
 		Speed: 2c124
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 500
+		Damage: 500000
 		AffectsParent: True
 		DamageTypes: SmallExplosionDeath
 	Warhead@kill: GrantExternalCondition
@@ -1790,7 +1790,7 @@ FanticBoomExplosion:
 	Inherits@wh: ^HEAPWH
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 500
+		Damage: 500000
 		Falloff: 100, 75, 50, 25, 0
 		AffectsParent: True
 	Warhead@2Eff: CreateEffect
@@ -1815,7 +1815,7 @@ FanaticShrapnel:
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 250
+		Damage: 250000
 	Warhead@2Eff: CreateEffect
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
@@ -1851,7 +1851,7 @@ BikeMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Building: 30
 		ValidTargets: Ground
@@ -1861,7 +1861,7 @@ BikeMissileAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Aircraft
 
 StealthTankMissile:
@@ -1878,7 +1878,7 @@ StealthTankMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Ground
 
 StealthTankMissileEMP:
@@ -1898,7 +1898,7 @@ StealthTankMissileEMP:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Ground
 	Warhead@emp1: GrantExternalCondition
 		Range: 0c724
@@ -1925,7 +1925,7 @@ StealthTankMissileAA:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Aircraft
 
 HailstormMissile:
@@ -1947,7 +1947,7 @@ HailstormMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c416
-		Damage: 60
+		Damage: 60000
 		Versus:
 			Building: 175
 		ValidTargets: Ground
@@ -1964,7 +1964,7 @@ HailstormMissileAA:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 150
+		Damage: 150000
 		ValidTargets: Aircraft
 
 HailstormMissileGas:
@@ -1977,7 +1977,7 @@ HailstormMissileGas:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c416
-		Damage: 68
+		Damage: 68000
 		Versus:
 			Building: 175
 	Warhead@2Eff: CreateEffect
@@ -2000,7 +2000,7 @@ HailstormMissileGasAA:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 200
+		Damage: 200000
 		ValidTargets: Aircraft
 
 HavocMissiles:
@@ -2021,7 +2021,7 @@ HavocMissiles:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 150
+		Damage: 150000
 		ValidTargets: Ground
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: MediumCrater
@@ -2037,7 +2037,7 @@ HavocMissilesTibGas:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 240
+		Damage: 240000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
@@ -2074,7 +2074,7 @@ HydraMissiles:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 100
+		Damage: 100000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang, medium_bang, large_bang
@@ -2105,7 +2105,7 @@ HydraGasMissiles:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Vehicle: 100
 		ValidTargets: Ground
@@ -2139,7 +2139,7 @@ SAMSiteMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 150
+		Damage: 150000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -2173,7 +2173,7 @@ SAMSiteMissileTiberium:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 175
+		Damage: 175000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_tumu
@@ -2193,7 +2193,7 @@ BlackHandFlamer:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c543
-		Damage: 175
+		Damage: 175000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
 		Weapon: TermiteGunShrapnel
@@ -2214,7 +2214,7 @@ BlackHandFlamerBlue:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 200
+		Damage: 200000
 		Versus:
 			Vehicle: 75
 		Falloff: 100, 90, 80
@@ -2237,7 +2237,7 @@ TermiteGun:
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
 		Explosions: fireexpl
 		ExplosionPalette: effect
@@ -2261,7 +2261,7 @@ TermiteGunShrapnel:
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 25
+		Damage: 25000
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: Fire3small
@@ -2294,7 +2294,7 @@ TermiteGunShrapnel1:
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 25
+		Damage: 25000
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: Fire1small
@@ -2327,7 +2327,7 @@ termitegunshrapnelblue:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 25
+		Damage: 25000
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: BFire3small
@@ -2360,7 +2360,7 @@ termitegunshrapnelblue1:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 25
+		Damage: 25000
 	WarheadAS: SpawnActor
 		Range: 1
 		Actors: BFire1small
@@ -2399,7 +2399,7 @@ ClusterMissile:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 3c512
-		Damage: 5000
+		Damage: 5000000
 	Warhead@2Eff: CreateEffect
 		Explosions: bignuke
 		ExplosionPalette: apolra2
@@ -2412,7 +2412,7 @@ ClusterMissile:
 	ValidTargets: Ground, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c424
-		Damage: 750
+		Damage: 750000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
@@ -2421,7 +2421,7 @@ ClusterMissile:
 		Size: 2
 	Warhead@ClusterDamage1: SpreadDamage
 		Spread: 2c848
-		Damage: 300
+		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Ground, Air
@@ -2432,7 +2432,7 @@ ClusterMissile:
 		Delay: 20
 	Warhead@ClusterDamage2: SpreadDamage
 		Spread: 4c248
-		Damage: 300
+		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 30
 		ValidTargets: Ground, Air
@@ -2443,7 +2443,7 @@ ClusterMissile:
 		Delay: 30
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 5c673
-		Damage: 300
+		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 40
 		ValidTargets: Ground, Air
@@ -2454,7 +2454,7 @@ ClusterMissile:
 		Delay: 40
 	Warhead@ClusterDamage4: SpreadDamage
 		Spread: 7c73
-		Damage: 300
+		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 50
 		ValidTargets: Ground, Air
@@ -2528,7 +2528,7 @@ NukeShrapnel1:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 400
+		Damage: 400000
 		DamageTypes: TriggerProne, FireDeath
 
 NukeShrapnel2:
@@ -2742,62 +2742,62 @@ TiberiumLaserHigh:
 		SecondaryBeamColor: 29FF9B
 	Warhead@1Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@4Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 30
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@5Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 40
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@6Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 50
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@7Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 60
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@8Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 70
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@9Dam: SpreadDamage
 		Spread: 5c73
-		Damage: 25
+		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 80
 		ValidTargets: Ground, Air
@@ -2971,7 +2971,7 @@ TibDebrisSpecial:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c524
-		Damage: 1500
+		Damage: 1500000
 		Falloff: 100, 80
 	Warhead@10Eff: CreateEffect
 		Explosions: explolb
@@ -3123,13 +3123,13 @@ TechnologyLaserHigh:
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c000
-		Damage: 250
+		Damage: 250000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 3c73
-		Damage: 50
+		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath

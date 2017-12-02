@@ -1,7 +1,7 @@
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
-		Damage: 50
+		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -50,7 +50,7 @@ UnitExplodeEpic:
 PyradonExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c62
-		Damage: 500
+		Damage: 500000
 		Versus:
 			Infantry: 100
 			Cyborg: 50
@@ -71,7 +71,7 @@ PyradonExplosion:
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -98,7 +98,7 @@ UnitExplodeSmallCabal:
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
-		Damage: 75
+		Damage: 75000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -119,7 +119,7 @@ UnitExplodeSmaller:
 UnitExplodeHeli:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c602
-		Damage: 50
+		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -141,7 +141,7 @@ UnitExplodeHeli:
 UnitExplodePlane:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 100
+		Damage: 100000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -163,7 +163,7 @@ UnitExplodePlane:
 UnitExplodeCrapJet:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 350
+		Damage: 350000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Infantry: 100
@@ -184,7 +184,7 @@ UnitExplodeCrapJet:
 UnitExplodeCyborg:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 100
+		Damage: 100000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -232,7 +232,7 @@ TiberiumExplosionSilo:
 SmallTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 100
+		Damage: 100000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -254,7 +254,7 @@ SmallTiberiumExplosion:
 LargeTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 150
+		Damage: 150000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -276,7 +276,7 @@ LargeTiberiumExplosion:
 LargeVeinExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c848
-		Damage: 200
+		Damage: 200000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -307,7 +307,7 @@ TibDebris:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c424
-		Damage: 10
+		Damage: 10000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
@@ -484,7 +484,7 @@ Buildingexplosionsmall:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c128
-		Damage: 1
+		Damage: 1000
 		ValidTargets: Ground
 	Warhead@1Eff: CreateEffect
 		Explosions: building, medium_tumu, medium_grey_explosion, large_tumu, large_bang, medium_bang
@@ -662,7 +662,7 @@ Heal:
 		ValidTargets: Infantry
 		ValidStances: Ally
 		Spread: 0c301
-		Damage: -50
+		Damage: -50000
 
 Repair:
 	ReloadDelay: 250
@@ -674,7 +674,7 @@ Repair:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
-		Damage: -50
+		Damage: -50000
 		ValidTargets: Damaged
 	Warhead@1Eff: CreateEffect
 		Explosions: small_flash
@@ -690,14 +690,14 @@ MechanicRepair:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
-		Damage: -50
+		Damage: -50000
 		ValidTargets: Damaged
 
 TiberiumHeal:
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: -10
+		Damage: -10000
 
 Vulcan:
 	Inherits: ^Bullet
@@ -711,7 +711,7 @@ Vulcan:
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 40
+		Damage: 40000
 
 WatchSniper:
 	Inherits: ^Bullet
@@ -729,7 +729,7 @@ WatchSniper:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 0c91
-		Damage: 250
+		Damage: 250000
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -745,7 +745,7 @@ CivilianPistol:
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 
 RPGTower:
 	Inherits: ^ShellHE
@@ -763,7 +763,7 @@ RPGTower:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 200
+		Damage: 200000
 	Warhead@2Eff: CreateEffect
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
@@ -780,7 +780,7 @@ UmagonSniper:
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c59
-		Damage: 150
+		Damage: 150000
 
 DogBite:
 	ValidTargets: Infantry
@@ -792,7 +792,7 @@ DogBite:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 100
+		Damage: 100000
 		DamageTypes: BulletDeath
 		Versus:
 			Infantry: 100
@@ -812,7 +812,7 @@ FiendShard:
 		LaunchAngle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 35
+		Damage: 35000
 		Versus:
 			Vehicle: 60
 	Warhead@3EffWater: CreateEffect
@@ -837,7 +837,7 @@ FiendShardGreen:
 		ContrailColor: 7EFF01
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Damage: 35
+		Damage: 35000
 		Versus:
 			Vehicle: 60
 	Warhead@2Eff: CreateEffect
@@ -866,7 +866,7 @@ FiendShardBlue:
 		ContrailColor: 5980FF
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Damage: 45
+		Damage: 45000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
@@ -894,7 +894,7 @@ FiendShardRed:
 		ContrailColor: FF0101
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Damage: 55
+		Damage: 55000
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		ExplosionPalette: effect50alpha
@@ -921,7 +921,7 @@ FiendShardPurple:
 		ContrailColor: C864FF
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
-		Damage: 55
+		Damage: 55000
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
@@ -940,7 +940,7 @@ SlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
-		Damage: 125
+		Damage: 125000
 
 SmallSlimeAttack:
 	Inherits@wh: ^TiberiumWH
@@ -950,7 +950,7 @@ SmallSlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
-		Damage: 75
+		Damage: 75000
 
 Tentacle:
 	Inherits@wh: ^TiberiumWH
@@ -960,7 +960,7 @@ Tentacle:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
-		Damage: 160
+		Damage: 160000
 		DamageTypes: TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
 		Range: 2c124
