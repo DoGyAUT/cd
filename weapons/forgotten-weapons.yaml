@@ -13,7 +13,7 @@ ScoundrelGrenade:
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 90
+		Damage: 90000
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl, small_brnl
 		ExplosionPalette: apolra2
@@ -44,7 +44,7 @@ GruntGun:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 14
+		Damage: 14000
 
 HuntressGun:
 	Inherits: ^Bullet
@@ -59,12 +59,12 @@ HuntressGun:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Aircraft
 		Spread: 0c91
-		Damage: 30
+		Damage: 30000
 		Versus:
 			Aircraft: 75
 	Warhead@2prone: SpreadDamage
 		Spread: 0c362
-		Damage: 1
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -81,7 +81,7 @@ ScoundrelGun:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 
 BrigandShotgun:
 	Inherits: ^Bullet
@@ -93,7 +93,7 @@ BrigandShotgun:
 		Inaccuracy: 1c786
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 35
+		Damage: 35000
 
 BrigandShotgun2:
 	Inherits: BrigandShotgun
@@ -113,7 +113,7 @@ CrapjetBomb:
 		Palette: effect
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 350
+		Damage: 350000
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -136,7 +136,7 @@ BisonLauncher:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
@@ -154,7 +154,7 @@ GriffinMG:
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		InvalidTargets: Water
@@ -176,7 +176,7 @@ AssaultTruckMG:
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 40
+		Damage: 40000
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -194,7 +194,7 @@ BisonMG:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 7
+		Damage: 7000
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -213,7 +213,7 @@ TaurusMG:
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 50
+		Damage: 50000
 		Versus:
 			Aircraft: 33
 		ValidTargets: Ground, Aircraft
@@ -234,7 +234,7 @@ WatchTowerMG:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 30
+		Damage: 30000
 	Warhead@2Eff: CreateEffect
 		Explosions: gatpiff
 		InvalidTargets: Water
@@ -255,7 +255,7 @@ ForgHECannon:
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 35
+		Damage: 35000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -296,7 +296,7 @@ BuggyFlak:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 20
+		Damage: 20000
 		Versus:
 			Building: 50
 			Vehicle: 40
@@ -329,7 +329,7 @@ FlakCannon:
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 30
+		Damage: 30000
 		ValidTargets: Aircraft
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -361,7 +361,7 @@ BuggyMortar:
 	MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 80
+		Damage: 80000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
@@ -386,7 +386,7 @@ GremlinMortar:
 	MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 180
+		Damage: 180000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
@@ -411,7 +411,7 @@ AurochMortar:
 	MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 350
+		Damage: 350000
 
 RagnarokCannon:
 	Inherits: ^ShellHE
@@ -431,7 +431,7 @@ RagnarokCannon:
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 25
+		Damage: 25000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
@@ -455,7 +455,7 @@ RagnarokCannon2:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c124
-		Damage: 115
+		Damage: 115000
 		Versus:
 			Building: 250
 
@@ -468,7 +468,7 @@ GoonHammer:
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 200
+		Damage: 200000
 		DamageTypes: BulletDeath
 	Warhead@21Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
@@ -476,7 +476,7 @@ GoonHammer:
 		ValidTargets: Infantry
 		ValidStances: Ally
 		Spread: 0c362
-		Damage: -100
+		Damage: -100000
 
 GoonHammer2:
 	ReloadDelay: 40
@@ -487,7 +487,7 @@ GoonHammer2:
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 100
+		Damage: 100000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -506,7 +506,7 @@ HellHoundBite:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c91
-		Damage: 225
+		Damage: 225000
 		DamageTypes: BulletDeath
 
 BuggyFireballLauncher:
@@ -523,7 +523,7 @@ BuggyFireballLauncher:
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c424
-		Damage: 75
+		Damage: 75000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
 		Explosions: fire01a, fire02a, fire03a
@@ -549,7 +549,7 @@ BountyMG:
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 		DamageTypes: TakeCoverEffect, BountyKill
 
 BountyHunterBazooka:
@@ -562,7 +562,7 @@ BountyHunterBazooka:
 	Report: smaw.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 300
+		Damage: 300000
 		ValidTargets: Ground, Aircraft
 		Versus:
 			Aircraft: 50
@@ -594,7 +594,7 @@ GeckoLauncherBarrage:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 110
+		Damage: 110000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: small_tumu, medium_tumu, large_tumu
@@ -625,7 +625,7 @@ ForgottenT3Missile:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 300
+		Damage: 300000
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: small_tumu, medium_tumu, large_tumu
@@ -656,7 +656,7 @@ ForgottenT2Missile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 75
+		Damage: 75000
 		ValidTargets: Ground
 
 ForgottenT2MissileAA:
@@ -664,7 +664,7 @@ ForgottenT2MissileAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 75
+		Damage: 75000
 		ValidTargets: Aircraft
 
 BuggyMissile:
@@ -690,7 +690,7 @@ BuggyMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 60
+		Damage: 60000
 		ValidTargets: Ground
 
 BuggyMissileAA:
@@ -698,7 +698,7 @@ BuggyMissileAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 60
+		Damage: 60000
 		ValidTargets: Aircraft
 		
 BuzzardMissile:
@@ -742,7 +742,7 @@ BuzzardMissileFalling:
 		RangeLimit: 20c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 384
-		Damage: 250
+		Damage: 250000
 		ValidTargets: Ground
 
 StrikerMissiles:
@@ -766,7 +766,7 @@ StrikerMissiles:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 300
+		Damage: 300000
 		ValidStances: Neutral, Enemy
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
@@ -793,7 +793,7 @@ auroch120mmx:
 	-Burst:
 	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-		Damage: 95
+		Damage: 95000
 		
 DiggerLaser:
 	Inherits: ^BasicLaser
@@ -814,7 +814,7 @@ DiggerLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 70
+		Damage: 70000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
@@ -841,7 +841,7 @@ BuggyToxin:
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
 		Spread: 2c0
-		Damage: 25
+		Damage: 25000
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
 		Range: 2
@@ -865,7 +865,7 @@ AssaultTruckMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Ground
 
 AssaultTruckMissileAA:
@@ -873,7 +873,7 @@ AssaultTruckMissileAA:
 	ValidTargets: Ground, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Ground, Air
 
 GriffinMissile:
@@ -892,5 +892,5 @@ GriffinMissile:
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Ground

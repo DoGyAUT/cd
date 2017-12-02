@@ -14,9 +14,9 @@ DummyShakerVision:
 	RevealsShroud:
 		Range: 10c0
 	Health:
-		HP: 10
+		HP: 10000
 	SelfHealing:
-		Step: -10
+		Step: -10000
 		Delay: 1
 		HealIfBelow: 200
 	RenderSprites:
@@ -31,14 +31,14 @@ DummyShakerTarget:
 	Targetable:
 		TargetTypes: DummyTarget
 	Health:
-		HP: 200
+		HP: 200000
 	-SelfHealing:
 
 DummyShakerTargeter:
 	Inherits: DummyShakerVision
 	Targetable:
 	Health:
-		HP: 200
+		HP: 200000
 	-SelfHealing:
 	AttackHeli:
 		FacingTolerance: 20

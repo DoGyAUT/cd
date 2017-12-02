@@ -35,7 +35,7 @@ KMCV:
 			PurpleTiberium: 100
 			Veins: 100
 	Health:
-		HP: 2000
+		HP: 2000000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -109,7 +109,7 @@ KHARV:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1500
+		HP: 1500000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 8c497
@@ -161,7 +161,7 @@ DREADFIRE:
 		RequiresCondition: upgrade.visionuplink
 		Range: 9c73
 	Health:
-		HP: 1850
+		HP: 1850000
 	AttackFrontal:
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -213,7 +213,7 @@ REAPER:
 		Speed: 85
 		Crushes: crate
 	Health:
-		HP: 1000
+		HP: 1000000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 12c745
@@ -291,7 +291,7 @@ GOLEM:
 		RequiresCondition: upgrade.visionuplink
 		Range: 10c497
 	Health:
-		HP: 520
+		HP: 520000
 	SelfHealing:
 		Step: 0
 		PercentageStep: 1
@@ -364,7 +364,7 @@ TARANTULA:
 		Interval: 31
 		RequiresCondition: walker
 	Health:
-		HP: 1000
+		HP: 1000000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 18c394
@@ -413,7 +413,7 @@ SILVER:
 		Volume: 2
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 500
+		HP: 500000
 	Cargo:
 		Types: Infantry
 		MaxWeight: 10
@@ -476,7 +476,7 @@ KRONOS:
 		TerrainSpeeds:
 			Water: 50
 	Health:
-		HP: 2080
+		HP: 2080000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 11c321
@@ -494,9 +494,9 @@ KRONOS:
 		Recoil: 200
 		RecoilRecovery: 10
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	AttackTurreted:
@@ -553,7 +553,7 @@ FURY:
 		TerrainSpeeds:
 			Water: 80
 	Health:
-		HP: 10400
+		HP: 10400000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
@@ -660,9 +660,9 @@ GARGANTUA:
 		TurnSpeed: 5
 		Speed: 55
 	Health:
-		HP: 12000
+		HP: 12000000
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 50

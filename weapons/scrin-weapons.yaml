@@ -17,7 +17,7 @@ LocustNail:
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 200
+		Damage: 200000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_tiny
@@ -34,7 +34,7 @@ LocustNailAA:
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 100
+		Damage: 100000
 		ValidTargets: Aircraft
 
 ChimeraZap:
@@ -55,7 +55,7 @@ ChimeraZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0c0, 0c45
 		Falloff: 100, 100
-		Damage: 40
+		Damage: 40000
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
@@ -81,7 +81,7 @@ MantisZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0c0, 0c45
 		Falloff: 100, 100
-		Damage: 20
+		Damage: 20000
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 
@@ -101,7 +101,7 @@ WarAntGun:
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 15
+		Damage: 15000
 	Warhead@2Eff: CreateEffect
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
@@ -131,7 +131,7 @@ SlasherDisc:
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 30
+		Damage: 30000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -162,7 +162,7 @@ AntiMatterCannonGun:
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 150
+		Damage: 150000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -196,7 +196,7 @@ MantisShockerDisc:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 225
+		Damage: 225000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -230,7 +230,7 @@ HexapodShockerDisc:
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -266,7 +266,7 @@ ShardLauncherGun:
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 100
+		Damage: 100000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
 		Explosions: protonexpl_small
@@ -301,7 +301,7 @@ TripodLaser:
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
-		Damage: 150
+		Damage: 150000
 	Warhead@2Eff: CreateEffect
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
@@ -321,7 +321,7 @@ CorruptSlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
-		Damage: 100
+		Damage: 100000
 
 CorruptorBlast:
 	Inherits@wh: ^TiberiumWH
@@ -344,14 +344,14 @@ CorruptorBlast:
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Vehicle: 50
 		DamageTypes: BulletDeath, TriggerCorruptorVisceroid
 		ValidStances: Neutral, Enemy
 	Warhead@2Dam: SpreadDamage
 		Spread: 0c724
-		Damage: -50
+		Damage: -50000
 		AffectsParent: false
 		ValidTargets: Scrin
 		ValidStances: Ally
@@ -378,7 +378,7 @@ StormRaiderCannon:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c362
-		Damage: 40
+		Damage: 40000
 		Versus:
 			Infantry: 50
 			Cyborg: 50
@@ -410,7 +410,7 @@ StormRaiderCannonAA:
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c724
-		Damage: 50
+		Damage: 50000
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
