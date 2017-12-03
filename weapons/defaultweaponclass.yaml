@@ -1,10 +1,12 @@
 Veins:
 	ReloadDelay: 16
 	Warhead@Damage: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 50000
 		DamageTypes: EnergyDeath
 	Warhead@Effect: CreateEffect
+		AffectsParent: True
 		Explosions: veins
 		ExplosionPalette: player
 
@@ -22,17 +24,22 @@ FireballLauncher:
 		Inaccuracy: 1c424
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 75000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: apolra50alpha
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
@@ -50,17 +57,22 @@ BlueFireballLauncher:
 		Inaccuracy: 1c424
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 100000
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
@@ -73,18 +85,22 @@ BlueFireballLauncher:
 		Inaccuracy: 0c362
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: TakeCoverEffect, BulletDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: piff
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_flash
 		ExplosionPalette: light2
 
@@ -97,18 +113,22 @@ BlueFireballLauncher:
 		Inaccuracy: 0c181
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: TakeCoverEffect, BulletDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: piff
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_flash
 		ExplosionPalette: light2
 
@@ -135,30 +155,36 @@ BlueFireballLauncher:
 		CruiseAltitude: 4c0
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		ValidTargets: Ground, Aircraft
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
 		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -183,25 +209,30 @@ BlueFireballLauncher:
 		CloseEnough: 200
 		CruiseAltitude: 4c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 0
 		ValidTargets: Ground
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -218,23 +249,28 @@ BlueFireballLauncher:
 		ContrailWidth: 0c21
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 		Falloff: 100, 50, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
@@ -251,23 +287,28 @@ BlueFireballLauncher:
 		ContrailWidth: 0c21
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
@@ -290,22 +331,27 @@ BlueFireballLauncher:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 200000
 		Falloff: 100, 66, 33, 0
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
@@ -315,10 +361,12 @@ BlueFireballLauncher:
 		Width: 0c71
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 0
 
 ^LaserWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Versus:
 			Infantry: 100
@@ -330,6 +378,7 @@ BlueFireballLauncher:
 
 ^BulletWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -342,6 +391,7 @@ BlueFireballLauncher:
 
 ^SuperBulletWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -354,6 +404,7 @@ BlueFireballLauncher:
 
 ^APWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -366,6 +417,7 @@ BlueFireballLauncher:
 
 ^HEWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		Versus:
@@ -378,6 +430,7 @@ BlueFireballLauncher:
 
 ^APHEWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		Versus:
@@ -390,6 +443,7 @@ BlueFireballLauncher:
 
 ^HEAPWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		Versus:
@@ -402,6 +456,7 @@ BlueFireballLauncher:
 
 ^SonicWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 0
 		Versus:
@@ -414,6 +469,7 @@ BlueFireballLauncher:
 
 ^PlasmaWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -426,6 +482,7 @@ BlueFireballLauncher:
 
 ^RailgunWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -438,6 +495,7 @@ BlueFireballLauncher:
 
 ^FireWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 0
 		Falloff: 100, 80
@@ -451,6 +509,7 @@ BlueFireballLauncher:
 
 ^TiberiumWH:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		Versus:
@@ -464,8 +523,10 @@ BlueFireballLauncher:
 ^ShellAPElite:
 	Inherits: ^ShellAP
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c543
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_clsn
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud

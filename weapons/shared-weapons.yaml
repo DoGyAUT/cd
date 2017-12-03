@@ -1,5 +1,6 @@
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c602
 		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -11,17 +12,21 @@ UnitExplode:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: verylarge_twlt, large_twlt, medium_twlt, small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 UnitExplodeEpic:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 300
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -33,15 +38,19 @@ UnitExplodeEpic:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: ionring
 		ExplosionPalette: effect50alpha
 		ImpactSounds: ion1.aud
@@ -49,6 +58,7 @@ UnitExplodeEpic:
 
 PyradonExplosion:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 500000
 		Versus:
@@ -59,17 +69,21 @@ PyradonExplosion:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: napalm1, napalm2
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c602
 		Damage: 120000
 		Versus:
@@ -80,23 +94,28 @@ UnitExplodeSmall:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
 UnitExplodeSmallCabal:
 	Inherits@1: UnitExplodeSmall
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
 
 UnitExplodeSmaller:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c602
 		Damage: 75000
 		Versus:
@@ -107,17 +126,21 @@ UnitExplodeSmaller:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_brnl, small_twlt, tiny_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
 UnitExplodeHeli:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c602
 		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -129,17 +152,21 @@ UnitExplodeHeli:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 UnitExplodePlane:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 100000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -151,17 +178,21 @@ UnitExplodePlane:
 			Building: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: airexplo01, airexplo02, airexplo03, airexplo04, airexplo05, airexplo06, airexplo07, airexplo08, airexplo09
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 UnitExplodeCrapJet:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c0
 		Damage: 350000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -172,17 +203,21 @@ UnitExplodeCrapJet:
 			Aircraft: 100
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: crapexplo
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew09.aud
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 UnitExplodeCyborg:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 100000
 		Versus:
@@ -194,43 +229,52 @@ UnitExplodeCyborg:
 		DamageTypes: SmallExplosionDeath
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
 TiberiumExplosion:
 	Warhead@1Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 
 TiberiumExplosionRef:
 	Warhead@1Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 
 TiberiumExplosionForgRef:
 	Warhead@1Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 
 TiberiumExplosionDrill:
 	Warhead@1Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 2,2
 
 TiberiumExplosionSilo:
 	Warhead@1Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 
 SmallTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 100000
 		Versus:
@@ -241,18 +285,22 @@ SmallTiberiumExplosion:
 			Building: 100
 		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tibbomb
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 LargeTiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 150000
 		Versus:
@@ -263,18 +311,22 @@ LargeTiberiumExplosion:
 			Building: 100
 		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tibbomb
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew13.aud
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 LargeVeinExplosion:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c848
 		Damage: 200000
 		Versus:
@@ -285,9 +337,11 @@ LargeVeinExplosion:
 			Building: 100
 		DamageTypes: ExplosionDeath
 	Warhead@2Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Veins
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tibbomb
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew09.aud
@@ -306,35 +360,43 @@ TibDebris:
 		TrailPalette: apolgren
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c424
 		Damage: 10000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl1
 		ExplosionPalette: apolgren
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
 TibDebrisFull:
 	Inherits: TibDebris
 	Warhead@2Res: CreateResource
+		AffectsParent: True
 		AddsResourceType: Tiberium
 		Size: 1,1
 
 TibDebrisexpsmall:
 	Inherits: TibDebris
 	Warhead@8Eff: CreateEffect
+		AffectsParent: True
 		Explosions: scexplo
 		ExplosionPalette: apolgren
 
 TibDebrisexpbig:
 	Inherits: TibDebris
 	Warhead@8Eff: CreateEffect
+		AffectsParent: True
 		Explosions: cabexplo
 		ExplosionPalette: apolgren
 
@@ -395,12 +457,15 @@ LargeDebrisFast:
 		TrailImage: exp33fr
 		TrailPalette: apolra25alpha
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra75alpha
 		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
@@ -433,12 +498,15 @@ LargeDebrisFastcabal:
 		TrailImage: blueexpl01
 		TrailPalette: effect50alpha
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: beamzap
 		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
@@ -483,22 +551,28 @@ Buildingexplosionsmall:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c128
 		Damage: 1000
 		ValidTargets: Ground
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: building, medium_tumu, medium_grey_explosion, large_tumu, large_bang, medium_bang
 		ExplosionPalette: apolra25alpha
 		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: ionring
 		ExplosionPalette: apolyell
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel1
 		Amount: 6
 		AimChance: 0
@@ -506,79 +580,101 @@ Buildingexplosionsmall:
 Buildingexplosionsmallcabaldef:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
 Buildingexplosionsmallcabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: cabalring
 		ExplosionPalette: effect
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: termitegunshrapnelblue1
 
 BuildingexplosionPowerPlant:
 	Inherits: Buildingexplosionsmall
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: glow
 		ExplosionPalette: apolra25alpha
 		ImpactSounds:
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: termitegunshrapnel1
 		Amount: 12
 
 BuildingexplosionPowerPlantCabal:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: pulsefx1
 		ExplosionPalette: effect
 		ImpactSounds:
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: cabalring
 		ExplosionPalette: effect
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: termitegunshrapnelblue1
 		Amount: 12
 
 Buildingexplosionmedium:
 	Inherits: Buildingexplosionsmall
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: coreexplo1, coreexplo2, large_bang, verylarge_twlt
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Amount: 5
 
 Buildingexplosionmediumcabal:
 	Inherits: Buildingexplosionmedium
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: blueexpl01, blueexpl02, blueexpl03, blueexpl04
 		ExplosionPalette: effect25alpha
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: cabalring
 		ExplosionPalette: effect
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		ExplosionPalette: apolcyan
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 
 Sparky:
@@ -636,16 +732,20 @@ Flyman:
 
 BuildingExplosions:
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: building, coreexplo1, coreexplo2, large_bang, verylarge_twlt, medium_tumu, large_tumu, medium_grey_explosion, small_grey_explosion
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew01.aud, expnew02.aud, expnew03.aud, expnew04.aud, expnew05.aud, expnew06.aud, expnew07.aud, expnew08.aud, expnew09.aud, expnew10.aud, expnew11.aud, expnew12.aud, expnew13.aud, expnew14.aud, expnew15.aud, expnew16.aud, expnew17.aud, expnew18.aud, expnew19.aud, expdirt1.aud
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 
 Demolish:
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		DamageTypes: DefaultDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_twlt
 		ExplosionPalette: effectalpha75
 		ImpactSounds: expnew09.aud
@@ -658,6 +758,7 @@ Heal:
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		DebugOverlayColor: 00FF00
 		ValidTargets: Infantry
 		ValidStances: Ally
@@ -672,11 +773,13 @@ Repair:
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50000
 		ValidTargets: Damaged
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -688,6 +791,7 @@ MechanicRepair:
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		DebugOverlayColor: 00FF00
 		Spread: 0c301
 		Damage: -50000
@@ -696,6 +800,7 @@ MechanicRepair:
 TiberiumHeal:
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: -10000
 
@@ -710,6 +815,7 @@ Vulcan:
 		bullet:
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 40000
 
@@ -727,10 +833,12 @@ WatchSniper:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		ValidTargets: Ground
 		Spread: 0c91
 		Damage: 250000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -744,6 +852,7 @@ CivilianPistol:
 		Image: bullet
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 20000
 
@@ -762,9 +871,11 @@ RPGTower:
 		Inaccuracy: 1c424
 		Palette: player
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 200000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
@@ -779,6 +890,7 @@ UmagonSniper:
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 150000
 
@@ -791,6 +903,7 @@ DogBite:
 		Speed: 5c311
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
 		Damage: 100000
 		DamageTypes: BulletDeath
@@ -812,10 +925,12 @@ FiendShard:
 		LaunchAngle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 35000
 		Versus:
 			Vehicle: 60
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -837,14 +952,17 @@ FiendShardGreen:
 		ContrailColor: 7EFF01
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 35000
 		Versus:
 			Vehicle: 60
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: piff
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -866,13 +984,16 @@ FiendShardBlue:
 		ContrailColor: 5980FF
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 45000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -894,12 +1015,15 @@ FiendShardRed:
 		ContrailColor: FF0101
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 55000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: piff
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -921,13 +1045,16 @@ FiendShardPurple:
 		ContrailColor: C864FF
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 55000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_bang, small_bang, medium_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -940,6 +1067,7 @@ SlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 125000
 
 SmallSlimeAttack:
@@ -950,6 +1078,7 @@ SmallSlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 75000
 
 Tentacle:
@@ -960,9 +1089,11 @@ Tentacle:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 160000
 		DamageTypes: TriggerSmallVisceroid
 	Warhead@emp1: GrantExternalCondition
+		AffectsParent: True
 		Range: 2c124
 		Duration: 50
 		Condition: empdisable

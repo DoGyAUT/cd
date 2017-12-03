@@ -12,10 +12,12 @@ DevilsTongueGun:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 55000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 4
 		AimChance: 0
@@ -34,10 +36,12 @@ DevilsTongueGunTiberium:
 		Inaccuracy: 1c424
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 75000
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Cloud1
 		Owner: Creeps
@@ -58,10 +62,12 @@ PyradonGun:
 		TrailPalette: effect50alpha
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 110000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 4
 		AimChance: 0
@@ -81,10 +87,12 @@ PyradonGunBlue:
 		TrailPalette: effect50alpha
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 150000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 4
 		AimChance: 0
@@ -104,10 +112,12 @@ GorranMissile:
 		ContrailColor: 00FF64
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 225000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -131,17 +141,21 @@ RavenMissile:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 600000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: napalm1, napalm2
 		ExplosionPalette: apolra2
 		InvalidTargets: Water
 	Warhead@3Sound: CreateEffect
+		AffectsParent: True
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
 		InvalidTargets: Water
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 6
 		AimChance: 0
@@ -156,13 +170,16 @@ BluehellRavenMissile:
 		ContrailWidth: 0c35
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 1000000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: napalm1, napalm2
 		ExplosionPalette: beamzap
 		InvalidTargets: Water
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 6
 		AimChance: 0
@@ -176,14 +193,17 @@ TiberiumRavenMissile:
 		ContrailWidth: 0c35
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c62
 		Damage: 800000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Cloud1, Cloud2, Cloud1, Cloud2
 		Owner: Creeps
@@ -201,14 +221,17 @@ GorranCannon:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 100000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 
 EliteCadreGun:
@@ -222,6 +245,7 @@ EliteCadreGun:
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 25000
 
@@ -233,10 +257,12 @@ RocketeerGun:
 	Range: 8c497
 	Report: javelin.aud
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 90000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud
@@ -247,6 +273,7 @@ RocketeerGunAA:
 	ValidTargets: Aircraft
 	Range: 8c497
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 90000
 		ValidTargets: Aircraft
@@ -258,6 +285,7 @@ NodHarvGun:
 	Burst: 5
 	Range: 7c73
 	Warhead@1Dam:
+		AffectsParent: True
 		Damage: 18000
 
 NodHarvTibGun:
@@ -268,6 +296,7 @@ NodHarvTibGun:
 	Projectile: BulletAS
 		Speed: 0c1007
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 18000
 
 SpecterGun:
@@ -289,16 +318,19 @@ SpecterGun:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c42
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 110000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 
 SpecterGunEMP:
@@ -314,14 +346,17 @@ SpecterGunEMP:
 		ContrailWidth: 0c42
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 130000
 	Warhead@emp1: GrantExternalCondition
+		AffectsParent: True
 		Range: 3c548
 		Duration: 100
 		Condition: empdisable
 		ValidTargets: Ground
 	Warhead@EMPEff: CreateEffect
+		AffectsParent: True
 		Explosions: pulse_explosion
 		ImpactSounds: plsecan2.aud
 
@@ -338,23 +373,29 @@ SpecterGunInferno:
 		ContrailWidth: 0c28
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 150000
 		DamageTypes: FireDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: beamzap
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud, firstrm1.aud
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 12
 		AimChance: 0
@@ -370,24 +411,31 @@ InfernoShrapnel:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
 		Damage: 50000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ImpactSounds: flamtnk1.aud
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: BFire1, BFire1, BFire1
 		Owner: Creeps
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 4
 		AimChance: 0
@@ -404,18 +452,23 @@ SpecterGunNapalm:
 		ContrailWidth: 0c42
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c1007
 		Damage: 150000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 12
 		AimChance: 0
@@ -433,10 +486,12 @@ RaiderGunVisual:
 		Speed: 0c964
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
 		Damage: 0
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -451,6 +506,7 @@ RaiderGunAttack:
 		Speed: 14c146
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
 		Damage: 15000
 		Versus:
@@ -474,6 +530,7 @@ RaiderGunLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 30000
 		Versus:
@@ -481,12 +538,15 @@ RaiderGunLaser:
 			Infantry: 100
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
@@ -508,6 +568,7 @@ ScorpionLaserFast:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 15000
 		Versus:
@@ -515,12 +576,15 @@ ScorpionLaserFast:
 			Infantry: 100
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
@@ -542,19 +606,24 @@ ScorpionLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c128
 		Damage: 300000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew06.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 	Warhead@emp: GrantExternalCondition
+		AffectsParent: True
 		Range: 0c128
 		Duration: 20
 		Condition: empdisable
@@ -578,16 +647,20 @@ AvatarLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c001
 		Damage: 375000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew06.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -621,9 +694,11 @@ EMPulseCannon:
 		ContrailColor: C8C8FF
 		ContrailWidth: 0c42
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: pulse_explosion
 		ImpactSounds: psl.aud
 	Warhead@emp: GrantExternalCondition
+		AffectsParent: True
 		Range: 5c673
 		Duration: 400
 		Condition: empdisable
@@ -648,21 +723,25 @@ MultiCluster:
 		Palette: ra
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 65000
 		ValidTargets: Ground
 		DamageTypes: TakeCoverEffect, ExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_explosion
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew09.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash2.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 
 RookieGun:
@@ -676,6 +755,7 @@ RookieGun:
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 20000
 
@@ -694,6 +774,7 @@ ConfessorGun:
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 35000
 
@@ -711,16 +792,20 @@ AcolyteGun:
 		ContrailColor: 00FF64
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 60000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tpiff
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_flash
 		ExplosionPalette: light
 
@@ -749,16 +834,20 @@ ShadowTrooperLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 130000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
@@ -781,16 +870,20 @@ ShadowTrooperEnchancedLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 200000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
@@ -808,14 +901,17 @@ ConfessorGrenade:
 		Palette: ra
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 40000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 
 VertigoBombGas:
@@ -835,24 +931,30 @@ VertigoBombGas:
 		ContrailWidth: 0c21
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c512
 		Damage: 1000000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiberiumbomb
 		ExplosionPalette: tiberiumbomb50
 		ImpactSounds: snukexpl.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumProtonShrapnel
 		Amount: 30
 		AimChance: 0
@@ -874,24 +976,30 @@ VertigoBombNapalm:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c512
 		Damage: 500000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: napalmnuke
 		ExplosionPalette: napalmnuke50
 		ImpactSounds: snukexpl.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: NapalmShrapnel
 		Amount: 30
 		AimChance: 0
@@ -899,8 +1007,10 @@ VertigoBombNapalm:
 VertigoBombBlueNapalm:
 	Inherits: VertigoBombNapalm
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Damage: 600000
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: BlueNapalmShrapnel
 		Amount: 35
 		AimChance: 0
@@ -922,39 +1032,48 @@ VertigoBombSeismic:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c124
 		Damage: 500000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	WarheadAS@1: FireShrapnel
+		AffectsParent: True
 		Weapon: SeismicShrapnel
 		Amount: 20
 		AimChance: 0
 		Delay: 50
 	WarheadAS@2: FireShrapnel
+		AffectsParent: True
 		Weapon: SeismicShrapnel2
 		Amount: 20
 		AimChance: 0
 		Delay: 100
 	WarheadAS@3: FireShrapnel
+		AffectsParent: True
 		Weapon: SeismicShrapnel3
 		Amount: 20
 		AimChance: 0
 		Delay: 150
 	WarheadAS@4: FireShrapnel
+		AffectsParent: True
 		Weapon: SeismicShrapnel4
 		Amount: 20
 		AimChance: 0
@@ -969,16 +1088,19 @@ SeismicShrapnel:
 	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c512
 		Damage: 120000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 
 SeismicShrapnel2:
@@ -1007,20 +1129,26 @@ NapalmShrapnel:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
 		Damage: 75000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_clsn
 		ImpactSounds: flamtnk1.aud
 		ExplosionPalette: apolra50alpha
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 3
 		Actors: Fire1, Fire1, Fire1
 		Owner: Creeps
@@ -1028,19 +1156,24 @@ NapalmShrapnel:
 BlueNapalmShrapnel:
 	Inherits: NapalmShrapnel
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
 		Damage: 100000
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 3
 		Actors: BFire1, BFire1, BFire1
 		Owner: Creeps
 
 NapalmShrapnelSmudge:
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 
 TiberiumProtonShrapnel:
 	Inherits@wh: ^TiberiumWH
@@ -1053,20 +1186,26 @@ TiberiumProtonShrapnel:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
 		Damage: 120000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg
 		ImpactSounds: scrin5b.aud
 		ExplosionPalette: effect50alpha
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 2
 		Actors: Cloud1, Cloud2
 		Owner: Creeps
@@ -1086,21 +1225,26 @@ ZodiacBomb:
 		LaunchAngle: 60
 		Palette: player
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 850000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
@@ -1116,21 +1260,26 @@ BansheeCannon:
 		Speed: 2c848
 		Inaccuracy: 1c62
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 75000
 		Versus:
 			Building: 35
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -1154,21 +1303,26 @@ BansheeSpecial:
 		Image: TORPEDO
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 300000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: artexplo01, artexplo02, artexplo03, artexplo04
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 
@@ -1191,22 +1345,27 @@ BansheeCannonAA:
 		Speed: 4c248
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 50000
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -1227,21 +1386,26 @@ MontaukProton:
 		ContrailColor: 00C800
 		ContrailWidth: 0c71
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 300000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -1258,6 +1422,7 @@ GattlingCannonAttack:
 		Speed: 14c146
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 20000
 		ValidTargets: Ground
@@ -1266,6 +1431,7 @@ GattlingCannonAttackAA:
 	Inherits: GattlingCannonAttack
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 20000
 		ValidTargets: Aircraft
@@ -1281,10 +1447,12 @@ GattlingCannonVisual:
 		Speed: 0c964
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 0
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -1302,10 +1470,12 @@ VenomCannon:
 		Speed: 0c724
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 20000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -1323,10 +1493,12 @@ HydraCannon:
 		Speed: 0c724
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 15000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -1343,15 +1515,18 @@ HavocCannon:
 		Speed: 0c724
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 50000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_brnl
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water
 	Warhead@4: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
 
@@ -1370,6 +1545,7 @@ RavenCannon:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 20000
 
@@ -1389,6 +1565,7 @@ RavenCannonAA:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 80000
 		ValidTargets: Aircraft
@@ -1412,14 +1589,17 @@ LaserTurretTibLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 200000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 LaserTurretLaser:
@@ -1439,13 +1619,16 @@ LaserTurretLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 200000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 PhantomLaser:
@@ -1465,13 +1648,16 @@ PhantomLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 300000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 LaserTurretLaserUpgraded:
@@ -1489,6 +1675,7 @@ LaserTurretLaserUpgraded:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFF200
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 300000
 
@@ -1508,18 +1695,23 @@ ObeliskLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c59
 		Damage: 800000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 ObeliskLaserTib:
@@ -1538,14 +1730,17 @@ ObeliskLaserTib:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 1200000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
 		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -1564,13 +1759,16 @@ ObeliskLaserUpgraded:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFF200
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c119
 		Damage: 1200000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -1591,17 +1789,21 @@ VenomLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		ValidTargets: Ground
 		Spread: 0c59
 		Damage: 30000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl2
 		ExplosionPalette: player50alpha
 		ImpactSounds: bursterhit01.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: lasershot1
 		ExplosionPalette: player50alpha
 		ValidTargets: Aircraft
@@ -1626,13 +1828,16 @@ HydraLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		ValidTargets: Ground
 		Spread: 0c59
 		Damage: 50000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tpiff
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 HavocLaserFire:
@@ -1655,13 +1860,16 @@ HavocLaserFire:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		ValidTargets: Ground
 		Spread: 0c59
 		Damage: 50000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tpiff
 		InvalidTargets: Water
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 
 FlamerTurretBlueFireballLauncher:
@@ -1680,20 +1888,26 @@ FlamerTurretBlueFireballLauncher:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 65000
 		Falloff: 100, 90, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 4
 		AimChance: 0
@@ -1714,20 +1928,26 @@ FlamerTurretFireballLauncher:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 45000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: apolra50alpha
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 4
 		AimChance: 0
@@ -1748,20 +1968,26 @@ FlamerTurretTiberium:
 		Inaccuracy: 1c424
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 55000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: beamzap
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Cloud1
 		Owner: Creeps
@@ -1773,15 +1999,17 @@ FanticBoom:
 	Projectile: BulletAS
 		Speed: 2c124
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c724
-		Damage: 500000
 		AffectsParent: True
+		Spread: 0c724
+		AffectsParent: True
+		Damage: 500000
 		DamageTypes: SmallExplosionDeath
 	Warhead@kill: GrantExternalCondition
 		AffectsParent: True
 		Range: 3c548
 		Condition: Boom
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: FanaticShrapnel
 		Amount: 4
 		AimChance: 0
@@ -1789,17 +2017,20 @@ FanticBoom:
 FanticBoomExplosion:
 	Inherits@wh: ^HEAPWH
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 500000
 		Falloff: 100, 75, 50, 25, 0
-		AffectsParent: True
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew09.aud
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -1814,21 +2045,26 @@ FanaticShrapnel:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 250000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.wav, explosion02.wav
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -1850,6 +2086,7 @@ BikeMissile:
 		Palette: effect
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 120000
 		Versus:
@@ -1860,6 +2097,7 @@ BikeMissileAA:
 	Inherits: BikeMissile
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 120000
 		ValidTargets: Aircraft
@@ -1877,6 +2115,7 @@ StealthTankMissile:
 		Inaccuracy: 0c724
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 120000
 		ValidTargets: Ground
@@ -1897,15 +2136,18 @@ StealthTankMissileEMP:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 120000
 		ValidTargets: Ground
 	Warhead@emp1: GrantExternalCondition
+		AffectsParent: True
 		Range: 0c724
 		Duration: 75
 		Condition: empdisable
 		ValidTargets: Ground
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_emp
 		ExplosionPalette: effect
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
@@ -1924,6 +2166,7 @@ StealthTankMissileAA:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 120000
 		ValidTargets: Aircraft
@@ -1946,6 +2189,7 @@ HailstormMissile:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c416
 		Damage: 60000
 		Versus:
@@ -1963,6 +2207,7 @@ HailstormMissileAA:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 150000
 		ValidTargets: Aircraft
@@ -1976,16 +2221,19 @@ HailstormMissileGas:
 		ContrailColor: 00FF64
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c416
 		Damage: 68000
 		Versus:
 			Building: 175
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Aircraft
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Cloud1
 		Owner: Creeps
@@ -1999,6 +2247,7 @@ HailstormMissileGasAA:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 200000
 		ValidTargets: Aircraft
@@ -2020,10 +2269,12 @@ HavocMissiles:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 150000
 		ValidTargets: Ground
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 		InvalidTargets: Water, Aircraft
 
@@ -2036,21 +2287,26 @@ HavocMissilesTibGas:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 240000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@2Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 		InvalidTargets: Water, Aircraft
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 		InvalidTargets: Water, Aircraft
 
@@ -2073,25 +2329,30 @@ HydraMissiles:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 100000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_bang, medium_bang, large_bang
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 		InvalidTargets: Water, Aircraft
 
@@ -2104,12 +2365,14 @@ HydraGasMissiles:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 120000
 		Versus:
 			Vehicle: 100
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -2138,10 +2401,12 @@ SAMSiteMissile:
 		CloseEnough: 2c0
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 150000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -2172,10 +2437,12 @@ SAMSiteMissileTiberium:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
 		Damage: 175000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -2192,10 +2459,12 @@ BlackHandFlamer:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c543
 		Damage: 175000
 		Falloff: 100, 80
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 3
 		AimChance: 0
@@ -2213,15 +2482,18 @@ BlackHandFlamerBlue:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 200000
 		Versus:
 			Vehicle: 75
 		Falloff: 100, 90, 80
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnelBlue
 		Amount: 3
 		AimChance: 0
@@ -2236,14 +2508,17 @@ TermiteGun:
 		Speed: 1c424
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
 		Damage: 300000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fireexpl
 		ExplosionPalette: effect
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	WarheadAS: FireShrapnel
+		AffectsParent: True
 		Weapon: TermiteGunShrapnel
 		Amount: 4
 		AimChance: 0
@@ -2260,24 +2535,30 @@ TermiteGunShrapnel:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 25000
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Fire3small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: infexpl
 		ExplosionPalette: apolra25alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -2293,24 +2574,30 @@ TermiteGunShrapnel1:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c14
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 25000
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Fire1small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: infexpl
 		ExplosionPalette: apolra25alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -2326,24 +2613,30 @@ termitegunshrapnelblue:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 25000
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: BFire3small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: infexpl
 		ExplosionPalette: beamzap
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -2359,24 +2652,30 @@ termitegunshrapnelblue1:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
 		Damage: 25000
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: BFire1small
 		Owner: Creeps
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: infexpl
 		ExplosionPalette: beamzap
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light2
 
@@ -2398,28 +2697,35 @@ ClusterMissile:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 3c512
 		Damage: 5000000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: bignuke
 		ExplosionPalette: apolra2
 		ImpactSounds: snukexpl.aud
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light2
 	ValidTargets: Ground, Air
 	Warhead@ImpactDamage0: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
 		Damage: 750000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ClusterSmudges0: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 		Size: 2
 	Warhead@ClusterDamage1: SpreadDamage
+		AffectsParent: True
 		Spread: 2c848
 		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2427,10 +2733,12 @@ ClusterMissile:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ClusterSmudges1: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 		Size: 3
 		Delay: 20
 	Warhead@ClusterDamage2: SpreadDamage
+		AffectsParent: True
 		Spread: 4c248
 		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2438,10 +2746,12 @@ ClusterMissile:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ClusterSmudges2: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeScorch
 		Size: 5
 		Delay: 30
 	Warhead@ClusterDamage3: SpreadDamage
+		AffectsParent: True
 		Spread: 5c673
 		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2449,10 +2759,12 @@ ClusterMissile:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ClusterSmudges3: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 		Size: 7
 		Delay: 40
 	Warhead@ClusterDamage4: SpreadDamage
+		AffectsParent: True
 		Spread: 7c73
 		Damage: 300000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2460,55 +2772,66 @@ ClusterMissile:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@ClusterSmudges4: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 		Size: 10
 		Delay: 50
 	Warhead@SoundEffect0: CreateEffect
+		AffectsParent: True
 		Explosions: bigbomb
 		ExplosionPalette: effect
 		ImpactSounds: snukeexpl.aud
 	Warhead@6Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeShrapnel1
 		Amount: 90
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@7Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeShrapnel2
 		Amount: 60
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@8Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeShrapnel3
 		Amount: 60
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@9Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeShrapnel4
 		Amount: 30
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@10Eff: CreateEffect
+		AffectsParent: True
 		Explosions: firedustwave
 		ExplosionPalette: effectra2
 	Warhead@11Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeRadiation
 		Amount: 15
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 5
 	Warhead@12Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeRadiation
 		Amount: 15
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 10
 	Warhead@13Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeRadiation
 		Amount: 15
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 15
 	Warhead@14Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: NukeRadiation
 		Amount: 15
 		AllowDirectHit: false
@@ -2527,6 +2850,7 @@ NukeShrapnel1:
 		TrailPalette: apolra2
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 341
 		Damage: 400000
 		DamageTypes: TriggerProne, FireDeath
@@ -2565,9 +2889,11 @@ NukeRadiation:
 		Image: dot
 		Shadow: false
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibgloworange
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 2
 		Actors: Cloud3, Cloud4
 		Owner: Creeps
@@ -2577,63 +2903,75 @@ TiberiumBombIndustry:
 	Projectile: BulletAS
 		Speed: 9000
 	Warhead@1Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumBombElevator
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@2Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumBombElevator
 		Amount: 1
 		Delay: 90
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@3Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumBombElevatorSpecial
 		Amount: 1
 		Delay: 180
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@4Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 280
 		ValidTargets: Ground, Air
 	Warhead@5Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 290
 		ValidTargets: Ground, Air
 	Warhead@6Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 300
 		ValidTargets: Ground, Air
 	Warhead@7Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 310
 		ValidTargets: Ground, Air
 	Warhead@8Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 320
 		ValidTargets: Ground, Air
 	Warhead@9Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 330
 		ValidTargets: Ground, Air
 	Warhead@10Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 340
 		ValidTargets: Ground, Air
 	Warhead@11Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 350
 		ValidTargets: Ground, Air
 	Warhead@12Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TibDebrisSpecial
 		Amount: 10
 		Delay: 360
@@ -2645,77 +2983,96 @@ TiberiumBombElevator:
 	Projectile: AthenaProjectile
 		Altitude: 75000
 	Warhead@1Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHigh
 		ValidTargets: Ground, Air
 	Warhead@2Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 5
 		ValidTargets: Ground, Air
 	Warhead@3Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 10
 		ValidTargets: Ground, Air
 	Warhead@4Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 15
 		ValidTargets: Ground, Air
 	Warhead@5Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 20
 		ValidTargets: Ground, Air
 	Warhead@6Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 25
 		ValidTargets: Ground, Air
 	Warhead@7Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 30
 		ValidTargets: Ground, Air
 	Warhead@8Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 35
 		ValidTargets: Ground, Air
 	Warhead@9Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 40
 		ValidTargets: Ground, Air
 	Warhead@10Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 45
 		ValidTargets: Ground, Air
 	Warhead@11Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 50
 		ValidTargets: Ground, Air
 	Warhead@12Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 55
 		ValidTargets: Ground, Air
 	Warhead@13Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 60
 		ValidTargets: Ground, Air
 	Warhead@14Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 65
 		ValidTargets: Ground, Air
 	Warhead@15Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 70
 		ValidTargets: Ground, Air
 	Warhead@16Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 75
 		ValidTargets: Ground, Air
 	Warhead@17Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 80
 		ValidTargets: Ground, Air
 	Warhead@18Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 85
 		ValidTargets: Ground, Air
 	Warhead@19Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighDummy
 		Delay: 90
 		ValidTargets: Ground, Air
@@ -2723,6 +3080,7 @@ TiberiumBombElevator:
 TiberiumBombElevatorSpecial:
 	Inherits: TiberiumBombElevator
 	Warhead@1Sharpnel: FireShrapnel
+		AffectsParent: True
 		Weapon: TiberiumLaserHighSpecial
 		ValidTargets: Ground, Air
 
@@ -2741,12 +3099,14 @@ TiberiumLaserHigh:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 29FF9B
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@2Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2754,6 +3114,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@3Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2761,6 +3122,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@4Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2768,6 +3130,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@5Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2775,6 +3138,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@6Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2782,6 +3146,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@7Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2789,6 +3154,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@8Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2796,6 +3162,7 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@9Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 5c73
 		Damage: 25000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -2803,133 +3170,164 @@ TiberiumLaserHigh:
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@1Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 10
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 20
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 30
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 40
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 50
 	Warhead@7Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 60
 	Warhead@8Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 70
 	Warhead@9Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 80
 	Warhead@10Eff: CreateEffect
+		AffectsParent: True
 		Explosions: greenring
 		ExplosionPalette: effectra2
 		Delay: 90
 	Warhead@11Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 	Warhead@12Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 10
 	Warhead@13Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 20
 	Warhead@14Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 30
 	Warhead@15Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 40
 	Warhead@16Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 50
 	Warhead@17Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 60
 	Warhead@18Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 70
 	Warhead@19Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 80
 	Warhead@20Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 		Delay: 90
 	WarheadAS@10: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 	WarheadAS@11: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 10
 	WarheadAS@12: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 20
 	WarheadAS@13: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 30
 	WarheadAS@14: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 40
 	WarheadAS@15: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 50
 	WarheadAS@16: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 60
 	WarheadAS@17: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 70
 	WarheadAS@18: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 80
 	WarheadAS@19: FireShrapnel
+		AffectsParent: True
 		Weapon: IndustryNodLaserHighSparks
 		Amount: 45
 		AimChance: 0
 		Delay: 90
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: DummyShakerVision
 		Owner: Creeps
@@ -2949,6 +3347,7 @@ TiberiumLaserHighDummy:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 29FF9B
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: DummyShakerVision
 		Owner: Creeps
@@ -2956,6 +3355,7 @@ TiberiumLaserHighDummy:
 TiberiumLaserHighSpecial:
 	Inherits: TiberiumLaserHigh
 	Warhead@12Eff: CreateEffect
+		AffectsParent: True
 		Explosions: attachanim
 		ExplosionPalette: tiberiumbomb
 		Delay: 90
@@ -2970,21 +3370,26 @@ TibDebrisSpecial:
 		Speed: 0c301, 0c401, 0c501, 0c601
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c524
 		Damage: 1500000
 		Falloff: 100, 80
 	Warhead@10Eff: CreateEffect
+		AffectsParent: True
 		Explosions: explolb
 		ExplosionPalette: effectra2
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: Cloud1, Cloud2
 		Owner: Creeps
 	WarheadAS@2: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: DummyShakerVision
 		Owner: Creeps
 	Warhead@11Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglow
 
@@ -2993,29 +3398,34 @@ TechnologyLaserStarter:
 	Projectile: BulletAS
 		Speed: 9000
 	Warhead@op: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserElevator
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 	Warhead@op1: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserElevator
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 60
 	Warhead@op2: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserElevator
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 120
 	Warhead@op3: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserElevator
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Ground, Air
 		Delay: 180
 	Warhead@op4: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserElevator
 		Amount: 1
 		AllowDirectHit: false
@@ -3029,6 +3439,7 @@ TechnologyLaserElevator:
 	Projectile: AthenaProjectile
 		Altitude: 175000
 	Warhead@op: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 0
 		Amount: 1
@@ -3036,6 +3447,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 70
 	Warhead@op1: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3043,6 +3455,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 75
 	Warhead@op2: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3050,6 +3463,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 80
 	Warhead@op3: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3057,6 +3471,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 85
 	Warhead@op4: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3064,6 +3479,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 90
 	Warhead@op5: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3071,6 +3487,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 95
 	Warhead@op6: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3078,6 +3495,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 100
 	Warhead@op7: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3085,6 +3503,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 105
 	Warhead@op8: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3092,6 +3511,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 110
 	Warhead@op9: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3099,6 +3519,7 @@ TechnologyLaserElevator:
 		ValidTargets: Ground, Air
 		Delay: 115
 	Warhead@op10: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHigh
 		AimChance: 100
 		Amount: 1
@@ -3122,42 +3543,52 @@ TechnologyLaserHigh:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: FFFFFF
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c000
 		Damage: 250000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	Warhead@2Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 3c73
 		Damage: 50000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: TakeCoverEffect, FireDeath
 	WarheadAS@2: SpawnActor
+		AffectsParent: True
 		Range: 1
 		Actors: DummyShakerVision
 		Owner: Creeps
 	Warhead@3Eff: CreateEffect
+		AffectsParent: True
 		Explosions: ionringmini
 		ExplosionPalette: apolred
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: ionring
 		ExplosionPalette: apolred
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: tibglowred
 		ImpactSounds: obelray1.aud
 	Warhead@6Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: LargeCrater
 	WarheadAS@7: FireShrapnel
+		AffectsParent: True
 		Weapon: NapalmShrapnelTechnologyNodSuperWeapon
 		Amount: 1
 		AimChance: 0
 	WarheadAS@8: FireShrapnel
+		AffectsParent: True
 		Weapon: TechnologyLaserHighSparks
 		Amount: 45
 		AimChance: 0
 	Warhead@9Eff: CreateEffect
+		AffectsParent: True
 		Explosions: scexplo
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
@@ -3170,6 +3601,7 @@ NapalmShrapnelTechnologyNodSuperWeapon:
 		-Image:
 		-TrailImage:
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Delay: 5
 
 TechnologyLaserHighSparks:
