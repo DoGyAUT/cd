@@ -321,6 +321,7 @@ KABSW1:
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@SupportPowerAnnihilator: ^SupportPowerAnnihilator
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: playercab
@@ -354,10 +355,6 @@ KABSW1:
 	AttackTurreted:
 	WithSpriteTurret:
 		Recoils: no
-	Armament:
-		Weapon: OrbitalProjectile
-		LocalOffset: 1000,0,1500
-		Name: cabalsuperweapon
 	Power:
 		Amount: -400
 	SelectionDecorations:
@@ -365,26 +362,4 @@ KABSW1:
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	SupportPowerChargeBar:
-	FireArmamentPower:
-		ArmamentName: cabalsuperweapon
-		Cursor: emp
-		Icon: cabsup
-		Description: Cabal's Annihilator
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LongDesc: Fires a barrage of plamsagrenades on the targetted area.
-		ChargeTime: 480
-		OrderName: cabalsup
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPoster:
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 375
+

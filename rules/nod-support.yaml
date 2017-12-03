@@ -466,6 +466,7 @@ NAPULS:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerEMPCannon: ^SupportPowerEMPCannon
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -492,13 +493,6 @@ NAPULS:
 	AttackTurreted:
 	AttackSounds:
 		Sounds: hunter2.aud
-	Armament:
-		Name: superweapon
-		Weapon: EMPulseCannon
-		LocalOffset: 212,0,1768
-		LocalYaw: 0,100
-		MuzzleSequence: muzzle
-		MuzzlePalette: effect50alpha
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
@@ -508,18 +502,6 @@ NAPULS:
 	ProvidesPrerequisite@buildingname:
 	RejectsOrders:
 		Except: Stop, Sell
-	FireArmamentPower@NodempPower:
-		OrderName: NodempPowerInfoOrder
-		ArmamentName: superweapon
-		Cursor: emp
-		Icon: emp
-		ChargeTime: 240
-		Description: E.M. Pulse
-		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
-		EndChargeSpeechNotification: EmPulseCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		AllowMultiple: false
-		PauseOnCondition: power-outage
 
 NAMISL:
 	Inherits: ^Building
@@ -527,6 +509,7 @@ NAMISL:
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerNuke: ^SupportPowerNuke
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -557,40 +540,13 @@ NAMISL:
 	RequiresPower:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
-	NukePower:
-		Icon: nodpropasup
-		Cursor: nuke
-		OrderName: NukePowerInfoOrder
-		ChargeTime: 480
-		Description: Cluster Missile
-		LongDesc: Launches a conventional warhead\nat a target location.
-		MissilePalette: player
-		IsPlayerPalette: True
-		EndChargeSpeechNotification: ClusterMissileReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSound: icbm1.aud
-		MissileWeapon: ClusterMissile
-		SpawnOffset: 0,604,0
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPoster:
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 125
-		PauseOnCondition: power-outage
 
 NATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@SupportPowerTiberianLaser: ^SupportPowerTiberianLaser
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -619,36 +575,13 @@ NATECH:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	HitShape:
-	DetonateWeaponPower@industrynodlaser:
-		Icon: nodindustrysup
-		Description: Tiberian Laser Cannon Alpha Strike
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		LongDesc: Fires a strong tiberian laser on the targetted area.
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		ChargeTime: 480
-		ActivationSequence: idle
-		Weapon: TiberiumBombIndustry
-		OrderName: nodindusup
-		Cursor: ioncannon
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
 
 NATMPL:
 	Inherits: ^Building
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@SupportPowerOrbitalLaser: ^SupportPowerOrbitalLaser
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 5000
@@ -677,36 +610,12 @@ NATMPL:
 	HitShape:
 	RequiresPower:
 	SupportPowerChargeBar:
-	DetonateWeaponPower@technologynodlaser:
-		Icon: nodtechnosup
-		Description: Kane's Light
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSound: obelcharge01.aud
-		LongDesc: Fires a barrage of orbital obelisk laser strikes on the targetted area.
-		ChargeTime: 480
-		ActivationSequence: idle
-		Weapon: TechnologyLaserStarter
-		OrderName: nodtechsup
-		Cursor: ioncannon
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
 
 NASTLH:
 	Inherits: ^Building
 	Inherits@2: ^2x5hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerCloaking: ^SupportPowerCloaking
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -745,22 +654,5 @@ NASTLH:
 		AffectsParent: True
 	Selectable:
 		Bounds: 106, 60, 8, -15
-	GrantExternalConditionPower@emergencyrepairNod:
-		OrderName: CloakingFieldPower
+	GrantExternalConditionPower@SupportPowerCloaking:
 		Prerequisites: ~technology
-		Icon: cloakingfield
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		Description: Cloaking Field
-		LongDesc: Cloaks all vehicles in the radius
-		Condition: cloak
-		OnFireSound: cloak5.aud
-		Sequence: idle
-		ChargeTime: 180
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 5
-		Duration: 0
-		PauseOnCondition: power-outage

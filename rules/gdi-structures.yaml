@@ -380,100 +380,19 @@ GAARMORY:
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@fortification:
-		OrderName: GrantFortificationPowerInfoOrder
-		Icon: fortification
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		Description: Fortificate
-		LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction which does not stack.
-		Condition: fortification
-		OnFireSound: fortificate.wav
-		Sequence: idle
-		ChargeTime: 240
-		Prerequisites: upgrade.gdf
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 4
-		PauseOnCondition: power-outage
 	ProvidesAIPrerequisite@gafortAI:
 		Prerequisite: gafortAI
-	AirstrikePower@artillery:
-		OrderName: ArtilleryStrikePowerInfoOrder
-		Prerequisites: garadr, upgrade.gdf
-		Icon: artystrike
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Artillery Strike
-		LongDesc: Call an artillery strike to the designated position.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		UnitType: artillery_beacon
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		DisplayBeacon: True
-		BeaconPoster: artystrike
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	AirstrikePower@orcabomber:
-		OrderName: OrcaBomberAirstrikePowerInfoOrder
-		Prerequisites: garadr, upgrade.st
-		Icon: orcabomber
-		ChargeTime: 360
-		QuantizedFacings: 2
-		Description: Orca Bombing run
-		LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
-		SelectTargetSound: orca_s5.aud
-		EndChargeSound: orca_s5.aud
-		LaunchSound: orca_ab2.aud
-		IncomingSound: g_00-cd004.aud
-		UnitType: orca_b
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		DisplayBeacon: True
-		BeaconPoster: orcabomber
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	AirstrikePower@oxbomber:
-		OrderName: OXBomberAirstrikePowerInfoOrder
-		Prerequisites: garadr, upgrade.zc
-		Icon: orcaoxbomber
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: OX-Sonic Bombing run
-		LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
-		SelectTargetSound: orca_s5.aud
-		EndChargeSound: orca_s5.aud
-		LaunchSound: orca_ab2.aud
-		IncomingSound: g_00-cd004.aud
-		UnitType: oxbomber
-		SquadSize: 1
-		SquadOffset: -3072,3072,0
-		DisplayBeacon: True
-		BeaconPoster: orcaoxbomber
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 
 GAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerFortification: ^SupportPowerFortification
+	Inherits@SupportPowerArtillery: ^SupportPowerArtillery
+	Inherits@SupportPowerOrcaBomber: ^SupportPowerOrcaBomber
+	Inherits@SupportPowerOXBomber: ^SupportPowerOXBomber
+	Inherits@SupportPowerOrcaScout: ^SupportPowerOrcaScout
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -527,35 +446,21 @@ GAHPAD:
 	ProvidesPrerequisite@buildingname:
 	ProvidesAIPrerequisite@OrcatransAI:
 		Prerequisite: OrcatransAI
-	AirstrikePower@orcascout:
-		OrderName: OrcaScoutRun
-		Prerequisites: gahpad
-		Icon: orcascout
-		ChargeTime: 180
-		Description: Orca Scout Run
-		LongDesc: Reveals an area of the map and cloaked enemy units.
-		SelectTargetSound: orca_m12.aud
-		EndChargeSound: orca_s10.aud
-		LaunchSound: orca_a10.aud
-#		CameraActor: camera.orcascout
-#		CameraRemoveDelay: 300
-		UnitType: orca_g
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		QuantizedFacings: 2
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: orcascout
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
+	GrantExternalConditionPower@SupportPowerFortification:
+		Prerequisites: upgrade.gdf
+	AirstrikePower@SupportPowerArtillery:
+		Prerequisites: garadr, upgrade.gdf
+	AirstrikePower@SupportPowerOrcaBomber:
+		Prerequisites: garadr, upgrade.st
+	AirstrikePower@SupportPowerOXBomber:
+		Prerequisites: garadr, upgrade.zc
 
 GADEPT:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerEmergencyRepair: ^SupportPowerEmergencyRepair
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -603,29 +508,13 @@ GADEPT:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@emergencyrepairGDI:
-		OrderName: EmergancyRepairsPowerInfoOrder
-		Icon: emergencyrepairs
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		Description: Emergency Repairs
-		LongDesc: Repairs vehicles and buildings in a specific radius.
-		Condition: emergencyrepairs
-		OnFireSound: fixit1.aud
-		Sequence: idle
-		ChargeTime: 180
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 8
-		Duration: 300
-		PauseOnCondition: power-outage
 
 GATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x3hitshape
 	Inherits@3: ^ExploBuildingPower
+	Inherits@SupportPowerZoneCommander: ^SupportPowerZoneCommander
+	Inherits@SupportPowerPoseidon: ^SupportPowerPoseidon
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 110
@@ -651,53 +540,17 @@ GATECH:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
-	ParatroopersPower@zonecommander:
-		UnitType: dshp.support
-		DropItems: ztrooper, ztrooper, ztrooper, zraider, zraider, zraider
+	ParatroopersPower@SupportPowerZoneCommander:
 		Prerequisites: gaarmory, ~upgrade.zc
-		Icon: zonecommando
-		OrderName: ZoneInfDropOrder
-		SquadSize: 1
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: Zone Team Call
-		LongDesc: Drops a squad of 3 Troopers and 3 Raiders.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: zonecommando
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	ParatroopersPower@poseidon:
-		UnitType: dshp.support
-		DropItems: gthtnk, gthtnk, gthtnk
+	ParatroopersPower@SupportPowerPoseidon:
 		Prerequisites: gaarmory, ~upgrade.gdf
-		Icon: poseidon
-		OrderName: PoseidonDropOrder
-		SquadSize: 1
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: Grizzly Tank Drop
-		LongDesc: Drops 3 Grizzly Tanks on the battlefield.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: poseidon
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 
 GADROP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@SupportPowerHellfire: ^SupportPowerHellfire
+	Inherits@SupportPowerTitan: ^SupportPowerTitan
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 111
@@ -746,46 +599,7 @@ GADROP:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	AirstrikePower@HellfireMissilesStrikePower:
+	AirstrikePower@SupportPowerHellfire:
 		Prerequisites: garadr, upgrade.st
-		Icon: kodiak
-		OrderName: HellfireMissilesStrikePowerInfoOrder
-		ChargeTime: 360
-		QuantizedFacings: 2
-		Description: Hellfire Missiles
-		LongDesc: Attacks an area with heavy missile strike.\nVery effective vs buildings and light armored targets.
-		SelectTargetSound: predator_a8.aud
-		EndChargeSound: predator_m2.aud
-		LaunchSound: predator_a10.aud
-		IncomingSound: g_00-cd004.aud
-		UnitType: hellfire_beacon
-		SquadSize: 1
-		DisplayBeacon: True
-		BeaconPoster: kodiak
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	ParatroopersPower@titans:
+	ParatroopersPower@SupportPowerTitan:
 		Prerequisites: gatech
-		UnitType: dshp.support
-		DropItems: mmch, mmch, mmch
-		Icon: titan
-		OrderName: TitanDropOrder
-		SquadSize: 1
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Titan Mech Drop
-		LongDesc: Drops 3 Titans on the battlefield.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: titan
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage

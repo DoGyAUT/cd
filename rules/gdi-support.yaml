@@ -629,6 +629,7 @@ GAPLUG:
 	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@SuperWeapon: ^SuperWeapon
+	Inherits@SupportPowerIonCannon: ^SupportPowerIonCannon
 	Valued:
 		Cost: 3000
 	Buildable:
@@ -658,27 +659,8 @@ GAPLUG:
 		Sequence: idle-strip
 	Health:
 		HP: 8000000
-	DetonateWeaponPower@ioncannon:
+	DetonateWeaponPower@SupportPowerIonCannon:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
-		Icon: gdigdfsup
-		Description: Ion Cannon Alpha Strike
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		LongDesc: Fires many ion cannons on the targetted area.
-		ChargeTime: 480
-		ActivationSequence: idle
-		Weapon: IonCannon
-		OrderName: IonCannonGDF
-		Cursor: ioncannon
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 100
-		PauseOnCondition: power-outage
 	Exit@1:
 	ExitsDebugOverlay:
 	SupportPowerChargeBar:
@@ -719,3 +701,4 @@ GAPLUG:
 	HitShape:
 	RevealsShroud@revealhimself:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
+
