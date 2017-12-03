@@ -447,6 +447,7 @@ FAHPAD:
 FATRADE:
 	Inherits: ^Building
 	Inherits@2: ^5x5hitshape
+	Inherits@SupportPowerCrapJetBomber: ^SupportPowerCrapJetBomber
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 409
@@ -468,26 +469,6 @@ FATRADE:
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
-	AirstrikePower@crapjetbomber:
-		OrderName: CrapjetAirstrikePowerInfoOrder
-		Prerequisites: faradr
-		Icon: crapjet
-		ChargeTime: 300
-		QuantizedFacings: 8
-		Description: Crapjet Carpet Bomb
-		LongDesc: Deploy a bombing run of 5 Crapjets.\nVery effective vs buildings and light armored targets.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		UnitType: fbomber
-		SquadSize: 5
-		SquadOffset: -3072,3072,0
-		DisplayBeacon: True
-		BeaconPoster: crapjet
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 	HitShape:
+	AirstrikePower@SupportPowerCrapJetBomber:
+		Prerequisites: faradr

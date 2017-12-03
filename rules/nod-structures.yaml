@@ -289,6 +289,7 @@ NAWEAP:
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerEmergencyRepair: ^SupportPowerEmergencyRepair
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -338,31 +339,18 @@ NAWEAP:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@emergencyrepairNod:
-		OrderName: EmergancyRepairs2PowerInfoOrder
+	GrantExternalConditionPower@SupportPowerEmergencyRepair:
 		Prerequisites: ~industry
 		Icon: emergencyrepairs2
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		Description: Emergency Repairs
-		LongDesc: Repairs vehicles and buildings in a specific radius.
-		Condition: emergencyrepairs
-		OnFireSound: fixit1.aud
-		Sequence: idle
-		ChargeTime: 180
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 8
-		Duration: 300
-		PauseOnCondition: power-outage
 
 NARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerFrenzy: ^SupportPowerFrenzy
+	Inherits@SupportPowerScan: ^SupportPowerScan
+	Inherits@SupportPowerSubAmbush: ^SupportPowerSubAmbush
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
@@ -402,63 +390,20 @@ NARADR:
 	DetectCloaked:
 		Range: 21c218
 		CloakTypes: Underground
-	GrantExternalConditionPower@frenzy:
-		Description: Frenzy
-		LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
-		OrderName: FrenzyPowerInfoOrder
-		ActivationSequence:
-		Icon: fenzy
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSound: nod1_s8.aud
-		Condition: fenzy
-		OnFireSound: nod1_s5.aud
-		Sequence: idle
-		ChargeTime: 210
+	GrantExternalConditionPower@SupportPowerFrenzy:
 		Prerequisites: ~propaganda
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 8
-		Duration: 450
-		PauseOnCondition: power-outage
-	SpawnActorPower@nodscan:
-		OrderName: RadarScanPower
-		Actor: camera.nodscan
-		Prerequisites: naradr
-		Icon: nodscanicon
-		ChargeTime: 180
-		Description: Radar Scan
-		LongDesc: Reveals an area of the map and cloaked enemy units.
-		LifeTime: 350
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Sequence: idle
-		PauseOnCondition: power-outage
-	SpawnActorPower@subambush:
-		OrderName: SubAmbushPowerInfoOrder
+	SpawnActorPower@SupportPowerSubAmbush:
 		Prerequisites: ~industry
-		Description: Subterranean APC Ambush
-		LongDesc: Spawns a fully loaded Subterranean APC.
-		Actor: sapc1
-		Icon: subapcambush
-		LifeTime: -1
-		DeploySound: drillup.aud
-		EffectImage: dig
-		EffectPalette: player
-		EffectSequence: idle
-		ChargeTime: 300
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		PauseOnCondition: power-outage
 
 NAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerHavoc: ^SupportPowerHavoc
+	Inherits@SupportPowerPropagandaInfantry: ^SupportPowerPropagandaInfantry
+	Inherits@SupportPowerFanatic: ^SupportPowerFanatic
+	Inherits@SupportPowerShadowTrooper: ^SupportPowerShadowTrooper
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -512,96 +457,23 @@ NAHPAD:
 	Selectable:
 		Bounds: 78, 54, 0, -8
 	ProvidesPrerequisite@buildingname:
-	ProduceActorPower@Havoc:
-		OrderName: ProduceHavocPowerInfoOrder
-		Actors: havoc
-		Type: Air.Nod
-		Icon: havoc
-		Description: Havoc Ace call
-		LongDesc: Calls in a heavy ace class Havoc attack chopper.
-		SelectTargetSpeechNotification: SelectTarget
-		EndChargeSpeechNotification: Reinforce
-		LowPowerSpeechNotification: LowPower
-		ChargeTime: 330
-		QuantizedFacings: 2
-		DisplayBeacon: false
-		DisplayRadarPing: false
-		BeaconPoster: havoc
+	ProduceActorPower@SupportPowerHavoc:
 		Prerequisites: industry
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	ParatroopersPower@propcarry:
-		UnitType: nodcarry.support
+	ParatroopersPower@SupportPowerPropagandaInfantry:
 		Prerequisites: ~propaganda
-		DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
-		Icon: nodcarry
-		OrderName: PropagandaInfantryDropOrder
-		SquadSize: 3
-		SquadOffset: -3072,3072,0
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Propaganda Infantry Drop
-		LongDesc: Drops an infantry battalion on the field.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: nodcarry
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	ParatroopersPower@fanatic:
-		UnitType: valkyrie.support
+	ParatroopersPower@SupportPowerFanatic:
 		Prerequisites: ~propaganda, naradr
-		DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
-		Icon: fanatic
-		OrderName: FanaticDropOrder
-		SquadSize: 1
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: Fanatic Drop
-		LongDesc: Drops a group of fanatics on the field.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: fanatic
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	ParatroopersPower@techcarry:
-		UnitType: valkyrie.support
+	ParatroopersPower@SupportPowerShadowTrooper:
 		Prerequisites: ~technology
-		DropItems: shadow,shadow,shadow,shadow,shadow
-		Icon: valkyrie
-		OrderName: ShadowTrooperInfantryDropOrder
-		SquadSize: 1
-		ChargeTime: 300
-		QuantizedFacings: 2
-		Description: Shadow Trooper Drop
-		LongDesc: Drops a special infantry taskforce on the field.
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		LaunchSpeechNotification: Reinforce
-		DisplayBeacon: true
-		DisplayRadarPing: True
-		BeaconPoster: valkyrie
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 
 NAPYRA:
 	Inherits: ^Building
 	Inherits@2: ^4x4hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerVertigoNapalm: ^SupportPowerVertigoNapalm
+	Inherits@SupportPowerVertigoTiberium: ^SupportPowerVertigoTiberium
+	Inherits@SupportPowerVertigoSeismic: ^SupportPowerVertigoSeismic
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 208
@@ -640,69 +512,12 @@ NAPYRA:
 	ExitsDebugOverlay:
 	ProductionBar@Tech:
 	ProvidesPrerequisite@buildingname:
-	AirstrikePower@VertigoNapalmAirstrikePower:
-		OrderName: VertigoNapalmAirstrikePowerInfoOrder
+	AirstrikePower@SupportPowerVertigoNapalm:
 		Prerequisites: naradr, ~propaganda
-		Icon: vertigo
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Napalm Strike
-		LongDesc: Deploy a devastating Napalm bomb.
-		SelectTargetSound: vertigo_s2.aud
-		EndChargeSound: vertigo_st1.aud
-		LaunchSound: vertigo_a1.aud
-		UnitType: vertigo
-		SquadSize: 1
-		DisplayBeacon: True
-		BeaconPoster: vertigo
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	AirstrikePower@VertigoTiberiumAirstrikePower:
-		OrderName: VertigoTiberiumAirstrikePowerInfoOrder
+	AirstrikePower@SupportPowerVertigoTiberium:
 		Prerequisites: naradr, ~industry
-		Icon: vertigo
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Tiberium Splitter Bomb
-		LongDesc: Deploy a devastating Tiberium bomb.
-		SelectTargetSound: vertigo_s2.aud
-		EndChargeSound: vertigo_st1.aud
-		LaunchSound: vertigo_a1.aud
-		UnitType: vertigo2
-		SquadSize: 1
-		DisplayBeacon: True
-		BeaconPoster: vertigo
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
-	AirstrikePower@VertigoSeismicAirstrikePower:
-		OrderName: VertigoSeismicAirstrikePowerInfoOrder
+	AirstrikePower@SupportPowerVertigoSeismic:
 		Prerequisites: naradr, ~technology
-		Icon: vertigo
-		ChargeTime: 330
-		QuantizedFacings: 2
-		Description: Seismic Bomb
-		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
-		SelectTargetSound: vertigo_s2.aud
-		EndChargeSound: vertigo_st1.aud
-		LaunchSound: vertigo_a1.aud
-		UnitType: vertigo3
-		SquadSize: 1
-		DisplayBeacon: True
-		BeaconPoster: vertigo
-		DisplayRadarPing: True
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		PauseOnCondition: power-outage
 
 NAWAST:
 	Inherits: ^Building

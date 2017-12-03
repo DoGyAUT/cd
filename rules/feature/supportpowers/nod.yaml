@@ -1,0 +1,331 @@
+^SupportPowerFrenzy:
+	GrantExternalConditionPower@SupportPowerFrenzy:
+		Description: Frenzy
+		LongDesc: Grants friendly infantry a time limited boost in attack and movement speed.
+		OrderName: SupportPowerFrenzy
+		ActivationSequence:
+		Icon: fenzy
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSound: nod1_s8.aud
+		Condition: fenzy
+		OnFireSound: nod1_s5.aud
+		Sequence: idle
+		ChargeTime: 210
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 8
+		Duration: 450
+		PauseOnCondition: power-outage
+
+^SupportPowerScan:
+	SpawnActorPower@SupportPowerScan:
+		OrderName: SupportPowerScan
+		Actor: camera.nodscan
+		Icon: nodscanicon
+		ChargeTime: 180
+		Description: Radar Scan
+		LongDesc: Reveals an area of the map and cloaked enemy units.
+		LifeTime: 350
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Sequence: idle
+		PauseOnCondition: power-outage
+
+^SupportPowerSubAmbush:
+	SpawnActorPower@SupportPowerSubAmbush:
+		OrderName: SupportPowerSubAmbush
+		Description: Subterranean APC Ambush
+		LongDesc: Spawns a fully loaded Subterranean APC.
+		Actor: sapc1
+		Icon: subapcambush
+		LifeTime: -1
+		DeploySound: drillup.aud
+		EffectImage: dig
+		EffectPalette: player
+		EffectSequence: idle
+		ChargeTime: 300
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		PauseOnCondition: power-outage
+
+^SupportPowerHavoc:
+	ProduceActorPower@SupportPowerHavoc:
+		OrderName: SupportPowerHavoc
+		Actors: havoc
+		Type: Air.Nod
+		Icon: havoc
+		Description: Havoc Ace call
+		LongDesc: Calls in a heavy ace class Havoc attack chopper.
+		SelectTargetSpeechNotification: SelectTarget
+		EndChargeSpeechNotification: Reinforce
+		LowPowerSpeechNotification: LowPower
+		ChargeTime: 330
+		QuantizedFacings: 2
+		DisplayBeacon: false
+		DisplayRadarPing: false
+		BeaconPoster: havoc
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerPropagandaInfantry:
+	ParatroopersPower@SupportPowerPropagandaInfantry:
+		UnitType: nodcarry.support
+		DropItems: nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32,nasol2,e32
+		Icon: nodcarry
+		OrderName: SupportPowerPropagandaInfantry
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Propaganda Infantry Drop
+		LongDesc: Drops an infantry battalion on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: nodcarry
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerFanatic:
+	ParatroopersPower@SupportPowerFanatic:
+		UnitType: valkyrie.support
+		DropItems: fanatic,fanatic,fanatic,fanatic,fanatic,fanatic
+		Icon: fanatic
+		OrderName: SupportPowerFanatic
+		SquadSize: 1
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: Fanatic Drop
+		LongDesc: Drops a group of fanatics on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: fanatic
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerShadowTrooper:
+	ParatroopersPower@SupportPowerShadowTrooper:
+		UnitType: valkyrie.support
+		DropItems: shadow,shadow,shadow,shadow,shadow
+		Icon: valkyrie
+		OrderName: SupportPowerShadowTrooper
+		SquadSize: 1
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: Shadow Trooper Drop
+		LongDesc: Drops a special infantry taskforce on the field.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: valkyrie
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerVertigoNapalm:
+	AirstrikePower@SupportPowerVertigoNapalm:
+		OrderName: SupportPowerVertigoNapalm
+		Icon: vertigo
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Napalm Strike
+		LongDesc: Deploy a devastating Napalm bomb.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerVertigoTiberium:
+	AirstrikePower@SupportPowerVertigoTiberium:
+		OrderName: SupportPowerVertigoTiberium
+		Icon: vertigo
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Tiberium Splitter Bomb
+		LongDesc: Deploy a devastating Tiberium bomb.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo2
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerVertigoSeismic:
+	AirstrikePower@SupportPowerVertigoSeismic:
+		OrderName: SupportPowerVertigoSeismic
+		Icon: vertigo
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Seismic Bomb
+		LongDesc: Deploy a devastating seismic bomb that obliderates buildings.
+		SelectTargetSound: vertigo_s2.aud
+		EndChargeSound: vertigo_st1.aud
+		LaunchSound: vertigo_a1.aud
+		UnitType: vertigo3
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: vertigo
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerEMPCannon:
+	Armament@SupportPowerEMPCannon:
+		Name: SupportPowerEMPCannon
+		Weapon: EMPulseCannon
+		LocalOffset: 212,0,1768
+		LocalYaw: 0,100
+		MuzzleSequence: muzzle
+		MuzzlePalette: effect50alpha
+	FireArmamentPower@SupportPowerEMPCannon:
+		OrderName: SupportPowerEMPCannon
+		ArmamentName: SupportPowerEMPCannon
+		Cursor: emp
+		Icon: emp
+		ChargeTime: 240
+		Description: E.M. Pulse
+		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSpeechNotification: EmPulseCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		AllowMultiple: false
+		PauseOnCondition: power-outage
+
+^SupportPowerNuke:
+	NukePower@SupportPowerNuke:
+		Icon: nodpropasup
+		Cursor: nuke
+		OrderName: SupportPowerNuke
+		ChargeTime: 480
+		Description: Cluster Missile
+		LongDesc: Launches a conventional warhead\nat a target location.
+		MissilePalette: player
+		IsPlayerPalette: True
+		EndChargeSpeechNotification: ClusterMissileReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSound: icbm1.aud
+		MissileWeapon: ClusterMissile
+		SpawnOffset: 0,604,0
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster:
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 125
+		PauseOnCondition: power-outage
+
+^SupportPowerTiberianLaser:
+	DetonateWeaponPower@SupportPowerTiberianLaser:
+		Icon: nodindustrysup
+		Description: Tiberian Laser Cannon Alpha Strike
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		LongDesc: Fires a strong tiberian laser on the targetted area.
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: TiberiumBombIndustry
+		OrderName: SupportPowerTiberianLaser
+		Cursor: ioncannon
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350
+		PauseOnCondition: power-outage
+
+^SupportPowerOrbitalLaser:
+	DetonateWeaponPower@SupportPowerOrbitalLaser:
+		Icon: nodtechnosup
+		Description: Kane's Light
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSound: obelcharge01.aud
+		LongDesc: Fires a barrage of orbital obelisk laser strikes on the targetted area.
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: TechnologyLaserStarter
+		OrderName: SupportPowerOrbitalLaser
+		Cursor: ioncannon
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350
+		PauseOnCondition: power-outage
+
+^SupportPowerCloaking:
+	GrantExternalConditionPower@SupportPowerCloaking:
+		OrderName: SupportPowerCloaking
+		Icon: cloakingfield
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Cloaking Field
+		LongDesc: Cloaks all vehicles in the radius
+		Condition: cloak
+		OnFireSound: cloak5.aud
+		Sequence: idle
+		ChargeTime: 180
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 5
+		Duration: 0
+		PauseOnCondition: power-outage
