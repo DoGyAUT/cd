@@ -81,41 +81,112 @@ CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:
 		Amount: 2500
-		SelectionShares: 50
+		SelectionShares: 100
 		Effect: dollar
 		UseCashTick: True
 	LevelUpCrateAction:
-		SelectionShares: 40
+		SelectionShares: 100
 		Effect: levelup
 		Levels: 5
 	HideMapCrateAction:
-		SelectionShares: 5
+		SelectionShares: 100
 		Effect: hide-map
 	HealUnitsCrateAction:
-		SelectionShares: 2
+		SelectionShares: 100
 		Effect: heal
 	RevealMapCrateAction:
-		SelectionShares: 1
+		SelectionShares: 100
 		Effect: reveal-map
 	GrantExternalConditionCrateAction@cloak:
-		SelectionShares: 5
+		SelectionShares: 100
 		Effect: stealth
 		Condition: cloak
 		Notification: cloak5.aud
 	GrantExternalConditionCrateAction@firepower:
-		SelectionShares: 5
+		SelectionShares: 100
 		Effect: firepower
 		Condition: crate-firepower
 		Notification: 00-i070.aud
 	GrantExternalConditionCrateAction@armor:
-		SelectionShares: 5
+		SelectionShares: 100
 		Effect: armor
 		Condition: crate-damage
 		Notification: 00-i068.aud
 	GrantExternalConditionCrateAction@speed:
-		SelectionShares: 5
+		SelectionShares: 100
 		Condition: crate-speed
 		Notification: 00-i080.aud
+	DuplicateUnitCrateAction@duplicate:
+		SelectionShares: 100
+		MaxAmount: 3
+		MinAmount: 1
+		MaxRadius: 5
+	ExplodeCrateAction@Hightensionbomb:
+		SelectionShares: 200
+		Weapon: Hightensionbomb
+	ExplodeCrateAction@ioncannon:
+		SelectionShares: 200
+		Weapon: IonCannon
+	ExplodeCrateAction@ClusterMissile:
+		SelectionShares: 200
+		Weapon: ClusterMissile
+	ExplodeCrateAction@TiberiumBombIndustry:
+		SelectionShares: 200
+		Weapon: TiberiumBombIndustry
+	ExplodeCrateAction@TechnologyLaserStarter:
+		SelectionShares: 200
+		Weapon: TechnologyLaserStarter
+	GiveUnitCrateAction@Harbinger:
+		SelectionShares: 70
+		Units: glad
+	GiveUnitCrateAction@Fury:
+		SelectionShares: 70
+		Units: fury
+	GiveUnitCrateAction@Gargantua:
+		SelectionShares: 70
+		Units: gargantua
+	GiveUnitCrateAction@Rampage:
+		SelectionShares: 70
+		Units: avalanche
+	GiveUnitCrateAction@Mobius:
+		SelectionShares: 70
+		Units: zcommando
+	GiveUnitCrateAction@Mammoth:
+		SelectionShares: 70
+		Units: hmec
+	GiveUnitCrateAction@Leviathan:
+		SelectionShares: 70
+		Units: iontank
+	GiveUnitCrateAction@MARV:
+		SelectionShares: 70
+		Units: marv
+	GiveUnitCrateAction@Scorpion:
+		SelectionShares: 70
+		Units: scorpion
+	GiveUnitCrateAction@Montauk:
+		SelectionShares: 70
+		Units: montauk
+	GiveUnitCrateAction@Reckoner:
+		SelectionShares: 70
+		Units: reckoner
+	GiveUnitCrateAction@Hexapod:
+		SelectionShares: 70
+		Units: hexapod
+	GiveUnitCrateAction@KMCV:
+		SelectionShares: 70
+		Units: kmcv
+	GiveUnitCrateAction@FMCV:
+		SelectionShares: 70
+		Units: fmcv
+	GiveUnitCrateAction@GMCV:
+		SelectionShares: 70
+		Units: gmcv
+	GiveUnitCrateAction@NMCV:
+		SelectionShares: 70
+		Units: nmcv
+	GiveUnitCrateAction@SMCV:
+		SelectionShares: 70
+		Units: smcv
 
 Cloud1:
 	Inherits@1: ^Clouds
