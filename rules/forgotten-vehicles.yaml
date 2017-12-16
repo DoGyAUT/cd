@@ -4,7 +4,7 @@ FMCV:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 400
 		Prerequisites: ~faweap, faradr
-		Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  HP: 1000\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
+		Description: The heart of any base.\nProvides a build radius for structures.\n\n  Role: MCV\n  Armor: Heavy\n  Speed: 85\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Deploys into another Construction Yard\n - Self healing\n - Crushes infantry\n - Must be destroyed to end the game
 	Valued:
 		Cost: 4500
 	Tooltip:
@@ -15,7 +15,7 @@ FMCV:
 	Voiced:
 		VoiceSet: Fmcv
 	Health:
-		HP: 2000
+		HP: 2000000
 	Mobile:
 		Speed: 30
 		TerrainSpeeds:
@@ -54,7 +54,7 @@ FHARV:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 401
 		Prerequisites: fproc, ~faweap
-		Description: Collects Tiberium for processing.\nVery Fast harvester with below average storage.\n\n  Role: Harvester\n  HP: 1000\n  Armor: Medium\n  Speed: 90\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (12 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
+		Description: Collects Tiberium for processing.\nVery Fast harvester with below average storage.\n\n  Role: Harvester\n  Armor: Medium\n  Speed: 90\n  Viewrange: 6\n\n Good vs Nothing\n\n Special:\n\n - Tiberium Storage (12 Capacity)\n - Self healing\n - Crushes infantry\n - Immune to Veins
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
@@ -89,7 +89,7 @@ FHARV:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1500
+		HP: 1500000
 	RevealsShroud:
 		Range: 8c497
 	RenderSprites:
@@ -132,7 +132,7 @@ ATRUCK:
 	Voiced:
 		VoiceSet: Fmcv
 	Health:
-		HP: 600
+		HP: 600000
 	Cargo:
 		Types: Infantry
 		MaxWeight: 10
@@ -148,9 +148,9 @@ ATRUCK:
 	RenderVoxels:
 	WithVoxelBody:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	ProximityExternalCondition@FeatureBuffRepairInfantry:
@@ -186,7 +186,7 @@ FBUGGY_MG:
 		Speed: 127
 		Crushes: crate
 	Health:
-		HP: 400
+		HP: 400000
 	RevealsShroud:
 		Range: 8c497
 	Armament@primary:
@@ -234,7 +234,7 @@ FBUGGY_MIS:
 		Speed: 127
 		Crushes: crate
 	Health:
-		HP: 400
+		HP: 400000
 	RevealsShroud:
 		Range: 11c321
 	Armament@primary:
@@ -288,7 +288,7 @@ FBUGGY_MORTAR:
 		Speed: 127
 		Crushes: crate
 	Health:
-		HP: 400
+		HP: 400000
 	Armament@primary:
 		Weapon: BuggyMortar
 		LocalOffset: 311,0,1131
@@ -332,7 +332,7 @@ FTRUCK_FLAMER:
 		TurnSpeed: 5
 		Speed: 99
 	Health:
-		HP: 550
+		HP: 550000
 	RevealsShroud:
 		Range: 7c73
 	Armament@primary:
@@ -383,7 +383,7 @@ FTRUCK_MORTAR:
 		TurnSpeed: 5
 		Speed: 99
 	Health:
-		HP: 550
+		HP: 550000
 	RevealsShroud:
 		Range: 15c570
 	Armament@primary:
@@ -438,7 +438,7 @@ FTRUCK_FLAK:
 		TurnSpeed: 5
 		Speed: 99
 	Health:
-		HP: 550
+		HP: 550000
 	RevealsShroud:
 		Range: 11c321
 	Armament@primary:
@@ -493,7 +493,7 @@ GREMLIN_HCAN:
 		Speed: 113
 		TurnSpeed: 5
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 8c497
 	Turreted:
@@ -540,7 +540,7 @@ GREMLIN_MORTAR:
 		Speed: 113
 		TurnSpeed: 4
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -587,7 +587,7 @@ GREMLIN_90MM:
 		Speed: 113
 		TurnSpeed: 5
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -638,7 +638,7 @@ TAURUS_MG:
 	RevealsShroud:
 		Range: 9c921
 	Health:
-		HP: 780
+		HP: 780000
 	Cargo:
 		Types: Infantry
 		MaxWeight: 6
@@ -708,7 +708,7 @@ TAURUS_HCAN:
 	RevealsShroud:
 		Range: 8c497
 	Health:
-		HP: 780
+		HP: 780000
 	Cargo:
 		Types: Infantry
 		MaxWeight: 6
@@ -781,7 +781,7 @@ TAURUS_MIS:
 	RevealsShroud:
 		Range: 12c745
 	Health:
-		HP: 780
+		HP: 780000
 	Cargo:
 		Types: Infantry
 		MaxWeight: 6
@@ -851,7 +851,7 @@ LIZARD_MG:
 		Speed: 85
 		TurnSpeed: 4
 	Health:
-		HP: 850
+		HP: 850000
 	RevealsShroud:
 		Range: 9c921
 	Turreted:
@@ -899,7 +899,7 @@ LIZARD_90MM:
 		Speed: 85
 		TurnSpeed: 4
 	Health:
-		HP: 850
+		HP: 850000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -949,7 +949,7 @@ LIZARD_122MM:
 		Speed: 85
 		TurnSpeed: 4
 	Health:
-		HP: 850
+		HP: 850000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -993,7 +993,7 @@ DIGGER_MIS:
 		VoiceSet: Digger
 		Volume: 2
 	Health:
-		HP: 1400
+		HP: 1400000
 	RevealsShroud:
 		Range: 12c745
 	Mobile:
@@ -1060,7 +1060,7 @@ DIGGER_MORTAR:
 		TurnSpeed: 4
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
-		HP: 1400
+		HP: 1400000
 	RevealsShroud:
 		Range: 21c218
 	Turreted:
@@ -1128,7 +1128,7 @@ DIGGER_122MM:
 		TurnSpeed: 3
 		RequiresCondition: !(empdisable && !invulnerability) && !deployed
 	Health:
-		HP: 1400
+		HP: 1400000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1194,7 +1194,7 @@ BISON_130MM:
 		Speed: 71
 		TurnSpeed: 4
 	Health:
-		HP: 1430
+		HP: 1430000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1257,7 +1257,7 @@ BISON_145MM:
 		Speed: 71
 		TurnSpeed: 3
 	Health:
-		HP: 1430
+		HP: 1430000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1321,7 +1321,7 @@ BISON_180MM:
 		Speed: 71
 		TurnSpeed: 3
 	Health:
-		HP: 1430
+		HP: 1430000
 	RevealsShroud:
 		Range: 15c570
 	Turreted:
@@ -1369,7 +1369,7 @@ AUROCH_130MM:
 		Speed: 57
 		TurnSpeed: 3
 	Health:
-		HP: 2000
+		HP: 2000000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1402,9 +1402,9 @@ AUROCH_130MM:
 		Sequence: barrel-130mm
 	WithMuzzleOverlay:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	HitShape:
@@ -1433,7 +1433,7 @@ AUROCH_120MMT:
 		Speed: 57
 		TurnSpeed: 3
 	Health:
-		HP: 3250
+		HP: 3250000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -1474,7 +1474,7 @@ AUROCH_120MMT:
 		Armament: secondary
 	WithMuzzleOverlay:
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
@@ -1517,7 +1517,7 @@ AUROCH_180MM:
 		Speed: 57
 		TurnSpeed: 3
 	Health:
-		HP: 2000
+		HP: 2000000
 	RevealsShroud:
 		Range: 15c570
 	Turreted:
@@ -1543,9 +1543,9 @@ AUROCH_180MM:
 		Sequence: barrel-180mm
 	WithMuzzleOverlay:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	HitShape:
@@ -1571,7 +1571,7 @@ RAGNAROK:
 		VoiceSet: Grunt
 		Volume: 2
 	Health:
-		HP: 900
+		HP: 900000
 	Mobile:
 		Speed: 71
 		TurnSpeed: 1
@@ -1649,9 +1649,9 @@ AVALANCHE:
 		Speed: 71
 		TurnSpeed: 2
 	Health:
-		HP: 8000
+		HP: 8000000
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100

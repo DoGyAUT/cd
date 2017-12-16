@@ -16,16 +16,20 @@ LocustNail:
 		TrailImage: tiberiumtrail
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 200
+		Damage: 200000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -33,8 +37,9 @@ LocustNailAA:
 	Inherits: LocustNail
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 100
+		Damage: 100000
 		ValidTargets: Aircraft
 
 ChimeraZap:
@@ -53,10 +58,10 @@ ChimeraZap:
 		Color: 00C800
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Range: 0c0, 0c45
 		Falloff: 100, 100
-		Damage: 40
-		AffectsParent: false
+		Damage: 40000
 		ValidStances: Neutral, Enemy
 		Versus:
 			Vehicle: 200
@@ -79,10 +84,10 @@ MantisZap:
 		Color: 00C800
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Range: 0c0, 0c45
 		Falloff: 100, 100
-		Damage: 20
-		AffectsParent: false
+		Damage: 20000
 		ValidStances: Neutral, Enemy
 
 WarAntGun:
@@ -100,17 +105,21 @@ WarAntGun:
 		ContrailColor: 0080FF
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 15
+		Damage: 15000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: epiff
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_flash
 		ExplosionPalette: light
 
@@ -130,18 +139,22 @@ SlasherDisc:
 		TrailImage: plasmatrail
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 30
+		Damage: 30000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -161,18 +174,22 @@ AntiMatterCannonGun:
 		TrailImage: plasmatrail
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 150
+		Damage: 150000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -195,18 +212,22 @@ MantisShockerDisc:
 		ContrailWidth: 0c42
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 225
+		Damage: 225000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -229,18 +250,22 @@ HexapodShockerDisc:
 		ContrailWidth: 0c42
 		ContrailColor: 00FF64
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 300
+		Damage: 300000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -265,19 +290,23 @@ ShardLauncherGun:
 		ContrailColor: 7EFF01
 		ContrailWidth: 0c28
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 100
+		Damage: 100000
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_small
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: large_flash
 		ExplosionPalette: light
 
@@ -300,16 +329,20 @@ TripodLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 150
+		Damage: 150000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: plasmaexpl1
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 		ImpactSounds: bursterhit01.aud
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@5Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
@@ -321,7 +354,8 @@ CorruptSlimeAttack:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
-		Damage: 100
+		AffectsParent: True
+		Damage: 100000
 
 CorruptorBlast:
 	Inherits@wh: ^TiberiumWH
@@ -343,24 +377,27 @@ CorruptorBlast:
 		TrailImage: tiberiumtrail
 		TrailPalette: effect50alpha
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 120
+		Damage: 120000
 		Versus:
 			Vehicle: 50
 		DamageTypes: BulletDeath, TriggerCorruptorVisceroid
 		ValidStances: Neutral, Enemy
 	Warhead@2Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: -50
-		AffectsParent: false
+		Damage: -50000
 		ValidTargets: Scrin
 		ValidStances: Ally
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
@@ -377,22 +414,27 @@ StormRaiderCannon:
 		Speed: 2c848
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 40
+		Damage: 40000
 		Versus:
 			Infantry: 50
 			Cyborg: 50
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light
 
@@ -409,21 +451,26 @@ StormRaiderCannonAA:
 		Speed: 2c124
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 50
+		Damage: 50000
 		ValidTargets: Aircraft
 		ValidStances: Neutral, Enemy
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: plasmaexplo01.aud, plasmaexplo02.aud, plasmaexplo03.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_flash
 		ExplosionPalette: light

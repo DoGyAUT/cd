@@ -1,0 +1,132 @@
+^SupportPowerCleansingAura:
+	DetonateWeaponPower@cleansingaura:
+		OrderName: SupportPowerCleansingAura
+		Icon: fortification
+		ChargeTime: 360
+		Description: Cleansing Aura
+		LongDesc: Dying infantry is converted to husks controlled by the attacker.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Weapon: cleansingaura
+		ActivationSequence:
+		TargetCircleRange: 3c0
+		PauseOnCondition: power-outage
+
+^SupportPowerTeleporter:
+	ChronoshiftPower@SupportPowerTeleporter:
+		OrderName: SupportPowerTeleporter
+		Icon: fortification
+		ChargeTime: 210
+		Description: Teleporter
+		LongDesc: Teleports a group of units.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Duration: -1
+		KillCargo: False
+		DisplayRadarPing: True
+		PauseOnCondition: power-outage
+
+^SupportPowerNanoSwarm:
+	GrantExternalConditionPower@SupportPowerNanoSwarm:
+		OrderName: SupportPowerNanoSwarm
+		Icon: fortification
+		ChargeTime: 240
+		Description: Nanoswarm
+		LongDesc: Makes vehicles, buildings and cyborgs invulnerable for 20 seconds.
+		Duration: 500
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Condition: invulnerability
+		Range: 2
+		PauseOnCondition: power-outage
+
+^SupportPowerMantaStrikeRun:
+	AirstrikePower@SupportPowerMantaStrikeRun:
+		OrderName: SupportPowerMantaStrikeRun
+		UnitType: manta
+		SquadSize: 7
+		Icon: havoc
+		Description: Manta Strike
+		LongDesc: Attack everything in an area of the map.
+		SquadOffset: -2000,2000,0
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		QuantizedFacings: 2
+		ChargeTime: 360
+		DisplayBeacon: true
+		DisplayRadarPing: true
+		BeaconPoster: havoc
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerTotalMeltdown:
+	AirstrikePower@SupportPowerTotalMeltdown:
+		OrderName: SupportPowerTotalMeltdown
+		UnitType: kdrone1
+		SquadSize: 1
+		Icon: kdroneicon
+		Description: Total Meltdown
+		LongDesc: Attack everything with an energy bomb in an area of the map.
+		SquadOffset: -2000,2000,0
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		QuantizedFacings: 2
+		ChargeTime: 330
+		DisplayBeacon: true
+		DisplayRadarPing: true
+		BeaconPoster: kdroneicon
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerOverload:
+	DetonateWeaponPower@SupportPowerOverload:
+		OrderName: SupportPowerOverload
+		Icon: batr
+		ChargeTime: 280
+		Description: Overload
+		LongDesc: Boost power plants temporarily with all associated side effects.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		DisplayRadarPing: True
+		Weapon: Overload
+		ActivationSequence:
+		TargetCircleRange: 2c512
+
+^SupportPowerAnnihilator:
+	Armament@SupportPowerAnnihilator:
+		Weapon: OrbitalProjectile
+		LocalOffset: 1000,0,1500
+		Name: SupportPowerAnnihilator
+	FireArmamentPower@SupportPowerAnnihilator:
+		ArmamentName: SupportPowerAnnihilator
+		Cursor: emp
+		Icon: cabsup
+		Description: Cabal's Annihilator
+		EndChargeSpeechNotification: IonCannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: MissileLaunchDetected
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LongDesc: Fires a barrage of plamsagrenades on the targetted area.
+		ChargeTime: 480
+		OrderName: SupportPowerAnnihilator
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		BeaconPoster:
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 375

@@ -1,0 +1,242 @@
+^SupportPowerFortification:
+	GrantExternalConditionPower@SupportPowerFortification:
+		OrderName: SupportPowerFortification
+		Icon: fortification
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Fortificate
+		LongDesc: Fortificate an allied building. Grants a permanent 25% damage reduction which does not stack.
+		Condition: fortification
+		OnFireSound: fortificate.wav
+		Sequence: idle
+		ChargeTime: 240
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 4
+		PauseOnCondition: power-outage
+
+^SupportPowerArtillery:
+	AirstrikePower@SupportPowerArtillery:
+		OrderName: SupportPowerArtillery
+		Icon: artystrike
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Artillery Strike
+		LongDesc: Call an artillery strike to the designated position.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		UnitType: artillery_beacon
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		DisplayBeacon: True
+		BeaconPoster: artystrike
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerOrcaBomber:
+	AirstrikePower@SupportPowerOrcaBomber:
+		OrderName: SupportPowerOrcaBomber
+		Icon: orcabomber
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: Orca Bombing run
+		LongDesc: Deploy a bombing run of 3 Orca-Bombers.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: orca_s5.aud
+		EndChargeSound: orca_s5.aud
+		LaunchSound: orca_ab2.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: orca_b
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		DisplayBeacon: True
+		BeaconPoster: orcabomber
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerOXBomber:
+	AirstrikePower@SupportPowerOXBomber:
+		OrderName: SupportPowerOXBomber
+		Icon: orcaoxbomber
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: OX-Sonic Bombing run
+		LongDesc: Deploy a sonic bomb dropped of an OX-Bomber.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: orca_s5.aud
+		EndChargeSound: orca_s5.aud
+		LaunchSound: orca_ab2.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: oxbomber
+		SquadSize: 1
+		SquadOffset: -3072,3072,0
+		DisplayBeacon: True
+		BeaconPoster: orcaoxbomber
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerOrcaScout:
+	AirstrikePower@SupportPowerOrcaScout:
+		OrderName: SupportPowerOrcaScout
+		Icon: orcascout
+		ChargeTime: 180
+		Description: Orca Scout Run
+		LongDesc: Reveals an area of the map and cloaked enemy units.
+		SelectTargetSound: orca_m12.aud
+		EndChargeSound: orca_s10.aud
+		LaunchSound: orca_a10.aud
+		UnitType: orca_g
+		SquadSize: 3
+		SquadOffset: -3072,3072,0
+		QuantizedFacings: 2
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: orcascout
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerEmergencyRepair:
+	GrantExternalConditionPower@SupportPowerEmergencyRepair:
+		OrderName: SupportPowerEmergencyRepair
+		Icon: emergencyrepairs
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		EndChargeSpeechNotification: SupportPowerReady
+		Description: Emergency Repairs
+		LongDesc: Repairs vehicles and buildings in a specific radius.
+		Condition: emergencyrepairs
+		OnFireSound: fixit1.aud
+		Sequence: idle
+		ChargeTime: 180
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		Range: 8
+		Duration: 300
+		PauseOnCondition: power-outage
+
+^SupportPowerZoneCommander:
+	ParatroopersPower@SupportPowerZoneCommander:
+		UnitType: dshp.support
+		DropItems: ztrooper, ztrooper, ztrooper, zraider, zraider, zraider
+		Icon: zonecommando
+		OrderName: SupportPowerZoneCommander
+		SquadSize: 1
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: Zone Team Call
+		LongDesc: Drops a squad of 3 Troopers and 3 Raiders.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: zonecommando
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerPoseidon:
+	ParatroopersPower@SupportPowerPoseidon:
+		UnitType: dshp.support
+		DropItems: gthtnk, gthtnk, gthtnk
+		Icon: poseidon
+		OrderName: SupportPowerPoseidon
+		SquadSize: 1
+		ChargeTime: 300
+		QuantizedFacings: 2
+		Description: Grizzly Tank Drop
+		LongDesc: Drops 3 Grizzly Tanks on the battlefield.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: poseidon
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerHellfire:
+	AirstrikePower@SupportPowerHellfire:
+		Icon: kodiak
+		OrderName: SupportPowerHellfire
+		ChargeTime: 360
+		QuantizedFacings: 2
+		Description: Hellfire Missiles
+		LongDesc: Attacks an area with heavy missile strike.\nVery effective vs buildings and light armored targets.
+		SelectTargetSound: predator_a8.aud
+		EndChargeSound: predator_m2.aud
+		LaunchSound: predator_a10.aud
+		IncomingSound: g_00-cd004.aud
+		UnitType: hellfire_beacon
+		SquadSize: 1
+		DisplayBeacon: True
+		BeaconPoster: kodiak
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerTitan:
+	ParatroopersPower@SupportPowerTitan:
+		UnitType: dshp.support
+		DropItems: mmch, mmch, mmch
+		Icon: titan
+		OrderName: SupportPowerTitan
+		SquadSize: 1
+		ChargeTime: 330
+		QuantizedFacings: 2
+		Description: Titan Mech Drop
+		LongDesc: Drops 3 Titans on the battlefield.
+		SelectTargetSpeechNotification: SelectTarget
+		LowPowerSpeechNotification: LowPower
+		LaunchSpeechNotification: Reinforce
+		DisplayBeacon: true
+		DisplayRadarPing: True
+		BeaconPoster: titan
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		PauseOnCondition: power-outage
+
+^SupportPowerIonCannon:
+	DetonateWeaponPower@SupportPowerIonCannon:
+		Icon: gdigdfsup
+		Description: Ion Cannon Alpha Strike
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		LongDesc: Fires many ion cannons on the targetted area.
+		ChargeTime: 480
+		ActivationSequence: idle
+		Weapon: IonCannon
+		OrderName: SupportPowerIonCannon
+		Cursor: ioncannon
+		CameraActor: camera
+		ArrowSequence: arrow
+		CircleSequence: circles
+		ClockSequence: clock
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 100
+		PauseOnCondition: power-outage

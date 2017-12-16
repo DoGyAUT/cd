@@ -18,7 +18,7 @@ GASOL:
 		VoiceSet: Marine
 		Volume: 2
 	Health:
-		HP: 200
+		HP: 200000
 	Mobile:
 		Speed: 50
 	RevealsShroud:
@@ -69,7 +69,7 @@ GMISINF:
 	Mobile:
 		Speed: 40
 	Health:
-		HP: 125
+		HP: 125000
 	RevealsShroud:
 		Range: 9c921
 	Armament@Primary:
@@ -109,7 +109,7 @@ E2:
 		VoiceSet: Discthrower
 		Volume: 2
 	Health:
-		HP: 200
+		HP: 200000
 	Mobile:
 		Speed: 50
 	RevealsShroud:
@@ -162,7 +162,7 @@ SCOUT:
 		VoiceSet: Scout
 		Volume: 2
 	Health:
-		HP: 150
+		HP: 150000
 	Mobile:
 		Speed: 40
 	RevealsShroud:
@@ -195,7 +195,7 @@ GDOG:
 	Voiced:
 		VoiceSet: Dog
 	Health:
-		HP: 250
+		HP: 250000
 	Mobile:
 		Speed: 76
 	RevealsShroud:
@@ -243,7 +243,7 @@ ENGINEER:
 	RevealsShroud:
 		Range: 8c497
 	Health:
-		HP: 200
+		HP: 200000
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -278,7 +278,7 @@ MEDIC:
 	RevealsShroud:
 		Range: 8c497
 	Health:
-		HP: 225
+		HP: 225000
 	Crushable:
 		CrushSound: squishy2.aud
 	Armament:
@@ -290,7 +290,8 @@ MEDIC:
 		IdleSequences: idle1,idle2
 		DefaultAttackSequence: heal
 	SelfHealing:
-		Delay: 10
+		Step: 500
+		Delay: 1
 	Passenger:
 		PipType: Red
 		CargoType: Infantry
@@ -326,7 +327,7 @@ ZMARINE:
 		VoiceSet: ZoneMarine
 		Volume: 2
 	Health:
-		HP: 500
+		HP: 500000
 	Mobile:
 		Speed: 40
 		TerrainSpeeds:
@@ -379,7 +380,7 @@ ZTROOPER:
 		VoiceSet: Trooper
 		Volume: 2
 	Health:
-		HP: 780
+		HP: 780000
 	Mobile:
 		Speed: 40
 		SharesCell: False
@@ -430,7 +431,7 @@ ZRAIDER:
 		VoiceSet: Raider
 		Volume: 2
 	Health:
-		HP: 780
+		HP: 780000
 	Mobile:
 		Speed: 40
 		SharesCell: False
@@ -482,7 +483,7 @@ ZCOMMANDO:
 		VoiceSet: Trooper
 		Volume: 2
 	Health:
-		HP: 4000
+		HP: 4000000
 	Mobile:
 		Speed: 40
 		SharesCell: False
@@ -525,7 +526,7 @@ ZCOMMANDO:
 	AttackFrontal:
 	WithMuzzleOverlay:
 	SelfHealing:
-		Step: 2
+		Step: 2000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100

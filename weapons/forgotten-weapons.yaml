@@ -12,21 +12,26 @@ ScoundrelGrenade:
 		Inaccuracy: 1c424
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 90
+		Damage: 90000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_brnl, small_brnl
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: flamtnk1.aud
@@ -43,8 +48,9 @@ GruntGun:
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 14
+		Damage: 14000
 
 HuntressGun:
 	Inherits: ^Bullet
@@ -57,15 +63,18 @@ HuntressGun:
 		Speed: 2c486
 		Inaccuracy: 0c91
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		ValidTargets: Ground, Aircraft
 		Spread: 0c91
-		Damage: 30
+		Damage: 30000
 		Versus:
 			Aircraft: 75
 	Warhead@2prone: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 1
+		Damage: 1000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -80,8 +89,9 @@ ScoundrelGun:
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 
 BrigandShotgun:
 	Inherits: ^Bullet
@@ -92,8 +102,9 @@ BrigandShotgun:
 	Projectile: BulletAS
 		Inaccuracy: 1c786
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 35
+		Damage: 35000
 
 BrigandShotgun2:
 	Inherits: BrigandShotgun
@@ -112,8 +123,9 @@ CrapjetBomb:
 		Shadow: true
 		Palette: effect
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
-		Damage: 350
+		Damage: 350000
 		Versus:
 			Buildings: 30
 			Vehicles: 40
@@ -135,9 +147,11 @@ BisonLauncher:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: grenexplo01, grenexplo02
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew14.aud
@@ -153,12 +167,15 @@ GriffinMG:
 	Projectile: BulletAS
 		Speed: 2c365
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 50
+		Damage: 50000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: piff
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piff
 		ExplosionPalette: ra
 		ValidTargets: Water
@@ -175,9 +192,11 @@ AssaultTruckMG:
 		Speed: 0c964
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
-		Damage: 40
+		Damage: 40000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -193,9 +212,11 @@ BisonMG:
 		Speed: 0c964
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 7
+		Damage: 7000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -212,12 +233,14 @@ TaurusMG:
 		Speed: 2c848
 		Inaccuracy: 0c724
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 50
+		Damage: 50000
 		Versus:
 			Aircraft: 33
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -233,9 +256,11 @@ WatchTowerMG:
 		Speed: 1c424
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 30
+		Damage: 30000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: gatpiff
 		InvalidTargets: Water
 
@@ -254,22 +279,26 @@ ForgHECannon:
 		ContrailLength: 10
 		ContrailWidth: 0c21
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 35
+		Damage: 35000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
 		DamageTypes: TakeCoverEffect, BulletDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo03.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: water_piffs
 		ExplosionPalette: ra
 		ValidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
 
@@ -295,19 +324,22 @@ BuggyFlak:
 		ContrailLength: 10
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 20
+		Damage: 20000
 		Versus:
 			Building: 50
 			Vehicle: 40
 		ValidTargets: Aircraft
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: phosexp1, phosexp2, phosexp3, phosexp4, phosexp5, phosexp6
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew13.aud
 		InvalidTargets: Water
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
@@ -328,16 +360,19 @@ FlakCannon:
 		ContrailLength: 10
 		ContrailWidth: 0c35
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
-		Damage: 30
+		Damage: 30000
 		ValidTargets: Aircraft
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: explo04.aud
 		InvalidTargets: Water
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_clsn, tiny_bang
 		ExplosionPalette: apolra2
 		ImpactSounds: expnew12.aud
@@ -360,9 +395,11 @@ BuggyMortar:
 		Blockable: false
 	MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 80
+		Damage: 80000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -383,11 +420,13 @@ GremlinMortar:
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c28
 		Blockable: false
-	MinRange: 5c673
+		MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 180
+		Damage: 180000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_lrg2
 		ExplosionPalette: effect50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -410,8 +449,9 @@ AurochMortar:
 		Blockable: false
 	MinRange: 5c673
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 350
+		Damage: 350000
 
 RagnarokCannon:
 	Inherits: ^ShellHE
@@ -430,16 +470,19 @@ RagnarokCannon:
 		Blockable: false
 	MinRange: 7c73
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
-		Damage: 25
+		Damage: 25000
 		Versus:
 			Building: 200
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fireexpl
 		ExplosionPalette: effect
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 
 RagnarokCannon2:
@@ -454,8 +497,9 @@ RagnarokCannon2:
 		ContrailWidth: 0c42
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c124
-		Damage: 115
+		Damage: 115000
 		Versus:
 			Building: 250
 
@@ -467,16 +511,17 @@ GoonHammer:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
-		Damage: 200
+		Damage: 200000
 		DamageTypes: BulletDeath
 	Warhead@21Dam: SpreadDamage
-		DebugOverlayColor: 00FF00
 		AffectsParent: True
+		DebugOverlayColor: 00FF00
 		ValidTargets: Infantry
 		ValidStances: Ally
 		Spread: 0c362
-		Damage: -100
+		Damage: -100000
 
 GoonHammer2:
 	ReloadDelay: 40
@@ -486,8 +531,9 @@ GoonHammer2:
 	Projectile: BulletAS
 		Speed: 0c602
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
-		Damage: 100
+		Damage: 100000
 		Versus:
 			Infantry: 100
 			Cyborg: 100
@@ -505,8 +551,9 @@ HellHoundBite:
 		Speed: 5c311
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c91
-		Damage: 225
+		Damage: 225000
 		DamageTypes: BulletDeath
 
 BuggyFireballLauncher:
@@ -522,17 +569,22 @@ BuggyFireballLauncher:
 		TrailPalette: effect50alpha
 		Inaccuracy: 1c424
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 1c424
-		Damage: 75
+		Damage: 75000
 		Falloff: 100, 80
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: fire01a, fire02a, fire03a
 		ExplosionPalette: apolra50alpha
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumScorch
 	Warhead@4Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light2
 
@@ -548,8 +600,9 @@ BountyMG:
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 20
+		Damage: 20000
 		DamageTypes: TakeCoverEffect, BountyKill
 
 BountyHunterBazooka:
@@ -561,13 +614,15 @@ BountyHunterBazooka:
 	MinRange: 2c124
 	Report: smaw.aud
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 300
+		Damage: 300000
 		ValidTargets: Ground, Aircraft
 		Versus:
 			Aircraft: 50
 		DamageTypes: TakeCoverEffect, SmallExplosionDeath, BountyKill
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: tiny_tumu
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
@@ -593,18 +648,22 @@ GeckoLauncherBarrage:
 		HorizontalRateOfTurn: 80
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 110
+		Damage: 110000
 		ValidTargets: Ground
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_tumu, medium_tumu, large_tumu
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@5Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
@@ -624,18 +683,22 @@ ForgottenT3Missile:
 		TerrainHeightAware: true
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 300
+		Damage: 300000
 		ValidTargets: Ground, Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_tumu, medium_tumu, large_tumu
 		ExplosionPalette: apolra2
 		ImpactSounds: grenexpl1.aud, grenexpl2.aud, grenexpl3.aud, grenexpl4.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@5Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: MediumCrater
 		InvalidTargets: Water, Aircraft
 	Warhead@6Eff: CreateEffect
+		AffectsParent: True
 		Explosions: medium_flash
 		ExplosionPalette: light
 
@@ -655,16 +718,18 @@ ForgottenT2Missile:
 		Speed: 0c724
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 75
+		Damage: 75000
 		ValidTargets: Ground
 
 ForgottenT2MissileAA:
 	Inherits: ForgottenT2Missile
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 75
+		Damage: 75000
 		ValidTargets: Aircraft
 
 BuggyMissile:
@@ -689,16 +754,18 @@ BuggyMissile:
 		Palette: effect
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 60
+		Damage: 60000
 		ValidTargets: Ground
 
 BuggyMissileAA:
 	Inherits: BuggyMissile
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 60
+		Damage: 60000
 		ValidTargets: Aircraft
 		
 BuzzardMissile:
@@ -721,6 +788,7 @@ BuzzardMissile:
 		CruiseAltitude: 11c0
 		CloseEnough: 2c0
 	Warhead@spread: FireShrapnel
+		AffectsParent: True
 		Weapon: BuzzardMissileFalling
 		Amount: 4
 		AimChance: 100
@@ -741,8 +809,9 @@ BuzzardMissileFalling:
 		RateOfTurn: 20
 		RangeLimit: 20c0
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 384
-		Damage: 250
+		Damage: 250000
 		ValidTargets: Ground
 
 StrikerMissiles:
@@ -765,26 +834,31 @@ StrikerMissiles:
 		ContrailWidth: 0c21
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c724
-		Damage: 300
+		Damage: 300000
 		ValidStances: Neutral, Enemy
 		ValidTargets: Aircraft
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: small_bang
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3EffWater: CreateEffect
+		AffectsParent: True
 		Explosions: small_watersplash
 		ExplosionPalette: player
 		ImpactSounds: ssplash3.aud
 		ValidTargets: Water
 	Warhead@4EffAir: CreateEffect
+		AffectsParent: True
 		Explosions: small_twlt
 		ExplosionPalette: apolra50alpha
 		ImpactSounds: expnew12.aud, explosion01.aud, explosion02.aud
 		ValidTargets: Aircraft
 	Warhead@5Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallCrater
 		InvalidTargets: Water, Aircraft
 
@@ -793,8 +867,9 @@ auroch120mmx:
 	-Burst:
 	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-		Damage: 95
-		
+		AffectsParent: True
+		Damage: 95000
+
 DiggerLaser:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
@@ -813,14 +888,17 @@ DiggerLaser:
 		SecondaryBeamZOffset: 2047
 		SecondaryBeamColor: 00FF00
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c181
-		Damage: 70
+		Damage: 70000
 	Warhead@2Eff: CreateEffect
+		AffectsParent: True
 		Explosions: protonexpl_tiny
 		ExplosionPalette: effect50alpha
 		ImpactSounds: bursterhit01.aud
 		InvalidTargets: Water, Aircraft
 	Warhead@3Smu: LeaveSmudge
+		AffectsParent: True
 		SmudgeType: SmallScorch
 		
 BuggyToxin:
@@ -840,10 +918,12 @@ BuggyToxin:
 		Inaccuracy: 1c424
 		DamageTypes: TriggerVisceroid
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 2c0
-		Damage: 25
+		Damage: 25000
 		Falloff: 100, 80
 	WarheadAS: SpawnActor
+		AffectsParent: True
 		Range: 2
 		Actors: Cloud1Weak
 		Owner: Creeps
@@ -864,16 +944,18 @@ AssaultTruckMissile:
 		Palette: effect
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Ground
 
 AssaultTruckMissileAA:
 	Inherits: AssaultTruckMissile
 	ValidTargets: Ground, Air
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 90
+		Damage: 90000
 		ValidTargets: Ground, Air
 
 GriffinMissile:
@@ -891,6 +973,7 @@ GriffinMissile:
 		RangeLimit: 28c291
 		TerrainHeightAware: true
 	Warhead@1Dam: SpreadDamage
+		AffectsParent: True
 		Spread: 0c362
-		Damage: 120
+		Damage: 120000
 		ValidTargets: Ground

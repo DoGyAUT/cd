@@ -20,7 +20,7 @@ HUSK:
 		VoiceSet: Husk
 		Volume: 2
 	Health:
-		HP: 400
+		HP: 400000
 	Mobile:
 		Speed: 44
 	RevealsShroud:
@@ -70,7 +70,7 @@ HHUSK:
 		VoiceSet: Husk
 		Volume: 2
 	Health:
-		HP: 280
+		HP: 280000
 	Mobile:
 		Speed: 34
 	RevealsShroud:
@@ -111,7 +111,7 @@ CYBSPY:
 		VoiceSet: Ascentor
 		Volume: 4
 	Health:
-		HP: 300
+		HP: 300000
 	Mobile:
 		Speed: 34
 	RevealsShroud:
@@ -153,7 +153,7 @@ JAGUAR:
 	Voiced:
 		VoiceSet: Jaguar
 	Health:
-		HP: 420
+		HP: 420000
 	Mobile:
 		Speed: 40
 	RevealsShroud:
@@ -202,7 +202,7 @@ KENGINEER:
 		RequiresCondition: upgrade.visionuplink
 		Range: 10c497
 	Health:
-		HP: 700
+		HP: 700000
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -234,7 +234,7 @@ VANGUARD:
 	Mobile:
 		Speed: 34
 	Health:
-		HP: 390
+		HP: 390000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 9c921
@@ -292,7 +292,7 @@ OVERSEER:
 		VoiceSet: Overseer
 		Volume: 2
 	Health:
-		HP: 720
+		HP: 720000
 	Mobile:
 		Speed: 44
 	RevealsShroud:
@@ -353,7 +353,7 @@ CYBFLY:
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Health:
-		HP: 320
+		HP: 320000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 14c146
@@ -422,7 +422,7 @@ CYC2:
 		Speed: 34
 		SharesCell: False
 	Health:
-		HP: 1040
+		HP: 1040000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 11c321
@@ -430,9 +430,9 @@ CYC2:
 		RequiresCondition: upgrade.visionuplink
 		Range: 13c321
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	Armament@Laser2:
@@ -472,7 +472,7 @@ GLAD:
 		Speed: 45
 		SharesCell: False
 	Health:
-		HP: 5000
+		HP: 5000000
 	RevealsShroud:
 		RequiresCondition: !upgrade.visionuplink
 		Range: 15c570
@@ -505,7 +505,7 @@ GLAD:
 		Range: 8c497
 	WithMuzzleOverlay:
 	SelfHealing:
-		Step: 2
+		Step: 2000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
@@ -533,7 +533,7 @@ KAMIKAZE:
 		VoiceSet: Husk
 		Volume: 1
 	Health:
-		HP: 100
+		HP: 100000
 	Mobile:
 		Speed: 34
 	RevealsShroud:

@@ -1,11 +1,11 @@
 Metadata:
 	Title: Crystallized Doom
 	Description: Crystallized Doom Beta
-	Version: 0.6.072
+	Version: 0.6.073
 	Author: Astor
 
 RequiresMods:
-	ts: cd-release-20170813
+	ts: cd-release-20171202
 
 PackageFormats: Mix
 
@@ -151,12 +151,18 @@ Rules:
 	cd|rules/trees.yaml
 	cd|rules/bridges.yaml
 	cd|rules/superweapons.yaml
+	cd|rules/crates.yaml
 	cd|rules/feature/armortype.yaml
 	cd|rules/feature/targettype.yaml
 	cd|rules/feature/damagemodifier.yaml
 	cd|rules/feature/deatheffect.yaml
 	cd|rules/feature/buff.yaml
 	cd|rules/feature/autotarget.yaml
+	cd|rules/feature/supportpowers/cabal.yaml
+	cd|rules/feature/supportpowers/forgotten.yaml
+	cd|rules/feature/supportpowers/gdi.yaml
+	cd|rules/feature/supportpowers/nod.yaml
+	cd|rules/feature/supportpowers/scrin.yaml
 	cd|rules-generated/feature/buff.yaml
 
 Weapons:
@@ -217,10 +223,10 @@ ChromeLayout:
 	common|chrome/ingame-infobriefing.yaml
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
-	common|chrome/ingame-observer.yaml
+	cd|chrome/ingame-observer.yaml
 	cd|chrome/ingame-observerstats.yaml
-	cd|chrome/ingame-player-rightbar.yaml
-	cd|chrome/ingame-perf-rightbar.yaml
+	cd|chrome/ingame-player.yaml
+	cd|chrome/ingame-perf.yaml
 	cd|chrome/ingame-debug.yaml
 	cd|chrome/mainmenu.yaml
 	cd|chrome/mainmenu-prerelease-notification.yaml

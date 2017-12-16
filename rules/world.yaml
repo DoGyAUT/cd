@@ -151,7 +151,7 @@ World:
 	HelpCommand:
 	BuildingInfluence:
 	ProductionQueueFromSelection:
-		ProductionPaletteWidget: PRODUCTION_PALETTE
+		ProductionTabsWidget: PRODUCTION_TABS
 	DomainIndex:
 	SmudgeLayer@SMALLSCORCH:
 		Type: SmallScorch
@@ -230,13 +230,13 @@ World:
 	SpawnMPUnits:
 		StartingUnitsClass: none
 	CrateSpawner:
-		Enabled: False
+		Enabled: True
 		Minimum: 1
-		Maximum: 6
-		SpawnInterval: 3000
+		Maximum: 1000
+		SpawnInterval: 300
 		WaterChance: 0
 		ValidGround: Clear, Rough, Road, DirtRoad, Tiberium, BlueTiberium
-		InitialSpawnDelay: 1500
+		InitialSpawnDelay: 300
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:

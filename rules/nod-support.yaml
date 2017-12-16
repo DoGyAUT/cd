@@ -13,7 +13,7 @@ NAWALL:
 	Tooltip:
 		Name: Concrete Wall
 	Health:
-		HP: 560
+		HP: 560000
 	BlocksProjectiles:
 		Height: 0c905
 	Crushable:
@@ -66,7 +66,7 @@ NASILO:
 		Bounds: 80, 48, -5, 0
 	-GivesBuildableArea:
 	Health:
-		HP: 840
+		HP: 840000
 	RevealsShroud:
 		Range: 5c673
 	RenderSprites:
@@ -105,7 +105,7 @@ NAFLAMER:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1680
+		HP: 1680000
 	RevealsShroud:
 		Range: 8c497
 	BodyOrientation:
@@ -178,7 +178,7 @@ NAGAT:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1680
+		HP: 1680000
 	RevealsShroud:
 		Range: 11c321
 	BodyOrientation:
@@ -246,7 +246,7 @@ NALASR:
 		Bounds: 40, 36, -8, -8
 	RequiresPower:
 	Health:
-		HP: 2520
+		HP: 2520000
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -309,7 +309,7 @@ NASAM:
 		Bounds: 40, 36, -3, -8
 	RequiresPower:
 	Health:
-		HP: 1680
+		HP: 1680000
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -362,7 +362,7 @@ NABUNKER:
 	Selectable:
 		Bounds: 40, 36, -3, -8
 	Health:
-		HP: 1820
+		HP: 1820000
 	RevealsShroud:
 		Range: 14c146
 	RenderRangeCircle:
@@ -405,7 +405,7 @@ NAOBEL:
 		Bounds: 88, 130, 0, -36
 	RequiresPower:
 	Health:
-		HP: 4200
+		HP: 4200000
 	RevealsShroud:
 		Range: 14c146
 	Armament@normalA:
@@ -466,6 +466,7 @@ NAPULS:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerEMPCannon: ^SupportPowerEMPCannon
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -483,7 +484,7 @@ NAPULS:
 		Bounds: 78, 54, 0, -12
 	RequiresPower:
 	Health:
-		HP: 3640
+		HP: 3640000
 	RevealsShroud:
 		Range: 5c673
 	Turreted:
@@ -492,13 +493,6 @@ NAPULS:
 	AttackTurreted:
 	AttackSounds:
 		Sounds: hunter2.aud
-	Armament:
-		Name: superweapon
-		Weapon: EMPulseCannon
-		LocalOffset: 212,0,1768
-		LocalYaw: 0,100
-		MuzzleSequence: muzzle
-		MuzzlePalette: effect50alpha
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
@@ -508,18 +502,6 @@ NAPULS:
 	ProvidesPrerequisite@buildingname:
 	RejectsOrders:
 		Except: Stop, Sell
-	FireArmamentPower@NodempPower:
-		OrderName: NodempPowerInfoOrder
-		ArmamentName: superweapon
-		Cursor: emp
-		Icon: emp
-		ChargeTime: 240
-		Description: E.M. Pulse
-		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
-		EndChargeSpeechNotification: EmPulseCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		AllowMultiple: false
-		PauseOnCondition: power-outage
 
 NAMISL:
 	Inherits: ^Building
@@ -527,6 +509,7 @@ NAMISL:
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerNuke: ^SupportPowerNuke
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -545,7 +528,7 @@ NAMISL:
 	Selectable:
 		Bounds: 75,48
 	Health:
-		HP: 8000
+		HP: 8000000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
@@ -557,40 +540,13 @@ NAMISL:
 	RequiresPower:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
-	NukePower:
-		Icon: nodpropasup
-		Cursor: nuke
-		OrderName: NukePowerInfoOrder
-		ChargeTime: 480
-		Description: Cluster Missile
-		LongDesc: Launches a conventional warhead\nat a target location.
-		MissilePalette: player
-		IsPlayerPalette: True
-		EndChargeSpeechNotification: ClusterMissileReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSound: icbm1.aud
-		MissileWeapon: ClusterMissile
-		SpawnOffset: 0,604,0
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		BeaconPoster:
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 125
-		PauseOnCondition: power-outage
 
 NATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@SupportPowerTiberianLaser: ^SupportPowerTiberianLaser
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -609,7 +565,7 @@ NATECH:
 	Selectable:
 		Bounds: 86, 58, 0, -4
 	Health:
-		HP: 8000
+		HP: 8000000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 		PauseOnCondition: power-outage
@@ -619,36 +575,13 @@ NATECH:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	HitShape:
-	DetonateWeaponPower@industrynodlaser:
-		Icon: nodindustrysup
-		Description: Tiberian Laser Cannon Alpha Strike
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		LongDesc: Fires a strong tiberian laser on the targetted area.
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		ChargeTime: 480
-		ActivationSequence: idle
-		Weapon: TiberiumBombIndustry
-		OrderName: nodindusup
-		Cursor: ioncannon
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
 
 NATMPL:
 	Inherits: ^Building
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@SupportPowerOrbitalLaser: ^SupportPowerOrbitalLaser
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 5000
@@ -669,7 +602,7 @@ NATMPL:
 	Selectable:
 		Bounds: 134, 120, 12, -12
 	Health:
-		HP: 8000
+		HP: 8000000
 	Power:
 		Amount: -400
 	WithIdleOverlay@LIGHTS:
@@ -677,36 +610,12 @@ NATMPL:
 	HitShape:
 	RequiresPower:
 	SupportPowerChargeBar:
-	DetonateWeaponPower@technologynodlaser:
-		Icon: nodtechnosup
-		Description: Kane's Light
-		DisplayTimerStances: Ally, Neutral, Enemy
-		DisplayBeacon: True
-		DisplayRadarPing: True
-		EndChargeSpeechNotification: IonCannonReady
-		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: MissileLaunchDetected
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSound: obelcharge01.aud
-		LongDesc: Fires a barrage of orbital obelisk laser strikes on the targetted area.
-		ChargeTime: 480
-		ActivationSequence: idle
-		Weapon: TechnologyLaserStarter
-		OrderName: nodtechsup
-		Cursor: ioncannon
-		CameraActor: camera
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		CameraRange: 10c0
-		CameraSpawnAdvance: 25
-		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
 
 NASTLH:
 	Inherits: ^Building
 	Inherits@2: ^2x5hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@SupportPowerCloaking: ^SupportPowerCloaking
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -720,7 +629,7 @@ NASTLH:
 		Footprint: xxxxx xxxxx
 		Dimensions: 5,2
 	Health:
-		HP: 1680
+		HP: 1680000
 	RevealsShroud:
 		Range: 5c673
 	WithIdleOverlay@pulse:
@@ -745,22 +654,5 @@ NASTLH:
 		AffectsParent: True
 	Selectable:
 		Bounds: 106, 60, 8, -15
-	GrantExternalConditionPower@emergencyrepairNod:
-		OrderName: CloakingFieldPower
+	GrantExternalConditionPower@SupportPowerCloaking:
 		Prerequisites: ~technology
-		Icon: cloakingfield
-		SelectTargetSpeechNotification: SelectTarget
-		LowPowerSpeechNotification: LowPower
-		EndChargeSpeechNotification: SupportPowerReady
-		Description: Cloaking Field
-		LongDesc: Cloaks all vehicles in the radius
-		Condition: cloak
-		OnFireSound: cloak5.aud
-		Sequence: idle
-		ChargeTime: 180
-		ArrowSequence: arrow
-		CircleSequence: circles
-		ClockSequence: clock
-		Range: 5
-		Duration: 0
-		PauseOnCondition: power-outage

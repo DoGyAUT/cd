@@ -16,7 +16,7 @@ GMCV:
 		VoiceSet: Gmcv
 		Volume: 2
 	Health:
-		HP: 2000
+		HP: 2000000
 	Mobile:
 		Speed: 30
 	RevealsShroud:
@@ -84,7 +84,7 @@ GHARV:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 1800
+		HP: 1800000
 	RevealsShroud:
 		Range: 8c497
 	RenderSprites:
@@ -122,7 +122,7 @@ APC:
 		TerrainSpeeds:
 			Water: 50
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 12c745
 	Cargo:
@@ -185,7 +185,7 @@ SMECH:
 		TurnSpeed: 5
 		Speed: 78
 	Health:
-		HP: 840
+		HP: 840000
 	RevealsShroud:
 		Range: 11c321
 	BodyOrientation:
@@ -238,7 +238,7 @@ VULTURE:
 		Interval: 13
 		RequiresCondition: walker
 	Health:
-		HP: 950
+		HP: 950000
 	RevealsShroud:
 		Range: 14c146
 	BodyOrientation:
@@ -296,7 +296,7 @@ GTMTNK:
 	GrantConditionOnMovement@engine:
 		Condition: tracks
 	Health:
-		HP: 1200
+		HP: 1200000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -342,7 +342,7 @@ GTHTNK:
 		Speed: 70
 		TurnSpeed: 3
 	Health:
-		HP: 1600
+		HP: 1600000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -404,7 +404,7 @@ HVR:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 500
+		HP: 500000
 	RevealsShroud:
 		Range: 15c570
 	Armament@primary:
@@ -448,7 +448,7 @@ AIRBLAST:
 		Speed: 65
 		TurnSpeed: 4
 	Health:
-		HP: 600
+		HP: 600000
 	RevealsShroud:
 		Range: 11c321
 	Transforms:
@@ -484,7 +484,7 @@ TRITON:
 		TurnSpeed: 5
 		Speed: 78
 	Health:
-		HP: 720
+		HP: 720000
 	RevealsShroud:
 		Range: 16c994
 	BodyOrientation:
@@ -541,7 +541,7 @@ TRITON:
 		Speed: 60
 		TurnSpeed: 3
 	Health:
-		HP: 2400
+		HP: 2400000
 	RevealsShroud:
 		Range: 12c745
 	Turreted:
@@ -576,9 +576,9 @@ TRITON:
 		MuzzlePalette: apolra50alpha
 	AttackTurreted:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RenderSprites:
@@ -623,7 +623,7 @@ MMCH:
 		Interval: 16
 		RequiresCondition: walker
 	Health:
-		HP: 1200
+		HP: 1200000
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -668,7 +668,7 @@ POSEIDON:
 		Speed: 57
 		TurnSpeed: 3
 	Health:
-		HP: 3900
+		HP: 3900000
 	RevealsShroud:
 		Range: 15c570
 	Turreted:
@@ -688,9 +688,9 @@ POSEIDON:
 		MuzzlePalette: apolra50alpha
 	AttackTurreted:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RenderSprites:
@@ -725,7 +725,7 @@ MMCH2:
 		Interval: 19
 		RequiresCondition: walker
 	Health:
-		HP: 3900
+		HP: 3900000
 	RevealsShroud:
 		Range: 12c745
 	BodyOrientation:
@@ -749,9 +749,9 @@ MMCH2:
 	WithMuzzleOverlay:
 	RenderSprites:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	DetectCloaked:
@@ -783,7 +783,7 @@ SONIC:
 		TurnSpeed: 3
 		Speed: 60
 	Health:
-		HP: 2200
+		HP: 2200000
 	RevealsShroud:
 		Range: 9c921
 	Armament@Color1:
@@ -822,7 +822,7 @@ BEHEMOTH:
 		Speed: 55
 		TurnSpeed: 3
 	Health:
-		HP: 700
+		HP: 700000
 	RevealsShroud:
 		Range: 8c497
 	Turreted:
@@ -874,7 +874,7 @@ JUGG:
 		Interval: 15
 		RequiresCondition: walker
 	Health:
-		HP: 900
+		HP: 900000
 	RevealsShroud:
 		Range: 11c321
 	Turreted:
@@ -961,7 +961,7 @@ CYCLOPS:
 			Veins: 100
 	-DamagedByTerrain@Veins:
 	Health:
-		HP: 500
+		HP: 500000
 	RevealsShroud:
 		Range: 9c921
 	Armament:
@@ -1007,9 +1007,9 @@ HMEC:
 		TurnSpeed: 2
 		Speed: 50
 	Health:
-		HP: 8500
+		HP: 8500000
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
@@ -1089,9 +1089,9 @@ IONTANK:
 		TurnSpeed: 2
 		Speed: 50
 	Health:
-		HP: 5000
+		HP: 5000000
 	SelfHealing:
-		Step: 1
+		Step: 1000
 		PercentageStep: 0
 		Delay: 1
 		HealIfBelow: 100
@@ -1148,7 +1148,7 @@ MARV:
 		Speed: 45
 		TurnSpeed: 3
 	Health:
-		HP: 6500
+		HP: 6500000
 	RevealsShroud:
 		Range: 14c745
 	AutoTarget:
@@ -1179,9 +1179,9 @@ MARV:
 		RecoilRecovery: 10
 	AttackTurreted:
 	SelfHealing:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 	RenderSprites:

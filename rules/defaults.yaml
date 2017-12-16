@@ -150,9 +150,9 @@
 		RequiresCondition: rank-elite && !rank-heroic
 		Modifier: 60
 	SelfHealing@heroic:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 		RequiresCondition: rank-heroic
@@ -251,9 +251,9 @@
 		RequiresCondition: rank-elite && !rank-heroic
 		Modifier: 60
 	SelfHealing@heroic:
-		Step: 1
+		Step: 333
 		PercentageStep: 0
-		Delay: 3
+		Delay: 1
 		HealIfBelow: 100
 		DamageCooldown: 200
 		RequiresCondition: rank-heroic
@@ -606,7 +606,7 @@
 	Inherits: ^BasicBuilding
 	-UpdatesPlayerStatistics:
 	Health:
-		HP: 900
+		HP: 900000
 	RevealsShroud:
 		Range: 5c673
 		MaxHeightDelta: 3
@@ -622,27 +622,13 @@
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 400
+		HP: 400000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 	RenderSprites:
 	AutoSelectionSize:
 	WithWallSpriteBody:
 	HitShape:
-
-^Crate:
-	HiddenUnderFog:
-	Tooltip:
-		Name: Crate
-	Crate:
-		Lifetime: 180
-		TerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins, Green, Pavement
-	RenderSprites:
-		Palette: terraindecoration
-	WithCrateBody:
-		Images: crate
-	CustomSelectionSize:
-		CustomBounds: 24,24
 
 ^Wall:
 	Inherits@0: ^ExistsInWorld
@@ -682,7 +668,7 @@
 	MustBeDestroyed:
 		RequiredForShortGame: False
 	Health:
-		HP: 500
+		HP: 500000
 	-GivesExperience:
 	HitShape:
 		Type: Rectangle
@@ -696,7 +682,7 @@
 	Valued:
 		Cost: 50
 	Health:
-		HP: 400
+		HP: 400000
 	LineBuildNode:
 		Types: wall, gate
 	-Building:
@@ -766,7 +752,7 @@
 	Inherits@FeatureBuffRepairInfantry: ^FeatureBuffRepairInfantry
 	DrawLineToTarget:
 	Health:
-		HP: 50
+		HP: 50000
 	Valued:
 		Cost: 100
 	RevealsShroud:
@@ -979,16 +965,16 @@
 		TerrainTypes: BlueTiberium, PurpleTiberium
 		Condition: tiberiumheal2
 	SelfHealing@Tiberium:
-		Step: 2
+		Step: 2000
 		PercentageStep: 1
 		Delay: 10
 		HealIfBelow: 100
 		DamageCooldown: 0
 		RequiresCondition: tiberiumheal
 	SelfHealing@StrongTiberium:
-		Step: 4
-		PercentageStep: 2
-		Delay: 10
+		Step: 2000
+		PercentageStep: 1
+		Delay: 5
 		HealIfBelow: 100
 		DamageCooldown: 0
 		RequiresCondition: tiberiumheal2
@@ -1397,7 +1383,7 @@
 		Condition: emergencyrepairs
 		Color: FFFFFF
 	SelfHealing@Erepairs:
-		Step: 10
+		Step: 10000
 		PercentageStep: 1
 		Delay: 13
 		HealIfBelow: 100
@@ -1820,7 +1806,7 @@
 	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
 	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
 	Health:
-		HP: 280
+		HP: 280000
 	HiddenUnderFog:
 		Type: GroundPosition
 	Tooltip:
@@ -1835,7 +1821,7 @@
 		RepairBuildings:
 		RearmBuildings:
 	Health:
-		HP: 280
+		HP: 280000
 	HiddenUnderFog:
 		Type: GroundPosition
 	ScriptTriggers:
@@ -1873,7 +1859,7 @@
 		RepairBuildings:
 		RearmBuildings:
 	Health:
-		HP: 280
+		HP: 280000
 	HiddenUnderFog:
 		Type: GroundPosition
 	RevealsShroud:
@@ -1976,7 +1962,7 @@
 	Inherits@2: ^SpriteActor
 	DrawLineToTarget:
 	Health:
-		HP: 100
+		HP: 100000
 	Mobile:
 		Speed: 28
 		TurnSpeed: 16
@@ -2040,75 +2026,10 @@
 		CooldownDuration: 250
 		ActiveDuration: 200
 
-^FireActor:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 71
-		TurnSpeed: 16
-		SharesCell: yes
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Bridge: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Green: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			RedTiberium: 100
-			Veins: 100
-			Water: 100
-	RenderSprites:
-		Palette: effect25alpha
-	RevealsShroud:
-		Range: 1c424
-		MaxHeightDelta: 3
-	SelectionDecorations:
-		SelectionBoxColor: 00FF00
-		Palette: pips
-	WithTextControlGroupDecoration:
-	HiddenUnderFog:
-	WithSpriteBody:
-	GrantPeriodicCondition@kill:
-		Condition: killfire
-		ActiveDuration: 50
-	GrantConditionOnTerrain@kill:
-		Condition: killfire
-		TerrainTypes: Water
-	Explodes:
-		Weapon: NapalmShrapnelSmudge
-		EmptyWeapon: NapalmShrapnelSmudge
-	KillsSelf:
-		RequiresCondition: killfire
-	HitShape:
-		Type: Circle
-			Radius: 256
-			VerticalTopOffset: 512
-	Chronoshiftable:
-		ReturnToOrigin: False
-
-^FireActorSlow:
-	Inherits@1: ^FireActor
-	GrantPeriodicCondition@kill:
-		CooldownDuration: 50
-	KillsSelf:
-		Delay: 0,20
-
-^FireActorFast:
-	Inherits@1: ^FireActor
-	GrantPeriodicCondition@kill:
-		CooldownDuration: 10
-	KillsSelf:
-		Delay: 0,5
-
 ^BlossomTree:
 	Inherits@1: ^SpriteActor
 	Health:
-		HP: 100
+		HP: 100000
 	Tooltip:
 		Name: Blossom Tree
 	RenderSprites:
@@ -2145,7 +2066,7 @@
 	Tooltip:
 		Name: Tree
 	Health:
-		HP: 100
+		HP: 100000
 	HitShape:
 		UseTargetableCellsOffsets: true
 	HitShape:
@@ -2219,7 +2140,7 @@
 		Speed: 160
 		RequiresCondition: !(empdisable && !invulnerability)
 	Health:
-		HP: 100
+		HP: 100000
 	RevealsShroud:
 		Range: 7c73
 	Selectable:
