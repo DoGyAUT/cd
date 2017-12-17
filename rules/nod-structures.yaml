@@ -2,6 +2,9 @@ NACNST:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -50,8 +53,6 @@ NACNST:
 	ProductionBar@Defense:
 		ProductionType: Defense.Nod
 	ProvidesRadar:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 144, 80, 0, -12
 	ProvidesPrerequisite@nod:
@@ -79,6 +80,9 @@ NAPOWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 200
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -93,7 +97,6 @@ NAPOWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Selectable:
@@ -105,9 +108,6 @@ NAPOWR:
 	WithIdleOverlay@SMOKE:
 		Sequence: idle-smoke
 		Palette: player50alpha
-	Power:
-		Amount: 200
-	ScalePowerWithHealth:
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -117,6 +117,9 @@ NAAPWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 300
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 201
@@ -131,7 +134,6 @@ NAAPWR:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 2,3
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Selectable:
@@ -149,9 +151,6 @@ NAAPWR:
 	WithIdleOverlay@SMOKE3:
 		Sequence: idle-smoke3
 		Palette: player50alpha
-	Power:
-		Amount: 300
-	ScalePowerWithHealth:
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -160,6 +159,9 @@ NIPROC:
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@4: ^ExploBuildingTibbig
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -202,8 +204,6 @@ NIPROC:
 	WithDockedOverlay@flame2:
 		Sequence: flame2
 		Palette: effect
-	Power:
-		Amount: -50
 	RenderSprites:
 		Image: NPROC
 	ProvidesPrerequisite@buildingname:
@@ -247,6 +247,9 @@ NAHAND:
 	Inherits@2: ^2x4hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 204
@@ -283,20 +286,8 @@ NAHAND:
 		Group: Infantry
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar:
-	Power:
-		Amount: -25
 	ProvidesPrerequisite@buildingname:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -305,7 +296,13 @@ NAWEAP:
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerEmergencyRepair: ^SupportPowerEmergencyRepair
+	Power@FeaturePowerConsumption:
+		Amount: -50
+	GrantExternalConditionPower@SupportPowerEmergencyRepair:
+		Prerequisites: ~industry
+		Icon: emergencyrepairs2
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -343,27 +340,12 @@ NAWEAP:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	ProductionBar:
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
 	WithProductionDoorOverlay@DOOR:
 	WithIdleOverlay@BIB:
 		Sequence: bib
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
-	GrantExternalConditionPower@SupportPowerEmergencyRepair:
-		Prerequisites: ~industry
-		Icon: emergencyrepairs2
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -372,9 +354,16 @@ NARADR:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerFrenzy: ^SupportPowerFrenzy
 	Inherits@SupportPowerScan: ^SupportPowerScan
 	Inherits@SupportPowerSubAmbush: ^SupportPowerSubAmbush
+	Power@FeaturePowerConsumption:
+		Amount: -75
+	GrantExternalConditionPower@SupportPowerFrenzy:
+		Prerequisites: ~propaganda
+	SpawnActorPower@SupportPowerSubAmbush:
+		Prerequisites: ~industry
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 206
@@ -393,13 +382,6 @@ NARADR:
 		Bounds: 96, 82, 0, -17
 	Health:
 		HP: 1680000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
@@ -408,24 +390,12 @@ NARADR:
 		Range: 16c942
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -75
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 21c218
 		CloakTypes: Underground
-	GrantExternalConditionPower@SupportPowerFrenzy:
-		Prerequisites: ~propaganda
-	SpawnActorPower@SupportPowerSubAmbush:
-		Prerequisites: ~industry
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -434,10 +404,21 @@ NAHPAD:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerHavoc: ^SupportPowerHavoc
 	Inherits@SupportPowerPropagandaInfantry: ^SupportPowerPropagandaInfantry
 	Inherits@SupportPowerFanatic: ^SupportPowerFanatic
 	Inherits@SupportPowerShadowTrooper: ^SupportPowerShadowTrooper
+	Power@FeaturePowerConsumption:
+		Amount: -50
+	ProduceActorPower@SupportPowerHavoc:
+		Prerequisites: industry
+	ParatroopersPower@SupportPowerPropagandaInfantry:
+		Prerequisites: ~propaganda
+	ParatroopersPower@SupportPowerFanatic:
+		Prerequisites: ~propaganda, naradr
+	ParatroopersPower@SupportPowerShadowTrooper:
+		Prerequisites: ~technology
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -467,10 +448,6 @@ NAHPAD:
 		Group: Air
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -482,29 +459,13 @@ NAHPAD:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: False
-	Power:
-		Amount: -50
 	Selectable:
 		Bounds: 78, 54, 0, -8
 	ProvidesPrerequisite@buildingname:
-	ProduceActorPower@SupportPowerHavoc:
-		Prerequisites: industry
-	ParatroopersPower@SupportPowerPropagandaInfantry:
-		Prerequisites: ~propaganda
-	ParatroopersPower@SupportPowerFanatic:
-		Prerequisites: ~propaganda, naradr
-	ParatroopersPower@SupportPowerShadowTrooper:
-		Prerequisites: ~technology
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -513,9 +474,18 @@ NAPYRA:
 	Inherits@2: ^4x4hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerVertigoNapalm: ^SupportPowerVertigoNapalm
 	Inherits@SupportPowerVertigoTiberium: ^SupportPowerVertigoTiberium
 	Inherits@SupportPowerVertigoSeismic: ^SupportPowerVertigoSeismic
+	Power@FeaturePowerConsumption:
+		Amount: -150
+	AirstrikePower@SupportPowerVertigoNapalm:
+		Prerequisites: naradr, ~propaganda
+	AirstrikePower@SupportPowerVertigoTiberium:
+		Prerequisites: naradr, ~industry
+	AirstrikePower@SupportPowerVertigoSeismic:
+		Prerequisites: naradr, ~technology
 	Buildable:
 		Queue: Building.Nod
 		BuildPaletteOrder: 208
@@ -534,8 +504,6 @@ NAPYRA:
 		HP: 3360000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -150
 	Production:
 		Produces: Tech.Nod
 		MoveIntoWorld: False
@@ -546,26 +514,10 @@ NAPYRA:
 		ReadyAudio: TechComplete
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	Exit:
 	ExitsDebugOverlay:
 	ProductionBar@Tech:
 	ProvidesPrerequisite@buildingname:
-	AirstrikePower@SupportPowerVertigoNapalm:
-		Prerequisites: naradr, ~propaganda
-	AirstrikePower@SupportPowerVertigoTiberium:
-		Prerequisites: naradr, ~industry
-	AirstrikePower@SupportPowerVertigoSeismic:
-		Prerequisites: naradr, ~technology
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 

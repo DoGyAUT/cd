@@ -12,7 +12,7 @@
 		Weapon: cleansingaura
 		ActivationSequence:
 		TargetCircleRange: 3c0
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerTeleporter:
 	ChronoshiftPower@SupportPowerTeleporter:
@@ -27,7 +27,7 @@
 		Duration: -1
 		KillCargo: False
 		DisplayRadarPing: True
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerNanoSwarm:
 	GrantExternalConditionPower@SupportPowerNanoSwarm:
@@ -43,7 +43,7 @@
 		DisplayRadarPing: True
 		Condition: invulnerability
 		Range: 2
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerMantaStrikeRun:
 	AirstrikePower@SupportPowerMantaStrikeRun:
@@ -64,7 +64,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerTotalMeltdown:
 	AirstrikePower@SupportPowerTotalMeltdown:
@@ -85,7 +85,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerOverload:
 	DetonateWeaponPower@SupportPowerOverload:
@@ -101,6 +101,7 @@
 		Weapon: Overload
 		ActivationSequence:
 		TargetCircleRange: 2c512
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerAnnihilator:
 	Armament@SupportPowerAnnihilator:
@@ -130,6 +131,7 @@
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 375
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	Turreted:
 		TurnSpeed: 2
 		InitialFacing: 50

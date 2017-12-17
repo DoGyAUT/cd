@@ -395,7 +395,6 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@fortification: ^FortificationUpgrades
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	GivesBuildableArea:
 		AreaTypes: building
 	Capturable:
@@ -2129,24 +2128,13 @@
 
 ^Defense:
 	Inherits@1: ^Building
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
 	RenderRangeCircle:
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	MustBeDestroyed:
 		RequiredForShortGame: False
 	RevealsShroud:
 		Range: 8c497
 	RevealOnFire:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 
 ^Train:
 	Inherits@1: ^EmpDisable
@@ -2227,10 +2215,6 @@
 		Palette: disabled
 	GrantConditionOnDisabled@DisabledOverlay:
 		Condition: disabled
-
-^AffectedByPowerOutage:
-	GrantConditionOnLowPower:
-		Condition: power-outage
 
 ^3x3hitshape:
 	HitShape:
@@ -2361,10 +2345,6 @@
 			BottomRight: 2560, 2560
 
 ^PowerplantEffects:
-	AffectedByPowerOutage:
-		Condition: power-outage-pp
-	Power:
-		RequiresCondition: !power-outage-pp
 	ExternalCondition@overload_active:
 		Condition: overload_active
 	PowerMultiplier@overload_active:
@@ -2394,9 +2374,6 @@
 		RequiresCondition: !overload_active
 
 ^SuperWeapon:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	RevealsShroud@revealhimself:
 		ValidStances: Neutral, Enemy
 		MaxHeightDelta: 3

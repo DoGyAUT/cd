@@ -3,6 +3,9 @@ KACNST:
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -54,8 +57,6 @@ KACNST:
 		Sequence: idle-lights
 	WithIdleOverlay@player:
 		Sequence: idle-player
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 144, 80, 0, -12
 	ProvidesPrerequisite@cabal:
@@ -85,6 +86,9 @@ KPR:
 	Inherits@3: ^3x3hitshape
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 200
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 301
@@ -99,7 +103,6 @@ KPR:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Selectable:
@@ -108,9 +111,6 @@ KPR:
 		HP: 1680000
 	RevealsShroud:
 		Range: 5c673
-	Power:
-		Amount: 200
-	ScalePowerWithHealth:
 	ExternalCondition@upgrade.photonreactors:
 		Condition: upgrade.photonreactors
 	PowerMultiplier@photonreactors:
@@ -125,6 +125,9 @@ KPROC:
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@4: ^ExploBuildingTibbig
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -166,8 +169,6 @@ KPROC:
 	WithDockedOverlay@flame:
 		Sequence: flame
 		Palette: effect
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	CustomSellValue:
 		Value: 500
@@ -180,7 +181,10 @@ CYBBAR:
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerCleansingAura: ^SupportPowerCleansingAura
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 304
@@ -216,28 +220,16 @@ CYBBAR:
 		Group: Infantry
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithProductionOverlay@LIGHTS:
 		Sequence: production-lights
 	WithIdleOverlay@LIGHTS2:
 		Sequence: idle-lights2
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -25
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -247,6 +239,9 @@ KAWEAP:
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -283,10 +278,6 @@ KAWEAP:
 		Group: Vehicle
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
@@ -299,16 +290,8 @@ KAWEAP:
 		Sequence: production-lights
 	WithIdleOverlay@BIB:
 		Sequence: bib
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -318,6 +301,9 @@ KARADR:
 	Inherits@3: ^ExploBuildingsmallcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -75
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 306
@@ -336,13 +322,6 @@ KARADR:
 		Bounds: 96, 82, 0, -17
 	Health:
 		HP: 1680000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
@@ -351,23 +330,15 @@ KARADR:
 		Range: 16c942
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -75
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -377,6 +348,9 @@ KAHPAD:
 	Inherits@3: ^ExploBuildingsmallcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -75
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -401,10 +375,6 @@ KAHPAD:
 		Group: Air
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -416,22 +386,14 @@ KAHPAD:
 		Sequence: idle-platform
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: False
-	Power:
-		Amount: -75
 	Selectable:
 		Bounds: 78, 54, 0, -8
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -441,11 +403,14 @@ KABTECH:
 	Inherits@3: ^ExploBuildingmediumcabal
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerTeleporter: ^SupportPowerTeleporter
 	Inherits@SupportPowerNanoSwarm: ^SupportPowerNanoSwarm
 	Inherits@SupportPowerMantaStrikeRun: ^SupportPowerMantaStrikeRun
 	Inherits@SupportPowerTotalMeltdown: ^SupportPowerTotalMeltdown
 	Inherits@SupportPowerOverload: ^SupportPowerOverload
+	Power@FeaturePowerConsumption:
+		Amount: -200
 	Buildable:
 		Queue: Building.Cabal
 		BuildPaletteOrder: 308
@@ -464,8 +429,6 @@ KABTECH:
 		HP: 3360000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -200
 	Production@Tech:
 		Produces: Tech.Cabal
 	ProductionQueue@Tech:
@@ -476,16 +439,11 @@ KABTECH:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	ProvidesPrerequisite@buildingname:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	Exit:
 	ExitsDebugOverlay:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 	Pluggable@plug1:
 		Offset: 2,3
 		Conditions:
@@ -625,11 +583,3 @@ KABTECH:
 	ProvidesPrerequisite@epic2:
 		Prerequisite: epic2
 		RequiresCondition: plug1.upgrade.epic2 || plug2.upgrade.epic2 || plug3.upgrade.epic2 || plug4.upgrade.epic2
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
-	RequiresBuildableArea:
-		AreaTypes: building

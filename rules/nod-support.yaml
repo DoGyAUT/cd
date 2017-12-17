@@ -46,6 +46,9 @@ NASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -10
 	Buildable:
 		Queue: Defense.Nod
 		BuildPaletteOrder: 203
@@ -81,8 +84,6 @@ NASILO:
 		PipColor: Green
 		PipCount: 10
 		Capacity: 1500
-	Power:
-		Amount: -10
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -93,6 +94,9 @@ NAFLAMER:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -105,9 +109,6 @@ NAFLAMER:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -143,8 +144,6 @@ NAFLAMER:
 		Weapon: FlamerTurretTiberium
 		LocalOffset: 990,-255,919
 		RequiresCondition: !upgrade.bluehell && upgrade.tibgas
-	Power:
-		Amount: -50
 	WithSpriteTurret:
 		Recoils: False
 	GrantConditionOnPrerequisite@upgrade2:
@@ -170,6 +169,9 @@ NAGAT:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -182,9 +184,6 @@ NAGAT:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -219,8 +218,6 @@ NAGAT:
 		MuzzlePalette: apolra50alpha
 		Recoil: 50
 		RecoilRecovery: 5
-	Power:
-		Amount: -50
 	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
@@ -242,6 +239,9 @@ NALASR:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -254,9 +254,6 @@ NALASR:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -8, -8
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 2520000
 	RevealsShroud:
@@ -293,8 +290,6 @@ NALASR:
 		RequiresCondition: upgrade.tiblaser && !upgrade.laser
 	WithSpriteTurret:
 		Recoils: False
-	Power:
-		Amount: -100
 	Cloak:
 		RequiresCondition: cloak
 	RenderDetectionCircle:
@@ -309,6 +304,9 @@ NASAM:
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -321,9 +319,6 @@ NASAM:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -353,8 +348,6 @@ NASAM:
 		Recoil: 25
 		RecoilRecovery: 10
 		RequiresCondition: upgrade.tibgas
-	Power:
-		Amount: -50
 	GrantConditionOnPrerequisite@upgrade3:
 		Condition: upgrade.tibgas
 		Prerequisites: upgrade.tibgas
@@ -372,6 +365,9 @@ NABUNKER:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -392,8 +388,6 @@ NABUNKER:
 		PortOffsets: 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
 		PortYaws: 0, 176, 341, 512, 682, 853, 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86
-	Power:
-		Amount: 0
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
@@ -409,6 +403,9 @@ NAOBEL:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -423,9 +420,6 @@ NAOBEL:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 130, 0, -36
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 4200000
 	RevealsShroud:
@@ -464,9 +458,7 @@ NAOBEL:
 		RequiresCondition: !charging
 		Image: naobel
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -150
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.stealth
 		Prerequisites: upgrade.stealth
@@ -490,7 +482,10 @@ NAPULS:
 	Inherits: ^Defense
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerEMPCannon: ^SupportPowerEMPCannon
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -506,9 +501,6 @@ NAPULS:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 78, 54, 0, -12
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	Health:
 		HP: 3640000
 	RevealsShroud:
@@ -518,8 +510,6 @@ NAPULS:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
-	Power:
-		Amount: -150
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
 	RejectsOrders:
@@ -533,7 +523,10 @@ NAMISL:
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerNuke: ^SupportPowerNuke
+	Power@FeaturePowerConsumption:
+		Amount: -400
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -555,23 +548,8 @@ NAMISL:
 		HP: 8000000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-	Power:
-		Amount: -400
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -580,7 +558,10 @@ NATECH:
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerTiberianLaser: ^SupportPowerTiberianLaser
+	Power@FeaturePowerConsumption:
+		Amount: -400
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -602,12 +583,7 @@ NATECH:
 		HP: 8000000
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -400
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	HitShape:
@@ -619,7 +595,10 @@ NATMPL:
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerOrbitalLaser: ^SupportPowerOrbitalLaser
+	Power@FeaturePowerConsumption:
+		Amount: -400
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 5000
@@ -640,14 +619,9 @@ NATMPL:
 		Bounds: 134, 120, 12, -12
 	Health:
 		HP: 8000000
-	Power:
-		Amount: -400
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	HitShape:
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	SupportPowerChargeBar:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -658,6 +632,9 @@ NASTLH:
 	Inherits@2: ^2x5hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@SupportPowerCloaking: ^SupportPowerCloaking
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -676,19 +653,10 @@ NASTLH:
 		Range: 5c673
 	WithIdleOverlay@pulse:
 		Sequence: pulse
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithRangeCircle:
 		Range: 16c994
 		Type: cloak
-	Power:
-		Amount: -150
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProximityExternalCondition:
 		Condition: cloak
 		RequiresCondition: !disabled
@@ -700,11 +668,5 @@ NASTLH:
 		Bounds: 106, 60, 8, -15
 	GrantExternalConditionPower@SupportPowerCloaking:
 		Prerequisites: ~technology
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building

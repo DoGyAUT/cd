@@ -1,6 +1,9 @@
 FACNST:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -53,8 +56,6 @@ FACNST:
 	WithIdleOverlay@FRONT:
 		Sequence: idle-front
 	WithBuildingPlacedOverlay:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 144, 80, 0, -12
 	ProvidesPrerequisite@forgotten:
@@ -82,6 +83,9 @@ FAPOWR:
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 200
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 401
@@ -96,7 +100,6 @@ FAPOWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Selectable:
@@ -105,15 +108,12 @@ FAPOWR:
 		HP: 1680000
 	RevealsShroud:
 		Range: 5c673
-	Power:
-		Amount: 200
 	WithIdleOverlay@SMOKE:
 		Sequence: idle-smoke
 		Palette: player50alpha
 	WithIdleOverlay@SMOKE2:
 		Sequence: idle-smoke2
 		Palette: player50alpha
-	ScalePowerWithHealth:
 	HitShape:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -122,6 +122,9 @@ FPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^5x3hitshapewithyoffset
 	Inherits@4: ^ExploBuildingTibbig
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 402
@@ -178,8 +181,6 @@ FPROC:
 		Palette: player50alpha
 	CustomSellValue:
 		Value: 500
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
 	RequiresBuildableArea:
@@ -189,6 +190,9 @@ FABAR:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 404
@@ -226,21 +230,9 @@ FABAR:
 		Group: Infantry
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar:
-	Power:
-		Amount: -25
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -248,6 +240,9 @@ FAWEAP:
 	Inherits: ^Building
 	Inherits@2: ^4x3hitshapewithyoffset
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -284,10 +279,6 @@ FAWEAP:
 		Group: Vehicle
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@FIRE:
 		Sequence: idle-fire
@@ -304,16 +295,8 @@ FAWEAP:
 	WithProductionDoorOverlay@DOOR:
 	WithIdleOverlay@BIB:
 		Sequence: bib
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -321,6 +304,9 @@ FARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -75
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 406
@@ -339,13 +325,6 @@ FARADR:
 		Bounds: 96, 82, 0, -17
 	Health:
 		HP: 1680000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
@@ -354,30 +333,22 @@ FARADR:
 		Range: 16c942
 	WithIdleOverlay@DISH1:
 		Sequence: idle-dish1
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithIdleOverlay@DISH2:
 		Sequence: idle-dish2
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithIdleOverlay@DISH3:
 		Sequence: idle-dish3
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithIdleOverlay@LIGHT:
 		Sequence: idle-light
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -75
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -385,6 +356,9 @@ FHOVEL:
 	Inherits: ^Building
 	Inherits@2: ^4x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 407
@@ -403,8 +377,6 @@ FHOVEL:
 		HP: 1400000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -50
 	Production@Tech:
 		Produces: Tech.Forg
 		MoveIntoWorld: False
@@ -418,20 +390,10 @@ FHOVEL:
 	Exit:
 	ExitsDebugOverlay:
 	ProductionBar:
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProvidesPrerequisite:
 		Prerequisite: barracks.upgraded
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -439,6 +401,9 @@ FAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -467,10 +432,6 @@ FAHPAD:
 		Group: Air
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -478,25 +439,22 @@ FAHPAD:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	ProductionBar:
-	Power:
-		Amount: -50
 	Selectable:
 		Bounds: 88, 66, 0, -5
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
 FATRADE:
 	Inherits: ^Building
 	Inherits@2: ^5x5hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerCrapJetBomber: ^SupportPowerCrapJetBomber
+	Power@FeaturePowerConsumption:
+		Amount: -100
+	AirstrikePower@SupportPowerCrapJetBomber:
+		Prerequisites: faradr
 	Buildable:
 		Queue: Building.Forg
 		BuildPaletteOrder: 409
@@ -515,11 +473,7 @@ FATRADE:
 		HP: 3360000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	AirstrikePower@SupportPowerCrapJetBomber:
-		Prerequisites: faradr
 	RequiresBuildableArea:
 		AreaTypes: building

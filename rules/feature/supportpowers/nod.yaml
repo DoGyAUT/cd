@@ -17,7 +17,7 @@
 		ClockSequence: clock
 		Range: 8
 		Duration: 450
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerScan:
 	SpawnActorPower@SupportPowerScan:
@@ -32,7 +32,7 @@
 		CircleSequence: circles
 		ClockSequence: clock
 		Sequence: idle
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerSubAmbush:
 	SpawnActorPower@SupportPowerSubAmbush:
@@ -50,7 +50,7 @@
 		SelectTargetSpeechNotification: SelectTarget
 		LowPowerSpeechNotification: LowPower
 		LaunchSpeechNotification: Reinforce
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerHavoc:
 	ProduceActorPower@SupportPowerHavoc:
@@ -71,7 +71,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerPropagandaInfantry:
 	ParatroopersPower@SupportPowerPropagandaInfantry:
@@ -94,7 +94,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerFanatic:
 	ParatroopersPower@SupportPowerFanatic:
@@ -116,7 +116,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerShadowTrooper:
 	ParatroopersPower@SupportPowerShadowTrooper:
@@ -138,7 +138,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerVertigoNapalm:
 	AirstrikePower@SupportPowerVertigoNapalm:
@@ -160,7 +160,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerVertigoTiberium:
 	AirstrikePower@SupportPowerVertigoTiberium:
@@ -182,7 +182,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerVertigoSeismic:
 	AirstrikePower@SupportPowerVertigoSeismic:
@@ -204,7 +204,7 @@
 		ArrowSequence: arrow
 		CircleSequence: circles
 		ClockSequence: clock
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerEMPCannon:
 	Armament@SupportPowerEMPCannon:
@@ -225,7 +225,7 @@
 		EndChargeSpeechNotification: EmPulseCannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: false
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
@@ -261,7 +261,7 @@
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 125
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithNukeLaunchAnimation:
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
@@ -290,7 +290,7 @@
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerOrbitalLaser:
 	DetonateWeaponPower@SupportPowerOrbitalLaser:
@@ -317,7 +317,7 @@
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 
 ^SupportPowerCloaking:
 	GrantExternalConditionPower@SupportPowerCloaking:
@@ -337,4 +337,4 @@
 		ClockSequence: clock
 		Range: 5
 		Duration: 0
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown

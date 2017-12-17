@@ -1120,14 +1120,15 @@ CITY22:
 
 CTDAM:
 	Inherits: ^CivBuilding
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 200
 	Tooltip:
 		Name: Hydroelectric Dam
 		Description: Provides power for other structures
 	Building:
 		Footprint: xx xx xx xx xx
 		Dimensions: 2, 5
-	Power:
-		Amount: 200
 	Health:
 		HP: 1000000
 	ProvidesPrerequisite:
@@ -1302,6 +1303,9 @@ GASAND:
 
 GALITE:
 	Inherits: ^Building
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -1314,8 +1318,6 @@ GALITE:
 		HP: 1100000
 	RevealsShroud:
 		Range: 2c848
-	Power:
-		Amount: 0
 	WithIdleOverlay@LIGHTING:
 		Sequence: lighting
 		Palette: alpha
@@ -1382,13 +1384,14 @@ NAMNTK:
 
 NTPYRA:
 	Inherits: ^CivBuilding
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -40
 	Tooltip:
 		Name: Nod Pyramid
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4, 4
-	Power:
-		Amount: -40
 	Health:
 		HP: 1500000
 	RenderSprites:
@@ -1421,6 +1424,9 @@ UFO:
 GASPOT:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1431,8 +1437,6 @@ GASPOT:
 		Dimensions: 1, 1
 	Selectable:
 		Bounds: 48, 82, 0, -25
-	Power:
-		Amount: 0
 	Health:
 		HP: 900000
 	RevealsShroud:
@@ -1447,6 +1451,9 @@ GASPOT:
 NASPOT:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1456,8 +1463,6 @@ NASPOT:
 		Dimensions: 1, 1
 	Selectable:
 		Bounds: 48, 82, 0, -25
-	Power:
-		Amount: 0
 	Health:
 		HP: 900000
 	RevealsShroud:
@@ -1472,6 +1477,9 @@ NASPOT:
 FASPOT:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1481,8 +1489,6 @@ FASPOT:
 		Dimensions: 1, 1
 	Selectable:
 		Bounds: 48, 82, 0, -25
-	Power:
-		Amount: 0
 	Health:
 		HP: 900000
 	RevealsShroud:
@@ -1497,6 +1503,9 @@ FASPOT:
 GACTWR:
 	Inherits: ^Defense
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -10
 	-WithSpriteBody:
 	WithWallSpriteBody:
 		Type: wall
@@ -1522,10 +1531,6 @@ GACTWR:
 		InitialFacing: 50
 	AttackTurreted:
 		RequiresCondition: tower.vulcan || tower.rocket || tower.sam
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	WithSpriteTurret@VULC:
 		RequiresCondition: tower.vulcan
 		Recoils: False
@@ -1565,8 +1570,6 @@ GACTWR:
 		Sequence: idle-lights
 	LineBuildNode:
 		Types: turret
-	Power@base:
-		Amount: -10
 	Power@turrets:
 		RequiresCondition: tower.vulcan || tower.rocket || tower.sam
 		Amount: -20
@@ -1581,17 +1584,14 @@ GACTWR:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
 GAVULC:
 	Inherits: ^BuildingPlug
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -20
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -1599,11 +1599,12 @@ GAVULC:
 		Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
 	Plug:
 		Type: tower.vulcan
-	Power:
-		Amount: -20
 
 GAROCK:
 	Inherits: ^BuildingPlug
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -20
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1611,11 +1612,12 @@ GAROCK:
 		Description: GDI Advanced base defense.\nDoes not require power to operate.\n  Strong vs Armored ground units\n  Weak vs Aircraft
 	Plug:
 		Type: tower.rocket
-	Power:
-		Amount: -20
 
 GACSAM:
 	Inherits: ^BuildingPlug
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -30
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -1623,5 +1625,3 @@ GACSAM:
 		Description: GDI Anti-Air base defense.\nDoes not require power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Plug:
 		Type: tower.sam
-	Power:
-		Amount: -30

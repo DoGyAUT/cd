@@ -1,6 +1,9 @@
 SACNST:
 	Inherits: ^Building
 	Inherits: ^3x3hitshape
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -46,8 +49,6 @@ SACNST:
 	ProductionBar@Defense:
 		ProductionType: Defense.Scrin
 	ProvidesRadar:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 96, 118, 0, -38
 	ProvidesPrerequisite@scrin:
@@ -75,6 +76,9 @@ SAPOWR:
 	Inherits@2: ^3x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 200
 	Buildable:
 		Queue: Building.Scrin
 		BuildPaletteOrder: 501
@@ -89,7 +93,6 @@ SAPOWR:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Selectable:
@@ -98,9 +101,6 @@ SAPOWR:
 		HP: 1680000
 	RevealsShroud:
 		Range: 5c673
-	Power:
-		Amount: 200
-	ScalePowerWithHealth:
 	HitShape:
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -108,6 +108,9 @@ SAPOWR:
 SPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -142,8 +145,6 @@ SPROC:
 		Actor: SHARV
 		SpawnOffset: 2,1
 		Facing: 160
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	CustomSellValue:
 		Value: 500
@@ -154,6 +155,9 @@ SPROC:
 SAPORTAL:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshapewithyoffset
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -201,10 +205,6 @@ SAPORTAL:
 		Group: Air
 		BuildDurationModifier: 60
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProductionBar@Infantry:
 		ProductionType: Infantry.Scrin
 		Group: Infantry
@@ -218,16 +218,8 @@ SAPORTAL:
 		Sequence: idle-warp
 	WithProductionOverlay@portal:
 		Sequence: production-portal
-	Power:
-		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -235,6 +227,9 @@ SANODE:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -75
 	Buildable:
 		Queue: Building.Scrin
 		BuildPaletteOrder: 504
@@ -251,31 +246,16 @@ SANODE:
 		Bounds: 96, 118, 0, -38
 	Health:
 		HP: 2240000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RevealsShroud:
 		Range: 16c942
-	Power:
-		Amount: -75
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		ReferencePoint: Center
 	RequiresBuildableArea:
 		AreaTypes: building
 
@@ -283,6 +263,9 @@ SASEED:
 	Inherits: ^Building
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	Buildable:
 		Queue: Building.Scrin
 		BuildPaletteOrder: 505
@@ -299,13 +282,8 @@ SASEED:
 		Bounds: 48, 48, 0, -12
 	Health:
 		HP: 3360000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	HitShape:
 	RequiresBuildableArea:
