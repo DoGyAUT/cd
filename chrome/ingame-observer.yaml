@@ -1,10 +1,16 @@
 Container@OBSERVER_WIDGETS:
 	Logic: MenuButtonsChromeLogic
+		StatisticsBasicKey: StatisticsBasic
+		StatisticsEconomyKey: StatisticsEconomy
+		StatisticsProductionKey: StatisticsProduction
+		StatisticsCombatKey: StatisticsCombat
+		StatisticsGraphKey: StatisticsGraph
 	Children:
 		SupportPowerTimer@SUPPORT_POWER_TIMER:
 			X: 10
 			Y: 40
 			Order: Descending
+		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		MenuButton@OPTIONS_BUTTON:
 			Width: 160
 			Height: 25
@@ -13,6 +19,7 @@ Container@OBSERVER_WIDGETS:
 			Key: escape
 			DisableWorldSounds: true
 		MenuButton@OBSERVER_STATS_BUTTON:
+			Key: StatisticsBasic
 			MenuContainer: INGAME_OBSERVERSTATS_BG
 			HideIngameUI: False
 			Pause: False
@@ -20,9 +27,8 @@ Container@OBSERVER_WIDGETS:
 			Y: 0
 			Width: 160
 			Height: 25
-			Text: Statistics (F1)
+			Text: Statistics
 			Font: Bold
-			Key: f1
 		Container@GAME_TIMER_BLOCK:
 			Logic: GameTimerLogic
 			X: (WINDOW_RIGHT - WIDTH) / 2
@@ -64,6 +70,8 @@ Container@OBSERVER_WIDGETS:
 			Children:
 				DropDownButton@SHROUD_SELECTOR:
 					Logic: ObserverShroudSelectorLogic
+						CombinedViewKey: ObserverCombinedView
+						WorldViewKey: ObserverWorldView
 					X: 15
 					Y: 15
 					Width: 220
@@ -74,8 +82,8 @@ Container@OBSERVER_WIDGETS:
 						Image@FLAG:
 							Width: 23
 							Height: 23
-							X: 4
-							Y: 2
+							X: 2
+							Y: 5
 						Label@LABEL:
 							X: 34
 							Width: 60
@@ -98,6 +106,9 @@ Container@OBSERVER_WIDGETS:
 							Y: 10
 							Width: 26
 							Height: 26
+							Key: Pause
+							TooltipText: Pause
+							TooltipContainer: TOOLTIP_CONTAINER
 							IgnoreChildMouseOver: true
 							Children:
 								Image@IMAGE_PAUSE:
@@ -111,6 +122,9 @@ Container@OBSERVER_WIDGETS:
 							Y: 10
 							Width: 26
 							Height: 26
+							Key: Pause
+							TooltipText: Play
+							TooltipContainer: TOOLTIP_CONTAINER
 							IgnoreChildMouseOver: true
 							Children:
 								Image@IMAGE_PLAY:
@@ -124,9 +138,9 @@ Container@OBSERVER_WIDGETS:
 							Width: 36
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedSlow
 							TooltipText: Slow speed
 							TooltipContainer: TOOLTIP_CONTAINER
-							VisualHeight: 0
 							Text: 50%
 							Font: TinyBold
 						Button@BUTTON_REGULAR:
@@ -135,9 +149,9 @@ Container@OBSERVER_WIDGETS:
 							Width: 38
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedRegular
 							TooltipText: Regular speed
 							TooltipContainer: TOOLTIP_CONTAINER
-							VisualHeight: 0
 							Text: 100%
 							Font: TinyBold
 						Button@BUTTON_FAST:
@@ -146,9 +160,9 @@ Container@OBSERVER_WIDGETS:
 							Width: 38
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedFast
 							TooltipText: Fast speed
 							TooltipContainer: TOOLTIP_CONTAINER
-							VisualHeight: 0
 							Text: 200%
 							Font: TinyBold
 						Button@BUTTON_MAXIMUM:
@@ -157,8 +171,8 @@ Container@OBSERVER_WIDGETS:
 							Width: 38
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedMax
 							TooltipText: Maximum speed
 							TooltipContainer: TOOLTIP_CONTAINER
-							VisualHeight: 0
 							Text: MAX
 							Font: TinyBold

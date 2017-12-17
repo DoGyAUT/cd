@@ -19,6 +19,7 @@
 
 ^Tech:
 	AlwaysVisible:
+	Interactable:
 
 ^EmpDisable:
 	WithColoredOverlay@EMPDISABLE:
@@ -74,7 +75,6 @@
 		UseClassicPerspectiveFudge: False
 	QuantizeFacingsFromSequence:
 	RenderSprites:
-	Interactable:
 
 ^TerrainOverlay:
 	AlwaysVisible:
@@ -633,7 +633,6 @@
 	HitShape:
 	RequiresBuildableArea:
 		AreaTypes: building
-	Interactable:
 
 ^Wall:
 	Inherits@0: ^ExistsInWorld
@@ -683,6 +682,7 @@
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 7
+	Interactable:
 
 ^Gate:
 	Inherits: ^Building
@@ -742,6 +742,7 @@
 		UseClassicPerspectiveFudge: False
 	RequiresBuildableArea:
 		AreaTypes: building
+	Interactable:
 
 ^Infantry:
 	Inherits@1: ^GainsExperienceInf
@@ -1849,6 +1850,7 @@
 		Interval: 2
 		MinDamage: Undamaged
 	HitShape:
+	Interactable:
 
 ^AircraftHusk:
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
@@ -1898,6 +1900,7 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 	HitShape:
+	Interactable:
 
 ^AircraftHuskPlane:
 	Inherits: ^AircraftHusk
@@ -2025,6 +2028,7 @@
 		ReturnToOrigin: False
 	ExplodeWeapon@Tiberium:
 		Weapon: Tiberium
+	Interactable:
 
 ^CloudsWeak:
 	Inherits: ^Clouds
@@ -2061,6 +2065,7 @@
 		UseTargetableCellsOffsets: true
 	RequiresBuildableArea:
 		AreaTypes: building
+	Interactable:
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -2085,6 +2090,7 @@
 	HitShape:
 	RequiresBuildableArea:
 		AreaTypes: building
+	Interactable:
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -2104,6 +2110,7 @@
 		UseTargetableCellsOffsets: true
 	RequiresBuildableArea:
 		AreaTypes: building
+	Interactable:
 
 ^Decoration:
 	Inherits@1: ^SpriteActor
@@ -2118,6 +2125,7 @@
 		UseTargetableCellsOffsets: true
 	RequiresBuildableArea:
 		AreaTypes: building
+	Interactable:
 
 ^Defense:
 	Inherits@1: ^Building

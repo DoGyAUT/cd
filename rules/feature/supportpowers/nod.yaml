@@ -226,6 +226,12 @@
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: false
 		PauseOnCondition: power-outage
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 300
+	AttackTurreted:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
 
 ^SupportPowerNuke:
 	NukePower@SupportPowerNuke:
@@ -257,6 +263,8 @@
 		CameraRemoveDelay: 125
 		PauseOnCondition: power-outage
 	WithNukeLaunchAnimation:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
 
 ^SupportPowerTiberianLaser:
 	DetonateWeaponPower@SupportPowerTiberianLaser:

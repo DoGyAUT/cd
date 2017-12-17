@@ -95,7 +95,7 @@ upgrade.nanoswarm:
 		Type: plug.upgrade.nanoswarm
 
 upgrade.combatreactors:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Advanced Combat Reactors
 	Buildable:
@@ -111,7 +111,7 @@ upgrade.combatreactors:
 		Type: plug.upgrade.combatreactors
 
 upgrade.mantastrike:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Manta Strike
 	Buildable:
@@ -127,7 +127,7 @@ upgrade.mantastrike:
 		Type: plug.upgrade.mantastrike
 
 upgrade.overload:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Overload
 	Buildable:
@@ -143,7 +143,7 @@ upgrade.overload:
 		Type: plug.upgrade.overload
 
 upgrade.epic1:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Fury
 	Buildable:
@@ -159,7 +159,7 @@ upgrade.epic1:
 		Type: plug.upgrade.epic1
 
 upgrade.epic2:
-	Inherits: ^KAUPGRADE
+	Inherits: ^BuildingPlug
 	Tooltip:
 		Name: Gargantua
 	Buildable:
@@ -173,9 +173,3 @@ upgrade.epic2:
 		Image: GARGANTUA
 	Plug:
 		Type: plug.upgrade.epic2
-
-^KAUPGRADE:
-	Inherits@hitshape: ^1x1hitshape
-	Inherits@BasicBuilding: ^BasicBuilding
-	KillsSelf:
-		RemoveInstead: True
