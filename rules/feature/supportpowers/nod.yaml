@@ -209,6 +209,7 @@
 ^SupportPowerEMPCannon:
 	Armament@SupportPowerEMPCannon:
 		Name: SupportPowerEMPCannon
+		Turret: SupportPowerEMPCannon
 		Weapon: EMPulseCannon
 		LocalOffset: 212,0,1768
 		LocalYaw: 0,100
@@ -226,12 +227,12 @@
 		SelectTargetSpeechNotification: SelectTarget
 		AllowMultiple: false
 		PauseOnCondition: FeaturePowerConsumptionPowerDown
-	Turreted:
+	Turreted@SupportPowerEMPCannon:
+		Turret: SupportPowerEMPCannon
 		TurnSpeed: 10
 		InitialFacing: 300
-	AttackTurreted:
-	BodyOrientation:
-		UseClassicPerspectiveFudge: False
+		RealignDelay: -1
+	AttackTurreted@SupportPowerEMPCannon:
 
 ^SupportPowerNuke:
 	NukePower@SupportPowerNuke:
@@ -262,9 +263,7 @@
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 125
 		PauseOnCondition: FeaturePowerConsumptionPowerDown
-	WithNukeLaunchAnimation:
-	BodyOrientation:
-		UseClassicPerspectiveFudge: False
+	WithNukeLaunchAnimation@SupportPowerNuke:
 
 ^SupportPowerTiberianLaser:
 	DetonateWeaponPower@SupportPowerTiberianLaser:

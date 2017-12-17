@@ -106,6 +106,7 @@
 ^SupportPowerAnnihilator:
 	Armament@SupportPowerAnnihilator:
 		Weapon: OrbitalProjectile
+		Turret: SupportPowerAnnihilator
 		LocalOffset: 1000,0,1500
 		Name: SupportPowerAnnihilator
 	FireArmamentPower@SupportPowerAnnihilator:
@@ -132,9 +133,9 @@
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 375
 		PauseOnCondition: FeaturePowerConsumptionPowerDown
-	Turreted:
+	Turreted@SupportPowerAnnihilator:
+		Turret: SupportPowerAnnihilator
 		TurnSpeed: 2
 		InitialFacing: 50
-	AttackTurreted:
-	BodyOrientation:
-		UseClassicPerspectiveFudge: False
+		RealignDelay: -1
+	AttackTurreted@SupportPowerAnnihilator:
