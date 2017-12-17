@@ -84,6 +84,8 @@ GASILO:
 	Power:
 		Amount: -10
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMG:
 	Inherits: ^Defense
@@ -105,7 +107,9 @@ GAMG:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -118,7 +122,7 @@ GAMG:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -150,6 +154,14 @@ GAMG:
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMG2:
 	Inherits: ^Defense
@@ -171,7 +183,9 @@ GAMG2:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 2520000
 	RevealsShroud:
@@ -184,7 +198,7 @@ GAMG2:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -244,6 +258,14 @@ GAMG2:
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GASENTUR:
 	Inherits: ^Defense
@@ -265,7 +287,9 @@ GASENTUR:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -282,7 +306,7 @@ GASENTUR:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -304,6 +328,14 @@ GASENTUR:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMIS:
 	Inherits: ^Defense
@@ -323,7 +355,9 @@ GAMIS:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -336,7 +370,7 @@ GAMIS:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-sam
@@ -358,6 +392,14 @@ GAMIS:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GACAN:
 	Inherits: ^Defense
@@ -379,7 +421,9 @@ GACAN:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -392,7 +436,7 @@ GACAN:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-rpg
@@ -417,6 +461,14 @@ GACAN:
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMORTAR:
 	Inherits: ^Defense
@@ -439,7 +491,9 @@ GAMORTAR:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1400000
 	RevealsShroud:
@@ -452,7 +506,7 @@ GAMORTAR:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-mortar
@@ -477,6 +531,14 @@ GAMORTAR:
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FTWR:
 	Inherits: ^Defense
@@ -494,11 +556,13 @@ FTWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		Adjacent: 8
 	GivesBuildableArea:
+		AreaTypes: building
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 3000000
 	RevealsShroud:
@@ -516,7 +580,7 @@ FTWR:
 		InitialFacing: 85
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	WithSpriteTurret@cannon:
 		Recoils: True
 		Sequence: turret-cnnd
@@ -561,6 +625,15 @@ FTWR:
 	ActorLostNotification:
 		Notification: CriticalStructureLost
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 
 GAFORT:
 	Inherits: ^Defense
@@ -608,6 +681,8 @@ GAFORT:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPLUG2:
 	Inherits: ^BuildingPlug
@@ -642,14 +717,17 @@ GAPLUG:
 		Name: GDI Upgrade Center
 	Selectable:
 		Bounds: 115,104,0,-24
+		DecorationBounds: 115,104,0,-24
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 2,3
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 	WithIdleOverlay@LIGHTS:
@@ -696,9 +774,15 @@ GAPLUG:
 		Sequence: idle-hunterseekerb
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 115,104,0,-24
 	FrozenUnderFog:
 	HitShape:
 	RevealsShroud@revealhimself:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
-
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building

@@ -83,6 +83,8 @@ NASILO:
 		Capacity: 1500
 	Power:
 		Amount: -10
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NAFLAMER:
 	Inherits: ^Defense
@@ -103,7 +105,9 @@ NAFLAMER:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -155,6 +159,8 @@ NAFLAMER:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NAGAT:
 	Inherits: ^Defense
@@ -176,7 +182,9 @@ NAGAT:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -224,6 +232,8 @@ NAGAT:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NALASR:
 	Inherits: ^Defense
@@ -244,7 +254,9 @@ NALASR:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -8, -8
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 2520000
 	RevealsShroud:
@@ -289,6 +301,8 @@ NALASR:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NASAM:
 	Inherits: ^Defense
@@ -307,7 +321,9 @@ NASAM:
 	Building:
 	Selectable:
 		Bounds: 40, 36, -3, -8
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 1680000
 	RevealsShroud:
@@ -346,6 +362,8 @@ NASAM:
 		RequiresCondition: cloak
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NABUNKER:
 	Inherits: ^Defense
@@ -381,6 +399,8 @@ NABUNKER:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NAOBEL:
 	Inherits: ^Defense
@@ -403,7 +423,9 @@ NAOBEL:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 130, 0, -36
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 4200000
 	RevealsShroud:
@@ -461,6 +483,8 @@ NAOBEL:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NAPULS:
 	Inherits: ^Defense
@@ -482,7 +506,9 @@ NAPULS:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 78, 54, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 3640000
 	RevealsShroud:
@@ -502,6 +528,8 @@ NAPULS:
 	ProvidesPrerequisite@buildingname:
 	RejectsOrders:
 		Except: Stop, Sell
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NAMISL:
 	Inherits: ^Building
@@ -534,12 +562,22 @@ NAMISL:
 	Power:
 		Amount: -400
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
-	RequiresPower:
+		PowerdownCondition: powerdown
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NATECH:
 	Inherits: ^Building
@@ -571,10 +609,14 @@ NATECH:
 		PauseOnCondition: power-outage
 	Power:
 		Amount: -400
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 NATMPL:
 	Inherits: ^Building
@@ -596,7 +638,6 @@ NATMPL:
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
-		Adjacent: 3
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
 	Selectable:
@@ -608,8 +649,13 @@ NATMPL:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	HitShape:
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	SupportPowerChargeBar:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 3
 
 NASTLH:
 	Inherits: ^Building
@@ -640,11 +686,13 @@ NASTLH:
 		Type: cloak
 	Power:
 		Amount: -150
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProximityExternalCondition:
 		Condition: cloak
 		RequiresCondition: !disabled
@@ -656,3 +704,11 @@ NASTLH:
 		Bounds: 106, 60, 8, -15
 	GrantExternalConditionPower@SupportPowerCloaking:
 		Prerequisites: ~technology
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building

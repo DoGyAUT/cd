@@ -4,7 +4,7 @@ HuskGun:
 	ReloadDelay: 30
 	Range: 7c73
 	Burst: 5
-	BurstDelay: 2
+	BurstDelays: 2
 	Report: rifle_c1.aud, rifle_c2.aud, rifle_c3.aud
 	Projectile: BulletAS
 		LaunchAngle: 45
@@ -21,7 +21,7 @@ OverseerGun:
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 65
 	Burst: 5
-	BurstDelay: 2
+	BurstDelays: 2
 	Range: 7c73
 	Report: fg42_01.aud, fg42_02.aud, fg42_03.aud
 	Projectile: BulletAS
@@ -99,7 +99,7 @@ VanguardGun:
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 100
 	Burst: 10
-	BurstDelay: 6
+	BurstDelays: 6
 	Range: 4c248
 	Report: shotgun1.aud, shotgun2.aud,shotgun4.aud
 	Projectile: BulletAS
@@ -348,7 +348,7 @@ CannonHuskGun:
 	ReloadDelay: 150
 	Range: 8c497
 	Burst: 4
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
 	Projectile: BulletAS
 		Speed: 1c424
@@ -392,7 +392,7 @@ HarbingerMachal:
 	ValidTargets: Ground
 	Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
 	Burst: 20
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: Missile
 		HorizontalRateOfTurn: 3
 		Blockable: true
@@ -437,7 +437,7 @@ DroneMachal:
 	ValidTargets: Aircraft
 	Report: machal01.aud, machal02.aud, machal03.aud, machal04.aud
 	Burst: 10
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 		Image: energyBullet
@@ -477,7 +477,7 @@ PteroisMachal:
 	ValidTargets: Ground
 	Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
 	Burst: 8
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: Missile
 		RangeLimit: 28c291
 		Shadow: true
@@ -516,7 +516,7 @@ MantaMachal:
 	Inherits@wh: ^PlasmaWH
 	Range: 10c0
 	Burst: 61
-	BurstDelay: 10
+	BurstDelays: 10
 	ReloadDelay: 10000
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 	FirstBurstTargetOffset: -10c0,0,0
@@ -563,7 +563,7 @@ CommandoLaserFire:
 	Range: 9c921
 	Report: burster01.aud, burster02.aud, burster03.aud, burster04.aud, burster05.aud
 	Burst: 40
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 		LaunchAngle: 45
@@ -640,7 +640,7 @@ CabalObeliskLaser:
 	Inherits@wh: ^LaserWH
 	ReloadDelay: 100
 	Burst: 20
-	BurstDelay: 2
+	BurstDelays: 2
 	Range: 12c745
 	Report: cablaser01.aud
 	Projectile: LaserZap
@@ -736,7 +736,7 @@ TarantulaLaser:
 	ReloadDelay: 60
 	Range: 9c921
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	Report: cablaser01.aud, bigggun1.aud
 	Projectile: LaserZap
 		Color: 0064FF
@@ -773,7 +773,7 @@ TarantulaLaserAA:
 	ReloadDelay: 3
 	Range: 16c994
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	Report: cablaser01.aud
 	ValidTargets: Aircraft
 	Projectile: LaserZap
@@ -817,7 +817,7 @@ SabercutTesla:
 	Range: 10c621
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 3
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: TeslaZap
 		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
@@ -871,7 +871,7 @@ SkirmisherLaserFire:
 	Range: 5c673
 	MinRange: 1c424
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
@@ -914,7 +914,7 @@ HarbingerLaserFire:
 	ReloadDelay: 120
 	Range: 10c621
 	Burst: 3
-	BurstDelay: 5
+	BurstDelays: 5
 	Report: bigggun1.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: LaserZap
@@ -951,7 +951,7 @@ GargantuaLaser:
 	ReloadDelay: 70
 	Range: 9c921
 	Burst: 8
-	BurstDelay: 5
+	BurstDelays: 5
 	Report: cablaser01.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: LaserZap
@@ -986,7 +986,7 @@ ReaperCannon:
 	Inherits@wh: ^APWH
 	ReloadDelay: 120
 	Burst: 2
-	BurstDelay: 5
+	BurstDelays: 5
 	Projectile: Missile
 		HorizontalRateOfTurn: 2
 		Shadow: true
@@ -1014,7 +1014,7 @@ ShockwaveTesla:
 	Range: 6c11
 	Report: lastur2.aud, lastur3.aud, lastur4.aud
 	Burst: 2
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: TeslaZap
 		Palette: apolcyan
 	Warhead@1Dam: SpreadDamage
@@ -1160,7 +1160,7 @@ WebLauncher:
 	ReloadDelay: 200
 	Range: 14c146
 	Burst: 3
-	BurstDelay: 5
+	BurstDelays: 5
 	Report: fireweb1.aud
 	Projectile: BulletAS
 		Speed: 0c362
@@ -1191,7 +1191,7 @@ ReaperMissile:
 	ReloadDelay: 100
 	Range: 9c559
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -1241,7 +1241,7 @@ ReaperClusterMissile:
 		RangeLimit: 5c300
 		TerrainHeightAware: true
 	Burst: 1
-	BurstDelay: 1
+	BurstDelays: 1
 	Warhead@1Dam: SpreadDamage
 		AffectsParent: True
 		Spread: 0c181
@@ -1293,7 +1293,7 @@ Hightensionbomb:
 	ReloadDelay: 10000
 	Range: 1c100
 	Burst: 1
-	BurstDelay: 1
+	BurstDelays: 1
 	Projectile: BulletAS
 		Inaccuracy: 0c256
 		Speed: 0c158
@@ -1458,13 +1458,12 @@ overload:
 		ValidTargets: Ground, Aircraft
 		ValidStances: None, Enemy, Neutral, Ally
 
-####SUPERWEAPON####
 OrbitalProjectile:
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 	Range: 1000000c0
 	MinRange: 8c497
 	Burst: 6
-	BurstDelay: 60
+	BurstDelays: 60
 	Inherits: ^ShellHE
 	ReloadDelay: 100
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
@@ -1587,7 +1586,7 @@ OrbitalProjectileCopy:
 		ContrailLength: 80
 		ContrailColor: FFFFFF
 		ContrailWidth: 0c71
-		-Sequences
+		-Sequences:
 	Warhead@1Dam: SpreadDamage
 		AffectsParent: True
 		Spread: 2c524

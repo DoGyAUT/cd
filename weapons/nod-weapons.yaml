@@ -51,7 +51,7 @@ PyradonGun:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 80
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Range: 5c673
 	Report: flamtnk1.aud
 	Projectile: BulletAS
@@ -77,7 +77,7 @@ PyradonGunBlue:
 	ReloadDelay: 80
 	Range: 5c673
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Report: flamtnk1.aud
 	Projectile: BulletAS
 		Speed: 0c362
@@ -241,7 +241,7 @@ EliteCadreGun:
 	Range: 7c73
 	Report: carbine_n1.aud, carbine_n2.aud, carbine_n3.aud
 	Burst: 4
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
@@ -478,7 +478,7 @@ RaiderGunVisual:
 	Inherits@wh: ^SuperBulletWH
 	ReloadDelay: 75
 	Range: 8c497
-	BurstDelay: 2
+	BurstDelays: 2
 	Burst: 20
 	ValidTargets: Ground, Aircraft
 	Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
@@ -499,7 +499,7 @@ RaiderGunAttack:
 	Inherits: RaiderGunVisual
 	ReloadDelay: 75
 	Range: 8c497
-	BurstDelay: 2
+	BurstDelays: 2
 	Burst: 20
 	Projectile: BulletAS
 		Image:
@@ -678,7 +678,7 @@ EMPulseCannon:
 	Range: 353c567
 	MinRange: 8c497
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: plsecan2.aud
 	ValidTargets: Ground
 	Projectile: BulletAS
@@ -751,7 +751,7 @@ RookieGun:
 	Range: 7c73
 	Report: rifle_n1.aud, rifle_n2.aud
 	Burst: 2
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
@@ -770,7 +770,7 @@ ConfessorGun:
 	Range: 7c73
 	Report: confcarbine01.aud, confcarbine02.aud, confcarbine03.aud
 	Burst: 3
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
@@ -811,7 +811,7 @@ AcolyteGun:
 
 AcolyteGunE:
 	Inherits: AcolyteGun
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Image: bluetiberiumBullet
 		ContrailColor: 5980FF
@@ -1254,7 +1254,7 @@ BansheeCannon:
 	Range: 9c921
 	Report: scrin5b.aud
 	Burst: 5
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Image: dualproton
 		Speed: 2c848
@@ -1329,7 +1329,7 @@ BansheeSpecial:
 BansheeSpecialE:
 	Inherits: BansheeSpecial
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 
 BansheeCannonAA:
 	Inherits@wh: ^PlasmaWH
@@ -1339,7 +1339,7 @@ BansheeCannonAA:
 	ValidTargets: Aircraft
 	Report: scrin5b.aud
 	Burst: 10
-	BurstDelay: 8
+	BurstDelays: 8
 	Projectile: BulletAS
 		Image: dualproton
 		Speed: 4c248
@@ -1376,7 +1376,7 @@ MontaukProton:
 	ValidTargets: Ground
 	Report: plasma01.aud, plasma02.aud, plasma03.aud, plasma04.aud, plasma05.aud
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Projectile: BulletAS
 		Image: TORPEDO
 		RangeLimit: 20c0
@@ -1465,7 +1465,7 @@ VenomCannon:
 	ValidTargets: Ground
 	Report: cygun1.aud
 	Burst: 20
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Speed: 0c724
 		Inaccuracy: 0c724
@@ -1488,7 +1488,7 @@ HydraCannon:
 	ValidTargets: Ground
 	Report: tsgun4.aud
 	Burst: 50
-	BurstDelay: 2
+	BurstDelays: 2
 	Projectile: BulletAS
 		Speed: 0c724
 		Inaccuracy: 0c724
@@ -1510,7 +1510,7 @@ HavocCannon:
 	ValidTargets: Ground
 	Report: quadcannon1.aud
 	Burst: 10
-	BurstDelay: 6
+	BurstDelays: 6
 	Projectile: BulletAS
 		Speed: 0c724
 		Inaccuracy: 0c724
@@ -1538,7 +1538,7 @@ RavenCannon:
 	MinRange: 4c248
 	Report: mg6.aud
 	Burst: 20
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Speed: 2c124
 		Inaccuracy: 1c786
@@ -1558,7 +1558,7 @@ RavenCannonAA:
 	ValidTargets: Aircraft
 	Report: mg6.aud
 	Burst: 20
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Speed: 3c548
 		Inaccuracy: 0c724
@@ -1815,7 +1815,7 @@ HydraLaserFire:
 	Range: 7c0
 	MinRange: 1c424
 	Burst: 4
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: lasergun01.aud, lasergun02.aud, lasergun03.aud, lasergun04.aud, lasergun05.aud, lasergun06.aud, lasergun07.aud, lasergun08.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
@@ -1844,7 +1844,7 @@ HavocLaserFire:
 	Inherits: ^BasicLaser
 	Inherits@wh: ^LaserWH
 	Burst: 3
-	BurstDelay: 3
+	BurstDelays: 3
 	ReloadDelay: 25
 	Range: 8c0
 	MinRange: 1c424
@@ -1876,7 +1876,7 @@ FlamerTurretBlueFireballLauncher:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 50
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Range: 7c435
 	Report: firstrm1.aud
 	Projectile: BulletAS
@@ -1916,7 +1916,7 @@ FlamerTurretFireballLauncher:
 	Inherits@wh: ^FireWH
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Range: 7c435
 	Report: flamtnk1.aud
 	Projectile: BulletAS
@@ -1956,7 +1956,7 @@ FlamerTurretTiberium:
 	Inherits@wh: BlueFireballLauncher
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Range: 7c435
 	Report: flamtnk1.aud
 	Projectile: BulletAS
@@ -2072,7 +2072,7 @@ BikeMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 5
+	BurstDelays: 5
 	Range: 9c559
 	Report: misl1.aud
 	ValidTargets: Ground
@@ -2107,7 +2107,7 @@ StealthTankMissile:
 	ReloadDelay: 175
 	Range: 12c745
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -2125,7 +2125,7 @@ StealthTankMissileEMP:
 	ReloadDelay: 175
 	Range: 12c745
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -2157,7 +2157,7 @@ StealthTankMissileAA:
 	ReloadDelay: 100
 	Range: 14c146
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
@@ -2177,7 +2177,7 @@ HailstormMissile:
 	MinRange: 4c248
 	Range: 19c818
 	Burst: 8
-	BurstDelay: 1
+	BurstDelays: 1
 	Report: rocket01.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -2199,7 +2199,7 @@ HailstormMissileAA:
 	Inherits: HailstormMissile
 	ReloadDelay: 220
 	Burst: 8
-	BurstDelay: 10
+	BurstDelays: 10
 	ValidTargets: Aircraft
 	Projectile: Missile
 		Inaccuracy: 0c724
@@ -2317,7 +2317,7 @@ HydraMissiles:
 	MinRange: 1c424
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	Burst: 6
-	BurstDelay: 6
+	BurstDelays: 6
 	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 0c636
@@ -2383,7 +2383,7 @@ SAMSiteMissile:
 	Range: 11c321
 	ReloadDelay: 75
 	Burst: 3
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
@@ -2416,7 +2416,7 @@ SAMSiteMissileTiberium:
 	Range: 11c321
 	ReloadDelay: 75
 	Burst: 3
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: rocket01.aud, rocket02.aud, rocket03.aud, rocket04.aud, rocket05.aud, rocket06.aud
 	ValidTargets: Aircraft
 	Projectile: Missile
@@ -2678,7 +2678,6 @@ termitegunshrapnelblue1:
 		Explosions: small_flash
 		ExplosionPalette: light2
 
-####SUPERWEAPONS####
 ClusterMissile:
 	Inherits: ^ShellHE
 	Inherits@wh: ^HEWH

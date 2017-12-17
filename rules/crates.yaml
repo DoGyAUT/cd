@@ -9,8 +9,8 @@
 		Palette: terraindecoration
 	WithCrateBody:
 		Images: crate
-	CustomSelectionSize:
-		CustomBounds: 24,24
+	Interactable:
+		Bounds: 24,24
 
 CRATE:
 	Inherits: ^Crate
@@ -292,198 +292,232 @@ SupportPowerCleansingAura:
 	DetonateWeaponPower@cleansingaura:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerTeleporter:
 	Inherits: ^SupportPowerTeleporter
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ChronoshiftPower@SupportPowerTeleporter:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerNanoSwarm:
 	Inherits: ^SupportPowerNanoSwarm
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerNanoSwarm:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerMantaStrikeRun:
 	Inherits: ^SupportPowerMantaStrikeRun
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerMantaStrikeRun:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerTotalMeltdown:
 	Inherits: ^SupportPowerTotalMeltdown
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerTotalMeltdown:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerOverload:
 	Inherits: ^SupportPowerOverload
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerOverload:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerAnnihilator:
 	Inherits: ^SupportPowerAnnihilator
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	FireArmamentPower@SupportPowerAnnihilator:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerCrapJetBomber:
 	Inherits: ^SupportPowerCrapJetBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerCrapJetBomber:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerFortification:
 	Inherits: ^SupportPowerFortification
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerFortification:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerArtillery:
 	Inherits: ^SupportPowerArtillery
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerArtillery:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerOrcaBomber:
 	Inherits: ^SupportPowerOrcaBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOrcaBomber:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerOXBomber:
 	Inherits: ^SupportPowerOXBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOXBomber:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerOrcaScout:
 	Inherits: ^SupportPowerOrcaScout
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOrcaScout:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerEmergencyRepair:
 	Inherits: ^SupportPowerEmergencyRepair
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerEmergencyRepair:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerZoneCommander:
 	Inherits: ^SupportPowerZoneCommander
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerZoneCommander:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerPoseidon:
 	Inherits: ^SupportPowerPoseidon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerPoseidon:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerHellfire:
 	Inherits: ^SupportPowerHellfire
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerHellfire:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerTitan:
 	Inherits: ^SupportPowerTitan
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerTitan:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerIonCannon:
 	Inherits: ^SupportPowerIonCannon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerIonCannon:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerFrenzy:
 	Inherits: ^SupportPowerFrenzy
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerFrenzy:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerScan:
 	Inherits: ^SupportPowerScan
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	SpawnActorPower@SupportPowerScan:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerSubAmbush:
 	Inherits: ^SupportPowerSubAmbush
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	SpawnActorPower@SupportPowerSubAmbush:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerHavoc:
 	Inherits: ^SupportPowerHavoc
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ProduceActorPower@SupportPowerHavoc:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerPropagandaInfantry:
 	Inherits: ^SupportPowerPropagandaInfantry
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerPropagandaInfantry:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerFanatic:
 	Inherits: ^SupportPowerFanatic
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerFanatic:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerShadowTrooper:
 	Inherits: ^SupportPowerShadowTrooper
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerShadowTrooper:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerVertigoNapalm:
 	Inherits: ^SupportPowerVertigoNapalm
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoNapalm:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerVertigoTiberium:
 	Inherits: ^SupportPowerVertigoTiberium
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoTiberium:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerVertigoSeismic:
 	Inherits: ^SupportPowerVertigoSeismic
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoSeismic:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerEMPCannon:
 	Inherits: ^SupportPowerEMPCannon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	FireArmamentPower@SupportPowerEMPCannon:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerNuke:
 	Inherits: ^SupportPowerNuke
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	NukePower@SupportPowerNuke:
 		OneShot: True
 		StartFullyCharged: True
+	WithNukeLaunchAnimation:
+
 SupportPowerTiberianLaser:
 	Inherits: ^SupportPowerTiberianLaser
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerTiberianLaser:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerOrbitalLaser:
 	Inherits: ^SupportPowerOrbitalLaser
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerOrbitalLaser:
 		OneShot: True
 		StartFullyCharged: True
+
 SupportPowerCloaking:
 	Inherits: ^SupportPowerCloaking
 	Inherits@CrateSupportPower: ^CrateSupportPower

@@ -38,8 +38,6 @@ PTEROIS:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	DetectCloaked:
 		Range: 9c921
 	RenderDetectionCircle:
@@ -51,6 +49,9 @@ PTEROIS:
 		Actor: PTEROIS.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 KDRONE:
 	Inherits: ^AttackAdvancedPlane
@@ -91,8 +92,6 @@ KDRONE:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -100,6 +99,8 @@ KDRONE:
 		Actor: KDRONE.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		Delay: 5
 
 KDRONE1:
 	Inherits: KDRONE
@@ -120,6 +121,7 @@ KDRONE1:
 	-Selectable:
 	RejectsOrders:
 	-ReloadAmmoPool@1:
+	Interactable:
 
 MANTA:
 	Inherits: ^AttackAdvancedPlane
@@ -157,8 +159,6 @@ MANTA:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	Turreted:
 		TurnSpeed: 2
 		Offset: 566,0,181
@@ -197,3 +197,6 @@ MANTA:
 		Probability: 100
 	HitShape:
 	RejectsOrders:
+	ReloadAmmoPool@1:
+		Delay: 5
+	Interactable:

@@ -73,8 +73,8 @@
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
 	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
 	RenderSprites:
+	Interactable:
 
 ^TerrainOverlay:
 	AlwaysVisible:
@@ -96,13 +96,13 @@
 		QuantizedFacings: 1
 	EditorOnlyTooltip:
 		Name: Railway
-	AutoSelectionSize:
 	AlwaysVisible:
+	Interactable:
 
 ^Tunnel:
 	Inherits: ^TerrainOverlay
-	CustomSelectionSize:
-		CustomBounds: 220,220
+	Interactable:
+		Bounds: 220,220
 
 ^GainsExperience:
 	GainsExperience:
@@ -360,7 +360,6 @@
 		Footprint: x
 		BuildSounds: buildupsound.aud
 		TerrainTypes: Clear, Road, DirtRoad, Rough, Green
-		Adjacent: 4
 		RequiresBaseProvider: True
 	Valued:
 		Cost: 25
@@ -380,6 +379,9 @@
 	Demolishable:
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -395,6 +397,7 @@
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
 	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	GivesBuildableArea:
+		AreaTypes: building
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
@@ -626,9 +629,11 @@
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 	RenderSprites:
-	AutoSelectionSize:
 	WithWallSpriteBody:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Wall:
 	Inherits@0: ^ExistsInWorld
@@ -642,7 +647,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: place2.aud
-		Adjacent: 7
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 		RequiresBaseProvider: True
 	SoundOnDamageTransition:
@@ -676,6 +680,9 @@
 			TopLeft: -384, -384
 			BottomRight: 384, 384
 			VerticalTopOffset: 512
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
 
 ^Gate:
 	Inherits: ^Building
@@ -733,6 +740,8 @@
 	RenderSprites:
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Infantry:
 	Inherits@1: ^GainsExperienceInf
@@ -987,7 +996,7 @@
 		ZOffset: 256
 		ValidStances: Ally, Neutral, Enemy
 		RequiresCondition: tiberiumheal || tiberiumheal2
-		
+
 ^CloaksOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
 		TerrainTypes: Tiberium, BlueTiberium, PurpleTiberium, RedTiberium
@@ -1000,7 +1009,7 @@
 		CloakSound: stealth01.aud
 		UncloakSound: unstealth01.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		
+
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
 		Damage: 20
@@ -1488,7 +1497,7 @@
 	HiddenUnderFog:
 	ActorLostNotification:
 	Capturable:
-		Type: Vehicle
+		Types: Vehicle
 		CaptureThreshold: 100
 		CancelActivity: True
 	Guard:
@@ -1757,6 +1766,8 @@
 		CanHover: True
 		IdealSeparation: 1c424
 		AltitudeVelocity: 0c325
+		TakeOffOnResupply: true
+		VTOL: true
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Explodes:
@@ -2048,6 +2059,8 @@
 	WithIdleAnimation:
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -2070,6 +2083,8 @@
 	HitShape:
 		UseTargetableCellsOffsets: true
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -2087,6 +2102,8 @@
 		Name: Rock
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Decoration:
 	Inherits@1: ^SpriteActor
@@ -2099,6 +2116,8 @@
 		Dimensions: 1, 1
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Defense:
 	Inherits@1: ^Building
@@ -2106,14 +2125,20 @@
 	-GivesBuildableArea:
 	RenderRangeCircle:
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	MustBeDestroyed:
 		RequiredForShortGame: False
 	RevealsShroud:
 		Range: 8c497
 	RevealOnFire:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
 
 ^Train:
 	Inherits@1: ^EmpDisable
@@ -2361,7 +2386,9 @@
 		RequiresCondition: !overload_active
 
 ^SuperWeapon:
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	RevealsShroud@revealhimself:
 		ValidStances: Neutral, Enemy
 		MaxHeightDelta: 3

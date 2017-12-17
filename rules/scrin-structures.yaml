@@ -67,6 +67,8 @@ SACNST:
 		ShowTicks: False
 		RequiresCondition: money
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SAPOWR:
 	Inherits: ^Building
@@ -100,6 +102,8 @@ SAPOWR:
 		Amount: 200
 	ScalePowerWithHealth:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SPROC:
 	Inherits: ^BuildingInfiltrate
@@ -144,6 +148,8 @@ SPROC:
 	CustomSellValue:
 		Value: 500
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SAPORTAL:
 	Inherits: ^Building
@@ -196,9 +202,9 @@ SAPORTAL:
 		BuildDurationModifier: 60
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar@Infantry:
 		ProductionType: Infantry.Scrin
 		Group: Infantry
@@ -216,6 +222,14 @@ SAPORTAL:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SANODE:
 	Inherits: ^Building
@@ -237,11 +251,13 @@ SANODE:
 		Bounds: 96, 118, 0, -38
 	Health:
 		HP: 2240000
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RevealsShroud:
@@ -254,6 +270,14 @@ SANODE:
 		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SASEED:
 	Inherits: ^Building
@@ -275,10 +299,14 @@ SASEED:
 		Bounds: 48, 48, 0, -12
 	Health:
 		HP: 3360000
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	RevealsShroud:
 		Range: 7c73
 	Power:
 		Amount: -100
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building

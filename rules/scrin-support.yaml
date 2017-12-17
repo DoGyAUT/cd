@@ -16,7 +16,9 @@ SACANNON:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 40, 70, 0, -22
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -45,6 +47,8 @@ SACANNON:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SASAM:
 	Inherits: ^Defense
@@ -64,7 +68,9 @@ SASAM:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 40, 70, 0, -22
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -93,3 +99,5 @@ SASAM:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building

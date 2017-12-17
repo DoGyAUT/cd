@@ -5,7 +5,6 @@ CABHUT:
 	Tooltip:
 		Name: Bridge repair hut
 	Building:
-		Adjacent: 0
 		Footprint: x
 		Dimensions: 1, 1
 	BridgeHut:
@@ -17,6 +16,9 @@ CABHUT:
 	-Explodes:
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 0
 
 ^LowBridgeRamp:
 	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
@@ -26,7 +28,6 @@ CABHUT:
 	RenderSprites:
 		Palette: terraindecoration
 	WithSpriteBody:
-	AutoSelectionSize:
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Bridge
@@ -35,6 +36,7 @@ CABHUT:
 		QuantizedFacings: 1
 	Tooltip:
 		Name: Bridge
+	Interactable:
 
 ^LowBridge:
 	Inherits: ^LowBridgeRamp
@@ -61,6 +63,8 @@ LOBRDG_A:
 		ABDestroyedSequences: abdead
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LOBRDG_A_D:
 	Inherits: LOBRDG_A
@@ -77,8 +81,8 @@ LOBRDG_A_D:
 		RampActors: lobrdg_r_ne, lobrdg_r_sw
 		AOffset: 1,-1
 		BOffset: 1,1
-	CustomSelectionSize:
-		CustomBounds: 96, 48
+	Interactable:
+		Bounds: 96, 48
 
 LOBRDG_B:
 	Inherits: ^LowBridge
@@ -99,6 +103,8 @@ LOBRDG_B:
 		ABDestroyedSequences: abdead
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LOBRDG_B_D:
 	Inherits: LOBRDG_B
@@ -115,8 +121,8 @@ LOBRDG_B_D:
 		RampActors: lobrdg_r_nw, lobrdg_r_se
 		AOffset: 1,1
 		BOffset: -1,1
-	CustomSelectionSize:
-		CustomBounds: 96, 48
+	Interactable:
+		Bounds: 96, 48
 
 LOBRDG_R_SE:
 	Inherits: ^LowBridgeRamp
@@ -129,6 +135,8 @@ LOBRDG_R_SE:
 		Name: Bridge Ramp
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LOBRDG_R_NW:
 	Inherits: ^LowBridgeRamp
@@ -141,6 +149,8 @@ LOBRDG_R_NW:
 		Name: Bridge Ramp
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LOBRDG_R_NE:
 	Inherits: ^LowBridgeRamp
@@ -153,6 +163,8 @@ LOBRDG_R_NE:
 		Name: Bridge Ramp
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 LOBRDG_R_SW:
 	Inherits: ^LowBridgeRamp
@@ -165,3 +177,5 @@ LOBRDG_R_SW:
 		Name: Bridge Ramp
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building

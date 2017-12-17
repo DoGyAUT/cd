@@ -67,6 +67,8 @@ GACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
@@ -126,6 +128,8 @@ GAPOWR:
 		RequiresCondition: upgrade.gapowerup2
 		Amount: 75
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GPROC:
 	Inherits: ^BuildingInfiltrate
@@ -178,6 +182,8 @@ GPROC:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPILE:
 	Inherits: ^Building
@@ -220,9 +226,9 @@ GAPILE:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	WithProductionOverlay@LIGHTS:
 		Sequence: production-lights
@@ -233,6 +239,14 @@ GAPILE:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAWEAP:
 	Inherits: ^Building
@@ -275,9 +289,9 @@ GAWEAP:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
@@ -293,6 +307,14 @@ GAWEAP:
 	Power:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GARADR:
 	Inherits: ^BuildingInfiltrate
@@ -317,11 +339,13 @@ GARADR:
 		Bounds: 96, 118, 0, -38
 	Health:
 		HP: 1680000
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RevealsShroud:
@@ -336,6 +360,14 @@ GARADR:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAARMORY:
 	Inherits: ^Building
@@ -376,12 +408,20 @@ GAARMORY:
 	ExitsDebugOverlay:
 	ProductionBar:
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesPrerequisite@buildingname:
 	ProvidesAIPrerequisite@gafortAI:
 		Prerequisite: gafortAI
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAHPAD:
 	Inherits: ^Building
@@ -422,9 +462,9 @@ GAHPAD:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -454,6 +494,14 @@ GAHPAD:
 		Prerequisites: garadr, upgrade.st
 	AirstrikePower@SupportPowerOXBomber:
 		Prerequisites: garadr, upgrade.zc
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GADEPT:
 	Inherits: ^Building
@@ -486,9 +534,9 @@ GADEPT:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: False
@@ -508,6 +556,14 @@ GADEPT:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GATECH:
 	Inherits: ^Building
@@ -544,6 +600,8 @@ GATECH:
 		Prerequisites: gaarmory, ~upgrade.zc
 	ParatroopersPower@SupportPowerPoseidon:
 		Prerequisites: gaarmory, ~upgrade.gdf
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GADROP:
 	Inherits: ^Building
@@ -603,3 +661,5 @@ GADROP:
 		Prerequisites: garadr, upgrade.st
 	ParatroopersPower@SupportPowerTitan:
 		Prerequisites: gatech
+	RequiresBuildableArea:
+		AreaTypes: building

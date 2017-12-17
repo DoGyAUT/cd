@@ -40,11 +40,8 @@ BUZZARD:
 		Name: Missile
 		Ammo: 1
 		PipCount: 1
-		ReloadCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 250
 	AttackTurreted:
 		FacingTolerance: 20
 	WithIdleOverlay@ROTORAIR:
@@ -71,6 +68,10 @@ BUZZARD:
 		Condition: upgrade.buzzard_gattling
 		Prerequisites: upgrade.buzzard_gattling
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: Missile
+		Delay: 250
+		Count: 1
 
 GRIFFIN:
 	Inherits: ^Helicopter
@@ -153,6 +154,7 @@ FBOMBER:
 		Type: GroundPosition
 	Armament:
 		Weapon: CrapjetBomb
+		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 10
 		PipCount: 10
@@ -160,6 +162,7 @@ FBOMBER:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	AttackBomber:
 		FacingTolerance: 20
 	RenderSprites:
@@ -182,6 +185,7 @@ FBOMBER:
 		Probability: 100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 STRIKER:
 	Inherits: ^AttackAdvancedPlane
@@ -216,19 +220,14 @@ STRIKER:
 		Name: Missiles
 		Ammo: 2
 		PipCount: 2
-		ReloadCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 200
 	AmmoPool@2:
 		Name: Bullets
 		Ammo: 40
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -237,7 +236,14 @@ STRIKER:
 		Actor: STRIKER.Husk
 		Probability: 100
 	HitShape:
-	
+	ReloadAmmoPool@1:
+		AmmoPool: Missiles
+		Delay: 200
+		Count: 1
+	ReloadAmmoPool@2:
+		AmmoPool: Bullets
+		Delay: 5
+
 FDSHP:
 	Inherits: ^Helicopter
 	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft

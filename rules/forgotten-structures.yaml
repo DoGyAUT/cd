@@ -74,6 +74,8 @@ FACNST:
 		ShowTicks: False
 		RequiresCondition: money
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAPOWR:
 	Inherits: ^Building
@@ -113,6 +115,8 @@ FAPOWR:
 		Palette: player50alpha
 	ScalePowerWithHealth:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FPROC:
 	Inherits: ^BuildingInfiltrate
@@ -137,6 +141,7 @@ FPROC:
 	Selectable:
 		Bounds: 160, 96, -5, -25
 	GivesBuildableArea:
+		AreaTypes: building
 	Health:
 		HP: 2800000
 	TiberianSunRefinery:
@@ -177,6 +182,8 @@ FPROC:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FABAR:
 	Inherits: ^Building
@@ -220,14 +227,22 @@ FABAR:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAWEAP:
 	Inherits: ^Building
@@ -270,9 +285,9 @@ FAWEAP:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@FIRE:
 		Sequence: idle-fire
@@ -293,6 +308,14 @@ FAWEAP:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FARADR:
 	Inherits: ^BuildingInfiltrate
@@ -316,11 +339,13 @@ FARADR:
 		Bounds: 96, 82, 0, -17
 	Health:
 		HP: 1680000
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
@@ -347,6 +372,14 @@ FARADR:
 		Range: 12c696
 		CloakTypes: Underground
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FHOVEL:
 	Inherits: ^Building
@@ -386,13 +419,21 @@ FHOVEL:
 	ExitsDebugOverlay:
 	ProductionBar:
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesPrerequisite:
 		Prerequisite: barracks.upgraded
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAHPAD:
 	Inherits: ^Building
@@ -427,9 +468,9 @@ FAHPAD:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -443,6 +484,14 @@ FAHPAD:
 		Bounds: 88, 66, 0, -5
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FATRADE:
 	Inherits: ^Building
@@ -472,3 +521,5 @@ FATRADE:
 	HitShape:
 	AirstrikePower@SupportPowerCrapJetBomber:
 		Prerequisites: faradr
+	RequiresBuildableArea:
+		AreaTypes: building

@@ -57,6 +57,8 @@ TIBTECH:
 	Explodes:
 		Weapon: TiberiumExplosionDrill
 		EmptyWeapon: TiberiumExplosionDrill
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAHOSP:
 	Inherits: ^Building
@@ -82,6 +84,8 @@ CAHOSP:
 	ProximityExternalCondition@FeatureBuffRepairInfantry:
 		Condition: FeatureBuffRepairInfantry
 		Range: 1000000c0
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAARMR:
 	Inherits: ^Building
@@ -108,6 +112,8 @@ CAARMR:
 		CaptureCompleteTime: 7
 	ProvidesPrerequisite:
 		Prerequisite: armory.upgraded
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAARAY:
 	Inherits: ^Building
@@ -137,3 +143,5 @@ CAARAY:
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
+	RequiresBuildableArea:
+		AreaTypes: building

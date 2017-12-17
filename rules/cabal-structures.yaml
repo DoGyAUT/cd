@@ -74,6 +74,8 @@ KACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KPR:
 	Inherits@1: ^BuildingInfiltrate
@@ -114,6 +116,8 @@ KPR:
 	PowerMultiplier@photonreactors:
 		RequiresCondition: upgrade.photonreactors
 		Modifier: 200
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KPROC:
 	Inherits: ^BuildingInfiltrate
@@ -167,6 +171,8 @@ KPROC:
 	ProvidesPrerequisite@buildingname:
 	CustomSellValue:
 		Value: 500
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CYBBAR:
 	Inherits: ^Building
@@ -211,9 +217,9 @@ CYBBAR:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
@@ -226,6 +232,14 @@ CYBBAR:
 	Power:
 		Amount: -25
 	ProvidesPrerequisite@buildingname:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KAWEAP:
 	Inherits: ^Building
@@ -270,9 +284,9 @@ KAWEAP:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProductionBar:
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
@@ -289,6 +303,14 @@ KAWEAP:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KARADR:
 	Inherits: ^BuildingInfiltrate
@@ -314,11 +336,13 @@ KARADR:
 		Bounds: 96, 82, 0, -17
 	Health:
 		HP: 1680000
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	ProvidesRadar:
 	InfiltrateForExploration:
 	DetectCloaked:
@@ -338,6 +362,14 @@ KARADR:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KAHPAD:
 	Inherits: ^Building
@@ -370,9 +402,9 @@ KAHPAD:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -394,6 +426,14 @@ KAHPAD:
 		Bounds: 78, 54, 0, -8
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABTECH:
 	Inherits: ^Building
@@ -436,11 +476,13 @@ KABTECH:
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
 	ProvidesPrerequisite@buildingname:
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
+		PowerdownCondition: powerdown
 	Exit:
 	ExitsDebugOverlay:
 	HitShape:
@@ -548,7 +590,7 @@ KABTECH:
 			plug.upgrade.overload: !plug1.upgrade.overload && !plug2.upgrade.overload && !plug3.upgrade.overload && !plug4.upgrade.overload && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.mantastrike && !plug4.upgrade.overload && !plug4.upgrade.epic1 && !plug4.upgrade.epic2
 			plug.upgrade.epic1: !plug1.upgrade.epic1 && !plug2.upgrade.epic1 && !plug3.upgrade.epic1 && !plug4.upgrade.epic1 && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.mantastrike && !plug4.upgrade.overload && !plug4.upgrade.epic1 && !plug4.upgrade.epic2
 			plug.upgrade.epic2: !plug1.upgrade.epic2 && !plug2.upgrade.epic2 && !plug3.upgrade.epic2 && !plug4.upgrade.epic2 && !plug4.upgrade.lc && !plug4.upgrade.hc && !plug4.upgrade.visionuplink && !plug4.upgrade.photonreactors && !plug4.upgrade.teleporter && !plug4.upgrade.nanoswarm && !plug4.upgrade.combatreactors && !plug4.upgrade.mantastrike && !plug4.upgrade.overload && !plug4.upgrade.epic1 && !plug4.upgrade.epic2
-	ProximityExternalCondition@plug.upgrade.hc
+	ProximityExternalCondition@plug.upgrade.hc:
 		Condition: upgrade.hc
 		Range: 1000000c0
 		RequiresCondition: plug1.upgrade.hc || plug2.upgrade.hc || plug3.upgrade.hc || plug4.upgrade.hc
@@ -583,3 +625,11 @@ KABTECH:
 	ProvidesPrerequisite@epic2:
 		Prerequisite: epic2
 		RequiresCondition: plug1.upgrade.epic2 || plug2.upgrade.epic2 || plug3.upgrade.epic2 || plug4.upgrade.epic2
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building

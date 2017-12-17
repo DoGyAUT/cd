@@ -83,6 +83,8 @@ FASILO:
 	Power:
 		Amount: -10
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FATOWER:
 	Inherits: ^Defense
@@ -122,6 +124,8 @@ FATOWER:
 		Sequence: idle-flag
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAFLAK:
 	Inherits: ^Defense
@@ -165,6 +169,8 @@ FAFLAK:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAMISSILE:
 	Inherits: ^Defense
@@ -206,9 +212,11 @@ FAMISSILE:
 		MuzzlePalette: apolra50alpha
 		Recoil: 0c35
 		RecoilRecovery: 0c14
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	CanPowerDown:
-		IndicatorPalette: mouse
+		PowerdownCondition: powerdown
 	AttackTurreted:
 	RenderRangeCircle:
 	RenderDetectionCircle:
@@ -219,3 +227,11 @@ FAMISSILE:
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: powerdown
+		ReferencePoint: Center
+	RequiresBuildableArea:
+		AreaTypes: building

@@ -92,6 +92,8 @@ KASILO:
 		Capacity: 1500
 	Power:
 		Amount: -10
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABLASR:
 	Inherits: ^Defense
@@ -116,7 +118,9 @@ KABLASR:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 60, 60, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -146,6 +150,8 @@ KABLASR:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABCAN:
 	Inherits: ^Defense
@@ -170,7 +176,9 @@ KABCAN:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 60, 60, 0, -12
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -202,6 +210,8 @@ KABCAN:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KDARK:
 	Inherits: ^Defense
@@ -224,7 +234,9 @@ KDARK:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 48, 100, 0, -40
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 3360000
 	RevealsShroud:
@@ -255,6 +267,8 @@ KDARK:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KOBEL:
 	Inherits: ^Defense
@@ -279,7 +293,9 @@ KOBEL:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 74, 0, -14
-	RequiresPower:
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 5250000
 	RevealsShroud:
@@ -315,6 +331,8 @@ KOBEL:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABSW1:
 	Inherits: ^Building
@@ -344,7 +362,10 @@ KABSW1:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 110, 70, 3, -20
-	RequiresPower:
+		DecorationBounds: 110, 70, 3, -20
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
 	Health:
 		HP: 8000000
 	BodyOrientation:
@@ -358,8 +379,8 @@ KABSW1:
 	Power:
 		Amount: -400
 	SelectionDecorations:
-		VisualBounds: 110, 70, 3, -20
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	SupportPowerChargeBar:
-
+	RequiresBuildableArea:
+		AreaTypes: building
