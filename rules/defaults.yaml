@@ -25,7 +25,8 @@
 	WithColoredOverlay@EMPDISABLE:
 		RequiresCondition: (empdisable && !invulnerability)
 		Palette: disabled
-	DisableOnCondition@EMPDISABLE:
+	GrantCondition@EMPDISABLE:
+		Condition: disabled
 		RequiresCondition: (empdisable && !invulnerability)
 	TimedConditionBar@EMPDISABLE:
 		Condition: empdisable
@@ -43,7 +44,8 @@
 		Condition: empdisable
 
 ^WebDisable:
-	DisableOnCondition@WEBDISABLE:
+	GrantCondition@WEBDISABLE:
+		Condition: disabled
 		RequiresCondition: webdisable
 	TimedConditionBar@WEBDISABLE:
 		Condition: webdisable
@@ -2213,8 +2215,6 @@
 	WithColoredOverlay@DisabledOverlay:
 		RequiresCondition: disabled
 		Palette: disabled
-	GrantConditionOnDisabled@DisabledOverlay:
-		Condition: disabled
 
 ^3x3hitshape:
 	HitShape:
