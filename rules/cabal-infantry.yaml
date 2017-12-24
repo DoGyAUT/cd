@@ -350,6 +350,8 @@ CYBFLY:
 		CanHover: True
 		IdealSeparation: 0c724
 		AltitudeVelocity: 0c325
+		TakeOffOnResupply: true
+		VTOL: true
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Health:
@@ -377,8 +379,6 @@ CYBFLY:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AttackHeli:
 		FacingTolerance: 20
 	WithInfantryBody:
@@ -396,6 +396,9 @@ CYBFLY:
 	-Passenger:
 	HitShape:
 	-DamagedByTerrain@DamagedByTiberiumResource:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 CYC2:
 	Inherits@1: ^HeavyCyborg

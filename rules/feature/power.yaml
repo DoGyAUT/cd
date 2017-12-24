@@ -1,0 +1,25 @@
+^FeaturePowerConsumption:
+	Power@FeaturePowerConsumption:
+		Amount: 0
+	GrantConditionOnPowerState@FeaturePowerConsumption:
+		Condition: FeaturePowerConsumptionPowerDown
+		ValidPowerStates: Low, Critical
+	CanPowerDown@FeaturePowerConsumption:
+		PowerdownCondition: FeaturePowerConsumptionPowerDown
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	WithDecoration@FeaturePowerConsumption:
+		Image: poweroff
+		Sequence: offline
+		Palette: mouse
+		RequiresCondition: FeaturePowerConsumptionPowerDown
+		ReferencePoint: Center
+	PowerTooltip@FeaturePowerProduction:
+
+^FeaturePowerProduction:
+	AffectedByPowerOutage@FeaturePowerProduction:
+		Condition: FeaturePowerProductionPowerDown
+	Power@FeaturePowerProduction:
+		RequiresCondition: !FeaturePowerProductionPowerDown
+	ScalePowerWithHealth@FeaturePowerProduction:
+	PowerTooltip@FeaturePowerProduction:

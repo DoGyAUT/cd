@@ -1,0 +1,47 @@
+MapFormat: 11
+
+RequiresMod: cd
+
+Title: Red Zone
+
+Author: jrb0001
+
+Tileset: TEMPERATE
+
+MapSize: 66,82
+
+Bounds: 1,17,64,64
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 86,-38
+	Actor2: mpspawn
+		Owner: Neutral
+		Location: 28,21

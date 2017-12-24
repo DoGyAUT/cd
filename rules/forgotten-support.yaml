@@ -46,6 +46,9 @@ FASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -10
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 403
@@ -80,9 +83,9 @@ FASILO:
 		PipColor: Green
 		PipCount: 5
 		Capacity: 1500
-	Power:
-		Amount: -10
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FATOWER:
 	Inherits: ^Defense
@@ -90,6 +93,9 @@ FATOWER:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 403
@@ -104,8 +110,6 @@ FATOWER:
 		Dimensions: 1, 1
 	Selectable:
 		Bounds: 48, 62, 0, -25
-	Power:
-		Amount: -25
 	Health:
 		HP: 1316000
 	RevealsShroud:
@@ -122,11 +126,16 @@ FATOWER:
 		Sequence: idle-flag
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAFLAK:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft1
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 404
@@ -141,8 +150,6 @@ FAFLAK:
 		Dimensions: 1, 1
 	Selectable:
 		Bounds: 48, 40, 0, 8
-	Power:
-		Amount: -25
 	Health:
 		HP: 1316000
 	RevealsShroud:
@@ -165,6 +172,8 @@ FAFLAK:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FAMISSILE:
 	Inherits: ^Defense
@@ -173,6 +182,9 @@ FAMISSILE:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 405
@@ -187,8 +199,6 @@ FAMISSILE:
 		Dimensions: 2, 2
 	Selectable:
 		Bounds: 60, 48, -5, 0
-	Power:
-		Amount: -50
 	Health:
 		HP: 2520000
 	RevealsShroud:
@@ -206,9 +216,6 @@ FAMISSILE:
 		MuzzlePalette: apolra50alpha
 		Recoil: 0c35
 		RecoilRecovery: 0c14
-	RequiresPower:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	AttackTurreted:
 	RenderRangeCircle:
 	RenderDetectionCircle:
@@ -219,3 +226,5 @@ FAMISSILE:
 	WithMuzzleOverlay:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building

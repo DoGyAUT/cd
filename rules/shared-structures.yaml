@@ -3,30 +3,35 @@ ANYPOWER:
 	Tooltip:
 		Name: Power Plant
 		Description: Power Plant
+	Interactable:
 
 BARRACKS:
 	AlwaysVisible:
 	Tooltip:
 		Name: Infantry Production
 		Description: Infantry Production
+	Interactable:
 
 FACTORY:
 	AlwaysVisible:
 	Tooltip:
 		Name: Vehicle Production
 		Description: Vehicle Production
+	Interactable:
 
 RADAR:
 	AlwaysVisible:
 	Tooltip:
 		Name: Radar
 		Description: Radar
+	Interactable:
 
 TECH:
 	AlwaysVisible:
 	Tooltip:
 		Name: Tech Center
 		Description: Tech Center
+	Interactable:
 
 TIBTECH:
 	Inherits: ^Building
@@ -57,6 +62,8 @@ TIBTECH:
 	Explodes:
 		Weapon: TiberiumExplosionDrill
 		EmptyWeapon: TiberiumExplosionDrill
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAHOSP:
 	Inherits: ^Building
@@ -82,6 +89,8 @@ CAHOSP:
 	ProximityExternalCondition@FeatureBuffRepairInfantry:
 		Condition: FeatureBuffRepairInfantry
 		Range: 1000000c0
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAARMR:
 	Inherits: ^Building
@@ -108,6 +117,8 @@ CAARMR:
 		CaptureCompleteTime: 7
 	ProvidesPrerequisite:
 		Prerequisite: armory.upgraded
+	RequiresBuildableArea:
+		AreaTypes: building
 
 CAARAY:
 	Inherits: ^Building
@@ -137,3 +148,5 @@ CAARAY:
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
+	RequiresBuildableArea:
+		AreaTypes: building

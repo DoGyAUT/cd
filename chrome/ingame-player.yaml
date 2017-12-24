@@ -15,6 +15,8 @@ Container@PLAYER_WIDGETS:
 					ReadyText: READY
 					HoldText: ON HOLD
 					ClockPalette: iconclock
+					HotkeyPrefix: SupportPower
+					HotkeyCount: 6
 				Container@PALETTE_FOREGROUND:
 					Children:
 						Image@ICON_TEMPLATE:
@@ -47,6 +49,7 @@ Container@PLAYER_WIDGETS:
 			Width: 275
 			Height: 26
 			Children:
+				LogicKeyListener@MODIFIER_OVERRIDES:
 				Button@ATTACK_MOVE:
 					Width: 35
 					Height: 32
@@ -55,8 +58,9 @@ Container@PLAYER_WIDGETS:
 					Key: AttackMove
 					DisableKeySound: true
 					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nLeft-click icon then right-click on target location.
+					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
 					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
 						Image@ICON:
 							Logic: AddFactionSuffixLogic
@@ -299,6 +303,7 @@ Container@PLAYER_WIDGETS:
 							Background: sidebar-button
 							TooltipText: Debug Menu
 							TooltipContainer: TOOLTIP_CONTAINER
+							DisableWorldSounds: true
 							VisualHeight: 0
 							Children:
 								Image@ICON:
@@ -313,6 +318,7 @@ Container@PLAYER_WIDGETS:
 							Width: 30
 							Height: 31
 							Background: sidebar-button
+							Key: Repair
 							TooltipText: Repair
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -328,6 +334,7 @@ Container@PLAYER_WIDGETS:
 							Width: 30
 							Height: 31
 							Background: sidebar-button
+							Key: Sell
 							TooltipText: Sell
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -343,7 +350,24 @@ Container@PLAYER_WIDGETS:
 							Width: 30
 							Height: 31
 							Background: sidebar-button
+							Key: PlaceBeacon
 							TooltipText: Place Beacon
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									Logic: AddFactionSuffixLogic
+									X: 0
+									Y: 0
+									ImageCollection: order-icons
+						Button@POWER_BUTTON:
+							Logic: PowerdownOrderButtonLogic, AddFactionSuffixLogic
+							X: 133
+							Width: 30
+							Height: 31
+							Background: sidebar-button
+							Key: PowerDown
+							TooltipText: Power Down
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -361,6 +385,7 @@ Container@PLAYER_WIDGETS:
 							Background: sidebar-button
 							TooltipText: Options
 							TooltipContainer: TOOLTIP_CONTAINER
+							DisableWorldSounds: true
 							VisualHeight: 0
 							Children:
 								Image@ICON:
@@ -473,10 +498,12 @@ Container@PLAYER_WIDGETS:
 					NotBuildableAnimation: darken
 					NotBuildablePalette: chromewithshadow
 					IconSize: 64, 48
-					IconMargin: 3, 5
+					IconMargin: 3, 4
 					IconSpriteOffset: 0, 0
 					MinimumRows: 5
 					MaximumRows: 5
+					HotkeyPrefix: Production
+					HotkeyCount: 24
 				Container@PALETTE_FOREGROUND:
 					X: 22
 					Y: 0
@@ -602,6 +629,26 @@ Container@PLAYER_WIDGETS:
 									X: 7
 									Y: 7
 									ImageCollection: production-icons
+						Button@SCROLL_UP_BUTTON:
+							Logic: AddFactionSuffixLogic
+							X: 74
+							Y: PARENT_BOTTOM + 36
+							Width: 34
+							Height: 27
+							VisualHeight: 0
+							Background: scrollup-buttons
+							TooltipText: Scroll up
+							TooltipContainer: TOOLTIP_CONTAINER
+						Button@SCROLL_DOWN_BUTTON:
+							Logic: AddFactionSuffixLogic
+							X: 141
+							Y: PARENT_BOTTOM + 36
+							Width: 34
+							Height: 27
+							VisualHeight: 0
+							Background: scrolldown-buttons
+							TooltipText: Scroll down
+							TooltipContainer: TOOLTIP_CONTAINER
 				Background@POWERBAR_PANEL:
 					Logic: IngamePowerBarLogic
 					X: 11

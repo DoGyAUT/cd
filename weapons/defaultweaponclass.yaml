@@ -135,8 +135,8 @@ BlueFireballLauncher:
 ^MissileAPHE:
 	ValidTargets: Ground, Aircraft
 	Projectile: Missile
-		MinimumLaunchAngle: 270
-		MaximumLaunchAngle: 270
+		MinimumLaunchAngle: 250
+		MaximumLaunchAngle: 250
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
 		Speed: 0c543
@@ -191,8 +191,8 @@ BlueFireballLauncher:
 ^RocketHE:
 	ValidTargets: Ground
 	Projectile: Missile
-		MinimumLaunchAngle: 270
-		MaximumLaunchAngle: 270
+		MinimumLaunchAngle: 250
+		MaximumLaunchAngle: 250
 		VerticalRateOfTurn: 20
 		MaximumLaunchSpeed: 0c543
 		MinimumLaunchSpeed: 0c301
@@ -317,7 +317,7 @@ BlueFireballLauncher:
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
 	Burst: 5
-	BurstDelay: 5
+	BurstDelays: 5
 	Range: 7c73
 	Report: bombdrop.aud
 	Projectile: BulletAS

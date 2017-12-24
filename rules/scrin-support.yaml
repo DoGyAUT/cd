@@ -2,6 +2,9 @@ SACANNON:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -16,7 +19,6 @@ SACANNON:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 40, 70, 0, -22
-	RequiresPower:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -37,19 +39,22 @@ SACANNON:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
-	Power:
-		Amount: -100
 	WithMuzzleOverlay:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 SASAM:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -64,7 +69,6 @@ SASAM:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 40, 70, 0, -22
-	RequiresPower:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -85,11 +89,11 @@ SASAM:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
-	Power:
-		Amount: -100
 	WithMuzzleOverlay:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building

@@ -46,6 +46,9 @@ GASILO:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -10
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 103
@@ -76,14 +79,14 @@ GASILO:
 		Sequence: idle-underlay
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	StoresResources:
 		PipColor: Green
 		PipCount: 5
 		Capacity: 1500
-	Power:
-		Amount: -10
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMG:
 	Inherits: ^Defense
@@ -92,6 +95,9 @@ GAMG:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 500
@@ -105,7 +111,6 @@ GAMG:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -117,8 +122,6 @@ GAMG:
 		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -139,17 +142,17 @@ GAMG:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMG2:
 	Inherits: ^Defense
@@ -158,6 +161,9 @@ GAMG2:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -171,7 +177,6 @@ GAMG2:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 2520000
 	RevealsShroud:
@@ -183,8 +188,6 @@ GAMG2:
 		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -233,17 +236,17 @@ GAMG2:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GASENTUR:
 	Inherits: ^Defense
@@ -252,6 +255,9 @@ GASENTUR:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 750
@@ -265,7 +271,6 @@ GASENTUR:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -281,8 +286,6 @@ GASENTUR:
 		Offset: 240,0,-141
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-vulcan
@@ -297,19 +300,22 @@ GASENTUR:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMIS:
 	Inherits: ^Defense
 	Inherits@2: ^1x1hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -323,7 +329,6 @@ GAMIS:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -335,8 +340,6 @@ GAMIS:
 		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-sam
@@ -350,14 +353,13 @@ GAMIS:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
-	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GACAN:
 	Inherits: ^Defense
@@ -366,6 +368,9 @@ GACAN:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -379,7 +384,6 @@ GACAN:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 1960000
 	RevealsShroud:
@@ -391,8 +395,6 @@ GACAN:
 		Offset: 212,0,-141
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-rpg
@@ -406,17 +408,17 @@ GACAN:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAMORTAR:
 	Inherits: ^Defense
@@ -426,6 +428,9 @@ GAMORTAR:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 1500
@@ -439,7 +444,6 @@ GAMORTAR:
 	Building:
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 1400000
 	RevealsShroud:
@@ -451,8 +455,6 @@ GAMORTAR:
 		Offset: -141,0,283
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret:
 		Recoils: True
 		Sequence: turret-mortar
@@ -466,17 +468,17 @@ GAMORTAR:
 	WithMuzzleOverlay:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -50
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 FTWR:
 	Inherits: ^Defense
@@ -486,6 +488,9 @@ FTWR:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	WithSpriteBody:
 	Valued:
 		Cost: 1000
@@ -494,11 +499,10 @@ FTWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		Adjacent: 8
 	GivesBuildableArea:
+		AreaTypes: building
 	Selectable:
 		Bounds: 48, 48, 0, -12
-	RequiresPower:
 	Health:
 		HP: 3000000
 	RevealsShroud:
@@ -515,8 +519,6 @@ FTWR:
 		Offset: 170,0,200
 		InitialFacing: 85
 	AttackTurreted:
-	CanPowerDown:
-		IndicatorPalette: mouse
 	WithSpriteTurret@cannon:
 		Recoils: True
 		Sequence: turret-cnnd
@@ -549,8 +551,6 @@ FTWR:
 	WithMuzzleOverlay:
 	LineBuildNode:
 		Types: turret
-	Power:
-		Amount: -100
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 11c321
@@ -561,6 +561,9 @@ FTWR:
 	ActorLostNotification:
 		Notification: CriticalStructureLost
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 
 GAFORT:
 	Inherits: ^Defense
@@ -570,6 +573,9 @@ GAFORT:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	WithSpriteBody:
 	Valued:
 		Cost: 800
@@ -604,10 +610,10 @@ GAFORT:
 		PortOffsets: 543,0,181, 317,-482,181, -317,-482,181, -543,0,181, -317,482,181, 317,482,181
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPLUG2:
 	Inherits: ^BuildingPlug
@@ -629,7 +635,10 @@ GAPLUG:
 	Inherits@2: ^2x3hitshape
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@SuperWeapon: ^SuperWeapon
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerIonCannon: ^SupportPowerIonCannon
+	Power@FeaturePowerConsumption:
+		Amount: -200
 	Valued:
 		Cost: 3000
 	Buildable:
@@ -642,19 +651,15 @@ GAPLUG:
 		Name: GDI Upgrade Center
 	Selectable:
 		Bounds: 115,104,0,-24
+		DecorationBounds: 115,104,0,-24
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 2,3
-	RequiresPower:
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	WithIdleOverlay@STRIP:
 		Sequence: idle-strip
 	Health:
@@ -664,41 +669,28 @@ GAPLUG:
 	Exit@1:
 	ExitsDebugOverlay:
 	SupportPowerChargeBar:
-	Power:
-		Amount: -200
 	Power@ioncannon:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Amount: -200
-	Power@hunterseeker:
-		RequiresCondition: plug.hunterseekera || plug.hunterseekerb
-		Amount: -50
 	Pluggable@pluga:
 		Offset: 0,2
 		Conditions:
 			plug.ioncannon: plug.ioncannona
-			plug.hunterseeker: plug.hunterseekera
 	WithIdleOverlay@ioncannona:
 		RequiresCondition: plug.ioncannona
 		Sequence: idle-ioncannona
-	WithIdleOverlay@hunterseekera:
-		RequiresCondition: plug.hunterseekera
-		Sequence: idle-hunterseekera
 	Pluggable@plugb:
 		Offset: 1,2
 		Conditions:
 			plug.ioncannon: plug.ioncannonb
-			plug.hunterseeker: plug.hunterseekerb
 	WithIdleOverlay@ioncannonb:
 		RequiresCondition: plug.ioncannonb
 		Sequence: idle-ioncannonb
-	WithIdleOverlay@hunterseekerb:
-		RequiresCondition: plug.hunterseekerb
-		Sequence: idle-hunterseekerb
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 115,104,0,-24
 	FrozenUnderFog:
 	HitShape:
 	RevealsShroud@revealhimself:
 		RequiresCondition: plug.ioncannona || plug.ioncannonb
-
+	RequiresBuildableArea:
+		AreaTypes: building

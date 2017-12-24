@@ -19,12 +19,14 @@
 
 ^Tech:
 	AlwaysVisible:
+	Interactable:
 
 ^EmpDisable:
 	WithColoredOverlay@EMPDISABLE:
 		RequiresCondition: (empdisable && !invulnerability)
 		Palette: disabled
-	DisableOnCondition@EMPDISABLE:
+	GrantCondition@EMPDISABLE:
+		Condition: disabled
 		RequiresCondition: (empdisable && !invulnerability)
 	TimedConditionBar@EMPDISABLE:
 		Condition: empdisable
@@ -42,7 +44,8 @@
 		Condition: empdisable
 
 ^WebDisable:
-	DisableOnCondition@WEBDISABLE:
+	GrantCondition@WEBDISABLE:
+		Condition: disabled
 		RequiresCondition: webdisable
 	TimedConditionBar@WEBDISABLE:
 		Condition: webdisable
@@ -73,7 +76,6 @@
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
 	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
 	RenderSprites:
 
 ^TerrainOverlay:
@@ -96,13 +98,13 @@
 		QuantizedFacings: 1
 	EditorOnlyTooltip:
 		Name: Railway
-	AutoSelectionSize:
 	AlwaysVisible:
+	Interactable:
 
 ^Tunnel:
 	Inherits: ^TerrainOverlay
-	CustomSelectionSize:
-		CustomBounds: 220,220
+	Interactable:
+		Bounds: 220,220
 
 ^GainsExperience:
 	GainsExperience:
@@ -360,7 +362,6 @@
 		Footprint: x
 		BuildSounds: buildupsound.aud
 		TerrainTypes: Clear, Road, DirtRoad, Rough, Green
-		Adjacent: 4
 		RequiresBaseProvider: True
 	Valued:
 		Cost: 25
@@ -380,6 +381,9 @@
 	Demolishable:
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
 
 ^Burningtank:
 	ThrowsShrapnel:
@@ -393,8 +397,8 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@fortification: ^FortificationUpgrades
 	Inherits@Erepairs: ^EmergencyRepairsUpgrades
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	GivesBuildableArea:
+		AreaTypes: building
 	Capturable:
 	ExternalCapturable:
 		CaptureCompleteTime: 7
@@ -626,9 +630,10 @@
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 	RenderSprites:
-	AutoSelectionSize:
 	WithWallSpriteBody:
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 ^Wall:
 	Inherits@0: ^ExistsInWorld
@@ -642,7 +647,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: place2.aud
-		Adjacent: 7
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 		RequiresBaseProvider: True
 	SoundOnDamageTransition:
@@ -676,6 +680,10 @@
 			TopLeft: -384, -384
 			BottomRight: 384, 384
 			VerticalTopOffset: 512
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Interactable:
 
 ^Gate:
 	Inherits: ^Building
@@ -685,7 +693,6 @@
 		HP: 400000
 	LineBuildNode:
 		Types: wall, gate
-	-Building:
 	-Capturable:
 	-GivesBuildableArea:
 	-MustBeDestroyed:
@@ -733,6 +740,9 @@
 	RenderSprites:
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Infantry:
 	Inherits@1: ^GainsExperienceInf
@@ -987,7 +997,7 @@
 		ZOffset: 256
 		ValidStances: Ally, Neutral, Enemy
 		RequiresCondition: tiberiumheal || tiberiumheal2
-		
+
 ^CloaksOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
 		TerrainTypes: Tiberium, BlueTiberium, PurpleTiberium, RedTiberium
@@ -1000,7 +1010,7 @@
 		CloakSound: stealth01.aud
 		UncloakSound: unstealth01.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-		
+
 ^DamagedByVeins:
 	DamagedByTerrain@Veins:
 		Damage: 20
@@ -1488,7 +1498,7 @@
 	HiddenUnderFog:
 	ActorLostNotification:
 	Capturable:
-		Type: Vehicle
+		Types: Vehicle
 		CaptureThreshold: 100
 		CancelActivity: True
 	Guard:
@@ -1757,6 +1767,8 @@
 		CanHover: True
 		IdealSeparation: 1c424
 		AltitudeVelocity: 0c325
+		TakeOffOnResupply: true
+		VTOL: true
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Explodes:
@@ -1838,6 +1850,7 @@
 		Interval: 2
 		MinDamage: Undamaged
 	HitShape:
+	Interactable:
 
 ^AircraftHusk:
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
@@ -1887,6 +1900,7 @@
 		Pieces: 9, 100
 		Range: 1c0, 6c0
 	HitShape:
+	Interactable:
 
 ^AircraftHuskPlane:
 	Inherits: ^AircraftHusk
@@ -2014,6 +2028,7 @@
 		ReturnToOrigin: False
 	ExplodeWeapon@Tiberium:
 		Weapon: Tiberium
+	Interactable:
 
 ^CloudsWeak:
 	Inherits: ^Clouds
@@ -2048,6 +2063,9 @@
 	WithIdleAnimation:
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Tree:
 	Inherits@1: ^SpriteActor
@@ -2070,6 +2088,9 @@
 	HitShape:
 		UseTargetableCellsOffsets: true
 	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -2087,6 +2108,9 @@
 		Name: Rock
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Decoration:
 	Inherits@1: ^SpriteActor
@@ -2099,16 +2123,14 @@
 		Dimensions: 1, 1
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 ^Defense:
 	Inherits@1: ^Building
-	Inherits@AffectedByPowerOutage: ^AffectedByPowerOutage
 	-GivesBuildableArea:
 	RenderRangeCircle:
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	MustBeDestroyed:
 		RequiredForShortGame: False
 	RevealsShroud:
@@ -2192,12 +2214,6 @@
 	WithColoredOverlay@DisabledOverlay:
 		RequiresCondition: disabled
 		Palette: disabled
-	GrantConditionOnDisabled@DisabledOverlay:
-		Condition: disabled
-
-^AffectedByPowerOutage:
-	GrantConditionOnLowPower:
-		Condition: power-outage
 
 ^3x3hitshape:
 	HitShape:
@@ -2328,10 +2344,6 @@
 			BottomRight: 2560, 2560
 
 ^PowerplantEffects:
-	AffectedByPowerOutage:
-		Condition: power-outage-pp
-	Power:
-		RequiresCondition: !power-outage-pp
 	ExternalCondition@overload_active:
 		Condition: overload_active
 	PowerMultiplier@overload_active:
@@ -2361,7 +2373,6 @@
 		RequiresCondition: !overload_active
 
 ^SuperWeapon:
-	RequiresPower:
 	RevealsShroud@revealhimself:
 		ValidStances: Neutral, Enemy
 		MaxHeightDelta: 3

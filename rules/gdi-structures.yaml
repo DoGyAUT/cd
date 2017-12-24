@@ -2,6 +2,9 @@ GACNST:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: 0
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -47,8 +50,6 @@ GACNST:
 	ProductionBar@Defense:
 		ProductionType: Defense.GDI
 	ProvidesRadar:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 144, 80, 0, -12
 	ProvidesPrerequisite@gdi:
@@ -67,6 +68,8 @@ GACNST:
 		Amount: 10000
 		ShowTicks: False
 		RequiresCondition: money
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPOWR:
 	Inherits: ^BuildingInfiltrate
@@ -74,6 +77,9 @@ GAPOWR:
 	Inherits@3: ^ExploBuildingPower
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@PowerplantEffects: ^PowerplantEffects
+	Inherits@FeaturePowerProduction: ^FeaturePowerProduction
+	Power@FeaturePowerProduction:
+		Amount: 100
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 101
@@ -88,7 +94,6 @@ GAPOWR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	PowerTooltip:
 	InfiltrateForPowerOutage:
 		Duration: 750
 	Health:
@@ -104,21 +109,18 @@ GAPOWR:
 		Sequence: idle-plug
 	Selectable:
 		Bounds: 90, 84, 0, -12
-	Power:
-		Amount: 100
-	ScalePowerWithHealth:
 	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.gapowerup1
 		Prerequisites: upgrade.gapowerup1
-	GrantConditionOnPrerequisite@upgrade2:
-		Condition: upgrade.gapowerup2
-		Prerequisites: upgrade.gapowerup2
-	Power@pluga:
-		RequiresCondition: upgrade.gapowerup1
-		Amount: 75
 	WithIdleOverlay@pluga:
 		RequiresCondition: upgrade.gapowerup1
 		Sequence: idle-powrupa
+	Power@pluga:
+		RequiresCondition: upgrade.gapowerup1
+		Amount: 75
+	GrantConditionOnPrerequisite@upgrade2:
+		Condition: upgrade.gapowerup2
+		Prerequisites: upgrade.gapowerup2
 	WithIdleOverlay@plugb:
 		RequiresCondition: upgrade.gapowerup2
 		Sequence: idle-powrupb
@@ -126,12 +128,17 @@ GAPOWR:
 		RequiresCondition: upgrade.gapowerup2
 		Amount: 75
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GPROC:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@4: ^ExploBuildingTibbig
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -175,15 +182,18 @@ GPROC:
 	WithDockedOverlay@flame:
 		Sequence: flame
 		Palette: effect
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAPILE:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -25
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 104
@@ -219,10 +229,6 @@ GAPILE:
 		Group: Infantry
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	ProductionBar:
 	WithProductionOverlay@LIGHTS:
 		Sequence: production-lights
@@ -230,14 +236,17 @@ GAPILE:
 		Sequence: idle-light
 	WithIdleOverlay@FLAG:
 		Sequence: idle-flag
-	Power:
-		Amount: -25
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAWEAP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshapewithyoffset
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -274,10 +283,6 @@ GAWEAP:
 		Group: Vehicle
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	ProductionBar:
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
@@ -290,15 +295,18 @@ GAWEAP:
 		Sequence: idle-turbines
 	WithIdleOverlay@BIB:
 		Sequence: bib
-	Power:
-		Amount: -50
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GARADR:
 	Inherits: ^BuildingInfiltrate
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -75
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 106
@@ -317,31 +325,29 @@ GARADR:
 		Bounds: 96, 118, 0, -38
 	Health:
 		HP: 1680000
-	RequiresPower:
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RevealsShroud:
 		Range: 16c942
 	WithIdleOverlay@DISH:
 		Sequence: idle-dish
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -75
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	ProvidesPrerequisite@buildingname:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 12c696
 		CloakTypes: Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAARMORY:
 	Inherits: ^Building
 	Inherits@2: ^3x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -50
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 107
@@ -360,8 +366,6 @@ GAARMORY:
 		HP: 1400000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -50
 	Production@Tech:
 		Produces: Tech.GDI
 		MoveIntoWorld: False
@@ -375,24 +379,33 @@ GAARMORY:
 	Exit:
 	ExitsDebugOverlay:
 	ProductionBar:
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	ProvidesPrerequisite@buildingname:
 	ProvidesAIPrerequisite@gafortAI:
 		Prerequisite: gafortAI
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GAHPAD:
 	Inherits: ^Building
 	Inherits@2: ^2x2hitshape
 	Inherits@3: ^ExploBuildingsmall
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerFortification: ^SupportPowerFortification
 	Inherits@SupportPowerArtillery: ^SupportPowerArtillery
 	Inherits@SupportPowerOrcaBomber: ^SupportPowerOrcaBomber
 	Inherits@SupportPowerOXBomber: ^SupportPowerOXBomber
 	Inherits@SupportPowerOrcaScout: ^SupportPowerOrcaScout
+	Power@FeaturePowerConsumption:
+		Amount: -50
+	GrantExternalConditionPower@SupportPowerFortification:
+		Prerequisites: upgrade.gdf
+	AirstrikePower@SupportPowerArtillery:
+		Prerequisites: garadr, upgrade.gdf
+	AirstrikePower@SupportPowerOrcaBomber:
+		Prerequisites: garadr, upgrade.st
+	AirstrikePower@SupportPowerOXBomber:
+		Prerequisites: garadr, upgrade.zc
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -421,10 +434,6 @@ GAHPAD:
 		Group: Air
 		BuildDurationModifier: 73
 		LowPowerSlowdown: 2
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	Reservable:
 	RepairsUnits:
 		HpPerStep: 10
@@ -439,28 +448,23 @@ GAHPAD:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-platform
 		UseDeathTypeSuffix: False
-	Power:
-		Amount: -50
 	Selectable:
 		Bounds: 88, 66, 0, -5
 	ProvidesPrerequisite@buildingname:
 	ProvidesAIPrerequisite@OrcatransAI:
 		Prerequisite: OrcatransAI
-	GrantExternalConditionPower@SupportPowerFortification:
-		Prerequisites: upgrade.gdf
-	AirstrikePower@SupportPowerArtillery:
-		Prerequisites: garadr, upgrade.gdf
-	AirstrikePower@SupportPowerOrcaBomber:
-		Prerequisites: garadr, upgrade.st
-	AirstrikePower@SupportPowerOXBomber:
-		Prerequisites: garadr, upgrade.zc
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GADEPT:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
 	Inherits@DisabledOverlay: ^DisabledOverlay
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerEmergencyRepair: ^SupportPowerEmergencyRepair
+	Power@FeaturePowerConsumption:
+		Amount: -30
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -485,10 +489,6 @@ GADEPT:
 		Interval: 10
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
-	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: False
@@ -505,16 +505,23 @@ GADEPT:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-ground
 		UseDeathTypeSuffix: False
-	Power:
-		Amount: -30
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GATECH:
 	Inherits: ^Building
 	Inherits@2: ^2x3hitshape
 	Inherits@3: ^ExploBuildingPower
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerZoneCommander: ^SupportPowerZoneCommander
 	Inherits@SupportPowerPoseidon: ^SupportPowerPoseidon
+	Power@FeaturePowerConsumption:
+		Amount: -100
+	ParatroopersPower@SupportPowerZoneCommander:
+		Prerequisites: gaarmory, ~upgrade.zc
+	ParatroopersPower@SupportPowerPoseidon:
+		Prerequisites: gaarmory, ~upgrade.gdf
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 110
@@ -537,20 +544,23 @@ GATECH:
 		Range: 5c673
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-	Power:
-		Amount: -100
 	ProvidesPrerequisite@buildingname:
-	ParatroopersPower@SupportPowerZoneCommander:
-		Prerequisites: gaarmory, ~upgrade.zc
-	ParatroopersPower@SupportPowerPoseidon:
-		Prerequisites: gaarmory, ~upgrade.gdf
+	RequiresBuildableArea:
+		AreaTypes: building
 
 GADROP:
 	Inherits: ^Building
 	Inherits@2: ^3x3hitshape
 	Inherits@3: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerHellfire: ^SupportPowerHellfire
 	Inherits@SupportPowerTitan: ^SupportPowerTitan
+	Power@FeaturePowerConsumption:
+		Amount: -200
+	AirstrikePower@SupportPowerHellfire:
+		Prerequisites: garadr, upgrade.st
+	ParatroopersPower@SupportPowerTitan:
+		Prerequisites: gatech
 	Buildable:
 		Queue: Building.GDI
 		BuildPaletteOrder: 111
@@ -572,8 +582,6 @@ GADROP:
 		HP: 3360000
 	RevealsShroud:
 		Range: 7c73
-	Power:
-		Amount: -200
 	RallyPoint:
 		Offset: 1,4
 		Palette: mouse
@@ -599,7 +607,5 @@ GADROP:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite@buildingname:
-	AirstrikePower@SupportPowerHellfire:
-		Prerequisites: garadr, upgrade.st
-	ParatroopersPower@SupportPowerTitan:
-		Prerequisites: gatech
+	RequiresBuildableArea:
+		AreaTypes: building
