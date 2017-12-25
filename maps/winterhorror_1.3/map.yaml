@@ -1,0 +1,210 @@
+MapFormat: 11
+
+RequiresMod: cd
+
+Title: Winter Horror 1.3
+
+Author: ZxGanon, jrb0001
+
+Tileset: SNOW
+
+MapSize: 82,178
+
+Bounds: 1,17,80,160
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0, Multi1, Multi2, Multi3, Multi4, Multi5, Multi6, Multi7, Multi8
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi4:
+		Name: Multi4
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi5:
+		Name: Multi5
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi6:
+		Name: Multi6
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi7:
+		Name: Multi7
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi8:
+		Name: Multi8
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor38: bigblue
+		Owner: Neutral
+		Location: 85,64
+	Actor31: bigblue
+		Owner: Neutral
+		Location: 32,11
+	Actor35: bigblue
+		Owner: Neutral
+		Location: 92,-51
+	Actor37: bigblue
+		Owner: Neutral
+		Location: 146,3
+	Actor8: mpspawn
+		Owner: Neutral
+		Location: 88,8
+	Actor9: waypoint
+		Owner: Neutral
+		Location: 88,8
+	Actor10: camera
+		Owner: Neutral
+		Location: 88,8
+	Actor11: mpspawn
+		Owner: Neutral
+		Location: 88,7
+	Actor12: waypoint
+		Owner: Neutral
+		Location: 88,7
+	Actor13: camera
+		Owner: Neutral
+		Location: 88,7
+	Actor14: mpspawn
+		Owner: Neutral
+		Location: 88,6
+	Actor15: waypoint
+		Owner: Neutral
+		Location: 88,6
+	Actor16: camera
+		Owner: Neutral
+		Location: 88,6
+	Actor17: mpspawn
+		Owner: Neutral
+		Location: 88,9
+	Actor18: waypoint
+		Owner: Neutral
+		Location: 88,9
+	Actor19: camera
+		Owner: Neutral
+		Location: 88,9
+	Actor20: mpspawn
+		Owner: Neutral
+		Location: 88,10
+	Actor21: waypoint
+		Owner: Neutral
+		Location: 88,10
+	Actor22: camera
+		Owner: Neutral
+		Location: 88,10
+	Actor23: mpspawn
+		Owner: Neutral
+		Location: 89,8
+	Actor24: waypoint
+		Owner: Neutral
+		Location: 89,8
+	Actor25: camera
+		Owner: Neutral
+		Location: 89,8
+	Actor26: mpspawn
+		Owner: Neutral
+		Location: 90,8
+	Actor27: waypoint
+		Owner: Neutral
+		Location: 90,8
+	Actor29: camera
+		Owner: Neutral
+		Location: 90,8
+	Actor30: mpspawn
+		Owner: Neutral
+		Location: 87,8
+	Actor36: waypoint
+		Owner: Neutral
+		Location: 87,8
+	Actor39: camera
+		Owner: Neutral
+		Location: 87,8
+	Actor40: mpspawn
+		Owner: Neutral
+		Location: 86,8
+	Actor41: waypoint
+		Owner: Neutral
+		Location: 86,8
+	Actor42: camera
+		Owner: Neutral
+		Location: 86,8
+	Actor34: tibtech
+		Owner: Neutral
+		Location: 18,9
+	Actor44: tibtech
+		Owner: Neutral
+		Location: 86,77
+	Actor46: tibtech
+		Owner: Neutral
+		Location: 158,4
+	Actor43: tibtech
+		Owner: Neutral
+		Location: 89,-65
+	Actor45: tibtech
+		Owner: Neutral
+		Location: 96,16
+	Actor47: tibtech
+		Owner: Neutral
+		Location: 80,0
+	Actor50: caaray
+		Owner: Neutral
+		Location: 78,17
+	Actor48: caaray
+		Owner: Neutral
+		Location: 98,-2
+	Actor49: caarmr
+		Owner: Neutral
+		Location: 51,-28
+	Actor51: caarmr
+		Owner: Neutral
+		Location: 122,44
+
+Rules:
+	World:
+		LuaScript:
+			Scripts: speedboost.lua
+	^ExistsInWorld:
+		SpeedMultiplier@speedboost:
+			RequiresCondition: speedboost
+			Modifier: 300
+		ExternalCondition@speedboost:
+			Condition: speedboost

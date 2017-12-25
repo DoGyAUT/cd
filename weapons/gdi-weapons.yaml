@@ -5,7 +5,7 @@ MarineGun:
 	Range: 7c73
 	Report: rifle_g1.aud, rifle_g2.aud
 	Burst: 3
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Inaccuracy: 0c181
 	Warhead@1Dam: SpreadDamage
@@ -151,7 +151,7 @@ JuggernautGun:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 180
 	Burst: 3
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 24c43
 	Report: artyfire2.aud, 105mm.aud, 122mm.aud, 128mm.aud
 	Projectile: BulletAS
@@ -181,7 +181,7 @@ JuggernautGun:
 MarvGun:
 	Inherits: JuggernautGun
 	Burst: 9
-	BurstDelay: 10
+	BurstDelays: 10
 	ReloadDelay: 180
 	Range: 11c43
 	MinRange: 1c53
@@ -193,7 +193,7 @@ TitanMK2Grenade:
 	Range: 11c321
 	MinRange: 2c848
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	Report: m203.aud, gp25.aud
 	Projectile: BulletAS
 		Speed: 0c362
@@ -235,7 +235,7 @@ GDIEpicRailgun:
 	ReloadDelay: 100
 	Range: 11c321
 	Burst: 2
-	BurstDelay: 60
+	BurstDelays: 60
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	Projectile: BulletAS
 		Speed: 2c848
@@ -361,7 +361,7 @@ CyclopsCannon:
 	Range: 16c994
 	MinRange: 7c73
 	Burst: 4
-	BurstDelay: 15
+	BurstDelays: 15
 	Report: sonic1.aud, sonic2.aud, sonic3.aud
 	Projectile: BulletAS
 		Speed: 0c362
@@ -400,7 +400,7 @@ ZoneMarineGun:
 	ReloadDelay: 50
 	Range: 7c73
 	Burst: 3
-	BurstDelay: 4
+	BurstDelays: 4
 	Report: carbine_g1.aud, carbine_g2.aud
 	Projectile: BulletAS
 		Inaccuracy: 0c181
@@ -420,7 +420,7 @@ ZoneRaiderGun:
 	Range: 10c621
 	Report: sonic1.aud, sonic2.aud, sonic3.aud
 	Burst: 3
-	BurstDelay: 10
+	BurstDelays: 10
 	Projectile: BulletAS
 		Speed: 0c724
 		Blockable: false
@@ -460,7 +460,7 @@ OxBomberBomb:
 	Inherits@wh: ^HEWH
 	ReloadDelay: 60
 	Burst: 5
-	BurstDelay: 5
+	BurstDelays: 5
 	Range: 7c73
 	Report: bombdrop.aud
 	Projectile: BulletAS
@@ -502,7 +502,7 @@ OrcaBombingRun:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 999
 	Burst: 10
-	BurstDelay: 6
+	BurstDelays: 6
 	Range: 8c497
 	FirstBurstTargetOffset: -5c512,0,0
 	FollowingBurstTargetOffset: 1c0,0,0
@@ -521,7 +521,7 @@ ArtilleryStrikeGun:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 230
 	Burst: 10
-	BurstDelay: 2
+	BurstDelays: 2
 	Range: 5c600
 	Report: incoming1.aud, incoming2.aud, incoming3.aud, incoming4.aud, incoming5.aud, incoming6.aud, incoming7.aud
 	Projectile: BulletAS
@@ -553,7 +553,7 @@ SonicBomb:
 	ReloadDelay: 200
 	Range: 8c497
 	Burst: 44
-	BurstDelay: 1
+	BurstDelays: 1
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	FirstBurstTargetOffset: -7c512,0,0
 	FollowingBurstTargetOffset: 0c512,0,0
@@ -603,7 +603,7 @@ CondorBomb:
 	Inherits: ^RailgunWH
 	ReloadDelay: 200
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	Range: 6c0
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	Projectile: BulletAS
@@ -726,7 +726,7 @@ TitanMK2Railgun:
 	Inherits: ^RailgunWH
 	ReloadDelay: 110
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 11c321
 	Report: railshot01.aud, railshot02.aud, railshot03.aud, railshot04.aud, railshot05.aud
 	Projectile: BulletAS
@@ -870,7 +870,7 @@ WolverineGun:
 	Range: 7c73
 	Report: Gat01.aud, Gat02.aud, Gat03.aud
 	Burst: 20
-	BurstDelay: 3
+	BurstDelays: 3
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c724
@@ -890,7 +890,7 @@ VultureGat:
 	Range: 8c497
 	Report: mgfire.aud
 	Burst: 16
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Speed: 0c964
 		Inaccuracy: 0c724
@@ -909,7 +909,7 @@ APCMGvisual:
 	ReloadDelay: 75
 	Range: 8c497
 	Burst: 25
-	BurstDelay: 2
+	BurstDelays: 2
 	Report: cygun1.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: BulletAS
@@ -950,7 +950,7 @@ OrcaCannon:
 	ValidTargets: Ground
 	Report: Gat01.aud, Gat02.aud, Gat03.aud
 	Burst: 10
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: BulletAS
 		Speed: 0c724
 		Inaccuracy: 0c724
@@ -1036,7 +1036,7 @@ FortressCannon:
 	Inherits@wh: ^APWH
 	ReloadDelay: 220
 	Burst: 1
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 9c921
 	Report: shot01.aud, shot02.aud, shot03.aud
 	Projectile: BulletAS
@@ -1059,7 +1059,7 @@ WolverineMissiles:
 	ReloadDelay: 150
 	Range: 9c921
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	MinRange: 2c124
 	Report: hovrmis1.aud
 	Warhead@1Dam: SpreadDamage
@@ -1080,7 +1080,7 @@ ZoneRaiderBazooka:
 	Range: 11c321
 	MinRange: 2c124
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	Report: javelin.aud
 	ValidTargets: Aircraft
 	Warhead@1Dam: SpreadDamage
@@ -1120,7 +1120,7 @@ PoseidonTusk:
 	ReloadDelay: 150
 	Range: 14c146
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: Missile
@@ -1138,7 +1138,7 @@ MammothTusk:
 	ReloadDelay: 100
 	Range: 11c321
 	Burst: 2
-	BurstDelay: 8
+	BurstDelays: 8
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -1167,7 +1167,7 @@ MammothWalkerTusk:
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground, Aircraft
 	Burst: 16
-	BurstDelay: 4
+	BurstDelays: 4
 	Projectile: Missile
 		Inaccuracy: 0c362
 		HorizontalRateOfTurn: 10
@@ -1188,7 +1188,7 @@ OrcaF1Missiles:
 	MinRange: 1c424
 	Report: orcamis1.aud
 	Burst: 2
-	BurstDelay: 6
+	BurstDelays: 6
 	ValidTargets: Ground
 	Projectile: Missile
 		Inaccuracy: 0c362
@@ -1229,7 +1229,7 @@ OrcaF2Missiles:
 	Range: 7c512
 	MinRange: 1c424
 	Burst: 4
-	BurstDelay: 6
+	BurstDelays: 6
 	Warhead@1Dam: SpreadDamage
 		AffectsParent: True
 		Spread: 0c362
@@ -1303,7 +1303,7 @@ HornetMissile:
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 200
 	Burst: 4
-	BurstDelay: 6
+	BurstDelays: 6
 	Range: 9c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
@@ -1335,7 +1335,7 @@ HornetMissileAA:
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 200
 	Burst: 4
-	BurstDelay: 6
+	BurstDelays: 6
 	Range: 15c0
 	MinRange: 2c848
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
@@ -1367,7 +1367,7 @@ SAMMissile:
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 50
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft
@@ -1398,7 +1398,7 @@ HoverMRLSMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 8
+	BurstDelays: 8
 	Range: 12c745
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
@@ -1420,7 +1420,7 @@ HoverMRLSMissileAA:
 	Inherits@wh: ^APHEWH
 	ReloadDelay: 150
 	Burst: 8
-	BurstDelay: 2
+	BurstDelays: 2
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Aircraft
@@ -1510,7 +1510,7 @@ GuardianTowerMissile:
 	ValidTargets: Ground
 	ReloadDelay: 100
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 11c321
 	MinRange: 5c673
 	Projectile: Missile
@@ -1577,7 +1577,7 @@ KodiacMissilesBig:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 111
 	Burst: 12
-	BurstDelay: 1
+	BurstDelays: 1
 	Range: 3c600
 	Report: rocket02.aud, rocket03.aud, rocket06.aud
 	Projectile: BulletAS
@@ -1616,7 +1616,6 @@ KodiacMissilesBig:
 		Amount: 6
 		AimChance: 75
 
-####SUPERWEAPONS####
 IonCannon:
 	Report: ion1.aud
 	ValidTargets: Ground, Aircraft

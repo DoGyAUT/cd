@@ -9,9 +9,13 @@ DummyShakerVision:
 		Speed: 0
 		CanHover: True
 		IdealSeparation: 300
+		TakeOffOnResupply: true
+		VTOL: true
 	HiddenUnderFog:
+		Type: GroundPosition
 	ShakeOnDeath:
 	RevealsShroud:
+		Type: GroundPosition
 		Range: 10c0
 	Health:
 		HP: 10000
@@ -25,6 +29,7 @@ DummyShakerVision:
 	BodyOrientation:
 		QuantizedFacings: 32
 	HitShape:
+	Interactable:
 
 DummyShakerTarget:
 	Inherits: DummyShakerVision

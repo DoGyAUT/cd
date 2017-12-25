@@ -51,6 +51,9 @@ KASILO:
 	Inherits@3: ^ExploBuildingdefensecabal
 	Inherits@4: ^ExploBuildingTibsmall
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -10
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 303
@@ -85,13 +88,13 @@ KASILO:
 		Sequence: idle-underlay
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	StoresResources:
 		PipColor: Green
 		PipCount: 5
 		Capacity: 1500
-	Power:
-		Amount: -10
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABLASR:
 	Inherits: ^Defense
@@ -102,6 +105,9 @@ KABLASR:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -116,7 +122,6 @@ KABLASR:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 60, 60, 0, -12
-	RequiresPower:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -139,13 +144,13 @@ KABLASR:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
-	Power:
-		Amount: -100
 	WithMuzzleOverlay:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABCAN:
 	Inherits: ^Defense
@@ -156,6 +161,9 @@ KABCAN:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -100
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -170,7 +178,6 @@ KABCAN:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 60, 60, 0, -12
-	RequiresPower:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
@@ -195,13 +202,13 @@ KABCAN:
 	RenderRangeCircle:
 	WithSpriteTurret:
 		Sequence: turret
-	Power:
-		Amount: -100
 	WithMuzzleOverlay:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KDARK:
 	Inherits: ^Defense
@@ -210,6 +217,9 @@ KDARK:
 	Inherits@DisabledOverlay: ^DisabledOverlay
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -150
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -224,7 +234,6 @@ KDARK:
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 48, 100, 0, -40
-	RequiresPower:
 	Health:
 		HP: 3360000
 	RevealsShroud:
@@ -252,9 +261,9 @@ KDARK:
 		RequiresCondition: !charging
 		Image: kdark
 		Sequence: idle-lights
-	Power:
-		Amount: -150
 	ProvidesPrerequisite@buildingname:
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KOBEL:
 	Inherits: ^Defense
@@ -265,6 +274,9 @@ KOBEL:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
+	Power@FeaturePowerConsumption:
+		Amount: -200
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -279,7 +291,6 @@ KOBEL:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 74, 0, -14
-	RequiresPower:
 	Health:
 		HP: 5250000
 	RevealsShroud:
@@ -308,20 +319,23 @@ KOBEL:
 		Range: 0c7
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-		PauseOnCondition: power-outage
-	Power:
-		Amount: -200
+		PauseOnCondition: FeaturePowerConsumptionPowerDown
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 8c497
 		CloakTypes: Cloak, Underground
+	RequiresBuildableArea:
+		AreaTypes: building
 
 KABSW1:
 	Inherits: ^Building
 	Inherits@2: ^3x4hitshape
 	Inherits@3: ^SuperWeapon
 	Inherits@4: ^ExploBuildingmedium
+	Inherits@FeaturePowerConsumption: ^FeaturePowerConsumption
 	Inherits@SupportPowerAnnihilator: ^SupportPowerAnnihilator
+	Power@FeaturePowerConsumption:
+		Amount: -400
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: playercab
@@ -344,22 +358,17 @@ KABSW1:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 110, 70, 3, -20
-	RequiresPower:
+		DecorationBounds: 110, 70, 3, -20
 	Health:
 		HP: 8000000
 	BodyOrientation:
 		QuantizedFacings: 32
-	Turreted:
-		TurnSpeed: 2
-		InitialFacing: 50
-	AttackTurreted:
 	WithSpriteTurret:
 		Recoils: no
-	Power:
-		Amount: -400
+	Turreted:
 	SelectionDecorations:
-		VisualBounds: 110, 70, 3, -20
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	SupportPowerChargeBar:
-
+	RequiresBuildableArea:
+		AreaTypes: building

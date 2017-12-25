@@ -25,6 +25,7 @@ PTEROIS:
 	RevealsShroud@upgrade.visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Range: 20c394
+		Type: GroundPosition
 	Armament:
 		Weapon: PteroisMachal
 		LocalOffset: 636,311,283, 636,-311,283
@@ -38,8 +39,6 @@ PTEROIS:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	DetectCloaked:
 		Range: 9c921
 	RenderDetectionCircle:
@@ -51,6 +50,9 @@ PTEROIS:
 		Actor: PTEROIS.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 KDRONE:
 	Inherits: ^AttackAdvancedPlane
@@ -79,6 +81,7 @@ KDRONE:
 	RevealsShroud@upgrade.visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Range: 21c818
+		Type: GroundPosition
 	Armament:
 		Weapon: DroneMachal
 		LocalOffset: 181,0,0
@@ -91,8 +94,6 @@ KDRONE:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -100,6 +101,8 @@ KDRONE:
 		Actor: KDRONE.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		Delay: 5
 
 KDRONE1:
 	Inherits: KDRONE
@@ -119,6 +122,8 @@ KDRONE1:
 		Image: kdrone
 	-Selectable:
 	RejectsOrders:
+	-ReloadAmmoPool@1:
+	Interactable:
 
 MANTA:
 	Inherits: ^AttackAdvancedPlane
@@ -145,6 +150,7 @@ MANTA:
 	RevealsShroud@upgrade.visionuplink:
 		RequiresCondition: upgrade.visionuplink
 		Range: 20c394
+		Type: GroundPosition
 	Armament@1:
 		Weapon: MantaMachal
 		LocalOffset: 1131,136,1273, 1131,0,1273, 1131,-136,1273
@@ -156,8 +162,6 @@ MANTA:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	Turreted:
 		TurnSpeed: 2
 		Offset: 566,0,181
@@ -196,3 +200,6 @@ MANTA:
 		Probability: 100
 	HitShape:
 	RejectsOrders:
+	ReloadAmmoPool@1:
+		Delay: 5
+	Interactable:

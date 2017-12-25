@@ -40,8 +40,6 @@ ORCA_F1:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -53,6 +51,9 @@ ORCA_F1:
 		Actor: ORCA_F1.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 ORCA_F2:
 	Inherits: ^Helicopter
@@ -95,8 +96,6 @@ ORCA_F2:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -108,6 +107,9 @@ ORCA_F2:
 		Actor: ORCA_F2.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 ORCA_TRAN:
 	Inherits: ^Helicopter
@@ -326,6 +328,7 @@ ORCA_G:
 		Probability: 100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 OXBOMBER:
 	Inherits: ^AttackPlane
@@ -351,6 +354,7 @@ OXBOMBER:
 		Type: GroundPosition
 	Armament:
 		Weapon: SonicBomb
+		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 30
 		PipCount: 0
@@ -358,6 +362,7 @@ OXBOMBER:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	AttackBomber:
 		FacingTolerance: 20
 	RenderSprites:
@@ -368,6 +373,7 @@ OXBOMBER:
 		Probability: 100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 ORCA_B:
 	Inherits: ^AttackPlane
@@ -389,6 +395,7 @@ ORCA_B:
 		Type: GroundPosition
 	Armament:
 		Weapon: OrcaBombingRun
+		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 20
 		PipCount: 0
@@ -396,6 +403,7 @@ ORCA_B:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	AttackBomber:
 		FacingTolerance: 20
 	RenderSprites:
@@ -406,6 +414,7 @@ ORCA_B:
 		Probability: 100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 ARTILLERY_BEACON:
 	Inherits: ^AttackPlane
@@ -429,6 +438,7 @@ ARTILLERY_BEACON:
 		Type: GroundPosition
 	Armament:
 		Weapon: ArtilleryStrikeGun
+		PauseOnCondition: !ammo
 	AttackBomber:
 		FacingTolerance: 20
 	AmmoPool:
@@ -438,11 +448,13 @@ ARTILLERY_BEACON:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	-RenderSprites:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 PHOENIX:
 	Inherits: ^AttackPlane
@@ -471,6 +483,7 @@ PHOENIX:
 		Type: GroundPosition
 	Armament:
 		Weapon: ^Bomb
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
 	AmmoPool:
@@ -480,6 +493,7 @@ PHOENIX:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -488,6 +502,7 @@ PHOENIX:
 		Probability: 100100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 FHAWK:
 	Inherits: ^AttackAdvancedPlane
@@ -525,6 +540,7 @@ FHAWK:
 		LocalOffset: -362,724,45, -724,-724,45
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 45
 	AmmoPool@1:
@@ -533,6 +549,7 @@ FHAWK:
 		PipCount: 2
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -578,6 +595,7 @@ HORNET:
 		LocalOffset: 0,566,362, 0,-566,362, 0,724,362, 0,-724,362
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolra50alpha
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 45
 	AmmoPool@1:
@@ -587,6 +605,7 @@ HORNET:
 		ReloadCount: 1
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -632,6 +651,7 @@ CONDOR:
 		MuzzleSplitFacings: 8
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 1448,141,45, 1448,-141,45
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
 	AmmoPool@1:
@@ -640,6 +660,7 @@ CONDOR:
 		PipCount: 2
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -694,6 +715,7 @@ DSHP.SUPPORT:
 		Actor: DSHP.Husk
 		Probability: 100
 	HitShape:
+	Interactable:
 
 DSHP:
 	Inherits: ^Helicopter
@@ -796,69 +818,77 @@ KODIAK:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@MG2:
 		Name: MG2
 		Ammo: 200
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@MG3:
 		Name: MG3
 		Ammo: 200
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@MG4:
 		Name: MG4
 		Ammo: 200
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@Ion1:
 		Name: Ion1
 		Ammo: 2
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@Ion2:
 		Name: Ion2
 		Ammo: 2
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@Rail1:
 		Name: Rail1
 		Ammo: 2
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@Rail2:
 		Name: Rail2
 		Ammo: 2
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
 	WithMuzzleOverlay:
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: MG1
+		Delay: 5
+	ReloadAmmoPool@2:
+		AmmoPool: MG2
+		Delay: 5
+	ReloadAmmoPool@3:
+		AmmoPool: MG3
+		Delay: 5
+	ReloadAmmoPool@4:
+		AmmoPool: MG4
+		Delay: 5
+	ReloadAmmoPool@5:
+		AmmoPool: Ion1
+		Delay: 5
+	ReloadAmmoPool@6:
+		AmmoPool: Ion2
+		Delay: 5
+	ReloadAmmoPool@7:
+		AmmoPool: Rail1
+		Delay: 5
+	ReloadAmmoPool@8:
+		AmmoPool: Rail2
+		Delay: 5
 
 Hellfire_beacon:
 	Inherits: ^AttackPlane
@@ -886,6 +916,7 @@ Hellfire_beacon:
 		Type: GroundPosition
 	Armament:
 		Weapon: KodiacMissilesBig
+		PauseOnCondition: !ammo
 	AttackBomber:
 		FacingTolerance: 20
 	AmmoPool:
@@ -895,8 +926,10 @@ Hellfire_beacon:
 		ReloadDelay: 50
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
 	RejectsOrders:
 	HitShape:
+	Interactable:

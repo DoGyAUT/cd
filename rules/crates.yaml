@@ -9,8 +9,8 @@
 		Palette: terraindecoration
 	WithCrateBody:
 		Images: crate
-	CustomSelectionSize:
-		CustomBounds: 24,24
+	Interactable:
+		Bounds: 24,24
 
 CRATE:
 	Inherits: ^Crate
@@ -142,149 +142,158 @@ CRATE:
 		SelectionShares: 60
 		Units: smcv
 		Notification: 00-i038.aud
-	SupportPowerCrateAction@SupportPowerCleansingAura:
+	ExplodeCrateAction@SupportPowerCleansingAura:
 		SelectionShares: 30
-		Proxy: SupportPowerCleansingAura
+		Weapon: SupportPowerCleansingAura
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerTeleporter:
+	ExplodeCrateAction@SupportPowerTeleporter:
 		SelectionShares: 30
-		Proxy: SupportPowerTeleporter
+		Weapon: SupportPowerTeleporter
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerNanoSwarm:
+	ExplodeCrateAction@SupportPowerNanoSwarm:
 		SelectionShares: 30
-		Proxy: SupportPowerNanoSwarm
+		Weapon: SupportPowerNanoSwarm
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerMantaStrikeRun:
+	ExplodeCrateAction@SupportPowerMantaStrikeRun:
 		SelectionShares: 30
-		Proxy: SupportPowerMantaStrikeRun
+		Weapon: SupportPowerMantaStrikeRun
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerTotalMeltdown:
+	ExplodeCrateAction@SupportPowerTotalMeltdown:
 		SelectionShares: 30
-		Proxy: SupportPowerTotalMeltdown
+		Weapon: SupportPowerTotalMeltdown
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerOverload:
+	ExplodeCrateAction@SupportPowerOverload:
 		SelectionShares: 30
-		Proxy: SupportPowerOverload
+		Weapon: SupportPowerOverload
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerAnnihilator:
+	ExplodeCrateAction@SupportPowerAnnihilator:
 		SelectionShares: 30
-		Proxy: SupportPowerAnnihilator
+		Weapon: SupportPowerAnnihilator
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerCrapJetBomber:
+	ExplodeCrateAction@SupportPowerCrapJetBomber:
 		SelectionShares: 30
-		Proxy: SupportPowerCrapJetBomber
+		Weapon: SupportPowerCrapJetBomber
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerFortification:
+	ExplodeCrateAction@SupportPowerFortification:
 		SelectionShares: 30
-		Proxy: SupportPowerFortification
+		Weapon: SupportPowerFortification
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerArtillery:
+	ExplodeCrateAction@SupportPowerArtillery:
 		SelectionShares: 30
-		Proxy: SupportPowerArtillery
+		Weapon: SupportPowerArtillery
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerOrcaBomber:
+	ExplodeCrateAction@SupportPowerOrcaBomber:
 		SelectionShares: 30
-		Proxy: SupportPowerOrcaBomber
+		Weapon: SupportPowerOrcaBomber
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerOXBomber:
+	ExplodeCrateAction@SupportPowerOXBomber:
 		SelectionShares: 30
-		Proxy: SupportPowerOXBomber
+		Weapon: SupportPowerOXBomber
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerOrcaScout:
+	ExplodeCrateAction@SupportPowerOrcaScout:
 		SelectionShares: 30
-		Proxy: SupportPowerOrcaScout
+		Weapon: SupportPowerOrcaScout
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerEmergencyRepair:
+	ExplodeCrateAction@SupportPowerEmergencyRepair:
 		SelectionShares: 30
-		Proxy: SupportPowerEmergencyRepair
+		Weapon: SupportPowerEmergencyRepair
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerZoneCommander:
+	ExplodeCrateAction@SupportPowerZoneCommander:
 		SelectionShares: 30
-		Proxy: SupportPowerZoneCommander
+		Weapon: SupportPowerZoneCommander
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerPoseidon:
+	ExplodeCrateAction@SupportPowerPoseidon:
 		SelectionShares: 30
-		Proxy: SupportPowerPoseidon
+		Weapon: SupportPowerPoseidon
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerHellfire:
+	ExplodeCrateAction@SupportPowerHellfire:
 		SelectionShares: 30
-		Proxy: SupportPowerHellfire
+		Weapon: SupportPowerHellfire
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerTitan:
+	ExplodeCrateAction@SupportPowerTitan:
 		SelectionShares: 30
-		Proxy: SupportPowerTitan
+		Weapon: SupportPowerTitan
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerIonCannon:
+	ExplodeCrateAction@SupportPowerIonCannon:
 		SelectionShares: 30
-		Proxy: SupportPowerIonCannon
+		Weapon: SupportPowerIonCannon
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerFrenzy:
+	ExplodeCrateAction@SupportPowerFrenzy:
 		SelectionShares: 30
-		Proxy: SupportPowerFrenzy
+		Weapon: SupportPowerFrenzy
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerScan:
+	ExplodeCrateAction@SupportPowerScan:
 		SelectionShares: 30
-		Proxy: SupportPowerScan
+		Weapon: SupportPowerScan
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerSubAmbush:
+	ExplodeCrateAction@SupportPowerSubAmbush:
 		SelectionShares: 30
-		Proxy: SupportPowerSubAmbush
+		Weapon: SupportPowerSubAmbush
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerHavoc:
+	ExplodeCrateAction@SupportPowerHavoc:
 		SelectionShares: 30
-		Proxy: SupportPowerHavoc
+		Weapon: SupportPowerHavoc
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerPropagandaInfantry:
+	ExplodeCrateAction@SupportPowerPropagandaInfantry:
 		SelectionShares: 30
-		Proxy: SupportPowerPropagandaInfantry
+		Weapon: SupportPowerPropagandaInfantry
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerFanatic:
+	ExplodeCrateAction@SupportPowerFanatic:
 		SelectionShares: 30
-		Proxy: SupportPowerFanatic
+		Weapon: SupportPowerFanatic
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerShadowTrooper:
+	ExplodeCrateAction@SupportPowerShadowTrooper:
 		SelectionShares: 30
-		Proxy: SupportPowerShadowTrooper
+		Weapon: SupportPowerShadowTrooper
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerVertigoNapalm:
+	ExplodeCrateAction@SupportPowerVertigoNapalm:
 		SelectionShares: 30
-		Proxy: SupportPowerVertigoNapalm
+		Weapon: SupportPowerVertigoNapalm
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerVertigoTiberium:
+	ExplodeCrateAction@SupportPowerVertigoTiberium:
 		SelectionShares: 30
-		Proxy: SupportPowerVertigoTiberium
+		Weapon: SupportPowerVertigoTiberium
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerVertigoSeismic:
+	ExplodeCrateAction@SupportPowerVertigoSeismic:
 		SelectionShares: 30
-		Proxy: SupportPowerVertigoSeismic
+		Weapon: SupportPowerVertigoSeismic
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerEMPCannon:
+	ExplodeCrateAction@SupportPowerEMPCannon:
 		SelectionShares: 30
-		Proxy: SupportPowerEMPCannon
+		Weapon: SupportPowerEMPCannon
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerNuke:
+	ExplodeCrateAction@SupportPowerNuke:
 		SelectionShares: 30
-		Proxy: SupportPowerNuke
+		Weapon: SupportPowerNuke
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerTiberianLaser:
+	ExplodeCrateAction@SupportPowerTiberianLaser:
 		SelectionShares: 30
-		Proxy: SupportPowerTiberianLaser
+		Weapon: SupportPowerTiberianLaser
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerOrbitalLaser:
+	ExplodeCrateAction@SupportPowerOrbitalLaser:
 		SelectionShares: 30
-		Proxy: SupportPowerOrbitalLaser
+		Weapon: SupportPowerOrbitalLaser
 		Notification: 00-cd003.aud
-	SupportPowerCrateAction@SupportPowerCloaking:
+	ExplodeCrateAction@SupportPowerCloaking:
 		SelectionShares: 30
-		Proxy: SupportPowerCloaking
+		Weapon: SupportPowerCloaking
 		Notification: 00-cd003.aud
 
 ^CrateSupportPower:
+	ConditionManager:
 	AlwaysVisible:
 	RenderSprites:
 		Image: crate
 		Palette: terraindecoration
 	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 0
+	Aircraft:
+		Speed: 0
+		AltitudeVelocity: 0
+	AttackPlane:
+	Armament:
+		Weapon: CrateSupportPowerStub
 
 SupportPowerCleansingAura:
 	Inherits: ^SupportPowerCleansingAura
@@ -292,201 +301,269 @@ SupportPowerCleansingAura:
 	DetonateWeaponPower@cleansingaura:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerTeleporter:
 	Inherits: ^SupportPowerTeleporter
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ChronoshiftPower@SupportPowerTeleporter:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerNanoSwarm:
 	Inherits: ^SupportPowerNanoSwarm
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerNanoSwarm:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerMantaStrikeRun:
 	Inherits: ^SupportPowerMantaStrikeRun
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerMantaStrikeRun:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerTotalMeltdown:
 	Inherits: ^SupportPowerTotalMeltdown
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerTotalMeltdown:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerOverload:
 	Inherits: ^SupportPowerOverload
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerOverload:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerAnnihilator:
 	Inherits: ^SupportPowerAnnihilator
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	FireArmamentPower@SupportPowerAnnihilator:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerCrapJetBomber:
 	Inherits: ^SupportPowerCrapJetBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerCrapJetBomber:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerFortification:
 	Inherits: ^SupportPowerFortification
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerFortification:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerArtillery:
 	Inherits: ^SupportPowerArtillery
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerArtillery:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerOrcaBomber:
 	Inherits: ^SupportPowerOrcaBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOrcaBomber:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerOXBomber:
 	Inherits: ^SupportPowerOXBomber
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOXBomber:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerOrcaScout:
 	Inherits: ^SupportPowerOrcaScout
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerOrcaScout:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerEmergencyRepair:
 	Inherits: ^SupportPowerEmergencyRepair
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerEmergencyRepair:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerZoneCommander:
 	Inherits: ^SupportPowerZoneCommander
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerZoneCommander:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerPoseidon:
 	Inherits: ^SupportPowerPoseidon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerPoseidon:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerHellfire:
 	Inherits: ^SupportPowerHellfire
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerHellfire:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerTitan:
 	Inherits: ^SupportPowerTitan
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerTitan:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerIonCannon:
 	Inherits: ^SupportPowerIonCannon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerIonCannon:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerFrenzy:
 	Inherits: ^SupportPowerFrenzy
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerFrenzy:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerScan:
 	Inherits: ^SupportPowerScan
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	SpawnActorPower@SupportPowerScan:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerSubAmbush:
 	Inherits: ^SupportPowerSubAmbush
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	SpawnActorPower@SupportPowerSubAmbush:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerHavoc:
 	Inherits: ^SupportPowerHavoc
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ProduceActorPower@SupportPowerHavoc:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerPropagandaInfantry:
 	Inherits: ^SupportPowerPropagandaInfantry
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerPropagandaInfantry:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerFanatic:
 	Inherits: ^SupportPowerFanatic
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerFanatic:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerShadowTrooper:
 	Inherits: ^SupportPowerShadowTrooper
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	ParatroopersPower@SupportPowerShadowTrooper:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerVertigoNapalm:
 	Inherits: ^SupportPowerVertigoNapalm
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoNapalm:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerVertigoTiberium:
 	Inherits: ^SupportPowerVertigoTiberium
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoTiberium:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerVertigoSeismic:
 	Inherits: ^SupportPowerVertigoSeismic
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	AirstrikePower@SupportPowerVertigoSeismic:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerEMPCannon:
 	Inherits: ^SupportPowerEMPCannon
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	FireArmamentPower@SupportPowerEMPCannon:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerNuke:
 	Inherits: ^SupportPowerNuke
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	NukePower@SupportPowerNuke:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+	WithNukeLaunchAnimation:
+
 SupportPowerTiberianLaser:
 	Inherits: ^SupportPowerTiberianLaser
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerTiberianLaser:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerOrbitalLaser:
 	Inherits: ^SupportPowerOrbitalLaser
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	DetonateWeaponPower@SupportPowerOrbitalLaser:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True
+
 SupportPowerCloaking:
 	Inherits: ^SupportPowerCloaking
 	Inherits@CrateSupportPower: ^CrateSupportPower
 	GrantExternalConditionPower@SupportPowerCloaking:
 		OneShot: True
 		StartFullyCharged: True
+		AllowMultiple: True

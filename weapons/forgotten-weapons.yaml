@@ -44,7 +44,7 @@ GruntGun:
 	Range: 5c673
 	Report: smg_f1.aud, smg_f2.aud
 	Burst: 4
-	BurstDelay: 3
+	BurstDelays: 3
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
@@ -85,7 +85,7 @@ ScoundrelGun:
 	Range: 7c73
 	Report: stormgun1.aud,stormgun2.aud,stormgun3.aud
 	Burst: 5
-	BurstDelay: 3
+	BurstDelays: 3
 	Projectile: BulletAS
 		Inaccuracy: 0c362
 	Warhead@1Dam: SpreadDamage
@@ -115,7 +115,7 @@ CrapjetBomb:
 	Inherits@wh: ^HEAPWH
 	ReloadDelay: 10
 	Burst: 10
-	BurstDelay: 2
+	BurstDelays: 2
 	Range: 3c910
 	Projectile: BulletAS
 		Speed: 0c362
@@ -136,7 +136,7 @@ BisonLauncher:
 	ReloadDelay: 200
 	Range: 9c559
 	Burst: 6
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: m203.aud, gp25.aud
 	Projectile: BulletAS
 		Speed: 0c362
@@ -186,7 +186,7 @@ AssaultTruckMG:
 	ReloadDelay: 60
 	Range: 5c673
 	Burst: 20
-	BurstDelay: 2
+	BurstDelays: 2
 	Report: chaingn1.aud
 	Projectile: BulletAS
 		Speed: 0c964
@@ -206,7 +206,7 @@ BisonMG:
 	ReloadDelay: 200
 	Range: 9c559
 	Burst: 50
-	BurstDelay: 4
+	BurstDelays: 4
 	Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
 	Projectile: BulletAS
 		Speed: 0c964
@@ -226,7 +226,7 @@ TaurusMG:
 	ReloadDelay: 80
 	Range: 11c321
 	Burst: 12
-	BurstDelay: 2
+	BurstDelays: 2
 	Report: m3.aud
 	ValidTargets: Ground, Aircraft
 	Projectile: BulletAS
@@ -250,7 +250,7 @@ WatchTowerMG:
 	ReloadDelay: 70
 	Range: 9c921
 	Burst: 30
-	BurstDelay: 2
+	BurstDelays: 2
 	Report: dshk_01.aud, dshk_02.aud, dshk_03.aud, dshk_04.aud, dshk_05.aud
 	Projectile: BulletAS
 		Speed: 1c424
@@ -593,7 +593,7 @@ BountyMG:
 	Inherits@wh: ^BulletWH
 	ReloadDelay: 30
 	Burst: 3
-	BurstDelay: 3
+	BurstDelays: 3
 	Range: 7c73
 	Report: stormgun1.aud, stormgun2.aud, stormgun3.aud
 	InvalidTargets: Vehicle
@@ -634,7 +634,7 @@ GeckoLauncherBarrage:
 	ValidTargets: Ground
 	ReloadDelay: 220
 	Burst: 6
-	BurstDelay: 0
+	BurstDelays: 0
 	Range: 14c146
 	MinRange: 5c673
 	Projectile: Missile
@@ -707,7 +707,7 @@ ForgottenT2Missile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 150
 	Burst: 6
-	BurstDelay: 8
+	BurstDelays: 8
 	Range: 11c321
 	Report: launcher01.aud, launcher02.aud, launcher03.aud, launcher04.aud
 	ValidTargets: Ground
@@ -737,7 +737,7 @@ BuggyMissile:
 	Inherits@wh: ^APWH
 	ReloadDelay: 180
 	Burst: 4
-	BurstDelay: 3
+	BurstDelays: 3
 	Range: 8c497
 	Report: misl1.aud
 	ValidTargets: Ground
@@ -767,7 +767,7 @@ BuggyMissileAA:
 		Spread: 0c362
 		Damage: 60000
 		ValidTargets: Aircraft
-		
+
 BuzzardMissile:
 	Inherits: ^RocketHE
 	Inherits@wh: ^APWH
@@ -900,14 +900,14 @@ DiggerLaser:
 	Warhead@3Smu: LeaveSmudge
 		AffectsParent: True
 		SmudgeType: SmallScorch
-		
+
 BuggyToxin:
 	Inherits: BlueFireballLauncher
 	Inherits@wh: ^TiberiumWH
 	ReloadDelay: 100
 	Range: 5c435
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: flamtnk1.aud
 	Projectile: BulletAS
 		Speed: 0c181
@@ -966,7 +966,7 @@ GriffinMissile:
 	MinRange: 1c424
 	Report: orcamis1.aud
 	Burst: 2
-	BurstDelay: 6
+	BurstDelays: 6
 	ValidTargets: Ground
 	Projectile: Missile
 		Inaccuracy: 0c362

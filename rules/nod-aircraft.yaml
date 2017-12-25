@@ -49,8 +49,6 @@ VENOM:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	DetectCloaked:
 		Range: 9c921
 	RenderDetectionCircle:
@@ -65,6 +63,9 @@ VENOM:
 		Actor: VENOM.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
 
 HYDRA:
 	Inherits: ^Helicopter
@@ -128,16 +129,12 @@ HYDRA:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	AmmoPool@2:
 		Name: primary2
 		Ammo: 6
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		SelfReloads: True
-		SelfReloadDelay: 5
 	GrantConditionOnPrerequisite@upgrade1:
 		Condition: upgrade.tiblaser
 		Prerequisites: upgrade.tiblaser
@@ -165,6 +162,12 @@ HYDRA:
 		Actor: HYDRA.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: primary
+		Delay: 5
+	ReloadAmmoPool@2:
+		AmmoPool: primary2
+		Delay: 5
 
 HAVOC:
 	Inherits: ^Helicopter
@@ -225,9 +228,6 @@ HAVOC:
 	AmmoPool@rockets:
 		Name: rockets
 		Ammo: 8
-		SelfReloads: True
-		SelfReloadDelay: 160
-		ReloadCount: 8
 	DetectCloaked:
 		Range: 9c921
 	RenderSprites:
@@ -238,6 +238,10 @@ HAVOC:
 		Actor: HAVOC.Husk
 		Probability: 100
 	HitShape:
+	ReloadAmmoPool@1:
+		AmmoPool: rockets
+		Delay: 160
+		Count: 8
 
 NODCARRY:
 	Inherits: ^Helicopter
@@ -324,6 +328,7 @@ NODCARRY.SUPPORT:
 		Actor: NODCARRY.Husk
 		Probability: 100
 	HitShape:
+	Interactable:
 
 VALKYRIE.SUPPORT:
 	Inherits: ^Helicopter
@@ -365,6 +370,7 @@ VALKYRIE.SUPPORT:
 		Actor: VALKYRIE.Husk
 		Probability: 100
 	HitShape:
+	Interactable:
 
 RAVEN:
 	Inherits: ^AttackAdvancedPlane
@@ -403,6 +409,7 @@ RAVEN:
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 362,1131,-45, 362,-1131,-45
 		RequiresCondition: !upgrade.bluehell && !upgrade.tibgas
+		PauseOnCondition: !ammo
 	Armament@primaryupgrade:
 		Weapon: BluehellRavenMissile
 		MuzzleSequence: muzzle
@@ -410,6 +417,7 @@ RAVEN:
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 362,1131,-45, 362,-1131,-45
 		RequiresCondition: upgrade.bluehell
+		PauseOnCondition: !ammo
 	Armament@primaryupgrade2:
 		Weapon: TiberiumRavenMissile
 		MuzzleSequence: muzzle
@@ -417,6 +425,7 @@ RAVEN:
 		MuzzlePalette: apolra50alpha
 		LocalOffset: 362,1131,-45, 362,-1131,-45
 		RequiresCondition: upgrade.tibgas
+		PauseOnCondition: !ammo
 	AmmoPool@1:
 		Name: primary
 		Ammo: 1
@@ -424,6 +433,7 @@ RAVEN:
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		SelfReloads: False
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -516,9 +526,11 @@ VERTIGO:
 	Armament@primary:
 		Weapon: VertigoBombNapalm
 		RequiresCondition: !upgrade.bluehell
+		PauseOnCondition: !ammo
 	Armament@primaryupgraded:
 		Weapon: VertigoBombBlueNapalm
 		RequiresCondition: upgrade.bluehell
+		PauseOnCondition: !ammo
 	GrantConditionOnPrerequisite@upgrade.bluehell:
 		Condition: upgrade.bluehell
 		Prerequisites: upgrade.bluehell
@@ -531,6 +543,7 @@ VERTIGO:
 		ReloadDelay: 250
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
+		AmmoCondition: ammo
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -546,6 +559,7 @@ VERTIGO:
 		Probability: 100
 	RejectsOrders:
 	HitShape:
+	Interactable:
 
 VERTIGO2:
 	Inherits: VERTIGO

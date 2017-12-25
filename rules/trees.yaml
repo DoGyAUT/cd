@@ -185,6 +185,8 @@ VEINHOLEDUMMY:
 		QuantizedFacings: 1
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
 
 VEINHOLE:
 	Inherits: VEINHOLEDUMMY
@@ -196,7 +198,6 @@ VEINHOLE:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	AutoSelectionSize:
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Veins
@@ -207,6 +208,9 @@ VEINHOLE:
 		Interval: 300, 800
 	HitShape:
 		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
 
 TREE26:
 	Inherits: ^Tree
