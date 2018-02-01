@@ -6,7 +6,7 @@ GASOL:
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 100
-		Prerequisites: ~gapile, ~!upgrade.zc
+		Prerequisites: ~gapile
 		Description: GDI's basic combat infantry.\n\nGood vs: Light infantry\n\nSpecial:\n- Crush class: Light Infantry
 	Valued:
 		Cost: 100
@@ -144,84 +144,6 @@ E2:
 		DamagedSounds: gdi2_f1.aud, gdi2_f2.aud, gdi2_f3.aud, gdi2_f4.aud, gdi2_f5.aud, gdi2_f6.aud, gdi2_f7.aud, gdi2_f8
 	HitShape:
 
-SCOUT:
-	Inherits: ^Soldier
-	Buildable:
-		Queue: Infantry.GDI
-		BuildPaletteOrder: 106
-		Prerequisites: ~gapile
-		Description: Stealthy scout unit.\n\nGood vs: Nothing\n\nSpecial:\n- Stealth\n- Huge vision range
-	Valued:
-		Cost: 350
-	Tooltip:
-		Name: Scout
-	Selectable:
-		Priority: 5
-		Bounds: 12,17,0,-9
-	Voiced:
-		VoiceSet: Scout
-		Volume: 2
-	Health:
-		HP: 150000
-	Mobile:
-		Speed: 40
-	RevealsShroud:
-		Range: 14c146
-	AttackFrontal:
-	-Cloak:
-	Cloak@self:
-		InitialDelay: 90
-		CloakDelay: 90
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage, Move
-	AnnounceOnSeen:
-		PingRadar: True
-		Notification: StealthUnitDetected
-	SoundOnDamageTransition:
-		DamagedSounds: spotter_f1.aud, spotter_f2.aud, spotter_f3.aud
-	HitShape:
-
-GDOG:
-	Inherits: ^SoldierFearless
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
-	Valued:
-		Cost: 200
-	Tooltip:
-		Name: Watch Dog
-	Selectable:
-		Bounds: 12,17,0,-9
-	Voiced:
-		VoiceSet: Dog
-	Health:
-		HP: 250000
-	Mobile:
-		Speed: 76
-	RevealsShroud:
-		Range: 14c146
-	Armament@primary:
-		Name: Bite
-		Weapon: DogBite
-	AttackFrontal:
-		Armaments: Bite
-	WithInfantryBody:
-		IdleSequences: idle1,idle2,idle3
-	IgnoresDisguise:
-	DetectCloaked:
-		Range: 7c73
-	RenderDetectionCircle:
-	SpawnActorOnDeath@1:
-		Actor: doggie
-		Probability: 50
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		DeathType: TriggerVisceroid
-		RequiresLobbyCreeps: True
-	SoundOnDamageTransition:
-		DamagedSounds: dog_a1.aud, dog_s1.aud, dog_m1.aud
-	HitShape:
-
 ENGINEER:
 	Inherits: ^Soldier
 	Valued:
@@ -306,59 +228,6 @@ MEDIC:
 	SoundOnDamageTransition:
 		DamagedSounds: medic_f1.aud, medic_f2.aud, medic_f3.aud, medic_f4.aud
 	HitShape:
-
-ZMARINE:
-	Inherits: ^SoldierFearless
-	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
-	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
-	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
-	Buildable:
-		Queue: Infantry.GDI
-		BuildPaletteOrder: 101
-		Prerequisites: ~gapile, ~!t1, ~upgrade.zc
-		Description: ZOCOM's variant of the Marine.\n\nGood vs: Infantry\n\nSpecial:\n- Immune to Tiberium radiation\n- Crush class: Light Infantry
-	Valued:
-		Cost: 175
-	Tooltip:
-		Name: Zone Marine
-	Selectable:
-		Bounds: 12,17,0,-9
-	Voiced:
-		VoiceSet: ZoneMarine
-		Volume: 2
-	Health:
-		HP: 500000
-	Mobile:
-		Speed: 40
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 0
-			BlueTiberium: 70
-				PathingCost: 0
-			RedTiberium: 70
-				PathingCost: 0
-			PurpleTiberium: 70
-				PathingCost: 0
-	RevealsShroud:
-		Range: 8c497
-	Armament@PRIMARY:
-		Weapon: ZoneMarineGun
-		LocalOffset: 424,0,679
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: apolra50alpha
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: ZoneMarineGunGarrison
-		LocalOffset: 424,0,679
-	AttackFrontal:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-	WithMuzzleOverlay:
-	SoundOnDamageTransition:
-		DamagedSounds: zmarine_f1.aud, zmarine_f2.aud, zmarine_f3.aud, zmarine_f4.aud, zmarine_f5.aud
-	HitShape:
-	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZTROOPER:
 	Inherits: ^SoldierHeavy
