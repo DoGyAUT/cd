@@ -1,0 +1,47 @@
+FeatureCrushClassLightVehicle:
+	Crushable:
+		CrushClasses: lightvehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate
+
+^FeatureCrushClassMediumVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassMediumVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, infantry, mutant, sandbags, mutantfearless, lightvehicle
+
+^FeatureCrushClassHeavyVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassHeavyVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, infantry, mutant, mutantfearless, sandbags, wall, heavyinf, cyborg, lightvehicle, FeatureCrushClassMediumVehicle
+
+^FeatureCrushClassSuperHeavyVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassSuperHeavyVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, infantry, mutant, mutantfearless, sandbags, wall, heavyinf, cyborg, lightvehicle, FeatureCrushClassMediumVehicle, FeatureCrushClassHeavyVehicle, hovervehicle
+
+^FeatureCrushClassHoverVehicle:
+	Crushable:
+		CrushClasses: hovervehicle
+		WarnProbability: 0
+
+^FeaturyCrushClassHeavyInfantry:
+	Crushable:
+		CrushClasses: heavyinf
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate
+
+^FeaturyCrushClassCyborg:
+	Crushable:
+		CrushClasses: cyborg
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate
+        

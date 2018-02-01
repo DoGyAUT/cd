@@ -450,7 +450,7 @@ SILVER:
 
 KRONOS:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@2: ^FeatureCrushClassHeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
@@ -526,7 +526,7 @@ KRONOS:
 
 FURY:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
+	Inherits@2: ^FeatureCrushClassSuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
@@ -539,7 +539,7 @@ FURY:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 311
 		Prerequisites: ~kaweap, epic1, ~!t1, ~!t2
-		Description: Battle fortress tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can build Cyborgs\n- Can swim on water\n- Crush class: SuperHeavyVehicle
+		Description: Battle fortress tank capable of crossing water.\n\nGood vs: Ground Units\n\nSpecial:\n- Can build Cyborgs\n- Can swim on water\n- Crush class: Super Heavy Vehicle
 		BuildLimit: 1
 	Selectable:
 		Bounds: 42,42, 0, -5
@@ -637,7 +637,7 @@ FURY:
 
 GARGANTUA:
 	Inherits@1: ^Walker
-	Inherits@2: ^SuperHeavyVehicle
+	Inherits@2: ^FeatureCrushClassSuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
@@ -654,7 +654,7 @@ GARGANTUA:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 312
 		Prerequisites: ~kaweap, epic2, ~!t1, ~!t2
-		Description: Battle Mech.\n\nGood vs: Anything\n\nSpecial:\n- Crush class: SuperHeavyVehicle
+		Description: Battle Mech.\n\nGood vs: Anything\n\nSpecial:\n- Crush class: Super Heavy Vehicle
 		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 5

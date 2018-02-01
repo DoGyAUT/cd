@@ -1,0 +1,1156 @@
+^Infantry:
+	Inherits@1: ^GainsExperienceInf
+	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@4: ^NanofiberUpgrade
+	Inherits@5: ^Cloakable
+	Inherits@6: ^ZepUpgrades
+	Inherits@7: ^DeployBuffUpgrades
+	Inherits@8: ^InitiateUpgrades
+	Inherits@parach: ^Parachutable
+	Inherits@DamagedByTiberiumResource: ^DamagedByTiberiumResource
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepairInfantry: ^FeatureBuffRepairInfantry
+	DrawLineToTarget:
+	Health:
+		HP: 50000
+	Valued:
+		Cost: 100
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Range: 5c673
+		MaxHeightDelta: 3
+	Mobile:
+		Voice: Move
+		Speed: 71
+		Crushes: crate
+		SharesCell: True
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+			Bridge: 100
+			Rail: 90
+			DirtRoad: 100
+			Green: 90
+			Rough: 80
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			RedTiberium: 70
+				PathingCost: 300
+			PurpleTiberium: 70
+				PathingCost: 300
+			Veins: 90
+		TunnelCondition: inside-tunnel
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Selectable:
+		Bounds: 14,23,-1,-9
+	Voiced:
+		VoiceSet: Infantry
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	WithDeathAnimation@normal:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 2
+	WithDeathAnimation@explosion:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			ExplosionDeath: 4
+	WithDeathAnimation@energy:
+		DeathSequencePalette: ra
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			EnergyDeath: 6
+	AttackMove:
+		Voice: Move
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 1
+	HiddenUnderFog:
+	ActorLostNotification:
+	Crushable:
+		CrushSound: squish6.aud
+		WarnProbability: 0
+	SpawnActorOnDeath@Corruptor:
+		Actor: visc_corrupt
+		Probability: 80
+		OwnerType: Killer
+		DeathType: TriggerCorruptorVisceroid
+		RequiresLobbyCreeps: True
+	SpawnActorOnDeath@Infected:
+		Actor: visc_infected
+		Probability: 50
+		OwnerType: Killer
+		DeathType: TriggerInfectedVisceroid
+		RequiresLobbyCreeps: True
+	Guard:
+		Voice: Move
+	Guardable:
+	DeathSounds@NORMAL:
+		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath
+		VolumeMultiplier: 5
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: FireDeath
+	DeathSounds@ZAPPED:
+		Voice: Zapped
+		DeathTypes: EnergyDeath
+	ThrowsShrapnel@sparks:
+		Weapons: Bloody
+		Pieces: 1, 10
+		Range: 0c512, 1c0
+	ThrowsShrapnel@Bloodytrail:
+		Weapons: Bloodytrail
+		Pieces: 0, 5
+		Range: 0c064, 0c918
+	ProducibleWithLevel:
+		Prerequisites: armory.upgraded
+	RevealOnFire:
+	HitShape:
+		Type: Circle
+			Radius: 128
+			VerticalTopOffset: 512
+	ExternalCondition@cleansingaura:
+		Condition: cleansingaura
+	SpawnActorOnDeath@cleansingaura:
+		Actor: husk
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalWeapon
+		RequiresCondition: cleansingaura
+	TimedConditionBar@cleansingaura:
+		Condition: cleansingaura
+		Color: 0000FF
+	Chronoshiftable:
+		ReturnToOrigin: False
+
+^CivilianInfantry:
+	Inherits: ^Infantry
+	Voiced:
+		VoiceSet: Civilian
+	Tooltip:
+		Name: Civilian
+	ScaredyCat:
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+
+^Soldier:
+	Inherits@1: ^Infantry
+	Inherits@2: ^WebDisable
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
+	RevealsShroud:
+		Range: 7c73
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Mobile:
+		RequiresCondition: !webdisable
+
+^SoldierFearless:
+	Inherits@1: ^Infantry
+	Inherits@2: ^WebDisable
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Mobile:
+		RequiresCondition: !webdisable
+
+^SoldierHeavy:
+	Inherits@1: ^Infantry
+	Inherits@FeaturyCrushClassHeavyInfantry: ^FeaturyCrushClassHeavyInfantry
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 2
+
+^SoldierFearlessHeavy:
+	Inherits@1: ^Infantry
+	Inherits@FeaturyCrushClassHeavyInfantry: ^FeaturyCrushClassHeavyInfantry
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 2
+
+^SoldierJumpjet:
+	Inherits: ^Infantry
+	Inherits@FeatureTargettype: ^FeatureTargettypeJumpjet
+	-Crushable:
+	-Mobile:
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	HiddenUnderFog:
+		Type: CenterPosition
+	Aircraft:
+		AirborneUpgrades: airborne
+		RepairBuildings:
+		RearmBuildings:
+		LandWhenIdle: False
+		Voice: Move
+
+^Mutant:
+	Inherits@1: ^Infantry
+	Inherits@2: ^WebDisable
+	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+		Chance: 10
+	Mobile:
+		RequiresCondition: !webdisable
+		TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
+
+^MutantFearless:
+	Inherits@1: ^Infantry
+	Inherits@2: ^WebDisable
+	Inherits@3: ^HealsOnTiberium
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+		Chance: 10
+	Mobile:
+		RequiresCondition: !webdisable
+		TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
+
+^MutantFearlessHeavy:
+	Inherits@1: ^Infantry
+	Inherits@2: ^WebDisable
+	Inherits@3: ^HealsOnTiberium
+	Inherits@FeaturyCrushClassHeavyInfantry: ^FeaturyCrushClassHeavyInfantry
+	RevealsShroud:
+		Range: 5c673
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: True
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+		Chance: 10
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 2
+	Mobile:
+		RequiresCondition: !webdisable
+		TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+	-DamagedByTerrain@DamagedByTiberiumResource:
+
+^Alien:
+	Inherits@1: ^Infantry
+	Inherits@2: ^HealsOnTiberium
+	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@4: ^WebDisable
+	MustBeDestroyed:
+	Crushable:
+		CrushClasses: infantry
+		WarnProbability: 0
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	-GrantConditionOnPrerequisite@nanofiber:
+	-DamageMultiplier@nanofiber:
+	Mobile:
+		RequiresCondition: !webdisable
+
+^HeavyAlien:
+	Inherits@1: ^Alien
+	Inherits@FeaturyCrushClassHeavyInfantry: ^FeaturyCrushClassHeavyInfantry
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 2
+
+^Cyborg:
+	Inherits@1: ^Infantry
+	Inherits@2: ^EmpDisable
+	Inherits@3: ^DamagedByVeins
+	Inherits@8: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeCyborg
+	Inherits@FeatureTargettypeCyborg: ^FeatureTargettypeCyborg
+	Inherits@FeatureBuffRepairCyborg: ^FeatureBuffRepairCyborg
+	Inherits@FeaturyCrushClassCyborg: ^FeaturyCrushClassCyborg
+	MustBeDestroyed:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 1, 10
+		Range: 1c0, 3c0
+	ThrowsShrapnel:
+		Weapons: SmallDebris
+		Pieces: 1, 3
+		Range: 1c424, 5c673
+	-GrantConditionOnPrerequisite@nanofiber:
+	-DamageMultiplier@nanofiber:
+	-DamagedByTerrain@DamagedByTiberiumResource:
+	Mobile:
+		RequiresCondition: !(empdisable && !invulnerability)
+		TerrainSpeeds:
+			Tiberium: 70
+				PathingCost: 0
+			BlueTiberium: 70
+				PathingCost: 0
+			RedTiberium: 70
+				PathingCost: 0
+			PurpleTiberium: 70
+				PathingCost: 0
+
+^HeavyCyborg:
+	Inherits@1: ^Cyborg
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+		Weight: 2
+
+^VehicleCabal:
+	Inherits@CabalUpgrades: ^CabalUpgrades
+	Explodes:
+		Weapon: UnitExplodeSmallCabal
+		EmptyWeapon: UnitExplodeSmallCabal
+	ThrowsShrapnel@debris:
+		Weapons: SmallDebrisCabal
+
+^Vehicle:
+	Inherits@1: ^GainsExperience
+	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^EmpDisable
+	Inherits@4: ^DamagedByVeins
+	Inherits@5: ^Cloakable
+	Inherits@6: ^ZepUpgrades
+	Inherits@7: ^DeployBuffUpgrades
+	Inherits@8: ^IronCurtainable
+	Inherits@parach: ^Parachutable
+	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureBuffRepairVehicle: ^FeatureBuffRepairVehicle
+	DrawLineToTarget:
+	Mobile:
+		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
+		TerrainSpeeds:
+			Clear: 80
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 90
+			Rough: 80
+			Green: 80
+			Tiberium: 50
+			BlueTiberium: 50
+			RedTiberium: 50
+			PurpleTiberium: 50
+			Veins: 50
+		TurnSpeed: 5
+		Voice: Move
+		RequiresCondition: !(empdisable && !invulnerability)
+		TunnelCondition: inside-tunnel
+	Crushable:
+		CrushClasses: FeatureCrushClassMediumVehicle
+		WarnProbability: 0
+	RevealsShroud:
+		Range: 8c497
+		MaxHeightDelta: 3
+		RequiresCondition: !inside-tunnel
+	Selectable:
+		Bounds: 40,24
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Voiced:
+		VoiceSet: Vehicle
+	Repairable:
+		RepairBuildings: gadept
+		Voice: Move
+	Passenger:
+		CargoType: Vehicle
+		Voice: Move
+		Weight: 5
+		RequiresCondition: !deployed
+	AttackMove:
+		Voice: Move
+	HiddenUnderFog:
+	ActorLostNotification:
+	Capturable:
+		Types: Vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
+	Guard:
+		Voice: Move
+	Guardable:
+	BodyOrientation:
+		CameraPitch: 90
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	MustBeDestroyed:
+	RenderSprites:
+	ThrowsShrapnel@debris:
+		Weapons: SmallDebris
+		Pieces: 2, 10
+		Range: 2c0, 5c0
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 9, 100
+		Range: 1c0, 6c0
+	ThrowsShrapnel@human:
+		Weapons: Flyman
+		Pieces: 0, 2
+		Range: 2c0, 5c0
+	LeavesTrails@ground:
+		Image: dust
+		Palette: player50alpha
+		TerrainTypes: Clear, Rough, Green, DirtRoad, Tiberium, BlueTiberium, RedTiberium, PurpleTiberium, Veins
+		RequiresCondition: !inside-tunnel
+	ProducibleWithLevel:
+		Prerequisites: armory.upgraded
+	RevealOnFire:
+	GrantConditionOnDamageState@smoke:
+		Condition: damaged
+		ValidDamageStates: Critical
+	SmokeParticleEmitter:
+		RequiresCondition: damaged
+		Sequence: idle
+		SpawnFrequency: 5
+		Gravity: -68,-68,68, 68,68,68
+		Image: durasmoke
+		Palette: apolra25alpha
+	Chronoshiftable:
+		ReturnToOrigin: False^Tank:
+	Inherits: ^Vehicle
+	Crushable:
+		CrushClasses: FeatureCrushClassMediumVehicle
+		WarnProbability: 0
+	BodyOrientation:
+		QuantizedFacings: 32
+
+^Walker:
+	Inherits: ^Vehicle
+	Mobile:
+		Crushes: wall, crate, infantry, mutant, mutantfearless, lightvehicle
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 90
+			Rough: 90
+			Green: 90
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			PurpleTiberium: 70
+			Veins: 70
+	Crushable:
+		CrushClasses: FeatureCrushClassMediumVehicle
+		WarnProbability: 0
+	BodyOrientation:
+		QuantizedFacings: 32
+        
+^HoverVehicle:
+	Inherits: ^Vehicle
+	Inherits@crushclass: ^FeatureCrushClassHoverVehicle
+	Hovers:
+	LeavesTrails@water:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		TrailWhileStationary: True
+		StationaryInterval: 18
+		MovingInterval: 6
+
+^VoxelVehicle:
+	Inherits: ^Vehicle
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		NormalsPalette: RA2normals
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+
+^VoxelHusk:
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		NormalsPalette: RA2normals
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+
+^VoxelTank:
+	Inherits: ^Tank
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		NormalsPalette: RA2normals
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+
+^VoxelWalker:
+	Inherits: ^VoxelTank
+	Mobile:
+		Crushes: wall, crate, infantry, mutant, mutantfearless, lightvehicle
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 90
+			Rough: 90
+			Green: 90
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			PurpleTiberium: 70
+			Veins: 70
+
+^CivilianVoxelVehicle:
+	Inherits@1: ^VoxelVehicle
+	Inherits@2: ^FeatureCrushClassLightVehicle
+	BodyOrientation:
+		QuantizedFacings: 0
+	-MustBeDestroyed:
+
+^Aircraft:
+	Inherits@1: ^GainsExperience
+	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^Cloakable
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	DrawLineToTarget:
+	RevealsShroud:
+		Range: 11c321
+	AppearsOnRadar:
+		UseLocation: True
+	Selectable:
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Aircraft:
+		Voice: Move
+		AirborneCondition: airborne
+		RepairBuildings: gahpad, nahpad, kahpad, fahpad
+		RearmBuildings: gahpad, nahpad, kahpad, fahpad
+		LandWhenIdle: False
+		MaximumPitch: 200
+		AltitudeVelocity: 0c283
+		WaitDistanceFromResupplyBase: 8c497
+	Voiced:
+		VoiceSet: Heli
+	HiddenUnderFog:
+		Type: GroundPosition
+	AttackMove:
+		Voice: Move
+	ActorLostNotification:
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 90
+	Guard:
+		Voice: Move
+	Guardable:
+	MustBeDestroyed:
+	Explodes:
+		Weapon: UnitExplodePlane
+		EmptyWeapon: UnitExplodePlane
+	RenderSprites:
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		NormalsPalette: RA2normals
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+	ThrowsShrapnel:
+		Weapons: SmallDebris
+		Pieces: 1, 7
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 9, 100
+		Range: 1c0, 6c0
+	SmokeTrailWhenDamaged:
+		Sprite: lgrysmk1
+		Palette: apolra50alpha
+	ProducibleWithLevel:
+		Prerequisites: armory.upgraded
+	RevealOnFire:
+
+^Helicopter:
+	Inherits: ^Aircraft
+	Aircraft:
+		CruisingCondition: cruising
+		LandWhenIdle: False
+		CruiseAltitude: 5c673
+		CanHover: True
+		IdealSeparation: 1c424
+		AltitudeVelocity: 0c325
+		TakeOffOnResupply: true
+		VTOL: true
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	Explodes:
+		Weapon: UnitExplodeHeli
+		EmptyWeapon: UnitExplodeHeli
+
+^Plane:
+	Inherits: ^Aircraft
+	Aircraft:
+		LandWhenIdle: False
+		CruiseAltitude: 11c321
+		Repulsable: False
+	ReturnOnIdle:
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+
+^AttackPlane:
+	Inherits: ^Aircraft
+	ReturnOnIdle:
+	Aircraft:
+		LandWhenIdle: False
+		CruiseAltitude: 11c321
+		IdealSeparation: 0c001
+		Repulsable: False
+
+^AttackBomber:
+	Inherits: ^Aircraft
+	Aircraft:
+		LandWhenIdle: True
+		CruiseAltitude: 11c321
+		IdealSeparation: 0c001
+		Repulsable: True
+	ReturnOnIdle:
+
+^AttackAdvancedPlane:
+	Inherits: ^Aircraft
+	Aircraft:
+		AirborneCondition: airborne
+		LandWhenIdle: False
+		CruiseAltitude: 11c321
+		Repulsable: True
+		IdealSeparation: 0c001
+	ReturnOnIdle:
+
+^Corpse:
+	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
+	Health:
+		HP: 280000
+	HiddenUnderFog:
+		Type: GroundPosition
+	Tooltip:
+		GenericName: Dead Infantry
+	HitShape:
+
+^InfantryHusk:
+	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeInfantry
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
+	Aircraft:
+		RepairBuildings:
+		RearmBuildings:
+	Health:
+		HP: 280000
+	HiddenUnderFog:
+		Type: GroundPosition
+	ScriptTriggers:
+	Tooltip:
+		GenericName: Dead Infantry
+	FallsToEarth:
+		Spins: True
+		Moves: True
+		Velocity: 0c263
+	SmokeTrailWhenDamaged@1:
+		Sprite: lgrysmk1
+		Palette: apolra50alpha
+		Offset: 0,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	HitShape:
+	Interactable:
+
+^AircraftHusk:
+	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
+	RenderSprites:
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		NormalsPalette: RA2normals
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 90
+	Aircraft:
+		RepairBuildings:
+		RearmBuildings:
+	Health:
+		HP: 280000
+	HiddenUnderFog:
+		Type: GroundPosition
+	RevealsShroud:
+		Range: 14c146
+		Type: GroundPosition
+	ScriptTriggers:
+	Tooltip:
+		GenericName: Destroyed Aircraft
+	FallsToEarth:
+		Spins: True
+		Moves: True
+		Velocity: 0c263
+	SmokeTrailWhenDamaged@1:
+		Sprite: lgrysmk1
+		Palette: apolra50alpha
+		Offset: 0,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	ThrowsShrapnel:
+		Weapons: SmallDebris
+		Pieces: 1, 7
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 9, 100
+		Range: 1c0, 6c0
+	HitShape:
+	Interactable:
+
+^AircraftHuskPlane:
+	Inherits: ^AircraftHusk
+	FallsToEarth:
+		Spins: False
+		Moves: True
+		Velocity: 0c263
+	SmokeTrailWhenDamaged@1:
+		Sprite: lgrysmk1
+		Palette: apolra50alpha
+		Offset: 0,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@2:
+		Sprite: apocexp
+		Palette: apolra50alpha
+		Offset: 0,0,0
+		Interval: 2
+		MinDamage: Undamaged
+
+^Visceroid:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@3: ^HealsOnTiberium
+	Inherits@FeatureTargettype: ^FeatureTargettypeInfantry
+	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	DrawLineToTarget:
+	Health:
+	Mobile:
+		Speed: 127
+		TurnSpeed: 16
+		Crushes: crate
+		SharesCell: no
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+			Bridge: 100
+			Rail: 80
+			DirtRoad: 90
+			Rough: 70
+			Green: 90
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			Veins: 100
+	RevealsShroud:
+		Range: 14c146
+		MaxHeightDelta: 3
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Selectable:
+		Bounds: 26,26,0,-3
+	AttackMove:
+	HiddenUnderFog:
+	Guardable:
+	WithSpriteBody:
+	WithAttackAnimation:
+		AttackSequence: attack
+	HitShape:
+		Type: Circle
+			Radius: 256
+			VerticalTopOffset: 512
+	Chronoshiftable:
+		ReturnToOrigin: False
+
+^Clouds:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	DrawLineToTarget:
+	Health:
+		HP: 100000
+	Mobile:
+		Speed: 28
+		TurnSpeed: 16
+		SharesCell: yes
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Bridge: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Green: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			Veins: 100
+			Water: 100
+	RenderSprites:
+		Palette: effect
+	Wanders:
+		WanderMoveRadius: 3
+		MinMoveDelay: 5
+		MaxMoveDelay: 15
+	RevealsShroud:
+		Range: 1c424
+		MaxHeightDelta: 3
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	HiddenUnderFog:
+	WithSpriteBody:
+	WithDeathAnimation:
+		DeathSequence: die
+		UseDeathTypeSuffix: False
+	Hovers:
+	GrantPeriodicCondition@kill:
+		Condition: killcloud
+		CooldownDuration: 500
+		ActiveDuration: 200
+	KillsSelf:
+		RequiresCondition: killcloud
+		Delay: 0,190
+	HitShape:
+		Type: Circle
+			Radius: 256
+			VerticalTopOffset: 512
+	Chronoshiftable:
+		ReturnToOrigin: False
+	ExplodeWeapon@Tiberium:
+		Weapon: Tiberium
+	Interactable:
+
+^CloudsWeak:
+	Inherits: ^Clouds
+	Mobile:
+		Speed: 20
+	ExplodeWeapon@Tiberium:
+		Weapon: TiberiumWeak
+	GrantPeriodicCondition@kill:
+		Condition: killcloud
+		CooldownDuration: 250
+		ActiveDuration: 200
+
+^BlossomTree:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 100000
+	Tooltip:
+		Name: Blossom Tree
+	RenderSprites:
+		Palette: player
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tiberium
+	FrozenUnderFog:
+	SeedsResource:
+		ResourceType: Tiberium
+		Interval: 110
+	WithIdleAnimation:
+	HitShape:
+		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+
+^Tree:
+	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeFlora
+	Inherits@FeatureTargettype: ^FeatureTargettypeFlora
+	HiddenUnderShroud:
+	RenderSprites:
+		Palette: terraindecoration
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tree
+	Tooltip:
+		Name: Tree
+	Health:
+		HP: 100000
+	HitShape:
+		UseTargetableCellsOffsets: true
+	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+
+^Rock:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	RenderSprites:
+		Palette: terraindecoration
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Rock
+	Tooltip:
+		Name: Rock
+	HitShape:
+		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+
+^Decoration:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	RenderSprites:
+		Palette: terraindecoration
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	HitShape:
+		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+
+^Defense:
+	Inherits@1: ^Building
+	-GivesBuildableArea:
+	RenderRangeCircle:
+	MustBeDestroyed:
+		RequiredForShortGame: False
+	RevealsShroud:
+		Range: 8c497
+	RevealOnFire:
+
+^Train:
+	Inherits@1: ^EmpDisable
+	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@4: ^Cloakable
+	Inherits@5: ^IronCurtainable
+	Inherits@FeatureArmortype: ^FeatureArmortypeVehicle
+	Inherits@FeatureTargettype: ^FeatureTargettypeVehicle
+	RenderVoxels:
+		PlayerPalette: cdvoxels
+		LightAmbientColor: -0.1,-0.1,-0.1
+		LightDiffuseColor: 0.8,0.8,0.8
+		LightPitch: 128
+		LightYaw: 768
+		Scale: 10
+	WithVoxelBody:
+	DrawLineToTarget:
+	Mobile:
+		TerrainSpeeds:
+			Rail: 100
+		TurnSpeed: 5
+		Voice: Move
+		Speed: 160
+		RequiresCondition: !(empdisable && !invulnerability)
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 7c73
+	Selectable:
+		Bounds: 40,24
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Voiced:
+		VoiceSet: Vehicle
+	Passenger:
+		CargoType: Infantry
+		Voice: Move
+	HiddenUnderFog:
+	BodyOrientation:
+		CameraPitch: 90
+		QuantizedFacings: 0
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	ThrowsShrapnel:
+		Weapons: SmallDebris
+		Pieces: 1, 7
+		Range: 2c848, 7c73
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 9, 100
+		Range: 1c0, 6c0
+	HitShape:
+	Chronoshiftable:
+		ReturnToOrigin: False
+
+^Box:
+	Inherits: ^Decoration
+	Tooltip:
+		Name: Box
+
+^Drum:
+	Inherits: ^Decoration
+	Tooltip:
+		Name: Drum
+
+^Palette:
+	Inherits: ^Decoration
+	Tooltip:
+		Name: Palette
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
