@@ -1,0 +1,202 @@
+^GainsExperience:
+	GainsExperience:
+		Conditions:
+			200: rank-veteran1
+			300: rank-veteran2
+			400: rank-veteran3
+			700: rank-elite
+			1000: rank-heroic
+		SuppressLevelupAnimation: False
+	FirepowerMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 110
+	DamageMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 90
+	ReloadDelayMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 90
+	FirepowerMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 120
+	DamageMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 80
+	ReloadDelayMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 80
+	FirepowerMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 130
+	DamageMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 70
+	ReloadDelayMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 70
+	FirepowerMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 140
+	DamageMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 60
+	ReloadDelayMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 60
+	SelfHealing@heroic:
+		Step: 333
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+		RequiresCondition: rank-heroic
+	FirepowerMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 150
+	DamageMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 50
+	ReloadDelayMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 50
+	WithDecoration@veteran1:
+		Image: newrank
+		Sequence: veteran1
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		ZOffset: 256
+	WithDecoration@veteran2:
+		Image: newrank
+		Sequence: veteran2
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		ZOffset: 256
+	WithDecoration@veteran3:
+		Image: newrank
+		Sequence: veteran3
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-veteran3 && !rank-elite
+		ZOffset: 256
+	WithDecoration@elite:
+		Image: newrank
+		Sequence: elite
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-elite && !rank-heroic
+		ZOffset: 256
+	WithDecoration@heroic:
+		Image: newrank
+		Sequence: heroic
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-heroic
+		ZOffset: 256
+
+^GainsExperienceInf:
+	GainsExperience:
+		Conditions:
+			300: rank-veteran1
+			400: rank-veteran2
+			500: rank-veteran3
+			1000: rank-elite
+			2000: rank-heroic
+		SuppressLevelupAnimation: False
+	FirepowerMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 110
+	DamageMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 90
+	ReloadDelayMultiplier@veteran1:
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		Modifier: 90
+	FirepowerMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 120
+	DamageMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 80
+	ReloadDelayMultiplier@veteran2:
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		Modifier: 80
+	FirepowerMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 130
+	DamageMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 70
+	ReloadDelayMultiplier@veteran3:
+		RequiresCondition: rank-veteran3 && !rank-elite
+		Modifier: 70
+	FirepowerMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 140
+	DamageMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 60
+	ReloadDelayMultiplier@elite:
+		RequiresCondition: rank-elite && !rank-heroic
+		Modifier: 60
+	SelfHealing@heroic:
+		Step: 333
+		PercentageStep: 0
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 200
+		RequiresCondition: rank-heroic
+	FirepowerMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 150
+	DamageMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 50
+	ReloadDelayMultiplier@heroic:
+		RequiresCondition: rank-heroic
+		Modifier: 50
+	WithDecoration@veteran1:
+		Image: newrank
+		Sequence: veteran1
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-veteran1 && !rank-veteran2
+		ZOffset: 256
+	WithDecoration@veteran2:
+		Image: newrank
+		Sequence: veteran2
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-veteran2 && !rank-veteran3
+		ZOffset: 256
+	WithDecoration@veteran3:
+		Image: newrank
+		Sequence: veteran3
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-veteran3 && !rank-elite
+		ZOffset: 256
+	WithDecoration@elite:
+		Image: newrank
+		Sequence: elite
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-elite && !rank-heroic
+		ZOffset: 256
+	WithDecoration@heroic:
+		Image: newrank
+		Sequence: heroic
+		Palette: ra
+		ReferencePoint: Bottom, Right
+		ValidStances: Ally, Neutral, Enemy
+		RequiresCondition: rank-heroic
+		ZOffset: 256
