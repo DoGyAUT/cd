@@ -1,3 +1,261 @@
+^BasicBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@3: ^Cloakable
+	Inherits@FeatureDeathEffectFire: ^FeatureDeathEffectFire
+	Inherits@FeatureDeathEffectTiberium: ^FeatureDeathEffectTiberium
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	SelectionDecorations:
+		SelectionBoxColor: 00FF00
+		Palette: pips
+	WithTextControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: buildupsound.aud
+		TerrainTypes: Clear, Road, DirtRoad, Rough, Green
+		RequiresBaseProvider: True
+	Valued:
+		Cost: 25
+	FrozenUnderFog:
+	SoundOnDamageTransition:
+		DamagedSounds: expnew01.aud
+		DestroyedSounds: crmble2.aud
+	WithSpriteBody:
+	Explodes:
+		Weapon: BuildingExplosions
+		EmptyWeapon: BuildingExplosions
+		Type: Footprint
+	EngineerRepairable:
+	ShakeOnDeath:
+	Guardable:
+		Range: 4c248
+	Demolishable:
+	HitShape:
+		UseTargetableCellsOffsets: true
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
+
+^Burningtank:
+	ThrowsShrapnel:
+		Weapons: TermiteGunShrapnel1
+		Pieces: 2, 10
+		Range: 2c848, 7c73
+
+^Building:
+	Inherits@1: ^BasicBuilding
+	Inherits@2: ^EmpDisable
+	Inherits@3: ^IronCurtainable
+	Inherits@fortification: ^FortificationUpgrades
+	Inherits@Erepairs: ^EmergencyRepairsUpgrades
+	GivesBuildableArea:
+		AreaTypes: building
+	Capturable:
+	ExternalCapturable:
+		CaptureCompleteTime: 7
+	ExternalCapturableBar:
+	GrantConditionOnDamageState@smoke:
+		Condition: damaged
+		ValidDamageStates: Heavy, Critical
+	SmokeParticleEmitter:
+		RequiresCondition: damaged
+		Sequence: idle
+		SpawnFrequency: 5
+		Gravity: -68,-68,68, 68,68,68
+		Image: durasmoke
+		Palette: apolra25alpha
+	RepairableBuilding:
+		IndicatorPalette: mouse
+		RepairInterval: 8
+		PlayerExperience: 25
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: False
+	EmitInfantryOnSell@gdi:
+		ActorTypes: gasol, gasol, gasol, gasol, gasol
+		Factions: gdi
+	EmitInfantryOnSell@nod:
+		ActorTypes: nasol, nasol, nasol, nasol, nasol, nasol, nasol, nasol
+		Factions: nod
+	EmitInfantryOnSell@cabal:
+		ActorTypes: husk, husk, husk, husk
+		Factions: cabal
+	EmitInfantryOnSell@forgotten:
+		ActorTypes: huntress, huntress, huntress, huntress, huntress
+		Factions: forgotten
+	EmitInfantryOnSell@scrin:
+		ActorTypes: shocker, shocker, shocker, shocker, shocker, shocker
+		Factions: scrin
+	MustBeDestroyed:
+		RequiredForShortGame: True
+	CaptureNotification:
+		Notification: BuildingCaptured
+		LoseNotification: BuildingCaptured
+	Sellable:
+		SellSounds: cashturn.aud
+	WithMakeAnimation:
+	RevealsShroud:
+		Range: 5c673
+		MaxHeightDelta: 3
+	ThrowsShrapnel:
+		Weapons: LargeDebris
+		Pieces: 4, 15
+		Range: 3c512, 5c73
+	ThrowsShrapnel@SmallDebris:
+		Weapons: SmallDebris
+		Pieces: 10, 30
+		Range: 3c0, 6c0
+	ThrowsShrapnel@sparks:
+		Weapons: Sparky
+		Pieces: 10, 50
+		Range: 1c0, 6c0
+
+^CivBuilding:
+	Inherits: ^BasicBuilding
+	-UpdatesPlayerStatistics:
+	Health:
+		HP: 900000
+	RevealsShroud:
+		Range: 5c673
+		MaxHeightDelta: 3
+	Tooltip:
+		Description: Civilian Building
+	RenderSprites:
+		Palette: terraindecoration
+	HitShape:
+
+^CivBillboard:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Health:
+		HP: 400000
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+	RenderSprites:
+	WithWallSpriteBody:
+	HitShape:
+	RequiresBuildableArea:
+		AreaTypes: building
+
+^Tech:
+	AlwaysVisible:
+	Interactable:
+
+^Wall:
+	Inherits@0: ^ExistsInWorld
+	Inherits@1: ^SpriteActor
+	Inherits@FeatureArmortype: ^FeatureArmortypeBuilding
+	Inherits@FeatureTargettype: ^FeatureTargettypeBuilding
+	Inherits@FeatureTargettypeNoAutoTarget: ^FeatureTargettypeNoAutoTarget
+	CombatDebugOverlay:
+	AppearsOnRadar:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: place2.aud
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
+		RequiresBaseProvider: True
+	SoundOnDamageTransition:
+		DamagedSounds: expnew01.aud
+		DestroyedSounds: crmble2.aud
+	Crushable:
+		CrushClasses: wall
+	BlocksProjectiles:
+	LineBuild:
+		Range: 8
+		NodeTypes: wall, gate
+	LineBuildNode:
+		Types: wall
+	FrozenUnderFog:
+	WithWallSpriteBody:
+		Type: wall
+	GivesExperience:
+	Sellable:
+		SellSounds: cashturn.aud
+	UpdatesPlayerStatistics:
+	Demolishable:
+	ScriptTriggers:
+	MustBeDestroyed:
+		RequiredForShortGame: False
+	Health:
+		HP: 500000
+	-GivesExperience:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 128
+			TopLeft: -384, -384
+			BottomRight: 384, 384
+			VerticalTopOffset: 512
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Interactable:
+
+^Gate:
+	Inherits: ^Building
+	Valued:
+		Cost: 50
+	Health:
+		HP: 400000
+	LineBuildNode:
+		Types: wall, gate
+	-Capturable:
+	-GivesBuildableArea:
+	-MustBeDestroyed:
+	-WithSpriteBody:
+	WithGateSpriteBody:
+	Power:
+	Gate:
+		Adjacent: 4
+		BuildSounds: place2.aud
+		OpeningSound: gateup1.aud
+		ClosingSound: gatedwn1.aud
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
+		BlocksProjectilesHeight: 640
+	HitShape:
+
+^Gate_A:
+	Inherits: ^Gate
+	Inherits@2: ^3x1hitshape
+	Gate:
+		Dimensions: 3,1
+		Footprint: xxx
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+	LineBuildNode:
+		Connections: -1,0, 1,0
+
+^Gate_B:
+	Inherits: ^Gate
+	Inherits@2: ^1x3hitshape
+	Gate:
+		Dimensions: 1,3
+		Footprint: xxx
+	WithGateSpriteBody:
+		WallConnections: 0,-3, 0,1
+	LineBuildNode:
+		Connections: 0,-1, 0,1
+
+^BuildingPlug:
+	Inherits@hitshape: ^1x1hitshape
+	AlwaysVisible:
+	Building:
+		BuildSounds: place2.aud
+	KillsSelf:
+		RemoveInstead: True
+	RenderSprites:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+	RequiresBuildableArea:
+		AreaTypes: building
+	Interactable:
+        
 ^Infantry:
 	Inherits@1: ^GainsExperienceInf
 	Inherits@2: ^ExistsInWorld
@@ -1012,7 +1270,6 @@
 		HP: 100000
 	HitShape:
 		UseTargetableCellsOffsets: true
-	HitShape:
 	RequiresBuildableArea:
 		AreaTypes: building
 	Interactable:
@@ -1120,6 +1377,40 @@
 	Chronoshiftable:
 		ReturnToOrigin: False
 
+^SpriteActor:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+
+^Railway:
+	RenderSprites:
+		Palette: terraindecoration
+	WithSpriteBody:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+		QuantizedFacings: 1
+	EditorOnlyTooltip:
+		Name: Railway
+	AlwaysVisible:
+	Interactable:
+
+^Tunnel:
+	Inherits: ^TerrainOverlay
+	Interactable:
+		Bounds: 220,220
+
+^TerrainOverlay:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: False
+	RenderSprites:
+		Palette: terraindecoration
+	WithSpriteBody:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+		QuantizedFacings: 1
+
 ^Box:
 	Inherits: ^Decoration
 	Tooltip:
@@ -1134,23 +1425,3 @@
 	Inherits: ^Decoration
 	Tooltip:
 		Name: Palette
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
