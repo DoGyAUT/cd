@@ -1,6 +1,7 @@
 KAWALL:
 	Inherits: ^Wall
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 300
@@ -17,8 +18,6 @@ KAWALL:
 		HP: 400000
 	BlocksProjectiles:
 		Height: 0c905
-	Crushable:
-		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
 	HitShape:
@@ -26,6 +25,7 @@ KAWALL:
 KAGATE_A:
 	Inherits: ^Gate_A
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 301
@@ -37,6 +37,7 @@ KAGATE_A:
 KAGATE_B:
 	Inherits: ^Gate_B
 	Inherits@CabalBuildingUpgrades: ^CabalBuildingUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Cabal
 		BuildPaletteOrder: 302

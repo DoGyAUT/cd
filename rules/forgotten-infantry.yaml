@@ -1,5 +1,6 @@
 GRUNT:
 	Inherits: ^Mutant
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -28,6 +29,7 @@ GRUNT:
 
 BRIGAND:
 	Inherits: ^MutantFearless
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -69,6 +71,7 @@ HUNTRESS:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 402
@@ -99,6 +102,7 @@ HUNTRESS:
 
 FENGINEER:
 	Inherits: ^Mutant
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -145,6 +149,7 @@ FENGINEER:
 
 EXPLORER:
 	Inherits: ^MutantFearless
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -179,6 +184,7 @@ ELITEGRUNT:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 404
@@ -212,6 +218,7 @@ FDOG:
 	Inherits: ^MutantFearless
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@TiberiumCloak: ^CloaksOnTiberium
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
@@ -257,6 +264,7 @@ FFIEND:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
 	Inherits@TiberiumCloak: ^CloaksOnTiberium
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 405
@@ -293,6 +301,7 @@ FFIEND:
 
 MHIJACK:
 	Inherits: ^Mutant
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 406
@@ -325,7 +334,6 @@ MHIJACK:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	SoundOnDamageTransition:
 		DamagedSounds: thief_f1.aud, thief_f2.aud, thief_f3.aud, thief_f4.aud
-	-Crushable:
 	HitShape:
 
 GOON:
@@ -334,6 +342,7 @@ GOON:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyInfantry
 	Buildable:
 		Queue: Infantry.Forg
 		BuildPaletteOrder: 409
@@ -367,7 +376,6 @@ GOON:
 		Condition: berserk
 		EnabledSounds: berserk.wav
 		ValidDamageStates: Medium, Heavy, Critical
-	-Crushable:
 	HitShape:
 
 GHOST:
@@ -376,6 +384,7 @@ GHOST:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 1000
 	Tooltip:

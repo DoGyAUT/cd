@@ -1,5 +1,6 @@
 GMCV:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Buildable:
 		Queue: Vehicle.GDI
 		BuildPaletteOrder: 100
@@ -41,6 +42,7 @@ GMCV:
 GHARV:
 	Inherits: ^VoxelTank
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -102,6 +104,7 @@ APC:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -172,6 +175,7 @@ SMECH:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -208,11 +212,11 @@ SMECH:
 
 VULTURE:
 	Inherits@1: ^Walker
-	Inherits@2: ^MediumVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 775
 	Tooltip:
@@ -276,6 +280,7 @@ GTMTNK:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -324,6 +329,7 @@ GTHTNK:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -371,6 +377,7 @@ HVR:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -430,6 +437,7 @@ HVR:
 
 AIRBLAST:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -473,6 +481,7 @@ TRITON:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -518,11 +527,11 @@ TRITON:
 
 4TNK:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -596,10 +605,10 @@ TRITON:
 
 MMCH:
 	Inherits@1: ^Walker
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -650,11 +659,11 @@ MMCH:
 
 POSEIDON:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -703,10 +712,10 @@ POSEIDON:
 
 MMCH2:
 	Inherits@1: ^Walker
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -761,10 +770,10 @@ MMCH2:
 
 SONIC:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -804,6 +813,7 @@ BEHEMOTH:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -846,10 +856,10 @@ BEHEMOTH:
 
 JUGG:
 	Inherits@1: ^Walker
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -929,6 +939,7 @@ CYCLOPS:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -985,11 +996,11 @@ CYCLOPS:
 
 HMEC:
 	Inherits@1: ^VoxelWalker
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 9500
 	Tooltip:
@@ -1068,10 +1079,10 @@ HMEC:
 
 IONTANK:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 7000
 	Buildable:
@@ -1124,11 +1135,11 @@ IONTANK:
 
 MARV:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 8500
 	Tooltip:

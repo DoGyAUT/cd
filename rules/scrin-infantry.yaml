@@ -3,6 +3,7 @@ SHOCKER:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 500
@@ -51,6 +52,7 @@ SLASHER:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 501
@@ -86,6 +88,7 @@ LOCUST:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Scrin
 		BuildPaletteOrder: 502
@@ -126,6 +129,7 @@ VISC_INFECTED:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Infected Visceroid
 	Health:
@@ -137,7 +141,6 @@ VISC_INFECTED:
 	AttackFrontal:
 		Voice: Attack
 	Mobile:
-		Crushes: crate
 		SharesCell: yes
 	RenderSprites:
 		Image: vissml
@@ -156,6 +159,7 @@ VISC_CORRUPT:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Corrupt Visceroid
 	Health:
@@ -166,8 +170,6 @@ VISC_CORRUPT:
 		Weapon: CorruptSlimeAttack
 	AttackFrontal:
 		Voice: Attack
-	Mobile:
-		Crushes: crate, infantry
 	RenderSprites:
 		Image: vislrg
 	SelfHealing:

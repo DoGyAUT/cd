@@ -1,5 +1,6 @@
 FAWALL:
 	Inherits: ^Wall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 400
@@ -16,14 +17,13 @@ FAWALL:
 		HP: 560000
 	BlocksProjectiles:
 		Height: 0c905
-	Crushable:
-		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
 	HitShape:
 
 FAGATE_A:
 	Inherits: ^Gate_A
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 401
@@ -34,6 +34,7 @@ FAGATE_A:
 
 FAGATE_B:
 	Inherits: ^Gate_B
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Forg
 		BuildPaletteOrder: 402

@@ -3,6 +3,7 @@ SMCV:
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Buildable:
 		Queue: Vehicle.Scrin
 		BuildPaletteOrder: 500
@@ -59,6 +60,7 @@ SHARV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Inherits@4: ^HealsOnTiberium
 	Valued:
 		Cost: 1000
@@ -125,6 +127,7 @@ CHIMERA:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -191,6 +194,7 @@ MANTIS:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -256,12 +260,12 @@ MANTIS:
 
 CORRUPTOR:
 	Inherits@1: ^Tank
-	Inherits@2: ^HeavyVehicle
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -311,12 +315,12 @@ CORRUPTOR:
 
 ANHLTRPD:
 	Inherits@1: ^Tank
-	Inherits@2: ^HeavyVehicle
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -362,12 +366,12 @@ ANHLTRPD:
 
 HEXAPOD:
 	Inherits@1: ^Tank
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@3: ^HealsOnTiberium
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 6000
 	Tooltip:

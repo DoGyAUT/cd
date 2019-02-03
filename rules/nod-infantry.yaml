@@ -6,6 +6,7 @@ NASOL:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 200
@@ -60,6 +61,7 @@ E3:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 201
@@ -114,6 +116,7 @@ CHAMSPY:
 	Inherits@1: ^Soldier
 	Inherits@2: ^InfusionUpgrade
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
@@ -159,6 +162,7 @@ NDOG:
 	Inherits@1: ^SoldierFearless
 	Inherits@1: ^InfusionUpgrade
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -198,6 +202,7 @@ NDOG:
 NENGINEER:
 	Inherits@1: ^Soldier
 	Inherits@2: ^InfusionUpgrade
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -248,6 +253,7 @@ FANATIC:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -286,6 +292,7 @@ NACAD:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 200
@@ -331,6 +338,7 @@ NCONF:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208
@@ -387,6 +395,7 @@ SHADOW:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 207
@@ -433,13 +442,14 @@ SHADOW:
 	HitShape:
 
 BHAND:
-	Inherits@1: ^SoldierFearlessHeavy
+	Inherits@1: ^SoldierHeavy
 	Inherits@2: ^InitiateUpgrades
 	Inherits@3: ^InfusionUpgrade
 	Inherits@4: ^AvatarUpgrades
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 207
@@ -499,6 +509,7 @@ TIBTROOPER:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.Nod
 		BuildPaletteOrder: 208

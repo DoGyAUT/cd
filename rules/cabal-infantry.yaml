@@ -4,6 +4,7 @@ HUSK:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 300
@@ -54,6 +55,7 @@ HHUSK:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 301
@@ -99,6 +101,7 @@ HHUSK:
 CYBSPY:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -143,6 +146,7 @@ JAGUAR:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -178,6 +182,7 @@ JAGUAR:
 KENGINEER:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -221,6 +226,7 @@ VANGUARD:
 	Inherits@1: ^Cyborg
 	Inherits@2: ^HuskUpgrades
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -276,6 +282,7 @@ OVERSEER:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.Cabal
 		BuildPaletteOrder: 306
@@ -318,9 +325,9 @@ OVERSEER:
 	HitShape:
 
 CYBFLY:
-	Inherits@1: ^SoldierJumpjet
+	Inherits@1: ^Infantry
 	Inherits@2: ^HuskUpgrades
-	Inherits@FeatureTargettype: ^FeatureTargettypeAircraft
+	Inherits@FeatureTargettype: ^FeatureTargettypeJumpjet
 	Inherits@FeatureArmortype: ^FeatureArmortypeAircraft
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
@@ -340,18 +347,23 @@ CYBFLY:
 	Voiced:
 		VoiceSet: CyborgA
 		Volume: 2
+	-Mobile:
 	Aircraft:
 		TurnSpeed: 10
 		Speed: 135
 		AirborneCondition: airborne
 		CruisingCondition: cruising
-		LandWhenIdle: no
+		AirborneUpgrades: airborne
+		LandWhenIdle: False
 		CruiseAltitude: 4c248
 		CanHover: True
 		IdealSeparation: 0c724
 		AltitudeVelocity: 0c325
 		TakeOffOnResupply: true
 		VTOL: true
+		RepairBuildings:
+		RearmBuildings:
+		Voice: Move
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Health:
@@ -399,6 +411,9 @@ CYBFLY:
 	ReloadAmmoPool@1:
 		AmmoPool: primary
 		Delay: 5
+	HiddenUnderFog:
+		Type: CenterPosition
+	MustBeDestroyed:
 
 CYC2:
 	Inherits@1: ^HeavyCyborg
@@ -406,6 +421,7 @@ CYC2:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -455,6 +471,7 @@ GLAD:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyInfantry
 	Valued:
 		Cost: 4000
 	Tooltip:
@@ -517,7 +534,6 @@ GLAD:
 		Notification: CriticalUnitLost
 	SoundOnDamageTransition:
 		DamagedSounds: cabel_f1.aud, cabel_f2.aud, cabel_f3.aud
-	-Crushable:
 	HitShape:
 
 KAMIKAZE:
@@ -526,6 +542,7 @@ KAMIKAZE:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Valued:
 		Cost: 400
 	Tooltip:

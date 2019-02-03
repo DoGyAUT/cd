@@ -1,0 +1,66 @@
+^FeatureCrushClassInfantry:
+	Crushable:
+		CrushClasses: FeatureCrushClassInfantry
+		WarnProbability: 0
+		CrushSound: squish6.aud
+	Mobile:
+		Crushes: crate
+
+^FeatureCrushClassHeavyInfantry:
+	Crushable:
+		CrushClasses: FeatureCrushClassHeavyInfantry
+		WarnProbability: 0
+		CrushSound: squish6.aud
+	Mobile:
+		Crushes: crate
+
+^FeatureCrushClassSuperHeavyInfantry:
+	Crushable:
+		CrushClasses: FeatureCrushClassSuperHeavyInfantry
+		WarnProbability: 0
+		CrushSound: squish6.aud
+	Mobile:
+		Crushes: crate
+
+^FeatureCrushClassLightVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassLightVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate
+
+^FeatureCrushClassMediumVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassMediumVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, FeatureCrushClassSandbag, FeatureCrushClassInfantry, FeatureCrushClassLightVehicle
+
+^FeatureCrushClassHeavyVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassHeavyVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, FeatureCrushClassSandbag, FeatureCrushClassWall, FeatureCrushClassInfantry, FeatureCrushClassHeavyInfantry, FeatureCrushClassLightVehicle, FeatureCrushClassMediumVehicle
+
+^FeatureCrushClassSuperHeavyVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassSuperHeavyVehicle
+		WarnProbability: 0
+	Mobile:
+		Crushes: crate, FeatureCrushClassSandbag, FeatureCrushClassWall, FeatureCrushClassInfantry, FeatureCrushClassHeavyInfantry, FeatureCrushClassLightVehicle, FeatureCrushClassMediumVehicle, FeatureCrushClassHeavyVehicle, FeatureCrushClassHoverVehicle
+
+^FeatureCrushClassHoverVehicle:
+	Crushable:
+		CrushClasses: FeatureCrushClassHoverVehicle
+		WarnProbability: 0
+
+^FeatureCrushClassWall:
+	Crushable:
+		CrushClasses: FeatureCrushClassWall
+		WarnProbability: 0
+
+^FeatureCrushClassSandbag:
+	Crushable:
+		CrushClasses: FeatureCrushClassSandbag
+		WarnProbability: 0

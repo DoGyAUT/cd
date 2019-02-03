@@ -1,5 +1,6 @@
 FMCV:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 400
@@ -46,6 +47,7 @@ FMCV:
 FHARV:
 	Inherits: ^VoxelTank
 	Inherits@3: ^ExploBuildingTibsmall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -118,6 +120,7 @@ FHARV:
 
 ATRUCK:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Buildable:
 		Queue: Vehicle.Forg
 		BuildPaletteOrder: 402
@@ -163,10 +166,10 @@ ATRUCK:
 
 FBUGGY_MG:
 	Inherits@1: ^VoxelVehicle
-	Inherits@2: ^LightVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassLightVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -184,7 +187,6 @@ FBUGGY_MG:
 	Mobile:
 		TurnSpeed: 9
 		Speed: 127
-		Crushes: crate
 	Health:
 		HP: 400000
 	RevealsShroud:
@@ -214,7 +216,7 @@ FBUGGY_MG:
 
 FBUGGY_MIS:
 	Inherits@1: ^VoxelVehicle
-	Inherits@2: ^LightVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassLightVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -227,7 +229,6 @@ FBUGGY_MIS:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 127
-		Crushes: crate
 	Health:
 		HP: 400000
 	RevealsShroud:
@@ -263,7 +264,7 @@ FBUGGY_MIS:
 
 FBUGGY_MORTAR:
 	Inherits@1: ^VoxelVehicle
-	Inherits@2: ^LightVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassLightVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -276,7 +277,6 @@ FBUGGY_MORTAR:
 	Mobile:
 		TurnSpeed: 7
 		Speed: 127
-		Crushes: crate
 	Health:
 		HP: 400000
 	Armament@primary:
@@ -304,6 +304,7 @@ FBUGGY_MORTAR:
 
 FTRUCK_FLAMER:
 	Inherits: ^VoxelVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -350,6 +351,7 @@ FTRUCK_MORTAR:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -405,6 +407,7 @@ FTRUCK_MORTAR:
 FTRUCK_FLAK:
 	Inherits: ^VoxelVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetAircraft1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -460,6 +463,7 @@ GREMLIN_HCAN:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -507,6 +511,7 @@ GREMLIN_HCAN:
 
 GREMLIN_MORTAR:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -549,6 +554,7 @@ GREMLIN_MORTAR:
 
 GREMLIN_90MM:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -591,6 +597,7 @@ GREMLIN_90MM:
 
 TAURUS_MG:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -656,6 +663,7 @@ TAURUS_MG:
 
 TAURUS_HCAN:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -724,6 +732,7 @@ TAURUS_MIS:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -798,6 +807,7 @@ TAURUS_MIS:
 
 LIZARD_MG:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -841,6 +851,7 @@ LIZARD_MG:
 
 LIZARD_90MM:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -886,6 +897,7 @@ LIZARD_122MM:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -933,6 +945,7 @@ LIZARD_122MM:
 
 DIGGER_MIS:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -991,6 +1004,7 @@ DIGGER_MIS:
 
 DIGGER_MORTAR:
 	Inherits: ^VoxelTank
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1054,6 +1068,7 @@ DIGGER_122MM:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1120,7 +1135,7 @@ DIGGER_122MM:
 
 BISON_130MM:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1178,7 +1193,7 @@ BISON_130MM:
 
 BISON_145MM:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1237,7 +1252,7 @@ BISON_145MM:
 
 BISON_180MM:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1280,7 +1295,7 @@ BISON_180MM:
 
 AUROCH_130MM:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1336,10 +1351,10 @@ AUROCH_130MM:
 
 AUROCH_120MMT:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1423,7 +1438,7 @@ AUROCH_120MMT:
 
 AUROCH_180MM:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1472,10 +1487,10 @@ AUROCH_180MM:
 
 RAGNAROK:
 	Inherits@1: ^VoxelVehicle
-	Inherits@2: ^HeavyVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -1547,10 +1562,10 @@ RAGNAROK:
 
 AVALANCHE:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 6000
 	Buildable:

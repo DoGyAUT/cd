@@ -2,6 +2,7 @@ KMCV:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^VehicleCabal
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Buildable:
 		Queue: Vehicle.Cabal
 		BuildPaletteOrder: 300
@@ -65,6 +66,7 @@ KHARV:
 	Inherits@2: ^HoverVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@4: ^ExploBuildingTibsmall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -132,6 +134,7 @@ DREADFIRE:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -196,6 +199,7 @@ REAPER:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -211,7 +215,6 @@ REAPER:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 85
-		Crushes: crate
 	Health:
 		HP: 1000000
 	RevealsShroud:
@@ -269,6 +272,7 @@ GOLEM:
 	Inherits: ^Walker
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -338,6 +342,7 @@ TARANTULA:
 	Inherits@1: ^Walker
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassMediumVehicle
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -396,6 +401,7 @@ SILVER:
 	Inherits@1: ^VoxelVehicle
 	Inherits@2: ^HoverVehicle
 	Inherits@CabalUpgrades: ^CabalUpgrades
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHoverVehicle
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -450,11 +456,11 @@ SILVER:
 
 KRONOS:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^HeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyVehicle
 	Valued:
 		Cost: 2200
 	Tooltip:
@@ -526,11 +532,11 @@ KRONOS:
 
 FURY:
 	Inherits@1: ^VoxelTank
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 8500
 	Tooltip:
@@ -637,12 +643,12 @@ FURY:
 
 GARGANTUA:
 	Inherits@1: ^Walker
-	Inherits@2: ^SuperHeavyVehicle
 	Inherits@3: ^VehicleCabal
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyVehicle
 	Valued:
 		Cost: 8000
 	Tooltip:

@@ -1,5 +1,6 @@
 GAWALL:
 	Inherits: ^Wall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 100
@@ -16,14 +17,13 @@ GAWALL:
 		HP: 400000
 	BlocksProjectiles:
 		Height: 0c905
-	Crushable:
-		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
 	HitShape:
 
 GAGATE_A:
 	Inherits: ^Gate_A
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 101
@@ -34,6 +34,7 @@ GAGATE_A:
 
 GAGATE_B:
 	Inherits: ^Gate_B
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.GDI
 		BuildPaletteOrder: 102

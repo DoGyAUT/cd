@@ -3,6 +3,7 @@ GASOL:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 100
@@ -55,6 +56,7 @@ GMISINF:
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry3
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding4
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 102
@@ -94,6 +96,7 @@ E2:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 108
@@ -146,6 +149,7 @@ E2:
 
 SCOUT:
 	Inherits: ^Soldier
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 106
@@ -186,6 +190,7 @@ SCOUT:
 GDOG:
 	Inherits: ^SoldierFearless
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -224,6 +229,7 @@ GDOG:
 
 ENGINEER:
 	Inherits: ^Soldier
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -259,6 +265,7 @@ ENGINEER:
 MEDIC:
 	Inherits: ^Soldier
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -312,6 +319,7 @@ ZMARINE:
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 101
@@ -365,6 +373,7 @@ ZTROOPER:
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 108
@@ -411,11 +420,12 @@ ZTROOPER:
 	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZRAIDER:
-	Inherits: ^SoldierFearlessHeavy
+	Inherits: ^SoldierHeavy
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetAircraft: ^FeatureAutotargetAircraft2
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding3
+	Inherits@FeatureCrushClass: ^FeatureCrushClassHeavyInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 109
@@ -463,10 +473,11 @@ ZRAIDER:
 	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ZCOMMANDO:
-	Inherits: ^SoldierFearlessHeavy
+	Inherits: ^SoldierHeavy
 	Inherits@FeatureAutotargetVehicle: ^FeatureAutotargetVehicle1
 	Inherits@FeatureAutotargetInfantry: ^FeatureAutotargetInfantry1
 	Inherits@FeatureAutotargetBuilding: ^FeatureAutotargetBuilding2
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSuperHeavyInfantry
 	Buildable:
 		Queue: Infantry.GDI
 		BuildPaletteOrder: 110
@@ -536,6 +547,5 @@ ZCOMMANDO:
 	RenderDetectionCircle:
 	SoundOnDamageTransition:
 		DamagedSounds: trooper_f1.aud, trooper_f2.aud, trooper_f3.aud
-	-Crushable:
 	HitShape:
 	-DamagedByTerrain@DamagedByTiberiumResource:

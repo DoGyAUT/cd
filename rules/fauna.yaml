@@ -1,5 +1,6 @@
 DOGGIE:
 	Inherits: ^MutantFearless
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Tiberian Fiend
 		Description: Dogs transmorgifies into this, when dieing on Tiberium fields.
@@ -31,6 +32,7 @@ DOGGIE:
 JFISH:
 	Inherits: ^Visceroid
 	Inherits@CRATESTATS: ^CrateStatModifiers
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Tiberium Floater
 	Health:
@@ -41,7 +43,6 @@ JFISH:
 		Range: 7c73
 	Mobile:
 		Speed: 102
-		Crushes: crate
 		TerrainSpeeds:
 			Clear: 100
 			Rail: 100
@@ -80,6 +81,7 @@ JFISH:
 
 VISC_SML:
 	Inherits: ^Visceroid
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Baby Visceroid
 		Description: Infantry transmorgifies into this, when killed by Adult Visceroids.
@@ -96,7 +98,6 @@ VISC_SML:
 		MinMoveDelayInDelay: 25
 		MaxMoveDelayInDelay: 45
 	Mobile:
-		Crushes: crate
 		SharesCell: yes
 	RenderSprites:
 		Image: vissml
@@ -121,6 +122,7 @@ VISC_SML:
 
 VISC_LRG:
 	Inherits: ^Visceroid
+	Inherits@FeatureCrushClass: ^FeatureCrushClassInfantry
 	Tooltip:
 		Name: Adult Visceroid
 		Description: Infantry transmorgifies into this, when dieing on Tiberium fields.
@@ -136,8 +138,6 @@ VISC_LRG:
 		WanderMoveRadius: 4
 		MinMoveDelayInDelay: 25
 		MaxMoveDelayInDelay: 45
-	Mobile:
-		Crushes: crate
 	RenderSprites:
 		Image: vislrg
 	SelfHealing:

@@ -1,5 +1,6 @@
 NAWALL:
 	Inherits: ^Wall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Nod
 		BuildPaletteOrder: 200
@@ -16,14 +17,13 @@ NAWALL:
 		HP: 560000
 	BlocksProjectiles:
 		Height: 0c905
-	Crushable:
-		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
 	HitShape:
 
 NAGATE_A:
 	Inherits: ^Gate_A
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Nod
 		BuildPaletteOrder: 201
@@ -34,6 +34,7 @@ NAGATE_A:
 
 NAGATE_B:
 	Inherits: ^Gate_B
+	Inherits@FeatureCrushClass: ^FeatureCrushClassWall
 	Buildable:
 		Queue: Defense.Nod
 		BuildPaletteOrder: 202

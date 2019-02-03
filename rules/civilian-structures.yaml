@@ -1271,6 +1271,7 @@ GAOLDCC6:
 
 GASAND:
 	Inherits: ^Wall
+	Inherits@FeatureCrushClass: ^FeatureCrushClassSandbag
 	SoundOnDamageTransition:
 		DamagedSounds: sandbag1.aud
 		DestroyedSounds: sandbag1.aud
@@ -1281,9 +1282,6 @@ GASAND:
 	Tooltip:
 		Name: Sandbags
 		Description: Stops infantry and blocks enemy fire.\nCan be crushed by tanks.
-	Crushable:
-		CrushClasses: sandbags
-		WarnProbability: 0
 	BlocksProjectiles:
 		Height: 0c064
 	Health:

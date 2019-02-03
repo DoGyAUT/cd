@@ -652,8 +652,6 @@
 	SoundOnDamageTransition:
 		DamagedSounds: expnew01.aud
 		DestroyedSounds: crmble2.aud
-	Crushable:
-		CrushClasses: wall
 	BlocksProjectiles:
 	LineBuild:
 		Range: 8
@@ -772,7 +770,6 @@
 	Mobile:
 		Voice: Move
 		Speed: 71
-		Crushes: crate
 		SharesCell: True
 		TerrainSpeeds:
 			Clear: 90
@@ -826,9 +823,6 @@
 		Weight: 1
 	HiddenUnderFog:
 	ActorLostNotification:
-	Crushable:
-		CrushSound: squish6.aud
-		WarnProbability: 0
 	SpawnActorOnDeath@Corruptor:
 		Actor: visc_corrupt
 		Probability: 80
@@ -883,20 +877,8 @@
 		ReturnToOrigin: False
 
 ^Soldier:
-	Inherits@1: ^Infantry
-	Inherits@2: ^WebDisable
+	Inherits@1: ^SoldierFearless
 	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
-	RevealsShroud:
-		Range: 7c73
-	MustBeDestroyed:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-	WithDeathAnimation:
-		CrushedSequence: die-crushed
-		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: True
-	Mobile:
-		RequiresCondition: !webdisable
 
 ^SoldierFearless:
 	Inherits@1: ^Infantry
@@ -915,8 +897,6 @@
 
 ^SoldierHeavy:
 	Inherits: ^Infantry
-		CrushClasses: heavyinf
-		WarnProbability: 0
 	RevealsShroud:
 		Range: 5c673
 	MustBeDestroyed:
@@ -930,42 +910,6 @@
 		CargoType: Infantry
 		Voice: Move
 		Weight: 2
-
-^SoldierFearlessHeavy:
-	Inherits: ^Infantry
-	Crushable:
-		CrushClasses: heavyinf
-		WarnProbability: 0
-	RevealsShroud:
-		Range: 5c673
-	MustBeDestroyed:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-	WithDeathAnimation:
-		CrushedSequence: die-crushed
-		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: True
-	Passenger:
-		CargoType: Infantry
-		Voice: Move
-		Weight: 2
-
-^SoldierJumpjet:
-	Inherits: ^Infantry
-	Inherits@FeatureTargettype: ^FeatureTargettypeJumpjet
-	-Crushable:
-	-Mobile:
-	RevealsShroud:
-		Range: 5c673
-	MustBeDestroyed:
-	HiddenUnderFog:
-		Type: CenterPosition
-	Aircraft:
-		AirborneUpgrades: airborne
-		RepairBuildings:
-		RearmBuildings:
-		LandWhenIdle: False
-		Voice: Move
 
 ^HealsOnTiberium:
 	GrantConditionOnTerrain@Tiberium:
@@ -1033,35 +977,8 @@
 		DamageTypes: EnergyDeath, TriggerVisceroid
 
 ^Mutant:
-	Inherits@1: ^Infantry
-	Inherits@2: ^WebDisable
-	Inherits@3: ^HealsOnTiberium
+	Inherits@1: ^MutantFearless
 	Inherits@FeatureDamagemodifierTakeCover: ^FeatureDamagemodifierTakeCover
-	RevealsShroud:
-		Range: 5c673
-	MustBeDestroyed:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-	WithDeathAnimation:
-		CrushedSequence: die-crushed
-		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: True
-	Explodes:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
-		Chance: 10
-	Mobile:
-		RequiresCondition: !webdisable
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 0
-			BlueTiberium: 70
-				PathingCost: 0
-			RedTiberium: 70
-				PathingCost: 0
-			PurpleTiberium: 70
-				PathingCost: 0
-	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^MutantFearless:
 	Inherits@1: ^Infantry
@@ -1094,41 +1011,11 @@
 	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^MutantFearlessHeavy:
-	Inherits@1: ^Infantry
-	Inherits@2: ^WebDisable
-	Inherits@3: ^HealsOnTiberium
-	Crushable:
-		CrushClasses: heavyinf
-		WarnProbability: 0
-	RevealsShroud:
-		Range: 5c673
-	MustBeDestroyed:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-	WithDeathAnimation:
-		CrushedSequence: die-crushed
-		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: True
-	Explodes:
-		Weapon: TiberiumExplosion
-		EmptyWeapon: TiberiumExplosion
-		Chance: 10
+	Inherits@1: ^MutantFearless
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
 		Weight: 2
-	Mobile:
-		RequiresCondition: !webdisable
-		TerrainSpeeds:
-			Tiberium: 70
-				PathingCost: 0
-			BlueTiberium: 70
-				PathingCost: 0
-			RedTiberium: 70
-				PathingCost: 0
-			PurpleTiberium: 70
-				PathingCost: 0
-	-DamagedByTerrain@DamagedByTiberiumResource:
 
 ^Alien:
 	Inherits@1: ^Infantry
@@ -1136,9 +1023,6 @@
 	Inherits@FeatureTargettypeScrin: ^FeatureTargettypeScrin
 	Inherits@4: ^WebDisable
 	MustBeDestroyed:
-	Crushable:
-		CrushClasses: infantry
-		WarnProbability: 0
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	-GrantConditionOnPrerequisite@nanofiber:
@@ -1148,9 +1032,6 @@
 
 ^HeavyAlien:
 	Inherits@1: ^Alien
-	Crushable:
-		CrushClasses: heavyinf
-		WarnProbability: 0
 	Passenger:
 		CargoType: Infantry
 		Voice: Move
@@ -1165,9 +1046,6 @@
 	Inherits@FeatureTargettypeCyborg: ^FeatureTargettypeCyborg
 	Inherits@FeatureBuffRepairCyborg: ^FeatureBuffRepairCyborg
 	MustBeDestroyed:
-	Crushable:
-		CrushClasses: cyborg
-		WarnProbability: 0
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 	ThrowsShrapnel@sparks:
@@ -1452,7 +1330,6 @@
 	Inherits@FeatureBuffRepairVehicle: ^FeatureBuffRepairVehicle
 	DrawLineToTarget:
 	Mobile:
-		Crushes: crate, infantry, mutant, mutantfearless, lightvehicle, sandbags
 		TerrainSpeeds:
 			Clear: 80
 			Road: 100
@@ -1470,9 +1347,6 @@
 		Voice: Move
 		RequiresCondition: !(empdisable && !invulnerability)
 		TunnelCondition: inside-tunnel
-	Crushable:
-		CrushClasses: mediumvehicle
-		WarnProbability: 0
 	RevealsShroud:
 		Range: 8c497
 		MaxHeightDelta: 3
@@ -1544,39 +1418,8 @@
 	Chronoshiftable:
 		ReturnToOrigin: False
 
-^LightVehicle:
-	Crushable:
-		CrushClasses: lightvehicle
-		WarnProbability: 0
-	Mobile:
-		Crushes: crate
-
-^MediumVehicle:
-	Crushable:
-		CrushClasses: mediumvehicle
-		WarnProbability: 0
-	Mobile:
-		Crushes: crate, infantry, mutant, sandbags, mutantfearless, lightvehicle
-
-^HeavyVehicle:
-	Crushable:
-		CrushClasses: heavyvehicle
-		WarnProbability: 0
-	Mobile:
-		Crushes: crate, infantry, mutant, mutantfearless, sandbags, wall, heavyinf, cyborg, lightvehicle, mediumvehicle
-
-^SuperHeavyVehicle:
-	Crushable:
-		CrushClasses: SuperHeavyVehicle
-		WarnProbability: 0
-	Mobile:
-		Crushes: crate, infantry, mutant, mutantfearless, sandbags, wall, heavyinf, cyborg, lightvehicle, mediumvehicle, heavyvehicle, hovervehicle
-
 ^HoverVehicle:
 	Inherits: ^Vehicle
-	Crushable:
-		CrushClasses: hovervehicle
-		WarnProbability: 0
 	Hovers:
 	LeavesTrails@water:
 		Image: wake
@@ -1597,16 +1440,12 @@
 
 ^Tank:
 	Inherits: ^Vehicle
-	Crushable:
-		CrushClasses: mediumvehicle
-		WarnProbability: 0
 	BodyOrientation:
 		QuantizedFacings: 32
 
 ^Walker:
 	Inherits: ^Vehicle
 	Mobile:
-		Crushes: wall, crate, infantry, mutant, mutantfearless, lightvehicle
 		TerrainSpeeds:
 			Clear: 90
 			Road: 100
@@ -1620,9 +1459,6 @@
 			RedTiberium: 70
 			PurpleTiberium: 70
 			Veins: 70
-	Crushable:
-		CrushClasses: mediumvehicle
-		WarnProbability: 0
 	BodyOrientation:
 		QuantizedFacings: 32
 
@@ -1670,7 +1506,6 @@
 ^VoxelWalker:
 	Inherits: ^VoxelTank
 	Mobile:
-		Crushes: wall, crate, infantry, mutant, mutantfearless, lightvehicle
 		TerrainSpeeds:
 			Clear: 90
 			Road: 100
@@ -1687,7 +1522,6 @@
 
 ^CivilianVoxelVehicle:
 	Inherits@1: ^VoxelVehicle
-	Inherits@2: ^LightVehicle
 	BodyOrientation:
 		QuantizedFacings: 0
 	-MustBeDestroyed:
@@ -1935,7 +1769,6 @@
 	Mobile:
 		Speed: 127
 		TurnSpeed: 16
-		Crushes: crate
 		SharesCell: no
 		TerrainSpeeds:
 			Clear: 90
